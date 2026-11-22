@@ -1,7 +1,7 @@
 # 千万行 Lean 4 形式化（GRH 1,737 万行 / FLT 1,300 万行）与 79 页 NS 方程爆破论文：结构性悖论、闭式反例与形式化源码核查
 **Counterexamples, Structural Paradoxes & Formal Source-Code Verification for the 17.37M-Line GRH Lean 4 Proof, 13.00M-Line FLT Lean 4 Proof, and 79-Page Navier–Stokes Blow-Up Paper**
 
-> **快速导航 / Quick Navigation**: **[一、中文总览](#zh-overview)** | **[II. English Overview](#en-overview)** | **[III. 一分钟复现指南 / 1-Minute Reproduction](#quick-reproduction)** | **[IV. 目录结构 / Directory Tree](#repo-structure)** | [独立中文版 (`README_ZH.md`)](README_ZH.md) | [Standalone English (`README_EN.md`)](README_EN.md)
+> **快速导航 / Quick Navigation**: [**一、中文总览**](#zh-overview) | [**II. English Overview**](#en-overview) | [**III. 一分钟复现指南 / 1-Minute Reproduction**](#quick-reproduction) | [**IV. 目录结构 / Directory Tree**](#repo-structure) | [独立中文版 (`README_ZH.md`)](README_ZH.md) | [Standalone English (`README_EN.md`)](README_EN.md)
 
 ---
 
@@ -13,8 +13,8 @@
 
 | 编号 | 核查对象 | 上游规模与固定版本 | 中文版完整专著 (`zh/`) | 英文版完整专著 (`en/`) | 可复现验证套件 (`reproduction/`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **广义黎曼猜想 (GRH)** Lean 4 形式化 | 原版 `17,374,215` 行 (`40e56bab`) / 社区版 `16,571,342` 行 (`f1f6d654`) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_GRH English](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
-| **02** | **费马大定理 (FLT)** Lean 4 形式化 | `13,004,119` 行 (`anthropics/fermats-last-theorem`) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_FLT English](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
+| **01** | **广义黎曼猜想** (GRH) Lean 4 形式化 | 原版 `17,374,215` 行 (`40e56bab`) / 社区版 `16,571,342` 行 (`f1f6d654`) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_GRH English](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
+| **02** | **费马大定理** (FLT) Lean 4 形式化 | `13,004,119` 行 (`anthropics/fermats-last-theorem`) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_FLT English](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
 | **03** | **纳维-斯托克斯 (NS) 有限时爆破** 79 页论文 | `79` 页 PDF (`ad53419d`, `tristanbuckmaster/navier-stokes`) | [03_NS 中文专著](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [03_NS English](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [03_ns_79p_paper](reproduction/03_ns_79p_paper/) |
 
 ---
@@ -58,7 +58,7 @@
 
 #### 2.3 在降水平引理内部提前调用终局零空间定理，经由 `False.elim` 非构造性地导出水平 2 尖点形式
 
-- 在 `S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` 第 113–170 行中，奇素数归纳仅消去奇素因子得到 $M \mid 2$ （即 $M \in \{1, 2\}$ ，缺少 $2 \mid M$ 的下界保持），无法直接构造出水平 $2$ 的模形式。
+- 在 `S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` 第 113–170 行中，奇素数归纳仅消去奇素因子得到 $M \mid 2$ （即 $M \in \lbrace 1, 2\rbrace$ ，缺少 $2 \mid M$ 的下界保持），无法直接构造出水平 $2$ 的模形式。
 - 代码在第 156–170 行**提前在降水平引理内部调用** $S _ 2(\Gamma _ 0(1)) = 0$ 与 $S _ 2(\Gamma _ 0(2)) = 0$ 导出 `False`，再通过 `False.elim` 非构造性地生成存在性见证 $\exists f \in S _ 2(\Gamma _ 0(2)), f \neq 0$ 并返回给顶层主定理。
 
 #### 2.4 裸整系数半稳定定义在导子 11 椭圆曲线的有理同构缩放下发生真值退化
@@ -72,21 +72,21 @@
 #### 3.1 附录 B（第 47–57 页）命题 B.1 不等式 (B.20) 遗漏赤道平面上的狄拉克奇异面测度
 
 - 论文将乘子权函数 $D, Z$ 表示为上下半空间 $y _ 3 > 0$ 与 $y _ 3 < 0$ 在紧化坐标 $\sigma = \frac{|y|}{1+|y|}$ 与 $\eta = \frac{y _ 3}{|y|}$ 下的分片样条。
-- 在对无散场作两次分部积分时，不等式 (B.20) 仅以开集内部的体积海森算子范数控制二次型，遗漏了跨赤道零测度平面 $\Sigma = \{y _ 3 = 0\}$ 的法向一阶导数跳变奇异面测度：
+- 在对无散场作两次分部积分时，不等式 (B.20) 仅以开集内部的体积海森算子范数控制二次型，遗漏了跨赤道零测度平面 $\Sigma = \lbrace y _ 3 = 0\rbrace$ 的法向一阶导数跳变奇异面测度：
 
 $$
-D^2 W = H _ {W,\mathrm{bulk}}\,dy + [\partial _ z W] _ \Sigma\,(e _ 3 \otimes e _ 3)\,dS _ {z=0}
+D^2 W = H _ {W,\mathrm{bulk}}\thinspace dy + [\partial _ z W] _ \Sigma (e _ 3 \otimes e _ 3)\thinspace dS _ {z=0}
 $$
 
 #### 3.2 两族显式闭式无散反例场直接违反命题 B.1 不等式 (B.20)
 
-- **闭式反例族 A（紧支轴对称无散场在二阶权接缝上的精确有理违反裕量）**：取 $a(t) = (1 - t^2) _ +^4$ （精确有理矩 $A = \frac{131072}{45045}$ 、梯度上界 $K = \frac{43936}{81}$ ）与 $\varepsilon = 2^{-16} = \frac{1}{65536}$ ，原命题要求 $\le 0$ 的泛函给出严格为正的有理下界：
+- **闭式反例族 A**（紧支轴对称无散场在二阶权接缝上的精确有理违反裕量）：取 $a(t) = (1 - t^2) _ +^4$ （精确有理矩 $A = \frac{131072}{45045}$ 、梯度上界 $K = \frac{43936}{81}$ ）与 $\varepsilon = 2^{-16} = \frac{1}{65536}$ ，原命题要求 $\le 0$ 的泛函给出严格为正的有理下界：
 
 $$
 E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} > 0
 $$
 
-- **闭式反例族 B（施瓦茨高斯无散场在一阶权接缝上的解析违反下界）**：取 $v = g(-2zyC _ 6, 2zxC _ 6, -S _ 6)$ ，赤道奇异面积分 $\frac{10395}{64}\pi^{3/2}c$ 严格大于外部体积海森损失 $80\pi^{3/2}c$ ，给出纯解析正下界：
+- **闭式反例族 B**（施瓦茨高斯无散场在一阶权接缝上的解析违反下界）：取 $v = g(-2zyC _ 6, 2zxC _ 6, -S _ 6)$ ，赤道奇异面积分 $\frac{10395}{64}\pi^{3/2}c$ 严格大于外部体积海森损失 $80\pi^{3/2}c$ ，给出纯解析正下界：
 
 $$
 \frac{\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}}{c} > \frac{26311}{64} > 400 > 0
@@ -97,7 +97,7 @@ $$
 - 若在赤道薄层 $|\eta| \le \delta$ 内用四次偶样条 $s _ \delta(\eta)$ 磨平法向一阶导数跳变，薄层内法向二阶导数峰值必以 $\frac{3}{2\delta}$ 增长，且总曲率质量严格守恒：
 
 $$
-\int _ {-\delta}^{\delta} s _ \delta''(\eta)\,d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
+\int _ {-\delta}^{\delta} s _ \delta''(\eta)\thinspace d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
 $$
 
 - 同时，79 页论文最上游的存在性证人 $d \in \mathcal{D} _ B$ （第 1、4、38–39、70 页）**未公开具体数值或数据文件，仅给出 64 位 SHA-256 哈希摘要** `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`。
@@ -113,7 +113,7 @@ $$
 \frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
 $$
 
-同时，若将薄层内激增的二阶导数峰值 $\|H _ {D _ \delta}(1,0)\| _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ 如实计入第 54 页公式 (B.16)，梯度系数将直接退化为 $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ 。
+同时，若将薄层内激增的二阶导数峰值 $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ 如实计入第 54 页公式 (B.16)，梯度系数将直接退化为 $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ 。
 - **分支三**（追加外围引理无法消除同域反例，缩减无散扰动空间则破坏第 70 页非线性自举闭合）：由全称量词对理论扩充的单调性，在不缩减定义域 $\mathcal{D} _ S^\Gamma$ 时，追加任何外围辅助引理均不能改变同一闭式证人 $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ 对命题 B.1 的证伪；而若人为在 $\mathcal{D} _ S^\Gamma$ 上附加赤道零迹限制以排除 $v _ \varepsilon$ ，第 70 页非线性涡拉伸自举闭合条件将不再成立。
 
 ---
@@ -126,8 +126,8 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 | Part | Verified Target | Upstream Scale & Commit | English Monograph (`en/`) | Chinese Monograph (`zh/`) | Reproduction Suite (`reproduction/`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Generalized Riemann Hypothesis (GRH)** Lean 4 Proof | `17,374,215` lines (`40e56bab`) / community `16,571,342` lines (`f1f6d654`) | [01_GRH Monograph (EN)](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
-| **02** | **Fermat's Last Theorem (FLT)** Lean 4 Proof | `13,004,119` lines (`anthropics/fermats-last-theorem`) | [02_FLT Monograph (EN)](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
+| **01** | **Generalized Riemann Hypothesis** (GRH) Lean 4 Proof | `17,374,215` lines (`40e56bab`) / community `16,571,342` lines (`f1f6d654`) | [01_GRH Monograph (EN)](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
+| **02** | **Fermat's Last Theorem** (FLT) Lean 4 Proof | `13,004,119` lines (`anthropics/fermats-last-theorem`) | [02_FLT Monograph (EN)](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
 | **03** | **Navier–Stokes (NS) Finite-Time Blow-Up** 79p Paper | `79` pages PDF (`ad53419d`, `tristanbuckmaster/navier-stokes`) | [03_NS Monograph (EN)](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [03_NS 中文专著](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [03_ns_79p_paper](reproduction/03_ns_79p_paper/) |
 
 ---
@@ -167,11 +167,11 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 #### 2.2 Top-Level Modularity Premise `hmod : IsModular P.freyCurve` Unreferenced Under `set_option linter.unusedVariables false`
 
 - In `Defs_ModularityPrep.lean`, `IsModular(E)` existentially quantifies out the level $N$ without binding it to the conductor radical $\mathrm{Supp}(abc)$ (rendering newform level $N _ 1 = 15$ and oldform multiple level $N _ 2 = 105$ indistinguishable under the predicate).
-- Consequently, `S_FreyPackage_level_lowering_to_two.lean` (line 129) sets `set_option linter.unusedVariables false` and **never references its explicit modularity premise `hmod` (`0` occurrences in the proof term)**.
+- Consequently, `S_FreyPackage_level_lowering_to_two.lean` (line 129) sets `set_option linter.unusedVariables false` and **never references its explicit modularity premise `hmod`** (`0` occurrences in the proof term).
 
 #### 2.3 Premature Invocation of Terminal Zero-Space Theorems Inside Level-Lowering via `False.elim`
 
-- In `S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` (lines 113–170), odd-prime elimination yields only $M \mid 2$ (so $M \in \{1, 2\}$ , without preserving the lower divisibility guard $2 \mid M$ ).
+- In `S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` (lines 113–170), odd-prime elimination yields only $M \mid 2$ (so $M \in \lbrace 1, 2\rbrace$ , without preserving the lower divisibility guard $2 \mid M$ ).
 - Unable to construct a level-2 cusp form directly, lines 156–170 prematurely invoke $S _ 2(\Gamma _ 0(1)) = 0$ and $S _ 2(\Gamma _ 0(2)) = 0$ *inside* the level-lowering lemma to trigger `False.elim` and non-constructively produce $\exists f \in S _ 2(\Gamma _ 0(2)), f \neq 0$ .
 
 #### 2.4 Raw Integer `IsSemistableModel` Degenerates on Conductor-11 Curve Under Rational Isomorphic Scaling
@@ -185,10 +185,10 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 #### 3.1 Equatorial Seam Dirac Surface-Measure Omission in Proposition B.1 / Inequality (B.20) (Pages 47–57)
 
 - Multiplier weights $D, Z$ are represented as piecewise splines on half-spaces $y _ 3 > 0$ and $y _ 3 < 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y _ 3}{|y|}$ .
-- Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \{y _ 3 = 0\}$ :
+- Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \lbrace y _ 3 = 0\rbrace$ :
 
 $$
-D^2 W = H _ {W,\mathrm{bulk}}\,dy + [\partial _ z W] _ \Sigma\,(e _ 3 \otimes e _ 3)\,dS _ {z=0}
+D^2 W = H _ {W,\mathrm{bulk}}\thinspace dy + [\partial _ z W] _ \Sigma (e _ 3 \otimes e _ 3)\thinspace dS _ {z=0}
 $$
 
 #### 3.2 Two Explicit Closed-Form Divergence-Free Counterexample Families Violating (B.20)
@@ -210,7 +210,7 @@ $$
 - Smoothing the seam across $|\eta| \le \delta$ via an even $C^2$ quartic spline $s _ \delta(\eta)$ causes the normal second derivative to peak at $\frac{3}{2\delta}$ with strictly conserved total curvature mass:
 
 $$
-\int _ {-\delta}^{\delta} s _ \delta''(\eta)\,d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
+\int _ {-\delta}^{\delta} s _ \delta''(\eta)\thinspace d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
 $$
 
 - Meanwhile, the paper's upstream existence witness $d \in \mathcal{D} _ B$ (pp. 1, 4, 38–39, 70) is not published as a numerical file, appearing only as the 64-character SHA-256 digest `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`.
@@ -226,7 +226,7 @@ $$
 \frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
 $$
 
-Simultaneously, accounting for the collar Hessian peak $\|H _ {D _ \delta}(1,0)\| _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
+Simultaneously, accounting for the collar Hessian peak $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
 - **Branch III** (Appending peripheral lemmas cannot overturn an in-domain universal counterexample, while restricting $\mathcal{D} _ S^\Gamma$ breaks the Section 7 nonlinear bootstrap): By monotonicity of universal falsification, no added lemma can make (B.20) hold on $\mathcal{D} _ S^\Gamma$ while $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ remains in the domain; conversely, restricting $\mathcal{D} _ S^\Gamma$ at $y _ 3 = 0$ breaks the nonlinear vortex-stretching bootstrap closure on page 70.
 
 ---
@@ -235,8 +235,7 @@ Simultaneously, accounting for the collar Hessian peak $\|H _ {D _ \delta}(1,0)\
 
 ## III. 一分钟复现指南 / 1-Minute Quick Reproduction Guide
 
-### 1. 第一部分 / Part 01 (17.37M-Line GRH 8-Vertex Min-Cut Certificate & Lean 4 Probes)
-```bash
+### 1. 第一部分 / Part 01 (17.37M-Line GRH 8-Vertex Min-Cut Certificate & Lean 4 Probes)```bash
 # [ZH] 零外部依赖校验 270 万节点声明图的 8 顶点最小有向割证书（仅需 Python 3 标准库，< 0.2 秒）：
 # [EN] Zero-dependency verification of the 8-vertex minimum directed cut across 2.70M declarations (Python 3 stdlib only, < 0.2s):
 python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
@@ -245,29 +244,24 @@ python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
 # [EN] If Lean 4 + Mathlib v4.33.1 is installed locally, compile the countermodel verification probes directly:
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme1.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme5.lean
-lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean
-```
+lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean```
 
-### 2. 第二部分 / Part 02 (13.00M-Line FLT Zero-Dependency Lean 4 Kernel Probe)
-```bash
+### 2. 第二部分 / Part 02 (13.00M-Line FLT Zero-Dependency Lean 4 Kernel Probe)```bash
 # [ZH] 零外部依赖（无需下载 Mathlib，0 sorry / 0 axiom）直接用 Lean 4 内核复现 FLT 核心结构断层：
 # [EN] Zero-dependency Lean 4 kernel verification (no Mathlib required, 0 sorry / 0 axiom) reproducing the FLT structural gaps:
 lean reproduction/02_flt_13m_lean/lean4_flt_real_kernel_verification.lean
 ```
 
-### 3. 第三部分 / Part 03 (79-Page Navier–Stokes Paper Exact Rational Counterexamples & Collar Transfer)
-```bash
+### 3. 第三部分 / Part 03 (79-Page Navier–Stokes Paper Exact Rational Counterexamples & Collar Transfer)```bash
 # [ZH] 零外部依赖（仅用 fractions.Fraction，< 0.1 秒）精确复算 NS 论文全部 6 套有理数反例与薄层曲率转移定理：
 # [EN] Zero-dependency exact rational verification (fractions.Fraction only, < 0.1s) of all 6 NS counterexample & collar-transfer suites:
-python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
-```
+python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py```
 
 ---
 
 <a id="repo-structure"></a>
 
-## IV. 仓库目录结构 / Repository Structure
-```text
+## IV. 仓库目录结构 / Repository Structure```text
 .
 ├── README.md                                                     # 中英双语顶层总览 / Bilingual Top-Level Overview
 ├── README_ZH.md                                                  # 独立中文总览 / Standalone Chinese Overview

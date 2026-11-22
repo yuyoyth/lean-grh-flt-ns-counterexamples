@@ -1,6 +1,6 @@
 # Counterexamples, Structural Paradoxes & Formal Source-Code Verification for the 17.37M-Line GRH Lean 4 Proof, 13.00M-Line FLT Lean 4 Proof, and 79-Page Navier–Stokes Blow-Up Paper
 
-> **Language Navigation**: **[Bilingual Overview (`README.md`)](README.md)** | **[中文独立导览 (`README_ZH.md`)](README_ZH.md)** | **[II. 1-Minute Reproduction](#quick-reproduction)** | **[III. Repository Structure](#repo-structure)**
+> **Language Navigation**: [**Bilingual Overview** (`README.md`)](README.md) | [**中文独立导览** (`README_ZH.md`)](README_ZH.md) | [**II. 1-Minute Reproduction**](#quick-reproduction) | [**III. Repository Structure**](#repo-structure)
 
 ---
 
@@ -10,8 +10,8 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 | Part | Verified Target | Upstream Scale & Commit | English Monograph (`en/`) | Chinese Monograph (`zh/`) | Reproduction Suite (`reproduction/`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Generalized Riemann Hypothesis (GRH)** Lean 4 Proof | `17,374,215` lines (`40e56bab`) / community `16,571,342` lines (`f1f6d654`) | [01_GRH Monograph (EN)](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
-| **02** | **Fermat's Last Theorem (FLT)** Lean 4 Proof | `13,004,119` lines (`anthropics/fermats-last-theorem`) | [02_FLT Monograph (EN)](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
+| **01** | **Generalized Riemann Hypothesis** (GRH) Lean 4 Proof | `17,374,215` lines (`40e56bab`) / community `16,571,342` lines (`f1f6d654`) | [01_GRH Monograph (EN)](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
+| **02** | **Fermat's Last Theorem** (FLT) Lean 4 Proof | `13,004,119` lines (`anthropics/fermats-last-theorem`) | [02_FLT Monograph (EN)](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
 | **03** | **Navier–Stokes (NS) Finite-Time Blow-Up** 79p Paper | `79` pages PDF (`ad53419d`, `tristanbuckmaster/navier-stokes`) | [03_NS Monograph (EN)](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [03_NS 中文专著](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [03_ns_79p_paper](reproduction/03_ns_79p_paper/) |
 
 ---
@@ -51,11 +51,11 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 #### 2.2 Top-Level Modularity Premise `hmod : IsModular P.freyCurve` Unreferenced Under `set_option linter.unusedVariables false`
 
 - In `Defs_ModularityPrep.lean`, `IsModular(E)` existentially quantifies out the level $N$ without binding it to the conductor radical $\mathrm{Supp}(abc)$ (rendering newform level $N _ 1 = 15$ and oldform multiple level $N _ 2 = 105$ indistinguishable under the predicate).
-- Consequently, `S_FreyPackage_level_lowering_to_two.lean` (line 129) sets `set_option linter.unusedVariables false` and **never references its explicit modularity premise `hmod` (`0` occurrences in the proof term)**.
+- Consequently, `S_FreyPackage_level_lowering_to_two.lean` (line 129) sets `set_option linter.unusedVariables false` and **never references its explicit modularity premise `hmod`** (`0` occurrences in the proof term).
 
 #### 2.3 Premature Invocation of Terminal Zero-Space Theorems Inside Level-Lowering via `False.elim`
 
-- In `S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` (lines 113–170), odd-prime elimination yields only $M \mid 2$ (so $M \in \{1, 2\}$ , without preserving the lower divisibility guard $2 \mid M$ ).
+- In `S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` (lines 113–170), odd-prime elimination yields only $M \mid 2$ (so $M \in \lbrace 1, 2\rbrace$ , without preserving the lower divisibility guard $2 \mid M$ ).
 - Unable to construct a level-2 cusp form directly, lines 156–170 prematurely invoke $S _ 2(\Gamma _ 0(1)) = 0$ and $S _ 2(\Gamma _ 0(2)) = 0$ *inside* the level-lowering lemma to trigger `False.elim` and non-constructively produce $\exists f \in S _ 2(\Gamma _ 0(2)), f \neq 0$ .
 
 #### 2.4 Raw Integer `IsSemistableModel` Degenerates on Conductor-11 Curve Under Rational Isomorphic Scaling
@@ -69,10 +69,10 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 #### 3.1 Equatorial Seam Dirac Surface-Measure Omission in Proposition B.1 / Inequality (B.20) (Pages 47–57)
 
 - Multiplier weights $D, Z$ are represented as piecewise splines on half-spaces $y _ 3 > 0$ and $y _ 3 < 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y _ 3}{|y|}$ .
-- Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \{y _ 3 = 0\}$ :
+- Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \lbrace y _ 3 = 0\rbrace$ :
 
 $$
-D^2 W = H _ {W,\mathrm{bulk}}\,dy + [\partial _ z W] _ \Sigma\,(e _ 3 \otimes e _ 3)\,dS _ {z=0}
+D^2 W = H _ {W,\mathrm{bulk}}\thinspace dy + [\partial _ z W] _ \Sigma (e _ 3 \otimes e _ 3)\thinspace dS _ {z=0}
 $$
 
 #### 3.2 Two Explicit Closed-Form Divergence-Free Counterexample Families Violating (B.20)
@@ -94,7 +94,7 @@ $$
 - Smoothing the seam across $|\eta| \le \delta$ via an even $C^2$ quartic spline $s _ \delta(\eta)$ causes the normal second derivative to peak at $\frac{3}{2\delta}$ with strictly conserved total curvature mass:
 
 $$
-\int _ {-\delta}^{\delta} s _ \delta''(\eta)\,d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
+\int _ {-\delta}^{\delta} s _ \delta''(\eta)\thinspace d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
 $$
 
 - Meanwhile, the paper's upstream existence witness $d \in \mathcal{D} _ B$ (pp. 1, 4, 38–39, 70) is not published as a numerical file, appearing only as the 64-character SHA-256 digest `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`.
@@ -110,7 +110,7 @@ $$
 \frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
 $$
 
-Simultaneously, accounting for the collar Hessian peak $\|H _ {D _ \delta}(1,0)\| _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
+Simultaneously, accounting for the collar Hessian peak $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
 - **Branch III** (Appending peripheral lemmas cannot overturn an in-domain universal counterexample, while restricting $\mathcal{D} _ S^\Gamma$ breaks the Section 7 nonlinear bootstrap): By monotonicity of universal falsification, no added lemma can make (B.20) hold on $\mathcal{D} _ S^\Gamma$ while $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ remains in the domain; conversely, restricting $\mathcal{D} _ S^\Gamma$ at $y _ 3 = 0$ breaks the nonlinear vortex-stretching bootstrap closure on page 70.
 
 ---
@@ -119,35 +119,29 @@ Simultaneously, accounting for the collar Hessian peak $\|H _ {D _ \delta}(1,0)\
 
 ## II. 1-Minute Quick Reproduction Guide
 
-### 1. Part 01 (17.37M-Line GRH 8-Vertex Min-Cut Certificate & Lean 4 Probes)
-```bash
+### 1. Part 01 (17.37M-Line GRH 8-Vertex Min-Cut Certificate & Lean 4 Probes)```bash
 # Zero-dependency verification of the 8-vertex minimum directed cut across 2.70M declarations (Python 3 stdlib only, < 0.2s):
 python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
 
 # If Lean 4 + Mathlib v4.33.1 is installed locally, compile the countermodel verification probes directly:
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme1.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme5.lean
-lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean
-```
+lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean```
 
-### 2. Part 02 (13.00M-Line FLT Zero-Dependency Lean 4 Kernel Probe)
-```bash
+### 2. Part 02 (13.00M-Line FLT Zero-Dependency Lean 4 Kernel Probe)```bash
 # Zero-dependency Lean 4 kernel verification (no Mathlib required, 0 sorry / 0 axiom) reproducing the FLT structural gaps:
 lean reproduction/02_flt_13m_lean/lean4_flt_real_kernel_verification.lean
 ```
 
-### 3. Part 03 (79-Page Navier–Stokes Paper Exact Rational Counterexamples & Collar Transfer)
-```bash
+### 3. Part 03 (79-Page Navier–Stokes Paper Exact Rational Counterexamples & Collar Transfer)```bash
 # Zero-dependency exact rational verification (fractions.Fraction only, < 0.1s) of all 6 NS counterexample & collar-transfer suites:
-python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
-```
+python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py```
 
 ---
 
 <a id="repo-structure"></a>
 
-## III. Repository Structure
-```text
+## III. Repository Structure```text
 .
 ├── README.md                                                     # Bilingual Top-Level Overview (Chinese & English)
 ├── README_ZH.md                                                  # Standalone Chinese Overview

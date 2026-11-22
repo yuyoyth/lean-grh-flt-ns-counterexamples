@@ -9,12 +9,17 @@ The object of analysis in Part 03 is the 79-page manuscript *Finite-time blow-up
 
 第三部分的数学分析对象为 Levent Alpöge 与 Tristan Buckmaster 署名的 79 页论文 *Finite-time blow-up for the Navier–Stokes equations*（标注日期 2026-11-20），取自公开仓库 `https://github.com/tristanbuckmaster/navier-stokes`。
 
-- **Pinned Git Commit / 固定提交哈希**: `ad53419de079eb8f95f60313473374624a348546`
-- **Upstream File Path / 原件路径**: `paper/finite-time-blow-up-navier-stokes.pdf`
-- **File Size / 字节数**: `1,615,293` bytes
-- **PDF SHA-256 Digest / PDF 原件 SHA-256**: `4a01929b2f8a595637bbbe1dfef9724e5de768d31283d62415ce045e2ed69901`
-- **Author Attribution Cross-Reference / 同作者声明交叉核对**: The four-page Generalized Riemann Hypothesis announcement at `https://alpo.ge/remark.pdf` (SHA-256: `3fc97784b71ddd44ff8aa0a177e99622a1c61b13cfa843a0989ee4a7a0cfeb8d`) and page 1 of `paper/finite-time-blow-up-navier-stokes.pdf` confirm common first-author attribution (Levent Alpöge).
-- **Upstream Companion Formal Specification Files / 上游伴随形式化规范文件**: In commit `ad53419de079eb8f95f60313473374624a348546`, the companion specification files `ExtendedCoerciveChallenge.lean` (lines 322–323) and `CellLayerChallenge.lean` (lines 2372–2378, 2505, 2509) specify global $C^2$ regularity (`ContDiff R 2`) and parity-signed cross-plane joining conditions (`IsJoinedScalar 2`) across $y _ 3 = 0$ .
+**Pinned Git Commit / 固定提交哈希**: `ad53419de079eb8f95f60313473374624a348546`
+
+**Upstream File Path / 原件路径**: `paper/finite-time-blow-up-navier-stokes.pdf`
+
+**File Size / 字节数**: `1,615,293` bytes
+
+**PDF SHA-256 Digest / PDF 原件 SHA-256**: `4a01929b2f8a595637bbbe1dfef9724e5de768d31283d62415ce045e2ed69901`
+
+**Author Attribution Cross-Reference / 同作者声明交叉核对**: The four-page Generalized Riemann Hypothesis announcement at `https://alpo.ge/remark.pdf` (SHA-256: `3fc97784b71ddd44ff8aa0a177e99622a1c61b13cfa843a0989ee4a7a0cfeb8d`) and page 1 of `paper/finite-time-blow-up-navier-stokes.pdf` confirm common first-author attribution (Levent Alpöge).
+
+**Upstream Companion Formal Specification Files / 上游伴随形式化规范文件**: In commit `ad53419de079eb8f95f60313473374624a348546`, the companion specification files `ExtendedCoerciveChallenge.lean` (lines 322–323) and `CellLayerChallenge.lean` (lines 2372–2378, 2505, 2509) specify global $C^2$ regularity (`ContDiff R 2`) and parity-signed cross-plane joining conditions (`IsJoinedScalar 2`) across $y _ 3 = 0$ .
 
 ---
 
@@ -50,6 +55,8 @@ $$
 \text{SHA-256}(d) = \text{3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5}.
 $$
 
-Neither the data file corresponding to this SHA-256 digest nor the external 128-bit interval-arithmetic verification program (Section 1.5, pages 4 and 10, using Arb / FLINT outside the formalization kernel) nor the LaTeX source of the paper is included in the pinned public repository `ad53419de079eb8f95f60313473374624a348546`. As proved in Theorem 5.4 of our monograph (and verified by `suite_6_collar_smoothing_transfer_futility` in `verify_ns_counterexamples.py`), because the operator-kernel discrepancy in Proposition B.1 occurs at the level of the distributional Hessian integration-by-parts identity on $\mathbb{R}^3$ , unsealing the finite-dimensional spline coefficient table behind this SHA-256 digest or appending equatorial collar-smoothing patches cannot resolve the discrepancy within the static piecewise-multiplier framework.
+Neither the data file corresponding to this SHA-256 digest nor the external 128-bit interval-arithmetic verification program (Section 1.5, pages 4 and 10, using Arb / FLINT outside the formalization kernel) nor the LaTeX source of the paper is included in the pinned public repository `ad53419de079eb8f95f60313473374624a348546`.
+
+As proved in Theorem 5.4 of our monograph (and verified by `suite_6_collar_smoothing_transfer_futility` in `verify_ns_counterexamples.py`), because the operator-kernel discrepancy in Proposition B.1 occurs at the level of the distributional Hessian integration-by-parts identity on $\mathbb{R}^3$ , unsealing the finite-dimensional spline coefficient table behind this SHA-256 digest or appending equatorial collar-smoothing patches cannot resolve the discrepancy within the static piecewise-multiplier framework.
 
 在固定公开提交 `ad53419de079eb8f95f60313473374624a348546` 中，上述 SHA-256 摘要对应的原始证书数据文件、形式化内核之外的 128 位区间算术（Arb / FLINT）校验程序（第 1.5 节，第 4、10 页）以及论文 TeX 源码均未公开。如专著定理 5.4（及 `verify_ns_counterexamples.py` 中的 `suite_6_collar_smoothing_transfer_futility`）所严格证明，由于命题 B.1 的算子核偏差发生在 $\mathbb{R}^3$ 上的分布海森分部积分恒等式层，在现有静态分片乘子框架内，单纯解封该 SHA-256 摘要背后的有限维样条系数表或追加赤道薄层磨平补丁，均无法消除该结构性偏差。

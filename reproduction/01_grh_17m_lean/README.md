@@ -27,10 +27,8 @@ This directory contains the self-contained Lean 4 verification probes, full-envi
 Using only the Python 3 standard library, run `verify_graph_certificate.py` to cross-verify the `2,701,132`-node / `170,706,224`-edge declaration-graph partition (`1,478,243` in-cone + `1,222,889` out-of-cone), the exact `8`-vertex minimum internal directed cut (`capacity = 8`), the `20`-step lexicographical bisection trajectory (`threshold = 955,506`), the in-cone localization of the `62 / 67` `kexactB` modules (`1,816` in-cone declarations) and reflexive mutual inductive blocks (`11 + 12 = 23` declarations), and the exact source-line conservation (`17,374,215 - 785,224 - 17,676 + 27 = 16,571,342`):
 
 **中文**：
-仅需 Python 3 标准库，直接运行 `verify_graph_certificate.py` 即可交叉核验全环境 `2,701,132` 节点 / `170,706,224` 边声明图分区守恒（锥内 `1,478,243` + 锥外 `1,222,889`）、容量严格为 `8` 的最小内部有向顶点割、20 步字典序对数二分轨迹（阈值 `955,506`）、主定理依赖锥内 `62 / 67` 个 `kexactB` 模块（`1,816` 个入锥声明）与互归纳块（`11 + 12 = 23` 个入锥声明）定位，以及原版与社区版源码行数守恒（`17,374,215 - 785,224 - 17,676 + 27 = 16,571,342`）：
-```bash
-python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
-```
+仅需 Python 3 标准库，直接运行 `verify_graph_certificate.py` 即可交叉核验全环境 `2,701,132` 节点 / `170,706,224` 边声明图分区守恒（锥内 `1,478,243` + 锥外 `1,222,889`）、容量严格为 `8` 的最小内部有向顶点割、20 步字典序对数二分轨迹（阈值 `955,506`）、主定理依赖锥内 `62 / 67` 个 `kexactB` 模块（`1,816` 个入锥声明）与互归纳块（`11 + 12 = 23` 个入锥声明）定位，以及原版与社区版源码行数守恒（`17,374,215 - 785,224 - 17,676 + 27 = 16,571,342`）：```bash
+python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py```
 
 *(Note: When passed a directory containing `flow_certificate.json.gz` and `declaration_graph.jsonl.gz` exported by `AutopsyProbe_Scheme4.lean` and `analyze_graph.py`, `verify_graph_certificate.py` automatically switches to full 2.70M-node / 170.71M-edge raw arc-flow and reachability-closure replay mode.)*
 
@@ -42,8 +40,7 @@ python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
 In any environment with `Lean 4 v4.33.1` and `Mathlib` commit `0df444a360eaa60ab8c11dca51a86af692955474` (the exact toolchain pinned by the target GRH repository), compile the self-contained mathematical and countermodel probes:
 
 **中文**：
-在配置有目标仓库锁定的 `Lean 4 v4.33.1` 与 `Mathlib` 提交 `0df444a360eaa60ab8c11dca51a86af692955474` 的环境中，可直接编译自足数学与反模型核查探针：
-```bash
+在配置有目标仓库锁定的 `Lean 4 v4.33.1` 与 `Mathlib` 提交 `0df444a360eaa60ab8c11dca51a86af692955474` 的环境中，可直接编译自足数学与反模型核查探针：```bash
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme1.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme2.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme5.lean
@@ -52,8 +49,7 @@ lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean
 
 To inspect the target GRH repository's top-level theorem signatures, axiom cones, and full declaration graph (`2,701,132` nodes) inside a built checkout of the target GRH repository:
 
-在已构建的目标 GRH 仓库根目录下，可进一步运行针对 `Main` 环境的签名、公理锥与全环境声明图提取探针：
-```bash
+在已构建的目标 GRH 仓库根目录下，可进一步运行针对 `Main` 环境的签名、公理锥与全环境声明图提取探针：```bash
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme3.lean
 lake env lean --run reproduction/01_grh_17m_lean/AutopsyProbe_Scheme4.lean > decl_graph.jsonl
 python3 -B reproduction/01_grh_17m_lean/analyze_graph.py decl_graph.jsonl out_dir endpoints.json
@@ -81,7 +77,7 @@ python3 -B reproduction/01_grh_17m_lean/analyze_graph.py decl_graph.jsonl out_di
  * **EN**: Scheme 5 same-fiber Trojan countermodel probe (exit code `0`, `5.856s`). Certifies the symmetric Trojan polynomial $P(s) = (s-1/2)^2 - 1/16$ , Davenport–Heilbronn non-multiplicativity at $n=6$ (`dh_not_multiplicative`), even-channel reciprocal root at $s=3/4$ (`even_root`), and completed functional-equation reflection (`even_completed_reflection`), formally refuting `WeakRule` (`weak_rule_refuted : ¬WeakRule`) and deriving `WeakRule → (3/4 : ℝ) = 1/2` and `WeakRule → (0 : ℤ) = 1`.
  * **ZH**：方案五同商纤维特洛伊反模型验证探针（退出码 `0`，耗时 `5.856` 秒）。在 Lean 4 内证成代数对称特洛伊多项式、Davenport–Heilbronn 复合数 $n=6$ 乘性破缺、偶通道 $s=3/4$ 互反根与完备化对称反射，形式证伪弱排零规则 `WeakRule` 并导出 `WeakRule → (3/4 : ℝ) = 1/2` 与 `WeakRule → (0 : ℤ) = 1`。
 - `AutopsyProbe_Scheme6.lean`:
- * **EN**: Scheme 6 finite arithmetic, imprimitive Gauss-sum vanishing, and positive-definite Gram matrix probe (exit code `0`, `3.990s`). Certifies modulus-zero exclusion `¬Nonempty (NeZero 0)`, Rouché rational margin $(1/8)^2 - (1/16)^2 = 3/256 > 0$ , modulo- $4$ principal Gauss-sum vanishing `principal_mod4_gauss = 0`, prime-basis $\{17, 19, 23\}$ rational Gram $LDL^{\mathsf{T}}$ decomposition `gram_ldlt`, positivity `gram_positive`, and zero-moment positive energy `gram_moment_vector = 39`.
+ * **EN**: Scheme 6 finite arithmetic, imprimitive Gauss-sum vanishing, and positive-definite Gram matrix probe (exit code `0`, `3.990s`). Certifies modulus-zero exclusion `¬Nonempty (NeZero 0)`, Rouché rational margin $(1/8)^2 - (1/16)^2 = 3/256 > 0$ , modulo- $4$ principal Gauss-sum vanishing `principal_mod4_gauss = 0`, prime-basis $\lbrace 17, 19, 23\rbrace$ rational Gram $LDL^{\mathsf{T}}$ decomposition `gram_ldlt`, positivity `gram_positive`, and zero-moment positive energy `gram_moment_vector = 39`.
  * **ZH**：方案六有限模数边界、非本原 Gauss 和退化与有理正定 Gram 矩阵核查探针（退出码 `0`，耗时 `3.990` 秒）。
 - `TailMirrorOriginal.lean`, `TargetValueProbe.lean`, `KexactNegativeControl.lean`, `FirstZeroProbe.lean`:
  * **EN**: Target repository tail-substitution control probe, off-axis point $s=3/4$ non-vanishing instantiation probe, first-zero existential lookup probe, and custom metaprogramming assignment tactic control probe (`kexactB`, which elaborates with expected type `none` and calls `g.assign` directly).

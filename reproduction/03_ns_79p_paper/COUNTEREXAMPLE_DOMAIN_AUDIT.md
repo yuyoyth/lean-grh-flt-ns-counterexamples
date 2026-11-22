@@ -7,13 +7,15 @@
 
 This document establishes the exact mathematical boundary between two distinct families of analytical results verified in this repository:
 
-1. Direct counterexamples to the unjoined half-space $C^2$ spline version of Proposition B.1 / inequality (B.20) in the 79-page paper (Counterexample Family A on the $D$ -weight seam and Counterexample Family B on the $Z$ -weight seam, documented in `INTERFACE_AUTOPSY_A.md` and `INTERFACE_AUTOPSY_B.md`);
-2. A foundational fluid-dynamical counterexample to full-spectrum static Euclidean quadratic readouts on the three-dimensional torus $\mathbb{T}^3 = (\mathbb{R}/2\pi\mathbb{Z})^3$ (the twin initial data $X _ \pm = \pm 17 U$ , verified in `suite_4_static_readout_sign_blindness` of `verify_ns_counterexamples.py` and stored in `STATIC_READOUT_WITNESS.json`).
+**Direct paper counterexamples**: Direct counterexamples to the unjoined half-space $C^2$ spline version of Proposition B.1 / inequality (B.20) in the 79-page paper (Counterexample Family A on the $D$ -weight seam and Counterexample Family B on the $Z$ -weight seam, documented in `INTERFACE_AUTOPSY_A.md` and `INTERFACE_AUTOPSY_B.md`);
+
+**Static readout counterexample**: A foundational fluid-dynamical counterexample to full-spectrum static Euclidean quadratic readouts on the three-dimensional torus $\mathbb{T}^3 = (\mathbb{R}/2\pi\mathbb{Z})^3$ (the twin initial data $X _ \pm = \pm 17 U$ , verified in `suite_4_static_readout_sign_blindness` of `verify_ns_counterexamples.py` and stored in `STATIC_READOUT_WITNESS.json`).
 
 本文件严格界定本仓库所验证的两类数学结果各自的定义域与适用边界：
 
-1. 针对 79 页论文附录 B 命题 B.1 / 不等式 (B.20) 在分侧无跨面接合 $C^2$ 样条合同下的直接解析反例（即作用在二阶权 $D$ 赤道接缝上的反例族 A 与作用在一阶权 $Z$ 赤道接缝上的反例族 B，详见 `INTERFACE_AUTOPSY_A.md` 与 `INTERFACE_AUTOPSY_B.md`）；
-2. 针对三维周期环面 $\mathbb{T}^3 = (\mathbb{R}/2\pi\mathbb{Z})^3$ 上全谱静态欧氏二次能谱读口的流体动力学方法论反例（即正负孪生光滑无散初值 $X _ \pm = \pm 17 U$ ，由 `verify_ns_counterexamples.py` 中的 `suite_4_static_readout_sign_blindness` 与 `STATIC_READOUT_WITNESS.json` 精确核验）。
+**纸面直接反例**: 针对 79 页论文附录 B 命题 B.1 / 不等式 (B.20) 在分侧无跨面接合 $C^2$ 样条合同下的直接解析反例（即作用在二阶权 $D$ 赤道接缝上的反例族 A 与作用在一阶权 $Z$ 赤道接缝上的反例族 B，详见 `INTERFACE_AUTOPSY_A.md` 与 `INTERFACE_AUTOPSY_B.md`）；
+
+**静态读口反例**: 针对三维周期环面 $\mathbb{T}^3 = (\mathbb{R}/2\pi\mathbb{Z})^3$ 上全谱静态欧氏二次能谱读口的流体动力学方法论反例（即正负孪生光滑无散初值 $X _ \pm = \pm 17 U$ ，由 `verify_ns_counterexamples.py` 中的 `suite_4_static_readout_sign_blindness` 与 `STATIC_READOUT_WITNESS.json` 精确核验）。
 
 ---
 
@@ -24,7 +26,7 @@ On the volume-normalized three-dimensional torus $\mathbb{T}^3 = (\mathbb{R}/2\p
 在体积归一化的三维周期环面 $\mathbb{T}^3 = (\mathbb{R}/2\pi\mathbb{Z})^3$ （取黏性系数 $\nu = 1$ ）上，定义仅含八个非零傅里叶频率的光滑无散零均值速度场：
 
 $$
-U(x,y,z) := \bigl(\sin y + \sin z,\ \sin x,\ \sin x - \sin(x+y)\bigr), \qquad X _ \pm := \pm 17\,U.
+U(x,y,z) := \bigl(\sin y + \sin z, \sin x, \sin x - \sin(x+y)\bigr), \qquad X _ \pm := \pm 17 U.
 $$
 
 Define the full-spectrum static quadratic readout $q _ {\mathrm{static}}$ and the initial time derivative of enstrophy $f(u)$ along the true local smooth Navier–Stokes solution evolving from $u$ :
@@ -32,11 +34,17 @@ Define the full-spectrum static quadratic readout $q _ {\mathrm{static}}$ and th
 定义全谱静态二次读口 $q _ {\mathrm{static}}$ 以及沿真实局部光滑纳维－斯托克斯解的初始时刻平方涡量（拟能）时间导数 $f(u)$ ：
 
 $$
-q _ {\mathrm{static}}(u) := \Bigl(\bigl\{\widehat{u}(k)\widehat{u}(k)^{\ast}\bigr\} _ {k \in \mathbb{Z}^3},\ \|u\| _ {L^2}^2,\ \|\omega\| _ {L^2}^2,\ \|\nabla\omega\| _ {L^2}^2,\ \langle u, \omega\rangle\Bigr),
+\begin{aligned}
+& q _ {\mathrm{static}}(u) := \Bigl(\bigl\lbrace \widehat{u}(k)\widehat{u}(k)^{\ast}\bigr\rbrace _ {k \in \mathbb{Z}^3}, \cr
+& \quad \Vert u\Vert _ {L^2}^2, \Vert \omega\Vert _ {L^2}^2, \Vert \nabla\omega\Vert _ {L^2}^2, \langle u, \omega\rangle\Bigr),
+\end{aligned}
 $$
 
 $$
-f(u) := \left.\frac{d}{dt}\|\nabla u(t)\| _ {L^2}^2\right| _ {t=0} = 2\langle \omega,\, (\omega \cdot \nabla)u\rangle - 2\nu\|\nabla\omega\| _ {L^2}^2.
+\begin{aligned}
+& f(u) := \left.\frac{d}{dt}\Vert \nabla u(t)\Vert _ {L^2}^2\right| _ {t=0} = 2\langle \omega, \cr
+& (\omega \cdot \nabla)u\rangle - 2\nu\Vert \nabla\omega\Vert _ {L^2}^2.
+\end{aligned}
 $$
 
 Because simultaneous sign reversal of all Fourier coefficients leaves every single-mode Hermitian outer product $\widehat{u}(k)\widehat{u}(k)^{\ast}$ invariant, we have $q _ {\mathrm{static}}(X _ +) = q _ {\mathrm{static}}(X _ -)$ . Taking the curl of $U$ yields:
@@ -44,7 +52,7 @@ Because simultaneous sign reversal of all Fourier coefficients leaves every sing
 由于将全部傅里叶系数同时反号不改变任何单模厄米外积矩阵 $\widehat{u}(k)\widehat{u}(k)^{\ast}$ ，故必有 $q _ {\mathrm{static}}(X _ +) = q _ {\mathrm{static}}(X _ -)$ 。直接求 $U$ 的旋度得：
 
 $$
-\omega _ U = \bigl(-\cos(x+y),\ \cos z - \cos x + \cos(x+y),\ \cos x - \cos y\bigr).
+\omega _ U = \bigl(-\cos(x+y), \cos z - \cos x + \cos(x+y), \cos x - \cos y\bigr).
 $$
 
 By trigonometric orthogonality on $\mathbb{T}^3$ , the unique non-vanishing triadic vortex-stretching resonance comes from $\langle \cos x \cos y \cos(x+y)\rangle = \frac{1}{4}$ , yielding the normalized base invariants:
@@ -52,7 +60,10 @@ By trigonometric orthogonality on $\mathbb{T}^3$ , the unique non-vanishing tria
 由 $\mathbb{T}^3$ 上的三角正交性，唯一非零的三波涡度拉伸共振项来自 $\langle \cos x \cos y \cos(x+y)\rangle = \frac{1}{4}$ ，从而基底场 $U$ 的各项积分不变量为：
 
 $$
-E(U) = \frac{5}{2}, \qquad Y(U) = 3, \qquad Z(U) = 4, \qquad H(U) = 0, \qquad \mathcal{T}(U) := \langle \omega _ U, (\omega _ U \cdot \nabla)U\rangle = \frac{1}{4}.
+\begin{aligned}
+& E(U) = \frac{5}{2}, \qquad Y(U) = 3, \qquad Z(U) = 4, \qquad H(U) = 0, \qquad \mathcal{T}(U) := \langle \omega _ U, \cr
+& (\omega _ U \cdot \nabla)U\rangle = \frac{1}{4}.
+\end{aligned}
 $$
 
 By quadratic and cubic homogeneity at amplitude $a = 17$ and viscosity $\nu = 1$ , exact rational arithmetic produces:
@@ -61,9 +72,9 @@ By quadratic and cubic homogeneity at amplitude $a = 17$ and viscosity $\nu = 1$
 
 | Observable / 观测量 | $X _ + = +17 U$ | $X _ - = -17 U$ | Comparison / 对比结论 |
 | :--- | :---: | :---: | :--- |
-| Kinetic energy $E = \langle \mid u \mid^2 \rangle$ / 动能 | $1445/2$ | $1445/2$ | Identical / 完全相同 |
-| Enstrophy $Y = \langle \mid \omega \mid^2 \rangle$ / 拟能 | $867$ | $867$ | Identical / 完全相同 |
-| Palinstrophy $Z = \langle \mid \nabla\omega \mid^2 \rangle$ / 涡度梯度平方 | $1156$ | $1156$ | Identical / 完全相同 |
+| Kinetic energy $E = \langle \lvert u \rvert ^2 \rangle$ / 动能 | $1445/2$ | $1445/2$ | Identical / 完全相同 |
+| Enstrophy $Y = \langle \lvert \omega \rvert ^2 \rangle$ / 拟能 | $867$ | $867$ | Identical / 完全相同 |
+| Palinstrophy $Z = \langle \lvert \nabla\omega \rvert ^2 \rangle$ / 涡度梯度平方 | $1156$ | $1156$ | Identical / 完全相同 |
 | Helicity $H = \langle u, \omega \rangle$ / 螺旋度 | $0$ | $0$ | Identical / 完全相同 |
 | Cubic stretching $\mathcal{T} = \langle \omega, (\omega\cdot\nabla)u \rangle$ / 三次涡拉伸 | $+4913/4$ | $-4913/4$ | Opposite sign / 符号相反 |
 | Initial enstrophy derivative $f = Y'(0)$ / 拟能初导数 | $+289/2$ | $-9537/2$ | Difference $4913 \neq 0$ / 差值 $4913 \neq 0$ |
@@ -78,12 +89,16 @@ Thus $q _ {\mathrm{static}}(X _ +) = q _ {\mathrm{static}}(X _ -)$ whereas $f(X 
 
 In accordance with rigorous scientific standards, we explicitly record why $X _ \pm = \pm 17 U$ is a theorem on general Navier–Stokes static readouts rather than a direct counterexample to Theorem 7.1 of the 79-page paper:
 
-- In Section 7.3 and Appendix B of the 79-page paper, the certificate input includes a fixed signed approximate self-similar profile $W _ \alpha^a$ and a fixed reference profile $W _ \alpha^r$ .
-- Although the linearized perturbation functional $J _ {W^r}(v)$ in equation (B.18) (page 55) is quadratic in the perturbation $v$ and hence even under global perturbation sign reversal $v \mapsto -v$ ( $J _ {W^r}(-v) = J _ {W^r}(v)$ ), the fields $X _ \pm = \pm 17 U$ on $\mathbb{T}^3$ are not constructed as solutions of the self-similar profile equations of Section 7.
-- Therefore, in our monograph, $X _ \pm = \pm 17 U$ (Theorem 6.1) is presented strictly in Chapter 6 to illustrate the fluid-dynamical origin of static readout sign-blindness and its resolution via the comoving covariant inverse metric $g = C^{-1}$ (Theorem 6.2), while the direct mathematical refutation of the unjoined half-space $C^2$ spline version of Proposition B.1 / inequality (B.20) is carried entirely by Counterexample Families A and B (Theorems 3.2, 3.3, and 5.4).
+**Fixed signed profiles**: In Section 7.3 and Appendix B of the 79-page paper, the certificate input includes a fixed signed approximate self-similar profile $W _ \alpha^a$ and a fixed reference profile $W _ \alpha^r$ .
+
+**Even perturbation functional**: Although the linearized perturbation functional $J _ {W^r}(v)$ in equation (B.18) (page 55) is quadratic in the perturbation $v$ and hence even under global perturbation sign reversal $v \mapsto -v$ ( $J _ {W^r}(-v) = J _ {W^r}(v)$ ), the fields $X _ \pm = \pm 17 U$ on $\mathbb{T}^3$ are not constructed as solutions of the self-similar profile equations of Section 7.
+
+**Methodological boundary**: Therefore, in our monograph, $X _ \pm = \pm 17 U$ (Theorem 6.1) is presented strictly in Chapter 6 to illustrate the fluid-dynamical origin of static readout sign-blindness and its resolution via the comoving covariant inverse metric $g = C^{-1}$ (Theorem 6.2), while the direct mathematical refutation of the unjoined half-space $C^2$ spline version of Proposition B.1 / inequality (B.20) is carried entirely by Counterexample Families A and B (Theorems 3.2, 3.3, and 5.4).
 
 秉持严格的科学实证标准，我们在此明确说明为何 $X _ \pm = \pm 17 U$ 是关于三维纳维－斯托克斯静态读口的一般方法论定理，而不直接混同于针对 79 页论文定理 7.1 的证书反例：
 
-- 79 页论文第 7.3 节与附录 B 的输入包含固定的有符号近似自相似剖面 $W _ \alpha^a$ 与参考剖面 $W _ \alpha^r$ 。
-- 尽管论文第 55 页公式 (B.18) 中围绕固定背景场 $W^r$ 的线性化泛函 $J _ {W^r}(v)$ 关于扰动 $v$ 仍为二次偶泛函（满足 $J _ {W^r}(-v) = J _ {W^r}(v)$ ），但 $\mathbb{T}^3$ 上的八模态场 $X _ \pm = \pm 17 U$ 并非第七节自相似剖面方程的解。
-- 因此，在专著中，我们将 $X _ \pm = \pm 17 U$ （定理 6.1）严格置于第六章，用于阐明流体动力学中静态二次读口反号盲区的数学根源及其在随流协变逆度规 $g = C^{-1}$ （定理 6.2）下的纯平方耗散闭合；而对论文附录 B 命题 B.1 / 不等式 (B.20) 分侧样条架构的直接数学反驳，则完全由满足命题 B.1 全部定义域条件的反例族 A 与反例族 B（定理 3.2、定理 3.3 与定理 5.4）独立承担。
+**固定有符号剖面**: 79 页论文第 7.3 节与附录 B 的输入包含固定的有符号近似自相似剖面 $W _ \alpha^a$ 与参考剖面 $W _ \alpha^r$ 。
+
+**扰动泛函的偶性**: 尽管论文第 55 页公式 (B.18) 中围绕固定背景场 $W^r$ 的线性化泛函 $J _ {W^r}(v)$ 关于扰动 $v$ 仍为二次偶泛函（满足 $J _ {W^r}(-v) = J _ {W^r}(v)$ ），但 $\mathbb{T}^3$ 上的八模态场 $X _ \pm = \pm 17 U$ 并非第七节自相似剖面方程的解。
+
+**方法论边界**: 因此，在专著中，我们将 $X _ \pm = \pm 17 U$ （定理 6.1）严格置于第六章，用于阐明流体动力学中静态二次读口反号盲区的数学根源及其在随流协变逆度规 $g = C^{-1}$ （定理 6.2）下的纯平方耗散闭合；而对论文附录 B 命题 B.1 / 不等式 (B.20) 分侧样条架构的直接数学反驳，则完全由满足命题 B.1 全部定义域条件的反例族 A 与反例族 B（定理 3.2、定理 3.3 与定理 5.4）独立承担。

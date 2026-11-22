@@ -17,19 +17,19 @@ $$
 L(s,\chi) = \sum _ {n=1}^{\infty} \chi(n)n^{-s} = \prod _ {p \in \mathcal{P}} \left(1 - \chi(p)p^{-s}\right)^{-1}. \tag{1.1}
 $$
 
-In Equation $(1.1)$ , each local Euler factor $(1 - \chi(p)p^{-s})^{-1}$ governs the periodic oscillatory phase associated with an individual prime $p$ , while the strict linear independence of the prime logarithms $\{\log p\} _ {p \in \mathcal{P}}$ over the rational field $\mathbb{Q}$ —the logarithmic incarnation of the fundamental theorem of arithmetic—ensures that no non-trivial rational resonance can ever occur among the infinitely many prime oscillation frequencies. When we advance from the right half-plane toward the critical strip along a prime truncation horizon $P$ or a summation truncation horizon $X$ , no finite observation window can represent the true arithmetic object by an isolated finite principal part $\mathcal{Z} _ {P,X}(s)$ alone. Rather, every finite stage must simultaneously carry the **unresolved remainder companion fiber** $\delta _ {P,X}(s)$ that has not yet been expanded within the current finite window, yet uniquely governs the direction of every subsequent cross-scale transition. In each single-step advance $(P,X) \to (P',X')$ between adjacent scale windows, the local sieving increment $b _ {P\to P'}(s)$ acts simultaneously and oppositely on the explicit principal part and the unresolved remainder fiber:
+In Equation $(1.1)$ , each local Euler factor $(1 - \chi(p)p^{-s})^{-1}$ governs the periodic oscillatory phase associated with an individual prime $p$ , while the strict linear independence of the prime logarithms $\lbrace \log p\rbrace _ {p \in \mathcal{P}}$ over the rational field $\mathbb{Q}$ —the logarithmic incarnation of the fundamental theorem of arithmetic—ensures that no non-trivial rational resonance can ever occur among the infinitely many prime oscillation frequencies. When we advance from the right half-plane toward the critical strip along a prime truncation horizon $P$ or a summation truncation horizon $X$ , no finite observation window can represent the true arithmetic object by an isolated finite principal part $\mathcal{Z} _ {P,X}(s)$ alone. Rather, every finite stage must simultaneously carry the **unresolved remainder companion fiber** $\delta _ {P,X}(s)$ that has not yet been expanded within the current finite window, yet uniquely governs the direction of every subsequent cross-scale transition. In each single-step advance $(P,X) \to (P',X')$ between adjacent scale windows, the local sieving increment $b _ {P\to P'}(s)$ acts simultaneously and oppositely on the explicit principal part and the unresolved remainder fiber:
 
 $$
-\bigl(\mathcal{Z} _ {P,X}(s),\,\delta _ {P,X}(s)\bigr) \longmapsto \bigl(\mathcal{Z} _ {P,X}(s)\exp\!\bigl(b _ {P\to P'}(s)\bigr),\,\delta _ {P,X}(s) - b _ {P\to P'}(s)\bigr), \tag{1.2}
+\bigl(\mathcal{Z} _ {P,X}(s), \delta _ {P,X}(s)\bigr) \longmapsto \bigl(\mathcal{Z} _ {P,X}(s)\exp\bigl(b _ {P\to P'}(s)\bigr), \delta _ {P,X}(s) - b _ {P\to P'}(s)\bigr), \tag{1.2}
 $$
 
 thereby preserving at every finite evolutionary prefix the full-order arithmetic conservation law
 
 $$
-\mathcal{I} _ {P',X'}(s) = \mathcal{Z} _ {P',X'}(s)\exp\!\bigl(\delta _ {P',X'}(s)\bigr) = \mathcal{Z} _ {P,X}(s)\exp\!\bigl(\delta _ {P,X}(s)\bigr) = L(s,\chi). \tag{1.3}
+\mathcal{I} _ {P',X'}(s) = \mathcal{Z} _ {P',X'}(s)\exp\bigl(\delta _ {P',X'}(s)\bigr) = \mathcal{Z} _ {P,X}(s)\exp\bigl(\delta _ {P,X}(s)\bigr) = L(s,\chi). \tag{1.3}
 $$
 
-Expressed in plain mathematical language, Equations $(1.2)$ and $(1.3)$ reveal a fundamental structural truth: at every step of analytic continuation and zero-exclusion across domains, the authentic state of an arithmetic $L$ -function is always a typed coupled pair $(\mathcal{Z} _ {P,X},\,\delta _ {P,X})$ consisting of the currently resolved finite arithmetic principal part $\mathcal{Z} _ {P,X}$ together with the high-order remainder coupling fiber $\delta _ {P,X}$ that constrains all admissible future evolutions. Along this causal chain, what actually exercises global analytic control is precisely the remainder coupling flow that remains invisible on any static point-value snapshot yet locks phases pointwise behind the scenes. It demands that every retention step (preserving the identical arithmetic source and the conserved invariant $\mathcal{I}$ across every prefix), every zero-residue pruning step (discarding an auxiliary term only after proving that its residual effect on the target observation readout and on all admissible subsequent transitions vanishes identically), and every cross-domain bridging step (extending the multiplicative logarithmic derivative and integral operators from $\operatorname{Re}(s) > 1$ into meromorphic resolvents and positive-definite kernels inside the critical strip) remain tightly coupled at every prefix of the derivation.
+Expressed in plain mathematical language, Equations $(1.2)$ and $(1.3)$ reveal a fundamental structural truth: at every step of analytic continuation and zero-exclusion across domains, the authentic state of an arithmetic $L$ -function is always a typed coupled pair $(\mathcal{Z} _ {P,X}, \delta _ {P,X})$ consisting of the currently resolved finite arithmetic principal part $\mathcal{Z} _ {P,X}$ together with the high-order remainder coupling fiber $\delta _ {P,X}$ that constrains all admissible future evolutions. Along this causal chain, what actually exercises global analytic control is precisely the remainder coupling flow that remains invisible on any static point-value snapshot yet locks phases pointwise behind the scenes. It demands that every retention step (preserving the identical arithmetic source and the conserved invariant $\mathcal{I}$ across every prefix), every zero-residue pruning step (discarding an auxiliary term only after proving that its residual effect on the target observation readout and on all admissible subsequent transitions vanishes identically), and every cross-domain bridging step (extending the multiplicative logarithmic derivative and integral operators from $\operatorname{Re}(s) > 1$ into meromorphic resolvents and positive-definite kernels inside the critical strip) remain tightly coupled at every prefix of the derivation.
 
 ### 1.2　The Structural Blind Spot of Static Type-Theoretic Cross-Sections: Continuous Causal Flow Versus Measure-Zero Discrete Sampling
 
@@ -38,13 +38,13 @@ Why is this full-process pointwise remainder coupling flow so easily and silentl
 The root cause lies in the static cross-section architecture of dependent type theory. Within a type-theoretic environment $\Sigma _ {\mathrm{TT}}$ , a mathematical object is encoded as a static data structure or a quotient representative under a fixed signature, and a proof term operates by invoking finitely many explicit premise predicates on that static representation. Formulated in terms of linear representations and quotient projections, let the full state space encompassing both the complete arithmetic source and the cross-scale remainder fiber be decomposed as $V = \mathcal{S} _ 0 \oplus \mathcal{K} _ {\mathrm{blind}}$ , where $\mathcal{S} _ 0 = \Sigma _ {\mathrm{TT}}$ is the **static visible cross-section** explicitly recorded by the formal signature, $\pi _ {\mathrm{TT}} : V \to \mathcal{S} _ 0$ is the observation projection compressing the full state onto the static cross-section, and
 
 $$
-\mathcal{K} _ {\mathrm{blind}} := \ker\pi _ {\mathrm{TT}} = \bigl\{v \in V : \pi _ {\mathrm{TT}}(v) = 0\bigr\} \tag{1.4}
+\mathcal{K} _ {\mathrm{blind}} := \ker\pi _ {\mathrm{TT}} = \bigl\lbrace v \in V : \pi _ {\mathrm{TT}}(v) = 0\bigr\rbrace  \tag{1.4}
 $$
 
 is the **invisible blind-kernel subspace** annihilated by the projection under that static signature. Whenever the static cross-section $\mathcal{S} _ 0$ is equipped with any visible inner product $\langle \cdot, \cdot \rangle _ {\mathcal{S} _ 0}$ , the induced visible semi-inner product on the full state space,
 
 $$
-\langle u, v \rangle _ {\mathrm{vis}} := \bigl\langle \pi _ {\mathrm{TT}}(u),\,\pi _ {\mathrm{TT}}(v) \bigr\rangle _ {\mathcal{S} _ 0}, \tag{1.5}
+\langle u, v \rangle _ {\mathrm{vis}} := \bigl\langle \pi _ {\mathrm{TT}}(u), \pi _ {\mathrm{TT}}(v) \bigr\rangle _ {\mathcal{S} _ 0}, \tag{1.5}
 $$
 
 necessarily obeys the strict orthogonality blind-spot identity:
@@ -56,7 +56,7 @@ $$
 The geometric and analytical meaning of Equation $(1.6)$ is immediate: to any downstream formal lemma that accesses information solely through the static cross-section projection $\pi _ {\mathrm{TT}}$ , every high-order remainder coupling structure and every prime multiplicative rigidity invariant residing inside the blind kernel $\ker\pi _ {\mathrm{TT}}$ has a visible projection identically equal to zero. This phenomenon is directly analogous to observing a continuous dynamical trajectory on a time interval $[0, T]$ governed pointwise by a differential law: if one samples the trajectory only at finitely many isolated instants $t _ 1, t _ 2, \dots, t _ m \in [0, T]$ , then by the zero Lebesgue measure of singletons and finite additivity, the Lebesgue measure of the entire discrete sampling set on the continuum satisfies
 
 $$
-\lambda\bigl(\{t _ 1, t _ 2, \dots, t _ m\}\bigr) = \sum _ {j=1}^{m} \lambda\bigl(\{t _ j\}\bigr) = 0. \tag{1.7}
+\lambda\bigl(\lbrace t _ 1, t _ 2, \dots, t _ m\rbrace \bigr) = \sum _ {j=1}^{m} \lambda\bigl(\lbrace t _ j\rbrace \bigr) = 0. \tag{1.7}
 $$
 
 Outside a discrete sampling set of measure $0$ , in the absence of a pointwise derivative-control and remainder-coupling contract holding across the entire interval, the continuous trajectory between consecutive sample points can undergo arbitrarily wild deflections and topological windings without triggering the slightest warning in the static sample table. By the exact same mechanism, in a large-scale formalization of the Generalized Riemann Hypothesis (note that syntactic finiteness of a proof term does not by itself imply semantic finiteness of its arithmetic horizon, because natural-number induction and universal quantification can legitimately bind infinite domains; what determines the blind kernel is the **static observation quotient map** $q : X \to Q$ through which the proof actually factorizes), the moment the proof chain crosses $\operatorname{Re}(s) = 1$ into the critical strip $0 < \operatorname{Re}(s) < 1$ by factoring a target proposition valid only for genuine arithmetic objects through a weak static quotient map $q$ that discards prime multiplicative coupling, non-arithmetic shadow countermodels that share the exact same static quotient readout under $q$ as genuine $L$ -functions infiltrate the proof unhindered along the blind kernel $\ker q$ .
@@ -65,7 +65,7 @@ Outside a discrete sampling set of measure $0$ , in the absence of a pointwise d
 
 We can now state with algebraic precision why a single quotient-kernel leak at the entry interface or cross-domain bridge causes subsequent multi-million-line formal deductions to operate on a coarsened equivalence class rather than the intended arithmetic object.
 
-Let $\{A _ a\} _ {a \in \mathcal{A}}$ be a family of legitimate arithmetic-analytic evolution operators acting on the full state space $V$ (for instance: forming finite Dirichlet partial sums, applying Abel summation by parts, performing meromorphic continuation via Hurwitz zeta functions, integrating logarithmic derivatives around rational rectangular contours in the critical strip, and applying the symmetric functional-equation reflection $s \leftrightarrow 1-s$ ). Under what necessary and sufficient condition do these true evolution operators $A _ a : V \to V$ descend to well-defined cross-section evolution operators $\overline{A} _ a : \mathcal{S} _ 0 \to \mathcal{S} _ 0$ on the static quotient $\mathcal{S} _ 0 = V / \ker\pi _ {\mathrm{TT}}$ such that the commutation relation $\pi _ {\mathrm{TT}} A _ a = \overline{A} _ a \pi _ {\mathrm{TT}}$ holds for all composite operator words? The fundamental theorem of linear quotient spaces provides the unique necessary and sufficient condition—the **quotient-kernel invariance closure law**:
+Let $\lbrace A _ a\rbrace _ {a \in \mathcal{A}}$ be a family of legitimate arithmetic-analytic evolution operators acting on the full state space $V$ (for instance: forming finite Dirichlet partial sums, applying Abel summation by parts, performing meromorphic continuation via Hurwitz zeta functions, integrating logarithmic derivatives around rational rectangular contours in the critical strip, and applying the symmetric functional-equation reflection $s \leftrightarrow 1-s$ ). Under what necessary and sufficient condition do these true evolution operators $A _ a : V \to V$ descend to well-defined cross-section evolution operators $\overline{A} _ a : \mathcal{S} _ 0 \to \mathcal{S} _ 0$ on the static quotient $\mathcal{S} _ 0 = V / \ker\pi _ {\mathrm{TT}}$ such that the commutation relation $\pi _ {\mathrm{TT}} A _ a = \overline{A} _ a \pi _ {\mathrm{TT}}$ holds for all composite operator words? The fundamental theorem of linear quotient spaces provides the unique necessary and sufficient condition—the **quotient-kernel invariance closure law**:
 
 $$
 \forall a \in \mathcal{A},\qquad A _ a\bigl(\ker\pi _ {\mathrm{TT}}\bigr) \subseteq \ker\pi _ {\mathrm{TT}}. \tag{1.8}
@@ -91,15 +91,15 @@ $$
 
 Once the entry-level quotient-kernel leak described by Equations $(1.10)$ – $(1.11)$ occurs at Step 1, what happens to the remainder of the formalization?
 
-Consider an aircraft that must follow a unique geodesic on a sphere to reach its destination, but at the first second after takeoff its navigation coordinate system is silently projected onto a lower-dimensional quotient manifold $Q$ that identifies the true geodesic $x _ 0$ with a diverging trajectory $x _ 1$ as the exact same point. For any deterministic downstream proof pipeline $P = F _ N \circ F _ {N-1} \circ \cdots \circ F _ 1$ that consumes only the static quotient readout $q(x) \in Q$ , an immediate induction on the deduction length $N$ proves that whether one stacks $N = 10^4$ lines or $N = 17\,374\,215$ lines of intricate local lemmas, sheaf cohomology, or matrix estimates afterward, so long as those $N$ steps do not return to the entry interface to open a finer observation readout capable of separating $x _ 0$ from $x _ 1$ , the intermediate quotient state computed at every single step for the genuine arithmetic object $x _ 0$ and for the off-axis shadow countermodel $x _ 1$ remains identically equal:
+Consider an aircraft that must follow a unique geodesic on a sphere to reach its destination, but at the first second after takeoff its navigation coordinate system is silently projected onto a lower-dimensional quotient manifold $Q$ that identifies the true geodesic $x _ 0$ with a diverging trajectory $x _ 1$ as the exact same point. For any deterministic downstream proof pipeline $P = F _ N \circ F _ {N-1} \circ \cdots \circ F _ 1$ that consumes only the static quotient readout $q(x) \in Q$ , an immediate induction on the deduction length $N$ proves that whether one stacks $N = 10^4$ lines or $N = 17,374,215$ lines of intricate local lemmas, sheaf cohomology, or matrix estimates afterward, so long as those $N$ steps do not return to the entry interface to open a finer observation readout capable of separating $x _ 0$ from $x _ 1$ , the intermediate quotient state computed at every single step for the genuine arithmetic object $x _ 0$ and for the off-axis shadow countermodel $x _ 1$ remains identically equal:
 
 $$
-\forall n \in \{1, 2, \dots, N\},\qquad (F _ n \circ \cdots \circ F _ 1)\bigl(q(x _ 0)\bigr) \equiv (F _ n \circ \cdots \circ F _ 1)\bigl(q(x _ 1)\bigr). \tag{1.12}
+\forall n \in \lbrace 1, 2, \dots, N\rbrace ,\qquad (F _ n \circ \cdots \circ F _ 1)\bigl(q(x _ 0)\bigr) \equiv (F _ n \circ \cdots \circ F _ 1)\bigl(q(x _ 1)\bigr). \tag{1.12}
 $$
 
 In other words, once the remainder coupling fiber that enforces arithmetic rigidity is lost at the entry or cross-domain bridge, the object being manipulated across the subsequent seventeen million lines of code is no longer the authentic arithmetic $L$ -function governed by unique prime factorization; it is a coarsened equivalence class on the quotient space $Q$ . If a formal theorem asserts on this coarsened quotient space that all non-trivial zeros lie on $\operatorname{Re}(s) = 1/2$ , then because the shadow object $x _ 1$ legitimately inhabits the very same quotient fiber $q(x _ 1) = q(x _ 0)$ , the resulting theorem inside the static type-theoretic cross-section $\Sigma _ {\mathrm{TT}}$ is automatically transported to $x _ 1$ , conflicting directly with the off-critical-line zero of $x _ 1$ certified by finite rational arithmetic, and deriving the logical contradiction $(0 : \mathbb{Z}) = 1$ within $\Sigma _ {\mathrm{TT}}$ itself.
 
-In this monograph, Chapters 2 and 3 establish the complete closed-form proofs of the **Three Principled Self-Collision Theorems (Theorem A₀, Theorems B₀–B₃, and Theorems C₀–C₃)** together with the **Directed Proof-Graph Semantic Defect Conservation and Extraction Trilemma Theorem (Theorem 1.4)**. Chapter 4 analyzes the **Five Static Formalization Translation Distortion Mechanisms** and their full-process kernel-preserving reconstruction equations. Chapter 5 presents the **Six Zero-Full-Read Verification Schemes** requiring zero manual reading of millions of lines of code, together with our **complete source-code and dependency-graph verification on the compute host** $\mathtt{lc23}$ of both the original $17\,374\,215$ -line repository ( $\mathtt{40e56bab026552e089d7afcfeff08d2defb9c005}$ , $175\,187$ source files, $2\,701\,132$ environment declaration nodes, $170\,706\,224$ directed dependency edges) and the community pruned edition ( $\mathtt{f1f6d65420dbbf36d6cfdac1af8d79511a855a5b}$ , $16\,571\,342$ lines, $164\,464$ source files). Finally, Chapter 6 provides the complete ledger of **182 closed-form algebraic, observation-recovery, positive-definite matrix decomposition, and single-premise negative-control propositions (Propositions A.1–A.120 and Propositions B.1–B.62)**.
+In this monograph, Chapters 2 and 3 establish the complete closed-form proofs of the **Three Principled Self-Collision Theorems** (Theorem A₀, Theorems B₀–B₃, and Theorems C₀–C₃) together with the **Directed Proof-Graph Semantic Defect Conservation and Extraction Trilemma Theorem** (Theorem 1.4). Chapter 4 analyzes the **Five Static Formalization Translation Distortion Mechanisms** and their full-process kernel-preserving reconstruction equations. Chapter 5 presents the **Six Zero-Full-Read Verification Schemes** requiring zero manual reading of millions of lines of code, together with our **complete source-code and dependency-graph verification on the compute host** $\text{lc23}$ of both the original $17,374,215$ -line repository ( $\text{40e56bab026552e089d7afcfeff08d2defb9c005}$ , $175,187$ source files, $2,701,132$ environment declaration nodes, $170,706,224$ directed dependency edges) and the community pruned edition ( $\text{f1f6d65420dbbf36d6cfdac1af8d79511a855a5b}$ , $16,571,342$ lines, $164,464$ source files). Finally, Chapter 6 provides the complete ledger of **182 closed-form algebraic, observation-recovery, positive-definite matrix decomposition, and single-premise negative-control propositions** (Propositions A.1–A.120 and Propositions B.1–B.62).
 
 ---
 
@@ -109,7 +109,7 @@ In this chapter we rigorously formalize the central question: fix a dependent ty
 
 | Principal Theorem | Blind-Kernel Mechanism & Same-Fiber Shadow Countermodel | The Two Sides Colliding Head-On Inside $\Sigma _ {\mathrm{TT}}$ | Exact Boundary of Validity & Negative-Control Guard |
 | :--- | :--- | :--- | :--- |
-| **Theorem A₀**: Same-Fiber Quotient Transport vs. Local Rational Contour Winding Collision | Quotient fiber $q(x _ 0) = q(x _ 1)$ fails to separate true arithmetic model $x _ 0$ from shadow model $x _ 1$ possessing a simple zero inside a rational rectangle $B \subset \{1/2 < \operatorname{Re}(s) < 1\}$ | Transporting $C(q(x _ 0))$ along $h _ q : q(x _ 0)=q(x _ 1)$ via $\operatorname{Eq.subst}$ yields winding number $W(x _ 1, B) = 0$ , colliding with local rational Rouché arithmetic certifying $W(x _ 1, B) = 1$ | Target predicate $Z$ descends through $q$ if and only if $\operatorname{Eq}(q) \subseteq \operatorname{Eq}(Z)$ (Theorem 0) |
+| **Theorem A₀**: Same-Fiber Quotient Transport vs. Local Rational Contour Winding Collision | Quotient fiber $q(x _ 0) = q(x _ 1)$ fails to separate true arithmetic model $x _ 0$ from shadow model $x _ 1$ possessing a simple zero inside a rational rectangle $B \subset \lbrace 1/2 < \operatorname{Re}(s) < 1\rbrace$ | Transporting $C(q(x _ 0))$ along $h _ q : q(x _ 0)=q(x _ 1)$ via $\operatorname{Eq.subst}$ yields winding number $W(x _ 1, B) = 0$ , colliding with local rational Rouché arithmetic certifying $W(x _ 1, B) = 1$ | Target predicate $Z$ descends through $q$ if and only if $\operatorname{Eq}(q) \subseteq \operatorname{Eq}(Z)$ (Theorem 0) |
 | **Theorems B₀–B₃**: Finite Prime Horizon vs. Beurling Generalized Prime Tail-Replacement Collision | Diamond–Montgomery–Vorhauer modified model $\widetilde{\zeta} _ B$ matching all true primes on $(1, P _ {\ast}]$ plus classical zero-free region and prime-number-theorem error term $O(x\exp(-c\sqrt{\log x}))$ | Weak-horizon zero-exclusion rule asserts $\widetilde{\zeta} _ B$ is zero-free on $1/2 < \operatorname{Re}(s) < 1$ , colliding with holomorphic non-vanishing of modifier $H _ {P _ {\ast}}(s)$ on $\operatorname{Re}(s)>0$ preserving all off-axis zeros of $\zeta _ B$ | Theorem B₀ separates syntactic finiteness from semantic horizon; Theorem B₁ proves $\mathbb{Q}$ -linear independence of true prime logarithms |
 | **Theorems C₀–C₃**: Weak Critical-Strip Analytic Quotient vs. Odd/Even Channel Off-Axis Root Collision | Odd-channel Davenport–Heilbronn function $\mathcal{D}(s)$ and even-channel reciprocal deformation $F _ {\mathrm{even}}(s)$ satisfying Hurwitz continuation, $s \leftrightarrow 1-s$ symmetry, and polynomial growth without prime-power multiplicativity in the critical strip | Weak analytic zero-exclusion rule asserts non-vanishing at $s = 3/4$ (or $\rho _ {\mathrm{DH}}$ ), colliding with exact reciprocal root $F _ {\mathrm{even}}(3/4)=0$ and Voronin off-axis zeros of $\mathcal{D}(s)$ | Theorem C₀ proves that retaining the full right-half-plane value readout as $\sigma \to +\infty$ uniquely recovers all Dirichlet coefficients |
 
@@ -120,13 +120,13 @@ Why cannot a formal proof that relegates global arithmetic tail constraints to t
 The decisive reason is the **fundamental asymmetry between the invisibility of global arithmetic guardrails under a weak static quotient and the complete visibility of a local off-critical-line zero to finite rational arithmetic**. In complex analysis, given any closed rectangle with rational vertex coordinates inside the right half of the critical strip,
 
 $$
-B = [\sigma _ 1, \sigma _ 2] \times [t _ 1, t _ 2] \subset \left\{s \in \mathbb{C} : \frac{1}{2} < \operatorname{Re}(s) < 1\right\} \qquad (\sigma _ 1, \sigma _ 2, t _ 1, t _ 2 \in \mathbb{Q}), \tag{2.1}
+B = [\sigma _ 1, \sigma _ 2] \times [t _ 1, t _ 2] \subset \left\lbrace s \in \mathbb{C} : \frac{1}{2} < \operatorname{Re}(s) < 1\right\rbrace  \qquad (\sigma _ 1, \sigma _ 2, t _ 1, t _ 2 \in \mathbb{Q}), \tag{2.1}
 $$
 
 whenever a function $f$ is holomorphic on an open neighborhood of $B$ and non-vanishing along the rectangular boundary $\partial B$ , the total multiplicity of zeros of $f$ in the interior of $B$ is uniquely determined by the logarithmic-derivative winding integral along the positively oriented boundary contour:
 
 $$
-W(f, B) := \frac{1}{2\pi i} \oint _ {\partial B} \frac{f'(s)}{f(s)}\,ds \in \mathbb{Z}. \tag{2.2}
+W(f, B) := \frac{1}{2\pi i} \oint _ {\partial B} \frac{f'(s)}{f(s)}\thinspace ds \in \mathbb{Z}. \tag{2.2}
 $$
 
 Because $W(f, B)$ is an integer-valued topological invariant, as soon as one exhibits a rational reference function $f _ 1(s) = s - c$ having a unique simple zero at a rational complex point $c \in B^{\circ}$ and verifies the strict rational Rouché inequality
@@ -137,7 +137,7 @@ $$
 
 finite rational interval arithmetic inside $\Sigma _ {\mathrm{TT}}$ unconditionally certifies $W(f, B) = W(f _ 1, B) = 1$ .
 
-Theorem A₀ (Five-Premise Intra-Fiber Quotient Transport Self-Collision Theorem Inside $\Sigma _ {\mathrm{TT}}$ ). In a dependent type theory $T$ , let $X$ be a model domain, $q : X \to Q$ a static observation quotient map, $C : Q \to \mathrm{Prop}$ a premise predicate defined on the quotient $Q$ , $Z : X \to \mathrm{Prop}$ the proposition asserting that an object has no zeros inside a fixed rational rectangle $B \subset \{1/2 < \operatorname{Re}(s) < 1\}$ , and $W : X \to \mathbb{Z}$ the contour winding-number mapping bound to the identical function family, the identical rational rectangle $B$ , and the identical positive boundary orientation. If the following five closed proof terms exist simultaneously in $T$ :
+Theorem A₀ (Five-Premise Intra-Fiber Quotient Transport Self-Collision Theorem Inside $\Sigma _ {\mathrm{TT}}$ ). In a dependent type theory $T$ , let $X$ be a model domain, $q : X \to Q$ a static observation quotient map, $C : Q \to \mathrm{Prop}$ a premise predicate defined on the quotient $Q$ , $Z : X \to \mathrm{Prop}$ the proposition asserting that an object has no zeros inside a fixed rational rectangle $B \subset \lbrace 1/2 < \operatorname{Re}(s) < 1\rbrace$ , and $W : X \to \mathbb{Z}$ the contour winding-number mapping bound to the identical function family, the identical rational rectangle $B$ , and the identical positive boundary orientation. If the following five closed proof terms exist simultaneously in $T$ :
 
 #### 1. Weak-quotient factorized zero-exclusion proof term
 
@@ -145,25 +145,25 @@ $$
 p : \forall x \in X,\ C\bigl(q(x)\bigr) \to Z(x); \tag{2.4}
 $$
 
-#### 2. Quotient premise proof term for the genuine arithmetic benchmark object $x _ 0$ 
+**(2)** Quotient premise proof term for the genuine arithmetic benchmark object $x _ 0$ :
 
 $$
 h _ 0 : C\bigl(q(x _ 0)\bigr); \tag{2.5}
 $$
 
-#### 3. Intra-fiber quotient equality proof term equating $x _ 0$ and the shadow object $x _ 1$ in $Q$ 
+**(3)** Intra-fiber quotient equality proof term equating $x _ 0$ and the shadow object $x _ 1$ in $Q$ :
 
 $$
 h _ q : q(x _ 0) = _ Q q(x _ 1); \tag{2.6}
 $$
 
-#### 4. Argument-principle bridge proof term from zero-freeness to zero winding (incorporating holomorphicity of $x _ 1$ on a neighborhood of $B$ , absence of poles in $B$ , and non-vanishing on $\partial B$ )
+**(4)** Argument-principle bridge proof term from zero-freeness to zero winding (incorporating holomorphicity of $x _ 1$ on a neighborhood of $B$ , absence of poles in $B$ , and non-vanishing on $\partial B$ ):
 
 $$
 h _ {ZW} : Z(x _ 1) \to W(x _ 1) = _ {\mathbb{Z}} 0; \tag{2.7}
 $$
 
-#### 5. Local rational contour certificate proving unit winding for the shadow object $x _ 1$ on $B$ 
+**(5)** Local rational contour certificate proving unit winding for the shadow object $x _ 1$ on $B$ :
 
 $$
 h _ 1 : W(x _ 1) = _ {\mathbb{Z}} 1; \tag{2.8}
@@ -172,14 +172,14 @@ $$
 then directly inside $T$ , without invoking any external meta-assumption, the conjunction of these five terms derives an integer-ring collision and inhabits the empty type in four elementary steps:
 
 $$
-p,\,h _ 0,\,h _ q,\,h _ {ZW},\,h _ 1 \vdash _ T (0 : \mathbb{Z}) = 1 \qquad \text{and} \qquad p,\,h _ 0,\,h _ q,\,h _ {ZW},\,h _ 1 \vdash _ T \mathrm{False}. \tag{2.9}
+p, h _ 0, h _ q, h _ {ZW}, h _ 1 \vdash _ T (0 : \mathbb{Z}) = 1 \qquad \text{and} \qquad p, h _ 0, h _ q, h _ {ZW}, h _ 1 \vdash _ T \mathrm{False}. \tag{2.9}
 $$
 
 #### Step-by-Step Proof
 (1) Step 1 (Equality substitution transport along the quotient fiber equality $h _ q$ ): Choosing the quotient predicate $u \mapsto C(u)$ on $Q$ as the elimination motive, apply the built-in equality substitution principle $\operatorname{Eq.subst}$ of dependent type theory to $h _ 0 : C(q(x _ 0))$ along $h _ q : q(x _ 0) = _ Q q(x _ 1)$ . This immediately constructs inside $\Sigma _ {\mathrm{TT}}$ the quotient premise proof term for the shadow countermodel $x _ 1$ :
 
 $$
-h _ C := \operatorname{Eq.subst}\bigl(h _ q,\,h _ 0\bigr) : C\bigl(q(x _ 1)\bigr). \tag{2.10}
+h _ C := \operatorname{Eq.subst}\bigl(h _ q, h _ 0\bigr) : C\bigl(q(x _ 1)\bigr). \tag{2.10}
 $$
 
 (2) Step 2 (Instantiation of the factorized zero-exclusion proof term $p$ at $x _ 1$ ): Apply the universal proof term $p$ to $x _ 1 \in X$ and $h _ C : C(q(x _ 1))$ to obtain $p(x _ 1)(h _ C) : Z(x _ 1)$ , and pass this term into the argument-principle bridge $h _ {ZW}$ to deduce inside $\Sigma _ {\mathrm{TT}}$ that the winding number of $x _ 1$ must vanish:
@@ -192,18 +192,18 @@ $$
 (4) Step 4 (Equality symmetry and transitivity confluence exploding into $(0 : \mathbb{Z}) = 1$ ): Apply equality symmetry $\operatorname{Eq.symm}$ to $h _ {W,0}$ to obtain $\operatorname{Eq.symm}(h _ {W,0}) : 0 = _ {\mathbb{Z}} W(x _ 1)$ , and compose it with $h _ 1 : W(x _ 1) = _ {\mathbb{Z}} 1$ via equality transitivity $\operatorname{Eq.trans}$ to construct the closed proof term
 
 $$
-h _ {\mathrm{coll}} := \operatorname{Eq.trans}\bigl(\operatorname{Eq.symm}(h _ {W,0}),\,h _ 1\bigr) : (0 : \mathbb{Z}) = 1. \tag{2.12}
+h _ {\mathrm{coll}} := \operatorname{Eq.trans}\bigl(\operatorname{Eq.symm}(h _ {W,0}), h _ 1\bigr) : (0 : \mathbb{Z}) = 1. \tag{2.12}
 $$
 
 Because $0$ and $1$ are distinct constructors of the integer type $\mathbb{Z}$ (with decidable arithmetic providing $h _ {0\neq 1} : (0 : \mathbb{Z}) \neq 1$ ), applying $h _ {0\neq 1}$ to $h _ {\mathrm{coll}}$ yields $\vdash _ T \mathrm{False}$ . Q.E.D.
 
-**Explicit Rational Rouché Margin Certificate**. Choose the off-critical-line center $c = \frac{3}{4} + i \in \bigl\{\frac{1}{2} < \operatorname{Re}(s) < 1\bigr\}$ and the closed rational square of half-width $r = \frac{1}{8}$ :
+**Explicit Rational Rouché Margin Certificate**. Choose the off-critical-line center $c = \frac{3}{4} + i \in \bigl\lbrace \frac{1}{2} < \operatorname{Re}(s) < 1\bigr\rbrace$ and the closed rational square of half-width $r = \frac{1}{8}$ :
 
 $$
-B = \left[\frac{5}{8},\,\frac{7}{8}\right] \times \left[\frac{7}{8},\,\frac{9}{8}\right] \subset \left\{s \in \mathbb{C} : \frac{1}{2} < \operatorname{Re}(s) < 1\right\}. \tag{2.13}
+B = \left[\frac{5}{8}, \frac{7}{8}\right] \times \left[\frac{7}{8}, \frac{9}{8}\right] \subset \left\lbrace s \in \mathbb{C} : \frac{1}{2} < \operatorname{Re}(s) < 1\right\rbrace . \tag{2.13}
 $$
 
-For the zero-free constant reference $f _ 0(s) = 1$ and the linear principal part $f _ 1(s) = s - c$ having a unique simple zero at $c \in B^{\circ}$ , every point $s$ on the four rational boundary segments of $\partial B$ satisfies $\max\bigl(|\operatorname{Re}(s) - 3/4|,\,|\operatorname{Im}(s) - 1|\bigr) = \frac{1}{8}$ , so the squared modulus of the principal part on $\partial B$ obeys the uniform rational lower bound $|f _ 1(s)|^2 \ge \left(\frac{1}{8}\right)^2 = \frac{1}{64}$ . For any function $f$ holomorphic on a neighborhood of $B$ satisfying the uniform boundary perturbation bound $|f(s) - f _ 1(s)| \le \frac{1}{16}$ on $\partial B$ , the squared Rouché safety margin is the exact positive rational number
+For the zero-free constant reference $f _ 0(s) = 1$ and the linear principal part $f _ 1(s) = s - c$ having a unique simple zero at $c \in B^{\circ}$ , every point $s$ on the four rational boundary segments of $\partial B$ satisfies $\max\bigl(|\operatorname{Re}(s) - 3/4|, |\operatorname{Im}(s) - 1|\bigr) = \frac{1}{8}$ , so the squared modulus of the principal part on $\partial B$ obeys the uniform rational lower bound $|f _ 1(s)|^2 \ge \left(\frac{1}{8}\right)^2 = \frac{1}{64}$ . For any function $f$ holomorphic on a neighborhood of $B$ satisfying the uniform boundary perturbation bound $|f(s) - f _ 1(s)| \le \frac{1}{16}$ on $\partial B$ , the squared Rouché safety margin is the exact positive rational number
 
 $$
 \Delta _ {\mathrm{Rouche}} = \left(\frac{1}{8}\right)^2 - \left(\frac{1}{16}\right)^2 = \frac{1}{64} - \frac{1}{256} = \frac{3}{256} > 0. \tag{2.14}
@@ -211,11 +211,11 @@ $$
 
 By Rouché's theorem and the elementary Cauchy integral $\frac{1}{2\pi i}\oint _ {\partial B}\frac{ds}{s-c} = 1$ , it follows immediately that $W(f, B) = W(f _ 1, B) = 1 \neq 0 = W(f _ 0, B)$ .
 
-**Exact Transport Boundary of Theorem A₀ (Theorem 0)**. For complete mathematical precision, note that if a formal system merely possesses an isolated theorem $p _ 0 : Z(x _ 0)$ about a single object $x _ 0$ without factoring $Z : X \to \mathrm{Prop}$ through the quotient map $q : X \to Q$ , then $\operatorname{Eq.subst}(h _ q, \cdot)$ can only substitute into predicates taking $q(x _ 0) \in Q$ as argument and cannot directly rewrite $Z(x _ 0)$ into $Z(x _ 1)$ . For example, if $X = \mathbb{R}^2$ , $q(x,y) = x$ , and $Z(x,y) \iff (y = 0)$ , then $q(0,0) = 0 = q(0,1)$ while $Z(0,0)$ is true and $Z(0,1)$ is false; conversely, for $Z'(x,y) \iff (x = 0)$ , the non-trivial kernel $\ker q$ satisfies $\operatorname{Eq}(q) \subseteq \operatorname{Eq}(Z')$ and is harmless for $Z'$ . Thus Theorem A₀ specifically targets factorized zero-exclusion architectures that ground a property $Z(x)$ requiring $\ker q$ -sensitivity on a weak quotient premise $C(q(x))$ where $q(x _ 0) = q(x _ 1)$ .
+**Exact Transport Boundary of Theorem A₀** (Theorem 0). For complete mathematical precision, note that if a formal system merely possesses an isolated theorem $p _ 0 : Z(x _ 0)$ about a single object $x _ 0$ without factoring $Z : X \to \mathrm{Prop}$ through the quotient map $q : X \to Q$ , then $\operatorname{Eq.subst}(h _ q, \cdot)$ can only substitute into predicates taking $q(x _ 0) \in Q$ as argument and cannot directly rewrite $Z(x _ 0)$ into $Z(x _ 1)$ . For example, if $X = \mathbb{R}^2$ , $q(x,y) = x$ , and $Z(x,y) \iff (y = 0)$ , then $q(0,0) = 0 = q(0,1)$ while $Z(0,0)$ is true and $Z(0,1)$ is false; conversely, for $Z'(x,y) \iff (x = 0)$ , the non-trivial kernel $\ker q$ satisfies $\operatorname{Eq}(q) \subseteq \operatorname{Eq}(Z')$ and is harmless for $Z'$ . Thus Theorem A₀ specifically targets factorized zero-exclusion architectures that ground a property $Z(x)$ requiring $\ker q$ -sensitivity on a weak quotient premise $C(q(x))$ where $q(x _ 0) = q(x _ 1)$ .
 
 ### 2.2　The Second Principled Collision (Theorems B₀–B₃): $\mathbb{Q}$ -Linear Independence Rigidity of Prime Logarithms and the Diamond–Montgomery–Vorhauer Generalized Prime Finite-Horizon Tail-Replacement Theorem
 
-When auditing a multi-million-line formalization, a second foundational question arises: if a formal proof explicitly expands only finitely many small primes $p \le P _ {\ast}$ (for instance, $p \in \{2, 3, 5, \dots, 23\}$ ) and combines those finite local factors with a classical zero-free region $\sigma > 1 - a/\log t$ and a prime-number-theorem asymptotic error bound $O(x\exp(-c\sqrt{\log x}))$ , can such an architecture exclude off-critical-line zeros inside the critical strip?
+When auditing a multi-million-line formalization, a second foundational question arises: if a formal proof explicitly expands only finitely many small primes $p \le P _ {\ast}$ (for instance, $p \in \lbrace 2, 3, 5, \dots, 23\rbrace$ ) and combines those finite local factors with a classical zero-free region $\sigma > 1 - a/\log t$ and a prime-number-theorem asymptotic error bound $O(x\exp(-c\sqrt{\log x}))$ , can such an architecture exclude off-critical-line zeros inside the critical strip?
 
 To achieve airtight rigor, we first establish **Theorem B₀** separating syntactic finiteness of proof text from semantic finiteness of the prime horizon, next prove **Theorem B₁** on the rational linear independence of ordinary prime logarithms, and then prove **Theorems B₂–B₃**: for **any** arbitrarily large finite prime horizon $P _ {\ast} \ge 2$ , combining the exact ordinary primes on $(1, P _ {\ast}]$ with the classical zero-free region and prime-number-theorem error order is **mathematically incapable of excluding off-critical-line zeros in** $1/2 < \operatorname{Re}(s) < 1$ .
 
@@ -233,31 +233,31 @@ $$
 $$
 
 then necessarily $r _ 1 = r _ 2 = \cdots = r _ k = 0$ .
-**Step-by-Step Proof**: Write each rational coefficient as $r _ j = u _ j / v _ j$ with $u _ j \in \mathbb{Z}$ and $v _ j \in \mathbb{Z} _ {>0}$ , set the common positive denominator $M = \prod _ {j=1}^k v _ j \in \mathbb{Z} _ {>0}$ , and define the integers $m _ j = M r _ j \in \mathbb{Z}$ . Multiplying Equation $(2.15)$ by $M$ yields $\sum _ {j=1}^k m _ j \log p _ j = 0$ . Partitioning the index set into positive and negative exponents $J _ + = \{j : m _ j > 0\}$ and $J _ - = \{j : m _ j < 0\}$ , applying the real exponential function $\exp(\cdot)$ to both sides, and rearranging negative powers to the right-hand side produces the positive-integer identity
+**Step-by-Step Proof**: Write each rational coefficient as $r _ j = u _ j / v _ j$ with $u _ j \in \mathbb{Z}$ and $v _ j \in \mathbb{Z} _ {>0}$ , set the common positive denominator $M = \prod _ {j=1}^k v _ j \in \mathbb{Z} _ {>0}$ , and define the integers $m _ j = M r _ j \in \mathbb{Z}$ . Multiplying Equation $(2.15)$ by $M$ yields $\sum _ {j=1}^k m _ j \log p _ j = 0$ . Partitioning the index set into positive and negative exponents $J _ + = \lbrace j : m _ j > 0\rbrace$ and $J _ - = \lbrace j : m _ j < 0\rbrace$ , applying the real exponential function $\exp(\cdot)$ to both sides, and rearranging negative powers to the right-hand side produces the positive-integer identity
 
 $$
 \prod _ {j \in J _ +} p _ j^{m _ j} = \prod _ {j \in J _ -} p _ j^{-m _ j}. \tag{2.16}
 $$
 
-Because $J _ + \cap J _ - = \varnothing$ and the primes $p _ 1, \dots, p _ k$ are pairwise distinct, unique prime factorization in $\mathbb{Z} _ {>0}$ forces every exponent $m _ j = 0$ , whence $r _ j = m _ j / M = 0$ for all $j \in \{1, \dots, k\}$ . Q.E.D.
+Because $J _ + \cap J _ - = \varnothing$ and the primes $p _ 1, \dots, p _ k$ are pairwise distinct, unique prime factorization in $\mathbb{Z} _ {>0}$ forces every exponent $m _ j = 0$ , whence $r _ j = m _ j / M = 0$ for all $j \in \lbrace 1, \dots, k\rbrace$ . Q.E.D.
 
 Theorem B₁ shows that in genuine integer arithmetic, the infinite family of primes forms an infinite-dimensional rigid orthogonal frame through unique factorization. The moment a formal proof crosses $\operatorname{Re}(s) = 1$ without propagating this **infinite-prime multiplicative coupling** into the critical strip—degenerating instead into an observation map that reads only the finite Euler product over primes $p \le P _ {\ast}$ together with a classical zero-free region and prime-number-theorem remainder bound—the discrete Beurling generalized prime system constructed by Diamond, Montgomery, and Vorhauer (2006) immediately admits an off-critical-line countermodel inside the exact same quotient fiber.
 
 Theorem B₂ (Generalized Prime Finite-Horizon Tail-Replacement and Complete Off-Critical-Line Zero Preservation Theorem for Arbitrary $P _ {\ast}$ ). By the Diamond–Montgomery–Vorhauer theorem (References [1, 2]), there exist a discrete sequence of Beurling generalized primes $B = (b _ j) _ {j\ge 1}$ ( $1 < b _ 1 \le b _ 2 \le \cdots \to \infty$ ), its generated generalized integer counting function $N _ B(x)$ , generalized prime counting function $\pi _ B(x)$ , Chebyshev function $\psi _ B(x)$ , and generalized zeta function $\zeta _ B(s) = \prod _ {j=1}^\infty (1 - b _ j^{-s})^{-1}$ ( $\operatorname{Re}(s) > 1$ ), together with constants $\frac{1}{2} < \theta < 1$ and $\kappa _ B, a, c _ 1, C _ 1, C _ 2 > 0$ (with $a > \frac{4}{e}(1-\theta)$ ), satisfying:
 (i) $|N _ B(x) - \kappa _ B x| \le C _ 1 x^\theta$ for all $x \ge x _ 0$ , so that $\zeta _ B(s)$ continues meromorphically to the half-plane $\operatorname{Re}(s) > \theta$ and is holomorphic there except for a simple pole at $s = 1$ with residue $\kappa _ B$ ;
 (ii) $|\pi _ B(x) - \operatorname{li}(x)| + |\psi _ B(x) - x| \le C _ 2 x \exp(-c _ 1 \sqrt{\log x})$ for all $x \ge x _ 0$ ;
-(iii) $\zeta _ B(s)$ is zero-free in the classical region $\sigma > 1 - a/\log t$ ( $t \ge t _ 0$ ), yet possesses infinitely many off-critical-line zeros $\rho _ n = 1 - \frac{a}{\log t _ n} + i t _ n \in \bigl\{\frac{1}{2} < \operatorname{Re}(s) < 1\bigr\}$ ( $t _ n \to \infty$ ) inside the open strip $\theta < \operatorname{Re}(s) < 1$ .
+(iii) $\zeta _ B(s)$ is zero-free in the classical region $\sigma > 1 - a/\log t$ ( $t \ge t _ 0$ ), yet possesses infinitely many off-critical-line zeros $\rho _ n = 1 - \frac{a}{\log t _ n} + i t _ n \in \bigl\lbrace \frac{1}{2} < \operatorname{Re}(s) < 1\bigr\rbrace$ ( $t _ n \to \infty$ ) inside the open strip $\theta < \operatorname{Re}(s) < 1$ .
 
-Now let $P _ {\ast} \ge 2$ be an **arbitrarily large** finite prime horizon threshold. Perform a **finite-window arithmetic surgery** on $B$ : delete the finite multiset of generalized primes $D = \{b _ j \in B : b _ j \le P _ {\ast}\}$ not exceeding $P _ {\ast}$ , and replace them by the set of all ordinary prime numbers $A = \{p \in \mathcal{P} : p \le P _ {\ast}\}$ in $(1, P _ {\ast}]$ , denoting the resulting generalized prime system by $\widetilde{B}$ . Then its zeta function $\widetilde{\zeta} _ B(s)$ satisfies:
+Now let $P _ {\ast} \ge 2$ be an **arbitrarily large** finite prime horizon threshold. Perform a **finite-window arithmetic surgery** on $B$ : delete the finite multiset of generalized primes $D = \lbrace b _ j \in B : b _ j \le P _ {\ast}\rbrace$ not exceeding $P _ {\ast}$ , and replace them by the set of all ordinary prime numbers $A = \lbrace p \in \mathcal{P} : p \le P _ {\ast}\rbrace$ in $(1, P _ {\ast}]$ , denoting the resulting generalized prime system by $\widetilde{B}$ . Then its zeta function $\widetilde{\zeta} _ B(s)$ satisfies:
 
 **(1)** **Exact identity with ordinary primes on the finite horizon** $(1, P _ {\ast}]$ : $\widetilde{B} \cap (1, P _ {\ast}] = \mathcal{P} \cap (1, P _ {\ast}]$ , meaning that within the observation window $(1, P _ {\ast}]$ , the prime generators of $\widetilde{B}$ coincide term-by-term with the ordinary primes;
 **(2)** Holomorphic non-vanishing of the finite Euler modifier on the entire open right half-plane $\operatorname{Re}(s) > 0$ and complete preservation of off-critical-line zeros: For $\operatorname{Re}(s) > 1$ ,
 
 $$
-\widetilde{\zeta} _ B(s) = \zeta _ B(s)\,H _ {P _ {\ast}}(s), \qquad H _ {P _ {\ast}}(s) := \frac{\prod _ {b \in D}\left(1 - b^{-s}\right)}{\prod _ {p \in A}\left(1 - p^{-s}\right)}. \tag{2.17}
+\widetilde{\zeta} _ B(s) = \zeta _ B(s) H _ {P _ {\ast}}(s), \qquad H _ {P _ {\ast}}(s) := \frac{\prod _ {b \in D}\left(1 - b^{-s}\right)}{\prod _ {p \in A}\left(1 - p^{-s}\right)}. \tag{2.17}
 $$
 
-Because both $D$ and $A$ are finite sets and every element $b \in D$ and $p \in A$ satisfies $b > 1$ and $p \ge 2$ , at every complex point in the open right half-plane $\operatorname{Re}(s) > 0$ we have the strict inequalities $|b^{-s}| = b^{-\operatorname{Re}(s)} < 1$ and $|p^{-s}| = p^{-\operatorname{Re}(s)} < 1$ . Consequently, every finite factor in the numerator and denominator of $H _ {P _ {\ast}}(s)$ is holomorphic and non-vanishing throughout $\operatorname{Re}(s) > 0$ , so the rational Euler modifier $H _ {P _ {\ast}}(s)$ is **holomorphic and nowhere zero on the entire open right half-plane** $\operatorname{Re}(s) > 0$ . By uniqueness of meromorphic continuation, Equation $(2.17)$ holds throughout $\{\operatorname{Re}(s) > \theta\} \subset \{\operatorname{Re}(s) > 0\}$ , and the zero divisor of $\widetilde{\zeta} _ B(s)$ inside $\{\theta < \operatorname{Re}(s) < 1\}$ —including all infinitely many off-critical-line zeros $\rho _ n = 1 - \frac{a}{\log t _ n} + it _ n \in \{1/2 < \operatorname{Re}(s) < 1\}$ with their exact multiplicities—is **identical** to that of $\zeta _ B(s)$ ;
+Because both $D$ and $A$ are finite sets and every element $b \in D$ and $p \in A$ satisfies $b > 1$ and $p \ge 2$ , at every complex point in the open right half-plane $\operatorname{Re}(s) > 0$ we have the strict inequalities $|b^{-s}| = b^{-\operatorname{Re}(s)} < 1$ and $|p^{-s}| = p^{-\operatorname{Re}(s)} < 1$ . Consequently, every finite factor in the numerator and denominator of $H _ {P _ {\ast}}(s)$ is holomorphic and non-vanishing throughout $\operatorname{Re}(s) > 0$ , so the rational Euler modifier $H _ {P _ {\ast}}(s)$ is **holomorphic and nowhere zero on the entire open right half-plane** $\operatorname{Re}(s) > 0$ . By uniqueness of meromorphic continuation, Equation $(2.17)$ holds throughout $\lbrace \operatorname{Re}(s) > \theta\rbrace \subset \lbrace \operatorname{Re}(s) > 0\rbrace$ , and the zero divisor of $\widetilde{\zeta} _ B(s)$ inside $\lbrace \theta < \operatorname{Re}(s) < 1\rbrace$ —including all infinitely many off-critical-line zeros $\rho _ n = 1 - \frac{a}{\log t _ n} + it _ n \in \lbrace 1/2 < \operatorname{Re}(s) < 1\rbrace$ with their exact multiplicities—is **identical** to that of $\zeta _ B(s)$ ;
 **(3)** **Strict preservation of the prime-number-theorem asymptotic remainder order**: The finite surgery alters the prime counting function by $|\pi _ {\widetilde{B}}(x) - \pi _ B(x)| \le |A| + |D| = O(1)$ , while each inserted or removed generator $u \in A \cup D$ contributes at most $\log u \cdot \lfloor \log x / \log u \rfloor = O(\log x)$ to the Chebyshev function, so the total perturbation satisfies
 
 $$
@@ -266,16 +266,16 @@ $$
 
 #### Corollary B₃ (Self-Collision of Any Zero-Exclusion Rule Factoring Through a Finite Prime Horizon and Classical Asymptotic Error Quotient)
 
-On a generalized prime model domain $X _ {\mathrm{Beurling}}$ , if a static observation quotient $q _ {P _ {\ast}}(x)$ records only the prime generators in the finite window $(1, P _ {\ast}]$ together with the classical zero-free region and the prime-number-theorem remainder bound $(2.18)$ , then the surgically modified countermodel $\widetilde{B}$ satisfies the exact same quotient premise $C(q _ {P _ {\ast}}(\widetilde{B}))$ as the ordinary primes while retaining infinitely many off-critical-line zeros $\rho _ n \in \{1/2 < \operatorname{Re}(s) < 1\}$ . Consequently, instantiating any uniform zero-exclusion proof term factored through $C(q _ {P _ {\ast}}(x))$ at $\widetilde{B}$ inside $\Sigma _ {\mathrm{TT}}$ directly derives $\vdash _ T (0 : \mathbb{Z}) = 1$ .
+On a generalized prime model domain $X _ {\mathrm{Beurling}}$ , if a static observation quotient $q _ {P _ {\ast}}(x)$ records only the prime generators in the finite window $(1, P _ {\ast}]$ together with the classical zero-free region and the prime-number-theorem remainder bound $(2.18)$ , then the surgically modified countermodel $\widetilde{B}$ satisfies the exact same quotient premise $C(q _ {P _ {\ast}}(\widetilde{B}))$ as the ordinary primes while retaining infinitely many off-critical-line zeros $\rho _ n \in \lbrace 1/2 < \operatorname{Re}(s) < 1\rbrace$ . Consequently, instantiating any uniform zero-exclusion proof term factored through $C(q _ {P _ {\ast}}(x))$ at $\widetilde{B}$ inside $\Sigma _ {\mathrm{TT}}$ directly derives $\vdash _ T (0 : \mathbb{Z}) = 1$ .
 
 ### 2.3　The Third Principled Collision (Theorems C₀–C₃): Right-Half-Plane Coefficient Uniqueness Versus Critical-Strip Odd and Even Channel Off-Axis Root Degeneration on the Weak Analytic Continuation Quotient
 
 The third—and in the $\operatorname{Lean\ 4} / \operatorname{Mathlib}$ ecosystem, the most structurally consequential—quotient degeneration occurs at the carrier switch **from right-half-plane Dirichlet series to global Hurwitz meromorphic continuation**.
 
-As confirmed directly on $\mathtt{lc23}$ by executing $\mathtt{\#print\ DirichletCharacter.LFunction}$ and $\mathtt{\#print\ ZMod.LFunction}$ in Chapter 5, $\operatorname{Mathlib}$ defines the Dirichlet $L$ -function modulo $N$ as
+As confirmed directly on $\text{lc23}$ by executing #print DirichletCharacter.LFunction and #print ZMod.LFunction in Chapter 5, $\operatorname{Mathlib}$ defines the Dirichlet $L$ -function modulo $N$ as
 
 $$
-\operatorname{DirichletCharacter.LFunction}(\chi, s) := \operatorname{ZMod.LFunction}(\chi, s) = N^{-s} \sum _ {j \in \operatorname{ZMod}(N)} \chi(j)\,\zeta _ {\mathrm{Hurwitz}}\!\left(\operatorname{toAddCircle}(j),\,s\right). \tag{2.19}
+\operatorname{DirichletCharacter.LFunction}(\chi, s) := \operatorname{ZMod.LFunction}(\chi, s) = N^{-s} \sum _ {j \in \operatorname{ZMod}(N)} \chi(j) \zeta _ {\mathrm{Hurwitz}}\left(\operatorname{toAddCircle}(j), s\right). \tag{2.19}
 $$
 
 Examine the underlying carrier $\operatorname{ZMod.LFunction}(\Phi, s)$ in Equation $(2.19)$ : its input type is an **arbitrary periodic function modulo** $N$ , $\Phi : \operatorname{ZMod}(N) \to \mathbb{C}$ , and its analytic formula is a **purely additive linear combination** of $N$ shifted Hurwitz zeta functions.
@@ -285,7 +285,7 @@ To maintain absolute mathematical fairness and precision, we first prove **Theor
 #### Theorem C₀ (Unique Recovery of Dirichlet Coefficients Under the Full Right-Half-Plane Function-Value Readout)
 
 Let $f(s) = \sum _ {n=1}^\infty a _ n n^{-s}$ and $g(s) = \sum _ {n=1}^\infty b _ n n^{-s}$ be two ordinary Dirichlet series with complex coefficients converging absolutely on a common half-plane $\operatorname{Re}(s) > \sigma _ a$ . If there exists a sequence of real numbers $\sigma _ k \to +\infty$ such that $f(\sigma _ k) = g(\sigma _ k)$ for all $k$ , then $a _ n = b _ n$ for all $n \ge 1$ .
-**Step-by-Step Proof**: Set $c _ n = a _ n - b _ n$ . Suppose for contradiction that $c _ n \neq 0$ for some $n \ge 1$ , and let $n _ 0 = \min\{n \ge 1 : c _ n \neq 0\}$ be the smallest such positive integer. Fix a real number $\sigma _ 0 > \sigma _ a$ , so that $M _ 0 := \sum _ {n=1}^\infty |c _ n| n^{-\sigma _ 0} < \infty$ . For every $\sigma > \sigma _ 0$ , since $c _ 1 = \cdots = c _ {n _ 0-1} = 0$ , multiplying the identity $\sum _ {n=n _ 0}^\infty c _ n n^{-\sigma} = 0$ by $n _ 0^{\sigma}$ and isolating $c _ {n _ 0}$ yields
+**Step-by-Step Proof**: Set $c _ n = a _ n - b _ n$ . Suppose for contradiction that $c _ n \neq 0$ for some $n \ge 1$ , and let $n _ 0 = \min\lbrace n \ge 1 : c _ n \neq 0\rbrace$ be the smallest such positive integer. Fix a real number $\sigma _ 0 > \sigma _ a$ , so that $M _ 0 := \sum _ {n=1}^\infty |c _ n| n^{-\sigma _ 0} < \infty$ . For every $\sigma > \sigma _ 0$ , since $c _ 1 = \cdots = c _ {n _ 0-1} = 0$ , multiplying the identity $\sum _ {n=n _ 0}^\infty c _ n n^{-\sigma} = 0$ by $n _ 0^{\sigma}$ and isolating $c _ {n _ 0}$ yields
 
 $$
 |c _ {n _ 0}| = \left|\sum _ {n=n _ 0+1}^{\infty} c _ n \left(\frac{n _ 0}{n}\right)^{\sigma}\right| \le \sum _ {n=n _ 0+1}^{\infty} |c _ n| n^{-\sigma _ 0} \left(\frac{n _ 0}{n}\right)^{\sigma - \sigma _ 0} \le \left(\frac{n _ 0}{n _ 0+1}\right)^{\sigma - \sigma _ 0} \sum _ {n=n _ 0+1}^{\infty} |c _ n| n^{-\sigma _ 0}. \tag{2.20}
@@ -318,7 +318,7 @@ $$
 and the completed entire function
 
 $$
-\Lambda _ {\mathrm{DH}}(s) := \left(\frac{5}{\pi}\right)^{s/2} \Gamma\!\left(\frac{s+1}{2}\right) \mathcal{D}(s) \tag{2.24}
+\Lambda _ {\mathrm{DH}}(s) := \left(\frac{5}{\pi}\right)^{s/2} \Gamma\left(\frac{s+1}{2}\right) \mathcal{D}(s) \tag{2.24}
 $$
 
 satisfies the exact scalar self-dual functional equation $\Lambda _ {\mathrm{DH}}(s) = \Lambda _ {\mathrm{DH}}(1 - s)$ together with the exact vertical-strip growth order of a standard odd primitive completed $L$ -function;
@@ -331,7 +331,7 @@ $$
 **(3)** Infinitely many off-critical-line zeros inside the open right half of the critical strip $\frac{1}{2} < \operatorname{Re}(s) < 1$ (Voronin's Theorem, References [3, 4]): For any $\frac{1}{2} < \sigma _ 1 < \sigma _ 2 < 1$ , there exist constants $c _ {\sigma _ 1, \sigma _ 2} > 0$ and $T _ {\sigma _ 1, \sigma _ 2} > 0$ such that for all $T \ge T _ {\sigma _ 1, \sigma _ 2}$ ,
 
 $$
-\sum _ {\substack{\mathcal{D}(\rho) = 0,\ \sigma _ 1 < \operatorname{Re}(\rho) < \sigma _ 2 \\ 0 < \operatorname{Im}(\rho) \le T}} \operatorname{ord} _ {\rho}(\mathcal{D}) \ge c _ {\sigma _ 1, \sigma _ 2} T > 0. \tag{2.26}
+\sum _ {\substack{\mathcal{D}(\rho) = 0,\ \sigma _ 1 < \operatorname{Re}(\rho) < \sigma _ 2 \cr 0 < \operatorname{Im}(\rho) \le T}} \operatorname{ord} _ {\rho}(\mathcal{D}) \ge c _ {\sigma _ 1, \sigma _ 2} T > 0. \tag{2.26}
 $$
 
 Theorem C₂ (Even-Channel Explicit Reciprocal Polynomial Factor and Exact Off-Axis Root at $s = 3/4$ ). In the even Gamma channel, set $y(s) := 2^{1/2 - s} = \exp\bigl((1/2 - s)\log 2\bigr)$ , which satisfies the exact inversion law $y(1 - s) = y(s)^{-1}$ under the reflection $s \leftrightarrow 1 - s$ . For any positive real parameter $r > 0$ (specifically choosing $r = 2^{1/4} = \exp\bigl(\frac{1}{4}\log 2\bigr) > 1$ ), define the reciprocal quadratic factor and the even-channel deformed zeta function:
@@ -341,7 +341,7 @@ P _ r(y) := 1 - \left(r + \frac{1}{r}\right)y + y^2 = \left(1 - ry\right)\left(1
 $$
 
 $$
-F _ {\mathrm{even}}(s) := P _ r\bigl(y(s)\bigr)\,\zeta(s), \qquad \Lambda _ {\mathrm{even}}(s) := \left(2^s + 2^{1-s} - \left(r + \frac{1}{r}\right)\sqrt{2}\right) \Lambda _ {\zeta}(s), \tag{2.28}
+F _ {\mathrm{even}}(s) := P _ r\bigl(y(s)\bigr) \zeta(s), \qquad \Lambda _ {\mathrm{even}}(s) := \left(2^s + 2^{1-s} - \left(r + \frac{1}{r}\right)\sqrt{2}\right) \Lambda _ {\zeta}(s), \tag{2.28}
 $$
 
 where $\Lambda _ {\zeta}(s) = \pi^{-s/2}\Gamma(s/2)\zeta(s) = \Lambda _ {\zeta}(1-s)$ . Then:
@@ -349,18 +349,18 @@ where $\Lambda _ {\zeta}(s) = \pi^{-s/2}\Gamma(s/2)\zeta(s) = \Lambda _ {\zeta}(
 (2) Exact vanishing at the rational off-axis point $s = 3/4$ (and at the rational algebraic model point $r = 2, y = 1/2$ ): In the rational algebraic model $r = 2, y = 1/2$ ,
 
 $$
-P _ 2\!\left(\frac{1}{2}\right) = 1 - \left(2 + \frac{1}{2}\right)\cdot\frac{1}{2} + \left(\frac{1}{2}\right)^2 = 1 - \frac{5}{4} + \frac{1}{4} = 0; \tag{2.29}
+P _ 2\left(\frac{1}{2}\right) = 1 - \left(2 + \frac{1}{2}\right)\cdot\frac{1}{2} + \left(\frac{1}{2}\right)^2 = 1 - \frac{5}{4} + \frac{1}{4} = 0; \tag{2.29}
 $$
 
 in the analytic model $r = 2^{1/4}$ , evaluating at $s = \frac{3}{4}$ gives $y(3/4) = 2^{1/2 - 3/4} = 2^{-1/4} = r^{-1}$ , whence
 
 $$
-P _ r\bigl(y(3/4)\bigr) = 1 - \left(r + r^{-1}\right)r^{-1} + \left(r^{-1}\right)^2 = 1 - 1 - r^{-2} + r^{-2} = 0 \implies F _ {\mathrm{even}}\!\left(\frac{3}{4}\right) = 0. \tag{2.30}
+P _ r\bigl(y(3/4)\bigr) = 1 - \left(r + r^{-1}\right)r^{-1} + \left(r^{-1}\right)^2 = 1 - 1 - r^{-2} + r^{-2} = 0 \implies F _ {\mathrm{even}}\left(\frac{3}{4}\right) = 0. \tag{2.30}
 $$
 
 #### Corollary C₃ (Self-Collision of Any Zero-Exclusion Lemma on the Weak Analytic Continuation Quotient)
 
-Whenever a critical-strip zero-exclusion lemma in a formal repository has a signature requiring only entire (or simple-pole) continuation, functional-equation symmetry $\Lambda(1-s) = \epsilon\Lambda(s)$ , and polynomial vertical growth (such as the proposition $\mathtt{WeakRule}$ compiled live on $\mathtt{lc23}$ in Chapter 5: $\forall F : \mathbb{C} \to \mathbb{C},\ \operatorname{Differentiable}(\mathbb{C}, F) \to (\forall s,\ F(1-s)=F(s)) \to (\forall s,\ \|F(s)\| \le (\|s\|+1)^2) \to (\forall s,\ 0 < \operatorname{Re}(s) < 1 \to F(s)=0 \to \operatorname{Re}(s)=1/2)$ ), instantiating that rule at the algebraic Trojan polynomial
+Whenever a critical-strip zero-exclusion lemma in a formal repository has a signature requiring only entire (or simple-pole) continuation, functional-equation symmetry $\Lambda(1-s) = \epsilon\Lambda(s)$ , and polynomial vertical growth (such as the proposition $\text{WeakRule}$ compiled live on $\text{lc23}$ in Chapter 5: $\forall F : \mathbb{C} \to \mathbb{C},\ \operatorname{Differentiable}(\mathbb{C}, F) \to (\forall s,\ F(1-s)=F(s)) \to (\forall s,\ \Vert F(s)\Vert \le (\Vert s\Vert +1)^2) \to (\forall s,\ 0 < \operatorname{Re}(s) < 1 \to F(s)=0 \to \operatorname{Re}(s)=1/2)$ ), instantiating that rule at the algebraic Trojan polynomial
 
 $$
 P _ {\mathrm{Trojan}}(s) := \left(s - \frac{3}{4}\right)\left(s - \frac{1}{4}\right) = \left(s - \frac{1}{2}\right)^2 - \frac{1}{16} \tag{2.31}
@@ -378,20 +378,20 @@ $$
 
 In discussions surrounding multi-million-line formalizations, one frequently encounters a seductive defensive claim: "Even if the original seventeen-million-line codebase contains redundant modules, convoluted proof terms, or local flaws, so long as one prunes the import tree, deletes unreferenced modules, and shortens selected proof bodies to obtain a smaller extracted repository that passes the typechecker, any defects in the original repository become irrelevant."
 
-To settle once and for all what pruning or extracting a directed proof dependency graph can and cannot achieve mathematically, we establish **Theorem 1.4 (The Semantic Defect Conservation and Extraction Trilemma Theorem)** on finite directed acyclic declaration dependency graphs (where each mutual inductive block is contracted into a single supernode).
+To settle once and for all what pruning or extracting a directed proof dependency graph can and cannot achieve mathematically, we establish **Theorem 1.4** (The Semantic Defect Conservation and Extraction Trilemma Theorem) on finite directed acyclic declaration dependency graphs (where each mutual inductive block is contracted into a single supernode).
 
 ### 3.1　Rigorous Definition of the Directed Proof Dependency Graph, Upstream Dependency Cone, and Graph Extraction Operator
 
 Let the declaration dependency graph in a static type-theoretic environment be $\mathcal{G} = (V, E, \tau, b, \Gamma)$ , where the vertex set $V$ consists of all formal declarations in the environment (theorems, lemmas, definitions, inductive types, constructors, recursors, and axioms), and a directed edge $(u \to v) \in E$ records that declaration $v$ directly references declaration $u$ in its type expression $\tau(v)$ , its definition or proof body $b(v)$ , or its inductive structural rules. For any target theorem $v _ {\mathrm{goal}} \in V$ , its **upstream dependency cone** is the set of all vertices from which there exists a directed path in $\mathcal{G}$ reaching $v _ {\mathrm{goal}}$ :
 
 $$
-\operatorname{Cone} _ {\mathcal{G}}(v _ {\mathrm{goal}}) := \bigl\{u \in V : u \leadsto _ {\mathcal{G}} v _ {\mathrm{goal}}\bigr\} \qquad \bigl(v _ {\mathrm{goal}} \in \operatorname{Cone} _ {\mathcal{G}}(v _ {\mathrm{goal}})\bigr). \tag{3.1}
+\operatorname{Cone} _ {\mathcal{G}}(v _ {\mathrm{goal}}) := \bigl\lbrace u \in V : u \leadsto _ {\mathcal{G}} v _ {\mathrm{goal}}\bigr\rbrace  \qquad \bigl(v _ {\mathrm{goal}} \in \operatorname{Cone} _ {\mathcal{G}}(v _ {\mathrm{goal}})\bigr). \tag{3.1}
 $$
 
 Let $E _ {\mathrm{err}} \subseteq V$ denote a subset of problematic or excised declarations in the original graph $\mathcal{G} _ {\mathrm{orig}}$ . A **graph extraction or pruning operator**
 
 $$
-\mathcal{E} : \bigl(\mathcal{G} _ {\mathrm{orig}},\,v _ {\mathrm{goal}}\bigr) \longmapsto \bigl(\mathcal{G} _ {\mathrm{ext}},\,v _ {\mathrm{goal}}^{\mathrm{ext}},\,\mu,\,\mathcal{B}\bigr) \tag{3.2}
+\mathcal{E} : \bigl(\mathcal{G} _ {\mathrm{orig}}, v _ {\mathrm{goal}}\bigr) \longmapsto \bigl(\mathcal{G} _ {\mathrm{ext}}, v _ {\mathrm{goal}}^{\mathrm{ext}}, \mu, \mathcal{B}\bigr) \tag{3.2}
 $$
 
 maps the original graph to an extracted graph $\mathcal{G} _ {\mathrm{ext}} = (V _ {\mathrm{ext}}, E _ {\mathrm{ext}}, \tau _ {\mathrm{ext}}, b _ {\mathrm{ext}}, \Gamma _ {\mathrm{ext}})$ , where $\mu : V _ {\mathrm{ext}} \rightharpoonup V _ {\mathrm{orig}} \setminus E _ {\mathrm{err}}$ is a partial pullback map identifying retained nodes with surviving original nodes, and $\mathcal{B}$ is a family of definitional-equivalence and local truth-preservation certificates. Within the extracted dependency cone $\operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ , all vertices not certified by $\mu$ and $\mathcal{B}$ as identical to surviving nodes of $\mathcal{G} _ {\mathrm{orig}} \setminus E _ {\mathrm{err}}$ —including newly introduced leaf declarations as well as same-name declarations whose definition or proof body was rewritten ( $b _ {\mathrm{ext}}(v) \neq b _ {\mathrm{orig}}(\mu(v))$ )—constitute thereplacement boundary $\partial E _ {\mathrm{ext}}$ .
@@ -406,14 +406,14 @@ $$
 C\bigl(q(x _ 0)\bigr) = \mathrm{True}, \qquad q(x _ 0) = _ Q q(x _ 1), \qquad Z(x _ 1) = \mathrm{False}. \tag{3.3}
 $$
 
-Suppose the original graph $\mathcal{G} _ {\mathrm{orig}}$ claims to prove the weak-quotient factorized target $\forall x \in X,\ C(q(x)) \to Z(x)$ , and an extracted graph $\mathcal{G} _ {\mathrm{ext}}$ removes a subset $E _ {\mathrm{err}}$ from $\mathcal{G} _ {\mathrm{orig}}$ while claiming to prove the same target without introducing new arithmetic separation premises capable of distinguishing $x _ 0$ from $x _ 1$ . Assume all sound foundational background axioms evaluate to true under the semantic interpretation $[\![ \cdot ]\!] _ {x _ 1}$ of the shadow countermodel $x _ 1$ . Then the extracted graph $\mathcal{G} _ {\mathrm{ext}}$ **must inevitably fall into at least one of the following three defect categories** (with Boolean indicators $a, d, k \in \{0, 1\}$ ):
+Suppose the original graph $\mathcal{G} _ {\mathrm{orig}}$ claims to prove the weak-quotient factorized target $\forall x \in X,\ C(q(x)) \to Z(x)$ , and an extracted graph $\mathcal{G} _ {\mathrm{ext}}$ removes a subset $E _ {\mathrm{err}}$ from $\mathcal{G} _ {\mathrm{orig}}$ while claiming to prove the same target without introducing new arithmetic separation premises capable of distinguishing $x _ 0$ from $x _ 1$ . Assume all sound foundational background axioms evaluate to true under the semantic interpretation $\lbrack\kern-0.15em\lbrack \cdot \rbrack\kern-0.15em\rbrack _ {x _ 1}$ of the shadow countermodel $x _ 1$ . Then the extracted graph $\mathcal{G} _ {\mathrm{ext}}$ **must inevitably fall into at least one of the following three defect categories** (with Boolean indicators $a, d, k \in \lbrace 0, 1\rbrace$ ):
 
 #### 1. First Horn of the Trilemma — Severed-Bridge Dangling Premises or Unproved Leaf Injection (Category $A$ , $a = 1$ )
-At the leaves or replacement boundary $\partial E _ {\mathrm{ext}}$ of the extracted dependency cone $\operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ , there exists an unproved external axiom, a placeholder $\mathtt{sorryAx}$ , an opaque constant, or an extra hypothesis $H _ {\mathrm{extra}}$ silently injected into the target context $\Gamma _ {\mathrm{ext}}$ that evaluates to false on the shadow countermodel $x _ 1$ ( $[\![ H _ {\mathrm{extra}} ]\!] _ {x _ 1} = \mathrm{False}$ );
+At the leaves or replacement boundary $\partial E _ {\mathrm{ext}}$ of the extracted dependency cone $\operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ , there exists an unproved external axiom, a placeholder $\text{sorryAx}$ , an opaque constant, or an extra hypothesis $H _ {\mathrm{extra}}$ silently injected into the target context $\Gamma _ {\mathrm{ext}}$ that evaluates to false on the shadow countermodel $x _ 1$ ( $\lbrack\kern-0.15em\lbrack H _ {\mathrm{extra}} \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{False}$ );
 #### 2. Second Horn of the Trilemma — Silent Downgrading of the Target Definition or Quantifier Domain (Category $D$ , $d = 1$ )
-The proposition $\tau _ {\mathrm{ext}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ proved at the terminal node of $\mathcal{G} _ {\mathrm{ext}}$ is no longer semantically equivalent under $[\![ \cdot ]\!] _ {x _ 1}$ to the frozen target $\forall x \in X,\ C(q(x)) \to Z(x)$ (for instance, by silently altering the underlying $L$ -function definition, replacing analytic continuation with the raw totalized series $\operatorname{LSeries}$ that defaults to $0$ in the critical strip, restricting the quantifier domain, or rendering a premise vacuously false);
+The proposition $\tau _ {\mathrm{ext}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ proved at the terminal node of $\mathcal{G} _ {\mathrm{ext}}$ is no longer semantically equivalent under $\lbrack\kern-0.15em\lbrack \cdot \rbrack\kern-0.15em\rbrack _ {x _ 1}$ to the frozen target $\forall x \in X,\ C(q(x)) \to Z(x)$ (for instance, by silently altering the underlying $L$ -function definition, replacing analytic continuation with the raw totalized series $\operatorname{LSeries}$ that defaults to $0$ in the critical strip, restricting the quantifier domain, or rendering a premise vacuously false);
 #### 3. Third Horn of the Trilemma — Equivalent Relocation of the Weak-Quotient Semantic Leak Inside the Extracted Cone (Category $K$ , $k = 1$ )
-When Category $A$ and Category $D$ are excluded ( $a = 0$ and $d = 0$ ), the interior of the extracted dependency cone $\operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ necessarily contains at least one inference vertex $v^{\ast} \in \operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ whose direct predecessors all evaluate to true under $[\![ \cdot ]\!] _ {x _ 1}$ while the conclusion of $v^{\ast}$ itself evaluates to false under $[\![ \cdot ]\!] _ {x _ 1}$ (meaning that the illicit cross-quotient step or semantic conflation was never eliminated by pruning, but was merely retained or relocated to a rewritten vertex $v^{\ast}$ inside the extracted cone).
+When Category $A$ and Category $D$ are excluded ( $a = 0$ and $d = 0$ ), the interior of the extracted dependency cone $\operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ necessarily contains at least one inference vertex $v^{\ast} \in \operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ whose direct predecessors all evaluate to true under $\lbrack\kern-0.15em\lbrack \cdot \rbrack\kern-0.15em\rbrack _ {x _ 1}$ while the conclusion of $v^{\ast}$ itself evaluates to false under $\lbrack\kern-0.15em\lbrack \cdot \rbrack\kern-0.15em\rbrack _ {x _ 1}$ (meaning that the illicit cross-quotient step or semantic conflation was never eliminated by pruning, but was merely retained or relocated to a rewritten vertex $v^{\ast}$ inside the extracted cone).
 
 The inclusion-exclusion Boolean conservation identity governing the three horns holds identically:
 
@@ -422,14 +422,14 @@ u(a, d, k) := a + d + k - ad - ak - dk + adk = 1 - (1 - a)(1 - d)(1 - k) = 1. \t
 $$
 
 #### Step-by-Step Topological Induction Proof
-**(1)** From $C(q(x _ 0)) = \mathrm{True}$ and the intra-fiber identity $q(x _ 0) = _ Q q(x _ 1)$ , the shadow countermodel $x _ 1$ satisfies $[\![ C(q(x _ 1)) ]\!] _ {x _ 1} = \mathrm{True}$ .
-**(2)** Suppose for contradiction that the extracted graph $\mathcal{G} _ {\mathrm{ext}}$ simultaneously escapes all three horns, so that $a = 0$ (no false leaf or dangling boundary premise), $d = 0$ (no semantic downgrading of the terminal theorem), and $k = 0$ (every local inference step inside the cone preserves truth under $[\![ \cdot ]\!] _ {x _ 1}$ ).
+**(1)** From $C(q(x _ 0)) = \mathrm{True}$ and the intra-fiber identity $q(x _ 0) = _ Q q(x _ 1)$ , the shadow countermodel $x _ 1$ satisfies $\lbrack\kern-0.15em\lbrack C(q(x _ 1)) \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ .
+**(2)** Suppose for contradiction that the extracted graph $\mathcal{G} _ {\mathrm{ext}}$ simultaneously escapes all three horns, so that $a = 0$ (no false leaf or dangling boundary premise), $d = 0$ (no semantic downgrading of the terminal theorem), and $k = 0$ (every local inference step inside the cone preserves truth under $\lbrack\kern-0.15em\lbrack \cdot \rbrack\kern-0.15em\rbrack _ {x _ 1}$ ).
 **(3)** Because the extracted dependency cone $\operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ is a finite directed acyclic graph, order its vertices in a topological sequence $v _ 1, v _ 2, \dots, v _ M = v _ {\mathrm{goal}}^{\mathrm{ext}}$ such that every directed edge $(v _ i \to v _ j)$ satisfies $i < j$ .
-**(4)** By strong mathematical induction on the topological index $j = 1, 2, \dots, M$ , we prove $[\![ v _ j ]\!] _ {x _ 1} = \mathrm{True}$ :
-- **Base / Leaf Case**: If $v _ j$ has no predecessors in the cone (a leaf), then $a = 0$ together with the soundness of foundational background axioms on $x _ 1$ yields $[\![ v _ j ]\!] _ {x _ 1} = \mathrm{True}$ ;
-- **Inductive Step**: If $v _ j$ is an internal vertex, all of its direct predecessors $\{v _ i : (v _ i \to v _ j) \in E _ {\mathrm{ext}}\}$ have indices $i < j$ , so by the induction hypothesis $[\![ v _ i ]\!] _ {x _ 1} = \mathrm{True}$ for every predecessor. Since $k = 0$ (no internal node fails local truth preservation under $[\![ \cdot ]\!] _ {x _ 1}$ ), it follows immediately that $[\![ v _ j ]\!] _ {x _ 1} = \mathrm{True}$ .
-**(5)** Setting $j = M$ gives $[\![ v _ {\mathrm{goal}}^{\mathrm{ext}} ]\!] _ {x _ 1} = \mathrm{True}$ . Since $d = 0$ (no terminal definition drift), $[\![ v _ {\mathrm{goal}}^{\mathrm{ext}} ]\!] _ {x _ 1} = \mathrm{True}$ entails that $C(q(x _ 1)) \implies Z(x _ 1)$ holds on $x _ 1$ . Combining this with Step 1 ( $C(q(x _ 1)) = \mathrm{True}$ ) forces $Z(x _ 1) = \mathrm{True}$ , which directly contradicts $Z(x _ 1) = \mathrm{False}$ in Equation $(3.3)$ .
-**(6)** Hence $(a, d, k) = (0, 0, 0)$ is impossible, proving $(1-a)(1-d)(1-k) = 0$ and Equation $(3.4)$ . Moreover, whenever $a = 0$ and $d = 0$ , selecting the smallest topological index $j _ 0$ for which $[\![ v _ {j _ 0} ]\!] _ {x _ 1} = \mathrm{False}$ uniquely pinpoints in finitely many steps the exact first semantic leak vertex $v^{\ast} = v _ {j _ 0}$ inside the extracted cone. Q.E.D.
+**(4)** By strong mathematical induction on the topological index $j = 1, 2, \dots, M$ , we prove $\lbrack\kern-0.15em\lbrack v _ j \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ :
+- **Base / Leaf Case**: If $v _ j$ has no predecessors in the cone (a leaf), then $a = 0$ together with the soundness of foundational background axioms on $x _ 1$ yields $\lbrack\kern-0.15em\lbrack v _ j \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ ;
+- **Inductive Step**: If $v _ j$ is an internal vertex, all of its direct predecessors $\lbrace v _ i : (v _ i \to v _ j) \in E _ {\mathrm{ext}}\rbrace$ have indices $i < j$ , so by the induction hypothesis $\lbrack\kern-0.15em\lbrack v _ i \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ for every predecessor. Since $k = 0$ (no internal node fails local truth preservation under $\lbrack\kern-0.15em\lbrack \cdot \rbrack\kern-0.15em\rbrack _ {x _ 1}$ ), it follows immediately that $\lbrack\kern-0.15em\lbrack v _ j \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ .
+**(5)** Setting $j = M$ gives $\lbrack\kern-0.15em\lbrack v _ {\mathrm{goal}}^{\mathrm{ext}} \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ . Since $d = 0$ (no terminal definition drift), $\lbrack\kern-0.15em\lbrack v _ {\mathrm{goal}}^{\mathrm{ext}} \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ entails that $C(q(x _ 1)) \implies Z(x _ 1)$ holds on $x _ 1$ . Combining this with Step 1 ( $C(q(x _ 1)) = \mathrm{True}$ ) forces $Z(x _ 1) = \mathrm{True}$ , which directly contradicts $Z(x _ 1) = \mathrm{False}$ in Equation $(3.3)$ .
+**(6)** Hence $(a, d, k) = (0, 0, 0)$ is impossible, proving $(1-a)(1-d)(1-k) = 0$ and Equation $(3.4)$ . Moreover, whenever $a = 0$ and $d = 0$ , selecting the smallest topological index $j _ 0$ for which $\lbrack\kern-0.15em\lbrack v _ {j _ 0} \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{False}$ uniquely pinpoints in finitely many steps the exact first semantic leak vertex $v^{\ast} = v _ {j _ 0}$ inside the extracted cone. Q.E.D.
 
 #### Exact Boundary of Applicability of Theorem 1.4
 Theorem 1.4 simultaneously delineates when code deletion and proof rewriting are mathematically benign versus when they merely relocate a defect:
@@ -447,7 +447,7 @@ In examining how $\operatorname{Lean\ 4} / \operatorname{Mathlib}$ represents an
 In $\operatorname{Mathlib}$ 's $\operatorname{NumberTheory.LSeries.Basic}$ , infinite summation $\operatorname{tsum}$ and Dirichlet series $\operatorname{LSeries}(a, s)$ are implemented as **total functions across the entire complex plane**: for any sequence $a : \mathbb{N} \to \mathbb{C}$ and any complex number $s \in \mathbb{C}$ , whenever the unordered net of finite partial sums fails to converge in the Hausdorff topology on $\mathbb{C}$ ( $\neg\operatorname{LSeriesSummable}(a, s)$ ), the formal definition hard-codes the function value to the default constant $0$ :
 
 $$
-\operatorname{LSeries}(a, s) := \begin{cases} z, & \text{if }\operatorname{HasSum}\bigl(n \mapsto a(n)n^{-s},\,z\bigr), \\ 0, & \text{if }\neg\operatorname{LSeriesSummable}(a, s). \end{cases} \tag{4.1}
+\operatorname{LSeries}(a, s) := \begin{cases} z, & \text{if }\operatorname{HasSum}\bigl(n \mapsto a(n)n^{-s}, z\bigr), \cr 0, & \text{if }\neg\operatorname{LSeriesSummable}(a, s). \end{cases} \tag{4.1}
 $$
 
 #### Theorem I (Identical Vanishing of $\operatorname{LSeries}$ on the Closed Half-Plane $\operatorname{Re}(s) \le 1$ and Non-Interchangeability with Analytic Continuation)
@@ -461,16 +461,16 @@ $$
 In particular, at the off-critical-line test point $s = 3/4$ and at the origin $s = 0$ , the raw series interface and the meromorphically continued Riemann zeta function satisfy the strict inequalities
 
 $$
-\operatorname{LSeries}\!\left(1,\,\frac{3}{4}\right) = 0 \neq \zeta\!\left(\frac{3}{4}\right) < -3, \qquad \operatorname{LSeries}(1, 0) = 0 \neq -\frac{1}{2} = \zeta(0). \tag{4.3}
+\operatorname{LSeries}\left(1, \frac{3}{4}\right) = 0 \neq \zeta\left(\frac{3}{4}\right) < -3, \qquad \operatorname{LSeries}(1, 0) = 0 \neq -\frac{1}{2} = \zeta(0). \tag{4.3}
 $$
 
-**Proof**: Whenever $\sigma = \operatorname{Re}(s) \le 1$ , comparison with the harmonic series gives $\sum _ {n=1}^\infty |n^{-s}| = \sum _ {n=1}^\infty n^{-\sigma} \ge \sum _ {n=1}^\infty n^{-1} = +\infty$ . Because unordered summability $\operatorname{Summable}$ in $\mathbb{C}$ is equivalent to absolute convergence $\operatorname{Summable}(\|\cdot\|)$ , $\neg\operatorname{LSeriesSummable}(1, s)$ holds for all $\operatorname{Re}(s) \le 1$ , and Definition $(4.1)$ immediately evaluates to $\operatorname{LSeries}(1, s) = 0$ . On the other hand, for the genuine analytic continuation $\zeta(s)$ on $0 < \sigma < 1$ , the first-order Euler–Maclaurin representation states
+**Proof**: Whenever $\sigma = \operatorname{Re}(s) \le 1$ , comparison with the harmonic series gives $\sum _ {n=1}^\infty |n^{-s}| = \sum _ {n=1}^\infty n^{-\sigma} \ge \sum _ {n=1}^\infty n^{-1} = +\infty$ . Because unordered summability $\operatorname{Summable}$ in $\mathbb{C}$ is equivalent to absolute convergence $\operatorname{Summable}(\Vert \cdot\Vert )$ , $\neg\operatorname{LSeriesSummable}(1, s)$ holds for all $\operatorname{Re}(s) \le 1$ , and Definition $(4.1)$ immediately evaluates to $\operatorname{LSeries}(1, s) = 0$ . On the other hand, for the genuine analytic continuation $\zeta(s)$ on $0 < \sigma < 1$ , the first-order Euler–Maclaurin representation states
 
 $$
-\zeta(\sigma) = \frac{1}{\sigma - 1} + 1 - \sigma \int _ {1}^{\infty} \{u\} u^{-\sigma - 1}\,du < \frac{1}{\sigma - 1} + 1. \tag{4.4}
+\zeta(\sigma) = \frac{1}{\sigma - 1} + 1 - \sigma \int _ {1}^{\infty} \lbrace u\rbrace  u^{-\sigma - 1}\thinspace du < \frac{1}{\sigma - 1} + 1. \tag{4.4}
 $$
 
-Evaluating at $\sigma = 3/4$ and using $\{u\} \ge 0$ yields $\zeta(3/4) < \frac{1}{3/4 - 1} + 1 = -4 + 1 = -3 < 0$ , while at $s = 0$ one has $\zeta(0) = -1/2 \neq 0$ . This proves that any formal step that transports an identity involving $\operatorname{LSeries}$ into $\operatorname{Re}(s) \le 1$ without enforcing the convergence guard $\operatorname{Re}(s) > 1$ mistakes the default garbage value $0$ assigned to a divergent series for a genuine zero of the analytically continued $L$ -function. Q.E.D.
+Evaluating at $\sigma = 3/4$ and using $\lbrace u\rbrace \ge 0$ yields $\zeta(3/4) < \frac{1}{3/4 - 1} + 1 = -4 + 1 = -3 < 0$ , while at $s = 0$ one has $\zeta(0) = -1/2 \neq 0$ . This proves that any formal step that transports an identity involving $\operatorname{LSeries}$ into $\operatorname{Re}(s) \le 1$ without enforcing the convergence guard $\operatorname{Re}(s) > 1$ mistakes the default garbage value $0$ assigned to a divergent series for a genuine zero of the analytically continued $L$ -function. Q.E.D.
 
 ### 4.2　Distortion Mechanism II: Loss of Residue Information Under Single-Point Pole Totalization at $s=1$ and the Symmetric Two-Point Puncture Recovery Duality
 
@@ -487,7 +487,7 @@ To avoid partial functions with restricted domains, dependent-type libraries rou
 **(2)** Conversely, for the first-order principal germ $g _ {r,c _ 0}(s) = \frac{r}{s-1} + c _ 0$ , sampling at two symmetric rational punctured points $s _ + = 1 + h$ and $s _ - = 1 - h$ around $s = 1$ (for instance $s _ + = 2$ and $s _ - = 0$ when $h = 1$ ) induces the linear observation matrix and exact rational left-inverse recovery matrix
 
 $$
-M _ h = \begin{pmatrix} h^{-1} & 1 \\ -h^{-1} & 1 \end{pmatrix}, \qquad M _ h^{-1} = \frac{1}{2}\begin{pmatrix} h & -h \\ 1 & 1 \end{pmatrix}, \qquad M _ h^{-1} M _ h = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \tag{4.6}
+M _ h = \begin{pmatrix} h^{-1} & 1 \cr -h^{-1} & 1 \end{pmatrix}, \qquad M _ h^{-1} = \frac{1}{2}\begin{pmatrix} h & -h \cr 1 & 1 \end{pmatrix}, \qquad M _ h^{-1} M _ h = \begin{pmatrix} 1 & 0 \cr 0 & 1 \end{pmatrix}, \tag{4.6}
 $$
 
 which uniquely and losslessly recover both the residue and the constant term:
@@ -496,7 +496,7 @@ $$
 r = \frac{h}{2}\bigl(g _ {r,c _ 0}(1+h) - g _ {r,c _ 0}(1-h)\bigr), \qquad c _ 0 = \frac{1}{2}\bigl(g _ {r,c _ 0}(1+h) + g _ {r,c _ 0}(1-h)\bigr). \tag{4.7}
 $$
 
-Likewise, for the logarithmic derivative $\frac{f'(s)}{f(s)}$ near a zero or pole $s _ 0$ of integer order $m \in \mathbb{Z}\setminus\{0\}$ (where $f(s) = (s-s _ 0)^m g(s)$ with $g(s _ 0) \neq 0$ ), although multiplying $f$ by a non-zero scalar $\lambda \neq 0$ is invisible to the logarithmic derivative ( $\frac{(\lambda f)'}{\lambda f} = \frac{f'}{f}$ ), the multiplicity $m$ is strictly conserved as the simple-pole residue in a punctured neighborhood:
+Likewise, for the logarithmic derivative $\frac{f'(s)}{f(s)}$ near a zero or pole $s _ 0$ of integer order $m \in \mathbb{Z}\setminus\lbrace 0\rbrace$ (where $f(s) = (s-s _ 0)^m g(s)$ with $g(s _ 0) \neq 0$ ), although multiplying $f$ by a non-zero scalar $\lambda \neq 0$ is invisible to the logarithmic derivative ( $\frac{(\lambda f)'}{\lambda f} = \frac{f'}{f}$ ), the multiplicity $m$ is strictly conserved as the simple-pole residue in a punctured neighborhood:
 
 $$
 m = \operatorname{Res} _ {s=s _ 0}\frac{f'(s)}{f(s)} = \lim _ {s \to s _ 0} (s - s _ 0)\frac{f'(s)}{f(s)}. \tag{4.8}
@@ -517,11 +517,11 @@ $$
 Whenever there exists a prime $p \mid N$ with $p \nmid N^{\ast}$ (the simplest case being the principal character $\chi _ {0,2} = 1$ modulo $N = 2$ with conductor $N^{\ast} = 1$ , where $L(s, \chi _ {0,2}) = (1 - 2^{-s})\zeta(s)$ ), each bad-prime local Euler factor $1 - \chi^{\ast}(p)p^{-s} = 1 - p^{-s}$ vanishes at infinitely many periodic points along the **imaginary axis** $\operatorname{Re}(s) = 0$ :
 
 $$
-s _ k = \frac{2\pi i k}{\log p} \qquad \bigl(k \in \mathbb{Z} \setminus \{0\},\ \operatorname{Re}(s _ k) = 0 \neq \frac{1}{2}\bigr). \tag{4.10}
+s _ k = \frac{2\pi i k}{\log p} \qquad \bigl(k \in \mathbb{Z} \setminus \lbrace 0\rbrace ,\ \operatorname{Re}(s _ k) = 0 \neq \frac{1}{2}\bigr). \tag{4.10}
 $$
 
 (Choosing $k \neq 0$ , such as $s _ 1 = \frac{2\pi i}{\log 2}$ , avoids the real point $s = 0$ where $\zeta(0) = -1/2$ and any pole discussion; at $s _ 1 = \frac{2\pi i}{\log 2}$ we have $2^{-s _ 1} = \exp(-\log 2 \cdot \frac{2\pi i}{\log 2}) = \exp(-2\pi i) = 1$ , so $1 - 2^{-s _ 1} = 0$ and $L(s _ 1, \chi _ {0,2}) = 0$ .)
-This rigorously proves that if a theorem about general modulo- $N$ Dirichlet $L$ -functions omits either the **open critical-strip left boundary guard** $0 < \operatorname{Re}(s)$ or the **primitivity guard** $\operatorname{IsPrimitive}(\chi)$ , instantiating that theorem at $N = 2, \chi = \chi _ {0,2}, s _ 1 = \frac{2\pi i}{\log 2}$ immediately derives $(0 : \mathbb{R}) = 1/2$ inside $\Sigma _ {\mathrm{TT}}$ . Similarly, for the imprimitive principal character $\chi _ {0,4}$ modulo $N = 4$ , because $\chi _ {0,4}(a) = 0$ on even residues $a \in \{0, 2\}$ and $\chi _ {0,4}(1) = \chi _ {0,4}(3) = 1$ on odd residues, its Gauss sum against the standard additive character $\psi _ 4(a) = e^{2\pi i a / 4} = i^a$ evaluates identically to zero:
+This rigorously proves that if a theorem about general modulo- $N$ Dirichlet $L$ -functions omits either the **open critical-strip left boundary guard** $0 < \operatorname{Re}(s)$ or the **primitivity guard** $\operatorname{IsPrimitive}(\chi)$ , instantiating that theorem at $N = 2, \chi = \chi _ {0,2}, s _ 1 = \frac{2\pi i}{\log 2}$ immediately derives $(0 : \mathbb{R}) = 1/2$ inside $\Sigma _ {\mathrm{TT}}$ . Similarly, for the imprimitive principal character $\chi _ {0,4}$ modulo $N = 4$ , because $\chi _ {0,4}(a) = 0$ on even residues $a \in \lbrace 0, 2\rbrace$ and $\chi _ {0,4}(1) = \chi _ {0,4}(3) = 1$ on odd residues, its Gauss sum against the standard additive character $\psi _ 4(a) = e^{2\pi i a / 4} = i^a$ evaluates identically to zero:
 
 $$
 \tau(\chi _ {0,4}) = \sum _ {a \in \operatorname{ZMod}(4)} \chi _ {0,4}(a)\psi _ 4(a) = 0\cdot 1 + 1\cdot i + 0\cdot(-1) + 1\cdot(-i) = 0 \neq \sqrt{4} = 2, \tag{4.11}
@@ -531,10 +531,10 @@ so any functional-equation reduction that divides by $\tau(\chi)$ or assumes $|\
 
 #### Theorem III-B (Cross-Modulus Unified Pullback Carrier and the Four-Character Real Positive Cone)
 
-To establish cross-modulus zero repulsion (such as coupling a putative exceptional real character $\chi _ 1$ modulo $N _ 1$ with a test character $\chi _ 2$ modulo $N _ 2$ ), one cannot leave $\chi _ 1$ and $\chi _ 2$ isolated in separate $\operatorname{ZMod}(N _ 1)$ and $\operatorname{ZMod}(N _ 2)$ containers; they must be pulled back to the common modulus $N = \operatorname{lcm}(N _ 1, N _ 2)$ (or to $\mathbb{Z}$ ). For any two real-valued quadratic characters $\chi _ 1, \chi _ 2 : \mathbb{Z} \to \{-1, 0, 1\}$ , on $\sigma = \operatorname{Re}(s) > 1$ the four-character combined logarithmic series
+To establish cross-modulus zero repulsion (such as coupling a putative exceptional real character $\chi _ 1$ modulo $N _ 1$ with a test character $\chi _ 2$ modulo $N _ 2$ ), one cannot leave $\chi _ 1$ and $\chi _ 2$ isolated in separate $\operatorname{ZMod}(N _ 1)$ and $\operatorname{ZMod}(N _ 2)$ containers; they must be pulled back to the common modulus $N = \operatorname{lcm}(N _ 1, N _ 2)$ (or to $\mathbb{Z}$ ). For any two real-valued quadratic characters $\chi _ 1, \chi _ 2 : \mathbb{Z} \to \lbrace -1, 0, 1\rbrace$ , on $\sigma = \operatorname{Re}(s) > 1$ the four-character combined logarithmic series
 
 $$
-\mathcal{K} _ 4(\sigma;\,\chi _ 1, \chi _ 2) := \log\zeta(\sigma) + \log L(\sigma, \chi _ 1) + \log L(\sigma, \chi _ 2) + \log L(\sigma, \chi _ 1\chi _ 2) \tag{4.12}
+\mathcal{K} _ 4(\sigma; \chi _ 1, \chi _ 2) := \log\zeta(\sigma) + \log L(\sigma, \chi _ 1) + \log L(\sigma, \chi _ 2) + \log L(\sigma, \chi _ 1\chi _ 2) \tag{4.12}
 $$
 
 has local coefficient at every prime power $p^m$ coprime to $N$ locked to a non-negative real number by the multiplicative product identity
@@ -546,7 +546,7 @@ $$
 guaranteeing strict non-negativity across every finite prime prefix:
 
 $$
-\mathcal{K} _ {4,\le P}(\sigma;\,\chi _ 1, \chi _ 2) = \sum _ {p \le P} \sum _ {m=1}^{\infty} \frac{\bigl(1 + \chi _ 1(p)^m\bigr)\bigl(1 + \chi _ 2(p)^m\bigr)}{m\,p^{m\sigma}} \ge 0. \tag{4.14}
+\mathcal{K} _ {4,\le P}(\sigma; \chi _ 1, \chi _ 2) = \sum _ {p \le P} \sum _ {m=1}^{\infty} \frac{\bigl(1 + \chi _ 1(p)^m\bigr)\bigl(1 + \chi _ 2(p)^m\bigr)}{m p^{m\sigma}} \ge 0. \tag{4.14}
 $$
 
 If a formalization splits the four channels into independent meromorphic approximations without enforcing the synchronized prime-power product binding $(4.13)$ at the common modulus, the termwise non-negativity $(1+\chi _ 1(p)^m)(1+\chi _ 2(p)^m) \ge 0$ no longer holds.
@@ -560,18 +560,18 @@ When coupling analytic continuation (which relies on additive Hurwitz shifts $x 
 On a space of polynomials or truncated sequences, let the first-order additive difference operator be $(A _ {\mathrm{add}} f)(x) = f(x + 1) - f(x)$ and the multiplicative weight operator be $(A _ {\mathrm{mul}} f)(x) = x f(x)$ . Their non-commutative commutator obeys the exact operator identity
 
 $$
-\bigl[A _ {\mathrm{add}},\,A _ {\mathrm{mul}}\bigr] f(x) := \bigl(A _ {\mathrm{add}} A _ {\mathrm{mul}} - A _ {\mathrm{mul}} A _ {\mathrm{add}}\bigr) f(x) = (x+1)f(x+1) - xf(x) - x\bigl(f(x+1) - f(x)\bigr) = f(x+1). \tag{4.15}
+\bigl[A _ {\mathrm{add}}, A _ {\mathrm{mul}}\bigr] f(x) := \bigl(A _ {\mathrm{add}} A _ {\mathrm{mul}} - A _ {\mathrm{mul}} A _ {\mathrm{add}}\bigr) f(x) = (x+1)f(x+1) - xf(x) - x\bigl(f(x+1) - f(x)\bigr) = f(x+1). \tag{4.15}
 $$
 
-On every monomial basis element $f _ d(x) = x^d$ ( $d \ge 0$ ), $[A _ {\mathrm{add}}, A _ {\mathrm{mul}}]\,(x^d) = (x+1)^d \neq 0$ . Any static representation that forces additive continuation and multiplicative Euler sieving into a commutative quotient erases $[A _ {\mathrm{add}}, A _ {\mathrm{mul}}] \neq 0$ and introduces an uncompensated algebraic shear residual.
+On every monomial basis element $f _ d(x) = x^d$ ( $d \ge 0$ ), $[A _ {\mathrm{add}}, A _ {\mathrm{mul}}] (x^d) = (x+1)^d \neq 0$ . Any static representation that forces additive continuation and multiplicative Euler sieving into a commutative quotient erases $[A _ {\mathrm{add}}, A _ {\mathrm{mul}}] \neq 0$ and introduces an uncompensated algebraic shear residual.
 
 ### 4.5　Distortion Mechanism V: Substituting a Finite-Dimensional Positive-Definite Gram Subblock for Full-Space Weil–Li Spectral Positivity
 
 In the explicit-formula and spectral framework (Weil's explicit functional and Li's criterion), the Generalized Riemann Hypothesis is equivalent to the positivity of the symmetric convolution functional $W _ {\chi}(f {\ast} \tilde{f}) \ge 0$ across **all** admissible test functions $f \in \mathcal{A} _ {\mathrm{Weil}}$ (or $\lambda _ n(\chi) = \sum _ {\rho}\bigl(1 - (1 - 1/\rho)^n\bigr) \ge 0$ for **all** $n \ge 1$ ).
 
 #### Theorem V (Separation Between Finite-Dimensional Positive-Definite Gram Subblocks and the Full Test Space, with Explicit Rational $LDL^{\mathsf{T}}$ Certificates)
-**(1)** **Finite-subspace positivity cannot be extrapolated to full-space positivity**: Suppose the rational Gram matrix $G _ m = \bigl(\langle \phi _ i, \phi _ j \rangle\bigr) _ {1\le i,j\le m}$ on a fixed finite-dimensional test subspace $V _ m = \operatorname{span}\{\phi _ 1, \dots, \phi _ m\} \subset \mathcal{A} _ {\mathrm{Weil}}$ is strictly positive definite ( $G _ m \succ 0$ ). If an off-critical-line zero $\rho _ 0 = \frac{1}{2} + \delta + i\gamma _ 0$ ( $\delta \in (0, 1/2)$ ) exists, because $V _ m$ has infinite codimension in $\mathcal{A} _ {\mathrm{Weil}}$ , one can always construct an admissible test wavepacket $f _ {\gamma _ 0} \in \mathcal{A} _ {\mathrm{Weil}}$ orthogonal to the low-order moments defining $V _ m$ whose Fourier support concentrates near $\gamma _ 0$ , where the hyperbolic cosine growth $\cosh(\delta u)\cos(\gamma _ 0 u)$ drives the Weil functional strictly negative.
-Concretely, in a three-dimensional moment model, the non-zero integer coefficient vector $c = (34,\,-57,\,23)^{\mathsf{T}} \in \mathbb{Z}^3$ has vanishing zeroth-order sum moment and non-trivial higher moment:
+**(1)** **Finite-subspace positivity cannot be extrapolated to full-space positivity**: Suppose the rational Gram matrix $G _ m = \bigl(\langle \phi _ i, \phi _ j \rangle\bigr) _ {1\le i,j\le m}$ on a fixed finite-dimensional test subspace $V _ m = \operatorname{span}\lbrace \phi _ 1, \dots, \phi _ m\rbrace \subset \mathcal{A} _ {\mathrm{Weil}}$ is strictly positive definite ( $G _ m \succ 0$ ). If an off-critical-line zero $\rho _ 0 = \frac{1}{2} + \delta + i\gamma _ 0$ ( $\delta \in (0, 1/2)$ ) exists, because $V _ m$ has infinite codimension in $\mathcal{A} _ {\mathrm{Weil}}$ , one can always construct an admissible test wavepacket $f _ {\gamma _ 0} \in \mathcal{A} _ {\mathrm{Weil}}$ orthogonal to the low-order moments defining $V _ m$ whose Fourier support concentrates near $\gamma _ 0$ , where the hyperbolic cosine growth $\cosh(\delta u)\cos(\gamma _ 0 u)$ drives the Weil functional strictly negative.
+Concretely, in a three-dimensional moment model, the non-zero integer coefficient vector $c = (34, -57, 23)^{\mathsf{T}} \in \mathbb{Z}^3$ has vanishing zeroth-order sum moment and non-trivial higher moment:
 
 $$
 34 - 57 + 23 = 0, \qquad 17\times 34 - 19\times 57 + 23\times 23 = 578 - 1083 + 529 = 24 \neq 0 \quad (\text{and }19\times 34 - 20\times 57 + 21\times 23 = -11), \tag{4.16}
@@ -580,7 +580,7 @@ $$
 while under the exact prime-wavepacket rational Gram matrix
 
 $$
-G _ {\mathrm{wave}} = \begin{pmatrix} \dfrac{3}{68} & \dfrac{41}{1292} & \dfrac{21}{1564} \\[8pt] \dfrac{41}{1292} & \dfrac{3}{76} & \dfrac{37}{1748} \\[8pt] \dfrac{21}{1564} & \dfrac{37}{1748} & \dfrac{3}{92} \end{pmatrix}, \tag{4.17}
+G _ {\mathrm{wave}} = \begin{pmatrix} \dfrac{3}{68} & \dfrac{41}{1292} & \dfrac{21}{1564} \cr \dfrac{41}{1292} & \dfrac{3}{76} & \dfrac{37}{1748} \cr \dfrac{21}{1564} & \dfrac{37}{1748} & \dfrac{3}{92} \end{pmatrix}, \tag{4.17}
 $$
 
 the quadratic form admits the exact rational sum-of-squares ( $LDL^{\mathsf{T}}$ ) decomposition
@@ -592,237 +592,237 @@ $$
 The three rational diagonal pivots of $(4.18)$ ,
 
 $$
-\left(d _ 1,\,d _ 2,\,d _ 3\right) = \left(\frac{3}{68},\,\frac{613}{36822},\,\frac{6669}{324277}\right), \tag{4.19}
+\left(d _ 1, d _ 2, d _ 3\right) = \left(\frac{3}{68}, \frac{613}{36822}, \frac{6669}{324277}\right), \tag{4.19}
 $$
 
 are all strictly positive, and evaluating on the zero-sum vector $c = (34, -57, 23)^{\mathsf{T}}$ yields the exact positive integer energy $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 > 0$ .
-**(2)** Three-dimensional exact rational $LDL^{\mathsf{T}}$ certificate for the real-character prime cone: Similarly, on the prime basis $\{17, 19, 23\}$ , the second real-character prime-cone rational Gram matrix has exact rational $LDL^{\mathsf{T}}$ diagonal pivots
+**(2)** Three-dimensional exact rational $LDL^{\mathsf{T}}$ certificate for the real-character prime cone: Similarly, on the prime basis $\lbrace 17, 19, 23\rbrace$ , the second real-character prime-cone rational Gram matrix has exact rational $LDL^{\mathsf{T}}$ diagonal pivots
 
 $$
-\left(d _ 1',\,d _ 2',\,d _ 3'\right) = \left(\frac{43192332}{5260455841},\,\frac{1672}{399929},\,\frac{8}{5643}\right) \succ 0. \tag{4.20}
+\left(d _ 1', d _ 2', d _ 3'\right) = \left(\frac{43192332}{5260455841}, \frac{1672}{399929}, \frac{8}{5643}\right) \succ 0. \tag{4.20}
 $$
 
-These exact rational decompositions (machine-certified in $\operatorname{Lean\ 4}$ on $\mathtt{lc23}$ as $\mathtt{Autopsy6.gram\underline{\hspace{0.35em}}ldlt}$ and $\mathtt{Autopsy6.gram\underline{\hspace{0.35em}}positive}$ ) serve as rigorous finite-window local probes, but upgrading them to global zero exclusion requires an explicit dense approximation and vanishing truncation-error proof across the full test space.
+These exact rational decompositions (machine-certified in $\operatorname{Lean\ 4}$ on $\text{lc23}$ as $\text{Autopsy6.gram\underline{\hspace{0.35em}}ldlt}$ and $\text{Autopsy6.gram\underline{\hspace{0.35em}}positive}$ ) serve as rigorous finite-window local probes, but upgrading them to global zero exclusion requires an explicit dense approximation and vanishing truncation-error proof across the full test space.
 
 ---
 
-## Chapter 5　Six Structural Verification Schemes and Source-Code & Dependency-Graph Verification of the Seventeen-Million-Line GRH Lean 4 Repository on $\mathtt{lc23}$ 
+## Chapter 5　Six Structural Verification Schemes and Source-Code & Dependency-Graph Verification of the Seventeen-Million-Line GRH Lean 4 Repository on $\text{lc23}$ 
 
-Confronted with a formal codebase spanning $17\,374\,215$ lines across $175\,187$ $\mathtt{.lean}$ files, locating structural defects through manual line-by-line reading is impractical. In this chapter we present **Six Structural Verification Schemes** alongside the complete source-code and dependency-graph verification executed on the remote compute host $\mathtt{lc23}$ (hostname $\mathtt{DESKTOP\text{-}YUYO2}$ , 64-bit Linux, running the exact pinned $\operatorname{Lean\ 4}$ toolchain $\mathtt{v4.33.1}$ and $\operatorname{Mathlib}$ commit $\mathtt{0df444a360eaa60ab8c11dca51a86af692955474}$ ).
+Confronted with a formal codebase spanning $17,374,215$ lines across $175,187$ $\text{.lean}$ files, locating structural defects through manual line-by-line reading is impractical. In this chapter we present **Six Structural Verification Schemes** alongside the complete source-code and dependency-graph verification executed on the remote compute host $\text{lc23}$ (hostname $\text{DESKTOP\text{-}YUYO2}$ , 64-bit Linux, running the exact pinned $\operatorname{Lean\ 4}$ toolchain $\text{v4.33.1}$ and $\operatorname{Mathlib}$ commit $\text{0df444a360eaa60ab8c11dca51a86af692955474}$ ).
 
 ### 5.1　Byte-Level Archive Verification, Full-Repository Line Accounting, and Anatomy of the 10,724 Deleted and 23 Modified Modules
 
-In the isolated workspace $\mathtt{/tmp/lc23\underline{\hspace{0.35em}}grh\underline{\hspace{0.35em}}autopsy\underline{\hspace{0.35em}}workspace/}$ on $\mathtt{lc23}$ , we fetched the original 14-part archive (reassembled into $\mathtt{lean.tar.gz}$ , $239\,275\,554$ bytes, SHA-256 $\mathtt{9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc}$ ) together with the community verification repository, and performed a complete byte-by-byte and syntactic audit comparing the original commit $\mathtt{40e56bab026552e089d7afcfeff08d2defb9c005}$ against the community commit $\mathtt{f1f6d65420dbbf36d6cfdac1af8d79511a855a5b}$ :
+In the isolated workspace $\text{/tmp/lc23\underline{\hspace{0.35em}}grh\underline{\hspace{0.35em}}autopsy\underline{\hspace{0.35em}}workspace/}$ on $\text{lc23}$ , we fetched the original 14-part archive (reassembled into $\text{lean.tar.gz}$ , $239,275,554$ bytes, SHA-256 $\text{9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc}$ ) together with the community verification repository, and performed a complete byte-by-byte and syntactic audit comparing the original commit $\text{40e56bab026552e089d7afcfeff08d2defb9c005}$ against the community commit $\text{f1f6d65420dbbf36d6cfdac1af8d79511a855a5b}$ :
 
-| Audit Dimension | Original Pinned Commit ( $\mathtt{40e56bab026552e089d7afcfeff08d2defb9c005}$ ) | Community Pruned Commit ( $\mathtt{f1f6d65420dbbf36d6cfdac1af8d79511a855a5b}$ ) | Exact Differential & Live Verification Finding |
+| Audit Dimension | Original Pinned Commit ( $\text{40e56bab026552e089d7afcfeff08d2defb9c005}$ ) | Community Pruned Commit ( $\text{f1f6d65420dbbf36d6cfdac1af8d79511a855a5b}$ ) | Exact Differential & Live Verification Finding |
 | :--- | :--- | :--- | :--- |
-| Total $\mathtt{.lean}$ Source Files | $175\,187$ files | $164\,464$ files | $10\,724$ modules deleted, $23$ modules modified, $1$ module added ( $\mathtt{src/Challenge.lean}$ ) |
-| **Total Source Lines (including blanks)** | $17\,374\,215$ lines | $16\,571\,342$ lines | Net reduction of $802\,873$ lines ( $785\,224$ lines in the $10\,724$ deleted modules; net reduction of $17\,676$ lines in the $23$ modified modules; plus $27$ lines in $\mathtt{Challenge.lean}$ ) |
-| **Total Non-Blank Source Lines** | $15\,531\,759$ lines | $14\,797\,132$ lines | Net reduction of $734\,627$ non-blank lines |
-| **Total Source Bytes** | $1\,030\,531\,854$ bytes ( $\approx 1.031\,\mathrm{GB}$ ) | $977\,002\,774$ bytes ( $\approx 0.977\,\mathrm{GB}$ ) | Net reduction of $53\,529\,080$ bytes |
-| **Top-Level Source Declarations** | $1\,054\,282$ declarations | $1\,017\,622$ declarations | Net reduction of $36\,660$ source declarations |
-| **Comparison with 14-Part Original Archive** | $175\,190 / 175\,190$ files byte-for-byte identical ( $\mathtt{exact\underline{\hspace{0.35em}}match = true}$ ) | Evolved through 5 merged pull requests (PRs $\#8, \#45, \#57, \#60, \#65$ ) | Original archive contains $175\,187$ $\mathtt{.lean}$ files and $3$ project config files with zero byte discrepancy |
+| Total $\text{.lean}$ Source Files | $175,187$ files | $164,464$ files | $10,724$ modules deleted, $23$ modules modified, $1$ module added ( $\text{src/Challenge.lean}$ ) |
+| **Total Source Lines** (including blanks) | $17,374,215$ lines | $16,571,342$ lines | Net reduction of $802,873$ lines ( $785,224$ lines in the $10,724$ deleted modules; net reduction of $17,676$ lines in the $23$ modified modules; plus $27$ lines in $\text{Challenge.lean}$ ) |
+| **Total Non-Blank Source Lines** | $15,531,759$ lines | $14,797,132$ lines | Net reduction of $734,627$ non-blank lines |
+| **Total Source Bytes** | $1,030,531,854$ bytes ( $\approx 1.031 \mathrm{GB}$ ) | $977,002,774$ bytes ( $\approx 0.977 \mathrm{GB}$ ) | Net reduction of $53,529,080$ bytes |
+| **Top-Level Source Declarations** | $1,054,282$ declarations | $1,017,622$ declarations | Net reduction of $36,660$ source declarations |
+| **Comparison with 14-Part Original Archive** | $175,190 / 175,190$ files byte-for-byte identical ( $\text{exact\underline{\hspace{0.35em}}match = true}$ ) | Evolved through 5 merged pull requests (PRs #8, #45, #57, #60, #65 ) | Original archive contains $175,187$ $\text{.lean}$ files and $3$ project config files with zero byte discrepancy |
 
-#### Anatomy of the $10\,724$ Deleted Modules and $23$ Modified Modules
-#### 1. Distribution of the $10\,724$ deleted modules ( $785\,224$ original lines) across top-level sub-libraries
-- $\mathtt{Development}$ : $10\,684$ deleted modules (out of $141\,928$ original files / $12\,232\,663$ lines);
-- $\mathtt{PositivityTheory}$ : $23$ deleted modules;
-- $\mathtt{GroundTheory}$ : $8$ deleted modules;
-- $\mathtt{Formalism}$ : $6$ deleted modules;
-- $\mathtt{Supplements}$ : $2$ deleted modules;
-- $\mathtt{ReciprocityTheory}$ : $1$ deleted module.
-In the original repository these $10\,724$ modules lay inside the module-level $\mathtt{import}$ closure of $\mathtt{Main.lean}$ , but once PRs $\#8$ and $\#45$ narrowed the $\mathtt{import}$ lists of $\mathtt{Main.lean}$ , $\mathtt{Statements.lean}$ , and $11$ intermediate aggregator modules, those $10\,724$ modules were disconnected from the module import tree and removed in bulk.
-#### 2. Exact breakdown of the $23$ modified modules (net reduction of $17\,676$ lines)
-Between $\mathtt{40e56bab}$ and $\mathtt{f1f6d654}$ , exactly $23$ modules were modified (earlier summaries citing $18$ modified modules counted only through PR $\#57$ , whereas PR $\#60$ and PR $\#65$ modified $1$ and $4$ additional modules respectively):
-- $13$ modules (including $\mathtt{src/Main.lean}$ , $\mathtt{src/Statements.lean}$ , $\mathtt{RiemannHypothesisOfEveryCharacter.lean}$ , $\mathtt{EveryCharacterOfLiteratureOfVWin.lean}$ , and $9$ $\mathtt{DenseThresholdCases}$ modules) modified only header $\mathtt{import}$ lines, with their non-import theorem bodies remaining byte-for-byte identical;
-- $10$ core modules inside $\mathtt{src/Development/AutomorphicArithmetic/IntegralCasts/CapelliIdentities/}$ —every single one of which lies inside the dependency cone of the five main theorems—had their actual proof bodies rewritten and drastically compressed:
-- $\mathtt{FixPiIff.lean}$ : rewritten and compressed from $8\,029$ lines down to $45$ lines (PR $\#60$ );
-- $\mathtt{FreeModuleQuotient.lean}$ : rewritten from $2\,516$ lines to $84$ lines (PR $\#65$ );
-- $\mathtt{IntegerSpanGenerators.lean}$ : rewritten from $1\,746$ lines to $254$ lines (PR $\#57$ );
-- $\mathtt{ContDiffHerm.lean}$ : rewritten from $1\,727$ lines to $211$ lines (PR $\#65$ );
-- $\mathtt{CoboundaryOfGenerator.lean}$ : rewritten from $1\,701$ lines to $131$ lines (PR $\#57$ );
-- $\mathtt{PhiMul.lean}$ : rewritten from $834$ lines to $23$ lines (PR $\#57$ );
-- $\mathtt{SquareOfApproximation.lean}$ : rewritten from $658$ lines to $235$ lines (PR $\#65$ );
-- $\mathtt{FiniteCohomologyOfTrivialOfCyclic.lean}$ : rewritten from $608$ lines to $45$ lines (PR $\#57$ );
-- $\mathtt{FgZ1T.lean}$ : rewritten from $523$ lines to $69$ lines (PR $\#57$ , additionally dropping two redundant typeclass instance arguments from the theorem signature);
-- $\mathtt{LimitOfFinite.lean}$ : rewritten from $172$ lines to $61$ lines (PR $\#65$ ).
+#### Anatomy of the $10,724$ Deleted Modules and $23$ Modified Modules
+#### 1. Distribution of the $10,724$ deleted modules ( $785,224$ original lines) across top-level sub-libraries
+- $\text{Development}$ : $10,684$ deleted modules (out of $141,928$ original files / $12,232,663$ lines);
+- $\text{PositivityTheory}$ : $23$ deleted modules;
+- $\text{GroundTheory}$ : $8$ deleted modules;
+- $\text{Formalism}$ : $6$ deleted modules;
+- $\text{Supplements}$ : $2$ deleted modules;
+- $\text{ReciprocityTheory}$ : $1$ deleted module.
+In the original repository these $10,724$ modules lay inside the module-level $\text{import}$ closure of $\text{Main.lean}$ , but once PRs #8 and #45 narrowed the $\text{import}$ lists of $\text{Main.lean}$ , $\text{Statements.lean}$ , and $11$ intermediate aggregator modules, those $10,724$ modules were disconnected from the module import tree and removed in bulk.
+#### 2. Exact breakdown of the $23$ modified modules (net reduction of $17,676$ lines)
+Between $\text{40e56bab}$ and $\text{f1f6d654}$ , exactly $23$ modules were modified (earlier summaries citing $18$ modified modules counted only through PR #57 , whereas PR #60 and PR #65 modified $1$ and $4$ additional modules respectively):
+- $13$ modules (including $\text{src/Main.lean}$ , $\text{src/Statements.lean}$ , $\text{RiemannHypothesisOfEveryCharacter.lean}$ , $\text{EveryCharacterOfLiteratureOfVWin.lean}$ , and $9$ $\text{DenseThresholdCases}$ modules) modified only header $\text{import}$ lines, with their non-import theorem bodies remaining byte-for-byte identical;
+- $10$ core modules inside $\text{src/Development/AutomorphicArithmetic/IntegralCasts/CapelliIdentities/}$ —every single one of which lies inside the dependency cone of the five main theorems—had their actual proof bodies rewritten and drastically compressed:
+- $\text{FixPiIff.lean}$ : rewritten and compressed from $8,029$ lines down to $45$ lines (PR #60 );
+- $\text{FreeModuleQuotient.lean}$ : rewritten from $2,516$ lines to $84$ lines (PR #65 );
+- $\text{IntegerSpanGenerators.lean}$ : rewritten from $1,746$ lines to $254$ lines (PR #57 );
+- $\text{ContDiffHerm.lean}$ : rewritten from $1,727$ lines to $211$ lines (PR #65 );
+- $\text{CoboundaryOfGenerator.lean}$ : rewritten from $1,701$ lines to $131$ lines (PR #57 );
+- $\text{PhiMul.lean}$ : rewritten from $834$ lines to $23$ lines (PR #57 );
+- $\text{SquareOfApproximation.lean}$ : rewritten from $658$ lines to $235$ lines (PR #65 );
+- $\text{FiniteCohomologyOfTrivialOfCyclic.lean}$ : rewritten from $608$ lines to $45$ lines (PR #57 );
+- $\text{FgZ1T.lean}$ : rewritten from $523$ lines to $69$ lines (PR #57 , additionally dropping two redundant typeclass instance arguments from the theorem signature);
+- $\text{LimitOfFinite.lean}$ : rewritten from $172$ lines to $61$ lines (PR #65 ).
 
 ### 5.2　Exact Formal Signatures and Guard Audit of the Five Top-Level Target Theorems
 
-In both $\mathtt{src/Statements.lean}$ and $\mathtt{src/Main.lean}$ , the five top-level theorem declarations are:
+In both $\text{src/Statements.lean}$ and $\text{src/Main.lean}$ , the five top-level theorem declarations are:
 
-#### 1. Standard Mathlib Riemann Hypothesis $\mathtt{riemannHypothesis} : \operatorname{RiemannHypothesis}$ (from $\mathtt{Mathlib.NumberTheory.LSeries.RiemannZeta}$ )
+**(1) Standard Mathlib Riemann Hypothesis** $\text{riemannHypothesis} : \operatorname{RiemannHypothesis}$ (from $\text{Mathlib.NumberTheory.LSeries.RiemannZeta}$ ):
 
 $$
 \forall s \in \mathbb{C},\quad \operatorname{riemannZeta}(s) = 0 \ \land\ \left(\neg\exists n \in \mathbb{N},\ s = -2(n + 1)\right) \ \land\ s \neq 1 \implies \operatorname{Re}(s) = \frac{1}{2}. \tag{5.1}
 $$
 
-#### 2. Custom Critical-Line Formulation for Riemann Zeta Zeros $\mathtt{riemannZeta\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re} : \operatorname{RiemannZetaZerosOnLine}$ 
+**(2) Custom Critical-Line Formulation for Riemann Zeta Zeros** $\text{riemannZeta\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re} : \operatorname{RiemannZetaZerosOnLine}$ :
 
 $$
 \forall s \in \mathbb{C},\quad \operatorname{riemannZeta}(s) = 0 \ \land\ \left(\neg\exists n \in \mathbb{N},\ s = -2((n : \mathbb{C}) + 1)\right) \ \land\ s \neq 1 \implies \operatorname{Re}(s) = \frac{1}{2}. \tag{5.2}
 $$
 
-#### 3. Non-Vanishing of General Dirichlet $L$ -Functions on $\operatorname{Re}(s) > 1/2$ $\mathtt{LFunction\underline{\hspace{0.35em}}ne\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}half\underline{\hspace{0.35em}}lt\underline{\hspace{0.35em}}re} : \operatorname{DirichletLNonvanishingRightOfHalf}$ 
+**(3)** Non-Vanishing of General Dirichlet $L$ -Functions on $\operatorname{Re}(s) > 1/2$ $\text{LFunction\underline{\hspace{0.35em}}ne\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}half\underline{\hspace{0.35em}}lt\underline{\hspace{0.35em}}re} : \operatorname{DirichletLNonvanishingRightOfHalf}$ :
 
 $$
 \forall N \in \mathbb{N}\ [\operatorname{NeZero}(N)]\ \forall \chi \in \operatorname{DirichletCharacter}(\mathbb{C}, N)\ \forall s \in \mathbb{C},\quad \frac{1}{2} < \operatorname{Re}(s) \ \land\ (\chi \neq 1 \lor s \neq 1) \implies \operatorname{DirichletCharacter.LFunction}(\chi, s) \neq 0. \tag{5.3}
 $$
 
-#### 4. Open Critical-Strip Zeros of General (Including Imprimitive) Dirichlet $L$ -Functions $\mathtt{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re} : \operatorname{DirichletLZerosOnLine}$ 
+**(4)** Open Critical-Strip Zeros of General (Including Imprimitive) Dirichlet $L$ -Functions $\text{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re} : \operatorname{DirichletLZerosOnLine}$ :
 
 $$
 \forall N \in \mathbb{N}\ [\operatorname{NeZero}(N)]\ \forall \chi \in \operatorname{DirichletCharacter}(\mathbb{C}, N)\ \forall s \in \mathbb{C},\quad 0 < \operatorname{Re}(s) \ \land\ \operatorname{Re}(s) < 1 \ \land\ \operatorname{DirichletCharacter.LFunction}(\chi, s) = 0 \implies \operatorname{Re}(s) = \frac{1}{2}. \tag{5.4}
 $$
 
-#### 5. Open Critical-Strip Zeros of Primitive Dirichlet $L$ -Functions $\mathtt{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}isPrimitive} : \operatorname{PrimitiveDirichletLZerosOnLine}$ 
+**(5)** Open Critical-Strip Zeros of Primitive Dirichlet $L$ -Functions $\text{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}isPrimitive} : \operatorname{PrimitiveDirichletLZerosOnLine}$ :
 
 $$
 \forall N \in \mathbb{N}\ [\operatorname{NeZero}(N)]\ \forall \chi \in \operatorname{DirichletCharacter}(\mathbb{C}, N),\quad \operatorname{IsPrimitive}(\chi) \implies \forall s \in \mathbb{C},\ 0 < \operatorname{Re}(s) \ \land\ \operatorname{Re}(s) < 1 \ \land\ \operatorname{DirichletCharacter.LFunction}(\chi, s) = 0 \implies \operatorname{Re}(s) = \frac{1}{2}. \tag{5.5}
 $$
 
-In $\mathtt{src/Main.lean}$ , all five theorems are derived from a single master upstream theorem $\mathtt{UpperTheory.FinalTheorems.everyCharacter}$ (aliased locally as $\mathtt{allChi} : \operatorname{DirichletLNonvanishingRightOfHalf}$ ), via $\mathtt{Formalism.VW.rh\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}every}(\mathtt{allChi})$ and $\mathtt{Formalism.VW.critLine}(\mathtt{allChi})$ .
+In $\text{src/Main.lean}$ , all five theorems are derived from a single master upstream theorem $\text{UpperTheory.FinalTheorems.everyCharacter}$ (aliased locally as $\text{allChi} : \operatorname{DirichletLNonvanishingRightOfHalf}$ ), via $\text{Formalism.VW.rh\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}every}(\text{allChi})$ and $\text{Formalism.VW.critLine}(\text{allChi})$ .
 
-### 5.3　Master Summary Table of Live Compilation Receipts for the Six Verification Schemes on $\mathtt{lc23}$ 
+### 5.3　Master Summary Table of Live Compilation Receipts for the Six Verification Schemes on $\text{lc23}$ 
 
-All six verification schemes and target probes were compiled live on $\mathtt{lc23}$ under $\operatorname{Lean\ 4}\ \mathtt{v4.33.1}$ inside a read-only network-isolated $\mathtt{bwrap}$ sandbox:
+All six verification schemes and target probes were compiled live on $\text{lc23}$ under $\operatorname{Lean\ 4}\ \text{v4.33.1}$ inside a read-only network-isolated $\text{bwrap}$ sandbox:
 
-| Scheme & Live Probe Name | Imported Environment & Target | Exit Code | Wall Time (s) | Live $\mathtt{lc23}$ Compilation Outcome & Captured Verification Evidence |
+| Scheme & Live Probe Name | Imported Environment & Target | Exit Code | Wall Time (s) | Live $\text{lc23}$ Compilation Outcome & Captured Verification Evidence |
 | :--- | :--- | :---: | :---: | :--- |
-| **Scheme 1 (Probe 1A)**: $\mathtt{TailMirrorOriginal}$ | Original $\mathtt{Statements}$ + $\mathtt{Supplements.Kernels.MainTheoremsAll}$ | $1$ | $1\,446.612$ | Replacing the conclusion $\operatorname{Re}(s) = 1/2$ by $\operatorname{MirrorRH}$ ( $\operatorname{Re}(s) = 3/4$ ) and assigning $\mathtt{rhOfAll}$ is rejected with $\mathtt{Type\ mismatch:\ rhOfAll\ has\ type\ RiemannHypothesis\ but\ is\ expected\ to\ have\ type\ MirrorRH}$ , confirming the top-level term is not a polymorphic proof of $\mathrm{False}$ |
-| **Scheme 1 (Probe 1A cont.)**: $\mathtt{FirstZeroProbe}$ | Original $\mathtt{Main}$ + $\mathtt{Mathlib.Tactic}$ | $124$ (timeout) | $7\,677.660$ | Searching across all $175\,187$ modules for an existential witness of the first non-trivial zero $\exists s,\ \operatorname{riemannZeta}(s)=0 \land 0<\operatorname{Re}(s)<1 \land 14<\operatorname{Im}(s)<15$ did not return after $7\,677.66$ seconds, confirming no indexed existential witness theorem for the first zero is exposed |
-| **Scheme 1 (Probes 1B/1C)**: $\mathtt{AutopsyProbe\underline{\hspace{0.35em}}Scheme1}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $0$ | $2.399$ | Machine-certified four core theorems: (i) $\mathtt{raw\underline{\hspace{0.35em}}zero}$ and $\mathtt{raw\underline{\hspace{0.35em}}three\underline{\hspace{0.35em}}quarters}$ : $\operatorname{Re}(s)\le 1 \implies \operatorname{LSeries}(1,s)=0$ and $\operatorname{LSeries}(1, 3/4)=0$ ; (ii) $\mathtt{functions\underline{\hspace{0.35em}}differ}$ : $(s \mapsto \operatorname{LSeries}(1,s)) \neq \operatorname{riemannZeta}$ via $0 \neq -1/2$ at $s=0$ ; (iii) $\mathtt{axis\underline{\hspace{0.35em}}principal\underline{\hspace{0.35em}}zero}$ : modulo- $2$ principal character vanishes on the imaginary axis at $s _ 0 = \frac{2\pi i}{\log 2}$ ; (iv) $\mathtt{removing\underline{\hspace{0.35em}}guard\underline{\hspace{0.35em}}is\underline{\hspace{0.35em}}false}$ : removing the $0 < \operatorname{Re}(s)$ guard makes the critical-line statement provably false in $\operatorname{Lean\ 4}$ |
-| **Scheme 1 (Target Application)**: $\mathtt{TargetValueProbe}$ | Original $\mathtt{Main}$ | $0$ | $1\,799.910$ | Instantiated $\mathtt{LFunction\underline{\hspace{0.35em}}ne\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}half\underline{\hspace{0.35em}}lt\underline{\hspace{0.35em}}re}$ at $N=1, \chi=1, s=3/4$ to derive $\operatorname{riemannZeta}(3/4) \neq 0$ , printing axioms $\mathtt{propext}, \mathtt{Classical.choice}, \mathtt{Quot.sound}$ |
-| **Scheme 2 (Definitions & Bridge)**: $\mathtt{AutopsyProbe\underline{\hspace{0.35em}}Scheme2}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $0$ | $1.595$ | Extracted via $\mathtt{\#print}$ the exact additive Hurwitz linear combination definition $(2.19)$ of $\operatorname{DirichletCharacter.LFunction}$ and $\operatorname{ZMod.LFunction}$ , and verified the guarded bridge $\mathtt{dirichlet\underline{\hspace{0.35em}}bridge}$ ( $\operatorname{Re}(s) > 1$ ) and primitive functional equation |
-| **Schemes 3 & 4 (Full Graph, Cone & Min-Cut)**: $\mathtt{original\underline{\hspace{0.35em}}scheme4}$ | Original $\mathtt{Main}$ full environment ( $\mathtt{env.checked}$ traversal) | $0$ | $3\,268.004$ | Exported the complete $6\,507\,343\,368$ -byte ( $6.1\,\mathrm{GB}$ ) declaration dependency stream across $2\,701\,132$ **nodes** and $170\,706\,224$ **directed edges**, computing the joint target cone of $1\,478\,243$ **declarations**, axiom set $\{\mathtt{Classical.choice}, \mathtt{Quot.sound}, \mathtt{propext}\}$ , and the **exact minimum internal directed vertex cut of capacity** $8$ ( $\mathtt{VERIFIED}$ ) |
-| **Scheme 5 (Trojan Countermodel Injection)**: $\mathtt{AutopsyProbe\underline{\hspace{0.35em}}Scheme5}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $0$ | $5.856$ | Machine-certified the symmetric Trojan polynomial $P(s) = (s-1/2)^2 - 1/16$ , Davenport–Heilbronn non-multiplicativity $\mathtt{dh\underline{\hspace{0.35em}}not\underline{\hspace{0.35em}}multiplicative}$ , even-channel reciprocal root $\mathtt{even\underline{\hspace{0.35em}}root} : F _ {\mathrm{even}}(3/4)=0$ , and completed reflection symmetry, refuting $\mathtt{WeakRule}$ ( $\mathtt{weak\underline{\hspace{0.35em}}rule\underline{\hspace{0.35em}}refuted} : \neg\mathtt{WeakRule}$ ) and deriving $\mathtt{WeakRule} \to (3/4 : \mathbb{R}) = 1/2$ and $\mathtt{WeakRule} \to (0 : \mathbb{Z}) = 1$ |
-| **Scheme 6 (Finite Arithmetic & Gram Collision)**: $\mathtt{AutopsyProbe\underline{\hspace{0.35em}}Scheme6}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $0$ | $3.990$ | Machine-certified modulus-zero exclusion $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ , Rouché rational margin $(1/8)^2-(1/16)^2=3/256>0$ , modulo- $4$ principal Gauss sum vanishing $\mathtt{principal\underline{\hspace{0.35em}}mod4\underline{\hspace{0.35em}}gauss} = 0$ , prime-basis $\{17,19,23\}$ rational Gram $LDL^{\mathsf{T}}$ identity $\mathtt{gram\underline{\hspace{0.35em}}ldlt}$ , positivity $\mathtt{gram\underline{\hspace{0.35em}}positive}$ , and zero-moment positive energy $\operatorname{gram}(34,-57,23)=39$ |
-| **Metaprogramming Bypass Control**: $\mathtt{KexactNegativeControl}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $1$ | $2.921$ | Tested the repository's $\mathtt{kexactB}$ tactic (elaborating with expected type $\mathtt{none}$ followed by direct $\mathtt{g.assign}$ ) on assigning a proof of $\mathrm{True}$ to a goal of type $\mathrm{False}$ : bypassed frontend target checking and failed only at $\mathtt{(kernel)\ declaration\ type\ mismatch}$ |
+| **Scheme 1** (Probe 1A): $\text{TailMirrorOriginal}$ | Original $\text{Statements}$ + $\text{Supplements.Kernels.MainTheoremsAll}$ | $1$ | $1,446.612$ | Replacing the conclusion $\operatorname{Re}(s) = 1/2$ by $\operatorname{MirrorRH}$ ( $\operatorname{Re}(s) = 3/4$ ) and assigning $\text{rhOfAll}$ is rejected with $\text{Type\ mismatch:\ rhOfAll\ has\ type\ RiemannHypothesis\ but\ is\ expected\ to\ have\ type\ MirrorRH}$ , confirming the top-level term is not a polymorphic proof of $\mathrm{False}$ |
+| **Scheme 1** (Probe 1A cont.): $\text{FirstZeroProbe}$ | Original $\text{Main}$ + $\text{Mathlib.Tactic}$ | $124$ (timeout) | $7,677.660$ | Searching across all $175,187$ modules for an existential witness of the first non-trivial zero $\exists s,\ \operatorname{riemannZeta}(s)=0 \land 0<\operatorname{Re}(s)<1 \land 14<\operatorname{Im}(s)<15$ did not return after $7,677.66$ seconds, confirming no indexed existential witness theorem for the first zero is exposed |
+| **Scheme 1** (Probes 1B/1C): $\text{AutopsyProbe\underline{\hspace{0.35em}}Scheme1}$ | $\operatorname{Lean}\ \text{v4.33.1} + \operatorname{Mathlib}\ \text{0df444a360ea}$ | $0$ | $2.399$ | Machine-certified four core theorems: (i) $\text{raw\underline{\hspace{0.35em}}zero}$ and $\text{raw\underline{\hspace{0.35em}}three\underline{\hspace{0.35em}}quarters}$ : $\operatorname{Re}(s)\le 1 \implies \operatorname{LSeries}(1,s)=0$ and $\operatorname{LSeries}(1, 3/4)=0$ ; (ii) $\text{functions\underline{\hspace{0.35em}}differ}$ : $(s \mapsto \operatorname{LSeries}(1,s)) \neq \operatorname{riemannZeta}$ via $0 \neq -1/2$ at $s=0$ ; (iii) $\text{axis\underline{\hspace{0.35em}}principal\underline{\hspace{0.35em}}zero}$ : modulo- $2$ principal character vanishes on the imaginary axis at $s _ 0 = \frac{2\pi i}{\log 2}$ ; (iv) $\text{removing\underline{\hspace{0.35em}}guard\underline{\hspace{0.35em}}is\underline{\hspace{0.35em}}false}$ : removing the $0 < \operatorname{Re}(s)$ guard makes the critical-line statement provably false in $\operatorname{Lean\ 4}$ |
+| **Scheme 1** (Target Application): $\text{TargetValueProbe}$ | Original $\text{Main}$ | $0$ | $1,799.910$ | Instantiated $\text{LFunction\underline{\hspace{0.35em}}ne\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}half\underline{\hspace{0.35em}}lt\underline{\hspace{0.35em}}re}$ at $N=1, \chi=1, s=3/4$ to derive $\operatorname{riemannZeta}(3/4) \neq 0$ , printing axioms $\text{propext}, \text{Classical.choice}, \text{Quot.sound}$ |
+| **Scheme 2** (Definitions & Bridge): $\text{AutopsyProbe\underline{\hspace{0.35em}}Scheme2}$ | $\operatorname{Lean}\ \text{v4.33.1} + \operatorname{Mathlib}\ \text{0df444a360ea}$ | $0$ | $1.595$ | Extracted via #print the exact additive Hurwitz linear combination definition $(2.19)$ of $\operatorname{DirichletCharacter.LFunction}$ and $\operatorname{ZMod.LFunction}$ , and verified the guarded bridge $\text{dirichlet\underline{\hspace{0.35em}}bridge}$ ( $\operatorname{Re}(s) > 1$ ) and primitive functional equation |
+| **Schemes 3 & 4** (Full Graph, Cone & Min-Cut): $\text{original\underline{\hspace{0.35em}}scheme4}$ | Original $\text{Main}$ full environment ( $\text{env.checked}$ traversal) | $0$ | $3,268.004$ | Exported the complete $6,507,343,368$ -byte ( $6.1 \mathrm{GB}$ ) declaration dependency stream across $2,701,132$ **nodes** and $170,706,224$ **directed edges**, computing the joint target cone of $1,478,243$ **declarations**, axiom set $\lbrace \text{Classical.choice}, \text{Quot.sound}, \text{propext}\rbrace$ , and the **exact minimum internal directed vertex cut of capacity** $8$ ( $\text{VERIFIED}$ ) |
+| **Scheme 5** (Trojan Countermodel Injection): $\text{AutopsyProbe\underline{\hspace{0.35em}}Scheme5}$ | $\operatorname{Lean}\ \text{v4.33.1} + \operatorname{Mathlib}\ \text{0df444a360ea}$ | $0$ | $5.856$ | Machine-certified the symmetric Trojan polynomial $P(s) = (s-1/2)^2 - 1/16$ , Davenport–Heilbronn non-multiplicativity $\text{dh\underline{\hspace{0.35em}}not\underline{\hspace{0.35em}}multiplicative}$ , even-channel reciprocal root $\text{even\underline{\hspace{0.35em}}root} : F _ {\mathrm{even}}(3/4)=0$ , and completed reflection symmetry, refuting $\text{WeakRule}$ ( $\text{weak\underline{\hspace{0.35em}}rule\underline{\hspace{0.35em}}refuted} : \neg\text{WeakRule}$ ) and deriving $\text{WeakRule} \to (3/4 : \mathbb{R}) = 1/2$ and $\text{WeakRule} \to (0 : \mathbb{Z}) = 1$ |
+| **Scheme 6** (Finite Arithmetic & Gram Collision): $\text{AutopsyProbe\underline{\hspace{0.35em}}Scheme6}$ | $\operatorname{Lean}\ \text{v4.33.1} + \operatorname{Mathlib}\ \text{0df444a360ea}$ | $0$ | $3.990$ | Machine-certified modulus-zero exclusion $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ , Rouché rational margin $(1/8)^2-(1/16)^2=3/256>0$ , modulo- $4$ principal Gauss sum vanishing $\text{principal\underline{\hspace{0.35em}}mod4\underline{\hspace{0.35em}}gauss} = 0$ , prime-basis $\lbrace 17,19,23\rbrace$ rational Gram $LDL^{\mathsf{T}}$ identity $\text{gram\underline{\hspace{0.35em}}ldlt}$ , positivity $\text{gram\underline{\hspace{0.35em}}positive}$ , and zero-moment positive energy $\operatorname{gram}(34,-57,23)=39$ |
+| **Metaprogramming Bypass Control**: $\text{KexactNegativeControl}$ | $\operatorname{Lean}\ \text{v4.33.1} + \operatorname{Mathlib}\ \text{0df444a360ea}$ | $1$ | $2.921$ | Tested the repository's $\text{kexactB}$ tactic (elaborating with expected type $\text{none}$ followed by direct $\text{g.assign}$ ) on assigning a proof of $\mathrm{True}$ to a goal of type $\mathrm{False}$ : bypassed frontend target checking and failed only at $\text{(kernel)\ declaration\ type\ mismatch}$ |
 
 ### 5.4　Scheme 4 Full-Graph Analysis: The Eight-Vertex Minimum Directed Cut Across 2,701,132 Declarations and 170,706,224 Edges, and 20-Step Logarithmic Bisection
 
-In Scheme 4, our complete environment extractor traversed every constant's type references ( $\mathtt{type\underline{\hspace{0.35em}}deps}$ ), value/proof references ( $\mathtt{body\underline{\hspace{0.35em}}deps}$ ), and inductive/constructor/recursor structural references ( $\mathtt{structural\underline{\hspace{0.35em}}deps}$ ) across $\mathtt{env.checked}$ of the original $\mathtt{Main}$ module on $\mathtt{lc23}$ , producing the $6\,507\,343\,368$ -byte stream (SHA-256 $\mathtt{476485163475eed1feee899d0aa088de78ac114b960baefd3c788df6908ce740}$ ) analyzed by our node-splitting maximum-flow solver and zero-import independent certificate verifier $\mathtt{verify\underline{\hspace{0.35em}}graph\underline{\hspace{0.35em}}certificate.py}$ :
+In Scheme 4, our complete environment extractor traversed every constant's type references ( $\text{type\underline{\hspace{0.35em}}deps}$ ), value/proof references ( $\text{body\underline{\hspace{0.35em}}deps}$ ), and inductive/constructor/recursor structural references ( $\text{structural\underline{\hspace{0.35em}}deps}$ ) across $\text{env.checked}$ of the original $\text{Main}$ module on $\text{lc23}$ , producing the $6,507,343,368$ -byte stream (SHA-256 $\text{476485163475eed1feee899d0aa088de78ac114b960baefd3c788df6908ce740}$ ) analyzed by our node-splitting maximum-flow solver and zero-import independent certificate verifier $\text{verify\underline{\hspace{0.35em}}graph\underline{\hspace{0.35em}}certificate.py}$ :
 
 #### 1. Full Environment Scale and Target Dependency Cone Separation
-- Total declaration vertices in the checked environment of $\mathtt{Main}$ :
+- Total declaration vertices in the checked environment of $\text{Main}$ :
 
 $$
-|V| = 2\,701\,132; \tag{5.6}
+|V| = 2,701,132; \tag{5.6}
 $$
 
 - Total deduplicated directed dependency edges (oriented from dependency to user):
 
 $$
-|E| = 170\,706\,224; \tag{5.7}
+|E| = 170,706,224; \tag{5.7}
 $$
 
-- Joint upstream dependency cone of the five top-level target theorems $T = \{\mathtt{riemannHypothesis},\,\mathtt{riemannZeta\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re},\,\mathtt{LFunction\underline{\hspace{0.35em}}ne\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}half\underline{\hspace{0.35em}}lt\underline{\hspace{0.35em}}re},\,\mathtt{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re},\,\mathtt{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}isPrimitive}\}$ :
+- Joint upstream dependency cone of the five top-level target theorems $T = \lbrace \text{riemannHypothesis}, \text{riemannZeta\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re}, \text{LFunction\underline{\hspace{0.35em}}ne\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}half\underline{\hspace{0.35em}}lt\underline{\hspace{0.35em}}re}, \text{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re}, \text{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}isPrimitive}\rbrace$ :
 
 $$
-\bigl|\operatorname{Cone} _ {\mathcal{G}}(T)\bigr| = 1\,478\,243 \qquad \bigl(\text{with type+body closure size }1\,478\,222\bigr); \tag{5.8}
+\bigl|\operatorname{Cone} _ {\mathcal{G}}(T)\bigr| = 1,478,243 \qquad \bigl(\text{with type+body closure size }1,478,222\bigr); \tag{5.8}
 $$
 
-- Individual dependency cone sizes: $\mathtt{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re}$ ( $1\,478\,224$ ), $\mathtt{riemannZeta\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re}$ ( $1\,478\,221$ ), $\mathtt{riemannHypothesis}$ ( $1\,478\,219$ ), $\mathtt{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}isPrimitive}$ ( $1\,478\,214$ ), and $\mathtt{LFunction\underline{\hspace{0.35em}}ne\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}half\underline{\hspace{0.35em}}lt\underline{\hspace{0.35em}}re}$ ( $1\,478\,211$ );
+- Individual dependency cone sizes: $\text{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re}$ ( $1,478,224$ ), $\text{riemannZeta\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re}$ ( $1,478,221$ ), $\text{riemannHypothesis}$ ( $1,478,219$ ), $\text{LFunction\underline{\hspace{0.35em}}eq\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}re\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}isPrimitive}$ ( $1,478,214$ ), and $\text{LFunction\underline{\hspace{0.35em}}ne\underline{\hspace{0.35em}}zero\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}half\underline{\hspace{0.35em}}lt\underline{\hspace{0.35em}}re}$ ( $1,478,211$ );
 - **Declarations lying completely outside the joint dependency cone of the five main theorems**:
 
 $$
-\bigl|V \setminus \operatorname{Cone} _ {\mathcal{G}}(T)\bigr| = 2\,701\,132 - 1\,478\,243 = 1\,222\,889 \qquad \bigl(45.2732\%\text{ of all declarations in the environment}\bigr). \tag{5.9}
+\bigl|V \setminus \operatorname{Cone} _ {\mathcal{G}}(T)\bigr| = 2,701,132 - 1,478,243 = 1,222,889, \qquad \frac{1,222,889}{2,701,132} \approx 0.452732. \tag{5.9}
 $$
 
 #### 2. The Exact Eight-Vertex Minimum Internal Directed Cut from the Multiplicative / Euler-Product Source Set $S$ to the Five Target Theorems $T$ 
-Fix the multiplicative homomorphism and Euler-product source set (noting that in $\operatorname{Mathlib}$ , $\operatorname{MulChar}$ extends $\operatorname{MonoidHom}$ , so its multiplicative projection is stored in the environment under the inherited declaration name $\mathtt{MonoidHom.map\underline{\hspace{0.35em}}mul'}$ ):
+Fix the multiplicative homomorphism and Euler-product source set (noting that in $\operatorname{Mathlib}$ , $\operatorname{MulChar}$ extends $\operatorname{MonoidHom}$ , so its multiplicative projection is stored in the environment under the inherited declaration name $\text{MonoidHom.map\underline{\hspace{0.35em}}mul'}$ ):
 
 $$
-S = \Bigl\{\mathtt{MonoidHom.map\underline{\hspace{0.35em}}mul'},\,\mathtt{dirichletSummandHom},\,\mathtt{DirichletCharacter.LSeries\underline{\hspace{0.35em}}eulerProduct},\,\mathtt{DirichletCharacter.LSeries\underline{\hspace{0.35em}}eulerProduct\underline{\hspace{0.35em}}exp\underline{\hspace{0.35em}}log},\,\mathtt{riemannZeta\underline{\hspace{0.35em}}eulerProduct}\Bigr\}. \tag{5.10}
+S = \Bigl\lbrace \text{MonoidHom.map\underline{\hspace{0.35em}}mul'}, \text{dirichletSummandHom}, \text{DirichletCharacter.LSeries\underline{\hspace{0.35em}}eulerProduct}, \text{DirichletCharacter.LSeries\underline{\hspace{0.35em}}eulerProduct\underline{\hspace{0.35em}}exp\underline{\hspace{0.35em}}log}, \text{riemannZeta\underline{\hspace{0.35em}}eulerProduct}\Bigr\rbrace . \tag{5.10}
 $$
 
 The active subgraph consisting of all vertices simultaneously reachable from $S$ and reaching $T$ contains
 
 $$
-\bigl|V _ {\mathrm{active}}\bigr| = \bigl|\operatorname{Reach} _ {\mathcal{G}}(S) \cap \operatorname{Cone} _ {\mathcal{G}}(T)\bigr| = 1\,072\,980 \text{ vertices}. \tag{5.11}
+\bigl|V _ {\mathrm{active}}\bigr| = \bigl|\operatorname{Reach} _ {\mathcal{G}}(S) \cap \operatorname{Cone} _ {\mathcal{G}}(T)\bigr| = 1,072,980 \text{ vertices}. \tag{5.11}
 $$
 
 Splitting every internal vertex $v \in V _ {\mathrm{active}} \setminus (S \cup T)$ into an in-node $v^{\mathrm{in}}$ and an out-node $v^{\mathrm{out}}$ with unit vertex capacity $c(v^{\mathrm{in}} \to v^{\mathrm{out}}) = 1$ and infinite edge capacity, we compute the minimum internal directed vertex cut:
 
 $$
-\lambda(S \to T) := \min\bigl\{|C| : C \subseteq V _ {\mathrm{active}} \setminus (S \cup T),\ S \not\leadsto _ {\mathcal{G} - C} T\bigr\}. \tag{5.12}
+\lambda(S \to T) := \min\bigl\lbrace |C| : C \subseteq V _ {\mathrm{active}} \setminus (S \cup T),\ S \not\leadsto _ {\mathcal{G} - C} T\bigr\rbrace . \tag{5.12}
 $$
 
-The live network-flow computation and independent flow-certificate verification reveal a striking topological bottleneck: across $1\,072\,980$ active declarations and $170.7$ million edges, the minimum internal directed vertex cut separating the multiplicative / Euler-product source set $S$ from the five main theorems $T$ has capacity strictly equal to $\lambda(S \to T) = 8$ (maximum integer flow $|f _ {\max}| = 8 = |C _ {\min}|$ , independently certified as $\mathtt{VERIFIED}$ ). Those $8$ bottleneck declarations are:
-1. $\mathtt{DirichletCharacter.FactorsThrough}$ 
-2. $\mathtt{Formalism.VW.critLine}$ 
-3. $\mathtt{Formalism.VW.rh\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}every}$ 
-4. $\mathtt{HurwitzZeta.hurwitzZetaEven}$ 
-5. $\mathtt{UpperTheory.FinalTheorems.everyCharacter}$ 
-6. $\mathtt{ZMod.LFunction}$ 
-7. $\mathtt{claimAll}$ 
-8. $\mathtt{starRingEnd.\underline{\hspace{0.35em}}proof\underline{\hspace{0.35em}}2}$ 
+The live network-flow computation and independent flow-certificate verification reveal a striking topological bottleneck: across $1,072,980$ active declarations and $170.7$ million edges, the minimum internal directed vertex cut separating the multiplicative / Euler-product source set $S$ from the five main theorems $T$ has capacity strictly equal to $\lambda(S \to T) = 8$ (maximum integer flow $|f _ {\max}| = 8 = |C _ {\min}|$ , independently certified as $\text{VERIFIED}$ ). Those $8$ bottleneck declarations are:
+1. $\text{DirichletCharacter.FactorsThrough}$ 
+2. $\text{Formalism.VW.critLine}$ 
+3. $\text{Formalism.VW.rh\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}every}$ 
+4. $\text{HurwitzZeta.hurwitzZetaEven}$ 
+5. $\text{UpperTheory.FinalTheorems.everyCharacter}$ 
+6. $\text{ZMod.LFunction}$ 
+7. $\text{claimAll}$ 
+8. $\text{starRingEnd.\underline{\hspace{0.35em}}proof\underline{\hspace{0.35em}}2}$ 
 
-Notice in particular vertices 4 ( $\mathtt{HurwitzZeta.hurwitzZetaEven}$ ) and 6 ( $\mathtt{ZMod.LFunction}$ ) alongside the top-level aggregation bridges $\mathtt{UpperTheory.FinalTheorems.everyCharacter}$ and $\mathtt{claimAll}$ : out of over one million active nodes, every single directed path connecting the multiplicative source set $S$ to the five main theorems funnels through this $8$ -vertex constriction point centered on $\mathtt{ZMod.LFunction}$ and $\mathtt{HurwitzZeta.hurwitzZetaEven}$ .
+Notice in particular vertices 4 ( $\text{HurwitzZeta.hurwitzZetaEven}$ ) and 6 ( $\text{ZMod.LFunction}$ ) alongside the top-level aggregation bridges $\text{UpperTheory.FinalTheorems.everyCharacter}$ and $\text{claimAll}$ : out of over one million active nodes, every single directed path connecting the multiplicative source set $S$ to the five main theorems funnels through this $8$ -vertex constriction point centered on $\text{ZMod.LFunction}$ and $\text{HurwitzZeta.hurwitzZetaEven}$ .
 
 #### 3. Twenty-Step Logarithmic Bisection Trajectory (Strictly Within the $\le 25$ -Step Logarithmic Bound)
-Ordering the $1\,072\,972$ non-endpoint active vertices lexicographically and testing the monotone disconnection predicate $P _ {\mathrm{disc}}(k)$ (whether removing the first $k$ internal active vertices disconnects $S$ from $T$ ), binary search converges in exactly $20 = \lceil \log _ 2(1\,072\,972) \rceil \le 25$ steps to the unique disconnection threshold $k^{\ast} = 955\,506$ ( $955\,505 \mapsto \mathrm{False}$ , $955\,506 \mapsto \mathrm{True}$ ):
+Ordering the $1,072,972$ non-endpoint active vertices lexicographically and testing the monotone disconnection predicate $P _ {\mathrm{disc}}(k)$ (whether removing the first $k$ internal active vertices disconnects $S$ from $T$ ), binary search converges in exactly $20 = \lceil \log _ 2(1,072,972) \rceil \le 25$ steps to the unique disconnection threshold $k^{\ast} = 955,506$ ( $955,505 \mapsto \mathrm{False}$ , $955,506 \mapsto \mathrm{True}$ ):
 
 $$
-(0,\,1\,072\,972) \to 536\,486(\mathrm{F}) \to 804\,729(\mathrm{F}) \to 938\,850(\mathrm{F}) \to 1\,005\,911(\mathrm{T}) \to 972\,380(\mathrm{T}) \to 955\,615(\mathrm{T}) \to 947\,232(\mathrm{F}) \to 951\,423(\mathrm{F}) \to 953\,519(\mathrm{F}) \to 954\,567(\mathrm{F}) \to 955\,091(\mathrm{F}) \to 955\,353(\mathrm{F}) \to 955\,484(\mathrm{F}) \to 955\,549(\mathrm{T}) \to 955\,516(\mathrm{T}) \to 955\,500(\mathrm{F}) \to 955\,508(\mathrm{T}) \to 955\,504(\mathrm{F}) \to 955\,506(\mathrm{T}) \to 955\,505(\mathrm{F}). \tag{5.13}
+(0, 1,072,972) \to 536,486(\mathrm{F}) \to 804,729(\mathrm{F}) \to 938,850(\mathrm{F}) \to 1,005,911(\mathrm{T}) \to 972,380(\mathrm{T}) \to 955,615(\mathrm{T}) \to 947,232(\mathrm{F}) \to 951,423(\mathrm{F}) \to 953,519(\mathrm{F}) \to 954,567(\mathrm{F}) \to 955,091(\mathrm{F}) \to 955,353(\mathrm{F}) \to 955,484(\mathrm{F}) \to 955,549(\mathrm{T}) \to 955,516(\mathrm{T}) \to 955,500(\mathrm{F}) \to 955,508(\mathrm{T}) \to 955,504(\mathrm{F}) \to 955,506(\mathrm{T}) \to 955,505(\mathrm{F}). \tag{5.13}
 $$
 
-### 5.5　In-Cone Localization of Frontend-Bypassing Metaprogramming Tactics ( $\mathtt{kexactB}$ , $\mathtt{kcopy}$ , $\mathtt{addDecl}$ ) and Reflexive Mutual Inductives
+### 5.5　In-Cone Localization of Frontend-Bypassing Metaprogramming Tactics ( $\text{kexactB}$ , $\text{kcopy}$ , $\text{addDecl}$ ) and Reflexive Mutual Inductives
 
-Cross-referencing our full-repository syntax audit with the $1\,478\,243$ -node dependency cone $\operatorname{Cone} _ {\mathcal{G}}(T)$ on $\mathtt{lc23}$ established two further structural findings:
+Cross-referencing our full-repository syntax audit with the $1,478,243$ -node dependency cone $\operatorname{Cone} _ {\mathcal{G}}(T)$ on $\text{lc23}$ established two further structural findings:
 
-#### 1. Sixty-seven files involve the custom metaprogramming tactic $\mathtt{kexactB}$ that bypasses frontend expected-type checking, and $62$ of the $66$ caller modules ( $1\,816$ declarations) reside directly inside the main theorems' dependency cone
-In $\mathtt{src/Formalism/LocalToGlobal/IndefiniteReal/HeckeNonvanishing/Imports.lean}$ (SHA-256 $\mathtt{8be7d65dc54c7786712817d5709559796783044f7c147729368d2105c0283364}$ , lines $1$ – $8$ ), the repository defines:
-
-$$
-\mathtt{elab\ "kexactB\ "\ t:term\ :\ tactic\ \Rightarrow\ do\ let\ g\ \leftarrow\ getMainGoal;\ let\ e\ \leftarrow\ Term.elabTermAndSynthesize\ t\ none;\ g.assign\ e}. \tag{5.14}
-$$
-
-Unlike standard $\mathtt{exact\ t}$ , which passes $\mathtt{some\ targetType}$ to the frontend elaborator and unifies the synthesized term's type with the goal type before assignment, $\mathtt{kexactB}$ passes expected type $\mathtt{none}$ and immediately calls low-level metavariable assignment $\mathtt{g.assign\ e}$ without checking whether the term's type matches the goal. Furthermore, modules in $\mathtt{IwasawaDecomposition}$ and $\mathtt{ThirdPlaceSeries}$ define single-token local macros
+#### 1. Dependency-Cone Localization of the Custom Metaprogramming Tactic kexactB (62 In-Cone Modules, 1,816 Declarations)
+In $\text{src/Formalism/LocalToGlobal/IndefiniteReal/HeckeNonvanishing/Imports.lean}$ (SHA-256 $\text{8be7d65dc54c7786712817d5709559796783044f7c147729368d2105c0283364}$ , lines $1$ – $8$ ), the repository defines:
 
 $$
-\mathtt{local\ macro:max\ "kc\%\ "\ e:term:max\ :\ term\ \Rightarrow\ \operatorname{quote}((by\ kexactB\ e))} \quad \text{and} \quad \mathtt{kq\%}, \tag{5.15}
+\text{elab\ "kexactB\ "\ t:term\ :\ tactic\ \Rightarrow\ do\ let\ g\ \leftarrow\ getMainGoal;\ let\ e\ \leftarrow\ Term.elabTermAndSynthesize\ t\ none;\ g.assign\ e}. \tag{5.14}
 $$
 
-chaining dozens of unchecked $\mathtt{g.assign}$ calls inside single proof terms.
-Across the repository, $67$ files involve $\mathtt{kexactB}$ ( $1$ definition file plus $66$ caller files, including $17$ files that invoke it exclusively through $\mathtt{kc\%} / \mathtt{kq\%}$ ). Intersecting those $66$ caller modules with the dependency cone $\operatorname{Cone} _ {\mathcal{G}}(T)$ proves that $62$ of the $66$ caller modules ( $93.94\%$ ), contributing $1\,816$ declarations, lie directly inside the structural dependency cone of the five main theorems (only four duplicate modules under $\mathtt{IwasawaDecomposition}$ lie outside the cone). In addition, $\mathtt{OwnStruct.lean}$ defines $\mathtt{kcopy}$ (rebuilding structures field-by-field and calling $\mathtt{g.assign}$ directly) and $\mathtt{CutCptCopy.lean}$ defines $\mathtt{copyAll}$ (cloning declarations via low-level $\mathtt{addDecl}$ ). While our live negative control $\mathtt{KexactNegativeControl}$ confirmed that an overt $\mathrm{True} \to \mathrm{False}$ assignment via $\mathtt{kexactB}$ is caught at the final step by $\mathtt{(kernel)\ declaration\ type\ mismatch}$ , bypassing the frontend elaborator across $1\,816$ in-cone declarations places 100% of the type-safety burden on the single $\operatorname{Lean}\ \mathtt{v4.33.1}$ kernel and runtime.
-
-#### 2. The reflexive mutual inductive block that caused independent checkers $\text{con-leche}$ and $\text{con-ron}$ to abort with exit code $2$ and be removed from $\mathtt{comparator.json}$ also lies inside the main theorems' dependency cone
-In $\mathtt{src/Development/ResolutionOfSingularities/EmbeddedResolution/IdealPrincipalization/PrincipalizationCertificate.lean}$ (SHA-256 $\mathtt{8a3b482722a1176158c383157255178968153463621719507036045423965239}$ , lines $12$ – $90$ ), the mutual inductive block $\mathtt{PrincipalizationCertificate}$ and $\mathtt{OrderCertificate}$ contains in its $\mathtt{localize}$ constructor (lines $36$ – $38$ ) a function-typed reflexive recursive argument:
+Unlike standard $\text{exact\ t}$ , which passes $\text{some\ targetType}$ to the frontend elaborator and unifies the synthesized term's type with the goal type before assignment, $\text{kexactB}$ passes expected type $\text{none}$ and immediately calls low-level metavariable assignment $\text{g.assign\ e}$ without checking whether the term's type matches the goal. Furthermore, modules in $\text{IwasawaDecomposition}$ and $\text{ThirdPlaceSeries}$ define single-token local macros
 
 $$
-\mathtt{hcert} : \forall (z : \operatorname{Spec}(R))\ (hz : z \notin V(I)),\ \operatorname{PrincipalizationCertificate}\ \dots \tag{5.16}
+\operatorname{macro}(\text{kc}) : e \mapsto \operatorname{quote}\bigl((\text{by } \operatorname{kexactB}\ e)\bigr), \qquad \operatorname{macro}(\text{kq}) : e \mapsto \operatorname{quote}\bigl((\text{by } \operatorname{kexactQ}\ e)\bigr), \tag{5.15}
 $$
 
-Our dependency cone trace confirms that both $\mathtt{PrincipalizationCertificate}$ ( $11$ in-cone declarations) and $\mathtt{OrderCertificate}$ ( $12$ in-cone declarations) reside inside the $\mathtt{type\underline{\hspace{0.35em}}deps} + \mathtt{body\underline{\hspace{0.35em}}deps}$ and structural dependency cone $\operatorname{Cone} _ {\mathcal{G}}(T)$ of the five main theorems.
-Because these declarations lie inside the exported cone, the standalone checkers $\text{con-leche}$ and $\text{con-ron}$ bundled with $\operatorname{Lean}\ \mathtt{v4.36.0}$ aborted on the export with exit code $2$ ( $\mathtt{reflexive\ member}$ ), prompting the repository's $\mathtt{comparator.json}$ to remove $\text{con-leche}$ , $\text{con-ron}$ , and $\text{lean4lean}$ . For complete scientific balance, we record both sides of the external record: on the one hand, subsequent external logs posted on the MIT verification page report that updated versions of $\text{con-leche}$ ( $\mathtt{cd2eceab}$ ) and $\text{con-ron}$ ( $\mathtt{3f22699b}$ ) extended to support reflexive mutual inductives accepted the $1\,468\,418$ -declaration export; on the other hand, the repository's pinned toolchain $\operatorname{Lean}\ \mathtt{v4.33.1}$ (released 2026-08-21) predates two critical runtime reference-counting fixes in $\operatorname{Lean}\ \mathtt{v4.34.1}$ —PR $\#15241$ (fixing a use-after-free vulnerability during cascading deallocation of refcount-frozen objects that the official release notes state could be exploited on machines with $\ge 18\,\mathrm{GB}$ RAM to produce an axiom-free proof of $\mathrm{False}$ ) and PR $\#15289$ (fixing $\mathtt{INT\underline{\hspace{0.35em}}MAX}$ refcount overflow on heavily shared subterms). Neither codebase size nor the use of $\mathtt{v4.33.1}$ by itself proves that a runtime exploit occurred, but it underscores why black-box typechecking can never substitute for auditing the mathematical quotient structure and premise guards of the formalization.
+chaining dozens of unchecked $\text{g.assign}$ calls inside single proof terms.
+Across the repository, $67$ files involve $\text{kexactB}$ ( $1$ definition file plus $66$ caller files, including $17$ files that invoke it exclusively through kc% / kq% ). Intersecting those $66$ caller modules with the dependency cone $\operatorname{Cone} _ {\mathcal{G}}(T)$ proves that $62$ of the $66$ caller modules ( 93.94% ), contributing $1,816$ declarations, lie directly inside the structural dependency cone of the five main theorems (only four duplicate modules under $\text{IwasawaDecomposition}$ lie outside the cone). In addition, $\text{OwnStruct.lean}$ defines $\text{kcopy}$ (rebuilding structures field-by-field and calling $\text{g.assign}$ directly) and $\text{CutCptCopy.lean}$ defines $\text{copyAll}$ (cloning declarations via low-level $\text{addDecl}$ ). While our live negative control $\text{KexactNegativeControl}$ confirmed that an overt $\mathrm{True} \to \mathrm{False}$ assignment via $\text{kexactB}$ is caught at the final step by $\text{(kernel)\ declaration\ type\ mismatch}$ , bypassing the frontend elaborator across $1,816$ in-cone declarations places 100% of the type-safety burden on the single $\operatorname{Lean}\ \text{v4.33.1}$ kernel and runtime.
+
+#### 2. Dependency-Cone Localization of the Reflexive Mutual Inductive Blocks (PrincipalizationCertificate and OrderCertificate)
+In $\text{src/Development/ResolutionOfSingularities/EmbeddedResolution/IdealPrincipalization/PrincipalizationCertificate.lean}$ (SHA-256 $\text{8a3b482722a1176158c383157255178968153463621719507036045423965239}$ , lines $12$ – $90$ ), the mutual inductive block $\text{PrincipalizationCertificate}$ and $\text{OrderCertificate}$ contains in its $\text{localize}$ constructor (lines $36$ – $38$ ) a function-typed reflexive recursive argument:
+
+$$
+\text{hcert} : \forall (z : \operatorname{Spec}(R))\ (hz : z \notin V(I)),\ \operatorname{PrincipalizationCertificate}\ \dots \tag{5.16}
+$$
+
+Our dependency cone trace confirms that both $\text{PrincipalizationCertificate}$ ( $11$ in-cone declarations) and $\text{OrderCertificate}$ ( $12$ in-cone declarations) reside inside the $\text{type\underline{\hspace{0.35em}}deps} + \text{body\underline{\hspace{0.35em}}deps}$ and structural dependency cone $\operatorname{Cone} _ {\mathcal{G}}(T)$ of the five main theorems.
+Because these declarations lie inside the exported cone, the standalone checkers $\text{con-leche}$ and $\text{con-ron}$ bundled with $\operatorname{Lean}\ \text{v4.36.0}$ aborted on the export with exit code $2$ ( $\text{reflexive\ member}$ ), prompting the repository's $\text{comparator.json}$ to remove $\text{con-leche}$ , $\text{con-ron}$ , and $\text{lean4lean}$ . For complete scientific balance, we record both sides of the external record: on the one hand, subsequent external logs posted on the MIT verification page report that updated versions of $\text{con-leche}$ ( $\text{cd2eceab}$ ) and $\text{con-ron}$ ( $\text{3f22699b}$ ) extended to support reflexive mutual inductives accepted the $1,468,418$ -declaration export; on the other hand, the repository's pinned toolchain $\operatorname{Lean}\ \text{v4.33.1}$ (released 2026-08-21) predates two critical runtime reference-counting fixes in $\operatorname{Lean}\ \text{v4.34.1}$ —PR #15241 (fixing a use-after-free vulnerability during cascading deallocation of refcount-frozen objects that the official release notes state could be exploited on machines with $\ge 18 \mathrm{GB}$ RAM to produce an axiom-free proof of $\mathrm{False}$ ) and PR #15289 (fixing $\text{INT\underline{\hspace{0.35em}}MAX}$ refcount overflow on heavily shared subterms). Neither codebase size nor the use of $\text{v4.33.1}$ by itself proves that a runtime exploit occurred, but it underscores why black-box typechecking can never substitute for auditing the mathematical quotient structure and premise guards of the formalization.
 
 ### 5.6　Constructive Kernel-Preserving Formalization Specification and Closed-Form Protocol for the Six Zero-Full-Read Verification Schemes
 
 To enable researchers worldwide to reproduce our diagnostics in seconds and to establish a distortion-free benchmark for future formalizations in analytic number theory, we summarize the **constructive remainder-coupled state specification** and the **six-scheme audit protocol** in closed form:
 
-#### 1. Constructive Kernel-Preserving Typed State Pair $(\mathcal{Z} _ {P,X},\,\delta _ {P,X})$ 
+#### 1. Constructive Kernel-Preserving Typed State Pair $(\mathcal{Z} _ {P,X}, \delta _ {P,X})$ 
 Any formal bridge connecting right-half-plane arithmetic definitions to critical-strip zero exclusion must explicitly maintain the six-component typed state
 
 $$
-\mathcal{S} _ {P,X}(s;\,\chi) := \Bigl(N^{\ast},\ \chi^{\ast},\ (P, X),\ \mathcal{Z} _ {P,X}(s;\,\chi),\ \delta _ {P,X}(s;\,\chi),\ \mathcal{C} _ {\mathrm{hol}}(B)\Bigr), \tag{5.17}
+\mathcal{S} _ {P,X}(s; \chi) := \Bigl(N^{\ast},\ \chi^{\ast},\ (P, X),\ \mathcal{Z} _ {P,X}(s; \chi),\ \delta _ {P,X}(s; \chi),\ \mathcal{C} _ {\mathrm{hol}}(B)\Bigr), \tag{5.17}
 $$
 
-where $N^{\ast} \mid N$ is the primitive conductor and $\chi^{\ast}$ the inducing primitive character (explicitly factoring out bad-prime imaginary-axis Euler zeros), $\mathcal{Z} _ {P,X}(s;\,\chi)$ is the finite-window principal part, $\delta _ {P,X}(s;\,\chi)$ is the unresolved remainder fiber obeying the conservation law $(1.2)$ – $(1.3)$ , and $\mathcal{C} _ {\mathrm{hol}}(B)$ is the rational rectangular contour certificate with explicit rational Rouché margin $\Delta _ {\mathrm{Rouche}} > 0$ .
+where $N^{\ast} \mid N$ is the primitive conductor and $\chi^{\ast}$ the inducing primitive character (explicitly factoring out bad-prime imaginary-axis Euler zeros), $\mathcal{Z} _ {P,X}(s; \chi)$ is the finite-window principal part, $\delta _ {P,X}(s; \chi)$ is the unresolved remainder fiber obeying the conservation law $(1.2)$ – $(1.3)$ , and $\mathcal{C} _ {\mathrm{hol}}(B)$ is the rational rectangular contour certificate with explicit rational Rouché margin $\Delta _ {\mathrm{Rouche}} > 0$ .
 
 #### 2. Closed-Form Decision Protocol for the Six Zero-Full-Read Schemes
-- **Scheme 1 (Proof-Tail Insertion & Boundary-Guard Stripping)**: In a standalone probe importing the main theorems, test (1A) rejection of the mirror conclusion $\operatorname{Re}(s) = 3/4$ , (1B) separation between $\operatorname{LSeries}(1, 3/4) = 0$ and $\operatorname{riemannZeta}(3/4) \neq 0$ , and (1C) refutation in $< 3$ seconds of the guard-stripped critical-line claim via the modulo- $2$ principal character zero at $s _ 0 = \frac{2\pi i}{\log 2}$ .
-- **Scheme 2 (Carrier Definition Printing & Convergence-Guard Audit)**: Expand $\operatorname{DirichletCharacter.LFunction}$ and $\operatorname{ZMod.LFunction}$ via $\mathtt{\#print}$ and verify that every bridge from $\operatorname{LSeries}$ or Euler products carries the explicit guard $\operatorname{Re}(s) > 1$ .
-- **Scheme 3 (Full Recursive Cone Axiom & Metaprogramming Audit)**: Traverse $\mathtt{type\underline{\hspace{0.35em}}deps} \cup \mathtt{body\underline{\hspace{0.35em}}deps} \cup \mathtt{structural\underline{\hspace{0.35em}}deps}$ to audit the axiom set of $\operatorname{Cone} _ {\mathcal{G}}(T)$ and detect all in-cone occurrences of frontend-bypassing tactics ( $\mathtt{kexactB}$ , $\mathtt{kcopy}$ , $\mathtt{addDecl}$ ) and reflexive mutual inductives.
-- **Scheme 4 (Source-to-Sink Directed Minimum Vertex Cut & 20-Step Logarithmic Bisection)**: Compute the unit-capacity node-splitting maximum flow and minimum internal directed vertex cut $\lambda(S \to T)$ between the multiplicative source set $S$ and the target theorems $T$ , and execute $\lceil \log _ 2 |V _ {\mathrm{active}}| \rceil \le 25$ steps of lexicographic bisection to isolate the bottleneck declarations.
-- **Scheme 5 (Same-Fiber Trojan Countermodel Injection)**: Inject the symmetric polynomial $P _ {\mathrm{Trojan}}(s) = (s-3/4)(s-1/4)$ , the even-channel reciprocal deformation $F _ {\mathrm{even}}(s) = P _ r(2^{1/2-s})\zeta(s)$ ( $F _ {\mathrm{even}}(3/4) = 0$ ), and the odd-channel Davenport–Heilbronn combination $\mathcal{D}(s)$ ( $a _ 6 - a _ 2 a _ 3 = 1 + \kappa^2 > 0$ ) into any candidate critical-strip zero-exclusion lemma to test whether it derives $(3/4 : \mathbb{R}) = 1/2$ .
+- **Scheme 1** (Proof-Tail Insertion & Boundary-Guard Stripping): In a standalone probe importing the main theorems, test (1A) rejection of the mirror conclusion $\operatorname{Re}(s) = 3/4$ , (1B) separation between $\operatorname{LSeries}(1, 3/4) = 0$ and $\operatorname{riemannZeta}(3/4) \neq 0$ , and (1C) refutation in $< 3$ seconds of the guard-stripped critical-line claim via the modulo- $2$ principal character zero at $s _ 0 = \frac{2\pi i}{\log 2}$ .
+- **Scheme 2** (Carrier Definition Printing & Convergence-Guard Audit): Expand $\operatorname{DirichletCharacter.LFunction}$ and $\operatorname{ZMod.LFunction}$ via #print and verify that every bridge from $\operatorname{LSeries}$ or Euler products carries the explicit guard $\operatorname{Re}(s) > 1$ .
+- **Scheme 3** (Full Recursive Cone Axiom & Metaprogramming Audit): Traverse $\text{type\underline{\hspace{0.35em}}deps} \cup \text{body\underline{\hspace{0.35em}}deps} \cup \text{structural\underline{\hspace{0.35em}}deps}$ to audit the axiom set of $\operatorname{Cone} _ {\mathcal{G}}(T)$ and detect all in-cone occurrences of frontend-bypassing tactics ( $\text{kexactB}$ , $\text{kcopy}$ , $\text{addDecl}$ ) and reflexive mutual inductives.
+- **Scheme 4** (Source-to-Sink Directed Minimum Vertex Cut & 20-Step Logarithmic Bisection): Compute the unit-capacity node-splitting maximum flow and minimum internal directed vertex cut $\lambda(S \to T)$ between the multiplicative source set $S$ and the target theorems $T$ , and execute $\lceil \log _ 2 |V _ {\mathrm{active}}| \rceil \le 25$ steps of lexicographic bisection to isolate the bottleneck declarations.
+- **Scheme 5** (Same-Fiber Trojan Countermodel Injection): Inject the symmetric polynomial $P _ {\mathrm{Trojan}}(s) = (s-3/4)(s-1/4)$ , the even-channel reciprocal deformation $F _ {\mathrm{even}}(s) = P _ r(2^{1/2-s})\zeta(s)$ ( $F _ {\mathrm{even}}(3/4) = 0$ ), and the odd-channel Davenport–Heilbronn combination $\mathcal{D}(s)$ ( $a _ 6 - a _ 2 a _ 3 = 1 + \kappa^2 > 0$ ) into any candidate critical-strip zero-exclusion lemma to test whether it derives $(3/4 : \mathbb{R}) = 1/2$ .
 - **Scheme 6** (Finite Moduli, Gauss-Sum Degeneration & Rational Gram $LDL^{\mathsf{T}}$ Collision): Test local arithmetic lemmas against modulus-zero exclusion $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ , modulo- $4$ principal Gauss sum vanishing $\tau(\chi _ {0,4}) = 0 \neq 2$ , and exact $3\times 3$ rational Gram $LDL^{\mathsf{T}}$ positivity with zero-moment vector $c = (34, -57, 23)^{\mathsf{T}}$ ( $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 > 0$ ).
 
 ---
 
 ## Chapter 6　Complete Ledger of 182 Closed-Form Algebraic, Observation-Recovery, Positive-Definite Matrix Decomposition, and Single-Premise Negative-Control Propositions (Propositions A.1–A.120 and Propositions B.1–B.62)
 
-This chapter records in closed form all one hundred twenty positive algebraic propositions (Propositions A.1 through A.120) and all sixty-two single-premise stripping negative-control counterexample propositions (Propositions B.1 through B.62) underpinning our principal theorems, distortion diagnostics, and live $\mathtt{lc23}$ verification schemes. Every proposition consists purely of exact rational matrix algebra, polynomial identities, and explicit finite-dimensional linear operators independently verifiable by hand or in any computer algebra system.
+This chapter records in closed form all one hundred twenty positive algebraic propositions (Propositions A.1 through A.120) and all sixty-two single-premise stripping negative-control counterexample propositions (Propositions B.1 through B.62) underpinning our principal theorems, distortion diagnostics, and live $\text{lc23}$ verification schemes. Every proposition consists purely of exact rational matrix algebra, polynomial identities, and explicit finite-dimensional linear operators independently verifiable by hand or in any computer algebra system.
 
 ### 6.1　Positive Closed-Form Proposition Ledger (Propositions A.1–A.120)
 
@@ -831,7 +831,7 @@ This chapter records in closed form all one hundred twenty positive algebraic pr
 **Proposition A.1**. In the four-dimensional truncated partial-sum and remainder state space, define the observation matrix, the identity retention operator, the nullspace basis, and the conservation readout vector by
 
 $$
-E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}, \qquad A _ {\mathrm{keep}} = I _ 4, \qquad K = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ -1 & 0 \\ 0 & -1 \end{pmatrix}, \qquad c _ {\mathrm{inv}} = \begin{pmatrix} 1 \\ 1 \\ 1 \\ 1 \end{pmatrix}.
+E = \begin{pmatrix} 1 & 0 & 1 & 0 \cr 0 & 1 & 0 & 1 \end{pmatrix}, \qquad A _ {\mathrm{keep}} = I _ 4, \qquad K = \begin{pmatrix} 1 & 0 \cr 0 & 1 \cr -1 & 0 \cr 0 & -1 \end{pmatrix}, \qquad c _ {\mathrm{inv}} = \begin{pmatrix} 1 \cr 1 \cr 1 \cr 1 \end{pmatrix}.
 $$
 
 Then quotient-kernel closure $E A _ {\mathrm{keep}} K = 0$ , total-sum conservation $A _ {\mathrm{keep}}^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ , and zero-interference remainder hedging $\delta = (-1, 0, 1, 0)^{\mathsf{T}} \in \ker E$ ( $E\delta = 0$ ) hold simultaneously.
@@ -839,7 +839,7 @@ Then quotient-kernel closure $E A _ {\mathrm{keep}} K = 0$ , total-sum conservat
 **Proposition A.2**. In the state space of Proposition A.1, define the single-step window transfer operator and the dual-channel hedging increments by
 
 $$
-A _ {\mathrm{transfer}} = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}, \qquad \delta _ 1 = \begin{pmatrix} -1 \\ 0 \\ 1 \\ 0 \end{pmatrix}, \qquad \delta _ 2 = \begin{pmatrix} 0 \\ -1 \\ 0 \\ 1 \end{pmatrix}.
+A _ {\mathrm{transfer}} = \begin{pmatrix} 0 & 0 & 0 & 0 \cr 0 & 1 & 0 & 0 \cr 1 & 0 & 1 & 0 \cr 0 & 0 & 0 & 1 \end{pmatrix}, \qquad \delta _ 1 = \begin{pmatrix} -1 \cr 0 \cr 1 \cr 0 \end{pmatrix}, \qquad \delta _ 2 = \begin{pmatrix} 0 \cr -1 \cr 0 \cr 1 \end{pmatrix}.
 $$
 
 Then $E A _ {\mathrm{transfer}} K = 0$ , $A _ {\mathrm{transfer}}^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ , and $E\delta _ 1 = E\delta _ 2 = 0$ hold identically.
@@ -847,7 +847,7 @@ Then $E A _ {\mathrm{transfer}} K = 0$ , $A _ {\mathrm{transfer}}^{\mathsf{T}} c
 **Proposition A.3**. In the five-dimensional state space equipped with a prunable auxiliary slot, set
 
 $$
-E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \end{pmatrix}, \qquad K = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{pmatrix}, \qquad A _ {\mathrm{prune}} = \operatorname{diag}(1, 1, 1, 1, 0), \qquad \delta = \begin{pmatrix} -1 \\ 1 \\ 1 \\ -1 \\ 0 \end{pmatrix}.
+E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \cr 0 & 1 & 0 & 1 & 0 \end{pmatrix}, \qquad K = \begin{pmatrix} 1 & 0 & 0 \cr 0 & 1 & 0 \cr -1 & 0 & 0 \cr 0 & -1 & 0 \cr 0 & 0 & 1 \end{pmatrix}, \qquad A _ {\mathrm{prune}} = \operatorname{diag}(1, 1, 1, 1, 0), \qquad \delta = \begin{pmatrix} -1 \cr 1 \cr 1 \cr -1 \cr 0 \end{pmatrix}.
 $$
 
 Because the fifth coordinate has zero residue on both $E$ and $c _ {\mathrm{inv}} = (1, 1, 1, 1, 0)^{\mathsf{T}}$ , one has $E A _ {\mathrm{prune}} K = 0$ , $A _ {\mathrm{prune}}^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ , and $E\delta = 0$ .
@@ -855,206 +855,206 @@ Because the fifth coordinate has zero residue on both $E$ and $c _ {\mathrm{inv}
 **Proposition A.4**. In the four-dimensional truncation space, define the first-channel absorption operator $A _ 1$ and second-channel absorption operator $A _ 2$ by
 
 $$
-A _ 1 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}, \qquad A _ 2 = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}.
+A _ 1 = \begin{pmatrix} 0 & 0 & 0 & 0 \cr 0 & 1 & 0 & 0 \cr 1 & 0 & 1 & 0 \cr 0 & 0 & 0 & 1 \end{pmatrix}, \qquad A _ 2 = \begin{pmatrix} 1 & 0 & 0 & 0 \cr 0 & 0 & 0 & 0 \cr 0 & 0 & 1 & 0 \cr 0 & 1 & 0 & 1 \end{pmatrix}.
 $$
 
-Then for all composite operator words in $\{A _ 1, A _ 2\}$ , $E A _ i K = 0$ and $A _ i^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ hold identically.
+Then for all composite operator words in $\lbrace A _ 1, A _ 2\rbrace$ , $E A _ i K = 0$ and $A _ i^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ hold identically.
 
-**Proposition A.5**. In the minimal two-dimensional principal-part and remainder space with $E = (1, 1)$ , $K = (1, -1)^{\mathsf{T}}$ , transfer operator $A = \begin{pmatrix} 0 & 0 \\ 1 & 1 \end{pmatrix}$ , invariant $c _ {\mathrm{inv}} = (1, 1)^{\mathsf{T}}$ , and hedged step $\delta = (-1, 1)^{\mathsf{T}}$ , one has $E A K = 0$ , $A^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ , and $E\delta = 0$ .
+**Proposition A.5**. In the minimal two-dimensional principal-part and remainder space with $E = (1, 1)$ , $K = (1, -1)^{\mathsf{T}}$ , transfer operator $A = \bigl[(0, 0); (1, 1)\bigr]$ , invariant $c _ {\mathrm{inv}} = (1, 1)^{\mathsf{T}}$ , and hedged step $\delta = (-1, 1)^{\mathsf{T}}$ , one has $E A K = 0$ , $A^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ , and $E\delta = 0$ .
 
-**Proposition A.6**. In the three-dimensional two-stage remainder cascade with $E = (1, 1, 1)$ , nullspace basis $K = \begin{pmatrix} 1 & 0 \\ -1 & 1 \\ 0 & -1 \end{pmatrix}$ , and cascade operators
+**Proposition A.6**. In the three-dimensional two-stage remainder cascade with $E = (1, 1, 1)$ , nullspace basis $K = \bigl[(1, 0); (-1, 1); (0, -1)\bigr]$ , and cascade operators
 
 $$
-A _ {1\to 2} = \begin{pmatrix} 0 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}, \qquad A _ {2\to 3} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 1 & 1 \end{pmatrix},
+A _ {1\to 2} = \begin{pmatrix} 0 & 0 & 0 \cr 1 & 1 & 0 \cr 0 & 0 & 1 \end{pmatrix}, \qquad A _ {2\to 3} = \begin{pmatrix} 1 & 0 & 0 \cr 0 & 0 & 0 \cr 0 & 1 & 1 \end{pmatrix},
 $$
 
 both $E A _ {1\to 2} K = 0$ and $E A _ {2\to 3} K = 0$ hold while preserving $c _ {\mathrm{inv}} = (1, 1, 1)^{\mathsf{T}}$ .
 
-**Proposition A.7**. In the three-dimensional space with a silent third coordinate, $E = (1, 1, 0)$ , $K = \begin{pmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{pmatrix}$ , transfer $A _ 1 = \begin{pmatrix} 0 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ , and pruning projection $A _ 2 = \operatorname{diag}(1, 1, 0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ and preserve $c _ {\mathrm{inv}} = (1, 1, 0)^{\mathsf{T}}$ and $\delta = (-1, 1, 0)^{\mathsf{T}} \in \ker E$ .
+**Proposition A.7**. In the three-dimensional space with a silent third coordinate, $E = (1, 1, 0)$ , $K = \bigl[(1, 0); (-1, 0); (0, 1)\bigr]$ , transfer $A _ 1 = \bigl[(0, 0, 0); (1, 1, 0); (0, 0, 1)\bigr]$ , and pruning projection $A _ 2 = \operatorname{diag}(1, 1, 0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ and preserve $c _ {\mathrm{inv}} = (1, 1, 0)^{\mathsf{T}}$ and $\delta = (-1, 1, 0)^{\mathsf{T}} \in \ker E$ .
 
-**Proposition A.8**. In the four-dimensional adjacent-pair partial-sum space with $E = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$ and $K = \begin{pmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \\ 0 & -1 \end{pmatrix}$ , the intra-pair merge operators $A _ 1 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$ and $A _ 2 = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$ satisfy $E A _ 1 K = E A _ 2 K = 0$ with joint hedged increment $\delta = (-1, 1, -1, 1)^{\mathsf{T}} \in \ker E$ .
+**Proposition A.8**. In the four-dimensional adjacent-pair partial-sum space with $E = \bigl[(1, 1, 0, 0); (0, 0, 1, 1)\bigr]$ and $K = \bigl[(1, 0); (-1, 0); (0, 1); (0, -1)\bigr]$ , the intra-pair merge operators $A _ 1 = \bigl[(0, 0, 0, 0); (1, 1, 0, 0); (0, 0, 1, 0); (0, 0, 0, 1)\bigr]$ and $A _ 2 = \bigl[(1, 0, 0, 0); (0, 1, 0, 0); (0, 0, 0, 0); (0, 0, 1, 1)\bigr]$ satisfy $E A _ 1 K = E A _ 2 K = 0$ with joint hedged increment $\delta = (-1, 1, -1, 1)^{\mathsf{T}} \in \ker E$ .
 
 **Proposition A.9**. In the adjacent-pair space of Proposition A.8, the fractional half-step transfer operators
 
 $$
-A _ 1 = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 & 0 \\[4pt] \frac{1}{2} & \frac{3}{2} & 0 & 0 \\[4pt] 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}, \qquad A _ 2 = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\[4pt] 0 & 0 & \frac{1}{2} & -\frac{1}{2} \\[4pt] 0 & 0 & \frac{1}{2} & \frac{3}{2} \end{pmatrix}
+A _ 1 = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 & 0 \cr \frac{1}{2} & \frac{3}{2} & 0 & 0 \cr 0 & 0 & 1 & 0 \cr 0 & 0 & 0 & 1 \end{pmatrix}, \qquad A _ 2 = \begin{pmatrix} 1 & 0 & 0 & 0 \cr 0 & 1 & 0 & 0 \cr 0 & 0 & \frac{1}{2} & -\frac{1}{2} \cr 0 & 0 & \frac{1}{2} & \frac{3}{2} \end{pmatrix}
 $$
 
 satisfy $E A _ 1 K = E A _ 2 K = 0$ while inducing a non-trivial nilpotent action $(A _ i - I)^2 = 0$ on $\ker E$ .
 
-**Proposition A.10**. In the five-dimensional three-readout space with full-rank observation matrix $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}$ and nullspace basis $K = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ -1 & 0 \\ 0 & -1 \\ 0 & 0 \end{pmatrix}$ , the fractional transfer operators $A _ 1, A _ 2$ on the first four coordinates preserve the locked fifth guard coordinate and satisfy $E A _ 1 K = E A _ 2 K = 0$ and $A _ i^{\mathsf{T}}(1,1,1,1,1)^{\mathsf{T}} = (1,1,1,1,1)^{\mathsf{T}}$ .
+**Proposition A.10**. In the five-dimensional three-readout space with full-rank observation matrix $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0); (0, 0, 0, 0, 1)\bigr]$ and nullspace basis $K = \bigl[(1, 0); (0, 1); (-1, 0); (0, -1); (0, 0)\bigr]$ , the fractional transfer operators $A _ 1, A _ 2$ on the first four coordinates preserve the locked fifth guard coordinate and satisfy $E A _ 1 K = E A _ 2 K = 0$ and $A _ i^{\mathsf{T}}(1,1,1,1,1)^{\mathsf{T}} = (1,1,1,1,1)^{\mathsf{T}}$ .
 
-**Proposition A.11**. In the four-dimensional dual-channel fractional transfer space under $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ , every antisymmetric cross-hedged increment $\delta = (-1, 1, 1, -1)^{\mathsf{T}}$ satisfies $E\delta = 0$ and $E A _ i K = 0$ .
+**Proposition A.11**. In the four-dimensional dual-channel fractional transfer space under $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ , every antisymmetric cross-hedged increment $\delta = (-1, 1, 1, -1)^{\mathsf{T}}$ satisfies $E\delta = 0$ and $E A _ i K = 0$ .
 
-**Proposition A.12**. In the five-dimensional space with a diagnostic scaffold on the fifth coordinate under $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \end{pmatrix}$ , the scaffold removal projection $A _ {\mathrm{drop}} = \operatorname{diag}(1, 1, 1, 1, 0)$ commutes with all four-dimensional production transfers and satisfies zero-drift removal $E(I - A _ {\mathrm{drop}}) = 0$ .
+**Proposition A.12**. In the five-dimensional space with a diagnostic scaffold on the fifth coordinate under $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0)\bigr]$ , the scaffold removal projection $A _ {\mathrm{drop}} = \operatorname{diag}(1, 1, 1, 1, 0)$ commutes with all four-dimensional production transfers and satisfies zero-drift removal $E(I - A _ {\mathrm{drop}}) = 0$ .
 
 #### 6.1.2　Family A02: Singular Pole Germs, Logarithmic-Derivative Residues, and Two-Point Puncture Recovery Matrices (Propositions A.13–A.24)
 
-**Proposition A.13**. In the three-dimensional Laurent germ space $(r, c _ 0, c _ 1)^{\mathsf{T}}$ , the singular-part readout $E = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix}$ confines the blind kernel to the higher-order regular term $K = (0, 0, 1)^{\mathsf{T}}$ , and regular-term truncation $A _ {\mathrm{reg}} = \operatorname{diag}(1, 1, 0)$ satisfies $E A _ {\mathrm{reg}} K = 0$ while conserving the residue vector $(1, 0, 0)^{\mathsf{T}}$ .
+**Proposition A.13**. In the three-dimensional Laurent germ space $(r, c _ 0, c _ 1)^{\mathsf{T}}$ , the singular-part readout $E = \bigl[(1, 0, 0); (0, 1, 0)\bigr]$ confines the blind kernel to the higher-order regular term $K = (0, 0, 1)^{\mathsf{T}}$ , and regular-term truncation $A _ {\mathrm{reg}} = \operatorname{diag}(1, 1, 0)$ satisfies $E A _ {\mathrm{reg}} K = 0$ while conserving the residue vector $(1, 0, 0)^{\mathsf{T}}$ .
 
-**Proposition A.14**. In the four-dimensional punctured residue-difference space with $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}$ and $K = \begin{pmatrix} 1 & 0 \\ 0 & 0 \\ -1 & 0 \\ 0 & 1 \end{pmatrix}$ , residue consolidation $A _ 1$ and background truncation $A _ 2 = \operatorname{diag}(1, 1, 1, 0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.14**. In the four-dimensional punctured residue-difference space with $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 0)\bigr]$ and $K = \bigl[(1, 0); (0, 0); (-1, 0); (0, 1)\bigr]$ , residue consolidation $A _ 1$ and background truncation $A _ 2 = \operatorname{diag}(1, 1, 1, 0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 **Proposition A.15**. For the singular germ $g _ {r,c _ 0}(s) = \frac{r}{s-1} + c _ 0$ sampled at symmetric punctured points $s _ \pm = 1 \pm 1$ ( $h = 1$ ) plus an independent third channel, the $3\times 3$ observation matrix and its exact rational left inverse satisfy
 
 $$
-M = \begin{pmatrix} 1 & 1 & 0 \\ -1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}, \qquad L = M^{-1} = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 \\[4pt] \frac{1}{2} & \frac{1}{2} & 0 \\[4pt] 0 & 0 & 1 \end{pmatrix}, \qquad L M = I _ 3.
+M = \begin{pmatrix} 1 & 1 & 0 \cr -1 & 1 & 0 \cr 0 & 0 & 1 \end{pmatrix}, \qquad L = M^{-1} = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 \cr \frac{1}{2} & \frac{1}{2} & 0 \cr 0 & 0 & 1 \end{pmatrix}, \qquad L M = I _ 3.
 $$
 
 **Proposition A.16**. At half-width puncture spacing $h = \frac{1}{2}$ ( $s _ \pm = 1 \pm \frac{1}{2}$ ), the observation matrix and exact rational left inverse satisfy
 
 $$
-M _ {1/2} = \begin{pmatrix} 2 & 1 & 0 \\ -2 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}, \qquad L _ {1/2} = M _ {1/2}^{-1} = \begin{pmatrix} \frac{1}{4} & -\frac{1}{4} & 0 \\[4pt] \frac{1}{2} & \frac{1}{2} & 0 \\[4pt] 0 & 0 & 1 \end{pmatrix}, \qquad L _ {1/2} M _ {1/2} = I _ 3.
+M _ {1/2} = \begin{pmatrix} 2 & 1 & 0 \cr -2 & 1 & 0 \cr 0 & 0 & 1 \end{pmatrix}, \qquad L _ {1/2} = M _ {1/2}^{-1} = \begin{pmatrix} \frac{1}{4} & -\frac{1}{4} & 0 \cr \frac{1}{2} & \frac{1}{2} & 0 \cr 0 & 0 & 1 \end{pmatrix}, \qquad L _ {1/2} M _ {1/2} = I _ 3.
 $$
 
 **Proposition A.17**. For the three-parameter Laurent germ $g(s) = \frac{r}{s-1} + c _ 0 + c _ 1(s-1)$ , the coupled puncture-and-slope observation matrix and its exact rational inverse satisfy
 
 $$
-M = \begin{pmatrix} 1 & 1 & 0 \\ -1 & 1 & 0 \\ 0 & 1 & 1 \end{pmatrix}, \qquad L = M^{-1} = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 \\[4pt] \frac{1}{2} & \frac{1}{2} & 0 \\[4pt] -\frac{1}{2} & -\frac{1}{2} & 1 \end{pmatrix}, \qquad L M = I _ 3.
+M = \begin{pmatrix} 1 & 1 & 0 \cr -1 & 1 & 0 \cr 0 & 1 & 1 \end{pmatrix}, \qquad L = M^{-1} = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 \cr \frac{1}{2} & \frac{1}{2} & 0 \cr -\frac{1}{2} & -\frac{1}{2} & 1 \end{pmatrix}, \qquad L M = I _ 3.
 $$
 
 **Proposition A.18**. At puncture spacing $h = \frac{1}{3}$ ( $s _ \pm = 1 \pm \frac{1}{3}$ ) coupled with a second-order channel, the observation matrix and its exact rational left inverse satisfy
 
 $$
-M _ {1/3} = \begin{pmatrix} 3 & 1 & 0 \\ -3 & 1 & 0 \\ 0 & 1 & 2 \end{pmatrix}, \qquad L _ {1/3} = M _ {1/3}^{-1} = \begin{pmatrix} \frac{1}{6} & -\frac{1}{6} & 0 \\[4pt] \frac{1}{2} & \frac{1}{2} & 0 \\[4pt] -\frac{1}{4} & -\frac{1}{4} & \frac{1}{2} \end{pmatrix}, \qquad L _ {1/3} M _ {1/3} = I _ 3.
+M _ {1/3} = \begin{pmatrix} 3 & 1 & 0 \cr -3 & 1 & 0 \cr 0 & 1 & 2 \end{pmatrix}, \qquad L _ {1/3} = M _ {1/3}^{-1} = \begin{pmatrix} \frac{1}{6} & -\frac{1}{6} & 0 \cr \frac{1}{2} & \frac{1}{2} & 0 \cr -\frac{1}{4} & -\frac{1}{4} & \frac{1}{2} \end{pmatrix}, \qquad L _ {1/3} M _ {1/3} = I _ 3.
 $$
 
 **Proposition A.19**. In the four-dimensional singular-and-regular block decomposition, the observation matrix and its exact rational left inverse satisfy
 
 $$
-M = \begin{pmatrix} 1 & 1 & 0 & 0 \\ -1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \end{pmatrix}, \qquad L = M^{-1} = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 & 0 \\[4pt] \frac{1}{2} & \frac{1}{2} & 0 & 0 \\[4pt] 0 & 0 & 1 & -1 \\ 0 & 0 & 0 & 1 \end{pmatrix}, \qquad L M = I _ 4.
+M = \begin{pmatrix} 1 & 1 & 0 & 0 \cr -1 & 1 & 0 & 0 \cr 0 & 0 & 1 & 1 \cr 0 & 0 & 0 & 1 \end{pmatrix}, \qquad L = M^{-1} = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 & 0 \cr \frac{1}{2} & \frac{1}{2} & 0 & 0 \cr 0 & 0 & 1 & -1 \cr 0 & 0 & 0 & 1 \end{pmatrix}, \qquad L M = I _ 4.
 $$
 
-**Proposition A.20**. Under dual-scale symmetric puncture sampling ( $h _ 1 = 1$ and $h _ 2 = \frac{1}{2}$ ), the block-diagonal observation matrix $M = \operatorname{diag}\!\left(\begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}, \begin{pmatrix} 2 & 1 \\ -2 & 1 \end{pmatrix}\right)$ and $L = M^{-1}$ satisfy $L M = I _ 4$ .
+**Proposition A.20**. Under dual-scale symmetric puncture sampling ( $h _ 1 = 1$ and $h _ 2 = \frac{1}{2}$ ), the block-diagonal observation matrix $M = \operatorname{diag}\left(\bigl[(1, 1); (-1, 1)\bigr], \bigl[(2, 1); (-2, 1)\bigr]\right)$ and $L = M^{-1}$ satisfy $L M = I _ 4$ .
 
-**Proposition A.21**. Under interleaved singular-regular basis ordering, the involution-scaled observation matrix $M = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 1 & 0 & -1 & 0 \\ 0 & 1 & 0 & -1 \end{pmatrix}$ and $L = \frac{1}{2} M$ satisfy $L M = I _ 4$ .
+**Proposition A.21**. Under interleaved singular-regular basis ordering, the involution-scaled observation matrix $M = \bigl[(1, 0, 1, 0); (0, 1, 0, 1); (1, 0, -1, 0); (0, 1, 0, -1)\bigr]$ and $L = \frac{1}{2} M$ satisfy $L M = I _ 4$ .
 
-**Proposition A.22**. Under weighted asymmetric puncture sampling, the observation matrix $M = \begin{pmatrix} 1 & 2 & 0 \\ -1 & 2 & 0 \\ 1 & 0 & 3 \end{pmatrix}$ and its exact rational left inverse $L = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} & 0 \\[4pt] \frac{1}{4} & \frac{1}{4} & 0 \\[4pt] -\frac{1}{6} & \frac{1}{6} & \frac{1}{3} \end{pmatrix}$ satisfy $L M = I _ 3$ .
+**Proposition A.22**. Under weighted asymmetric puncture sampling, the observation matrix $M = \bigl[(1, 2, 0); (-1, 2, 0); (1, 0, 3)\bigr]$ and its exact rational left inverse $L = \bigl[(\frac{1}{2}, -\frac{1}{2}, 0); ([4pt] \frac{1}{4}, \frac{1}{4}, 0); ([4pt] -\frac{1}{6}, \frac{1}{6}, \frac{1}{3})\bigr]$ satisfy $L M = I _ 3$ .
 
-**Proposition A.23**. For logarithmic-derivative pole multiplicity recovery $m = \operatorname{Res} _ {s=s _ 0}(f'/f)$ , the integer unimodular observation matrix $M = \begin{pmatrix} 2 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{pmatrix}$ and its exact integer inverse $L = \begin{pmatrix} 1 & -1 & 0 \\ -1 & 2 & 0 \\ 1 & -2 & 1 \end{pmatrix}$ satisfy $L M = I _ 3$ .
+**Proposition A.23**. For logarithmic-derivative pole multiplicity recovery $m = \operatorname{Res} _ {s=s _ 0}(f'/f)$ , the integer unimodular observation matrix $M = \bigl[(2, 1, 0); (1, 1, 0); (0, 1, 1)\bigr]$ and its exact integer inverse $L = \bigl[(1, -1, 0); (-1, 2, 0); (1, -2, 1)\bigr]$ satisfy $L M = I _ 3$ .
 
-**Proposition A.24**. In the four-dimensional space where the first three coordinates capture the complete singular germ $E = \begin{pmatrix} I _ 3 & 0 _ {3\times 1} \end{pmatrix}$ and the fourth coordinate holds the isolated point-fill default value $K = (0, 0, 0, 1)^{\mathsf{T}}$ , both zeroing ( $A _ 2 = \operatorname{diag}(1,1,1,0)$ ) and scaling ( $A _ 1 = \operatorname{diag}(1,1,1,2)$ ) the fourth slot satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.24**. In the four-dimensional space where the first three coordinates capture the complete singular germ $E = (I _ 3, 0 _ {3\times 1})$ and the fourth coordinate holds the isolated point-fill default value $K = (0, 0, 0, 1)^{\mathsf{T}}$ , both zeroing ( $A _ 2 = \operatorname{diag}(1,1,1,0)$ ) and scaling ( $A _ 1 = \operatorname{diag}(1,1,1,2)$ ) the fourth slot satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 #### 6.1.3　Family A03: Cross-Modulus Unified Pullback, Primitive Conductor Factorization, and Four-Character Positive Cone Conservation (Propositions A.25–A.36)
 
-**Proposition A.25**. In the four-dimensional two-modulus pullback space with $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ and $K = \begin{pmatrix} I _ 2 \\ -I _ 2 \end{pmatrix}$ , the pullback consolidation operators $A _ 1, A _ 2$ satisfy $E A _ i K = 0$ and conserve the total character sum $(1, 1, 1, 1)^{\mathsf{T}}$ .
+**Proposition A.25**. In the four-dimensional two-modulus pullback space with $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ and $K = (I _ 2, -I _ 2)^{\mathsf{T}}$ , the pullback consolidation operators $A _ 1, A _ 2$ satisfy $E A _ i K = 0$ and conserve the total character sum $(1, 1, 1, 1)^{\mathsf{T}}$ .
 
-**Proposition A.26**. In the five-dimensional cross-modulus space carrying an isolated bad-prime Euler factor slot in the fifth coordinate under $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \end{pmatrix}$ , bad-prime decoupling $A _ 2 = \operatorname{diag}(1,1,1,1,0)$ satisfies $E A _ 2 K = 0$ .
+**Proposition A.26**. In the five-dimensional cross-modulus space carrying an isolated bad-prime Euler factor slot in the fifth coordinate under $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0)\bigr]$ , bad-prime decoupling $A _ 2 = \operatorname{diag}(1,1,1,1,0)$ satisfies $E A _ 2 K = 0$ .
 
-**Proposition A.27**. In the four-character space $(1, \chi _ 1, \chi _ 2, \chi _ 1\chi _ 2)^{\mathsf{T}}$ with total-sum readout $E = (1, 1, 1, 1)$ and three-dimensional zero-sum kernel basis $K = \begin{pmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \\ 0 & 0 & -1 \end{pmatrix}$ , every sum-preserving exchange $A _ 1, A _ 2$ satisfies $E A _ i K = 0$ and the balanced increment $\delta = (-1, 1, -1, 1)^{\mathsf{T}}$ satisfies $E\delta = 0$ .
+**Proposition A.27**. In the four-character space $(1, \chi _ 1, \chi _ 2, \chi _ 1\chi _ 2)^{\mathsf{T}}$ with total-sum readout $E = (1, 1, 1, 1)$ and three-dimensional zero-sum kernel basis $K = \bigl[(1, 0, 0); (-1, 1, 0); (0, -1, 1); (0, 0, -1)\bigr]$ , every sum-preserving exchange $A _ 1, A _ 2$ satisfies $E A _ i K = 0$ and the balanced increment $\delta = (-1, 1, -1, 1)^{\mathsf{T}}$ satisfies $E\delta = 0$ .
 
-**Proposition A.28**. In the six-dimensional three-modulus common-pullback space $\operatorname{ZMod}(\operatorname{lcm}(N _ 1, N _ 2, N _ 3))$ with $E = \begin{pmatrix} I _ 3 & I _ 3 \end{pmatrix}$ and $K = \begin{pmatrix} I _ 3 \\ -I _ 3 \end{pmatrix}$ , channel-by-channel pullback operators $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.28**. In the six-dimensional three-modulus common-pullback space $\operatorname{ZMod}(\operatorname{lcm}(N _ 1, N _ 2, N _ 3))$ with $E = (I _ 3, I _ 3)$ and $K = (I _ 3, -I _ 3)^{\mathsf{T}}$ , channel-by-channel pullback operators $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 **Proposition A.29**. Reversing the channel consolidation order in Proposition A.25 preserves $E A _ i K = 0$ , $A _ i^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ , and single-channel hedging $\delta = (0, -1, 0, 1)^{\mathsf{T}} \in \ker E$ .
 
-**Proposition A.30**. Fractional half-step cross-modulus pullback operators $A _ 1, A _ 2$ on the four-dimensional space with $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ satisfy $E A _ 1 K = E A _ 2 K = 0$ and $E(-1, -1, 1, 1)^{\mathsf{T}} = (0, 0)^{\mathsf{T}}$ .
+**Proposition A.30**. Fractional half-step cross-modulus pullback operators $A _ 1, A _ 2$ on the four-dimensional space with $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ satisfy $E A _ 1 K = E A _ 2 K = 0$ and $E(-1, -1, 1, 1)^{\mathsf{T}} = (0, 0)^{\mathsf{T}}$ .
 
-**Proposition A.31**. In the five-dimensional cross-modulus space where the fifth coordinate is an explicit primitive conductor flag locked by the third row of $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}$ , all admissible pullback operators preserve the conductor flag without drift.
+**Proposition A.31**. In the five-dimensional cross-modulus space where the fifth coordinate is an explicit primitive conductor flag locked by the third row of $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0); (0, 0, 0, 0, 1)\bigr]$ , all admissible pullback operators preserve the conductor flag without drift.
 
-**Proposition A.32**. In the five-dimensional dual-cluster space with $E = \begin{pmatrix} 1 & 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 1 & 0 \end{pmatrix}$ , intra-cluster merges $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.32**. In the five-dimensional dual-cluster space with $E = \bigl[(1, 1, 0, 0, 0); (0, 0, 1, 1, 0)\bigr]$ , intra-cluster merges $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 **Proposition A.33**. In the three-dimensional modulo- $4$ character space separating odd primitive residues from even zero-value residues under $E = (1, 1, 0)$ , odd-residue transfer $A _ 1$ and even-residue annihilation $A _ 2 = \operatorname{diag}(1, 1, 0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
-**Proposition A.34**. Combining fractional half-step transfer on the first cluster with idempotent consolidation on the second cluster under $E = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$ satisfies $E A _ 1 K = E A _ 2 K = 0$ and $E(-1, 1, 1, -1)^{\mathsf{T}} = (0, 0)^{\mathsf{T}}$ .
+**Proposition A.34**. Combining fractional half-step transfer on the first cluster with idempotent consolidation on the second cluster under $E = \bigl[(1, 1, 0, 0); (0, 0, 1, 1)\bigr]$ satisfies $E A _ 1 K = E A _ 2 K = 0$ and $E(-1, 1, 1, -1)^{\mathsf{T}} = (0, 0)^{\mathsf{T}}$ .
 
 **Proposition A.35**. Reversing the fractional and idempotent cluster roles of Proposition A.34 maintains commutativity $A _ 1 A _ 2 = A _ 2 A _ 1$ and quotient closure $E A _ i K = 0$ .
 
-**Proposition A.36**. In the six-dimensional three-readout cross-modulus space with $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \end{pmatrix}$ , consolidation $A _ 1$ and sixth-slot pruning $A _ 2 = \operatorname{diag}(1,1,1,1,1,0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.36**. In the six-dimensional three-readout cross-modulus space with $E = \bigl[(1, 0, 1, 0, 0, 0); (0, 1, 0, 1, 0, 0); (0, 0, 0, 0, 1, 0)\bigr]$ , consolidation $A _ 1$ and sixth-slot pruning $A _ 2 = \operatorname{diag}(1,1,1,1,1,0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 #### 6.1.4　Family A04: Non-Commutative Commutators Between Additive Hurwitz Continuation and Multiplicative Euler Sieving (Propositions A.37–A.48)
 
-**Proposition A.37**. In the four-dimensional state space with principal readout $E = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}$ and companion fiber $K = \begin{pmatrix} 0 _ {2\times 2} \\ I _ 2 \end{pmatrix}$ , the additive shift generator $A _ {\mathrm{add}} = \operatorname{diag}\!\left(I _ 2, \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}\right)$ and multiplicative scaling generator $A _ {\mathrm{mul}} = \operatorname{diag}(1, 1, 2, 1)$ have non-zero commutator
+**Proposition A.37**. In the four-dimensional state space with principal readout $E = \bigl[(1, 0, 0, 0); (0, 1, 0, 0)\bigr]$ and companion fiber $K = (0 _ {2\times 2}, I _ 2)^{\mathsf{T}}$ , the additive shift generator $A _ {\mathrm{add}} = \operatorname{diag}\left(I _ 2, \bigl[(1, 1); (0, 1)\bigr]\right)$ and multiplicative scaling generator $A _ {\mathrm{mul}} = \operatorname{diag}(1, 1, 2, 1)$ have non-zero commutator
 
 $$
-\bigl[A _ {\mathrm{add}},\,A _ {\mathrm{mul}}\bigr] = \operatorname{diag}\!\left(0 _ {2\times 2}, \begin{pmatrix} 0 & -1 \\ 0 & 0 \end{pmatrix}\right) \neq 0,
+\bigl[A _ {\mathrm{add}}, A _ {\mathrm{mul}}\bigr] = \operatorname{diag}\left(0 _ {2\times 2}, \begin{pmatrix} 0 & -1 \cr 0 & 0 \end{pmatrix}\right) \neq 0,
 $$
 
 while satisfying $E A _ {\mathrm{add}} K = E A _ {\mathrm{mul}} K = 0$ .
 
-**Proposition A.38**. Replacing the scaling factor by $p = 3$ ( $A _ {\mathrm{mul},3} = \operatorname{diag}(1, 1, 3, 1)$ ) and the shift step by $2$ ( $A _ {\mathrm{add},2} = \operatorname{diag}\!\left(I _ 2, \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}\right)$ ) yields $[A _ {\mathrm{add},2}, A _ {\mathrm{mul},3}] _ {3,4} = -4 \neq 0$ with $E A _ i K = 0$ .
+**Proposition A.38**. Replacing the scaling factor by $p = 3$ ( $A _ {\mathrm{mul},3} = \operatorname{diag}(1, 1, 3, 1)$ ) and the shift step by $2$ ( $A _ {\mathrm{add},2} = \operatorname{diag}\left(I _ 2, \bigl[(1, 2); (0, 1)\bigr]\right)$ ) yields $[A _ {\mathrm{add},2}, A _ {\mathrm{mul},3}] _ {3,4} = -4 \neq 0$ with $E A _ i K = 0$ .
 
-**Proposition A.39**. For lower-triangular additive accumulation $A _ 1 = \operatorname{diag}\!\left(I _ 2, \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix}\right)$ and non-uniform scaling $A _ 2 = \operatorname{diag}(1, 1, 2, 3)$ , the commutator $[A _ 1, A _ 2]$ has $(4,3)$ entry $-1 \neq 0$ while $E A _ i K = 0$ .
+**Proposition A.39**. For lower-triangular additive accumulation $A _ 1 = \operatorname{diag}\left(I _ 2, \bigl[(1, 0); (1, 1)\bigr]\right)$ and non-uniform scaling $A _ 2 = \operatorname{diag}(1, 1, 2, 3)$ , the commutator $[A _ 1, A _ 2]$ has $(4,3)$ entry $-1 \neq 0$ while $E A _ i K = 0$ .
 
-**Proposition A.40**. In the five-dimensional space with a three-stage Heisenberg companion fiber under $E = \begin{pmatrix} I _ 2 & 0 _ {2\times 3} \end{pmatrix}$ , the Jordan shift $A _ 1 = \operatorname{diag}\!\left(I _ 2, \begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{pmatrix}\right)$ and prime-diagonal scaling $A _ 2 = \operatorname{diag}(1, 1, 2, 3, 5)$ satisfy both $[A _ 1, A _ 2] \neq 0$ and $\bigl[A _ 1, [A _ 1, A _ 2]\bigr] \neq 0$ with $E A _ i K = 0$ .
+**Proposition A.40**. In the five-dimensional space with a three-stage Heisenberg companion fiber under $E = (I _ 2, 0 _ {2\times 3})$ , the Jordan shift $A _ 1 = \operatorname{diag}\left(I _ 2, \bigl[(1, 1, 0); (0, 1, 1); (0, 0, 1)\bigr]\right)$ and prime-diagonal scaling $A _ 2 = \operatorname{diag}(1, 1, 2, 3, 5)$ satisfy both $[A _ 1, A _ 2] \neq 0$ and $\bigl[A _ 1, [A _ 1, A _ 2]\bigr] \neq 0$ with $E A _ i K = 0$ .
 
-**Proposition A.41**. In the minimal three-dimensional non-commutative model with $E = (1, 0, 0)$ and $K = \begin{pmatrix} 0 & 0 \\ 1 & 0 \\ 0 & 1 \end{pmatrix}$ , $A _ 1 = \operatorname{diag}\!\left(1, \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}\right)$ and $A _ 2 = \operatorname{diag}(1, 2, 1)$ satisfy $[A _ 1, A _ 2] \neq 0$ and $E A _ i K = 0$ .
+**Proposition A.41**. In the minimal three-dimensional non-commutative model with $E = (1, 0, 0)$ and $K = \bigl[(0, 0); (1, 0); (0, 1)\bigr]$ , $A _ 1 = \operatorname{diag}\left(1, \bigl[(1, 1); (0, 1)\bigr]\right)$ and $A _ 2 = \operatorname{diag}(1, 2, 1)$ satisfy $[A _ 1, A _ 2] \neq 0$ and $E A _ i K = 0$ .
 
 **Proposition A.42**. Scaling Proposition A.41 to shift step $3$ and diagonal weights $(1, 4, 2)$ yields $[A _ 1, A _ 2] _ {2,3} = -6 \neq 0$ and $E A _ i K = 0$ .
 
-**Proposition A.43**. In the four-dimensional quotient-absorbed commutator model with $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}$ and $K = \begin{pmatrix} 1 & 0 \\ 0 & 0 \\ -1 & 0 \\ 0 & 1 \end{pmatrix}$ , the coupled operators
+**Proposition A.43**. In the four-dimensional quotient-absorbed commutator model with $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 0)\bigr]$ and $K = \bigl[(1, 0); (0, 0); (-1, 0); (0, 1)\bigr]$ , the coupled operators
 
 $$
-A _ 1 = \begin{pmatrix} 1 & 0 & 0 & -1 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \end{pmatrix}, \qquad A _ 2 = \begin{pmatrix} \frac{3}{2} & 0 & -\frac{1}{2} & 0 \\[4pt] 0 & 1 & 0 & 0 \\[4pt] -\frac{1}{2} & 0 & \frac{3}{2} & 0 \\[4pt] 0 & 0 & 0 & 1 \end{pmatrix}
+A _ 1 = \begin{pmatrix} 1 & 0 & 0 & -1 \cr 0 & 1 & 0 & 0 \cr 0 & 0 & 1 & 1 \cr 0 & 0 & 0 & 1 \end{pmatrix}, \qquad A _ 2 = \begin{pmatrix} \frac{3}{2} & 0 & -\frac{1}{2} & 0 \cr 0 & 1 & 0 & 0 \cr -\frac{1}{2} & 0 & \frac{3}{2} & 0 \cr 0 & 0 & 0 & 1 \end{pmatrix}
 $$
 
-have non-zero commutator $[A _ 1, A _ 2] = \begin{pmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & -1 \\ 0 & 0 & 0 & 0 \end{pmatrix} \neq 0$ whose image lies entirely inside $\operatorname{span}\{(1,0,-1,0)^{\mathsf{T}}\} \subset \ker E$ , so $E[A _ 1, A _ 2] = 0$ and $E A _ 1 K = E A _ 2 K = 0$ .
+have non-zero commutator $[A _ 1, A _ 2] = \bigl[(0, 0, 0, 1); (0, 0, 0, 0); (0, 0, 0, -1); (0, 0, 0, 0)\bigr] \neq 0$ whose image lies entirely inside $\operatorname{span}\lbrace (1,0,-1,0)^{\mathsf{T}}\rbrace \subset \ker E$ , so $E[A _ 1, A _ 2] = 0$ and $E A _ 1 K = E A _ 2 K = 0$ .
 
-**Proposition A.44**. The dual second-channel quotient-absorbed commutator model under $E = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ likewise satisfies $[A _ 1, A _ 2] \neq 0$ , $E[A _ 1, A _ 2] = 0$ , and $E A _ i K = 0$ .
+**Proposition A.44**. The dual second-channel quotient-absorbed commutator model under $E = \bigl[(1, 0, 0, 0); (0, 1, 0, 1)\bigr]$ likewise satisfies $[A _ 1, A _ 2] \neq 0$ , $E[A _ 1, A _ 2] = 0$ , and $E A _ i K = 0$ .
 
-**Proposition A.45**. Under $E = \begin{pmatrix} I _ 2 & 0 _ {2\times 2} \end{pmatrix}$ , negative shear $A _ 1 = \operatorname{diag}\!\left(I _ 2, \begin{pmatrix} 1 & -2 \\ 0 & 1 \end{pmatrix}\right)$ and scaling $A _ 2 = \operatorname{diag}(1, 1, 3, 2)$ satisfy $[A _ 1, A _ 2] _ {3,4} = 2 \neq 0$ and $E A _ i K = 0$ .
+**Proposition A.45**. Under $E = (I _ 2, 0 _ {2\times 2})$ , negative shear $A _ 1 = \operatorname{diag}\left(I _ 2, \bigl[(1, -2); (0, 1)\bigr]\right)$ and scaling $A _ 2 = \operatorname{diag}(1, 1, 3, 2)$ satisfy $[A _ 1, A _ 2] _ {3,4} = 2 \neq 0$ and $E A _ i K = 0$ .
 
-**Proposition A.46**. In the five-dimensional three-readout space $E = \begin{pmatrix} I _ 3 & 0 _ {3\times 2} \end{pmatrix}$ , companion shift $A _ 1$ and scaling $A _ 2 = \operatorname{diag}(1, 1, 1, 2, 1)$ satisfy $[A _ 1, A _ 2] \neq 0$ and $E A _ i K = 0$ .
+**Proposition A.46**. In the five-dimensional three-readout space $E = (I _ 3, 0 _ {3\times 2})$ , companion shift $A _ 1$ and scaling $A _ 2 = \operatorname{diag}(1, 1, 1, 2, 1)$ satisfy $[A _ 1, A _ 2] \neq 0$ and $E A _ i K = 0$ .
 
-**Proposition A.47**. In the five-dimensional two-readout hedged space $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \end{pmatrix}$ , coupling the first and third coordinates symmetrically against the fifth coordinate yields $[A _ 1, A _ 2] \neq 0$ , $E[A _ 1, A _ 2] = 0$ , and $E A _ i K = 0$ .
+**Proposition A.47**. In the five-dimensional two-readout hedged space $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0)\bigr]$ , coupling the first and third coordinates symmetrically against the fifth coordinate yields $[A _ 1, A _ 2] \neq 0$ , $E[A _ 1, A _ 2] = 0$ , and $E A _ i K = 0$ .
 
-**Proposition A.48**. In the six-dimensional three-readout space $E = \begin{pmatrix} I _ 3 & 0 _ {3\times 3} \end{pmatrix}$ , a $3\times 3$ Jordan block $A _ 1$ and prime diagonal $A _ 2 = \operatorname{diag}(1, 1, 1, 2, 3, 5)$ on the companion fiber satisfy $[A _ 1, A _ 2] \neq 0$ and $E A _ i K = 0$ .
+**Proposition A.48**. In the six-dimensional three-readout space $E = (I _ 3, 0 _ {3\times 3})$ , a $3\times 3$ Jordan block $A _ 1$ and prime diagonal $A _ 2 = \operatorname{diag}(1, 1, 1, 2, 3, 5)$ on the companion fiber satisfy $[A _ 1, A _ 2] \neq 0$ and $E A _ i K = 0$ .
 
 #### 6.1.5　Family A05: Weil–Li Explicit Functionals, Rational Positive-Definite Gram $LDL^{\mathsf{T}}$ Decompositions, and Test-Space Separation (Propositions A.49–A.60)
 
-**Proposition A.49**. The $3\times 3$ tridiagonal rational Gram matrix $G _ 1 = \begin{pmatrix} 2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 2 \end{pmatrix}$ admits the exact rational decomposition $G _ 1 = L _ 1 D _ 1 L _ 1^{\mathsf{T}}$ with $L _ 1 = \begin{pmatrix} 1 & 0 & 0 \\ -1/2 & 1 & 0 \\ 0 & -2/3 & 1 \end{pmatrix}$ and positive pivots $D _ 1 = \operatorname{diag}(2, 3/2, 4/3) \succ 0$ .
+**Proposition A.49**. The $3\times 3$ tridiagonal rational Gram matrix $G _ 1 = \bigl[(2, -1, 0); (-1, 2, -1); (0, -1, 2)\bigr]$ admits the exact rational decomposition $G _ 1 = L _ 1 D _ 1 L _ 1^{\mathsf{T}}$ with $L _ 1 = \bigl[(1, 0, 0); (-1/2, 1, 0); (0, -2/3, 1)\bigr]$ and positive pivots $D _ 1 = \operatorname{diag}(2, 3/2, 4/3) \succ 0$ .
 
-**Proposition A.50**. The $3\times 3$ prime-moment rational Gram matrix $G _ 2 = \begin{pmatrix} 4 & 2 & 1 \\ 2 & 5 & 2 \\ 1 & 2 & 6 \end{pmatrix}$ admits $G _ 2 = L _ 2 D _ 2 L _ 2^{\mathsf{T}}$ with $L _ 2 = \begin{pmatrix} 1 & 0 & 0 \\ 1/2 & 1 & 0 \\ 1/4 & 3/8 & 1 \end{pmatrix}$ and $D _ 2 = \operatorname{diag}(4, 4, 83/16) \succ 0$ .
+**Proposition A.50**. The $3\times 3$ prime-moment rational Gram matrix $G _ 2 = \bigl[(4, 2, 1); (2, 5, 2); (1, 2, 6)\bigr]$ admits $G _ 2 = L _ 2 D _ 2 L _ 2^{\mathsf{T}}$ with $L _ 2 = \bigl[(1, 0, 0); (1/2, 1, 0); (1/4, 3/8, 1)\bigr]$ and $D _ 2 = \operatorname{diag}(4, 4, 83/16) \succ 0$ .
 
-**Proposition A.51**. The $3\times 3$ alternating-sign rational Gram matrix $G _ 3 = \begin{pmatrix} 3 & -1 & 1 \\ -1 & 3 & -1 \\ 1 & -1 & 3 \end{pmatrix}$ admits $G _ 3 = L _ 3 D _ 3 L _ 3^{\mathsf{T}}$ with $L _ 3 = \begin{pmatrix} 1 & 0 & 0 \\ -1/3 & 1 & 0 \\ 1/3 & -1/4 & 1 \end{pmatrix}$ and $D _ 3 = \operatorname{diag}(3, 8/3, 5/2) \succ 0$ .
+**Proposition A.51**. The $3\times 3$ alternating-sign rational Gram matrix $G _ 3 = \bigl[(3, -1, 1); (-1, 3, -1); (1, -1, 3)\bigr]$ admits $G _ 3 = L _ 3 D _ 3 L _ 3^{\mathsf{T}}$ with $L _ 3 = \bigl[(1, 0, 0); (-1/3, 1, 0); (1/3, -1/4, 1)\bigr]$ and $D _ 3 = \operatorname{diag}(3, 8/3, 5/2) \succ 0$ .
 
-**Proposition A.52**. The $3\times 3$ anisotropic rational Gram matrix $G _ 4 = \begin{pmatrix} 5 & 1 & 2 \\ 1 & 4 & 1 \\ 2 & 1 & 3 \end{pmatrix}$ admits $G _ 4 = L _ 4 D _ 4 L _ 4^{\mathsf{T}}$ with $L _ 4 = \begin{pmatrix} 1 & 0 & 0 \\ 1/5 & 1 & 0 \\ 2/5 & 3/19 & 1 \end{pmatrix}$ and $D _ 4 = \operatorname{diag}(5, 19/5, 40/19) \succ 0$ .
+**Proposition A.52**. The $3\times 3$ anisotropic rational Gram matrix $G _ 4 = \bigl[(5, 1, 2); (1, 4, 1); (2, 1, 3)\bigr]$ admits $G _ 4 = L _ 4 D _ 4 L _ 4^{\mathsf{T}}$ with $L _ 4 = \bigl[(1, 0, 0); (1/5, 1, 0); (2/5, 3/19, 1)\bigr]$ and $D _ 4 = \operatorname{diag}(5, 19/5, 40/19) \succ 0$ .
 
-**Proposition A.53**. The $4\times 4$ tridiagonal rational Gram matrix $G _ 5 = \begin{pmatrix} 2 & 1 & 0 & 0 \\ 1 & 2 & 1 & 0 \\ 0 & 1 & 2 & 1 \\ 0 & 0 & 1 & 2 \end{pmatrix}$ admits $G _ 5 = L _ 5 D _ 5 L _ 5^{\mathsf{T}}$ with unit lower-bidiagonal $L _ 5$ (subdiagonal entries $1/2, 2/3, 3/4$ ) and $D _ 5 = \operatorname{diag}(2, 3/2, 4/3, 5/4) \succ 0$ .
+**Proposition A.53**. The $4\times 4$ tridiagonal rational Gram matrix $G _ 5 = \bigl[(2, 1, 0, 0); (1, 2, 1, 0); (0, 1, 2, 1); (0, 0, 1, 2)\bigr]$ admits $G _ 5 = L _ 5 D _ 5 L _ 5^{\mathsf{T}}$ with unit lower-bidiagonal $L _ 5$ (subdiagonal entries $1/2, 2/3, 3/4$ ) and $D _ 5 = \operatorname{diag}(2, 3/2, 4/3, 5/4) \succ 0$ .
 
-**Proposition A.54**. The $4\times 4$ cyclic-coupled rational Gram matrix $G _ 6 = \begin{pmatrix} 4 & -1 & 0 & 1 \\ -1 & 4 & -1 & 0 \\ 0 & -1 & 4 & -1 \\ 1 & 0 & -1 & 4 \end{pmatrix}$ admits $G _ 6 = L _ 6 D _ 6 L _ 6^{\mathsf{T}}$ with $D _ 6 = \operatorname{diag}(4, 15/4, 55/15, 192/55) \succ 0$ .
+**Proposition A.54**. The $4\times 4$ cyclic-coupled rational Gram matrix $G _ 6 = \bigl[(4, -1, 0, 1); (-1, 4, -1, 0); (0, -1, 4, -1); (1, 0, -1, 4)\bigr]$ admits $G _ 6 = L _ 6 D _ 6 L _ 6^{\mathsf{T}}$ with $D _ 6 = \operatorname{diag}(4, 15/4, 55/15, 192/55) \succ 0$ .
 
 **Proposition A.55**. The prime-wavepacket rational Gram matrix $G _ {\mathrm{wave}}$ of Theorem V, Equation $(4.17)$ , admits the exact rational factorization $G _ {\mathrm{wave}} = L _ {\mathrm{wave}} D _ {\mathrm{wave}} L _ {\mathrm{wave}}^{\mathsf{T}}$ with
 
 $$
-L _ {\mathrm{wave}} = \begin{pmatrix} 1 & 0 & 0 \\[4pt] \dfrac{41}{57} & 1 & 0 \\[8pt] \dfrac{7}{23} & \dfrac{9747}{14099} & 1 \end{pmatrix}, \qquad D _ {\mathrm{wave}} = \operatorname{diag}\!\left(\frac{3}{68},\,\frac{613}{36822},\,\frac{6669}{324277}\right) \succ 0.
+L _ {\mathrm{wave}} = \begin{pmatrix} 1 & 0 & 0 \cr \dfrac{41}{57} & 1 & 0 \cr \dfrac{7}{23} & \dfrac{9747}{14099} & 1 \end{pmatrix}, \qquad D _ {\mathrm{wave}} = \operatorname{diag}\left(\frac{3}{68}, \frac{613}{36822}, \frac{6669}{324277}\right) \succ 0.
 $$
 
-**Proposition A.56**. The real-character prime-cone rational Gram matrix $G _ {\mathrm{cone}}$ on prime basis $\{17, 19, 23\}$ of Theorem V, Equation $(4.20)$ , admits the exact rational factorization $G _ {\mathrm{cone}} = L _ {\mathrm{cone}} D _ {\mathrm{cone}} L _ {\mathrm{cone}}^{\mathsf{T}}$ with
+**Proposition A.56**. The real-character prime-cone rational Gram matrix $G _ {\mathrm{cone}}$ on prime basis $\lbrace 17, 19, 23\rbrace$ of Theorem V, Equation $(4.20)$ , admits the exact rational factorization $G _ {\mathrm{cone}} = L _ {\mathrm{cone}} D _ {\mathrm{cone}} L _ {\mathrm{cone}}^{\mathsf{T}}$ with
 
 $$
-L _ {\mathrm{cone}} = \begin{pmatrix} 1 & 0 & 0 \\[4pt] -\dfrac{14529514}{10798083} & 1 & 0 \\[8pt] \dfrac{19}{57} & -\dfrac{2299}{1881} & 1 \end{pmatrix}, \qquad D _ {\mathrm{cone}} = \operatorname{diag}\!\left(\frac{43192332}{5260455841},\,\frac{1672}{399929},\,\frac{8}{5643}\right) \succ 0.
+L _ {\mathrm{cone}} = \begin{pmatrix} 1 & 0 & 0 \cr -\dfrac{14529514}{10798083} & 1 & 0 \cr \dfrac{19}{57} & -\dfrac{2299}{1881} & 1 \end{pmatrix}, \qquad D _ {\mathrm{cone}} = \operatorname{diag}\left(\frac{43192332}{5260455841}, \frac{1672}{399929}, \frac{8}{5643}\right) \succ 0.
 $$
 
-**Proposition A.57**. The two-row low-order moment observation matrix $M _ {\mathrm{mom}} = \begin{pmatrix} 1 & 1 & 1 \\ 19 & 20 & 21 \end{pmatrix}$ annihilates the non-zero oscillatory test vector $c = (1, -2, 1)^{\mathsf{T}}$ ( $M _ {\mathrm{mom}} c = (0, 0)^{\mathsf{T}}$ ), demonstrating that finite low-order moment tables possess a non-trivial high-frequency blind kernel.
+**Proposition A.57**. The two-row low-order moment observation matrix $M _ {\mathrm{mom}} = \bigl[(1, 1, 1); (19, 20, 21)\bigr]$ annihilates the non-zero oscillatory test vector $c = (1, -2, 1)^{\mathsf{T}}$ ( $M _ {\mathrm{mom}} c = (0, 0)^{\mathsf{T}}$ ), demonstrating that finite low-order moment tables possess a non-trivial high-frequency blind kernel.
 
-**Proposition A.58**. The moment matrix $M _ {\mathrm{sym}} = \begin{pmatrix} 1 & 1 & 1 \\ 23 & 34 & 57 \end{pmatrix}$ annihilates the non-zero integer vector $c' = (23, -34, 11)^{\mathsf{T}}$ , whereas the zero-sum vector $c = (34, -57, 23)^{\mathsf{T}}$ satisfies $(1, 1, 1)c = 0$ and carries strict positive wavepacket energy $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 > 0$ .
+**Proposition A.58**. The moment matrix $M _ {\mathrm{sym}} = \bigl[(1, 1, 1); (23, 34, 57)\bigr]$ annihilates the non-zero integer vector $c' = (23, -34, 11)^{\mathsf{T}}$ , whereas the zero-sum vector $c = (34, -57, 23)^{\mathsf{T}}$ satisfies $(1, 1, 1)c = 0$ and carries strict positive wavepacket energy $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 > 0$ .
 
-**Proposition A.59**. In the four-dimensional test-mode space with two-moment readout $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ , the high-frequency mode $\delta = (-1, 1, 1, -1)^{\mathsf{T}}$ satisfies $E\delta = 0$ and remains unconstrained by positivity on the two-dimensional quotient.
+**Proposition A.59**. In the four-dimensional test-mode space with two-moment readout $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ , the high-frequency mode $\delta = (-1, 1, 1, -1)^{\mathsf{T}}$ satisfies $E\delta = 0$ and remains unconstrained by positivity on the two-dimensional quotient.
 
-**Proposition A.60**. In the five-dimensional Weil–Li test space with a zero-residue auxiliary fifth mode under $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \end{pmatrix}$ , mode consolidation $A _ 1$ and fifth-mode pruning $A _ 2 = \operatorname{diag}(1,1,1,1,0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.60**. In the five-dimensional Weil–Li test space with a zero-residue auxiliary fifth mode under $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0)\bigr]$ , mode consolidation $A _ 1$ and fifth-mode pruning $A _ 2 = \operatorname{diag}(1,1,1,1,0)$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 #### 6.1.6　Family P1: Theorem A₀ Local Rational Contour Winding, Rouché Margins, and Intra-Fiber Equality Transport (Propositions A.61–A.80)
 
-**Proposition A.61**. In the four-dimensional winding-and-quotient state space with $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ , preserving the winding invariant $c _ {\mathrm{inv}} = (1, 1, 1, 1)^{\mathsf{T}}$ under $A _ 1, A _ 2$ satisfies $E A _ i K = 0$ and prevents intra-fiber $W=0$ versus $W=1$ splitting.
+**Proposition A.61**. In the four-dimensional winding-and-quotient state space with $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ , preserving the winding invariant $c _ {\mathrm{inv}} = (1, 1, 1, 1)^{\mathsf{T}}$ under $A _ 1, A _ 2$ satisfies $E A _ i K = 0$ and prevents intra-fiber $W=0$ versus $W=1$ splitting.
 
-**Proposition A.62**. In the five-dimensional contour model where sub-threshold rational boundary perturbations reside in the fifth coordinate under $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \end{pmatrix}$ , perturbation stripping $A _ 2 = \operatorname{diag}(1,1,1,1,0)$ satisfies $E A _ 2 K = 0$ , leaving the integer winding number invariant.
+**Proposition A.62**. In the five-dimensional contour model where sub-threshold rational boundary perturbations reside in the fifth coordinate under $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0)\bigr]$ , perturbation stripping $A _ 2 = \operatorname{diag}(1,1,1,1,0)$ satisfies $E A _ 2 K = 0$ , leaving the integer winding number invariant.
 
-**Proposition A.63**. On the rational square $B = [5/8, 7/8] \times [7/8, 9/8]$ centered at $c = 3/4 + i$ (half-width $r = 1/8$ , perturbation bound $\varepsilon = 1/16$ ), the diagonal Rouché margin matrix $D _ {\mathrm{Rouche}} = \operatorname{diag}\!\left(1/64,\,3/256\right) \succ 0$ certifies the strict rational margin $\Delta _ {\mathrm{Rouche}} = (1/8)^2 - (1/16)^2 = 3/256 > 0$ .
+**Proposition A.63**. On the rational square $B = [5/8, 7/8] \times [7/8, 9/8]$ centered at $c = 3/4 + i$ (half-width $r = 1/8$ , perturbation bound $\varepsilon = 1/16$ ), the diagonal Rouché margin matrix $D _ {\mathrm{Rouche}} = \operatorname{diag}\left(1/64, 3/256\right) \succ 0$ certifies the strict rational margin $\Delta _ {\mathrm{Rouche}} = (1/8)^2 - (1/16)^2 = 3/256 > 0$ .
 
-**Proposition A.64**. For half-width $r = 1/6$ and boundary perturbation bound $\varepsilon = 1/12$ , the diagonal margin matrix $\operatorname{diag}(1/36,\,1/48) \succ 0$ certifies $\Delta _ {\mathrm{Rouche},1/6} = (1/6)^2 - (1/12)^2 = 1/48 > 0$ .
+**Proposition A.64**. For half-width $r = 1/6$ and boundary perturbation bound $\varepsilon = 1/12$ , the diagonal margin matrix $\operatorname{diag}(1/36, 1/48) \succ 0$ certifies $\Delta _ {\mathrm{Rouche},1/6} = (1/6)^2 - (1/12)^2 = 1/48 > 0$ .
 
-**Proposition A.65**. In the four-segment contour integral decomposition (top, bottom, left, right rational segments) under $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ , opposite-side segment consolidation operators $A _ 1, A _ 2$ satisfy $E A _ i K = 0$ and conserve the closed contour sum $c _ {\mathrm{inv}} = (1, 1, 1, 1)^{\mathsf{T}}$ .
+**Proposition A.65**. In the four-segment contour integral decomposition (top, bottom, left, right rational segments) under $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ , opposite-side segment consolidation operators $A _ 1, A _ 2$ satisfy $E A _ i K = 0$ and conserve the closed contour sum $c _ {\mathrm{inv}} = (1, 1, 1, 1)^{\mathsf{T}}$ .
 
 **Proposition A.66**. In the four-dimensional contour model with corner-turning operator $A _ 1$ and edge-reparametrization operator $A _ 2$ , $[A _ 1, A _ 2] \neq 0$ lies entirely inside $\ker E$ , so $E[A _ 1, A _ 2] = 0$ and the closed winding integral is invariant ( $E A _ i K = 0$ ).
 
-**Proposition A.67**. Locking the local winding number $W(x)$ as an independent explicit row in $E = \begin{pmatrix} 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ on $(C(q(x)), Z(x), W(x))^{\mathsf{T}}$ reduces the blind kernel to $K = (1, -1, 0)^{\mathsf{T}}$ and blocks any silent transition from $W = 0$ to $W = 1$ .
+**Proposition A.67**. Locking the local winding number $W(x)$ as an independent explicit row in $E = \bigl[(1, 1, 0); (0, 0, 1)\bigr]$ on $(C(q(x)), Z(x), W(x))^{\mathsf{T}}$ reduces the blind kernel to $K = (1, -1, 0)^{\mathsf{T}}$ and blocks any silent transition from $W = 0$ to $W = 1$ .
 
-**Proposition A.68**. The local coordinate and winding observation matrix $M = \begin{pmatrix} 1 & 1 & 0 \\ -1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ and its exact rational inverse $L = M^{-1}$ satisfy $L M = I _ 3$ , uniquely recovering $(\sigma - 3/4, t - 1, W)^{\mathsf{T}}$ .
+**Proposition A.68**. The local coordinate and winding observation matrix $M = \bigl[(1, 1, 0); (-1, 1, 0); (0, 0, 1)\bigr]$ and its exact rational inverse $L = M^{-1}$ satisfy $L M = I _ 3$ , uniquely recovering $(\sigma - 3/4, t - 1, W)^{\mathsf{T}}$ .
 
-**Proposition A.69**. The rational corner-sampling matrix $M = \begin{pmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 2 & 3 \end{pmatrix}$ and its exact integer inverse $L = \begin{pmatrix} 2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 1 \end{pmatrix}$ satisfy $L M = I _ 3$ .
+**Proposition A.69**. The rational corner-sampling matrix $M = \bigl[(1, 1, 1); (1, 2, 2); (1, 2, 3)\bigr]$ and its exact integer inverse $L = \bigl[(2, -1, 0); (-1, 2, -1); (0, -1, 1)\bigr]$ satisfy $L M = I _ 3$ .
 
-**Proposition A.70**. In the two-dimensional collision verification space $(W _ {\mathrm{global}}, W _ {\mathrm{local}})^{\mathsf{T}}$ with $E = (1, 1)$ and $K = (1, -1)^{\mathsf{T}}$ , consolidation $A = \begin{pmatrix} 0 & 0 \\ 1 & 1 \end{pmatrix}$ satisfies $E A K = 0$ and forces any $0$ versus $1$ discrepancy into a single terminal slot.
+**Proposition A.70**. In the two-dimensional collision verification space $(W _ {\mathrm{global}}, W _ {\mathrm{local}})^{\mathsf{T}}$ with $E = (1, 1)$ and $K = (1, -1)^{\mathsf{T}}$ , consolidation $A = \bigl[(0, 0); (1, 1)\bigr]$ satisfies $E A K = 0$ and forces any $0$ versus $1$ discrepancy into a single terminal slot.
 
-**Proposition A.71**. For two adjacent rational rectangles $B _ 1 \cup B _ 2$ sharing an internal oriented boundary edge under $E = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$ , the oppositely oriented shared-edge integral vector $\delta = (-1, 1, -1, 1)^{\mathsf{T}}$ satisfies $E\delta = 0$ , encoding winding additivity $W(f, B _ 1 \cup B _ 2) = W(f, B _ 1) + W(f, B _ 2)$ .
+**Proposition A.71**. For two adjacent rational rectangles $B _ 1 \cup B _ 2$ sharing an internal oriented boundary edge under $E = \bigl[(1, 1, 0, 0); (0, 0, 1, 1)\bigr]$ , the oppositely oriented shared-edge integral vector $\delta = (-1, 1, -1, 1)^{\mathsf{T}}$ satisfies $E\delta = 0$ , encoding winding additivity $W(f, B _ 1 \cup B _ 2) = W(f, B _ 1) + W(f, B _ 2)$ .
 
 **Proposition A.72**. Combining the $k=4$ ( $r=1/8, \varepsilon=1/16$ ) and $k=5$ ( $r=1/10, \varepsilon=1/20$ ) rational Rouché squares yields the positive-definite diagonal margin matrix $\operatorname{diag}(3/256, 3/400, 1) \succ 0$ .
 
@@ -1062,29 +1062,29 @@ $$
 
 **Proposition A.74**. Under dyadic concentric subdivision of the rational square toward $c = 3/4 + i$ , the fractional subdivision operators $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ and conserve total interior zero multiplicity.
 
-**Proposition A.75**. Locking the holomorphicity and boundary non-vanishing certificate $\mathcal{C} _ {\mathrm{hol}}(B)$ in the third row of $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}$ ensures that no admissible contour deformation $A _ 1, A _ 2$ can cross a pole or boundary zero without triggering the third readout row.
+**Proposition A.75**. Locking the holomorphicity and boundary non-vanishing certificate $\mathcal{C} _ {\mathrm{hol}}(B)$ in the third row of $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0); (0, 0, 0, 0, 1)\bigr]$ ensures that no admissible contour deformation $A _ 1, A _ 2$ can cross a pole or boundary zero without triggering the third readout row.
 
-**Proposition A.76**. For the local Taylor germ $f(s) = a _ 0 + a _ 1(s-c) + a _ 2(s-c)^2$ , the three-point sampling matrix $M = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{pmatrix}$ and its exact integer inverse $L = \begin{pmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{pmatrix}$ satisfy $L M = I _ 3$ .
+**Proposition A.76**. For the local Taylor germ $f(s) = a _ 0 + a _ 1(s-c) + a _ 2(s-c)^2$ , the three-point sampling matrix $M = \bigl[(1, 0, 0); (1, 1, 0); (1, 1, 1)\bigr]$ and its exact integer inverse $L = \bigl[(1, 0, 0); (-1, 1, 0); (0, -1, 1)\bigr]$ satisfy $L M = I _ 3$ .
 
-**Proposition A.77**. Separating real and imaginary Cauchy–Riemann contour components yields the $4\times 4$ orthogonal-scaled observation matrix $M = \operatorname{diag}\!\left(\begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}, \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}\right)$ and $L = \frac{1}{2}M^{\mathsf{T}}$ satisfying $L M = I _ 4$ .
+**Proposition A.77**. Separating real and imaginary Cauchy–Riemann contour components yields the $4\times 4$ orthogonal-scaled observation matrix $M = \operatorname{diag}\left(\bigl[(1, 1); (-1, 1)\bigr], \bigl[(1, 1); (-1, 1)\bigr]\right)$ and $L = \frac{1}{2}M^{\mathsf{T}}$ satisfying $L M = I _ 4$ .
 
-**Proposition A.78**. In the five-dimensional dual-rectangle subdivision model with corner turn $A _ 1$ and edge transfer $A _ 2$ under $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \end{pmatrix}$ , $[A _ 1, A _ 2] \neq 0$ , $E[A _ 1, A _ 2] = 0$ , and $E A _ i K = 0$ hold simultaneously.
+**Proposition A.78**. In the five-dimensional dual-rectangle subdivision model with corner turn $A _ 1$ and edge transfer $A _ 2$ under $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0)\bigr]$ , $[A _ 1, A _ 2] \neq 0$ , $E[A _ 1, A _ 2] = 0$ , and $E A _ i K = 0$ hold simultaneously.
 
-**Proposition A.79**. The coupled three-edge Rouché boundary quadratic form $G = \begin{pmatrix} 2 & -1 & 0 \\ -1 & 2 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ has exact rational $LDL^{\mathsf{T}}$ pivots $D = \operatorname{diag}(2, 3/2, 1) \succ 0$ .
+**Proposition A.79**. The coupled three-edge Rouché boundary quadratic form $G = \bigl[(2, -1, 0); (-1, 2, 0); (0, 0, 1)\bigr]$ has exact rational $LDL^{\mathsf{T}}$ pivots $D = \operatorname{diag}(2, 3/2, 1) \succ 0$ .
 
-**Proposition A.80**. In the six-dimensional three-rectangle subdivision space with $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \end{pmatrix}$ , subdivision operators $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.80**. In the six-dimensional three-rectangle subdivision space with $E = \bigl[(1, 0, 1, 0, 0, 0); (0, 1, 0, 1, 0, 0); (0, 0, 0, 0, 1, 0)\bigr]$ , subdivision operators $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 #### 6.1.7　Family P2: Theorems B₀–B₃ Rational Independence of Prime Logarithms and Generalized Prime Finite-Horizon Tail Replacement (Propositions A.81–A.100)
 
-**Proposition A.81**. In the three-dimensional prime-exponent space $\mathbb{Q}^3$ over $\{2, 3, 5\}$ , unique prime factorization induces the identity observation matrix $M = I _ 3$ and left inverse $L = I _ 3$ ( $L M = I _ 3$ ), certifying that $\sum _ {j=1}^3 r _ j \log p _ j = 0$ with $r _ j \in \mathbb{Q}$ implies $(r _ 1, r _ 2, r _ 3) = (0, 0, 0)$ (Theorem B₁).
+**Proposition A.81**. In the three-dimensional prime-exponent space $\mathbb{Q}^3$ over $\lbrace 2, 3, 5\rbrace$ , unique prime factorization induces the identity observation matrix $M = I _ 3$ and left inverse $L = I _ 3$ ( $L M = I _ 3$ ), certifying that $\sum _ {j=1}^3 r _ j \log p _ j = 0$ with $r _ j \in \mathbb{Q}$ implies $(r _ 1, r _ 2, r _ 3) = (0, 0, 0)$ (Theorem B₁).
 
-**Proposition A.82**. In the primorial logarithmic basis $\{\log 2, \log 6 = \log 2 + \log 3, \log 30 = \log 2 + \log 3 + \log 5\}$ , the lower-triangular basis matrix $M = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{pmatrix}$ and its exact integer difference inverse $L = \begin{pmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{pmatrix}$ satisfy $L M = I _ 3$ .
+**Proposition A.82**. In the primorial logarithmic basis $\lbrace \log 2, \log 6 = \log 2 + \log 3, \log 30 = \log 2 + \log 3 + \log 5\rbrace$ , the lower-triangular basis matrix $M = \bigl[(1, 0, 0); (1, 1, 0); (1, 1, 1)\bigr]$ and its exact integer difference inverse $L = \bigl[(1, 0, 0); (-1, 1, 0); (0, -1, 1)\bigr]$ satisfy $L M = I _ 3$ .
 
-**Proposition A.83**. Extending Proposition A.82 to the four-prime primorial basis $\{2, 6, 30, 210\}$ over $\{2, 3, 5, 7\}$ , the $4\times 4$ lower-triangular all-ones matrix $M _ 4$ and first-difference matrix $L _ 4 = M _ 4^{-1}$ satisfy $L _ 4 M _ 4 = I _ 4$ .
+**Proposition A.83**. Extending Proposition A.82 to the four-prime primorial basis $\lbrace 2, 6, 30, 210\rbrace$ over $\lbrace 2, 3, 5, 7\rbrace$ , the $4\times 4$ lower-triangular all-ones matrix $M _ 4$ and first-difference matrix $L _ 4 = M _ 4^{-1}$ satisfy $L _ 4 M _ 4 = I _ 4$ .
 
-**Proposition A.84**. In the four-dimensional state space (finite-window $(1, P _ {\ast}]$ prime principal part, classical zero-free region width, prime-number-theorem remainder order, and post-horizon $p > P _ {\ast}$ Beurling tail) under $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ , the finite surgery of Theorem B₂ corresponds to the zero-drift vector $\delta = (-1, 0, 1, 0)^{\mathsf{T}} \in \ker E$ ( $E\delta = 0$ ), placing $\widetilde{\zeta} _ B$ in the exact same quotient fiber as the ordinary prime prefix.
+**Proposition A.84**. In the four-dimensional state space (finite-window $(1, P _ {\ast}]$ prime principal part, classical zero-free region width, prime-number-theorem remainder order, and post-horizon $p > P _ {\ast}$ Beurling tail) under $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ , the finite surgery of Theorem B₂ corresponds to the zero-drift vector $\delta = (-1, 0, 1, 0)^{\mathsf{T}} \in \ker E$ ( $E\delta = 0$ ), placing $\widetilde{\zeta} _ B$ in the exact same quotient fiber as the ordinary prime prefix.
 
-**Proposition A.85**. For the rational Euler modifier $H _ {P _ {\ast}}(s) = \prod _ {b \in D}(1-b^{-s})/\prod _ {p \in A}(1-p^{-s})$ of Theorem B₂ evaluated at rational test powers $p^{-s} \in \{1/2, 1/4, 1/8\}$ in $\operatorname{Re}(s) > 0$ , the local Euler factors form the strictly positive diagonal matrix $D _ {\mathrm{Euler}} = \operatorname{diag}(1/2, 3/4, 7/8) \succ 0$ .
+**Proposition A.85**. For the rational Euler modifier $H _ {P _ {\ast}}(s) = \prod _ {b \in D}(1-b^{-s})/\prod _ {p \in A}(1-p^{-s})$ of Theorem B₂ evaluated at rational test powers $p^{-s} \in \lbrace 1/2, 1/4, 1/8\rbrace$ in $\operatorname{Re}(s) > 0$ , the local Euler factors form the strictly positive diagonal matrix $D _ {\mathrm{Euler}} = \operatorname{diag}(1/2, 3/4, 7/8) \succ 0$ .
 
 **Proposition A.86**. In the five-dimensional counting-function perturbation space of Theorem B₂, the bounded shift $|\pi _ {\widetilde{B}}(x) - \pi _ B(x)| = O(1)$ and logarithmic shift $|\psi _ {\widetilde{B}}(x) - \psi _ B(x)| = O(\log x)$ lie inside the fifth-coordinate asymptotic equivalence kernel $\ker E$ relative to $x\exp(-c _ 1\sqrt{\log x})$ , so $A _ 2 = \operatorname{diag}(1,1,1,1,0)$ satisfies $E A _ 2 K = 0$ .
 
@@ -1092,71 +1092,71 @@ $$
 
 **Proposition A.88**. Between the finite prime sieve operator $A _ {\mathrm{sieve}}$ and the asymptotic error evolution operator $A _ {\mathrm{asymp}}$ , the non-vanishing commutator $[A _ {\mathrm{sieve}}, A _ {\mathrm{asymp}}] \neq 0$ lies entirely inside the post-horizon tail kernel $\ker E$ ( $E[A _ {\mathrm{sieve}}, A _ {\mathrm{asymp}}] = 0$ ).
 
-**Proposition A.89**. The weighted logarithmic observation matrix $M = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}$ and its exact integer inverse $L = \begin{pmatrix} 1 & -2 & 4 \\ 0 & 1 & -2 \\ 0 & 0 & 1 \end{pmatrix}$ satisfy $L M = I _ 3$ .
+**Proposition A.89**. The weighted logarithmic observation matrix $M = \bigl[(1, 2, 0); (0, 1, 2); (0, 0, 1)\bigr]$ and its exact integer inverse $L = \bigl[(1, -2, 4); (0, 1, -2); (0, 0, 1)\bigr]$ satisfy $L M = I _ 3$ .
 
-**Proposition A.90**. On the prime basis $\{17, 19, 23\}$ , the coupled logarithmic Gram matrix $G = \begin{pmatrix} 3 & 1 & 0 \\ 1 & 3 & 1 \\ 0 & 1 & 3 \end{pmatrix}$ has exact rational $LDL^{\mathsf{T}}$ pivots $D = \operatorname{diag}(3, 8/3, 21/8) \succ 0$ .
+**Proposition A.90**. On the prime basis $\lbrace 17, 19, 23\rbrace$ , the coupled logarithmic Gram matrix $G = \bigl[(3, 1, 0); (1, 3, 1); (0, 1, 3)\bigr]$ has exact rational $LDL^{\mathsf{T}}$ pivots $D = \operatorname{diag}(3, 8/3, 21/8) \succ 0$ .
 
-**Proposition A.91**. The two-row finite-horizon symmetric-sum observation matrix $M = \begin{pmatrix} 1 & 1 & 1 \\ 2 & 3 & 4 \end{pmatrix}$ annihilates the non-zero tail perturbation vector $c = (1, -2, 1)^{\mathsf{T}}$ ( $M c = (0, 0)^{\mathsf{T}}$ ).
+**Proposition A.91**. The two-row finite-horizon symmetric-sum observation matrix $M = \bigl[(1, 1, 1); (2, 3, 4)\bigr]$ annihilates the non-zero tail perturbation vector $c = (1, -2, 1)^{\mathsf{T}}$ ( $M c = (0, 0)^{\mathsf{T}}$ ).
 
 **Proposition A.92**. In the four-dimensional representation of Theorem B₀ separating universally quantified semantic prime variables (rows of $E$ ) from literal numeral token counts in source syntax (columns of $K$ ), inductive step operators $A _ 1, A _ 2$ satisfy $E A _ i K = 0$ .
 
-**Proposition A.93**. Locking the full-order unique prime factorization rigidity invariant in the third row of the full-rank observation matrix $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}$ blocks any Beurling continuous deformation from remaining inside $\ker E$ .
+**Proposition A.93**. Locking the full-order unique prime factorization rigidity invariant in the third row of the full-rank observation matrix $E = \bigl[(1, 0, 1, 0, 0); (0, 1, 0, 1, 0); (0, 0, 0, 0, 1)\bigr]$ blocks any Beurling continuous deformation from remaining inside $\ker E$ .
 
-**Proposition A.94**. In the dual prime-window $\{2, 3\}$ and $\{5, 7\}$ block model under $E = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$ , fractional window transfers $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.94**. In the dual prime-window $\lbrace 2, 3\rbrace$ and $\lbrace 5, 7\rbrace$ block model under $E = \bigl[(1, 1, 0, 0); (0, 0, 1, 1)\bigr]$ , fractional window transfers $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 **Proposition A.95**. Separating first-order prime powers ( $m = 1$ ) from higher prime powers ( $m \ge 2$ , which converge absolutely on $\operatorname{Re}(s) > 1/2$ ) in $-\sum _ {p \le P _ {\ast}} \log(1 - p^{-s}) = \sum _ {p \le P _ {\ast}} \sum _ {m \ge 1} \frac{1}{m} p^{-ms}$ satisfies $E A _ i K = 0$ .
 
-**Proposition A.96**. For Chebyshev jump recovery $\psi(x) = \sum _ {p^m \le x} \log p$ , the symmetric difference matrix $M' = \begin{pmatrix} 2 & 1 & 0 \\ 1 & 2 & 1 \\ 0 & 1 & 2 \end{pmatrix}$ and its exact rational inverse $L' = \frac{1}{4}\begin{pmatrix} 3 & -2 & 1 \\ -2 & 4 & -2 \\ 1 & -2 & 3 \end{pmatrix}$ satisfy $L' M' = I _ 3$ .
+**Proposition A.96**. For Chebyshev jump recovery $\psi(x) = \sum _ {p^m \le x} \log p$ , the symmetric difference matrix $M' = \bigl[(2, 1, 0); (1, 2, 1); (0, 1, 2)\bigr]$ and its exact rational inverse $L' = \frac{1}{4}\bigl[(3, -2, 1); (-2, 4, -2); (1, -2, 3)\bigr]$ satisfy $L' M' = I _ 3$ .
 
-**Proposition A.97**. In the five-dimensional logarithmic-derivative difference space $\frac{H _ {P _ {\ast}}'}{H _ {P _ {\ast}}}(s) = \sum _ {b \in D} \frac{\log b}{b^s - 1} - \sum _ {p \le P _ {\ast}} \frac{\log p}{p^s - 1}$ , holomorphicity on $\operatorname{Re}(s) > 0$ implies zero contour winding contribution on every rational rectangle $B \subset \{\theta < \operatorname{Re}(s) < 1\}$ ( $E A _ i K = 0$ ).
+**Proposition A.97**. In the five-dimensional logarithmic-derivative difference space $\frac{H _ {P _ {\ast}}'}{H _ {P _ {\ast}}}(s) = \sum _ {b \in D} \frac{\log b}{b^s - 1} - \sum _ {p \le P _ {\ast}} \frac{\log p}{p^s - 1}$ , holomorphicity on $\operatorname{Re}(s) > 0$ implies zero contour winding contribution on every rational rectangle $B \subset \lbrace \theta < \operatorname{Re}(s) < 1\rbrace$ ( $E A _ i K = 0$ ).
 
 **Proposition A.98**. For the Beurling density exponent $\theta = 3/4 \in (1/2, 1)$ in $|N _ B(x) - \kappa _ B x| \le C _ 1 x^\theta$ , the rational strip margin $\theta - 1/2 = 1/4 > 0$ forms the positive-definite diagonal matrix $\operatorname{diag}(1/4, 3/4, 1) \succ 0$ .
 
 **Proposition A.99**. Projecting the Beurling off-axis zero trajectory $\rho _ n = 1 - \frac{a}{\log t _ n} + it _ n$ onto an observation map $E$ that checks only the interior of the classical zero-free region $\sigma > 1 - a/\log t$ places the boundary zero sequence inside $\ker E$ ( $E A _ i K = 0$ ).
 
-**Proposition A.100**. In the six-dimensional prime-factorization-locked state space with $E = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \end{pmatrix}$ , full arithmetic transfers $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
+**Proposition A.100**. In the six-dimensional prime-factorization-locked state space with $E = \bigl[(1, 0, 1, 0, 0, 0); (0, 1, 0, 1, 0, 0); (0, 0, 0, 0, 1, 0)\bigr]$ , full arithmetic transfers $A _ 1, A _ 2$ satisfy $E A _ 1 K = E A _ 2 K = 0$ .
 
 #### 6.1.8　Family P3: Theorems C₀–C₃ Coefficient Uniqueness, Odd/Even Channel Off-Axis Countermodels, and the Extraction Trilemma Theorem 1.4 (Propositions A.101–A.120)
 
-**Proposition A.101**. In the three-coefficient truncation $f(\sigma) = a _ 1 + a _ 2 2^{-\sigma} + a _ 3 3^{-\sigma}$ of Theorem C₀, the scaled upper-triangular evaluation matrix $M _ {\mathrm{coef}} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}$ and its exact integer inverse $L _ {\mathrm{coef}} = \begin{pmatrix} 1 & -1 & 1 \\ 0 & 1 & -2 \\ 0 & 0 & 1 \end{pmatrix}$ satisfy $L _ {\mathrm{coef}} M _ {\mathrm{coef}} = I _ 3$ , uniquely recovering $(a _ 1, a _ 2, a _ 3)^{\mathsf{T}}$ .
+**Proposition A.101**. In the three-coefficient truncation $f(\sigma) = a _ 1 + a _ 2 2^{-\sigma} + a _ 3 3^{-\sigma}$ of Theorem C₀, the scaled upper-triangular evaluation matrix $M _ {\mathrm{coef}} = \bigl[(1, 1, 1); (0, 1, 2); (0, 0, 1)\bigr]$ and its exact integer inverse $L _ {\mathrm{coef}} = \bigl[(1, -1, 1); (0, 1, -2); (0, 0, 1)\bigr]$ satisfy $L _ {\mathrm{coef}} M _ {\mathrm{coef}} = I _ 3$ , uniquely recovering $(a _ 1, a _ 2, a _ 3)^{\mathsf{T}}$ .
 
 **Proposition A.102**. For the modulo- $5$ Davenport–Heilbronn coefficients $a _ n(\kappa)$ of Theorem C₁, at the first composite index $n = 6 = 2 \times 3$ the multiplicativity defect $\Delta _ {\mathrm{mult}}(2,3) = a _ 6 - a _ 2 a _ 3 = 1 + \kappa^2$ is strictly positive. At the rational test point $\kappa = 1$ (or $\kappa = 1/2$ ), the diagonal defect matrix $\operatorname{diag}(1, 1, 2) \succ 0$ (respectively $\operatorname{diag}(1, 1/4, 5/4) \succ 0$ ) is strictly positive definite.
 
 **Proposition A.103**. In the odd-channel completed functional equation of Theorem C₁, the unit-modulus root factor $|\frac{1+i\kappa}{1-i\kappa}|^2 = 1$ preserves the two-dimensional Euclidean norm matrix $I _ 2 = L D L^{\mathsf{T}}$ ( $D = \operatorname{diag}(1, 1) \succ 0$ ), while the multiplicativity defect resides inside the blind kernel $\ker E$ of the weak analytic quotient.
 
-**Proposition A.104**. For the even-channel reciprocal polynomial $P _ r(y) = 1 - (r + r^{-1})y + y^2$ of Theorem C₂ at the rational model point $r = 2, y = 1/2$ (corresponding to $r = 2^{1/4}, s = 3/4, y(3/4) = r^{-1}$ ), the scaled power vector $c = (4, 2, 1)^{\mathsf{T}}$ lies in the exact nullspace of $M _ {\mathrm{even}} = \begin{pmatrix} 1 & -5/2 & 1 \\ 0 & 1 & -2 \end{pmatrix}$ : $M _ {\mathrm{even}}(4, 2, 1)^{\mathsf{T}} = (0, 0)^{\mathsf{T}}$ .
+**Proposition A.104**. For the even-channel reciprocal polynomial $P _ r(y) = 1 - (r + r^{-1})y + y^2$ of Theorem C₂ at the rational model point $r = 2, y = 1/2$ (corresponding to $r = 2^{1/4}, s = 3/4, y(3/4) = r^{-1}$ ), the scaled power vector $c = (4, 2, 1)^{\mathsf{T}}$ lies in the exact nullspace of $M _ {\mathrm{even}} = \bigl[(1, -5/2, 1); (0, 1, -2)\bigr]$ : $M _ {\mathrm{even}}(4, 2, 1)^{\mathsf{T}} = (0, 0)^{\mathsf{T}}$ .
 
-**Proposition A.105**. Under $s \leftrightarrow 1-s$ ( $y \leftrightarrow y^{-1}$ ), the normalized factor $Q _ r(y) = y + y^{-1} - (r + r^{-1})$ is strictly symmetric, so in the four-dimensional weak analytic quotient space $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ checking only functional-equation symmetry and the $s=1$ pole, the off-axis reciprocal root deformation lies entirely in $\ker E$ ( $E A _ i K = 0$ ).
+**Proposition A.105**. Under $s \leftrightarrow 1-s$ ( $y \leftrightarrow y^{-1}$ ), the normalized factor $Q _ r(y) = y + y^{-1} - (r + r^{-1})$ is strictly symmetric, so in the four-dimensional weak analytic quotient space $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ checking only functional-equation symmetry and the $s=1$ pole, the off-axis reciprocal root deformation lies entirely in $\ker E$ ( $E A _ i K = 0$ ).
 
-**Proposition A.106**. For the symmetric Trojan polynomial $P _ {\mathrm{Trojan}}(s) = (s - 3/4)(s - 1/4) = s^2 - s + 3/16 = (s - 1/2)^2 - 1/16$ of Corollary C₃ and Scheme 5, the coefficient transformation matrix $M = \begin{pmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 3/16 & -1/2 & 1 \end{pmatrix}$ and its exact rational inverse $L = M^{-1}$ satisfy $L M = I _ 3$ .
+**Proposition A.106**. For the symmetric Trojan polynomial $P _ {\mathrm{Trojan}}(s) = (s - 3/4)(s - 1/4) = s^2 - s + 3/16 = (s - 1/2)^2 - 1/16$ of Corollary C₃ and Scheme 5, the coefficient transformation matrix $M = \bigl[(1, 0, 0); (-1, 1, 0); (3/16, -1/2, 1)\bigr]$ and its exact rational inverse $L = M^{-1}$ satisfy $L M = I _ 3$ .
 
-**Proposition A.107**. In the four-dimensional state representation of the Extraction Trilemma (Theorem 1.4), for every non-zero Boolean defect indicator $(a, d, k) \in \{0, 1\}^3 \setminus \{(0,0,0)\}$ the inclusion-exclusion invariant $u(a,d,k) = 1 - (1-a)(1-d)(1-k) = 1$ holds identically, and any subgraph pruning or same-name proof-body rewrite operator $A _ {\mathrm{crop}}, A _ {\mathrm{rewrite}}$ under a frozen weak quotient $E$ satisfies $E A _ {\mathrm{crop}} K = E A _ {\mathrm{rewrite}} K = 0$ .
+**Proposition A.107**. In the four-dimensional state representation of the Extraction Trilemma (Theorem 1.4), for every non-zero Boolean defect indicator $(a, d, k) \in \lbrace 0, 1\rbrace ^3 \setminus \lbrace (0,0,0)\rbrace$ the inclusion-exclusion invariant $u(a,d,k) = 1 - (1-a)(1-d)(1-k) = 1$ holds identically, and any subgraph pruning or same-name proof-body rewrite operator $A _ {\mathrm{crop}}, A _ {\mathrm{rewrite}}$ under a frozen weak quotient $E$ satisfies $E A _ {\mathrm{crop}} K = E A _ {\mathrm{rewrite}} K = 0$ .
 
-**Proposition A.108**. In the live $\mathtt{lc23}$ repository line-accounting identity $\Delta L _ {\mathrm{net}} = L _ {\mathrm{del}} + \Delta L _ {\mathrm{mod}} - L _ {\mathrm{add}} = 785\,224 + 17\,676 - 27 = 802\,873$ , the accounting matrix $M = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & -1 \end{pmatrix}$ and its exact integer inverse $L = \begin{pmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & 1 & -1 \end{pmatrix}$ satisfy $L M = I _ 3$ .
+**Proposition A.108**. In the live $\text{lc23}$ repository line-accounting identity $\Delta L _ {\mathrm{net}} = L _ {\mathrm{del}} + \Delta L _ {\mathrm{mod}} - L _ {\mathrm{add}} = 785,224 + 17,676 - 27 = 802,873$ , the accounting matrix $M = \bigl[(1, 0, 0); (1, 1, 0); (1, 1, -1)\bigr]$ and its exact integer inverse $L = \bigl[(1, 0, 0); (-1, 1, 0); (0, 1, -1)\bigr]$ satisfy $L M = I _ 3$ .
 
-**Proposition A.109**. In the full environment partition $|V| = |V _ {\mathrm{cone}}| + |V _ {\mathrm{out}}| = 1\,478\,243 + 1\,222\,889 = 2\,701\,132$ on $\mathtt{lc23}$ , any deletion operator $A _ {\mathrm{out}} = \operatorname{diag}(I _ {\mathrm{cone}}, 0 _ {\mathrm{out}})$ restricted to the $1\,222\,889$ out-of-cone declarations satisfies $E A _ {\mathrm{out}} K = 0$ on the cone observation matrix $E = \begin{pmatrix} I _ {\mathrm{cone}} & 0 \end{pmatrix}$ .
+**Proposition A.109**. In the full environment partition $|V| = |V _ {\mathrm{cone}}| + |V _ {\mathrm{out}}| = 1,478,243 + 1,222,889 = 2,701,132$ on $\text{lc23}$ , any deletion operator $A _ {\mathrm{out}} = \operatorname{diag}(I _ {\mathrm{cone}}, 0 _ {\mathrm{out}})$ restricted to the $1,222,889$ out-of-cone declarations satisfies $E A _ {\mathrm{out}} K = 0$ on the cone observation matrix $E = (I _ {\mathrm{cone}}, 0)$ .
 
-**Proposition A.110**. By strong max-flow min-cut duality on the node-split active declaration network of $\mathtt{lc23}$ ( $|V _ {\mathrm{active}}| = 1\,072\,980$ ), the $8$ vertex-disjoint augmenting paths and the $8$ bottleneck cut vertices ( $\mathtt{DirichletCharacter.FactorsThrough}$ , $\mathtt{Formalism.VW.critLine}$ , $\mathtt{Formalism.VW.rh\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}every}$ , $\mathtt{HurwitzZeta.hurwitzZetaEven}$ , $\mathtt{UpperTheory.FinalTheorems.everyCharacter}$ , $\mathtt{ZMod.LFunction}$ , $\mathtt{claimAll}$ , $\mathtt{starRingEnd.\underline{\hspace{0.35em}}proof\underline{\hspace{0.35em}}2}$ ) satisfy $|f _ {\max}| = 8 = |C _ {\min}|$ with flow conservation $E A _ {\mathrm{flow}} K = 0$ .
+**Proposition A.110**. By strong max-flow min-cut duality on the node-split active declaration network of $\text{lc23}$ ( $|V _ {\mathrm{active}}| = 1,072,980$ ), the $8$ vertex-disjoint augmenting paths and the $8$ bottleneck cut vertices ( $\text{DirichletCharacter.FactorsThrough}$ , $\text{Formalism.VW.critLine}$ , $\text{Formalism.VW.rh\underline{\hspace{0.35em}}of\underline{\hspace{0.35em}}every}$ , $\text{HurwitzZeta.hurwitzZetaEven}$ , $\text{UpperTheory.FinalTheorems.everyCharacter}$ , $\text{ZMod.LFunction}$ , $\text{claimAll}$ , $\text{starRingEnd.\underline{\hspace{0.35em}}proof\underline{\hspace{0.35em}}2}$ ) satisfy $|f _ {\max}| = 8 = |C _ {\min}|$ with flow conservation $E A _ {\mathrm{flow}} K = 0$ .
 
-**Proposition A.111**. In Scheme 1 (Probe 1C) and Theorem III-A, the modulo- $2$ principal character Euler factor $1 - 2^{-s _ 1} = 0$ at $s _ 1 = \frac{2\pi i}{\log 2}$ ( $\operatorname{Re}(s _ 1) = 0 \neq 1/2$ ) is legitimately excluded from the open critical strip if and only if the left boundary guard $0 < \operatorname{Re}(s)$ is locked in the observation matrix $E = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix}$ ( $E A _ i K = 0$ ).
+**Proposition A.111**. In Scheme 1 (Probe 1C) and Theorem III-A, the modulo- $2$ principal character Euler factor $1 - 2^{-s _ 1} = 0$ at $s _ 1 = \frac{2\pi i}{\log 2}$ ( $\operatorname{Re}(s _ 1) = 0 \neq 1/2$ ) is legitimately excluded from the open critical strip if and only if the left boundary guard $0 < \operatorname{Re}(s)$ is locked in the observation matrix $E = \bigl[(1, 0, 0); (0, 1, 0)\bigr]$ ( $E A _ i K = 0$ ).
 
-**Proposition A.112**. In Scheme 6 and Equation $(4.11)$ , the modulo- $4$ imprimitive principal character Gauss-sum vector $c _ {\mathrm{Gauss}} = (0, 1, 0, -1)^{\mathsf{T}}$ is annihilated by the sum-and-parity observation matrix $M = \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & 0 & 1 & 0 \end{pmatrix}$ ( $M c _ {\mathrm{Gauss}} = (0, 0)^{\mathsf{T}}$ ), certifying $\tau(\chi _ {0,4}) = 0 \neq 2$ .
+**Proposition A.112**. In Scheme 6 and Equation $(4.11)$ , the modulo- $4$ imprimitive principal character Gauss-sum vector $c _ {\mathrm{Gauss}} = (0, 1, 0, -1)^{\mathsf{T}}$ is annihilated by the sum-and-parity observation matrix $M = \bigl[(1, 1, 1, 1); (1, 0, 1, 0)\bigr]$ ( $M c _ {\mathrm{Gauss}} = (0, 0)^{\mathsf{T}}$ ), certifying $\tau(\chi _ {0,4}) = 0 \neq 2$ .
 
 **Proposition A.113**. In Scheme 6, enforcing the typeclass guard $\operatorname{NeZero}(N)$ via the modulus-zero projection $A _ {\mathrm{neZero}} = \operatorname{diag}(1, 1, 1, 0)$ isolates the degenerate ring $\operatorname{ZMod}(0) \cong \mathbb{Z}$ inside $\ker E$ ( $E A _ {\mathrm{neZero}} K = 0$ ).
 
-**Proposition A.114**. In the two-tier verification model $\begin{pmatrix} E _ {\mathrm{elab}} \\ E _ {\mathrm{kernel}} \end{pmatrix}$ for $\mathtt{kexactB}$ , setting the frontend expected type to $\mathtt{none}$ opens a non-trivial frontend blind kernel $K _ {\mathrm{elab}} \subseteq \ker E _ {\mathrm{elab}}$ , transferring all type-mismatch rejection to the second-row kernel readout $E _ {\mathrm{kernel}}$ .
+**Proposition A.114**. In the two-tier verification model $(E _ {\mathrm{elab}}, E _ {\mathrm{kernel}})^{\mathsf{T}}$ for $\text{kexactB}$ , setting the frontend expected type to $\text{none}$ opens a non-trivial frontend blind kernel $K _ {\mathrm{elab}} \subseteq \ker E _ {\mathrm{elab}}$ , transferring all type-mismatch rejection to the second-row kernel readout $E _ {\mathrm{kernel}}$ .
 
-**Proposition A.115**. For the $66$ caller modules of $\mathtt{kexactB}$ partitioned into $62$ in-cone modules ( $1\,816$ declarations) and $4$ out-of-cone modules ( $62 + 4 = 66$ ), the partition matrix $M = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$ and $L = \begin{pmatrix} 1 & -1 \\ 0 & 1 \end{pmatrix}$ satisfy $L M = I _ 2$ .
+**Proposition A.115**. For the $66$ caller modules of $\text{kexactB}$ partitioned into $62$ in-cone modules ( $1,816$ declarations) and $4$ out-of-cone modules ( $62 + 4 = 66$ ), the partition matrix $M = \bigl[(1, 1); (0, 1)\bigr]$ and $L = \bigl[(1, -1); (0, 1)\bigr]$ satisfy $L M = I _ 2$ .
 
-**Proposition A.116**. For the $10$ in-cone $\mathtt{CapelliIdentities}$ modules whose proof bodies were rewritten ( $b _ {\mathrm{orig}}(v) \mapsto b _ {\mathrm{ext}}(v)$ ) while keeping declaration names and type signatures $\tau(v)$ fixed, the interface readout $E = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \end{pmatrix}$ sees the proof-body rewrite as an intra-fiber shift $\delta = (-1, 0, 1, 0)^{\mathsf{T}} \in \ker E$ on the replacement boundary $\partial E _ {\mathrm{ext}}$ .
+**Proposition A.116**. For the $10$ in-cone $\text{CapelliIdentities}$ modules whose proof bodies were rewritten ( $b _ {\mathrm{orig}}(v) \mapsto b _ {\mathrm{ext}}(v)$ ) while keeping declaration names and type signatures $\tau(v)$ fixed, the interface readout $E = \bigl[(1, 0, 1, 0); (0, 1, 0, 1)\bigr]$ sees the proof-body rewrite as an intra-fiber shift $\delta = (-1, 0, 1, 0)^{\mathsf{T}} \in \ker E$ on the replacement boundary $\partial E _ {\mathrm{ext}}$ .
 
-**Proposition A.117**. In the $20$ -step lexicographic bisection on $\mathtt{lc23}$ ( $1\,072\,972 \to \cdots \to 1$ , converging to $k^{\ast} = 955\,506$ ), the step bound $20 = \lceil \log _ 2(1\,072\,972) \rceil < 25$ and cut capacity $8 > 0$ form the positive-definite diagonal margin matrix $\operatorname{diag}(25 - 20,\,8,\,1) = \operatorname{diag}(5, 8, 1) \succ 0$ .
+**Proposition A.117**. In the $20$ -step lexicographic bisection on $\text{lc23}$ ( $1,072,972 \to \cdots \to 1$ , converging to $k^{\ast} = 955,506$ ), the step bound $20 = \lceil \log _ 2(1,072,972) \rceil < 25$ and cut capacity $8 > 0$ form the positive-definite diagonal margin matrix $\operatorname{diag}(25 - 20, 8, 1) = \operatorname{diag}(5, 8, 1) \succ 0$ .
 
-**Proposition A.118**. In the constructive specification $(\mathcal{Z} _ {P,X},\,\delta _ {P,X})$ of Equation $(5.17)$ , advancing the prime window $A _ P$ and summation window $A _ X$ in either order produces a non-zero intermediate commutator $[A _ P, A _ X] \neq 0$ whose effect on the conserved invariant readout $E$ vanishes identically ( $E[A _ P, A _ X] = 0$ and $E A _ i K = 0$ ).
+**Proposition A.118**. In the constructive specification $(\mathcal{Z} _ {P,X}, \delta _ {P,X})$ of Equation $(5.17)$ , advancing the prime window $A _ P$ and summation window $A _ X$ in either order produces a non-zero intermediate commutator $[A _ P, A _ X] \neq 0$ whose effect on the conserved invariant readout $E$ vanishes identically ( $E[A _ P, A _ X] = 0$ and $E A _ i K = 0$ ).
 
 **Proposition A.119**. Coupling the two-point puncture recovery matrix $M _ {\mathrm{punct}}$ with the right-half-plane coefficient recovery matrix $M _ {\mathrm{coef}}$ yields the $6\times 6$ block-invertible matrix $M _ 6 = \operatorname{diag}(M _ {\mathrm{punct}}, M _ {\mathrm{coef}})$ and exact rational left inverse $L _ 6 = \operatorname{diag}(L _ {\mathrm{punct}}, L _ {\mathrm{coef}})$ satisfying $L _ 6 M _ 6 = I _ 6$ .
 
-**Proposition A.120**. In the six-dimensional master confluence space uniting all five distortion mechanisms and three self-collision theorems, the full-rank observation matrix $E _ {\mathrm{total}} = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 1 \end{pmatrix}$ paired with remainder-hedged evolution operators $A _ 1, A _ 2$ satisfies $E _ {\mathrm{total}} A _ 1 K = E _ {\mathrm{total}} A _ 2 K = 0$ , $A _ i^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ , and $E _ {\mathrm{total}} \delta = 0$ .
+**Proposition A.120**. In the six-dimensional master confluence space uniting all five distortion mechanisms and three self-collision theorems, the full-rank observation matrix $E _ {\mathrm{total}} = \bigl[(1, 0, 1, 0, 0, 0); (0, 1, 0, 1, 0, 0); (0, 0, 0, 0, 1, 1)\bigr]$ paired with remainder-hedged evolution operators $A _ 1, A _ 2$ satisfies $E _ {\mathrm{total}} A _ 1 K = E _ {\mathrm{total}} A _ 2 K = 0$ , $A _ i^{\mathsf{T}} c _ {\mathrm{inv}} = c _ {\mathrm{inv}}$ , and $E _ {\mathrm{total}} \delta = 0$ .
 
 ---
 
@@ -1166,117 +1166,117 @@ To prove that every premise guard in Section 6.1 and in the main theorems is **i
 
 #### 6.2.1　Family NC-A01: Quotient-Kernel Leaks and Conservation Breakdown When the Unresolved Remainder Fiber Is Stripped (Propositions B.1–B.10)
 
-**Proposition B.1 (Negative-Control Twin of Proposition A.1)**. Stripping synchronized remainder deduction by replacing $A _ {\mathrm{keep}}$ with the unhedged accumulator $A _ {\mathrm{leak},1} = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$ causes the first nullspace basis vector $k _ 1 = (1, 0, -1, 0)^{\mathsf{T}} \in \ker E$ to pierce the observation readout: $E A _ {\mathrm{leak},1} K = \begin{pmatrix} -1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.1** (Negative-Control Twin of Proposition A.1). Stripping synchronized remainder deduction by replacing $A _ {\mathrm{keep}}$ with the unhedged accumulator $A _ {\mathrm{leak},1} = \bigl[(1, 0, 1, 0); (0, 1, 0, 0); (0, 0, 1, 0); (0, 0, 0, 1)\bigr]$ causes the first nullspace basis vector $k _ 1 = (1, 0, -1, 0)^{\mathsf{T}} \in \ker E$ to pierce the observation readout: $E A _ {\mathrm{leak},1} K = \bigl[(-1, 0); (0, 0)\bigr] \neq 0$ .
 
-**Proposition B.2 (Negative-Control Twin of Proposition A.2)**. Stripping the remainder-hedging condition $\delta \in \ker E$ by taking a one-sided truncation increment $\delta _ {\mathrm{bad}} = (1, 0, 0, 0)^{\mathsf{T}}$ violates prefix non-interference: $E\delta _ {\mathrm{bad}} = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
+**Proposition B.2** (Negative-Control Twin of Proposition A.2). Stripping the remainder-hedging condition $\delta \in \ker E$ by taking a one-sided truncation increment $\delta _ {\mathrm{bad}} = (1, 0, 0, 0)^{\mathsf{T}}$ violates prefix non-interference: $E\delta _ {\mathrm{bad}} = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
 
-**Proposition B.3 (Negative-Control Twin of Proposition A.3)**. Coupling the unpruned fifth auxiliary slot into the first principal channel ( $A _ {1,5} = 1$ ) causes the fifth-coordinate kernel vector $k _ 3 = (0,0,0,0,1)^{\mathsf{T}} \in \ker E$ to leak into the principal readout: $E A _ {\mathrm{bad},3} K = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.3** (Negative-Control Twin of Proposition A.3). Coupling the unpruned fifth auxiliary slot into the first principal channel ( $A _ {1,5} = 1$ ) causes the fifth-coordinate kernel vector $k _ 3 = (0,0,0,0,1)^{\mathsf{T}} \in \ker E$ to leak into the principal readout: $E A _ {\mathrm{bad},3} K = \bigl[(0, 0, 1); (0, 0, 0)\bigr] \neq 0$ .
 
-**Proposition B.4 (Negative-Control Twin of Proposition A.4)**. Scaling the first channel without remainder compensation ( $A _ {\mathrm{bad},4} = \operatorname{diag}(2, 1, 2, 1)$ ) violates total-sum conservation: $A _ {\mathrm{bad},4}^{\mathsf{T}} c _ {\mathrm{inv}} - c _ {\mathrm{inv}} = (1, 0, 1, 0)^{\mathsf{T}} \neq 0$ .
+**Proposition B.4** (Negative-Control Twin of Proposition A.4). Scaling the first channel without remainder compensation ( $A _ {\mathrm{bad},4} = \operatorname{diag}(2, 1, 2, 1)$ ) violates total-sum conservation: $A _ {\mathrm{bad},4}^{\mathsf{T}} c _ {\mathrm{inv}} - c _ {\mathrm{inv}} = (1, 0, 1, 0)^{\mathsf{T}} \neq 0$ .
 
-**Proposition B.5 (Negative-Control Twin of Proposition A.5)**. Modeling $\operatorname{LSeries}$ default-zero truncation on $\operatorname{Re}(s) \le 1$ by projecting away the second-coordinate remainder fiber without compensation, $A _ {\mathrm{drop\underline{\hspace{0.35em}}rem}} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$ on $E = (1, 1)$ and $K = (1, -1)^{\mathsf{T}}$ , yields $E A _ {\mathrm{drop\underline{\hspace{0.35em}}rem}} K = 1 \neq 0$ .
+**Proposition B.5** (Negative-Control Twin of Proposition A.5). Modeling $\operatorname{LSeries}$ default-zero truncation on $\operatorname{Re}(s) \le 1$ by projecting away the second-coordinate remainder fiber without compensation, $A _ {\mathrm{drop\underline{\hspace{0.35em}}rem}} = \bigl[(1, 0); (0, 0)\bigr]$ on $E = (1, 1)$ and $K = (1, -1)^{\mathsf{T}}$ , yields $E A _ {\mathrm{drop\underline{\hspace{0.35em}}rem}} K = 1 \neq 0$ .
 
-**Proposition B.6 (Negative-Control Twin of Proposition A.6)**. Dropping the third-stage remainder retention in the three-dimensional cascade ( $A _ {\mathrm{bad},6} = \operatorname{diag}(1, 1, 0)$ ) causes $k _ 2 = (0, 1, -1)^{\mathsf{T}} \in \ker E$ to leak: $E A _ {\mathrm{bad},6} K = (0, 1) \neq (0, 0)$ .
+**Proposition B.6** (Negative-Control Twin of Proposition A.6). Dropping the third-stage remainder retention in the three-dimensional cascade ( $A _ {\mathrm{bad},6} = \operatorname{diag}(1, 1, 0)$ ) causes $k _ 2 = (0, 1, -1)^{\mathsf{T}} \in \ker E$ to leak: $E A _ {\mathrm{bad},6} K = (0, 1) \neq (0, 0)$ .
 
-**Proposition B.7 (Negative-Control Twin of Proposition A.8)**. Misaligning the hedging signs across distinct channels via $\delta _ {\mathrm{bad}} = (1, 0, -1, 0)^{\mathsf{T}}$ under $E = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$ produces $E\delta _ {\mathrm{bad}} = (1, -1)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
+**Proposition B.7** (Negative-Control Twin of Proposition A.8). Misaligning the hedging signs across distinct channels via $\delta _ {\mathrm{bad}} = (1, 0, -1, 0)^{\mathsf{T}}$ under $E = \bigl[(1, 1, 0, 0); (0, 0, 1, 1)\bigr]$ produces $E\delta _ {\mathrm{bad}} = (1, -1)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
 
-**Proposition B.8 (Negative-Control Twin of Proposition A.9)**. Replacing the fractional diagonal retention weight $3/2$ by $1/2$ breaks column-sum unitarity and produces $E A _ {\mathrm{bad},8} K = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.8** (Negative-Control Twin of Proposition A.9). Replacing the fractional diagonal retention weight $3/2$ by $1/2$ breaks column-sum unitarity and produces $E A _ {\mathrm{bad},8} K = \bigl[(1, 0); (0, 0)\bigr] \neq 0$ .
 
-**Proposition B.9 (Negative-Control Twin of Proposition A.10)**. Perturbing the locked fifth guard coordinate via $\delta _ {\mathrm{bad}} = (0, 0, 0, 0, 1)^{\mathsf{T}}$ triggers the third readout row: $E\delta _ {\mathrm{bad}} = (0, 0, 1)^{\mathsf{T}} \neq 0$ .
+**Proposition B.9** (Negative-Control Twin of Proposition A.10). Perturbing the locked fifth guard coordinate via $\delta _ {\mathrm{bad}} = (0, 0, 0, 0, 1)^{\mathsf{T}}$ triggers the third readout row: $E\delta _ {\mathrm{bad}} = (0, 0, 1)^{\mathsf{T}} \neq 0$ .
 
-**Proposition B.10 (Negative-Control Twin of Proposition A.12)**. Erroneously pruning the load-bearing third remainder coordinate alongside the fifth diagnostic scaffold ( $A _ {\mathrm{bad},10} = \operatorname{diag}(1, 1, 0, 1, 0)$ ) causes $E A _ {\mathrm{bad},10} K = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.10** (Negative-Control Twin of Proposition A.12). Erroneously pruning the load-bearing third remainder coordinate alongside the fifth diagnostic scaffold ( $A _ {\mathrm{bad},10} = \operatorname{diag}(1, 1, 0, 1, 0)$ ) causes $E A _ {\mathrm{bad},10} K = \bigl[(1, 0, 0); (0, 0, 0)\bigr] \neq 0$ .
 
 #### 6.2.2　Family NC-A02: Residue Erasure Under Single-Point Pole Totalization and Puncture Degeneration (Propositions B.11–B.20)
 
-**Proposition B.11 (Negative-Control Twin of Theorem II and Proposition A.15)**. Stripping two-sided symmetric puncture sampling $s _ \pm = 1 \pm h$ by collapsing the first two rows of $M$ into identical single-point readouts $M _ {\mathrm{deg}} = \begin{pmatrix} 1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ drops the rank from $3$ to $2$ ( $\det M _ {\mathrm{deg}} = 0$ ), annihilates the residue-constant difference vector $M _ {\mathrm{deg}}(1, -1, 0)^{\mathsf{T}} = (0, 0, 0)^{\mathsf{T}}$ , and makes $L M _ {\mathrm{deg}} = I _ 3$ impossible for any $L$ .
+**Proposition B.11** (Negative-Control Twin of Theorem II and Proposition A.15). Stripping two-sided symmetric puncture sampling $s _ \pm = 1 \pm h$ by collapsing the first two rows of $M$ into identical single-point readouts $M _ {\mathrm{deg}} = \bigl[(1, 1, 0); (1, 1, 0); (0, 0, 1)\bigr]$ drops the rank from $3$ to $2$ ( $\det M _ {\mathrm{deg}} = 0$ ), annihilates the residue-constant difference vector $M _ {\mathrm{deg}}(1, -1, 0)^{\mathsf{T}} = (0, 0, 0)^{\mathsf{T}}$ , and makes $L M _ {\mathrm{deg}} = I _ 3$ impossible for any $L$ .
 
-**Proposition B.12 (Negative-Control Twin of Proposition A.16)**. Omitting the $h = 1/2$ step-size scaling in the left inverse ( $L _ 1 M _ {1/2} = \operatorname{diag}(2, 1, 1) \neq I _ 3$ ) produces a $100\%$ scale distortion $(L _ 1 M _ {1/2} - I _ 3) _ {1,1} = 1 \neq 0$ in the recovered residue.
+**Proposition B.12** (Negative-Control Twin of Proposition A.16). Omitting the $h = 1/2$ step-size scaling in the left inverse ( $L _ 1 M _ {1/2} = \operatorname{diag}(2, 1, 1) \neq I _ 3$ ) produces a 100% scale distortion $(L _ 1 M _ {1/2} - I _ 3) _ {1,1} = 1 \neq 0$ in the recovered residue.
 
-**Proposition B.13 (Negative-Control Twin of Proposition A.17)**. Dropping the third derivative-sampling row in the three-parameter Laurent germ model ( $M _ {\mathrm{bad},13} = \begin{pmatrix} 1 & 1 & 0 \\ -1 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix}$ ) plunges the linear slope $(0, 0, 1)^{\mathsf{T}}$ into $\ker M _ {\mathrm{bad},13}$ .
+**Proposition B.13** (Negative-Control Twin of Proposition A.17). Dropping the third derivative-sampling row in the three-parameter Laurent germ model ( $M _ {\mathrm{bad},13} = \bigl[(1, 1, 0); (-1, 1, 0); (0, 0, 0)\bigr]$ ) plunges the linear slope $(0, 0, 1)^{\mathsf{T}}$ into $\ker M _ {\mathrm{bad},13}$ .
 
-**Proposition B.14 (Negative-Control Twin of Proposition A.13)**. Mixing the higher-order regular term $c _ 1$ into the simple-pole residue slot ( $A _ {1,3} = 1$ ) causes $K = (0, 0, 1)^{\mathsf{T}}$ to contaminate the residue readout: $E A _ {\mathrm{bad},14} K = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
+**Proposition B.14** (Negative-Control Twin of Proposition A.13). Mixing the higher-order regular term $c _ 1$ into the simple-pole residue slot ( $A _ {1,3} = 1$ ) causes $K = (0, 0, 1)^{\mathsf{T}}$ to contaminate the residue readout: $E A _ {\mathrm{bad},14} K = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
 
-**Proposition B.15 (Negative-Control Twin of Proposition A.18)**. Choosing the third sampling row as the sum of the two punctured rows ( $M _ {\mathrm{bad},15} = \begin{pmatrix} 3 & 1 & 0 \\ -3 & 1 & 0 \\ 0 & 2 & 0 \end{pmatrix}$ ) reduces the third column to zero and traps $(0, 0, 1)^{\mathsf{T}}$ in the blind kernel.
+**Proposition B.15** (Negative-Control Twin of Proposition A.18). Choosing the third sampling row as the sum of the two punctured rows ( $M _ {\mathrm{bad},15} = \bigl[(3, 1, 0); (-3, 1, 0); (0, 2, 0)\bigr]$ ) reduces the third column to zero and traps $(0, 0, 1)^{\mathsf{T}}$ in the blind kernel.
 
-**Proposition B.16 (Negative-Control Twin of Proposition A.19)**. Losing the sign distinction in the second block ( $\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$ ) traps $(0, 0, 1, -1)^{\mathsf{T}}$ in the nullspace.
+**Proposition B.16** (Negative-Control Twin of Proposition A.19). Losing the sign distinction in the second block ( $\bigl[(1, 1); (1, 1)\bigr]$ ) traps $(0, 0, 1, -1)^{\mathsf{T}}$ in the nullspace.
 
-**Proposition B.17 (Negative-Control Twin of Proposition A.21)**. Replacing the antisymmetric punctured row $(1, 0, -1, 0)$ with a duplicate symmetric row $(1, 0, 1, 0)$ annihilates $(1, 0, -1, 0)^{\mathsf{T}}$ .
+**Proposition B.17** (Negative-Control Twin of Proposition A.21). Replacing the antisymmetric punctured row $(1, 0, -1, 0)$ with a duplicate symmetric row $(1, 0, 1, 0)$ annihilates $(1, 0, -1, 0)^{\mathsf{T}}$ .
 
-**Proposition B.18 (Negative-Control Twin of Proposition A.23)**. Degenerating the logarithmic-derivative residue weight row $(2, 1, 0)$ to $(1, 1, 0)$ identifies the first two rows and traps the pole-order vector $(1, -1, 0)^{\mathsf{T}}$ in $\ker M _ {\mathrm{bad},18}$ .
+**Proposition B.18** (Negative-Control Twin of Proposition A.23). Degenerating the logarithmic-derivative residue weight row $(2, 1, 0)$ to $(1, 1, 0)$ identifies the first two rows and traps the pole-order vector $(1, -1, 0)^{\mathsf{T}}$ in $\ker M _ {\mathrm{bad},18}$ .
 
-**Proposition B.19 (Negative-Control Twin of Proposition A.24)**. Coupling the fourth-coordinate default fill value $v _ {\mathrm{fill}}$ into the first residue coordinate ( $A _ {1,4} = 1$ ) leaks the artificial fill value directly into the residue readout: $E A _ {\mathrm{bad},19} K = (1, 0, 0)^{\mathsf{T}} \neq 0$ .
+**Proposition B.19** (Negative-Control Twin of Proposition A.24). Coupling the fourth-coordinate default fill value $v _ {\mathrm{fill}}$ into the first residue coordinate ( $A _ {1,4} = 1$ ) leaks the artificial fill value directly into the residue readout: $E A _ {\mathrm{bad},19} K = (1, 0, 0)^{\mathsf{T}} \neq 0$ .
 
-**Proposition B.20 (Negative-Control Twin of Proposition A.14)**. An uncompensated shift $\delta _ {\mathrm{bad}} = (1, 1, 0, 0)^{\mathsf{T}}$ of the residue and constant term produces $E\delta _ {\mathrm{bad}} = (1, 1)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
+**Proposition B.20** (Negative-Control Twin of Proposition A.14). An uncompensated shift $\delta _ {\mathrm{bad}} = (1, 1, 0, 0)^{\mathsf{T}}$ of the residue and constant term produces $E\delta _ {\mathrm{bad}} = (1, 1)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
 
 #### 6.2.3　Family NC-A03: Stripping Primitivity Guards, Cross-Modulus Fragmentation, and Four-Character Positivity Breakdown (Propositions B.21–B.30)
 
-**Proposition B.21 (Negative-Control Twin of Theorem III-A and Proposition A.25)**. Stripping synchronized bad-prime Euler-factor tracking across moduli via $A _ {\mathrm{bad},21} = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$ yields $E A _ {\mathrm{bad},21} K = \begin{pmatrix} -1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.21** (Negative-Control Twin of Theorem III-A and Proposition A.25). Stripping synchronized bad-prime Euler-factor tracking across moduli via $A _ {\mathrm{bad},21} = \bigl[(1, 0, 1, 0); (0, 1, 0, 0); (0, 0, 1, 0); (0, 0, 0, 1)\bigr]$ yields $E A _ {\mathrm{bad},21} K = \bigl[(-1, 0); (0, 0)\bigr] \neq 0$ .
 
-**Proposition B.22 (Negative-Control Twin of Theorem III-B and Proposition A.27)**. Severing the multiplicative binding of the fourth product-character channel $\chi _ 1\chi _ 2$ ( $A _ {\mathrm{bad},22} = \operatorname{diag}(1, 1, 1, 0)$ ) causes $k _ 3 = (0, 0, 1, -1)^{\mathsf{T}} \in \ker E$ to leak ( $E A _ {\mathrm{bad},22} k _ 3 = 1 \neq 0$ ) and drives the four-character sum $(1 + \chi _ 1(p))(1 + \chi _ 2(p))$ at $\chi _ 1(p) = \chi _ 2(p) = -1$ from $1 - 1 - 1 + 1 = 0$ down to the strictly negative value $1 - 1 - 1 + 0 = -1 < 0$ .
+**Proposition B.22** (Negative-Control Twin of Theorem III-B and Proposition A.27). Severing the multiplicative binding of the fourth product-character channel $\chi _ 1\chi _ 2$ ( $A _ {\mathrm{bad},22} = \operatorname{diag}(1, 1, 1, 0)$ ) causes $k _ 3 = (0, 0, 1, -1)^{\mathsf{T}} \in \ker E$ to leak ( $E A _ {\mathrm{bad},22} k _ 3 = 1 \neq 0$ ) and drives the four-character sum $(1 + \chi _ 1(p))(1 + \chi _ 2(p))$ at $\chi _ 1(p) = \chi _ 2(p) = -1$ from $1 - 1 - 1 + 1 = 0$ down to the strictly negative value $1 - 1 - 1 + 0 = -1 < 0$ .
 
-**Proposition B.23 (Negative-Control Twin of Proposition A.28)**. Dropping the third modulus channel in the six-dimensional common pullback ( $A _ {\mathrm{bad},23} = \operatorname{diag}(1, 1, 1, 1, 1, 0)$ ) leaks $(0, 0, 1, 0, 0, -1)^{\mathsf{T}}$ into the third readout with residual $1 \neq 0$ .
+**Proposition B.23** (Negative-Control Twin of Proposition A.28). Dropping the third modulus channel in the six-dimensional common pullback ( $A _ {\mathrm{bad},23} = \operatorname{diag}(1, 1, 1, 1, 1, 0)$ ) leaks $(0, 0, 1, 0, 0, -1)^{\mathsf{T}}$ into the third readout with residual $1 \neq 0$ .
 
-**Proposition B.24 (Negative-Control Twin of Proposition A.31)**. Altering the locked fifth-coordinate primitive conductor flag via $\delta _ {\mathrm{bad}} = (0, 0, 0, 0, -1)^{\mathsf{T}}$ without conductor factorization produces $E\delta _ {\mathrm{bad}} = (0, 0, -1)^{\mathsf{T}} \neq 0$ .
+**Proposition B.24** (Negative-Control Twin of Proposition A.31). Altering the locked fifth-coordinate primitive conductor flag via $\delta _ {\mathrm{bad}} = (0, 0, 0, 0, -1)^{\mathsf{T}}$ without conductor factorization produces $E\delta _ {\mathrm{bad}} = (0, 0, -1)^{\mathsf{T}} \neq 0$ .
 
 **Proposition B.25** (Negative-Control Twin of Proposition A.33 and Modulo- $4$ Gauss Sum Degeneracy). Mixing even zero-value residues into odd primitive residues modulo $4$ ( $A _ {2,3} = 1$ ) leaks $(0, 0, 1)^{\mathsf{T}}$ into the odd character readout: $E A _ {\mathrm{bad},25} K = (0, 1) \neq (0, 0)$ .
 
-**Proposition B.26 (Negative-Control Twin of Proposition A.26)**. Injecting the unfactored imaginary-axis bad-prime slot back into the second readout channel ( $A _ {2,5} = 1$ ) yields $E A _ {\mathrm{bad},26} K = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix} \neq 0$ .
+**Proposition B.26** (Negative-Control Twin of Proposition A.26). Injecting the unfactored imaginary-axis bad-prime slot back into the second readout channel ( $A _ {2,5} = 1$ ) yields $E A _ {\mathrm{bad},26} K = \bigl[(0, 0, 0); (0, 0, 1)\bigr] \neq 0$ .
 
-**Proposition B.27 (Negative-Control Twin of Proposition A.30)**. Unbalanced cross-modulus pullback weights $A _ {\mathrm{bad},27} = \operatorname{diag}(1, 2, 1, 2)$ violate character-sum conservation: $A _ {\mathrm{bad},27}^{\mathsf{T}} c _ {\mathrm{inv}} - c _ {\mathrm{inv}} = (0, 1, 0, 1)^{\mathsf{T}} \neq 0$ .
+**Proposition B.27** (Negative-Control Twin of Proposition A.30). Unbalanced cross-modulus pullback weights $A _ {\mathrm{bad},27} = \operatorname{diag}(1, 2, 1, 2)$ violate character-sum conservation: $A _ {\mathrm{bad},27}^{\mathsf{T}} c _ {\mathrm{inv}} - c _ {\mathrm{inv}} = (0, 1, 0, 1)^{\mathsf{T}} \neq 0$ .
 
-**Proposition B.28 (Negative-Control Twin of Proposition A.32)**. Introducing unaligned cross-cluster coupling $A _ {1,3} = 1$ leaks the second-cluster kernel vector $(0, 0, 1, -1, 0)^{\mathsf{T}}$ into the first cluster: $E A _ {\mathrm{bad},28} K = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.28** (Negative-Control Twin of Proposition A.32). Introducing unaligned cross-cluster coupling $A _ {1,3} = 1$ leaks the second-cluster kernel vector $(0, 0, 1, -1, 0)^{\mathsf{T}}$ into the first cluster: $E A _ {\mathrm{bad},28} K = \bigl[(0, 1, 0); (0, 0, 0)\bigr] \neq 0$ .
 
-**Proposition B.29 (Negative-Control Twin of Proposition A.34)**. An unhedged cross-modulus step $\delta _ {\mathrm{bad}} = (1, 1, -1, -1)^{\mathsf{T}}$ produces $E\delta _ {\mathrm{bad}} = (2, -2)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
+**Proposition B.29** (Negative-Control Twin of Proposition A.34). An unhedged cross-modulus step $\delta _ {\mathrm{bad}} = (1, 1, -1, -1)^{\mathsf{T}}$ produces $E\delta _ {\mathrm{bad}} = (2, -2)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
 
-**Proposition B.30 (Negative-Control Twin of Proposition A.36)**. Zeroing the fifth conductor guard coordinate ( $A _ {\mathrm{bad},30} = \operatorname{diag}(1, 1, 1, 1, 0, 0)$ ) violates five-channel invariant conservation by $(0, 0, 0, 0, -1, 0)^{\mathsf{T}} \neq 0$ .
+**Proposition B.30** (Negative-Control Twin of Proposition A.36). Zeroing the fifth conductor guard coordinate ( $A _ {\mathrm{bad},30} = \operatorname{diag}(1, 1, 1, 1, 0, 0)$ ) violates five-channel invariant conservation by $(0, 0, 0, 0, -1, 0)^{\mathsf{T}} \neq 0$ .
 
 #### 6.2.4　Family NC-A04: Commutative Flattening and Companion-Fiber Breach Between Additive Continuation and Multiplicative Sieving (Propositions B.31–B.40)
 
-**Proposition B.31 (Negative-Control Twin of Theorem IV and Proposition A.37)**. Allowing the additive shift companion coordinate to spill directly into the first visible principal coordinate ( $A _ {1,3} = 1$ ) causes $(0, 0, 1, 0)^{\mathsf{T}} \in \ker E$ to pierce the principal readout: $E A _ {\mathrm{bad},31} K = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.31** (Negative-Control Twin of Theorem IV and Proposition A.37). Allowing the additive shift companion coordinate to spill directly into the first visible principal coordinate ( $A _ {1,3} = 1$ ) causes $(0, 0, 1, 0)^{\mathsf{T}} \in \ker E$ to pierce the principal readout: $E A _ {\mathrm{bad},31} K = \bigl[(1, 0); (0, 0)\bigr] \neq 0$ .
 
-**Proposition B.32 (Commutative Simplification Degeneracy Twin of Proposition A.37)**. Flattening the multiplicative scaling operator to the identity ( $A _ 1 = A _ 2 = I _ 4$ ) reduces the commutator to the zero matrix $[A _ 1, A _ 2] = 0$ , annihilating the non-commutative algebraic structure of Theorem IV, Equation $(4.15)$ .
+**Proposition B.32** (Commutative Simplification Degeneracy Twin of Proposition A.37). Flattening the multiplicative scaling operator to the identity ( $A _ 1 = A _ 2 = I _ 4$ ) reduces the commutator to the zero matrix $[A _ 1, A _ 2] = 0$ , annihilating the non-commutative algebraic structure of Theorem IV, Equation $(4.15)$ .
 
-**Proposition B.33 (Negative-Control Twin of Proposition A.38)**. Leaking the fourth-coordinate shift residual into the second visible channel ( $A _ {2,4} = 2$ ) produces $E A _ {\mathrm{bad},33} K = \begin{pmatrix} 0 & 0 \\ 0 & 2 \end{pmatrix} \neq 0$ .
+**Proposition B.33** (Negative-Control Twin of Proposition A.38). Leaking the fourth-coordinate shift residual into the second visible channel ( $A _ {2,4} = 2$ ) produces $E A _ {\mathrm{bad},33} K = \bigl[(0, 0); (0, 2)\bigr] \neq 0$ .
 
-**Proposition B.34 (Negative-Control Twin of Proposition A.40)**. Exposing the intermediate Heisenberg companion coordinate to the first visible channel ( $A _ {1,3} = 1$ ) yields $E A _ {\mathrm{bad},34} K = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.34** (Negative-Control Twin of Proposition A.40). Exposing the intermediate Heisenberg companion coordinate to the first visible channel ( $A _ {1,3} = 1$ ) yields $E A _ {\mathrm{bad},34} K = \bigl[(1, 0, 0); (0, 0, 0)\bigr] \neq 0$ .
 
-**Proposition B.35 (Negative-Control Twin of Proposition A.41)**. Introducing an upper-triangular leak $A _ {1,2} = 1$ in the minimal three-dimensional non-commutative model yields $E A _ {\mathrm{bad},35} K = (1, 0) \neq (0, 0)$ .
+**Proposition B.35** (Negative-Control Twin of Proposition A.41). Introducing an upper-triangular leak $A _ {1,2} = 1$ in the minimal three-dimensional non-commutative model yields $E A _ {\mathrm{bad},35} K = (1, 0) \neq (0, 0)$ .
 
-**Proposition B.36 (Negative-Control Twin of Proposition A.43)**. Breaking the $(-1, +1)$ zero-sum shear balance between rows $1$ and $3$ of $A _ 1$ in Proposition A.43 (setting $(A _ 1) _ {1,4} = 0$ while keeping $(A _ 1) _ {3,4} = 1$ ) breaks quotient absorption of the commutator and leaks $(0, 0, 0, 1)^{\mathsf{T}}$ : $E A _ {\mathrm{bad},36} K = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.36** (Negative-Control Twin of Proposition A.43). Breaking the $(-1, +1)$ zero-sum shear balance between rows $1$ and $3$ of $A _ 1$ in Proposition A.43 (setting $(A _ 1) _ {1,4} = 0$ while keeping $(A _ 1) _ {3,4} = 1$ ) breaks quotient absorption of the commutator and leaks $(0, 0, 0, 1)^{\mathsf{T}}$ : $E A _ {\mathrm{bad},36} K = \bigl[(0, 1); (0, 0)\bigr] \neq 0$ .
 
-**Proposition B.37 (Negative-Control Twin of Proposition A.44)**. Breaking column-sum balance in the second-channel coupled scaling operator (changing $(3/2, -1/2)$ to $(3/2, 1/2)$ ) leaks $(0, 1, 0, -1)^{\mathsf{T}}$ : $E A _ {\mathrm{bad},37} K = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.37** (Negative-Control Twin of Proposition A.44). Breaking column-sum balance in the second-channel coupled scaling operator (changing $(3/2, -1/2)$ to $(3/2, 1/2)$ ) leaks $(0, 1, 0, -1)^{\mathsf{T}}$ : $E A _ {\mathrm{bad},37} K = \bigl[(0, 0); (1, 0)\bigr] \neq 0$ .
 
-**Proposition B.38 (Negative-Control Twin of Proposition A.46)**. Coupling the fifth companion coordinate into the third visible readout ( $A _ {3,5} = -1$ ) produces $E A _ {\mathrm{bad},38} K = \begin{pmatrix} 0 & 0 \\ 0 & 0 \\ 0 & -1 \end{pmatrix} \neq 0$ .
+**Proposition B.38** (Negative-Control Twin of Proposition A.46). Coupling the fifth companion coordinate into the third visible readout ( $A _ {3,5} = -1$ ) produces $E A _ {\mathrm{bad},38} K = \bigl[(0, 0); (0, 0); (0, -1)\bigr] \neq 0$ .
 
-**Proposition B.39 (Negative-Control Twin of Proposition A.47)**. Introducing an unhedged cross-channel shift $A _ {2,5} = 1$ produces $E A _ {\mathrm{bad},39} K = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix} \neq 0$ .
+**Proposition B.39** (Negative-Control Twin of Proposition A.47). Introducing an unhedged cross-channel shift $A _ {2,5} = 1$ produces $E A _ {\mathrm{bad},39} K = \bigl[(0, 0, 0); (0, 0, 1)\bigr] \neq 0$ .
 
-**Proposition B.40 (Negative-Control Twin of Proposition A.48)**. Flattening the six-dimensional Jordan-prime companion block to the identity reduces $[A _ 1, A _ 2]$ to $0$ .
+**Proposition B.40** (Negative-Control Twin of Proposition A.48). Flattening the six-dimensional Jordan-prime companion block to the identity reduces $[A _ 1, A _ 2]$ to $0$ .
 
 #### 6.2.5　Family NC-A05: Positivity Breakdown and Negative $LDL^{\mathsf{T}}$ Pivots When Off-Axis Zeros Breach Finite Gram Subblocks (Propositions B.41–B.50)
 
-**Proposition B.41 (Negative-Control Twin of Theorem V and Proposition A.49)**. When off-critical-line hyperbolic cosine contributions depress the diagonal to $1$ and strengthen off-diagonal coupling to $-2$ ( $G _ {\mathrm{bad},41} = \begin{pmatrix} 1 & -2 & 0 \\ -2 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ ), the exact rational $LDL^{\mathsf{T}}$ pivots become $D _ {\mathrm{bad},41} = \operatorname{diag}(1,\,-3,\,1)$ , exposing the strictly negative second pivot $d _ 2 = -3 < 0$ .
+**Proposition B.41** (Negative-Control Twin of Theorem V and Proposition A.49). When off-critical-line hyperbolic cosine contributions depress the diagonal to $1$ and strengthen off-diagonal coupling to $-2$ ( $G _ {\mathrm{bad},41} = \bigl[(1, -2, 0); (-2, 1, 0); (0, 0, 1)\bigr]$ ), the exact rational $LDL^{\mathsf{T}}$ pivots become $D _ {\mathrm{bad},41} = \operatorname{diag}(1, -3, 1)$ , exposing the strictly negative second pivot $d _ 2 = -3 < 0$ .
 
-**Proposition B.42 (Negative-Control Twin of Proposition A.50)**. Keeping the strictly positive $2\times 2$ leading subblock of Proposition A.50 intact ( $d _ 1 = 4 > 0, d _ 2 = 4 > 0$ ) while lowering the $(3,3)$ entry to $1/2$ drives the third $LDL^{\mathsf{T}}$ pivot strictly negative: $d _ 3 = \frac{1}{2} - 4\left(\frac{1}{4}\right)^2 - 4\left(\frac{3}{8}\right)^2 = -\frac{5}{16} < 0$ . This provides a self-contained $3\times 3$ rational matrix witness for Theorem V: **strict positivity on a lower-dimensional test block** ( $2\times 2$ ) coexists with a strictly negative pivot ( $d _ 3 = -5/16 < 0$ ) in the very next test dimension.
+**Proposition B.42** (Negative-Control Twin of Proposition A.50). Keeping the strictly positive $2\times 2$ leading subblock of Proposition A.50 intact ( $d _ 1 = 4 > 0, d _ 2 = 4 > 0$ ) while lowering the $(3,3)$ entry to $1/2$ drives the third $LDL^{\mathsf{T}}$ pivot strictly negative: $d _ 3 = \frac{1}{2} - 4\left(\frac{1}{4}\right)^2 - 4\left(\frac{3}{8}\right)^2 = -\frac{5}{16} < 0$ . This provides a self-contained $3\times 3$ rational matrix witness for Theorem V: **strict positivity on a lower-dimensional test block** ( $2\times 2$ ) coexists with a strictly negative pivot ( $d _ 3 = -5/16 < 0$ ) in the very next test dimension.
 
-**Proposition B.43 (Negative-Control Twin of Proposition A.51)**. Reversing the sign of the leading diagonal entry ( $G _ {\mathrm{bad},43} = \operatorname{diag}(-1, 3, 3)$ ) produces $d _ 1 = -1 < 0$ .
+**Proposition B.43** (Negative-Control Twin of Proposition A.51). Reversing the sign of the leading diagonal entry ( $G _ {\mathrm{bad},43} = \operatorname{diag}(-1, 3, 3)$ ) produces $d _ 1 = -1 < 0$ .
 
-**Proposition B.44 (Negative-Control Twin of Proposition A.52)**. Collinear degeneration of the first two test modes ( $G _ {\mathrm{bad},44} = \begin{pmatrix} 1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ ) reduces the second $LDL^{\mathsf{T}}$ pivot to $d _ 2 = 0 \ngtr 0$ .
+**Proposition B.44** (Negative-Control Twin of Proposition A.52). Collinear degeneration of the first two test modes ( $G _ {\mathrm{bad},44} = \bigl[(1, 1, 0); (1, 1, 0); (0, 0, 1)\bigr]$ ) reduces the second $LDL^{\mathsf{T}}$ pivot to $d _ 2 = 0 \ngtr 0$ .
 
-**Proposition B.45 (Negative-Control Twin of Proposition A.53)**. Keeping the $3\times 3$ leading tridiagonal block of Proposition A.53 strictly positive definite ( $d _ 1 = 2, d _ 2 = 3/2, d _ 3 = 4/3$ ) while setting the $(4,4)$ entry to $0$ yields the strictly negative fourth pivot $d _ 4 = 0 - \frac{4}{3}\left(\frac{3}{4}\right)^2 = -\frac{3}{4} < 0$ .
+**Proposition B.45** (Negative-Control Twin of Proposition A.53). Keeping the $3\times 3$ leading tridiagonal block of Proposition A.53 strictly positive definite ( $d _ 1 = 2, d _ 2 = 3/2, d _ 3 = 4/3$ ) while setting the $(4,4)$ entry to $0$ yields the strictly negative fourth pivot $d _ 4 = 0 - \frac{4}{3}\left(\frac{3}{4}\right)^2 = -\frac{3}{4} < 0$ .
 
-**Proposition B.46 (Negative-Control Twin of Proposition A.54)**. Strengthening negative coupling in the leading $2\times 2$ block to $\begin{pmatrix} 2 & -3 \\ -3 & 2 \end{pmatrix}$ yields $d _ 2 = -5/2 < 0$ .
+**Proposition B.46** (Negative-Control Twin of Proposition A.54). Strengthening negative coupling in the leading $2\times 2$ block to $\bigl[(2, -3); (-3, 2)\bigr]$ yields $d _ 2 = -5/2 < 0$ .
 
-**Proposition B.47 (Negative-Control Twin of Proposition A.55)**. In the prime-wavepacket Gram matrix $G _ {\mathrm{wave}}$ , subtracting $1/10$ from the $(3,3)$ entry leaves the first two pivots $(d _ 1, d _ 2) = (3/68, 613/36822) > 0$ unchanged while driving the third pivot to $d _ 3 = \frac{6669}{324277} - \frac{1}{10} = -\frac{257587}{3242770} < 0$ .
+**Proposition B.47** (Negative-Control Twin of Proposition A.55). In the prime-wavepacket Gram matrix $G _ {\mathrm{wave}}$ , subtracting $1/10$ from the $(3,3)$ entry leaves the first two pivots $(d _ 1, d _ 2) = (3/68, 613/36822) > 0$ unchanged while driving the third pivot to $d _ 3 = \frac{6669}{324277} - \frac{1}{10} = -\frac{257587}{3242770} < 0$ .
 
-**Proposition B.48 (Negative-Control Twin of Proposition A.56)**. Breaking the squared product structure $(1+\chi _ 1(p))(1+\chi _ 2(p)) \ge 0$ in the prime-cone Gram matrix reverses the second pivot $d _ 2 < 0$ .
+**Proposition B.48** (Negative-Control Twin of Proposition A.56). Breaking the squared product structure $(1+\chi _ 1(p))(1+\chi _ 2(p)) \ge 0$ in the prime-cone Gram matrix reverses the second pivot $d _ 2 < 0$ .
 
-**Proposition B.49 (Negative-Control Twin of Proposition A.57)**. Padding the two-row moment matrix $M _ {\mathrm{mom}} = \begin{pmatrix} 1 & 1 & 1 \\ 19 & 20 & 21 \\ 0 & 0 & 0 \end{pmatrix}$ with a zero row leaves $(1, -2, 1)^{\mathsf{T}}$ in the kernel and prevents any $3\times 3$ left inverse $L$ from achieving $L M _ {\mathrm{mom}} = I _ 3$ .
+**Proposition B.49** (Negative-Control Twin of Proposition A.57). Padding the two-row moment matrix $M _ {\mathrm{mom}} = \bigl[(1, 1, 1); (19, 20, 21); (0, 0, 0)\bigr]$ with a zero row leaves $(1, -2, 1)^{\mathsf{T}}$ in the kernel and prevents any $3\times 3$ left inverse $L$ from achieving $L M _ {\mathrm{mom}} = I _ 3$ .
 
-**Proposition B.50 (Negative-Control Twin of Proposition A.59)**. Coupling the unshielded high-frequency mode into the first moment readout ( $A _ {1,3} = -1$ ) produces $E A _ {\mathrm{bad},50} K = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.50** (Negative-Control Twin of Proposition A.59). Coupling the unshielded high-frequency mode into the first moment readout ( $A _ {1,3} = -1$ ) produces $E A _ {\mathrm{bad},50} K = \bigl[(1, 0); (0, 0)\bigr] \neq 0$ .
 
 #### 6.2.6　Families NC-P1–P3: Single-Premise Stripping Counterexamples for Theorems A₀, B₀–B₃, C₀–C₃, and Theorem 1.4 (Propositions B.51–B.62)
 
-**Proposition B.51** (Theorem A₀ Counterexample When Quotient Descent Compatibility $\operatorname{Eq}(q) \subseteq \operatorname{Eq}(Z)$ Is Violated). When the zero-exclusion operator fails to preserve the quotient kernel $\ker E$ ( $A _ {\mathrm{bad},51} = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$ ), transporting $Z$ across $q(x _ 0) = q(x _ 1)$ leaks $E A _ {\mathrm{bad},51} K = \begin{pmatrix} -1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ and triggers the $W(x _ 1) = 0$ versus $W(x _ 1) = 1$ collision.
+**Proposition B.51** (Theorem A₀ Counterexample When Quotient Descent Compatibility $\operatorname{Eq}(q) \subseteq \operatorname{Eq}(Z)$ Is Violated). When the zero-exclusion operator fails to preserve the quotient kernel $\ker E$ ( $A _ {\mathrm{bad},51} = \bigl[(1, 0, 1, 0); (0, 1, 0, 0); (0, 0, 1, 0); (0, 0, 0, 1)\bigr]$ ), transporting $Z$ across $q(x _ 0) = q(x _ 1)$ leaks $E A _ {\mathrm{bad},51} K = \bigl[(-1, 0); (0, 0)\bigr] \neq 0$ and triggers the $W(x _ 1) = 0$ versus $W(x _ 1) = 1$ collision.
 
 **Proposition B.52** (Theorem A₀ Counterexample When the Strict Rational Rouché Margin $\Delta _ {\mathrm{Rouche}} > 0$ Is Violated). If the boundary perturbation bound $\varepsilon = 1/4$ exceeds the principal-part lower bound $r = 1/8$ on $\partial B$ , the squared Rouché margin becomes strictly negative,
 
@@ -1288,23 +1288,23 @@ producing the negative pivot $-3/64 < 0$ in $\operatorname{diag}(1/64, -3/64)$ a
 
 **Proposition B.53** (Theorem A₀ Counterexample When Interior Pole-Freeness $\mathcal{C} _ {\mathrm{hol}}(B)$ Is Violated). If a simple pole (winding contribution $-1$ ) enters $B$ alongside a simple zero (winding contribution $+1$ ), the unguarded fifth pole-qualification coordinate shifts by $\delta _ {\mathrm{bad}} = (0, 0, 0, 0, -1)^{\mathsf{T}}$ , canceling the net winding to $1 - 1 = 0$ and triggering $E\delta _ {\mathrm{bad}} = (0, 0, -1)^{\mathsf{T}} \neq 0$ .
 
-**Proposition B.54 (Theorem B₁ Counterexample When a Composite Number Replaces a Prime Generator)**. Replacing the third prime $p _ 3 = 5$ in $\{\log 2, \log 3, \log 5\}$ with the composite number $6 = 2 \times 3$ produces the singular exponent matrix $M _ {\mathrm{comp}} = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \end{pmatrix}$ , which annihilates the non-zero rational relation vector $r = (1, 1, -1)^{\mathsf{T}}$ ( $\log 2 + \log 3 - \log 6 = 0$ , $M _ {\mathrm{comp}} r = (0, 0, 0)^{\mathsf{T}}$ ).
+**Proposition B.54** (Theorem B₁ Counterexample When a Composite Number Replaces a Prime Generator). Replacing the third prime $p _ 3 = 5$ in $\lbrace \log 2, \log 3, \log 5\rbrace$ with the composite number $6 = 2 \times 3$ produces the singular exponent matrix $M _ {\mathrm{comp}} = \bigl[(1, 0, 1); (0, 1, 1); (0, 0, 0)\bigr]$ , which annihilates the non-zero rational relation vector $r = (1, 1, -1)^{\mathsf{T}}$ ( $\log 2 + \log 3 - \log 6 = 0$ , $M _ {\mathrm{comp}} r = (0, 0, 0)^{\mathsf{T}}$ ).
 
-**Proposition B.55** (Theorem B₂ Counterexample When Post-Horizon $p > P _ {\ast}$ Multiplicative Coupling Is Stripped). Allowing the Diamond–Montgomery–Vorhauer post-horizon tail vector $(0, 1, 0, -1)^{\mathsf{T}} \in \ker E$ to enter the critical-strip readout via $A _ {2,4} = 1$ produces $E A _ {\mathrm{bad},55} K = \begin{pmatrix} 0 & 0 \\ 0 & -1 \end{pmatrix} \neq 0$ .
+**Proposition B.55** (Theorem B₂ Counterexample When Post-Horizon $p > P _ {\ast}$ Multiplicative Coupling Is Stripped). Allowing the Diamond–Montgomery–Vorhauer post-horizon tail vector $(0, 1, 0, -1)^{\mathsf{T}} \in \ker E$ to enter the critical-strip readout via $A _ {2,4} = 1$ produces $E A _ {\mathrm{bad},55} K = \bigl[(0, 0); (0, -1)\bigr] \neq 0$ .
 
 Proposition B.56 (Theorem B₂ Counterexample When the Euler Modifier Evaluation Point Leaves $\operatorname{Re}(s) > 0$ onto $\operatorname{Re}(s) = 0$ ). Moving the evaluation point of the modifier $H _ {P _ {\ast}}(s)$ from $\operatorname{Re}(s) > 0$ to the imaginary axis $s = \frac{2\pi i}{\log 2}$ ( $\operatorname{Re}(s) = 0$ ) reduces the local factor $1 - 2^{-s} = 1 - 1 = 0$ and drops the leading pivot of $\operatorname{diag}(0, 3/4, 7/8)$ to $0 \ngtr 0$ .
 
-**Proposition B.57** (Theorem C₀ Counterexample When the Unbounded Sequence $\sigma _ k \to +\infty$ Is Replaced by Two Finite Sample Points). Sampling a three-coefficient Dirichlet polynomial at only two finite points ( $M _ {\mathrm{bad},57} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}$ ) leaves the non-zero coefficient difference $(1, -2, 1)^{\mathsf{T}}$ in $\ker M _ {\mathrm{bad},57}$ .
+**Proposition B.57** (Theorem C₀ Counterexample When the Unbounded Sequence $\sigma _ k \to +\infty$ Is Replaced by Two Finite Sample Points). Sampling a three-coefficient Dirichlet polynomial at only two finite points ( $M _ {\mathrm{bad},57} = \bigl[(1, 1, 1); (0, 1, 2); (0, 0, 0)\bigr]$ ) leaves the non-zero coefficient difference $(1, -2, 1)^{\mathsf{T}}$ in $\ker M _ {\mathrm{bad},57}$ .
 
-**Proposition B.58** (Theorem C₁ Counterexample When Composite-Index Multiplicativity $a _ 6 = a _ 2 a _ 3$ Is Omitted from the Critical-Strip Quotient). Omitting the $n = 6$ multiplicativity readout allows the Davenport–Heilbronn defect ( $\Delta _ {\mathrm{mult}}(2,3) = 1 + \kappa^2 > 0$ ) to breach the critical-strip zero-exclusion operator: $E A _ {\mathrm{bad},58} K = \begin{pmatrix} -1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.58** (Theorem C₁ Counterexample When Composite-Index Multiplicativity $a _ 6 = a _ 2 a _ 3$ Is Omitted from the Critical-Strip Quotient). Omitting the $n = 6$ multiplicativity readout allows the Davenport–Heilbronn defect ( $\Delta _ {\mathrm{mult}}(2,3) = 1 + \kappa^2 > 0$ ) to breach the critical-strip zero-exclusion operator: $E A _ {\mathrm{bad},58} K = \bigl[(-1, 0); (0, 0)\bigr] \neq 0$ .
 
 Proposition B.59 (Theorem C₂ Counterexample Where the Even-Channel Reciprocal Root $P _ r(y(3/4)) = 0$ Breaks Non-Vanishing at $s = 3/4$ ). At $s = 3/4$ , $F _ {\mathrm{even}}(3/4) = 0$ reduces the leading pivot of the non-vanishing matrix $\operatorname{diag}(|F _ {\mathrm{even}}(3/4)|^2, 1, 1) = \operatorname{diag}(0, 1, 1)$ to $0 \ngtr 0$ .
 
 **Proposition B.60** (Theorem 1.4 Counterexample Asserting $(a, d, k) = (0, 0, 0)$ Under a Frozen Weak Quotient Signature). Forcing $(a, d, k) = (0, 0, 0)$ in the presence of a same-fiber countermodel $x _ 1$ violates the inclusion-exclusion identity $u(0,0,0) = 0 \neq 1$ and induces the truth-value collision $E A _ {\mathrm{bad},60} K = 1 \neq 0$ .
 
-**Proposition B.61** (Scheme 4 Counterexample Claiming to Disconnect $S \to T$ on $\mathtt{lc23}$ by Deleting Fewer Than $8$ Internal Vertices). Because $8$ internally vertex-disjoint directed paths from $S$ to $T$ exist in the $\mathtt{lc23}$ declaration graph ( $|f _ {\max}| = 8$ ), deleting any $7$ internal vertices leaves at least one directed path $S \leadsto T$ intact by the pigeonhole principle ( $E A _ {\mathrm{cut},7} K \neq 0$ ).
+**Proposition B.61** (Scheme 4 Counterexample Claiming to Disconnect $S \to T$ on $\text{lc23}$ by Deleting Fewer Than $8$ Internal Vertices). Because $8$ internally vertex-disjoint directed paths from $S$ to $T$ exist in the $\text{lc23}$ declaration graph ( $|f _ {\max}| = 8$ ), deleting any $7$ internal vertices leaves at least one directed path $S \leadsto T$ intact by the pigeonhole principle ( $E A _ {\mathrm{cut},7} K \neq 0$ ).
 
-**Proposition B.62** (Scheme 1 Counterexample Stripping the Open Left-Boundary Guard $0 < \operatorname{Re}(s)$ and Colliding with the Modulo- $2$ Principal Imaginary-Axis Zero). Stripping $0 < \operatorname{Re}(s)$ from Equation $(5.4)$ allows instantiation at $N = 2, \chi = 1, s _ 1 = \frac{2\pi i}{\log 2}$ ( $\operatorname{Re}(s _ 1) = 0 < 1$ and $\operatorname{DirichletCharacter.LFunction}(1, s _ 1) = 0$ , certified live by $\mathtt{Autopsy1.axis\underline{\hspace{0.35em}}principal\underline{\hspace{0.35em}}zero}$ ), immediately deriving $(0 : \mathbb{R}) = 1/2$ ( $E\delta _ {\mathrm{no\underline{\hspace{0.35em}}guard}} = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ ).
+**Proposition B.62** (Scheme 1 Counterexample Stripping the Open Left-Boundary Guard $0 < \operatorname{Re}(s)$ and Colliding with the Modulo- $2$ Principal Imaginary-Axis Zero). Stripping $0 < \operatorname{Re}(s)$ from Equation $(5.4)$ allows instantiation at $N = 2, \chi = 1, s _ 1 = \frac{2\pi i}{\log 2}$ ( $\operatorname{Re}(s _ 1) = 0 < 1$ and $\operatorname{DirichletCharacter.LFunction}(1, s _ 1) = 0$ , certified live by $\text{Autopsy1.axis\underline{\hspace{0.35em}}principal\underline{\hspace{0.35em}}zero}$ ), immediately deriving $(0 : \mathbb{R}) = 1/2$ ( $E\delta _ {\mathrm{no\underline{\hspace{0.35em}}guard}} = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ ).
 
 ---
 
