@@ -8,26 +8,26 @@
 
 取cμ=1/2、nλ=n∇λ=nμ=0；参考场界为0。B.19、频率、输运及辅助条件均空置。对时间不变的紧支无散v令
 
-\[
+$$
 F=T_1v=\tfrac12v+\tfrac12(y\cdot\nabla)v-\Delta v.
-\]
+$$
 
 于是Mv=-Δv，J=0，‖v‖μ=0，cM²=50/3；乘子范数结论仅为‖Δv‖H≤‖v‖w。
 
 设HD为平面外经典Hessian。p.54的系数为
 
-\[
+$$
 I_2=D-3/50,\ I'_2=1-D,\ I'_1=1/4,
 \ I_1=-\|H_D\|_{op}-3w/50,\ I_0=0.
-\]
+$$
 
 记E_D(v)=B.20右侧−左侧。利用无散积分恒等式及
 ⟨T1v,-Δv⟩=‖Δv‖²+‖∇v‖²/4，得到
 
-\[
+$$
 \boxed{E_D(v)=\int D(|\nabla^2v|^2-|\nabla\operatorname{curl}v|^2)
 -\int\|H_D\|_{op}|\nabla v|^2.}\tag{A1}
-\]
+$$
 
 w与3/50完全相消。
 
@@ -35,38 +35,38 @@ w与3/50完全相消。
 
 令h(t)=6t⁵−15t⁴+10t³，χ(σ)在σ≤1/4为0，在[1/4,1/3]为h(12σ−3)，在σ≥1/3为1。端点一、二阶导数为0，故χ是C²分片多项式且0≤χ≤1。取
 
-\[
+$$
 D_+=\tfrac12+\tfrac14\chi(\sigma)|\eta|,\qquad D_+(0)=1/2.\tag{A2}
-\]
+$$
 
 它在每个半空间图中为C²分片多项式，原点附近常数，轴对称、关于z偶对称，1/2≤D+≤3/4，故I'2≥1/4。体积导数有界且有相应远场衰减。但D+不跨平面C¹。
 
 在ρ≥1/2处，χ=1，D+=1/2+|z|/(4ρ)，上侧减下侧的法向导数跳跃为
 
-\[
+$$
 [\partial_zD_+]=1/(2r).\tag{A3}
-\]
+$$
 
 对紧支无散u，两次分部积分给
 
-\[
+$$
 \int D(|\nabla u|^2-|\operatorname{curl}u|^2)
 =\langle D^2D,u\otimes u\rangle.
-\]
+$$
 
 这里D²D表示分布Hessian；若D连续、分侧C²，则
 
-\[
+$$
 D^2D=H_D\,dy+[\partial_zD]e_3\otimes e_3\,dS_{z=0}.
-\]
+$$
 
 对每个Cartesian导数u=∂kv应用此式，得到
 
-\[
+$$
 \boxed{E_D(v)=\sum_k\int(\partial_kv)^TH_D(\partial_kv)
 -\int\|H_D\|_{op}|\nabla v|^2
 +\int_{z=0}[\partial_zD]|\nabla v_3|^2dS.}\tag{A4}
-\]
+$$
 
 最后一项为奇异测度贡献，不能以平面体积测度为零为由去掉。
 
@@ -74,42 +74,42 @@ D^2D=H_D\,dy+[\partial_zD]e_3\otimes e_3\,dS_{z=0}.
 
 取偶函数a，支撑[-1,1]，a(0)=1；令
 
-\[
+$$
 \psi_\varepsilon=\varepsilon z\,a((r-1)/\varepsilon)a(z/\varepsilon),
 \quad v_r=-r^{-1}\partial_z\psi_\varepsilon,
 \quad v_\varphi=0,\quad v_3=r^{-1}\partial_r\psi_\varepsilon.\tag{A5}
-\]
+$$
 
 写s=(r−1)/ε、t=z/ε，则
 
-\[
+$$
 v_r=-\varepsilon r^{-1}a(s)(a(t)+ta'(t)),\quad
 v_3=\varepsilon r^{-1}t a'(s)a(t).
-\]
+$$
 
 ε≤1/4时支撑远离轴及原点；r⁻¹∂r(rvr)+∂zv3=0。vr为z偶函数，v3为奇函数，故轴对称和R*对称成立，时间不变使Γ不变，只有零谐波。在平面v3=∂rv3=0，但∂zv3=a'(s)/r。因此
 
-\[
+$$
 T_\varepsilon=\int_{z=0}\frac{|\nabla v_3|^2}{2r}dS
 =\pi\varepsilon\int_{-1}^1\frac{a'(s)^2}{(1+\varepsilon s)^2}ds
 \ge\frac{16\pi}{25}\varepsilon A,
 \quad A=\int_{-1}^1a'^2.\tag{A6}
-\]
+$$
 
 对称性仅令v3在平面为零，不令其法向导数为零。
 
 支撑上ρ≥3/4，直接求导
 
-\[
+$$
 \nabla^2(z/\rho)=-(e_3\otimes y+y\otimes e_3+zI)/\rho^3
 +3z\,y\otimes y/\rho^5
-\]
+$$
 
 给‖HD‖op≤3/(2ρ²)≤8/3<3，可取M=3。若|∇v|²≤K，支撑体积为8πε²，由A4
 
-\[
+$$
 E_{D_+}(v)\ge\pi\varepsilon[(16/25)A-16MK\varepsilon].\tag{A7}
-\]
+$$
 
 ## 4. 全显式有理裕量
 
@@ -117,27 +117,27 @@ E_{D_+}(v)\ge\pi\varepsilon[(16/25)A-16MK\varepsilon].\tag{A7}
 
 |a|≤1、|a'|≤2、|a''|≤8。第一导数界可化为16·6⁶≤7⁷；第二导数为−8(1−t²)²(1−7t²)，其最大绝对值不超过8。轴对称梯度五项
 
-\[
+$$
 |\nabla v|^2=|\partial_rv_r|^2+|\partial_zv_r|^2+|v_r/r|^2+
 |\partial_rv_3|^2+|\partial_zv_3|^2
-\]
+$$
 
 的绝对值界依次为28/3、16、4/3、104/9、8，故
 
-\[
+$$
 K=43936/81,\qquad
 A=128\sum_{j=0}^6\frac{(-1)^j\binom6j}{2j+3}=131072/45045.
-\]
+$$
 
 取ε=1/65536，精确得
 
-\[
+$$
 (16/25)A-16MK\varepsilon=633509743/432432000>0,
-\]
+$$
 
-\[
+$$
 \boxed{E_{D_+}(v)\ge\frac\pi{65536}\frac{633509743}{432432000}>0.}\tag{A8}
-\]
+$$
 
 这严格违反B.20要求的右−左≤0。即使用a(0)=1、a(±1)=0及Cauchy–Schwarz给A≥2，也得到正裕量76267/86400。
 
@@ -149,20 +149,20 @@ A=128\sum_{j=0}^6\frac{(-1)^j\binom6j}{2j+3}=131072/45045.
 
 ε≤1/2时可取|∇v|²≤148𝓜⁴、‖HD‖≤6；A∞≥2。因此
 
-\[
+$$
 E_{D_+}(v)\ge\pi\varepsilon[8/9-14208\mathcal M^4\varepsilon].
-\]
+$$
 
 ε=10^-15时31968·200⁴<10¹⁵，故E≥(4π/9)10^-15>0。反例并非扰动正则性不足造成。
 
 强合同正控：对0<δ≤1，以偶C²样条
 
-\[
+$$
 s_\delta(\eta)=
 \begin{cases}3\delta/8+3\eta^2/(4\delta)-\eta^4/(8\delta^3),&|\eta|\le\delta,\\
 |\eta|,&|\eta|\ge\delta
 \end{cases}
-\]
+$$
 
 替代|η|，令Dδ=1/2+χsδ/4。接合一、二阶导数均匹配，1/2≤Dδ≤3/4，完整Hessian没有平面测度。A4的体积估计即给E_Dδ(v)≤0。δ趋零时薄层Hessian为O(δ^-1)，其积分成本不能凭层宽趋零删除。
 
@@ -172,11 +172,11 @@ s_\delta(\eta)=
 
 令Jv=∫χ|η|/4 (|∇²v|²−|∇curlv|²)、Cv=∫‖HD+‖op|∇v|²，则
 
-\[
+$$
 E_{D_+}=J_v-C_v\ge\gamma_\varepsilon>0,
 \quad E_{D_-}=-J_v-C_v\le-\gamma_\varepsilon,
 \quad E_{D_+}-E_{D_-}\ge2\gamma_\varepsilon,
-\]
+$$
 
 其中γε为A8右端。**这是真双权重，但qred弱于完整B.16输入；完整输入还包含D本身，而D+≠D−。不能宣称已满足用户要求的完整论文读口同值。**
 

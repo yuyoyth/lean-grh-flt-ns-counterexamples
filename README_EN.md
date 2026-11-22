@@ -1,144 +1,160 @@
-# Mathematical Internal Paradoxes, Real-Machine Autopsies, and Closed-Form Counterexamples for the 17.37M-Line GRH Lean 4 Formalization, 13.00M-Line FLT Lean 4 Formalization, and Co-Author 79-Page Navier–Stokes Finite-Time Blow-Up Paper Proof
+# Counterexamples, Structural Paradoxes & Source-Code Autopsies for the 17.37M-Line GRH Lean 4 Proof, 13.00M-Line FLT Lean 4 Proof, and 79-Page Navier–Stokes Blow-Up Paper
 
-**Languages**: **English** | [中文 (`README_ZH.md`)](README_ZH.md) | [Bilingual Combined (`README.md`)](README.md)
+> **Language**: **[Bilingual README (`README.md`)](README.md)** | **[中文独立导览 (`README_ZH.md`)](README_ZH.md)**
 
 ---
 
-## Executive Summary
+## II. Executive Summary & Monograph Index (English Overview)
 
-When automated theorem-proving or computer-assisted mathematical campaigns scale to **tens of millions of lines of Lean 4 code** or **scores of pages of dense multi-chart PDE inequalities backed by external numerical certificates**, verifying only the *top-level theorem type signature* or the *open-set smooth bulk derivative formulas* creates a fundamental blind spot: **representation-quotient kernel leakage** ($\ker q \not\subseteq \ker f$). If an intermediate definition, carrier type, or regularity readout $q$ collapses distinct mathematical structures into the same equivalence class—or silently omits a singular boundary/interface functional—then any downstream theorem chain $f$ that depends on the lost invariant either:
-1. proves a **semantically distorted proxy statement** that does not entail the classical mathematical theorem (as in the **17,374,215-line Generalized Riemann Hypothesis (GRH)** Lean 4 repository),
-2. short-circuits the deep arithmetic-geometric bridge via **degenerate constant definitions and counterfactual premise explosion (*ex falso quodlibet*)** inside intermediate carrier structures (as in the **13,004,119-line Fermat's Last Theorem (FLT)** Lean 4 repository), or
-3. drops a **strictly positive singular surface-measure term** across a chart seam in an energy-multiplier integration by parts, allowing explicit closed-form perturbations to violate the claimed coercive inequality (as in the co-author's simultaneously released **79-page Navier–Stokes (NS) finite-time blow-up paper proof**).
+When automated formalization or computer-assisted PDE campaigns scale to **10M+ lines of Lean 4 code** or **79 pages of multi-chart weighted inequalities backed by an undisclosed numerical certificate**, verifying only the *top-level theorem statement* or the *open-set smooth bulk formulas* leaves a fatal vulnerability: **representation-quotient kernel leakage** ( $\ker q \not\subseteq \ker f$ ). Once an initial carrier definition or chart seam drops a load-bearing conservation constraint, the remaining millions of lines or dozens of pages no longer prove the original mathematical problem, but instead operate on a collapsed quotient artifact.
 
-This repository provides a complete, self-contained, bilingual (**English** and **Chinese**) mathematical audit, closed-form counterexample suite, and 1-minute reproducible verification package across all three works:
-
-| Part | Audited Target | Upstream Scale & Provenance | English Monograph | Chinese Monograph | Reproduction Bundle |
+| Part | Audited Work | Upstream Scale & Commit | English Monograph (`en/`) | Chinese Monograph (`zh/`) | Reproduction Suite (`reproduction/`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Part 01** | **Generalized Riemann Hypothesis (GRH)** Lean 4 Formalization | `17,374,215` lines (`175,190` `.lean` files, commit `40e56bab026552e089d7afcfeff08d2defb9c005`) & pruned `16,571,342`-line community edition (`f1f6d654`) | [`en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md`](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [`zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md`](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [`reproduction/01_grh_17m_lean/`](reproduction/01_grh_17m_lean/) |
-| **Part 02** | **Fermat's Last Theorem (FLT)** Lean 4 Formalization | `13,004,119` lines (`4,598` `.lean` files, `anthropics/fermats-last-theorem`) | [`en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md`](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [`zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md`](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [`reproduction/02_flt_13m_lean/`](reproduction/02_flt_13m_lean/) |
-| **Part 03** | **Navier–Stokes (NS) Finite-Time Blow-Up** 79-Page Paper Proof | `79` pages PDF (`1,615,293` bytes, commit `ad53419de079eb8f95f60313473374624a348546`, SHA-256 `4a01929b...901`, `tristanbuckmaster/navier-stokes`) | [`en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md`](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [`zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md`](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [`reproduction/03_ns_79p_paper/`](reproduction/03_ns_79p_paper/) |
+| **01** | **Generalized Riemann Hypothesis (GRH)** Lean 4 Proof | `17,374,215` lines (`40e56bab`) / community `16,571,342` lines (`f1f6d654`) | [01_GRH Monograph (EN)](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
+| **02** | **Fermat's Last Theorem (FLT)** Lean 4 Proof | `13,004,119` lines (`anthropics/fermats-last-theorem`) | [02_FLT Monograph (EN)](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
+| **03** | **Navier–Stokes (NS) Finite-Time Blow-Up** 79p Paper | `79` pages PDF (`ad53419d`, `tristanbuckmaster/navier-stokes`) | [03_NS Monograph (EN)](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [03_NS 中文专著](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [03_ns_79p_paper](reproduction/03_ns_79p_paper/) |
 
 ---
 
-## Key Mathematical Findings & Closed-Form Counterexamples
+### 1. Part 01 (`01_GRH`): Four Verified Faults in the 17.37M-Line GRH Lean 4 Repository
 
-### Part 01: The 17.37-Million-Line GRH Lean 4 Formalization (`01_GRH_17M_Lean`)
+#### 1.1 8-Vertex Minimum Directed Cut Across 2,701,132 Declarations (45.27% Unreachable Dead Bloat)
 
-1. **Carrier Semantic Distortion vs. Guarded Analytic Continuation (`Scheme 1 & Scheme 2`)**:
-   - In Lean 4 / Mathlib (`v4.33.1`), the raw Dirichlet series carrier `LSeries` vanishes identically on its half-plane of divergence ($\operatorname{Re}(s) \le 1 \implies \operatorname{LSeries}(1, s) = 0$, hence $\operatorname{LSeries}(1, 3/4) = 0$ and $(s \mapsto \operatorname{LSeries}(1, s)) \neq \operatorname{riemannZeta}$), while the analytically continued `DirichletCharacter.LFunction` / `ZMod.LFunction` is defined via purely additive Hurwitz zeta linear combinations (`hurwitzZetaEven` / `hurwitzZetaOdd`).
-   - Stripping the left critical-strip guard $0 < \operatorname{Re}(s)$ makes the universal critical-line statement provably **false** in Lean 4 (`removing_guard_is_false`), because the modulo-$2$ principal character $L$-function $(1 - 2^{-s})\zeta(s)$ vanishes along the imaginary axis at $s_0 = \frac{2\pi i}{\log 2}$.
-2. **Trojan Countermodels in the Same Additive Hurwitz Quotient Fiber (`Scheme 5 & Scheme 6`)**:
-   - Any proof architecture whose zero-exclusion functional factors only through the additive Hurwitz linear-combination carrier and functional-equation symmetry without enforcing Euler-product multiplicativity is refuted by explicit **Trojan countermodels** living in the exact same quotient fiber:
-     - **Algebraic Trojan polynomial**: $P(s) = (s - 1/2)^2 - 1/16$, symmetric under $s \leftrightarrow 1 - s$ with real off-critical zeros at $s = 3/4$ and $s = 1/4$;
-     - **Davenport–Heilbronn countermodel**: satisfies the Hurwitz additive expansion and completed functional equation (`even_completed_reflection`), fails multiplicativity at composite $n = 6$ (`dh_not_multiplicative`), and vanishes at $s = 3/4$ (`even_root`), formally refuting `WeakRule` in Lean 4 (`weak_rule_refuted : ¬WeakRule`).
-3. **Full-Environment Declaration-Graph Minimum Vertex Cut & Kernel Bypass Forensics (`Scheme 4`)**:
-   - Traversing `env.checked` of `Main` across the entire `17,374,215`-line repository yields **`2,701,132` declarations** and **`170,706,224` directed dependency edges**.
-   - The joint dependency cone of the five top-level GRH theorems contains `1,478,243` nodes (`1,072,980` active). A split-node Dinic maximum-flow / minimum-cut computation (independently verified by a zero-import flow certificate checker) proves that the entire 17.37-million-line dependency cone is severed from the core arithmetic definitions by an **exact `8`-vertex minimum internal directed cut**:
-     $$\bigl\{\texttt{DirichletCharacter.FactorsThrough},\ \texttt{Formalism.VW.critLine},\ \texttt{Formalism.VW.rh_of_every},\ \texttt{HurwitzZeta.hurwitzZetaEven},\ \texttt{UpperTheory.FinalTheorems.everyCharacter},\ \texttt{ZMod.LFunction},\ \texttt{claimAll},\ \texttt{starRingEnd.\_proof\_2}\bigr\}.$$
-   - Furthermore, the dependency cone contains `1,816` declarations across `62 / 66` modules calling the custom metaprogramming tactic `kexactB` (which elaborates with expected type `none` and calls `g.assign` directly without `Meta.isDefEq` guarding) and `23` declarations in the reflexive mutual inductive blocks `PrincipalizationCertificate` and `OrderCertificate` that trigger exit code `2` under the standalone external kernel checkers `con-leche` and `con-ron`.
+- Exporting the full checked declaration graph of `Main` (`2,701,132` nodes, `170,706,224` directed edges) reveals that the joint dependency cone of the five top-level GRH theorems contains `1,478,243` nodes, leaving `1,222,889` nodes (`45.27%`) as unreachable dead code.
+- Across all `1,072,980` active nodes connecting the prime-multiplicativity / Euler-product source set to the five main theorems, the **minimum internal directed vertex cut has capacity strictly equal to `8`**:
+  `DirichletCharacter.FactorsThrough`, `Formalism.VW.critLine`, `Formalism.VW.rh_of_every`, `HurwitzZeta.hurwitzZetaEven`, `UpperTheory.FinalTheorems.everyCharacter`, `ZMod.LFunction`, `claimAll`, `starRingEnd._proof_2`.
 
----
+#### 1.2 62 In-Cone Modules Invoke Custom Metaprogramming Backdoor `kexactB` Bypassing Frontend Elaboration
 
-### Part 02: The 13.00-Million-Line FLT Lean 4 Formalization (`02_FLT_13M_Lean`)
+- Defined in `Formalism/LocalToGlobal/IndefiniteReal/HeckeNonvanishing/Imports.lean`, `kexactB` elaborates terms with `expectedType := none` and assigns directly to the goal metavariable via `g.assign`.
+- Out of `66` calling files in the repository, **`62` modules (`1,816` declarations) sit directly inside the dependency cone of the five main theorems**.
 
-1. **Degenerate Modularity Encoding & Constant Conductor Collapse (`Defs_ModularityPrep.lean`, `Defs_ConductorLevel.lean`)**:
-   - In `anthropics/fermats-last-theorem`, a modular newform (`Newform`) is defined not as an automorphic eigenform on $\Gamma_0(N)$, but as a **3-integer record** `(level : Nat, weight : Nat, eigenSeed : Int)` with `weight = 2` (`Defs_ModularityPrep.lean:82-93`).
-   - The modularity predicate `IsModular E p` (`Defs_ModularityPrep.lean:101-102`) does not reference any coefficient, discriminant, or Frobenius trace of the elliptic curve $E$; it reduces logically to $p \ge 2 \land \exists N \ge 1, N \equiv 0 \pmod{2}$, which holds trivially for **every** curve $E$ via the fixed witness $N = 2$ and $f = \langle 2, 2, 0\rangle$.
-   - Consequently, `ConductorLevel E` (`Defs_ConductorLevel.lean:12-26`, defined via `Classical.choose` on `IsModular E 2`) collapses identically to the constant `2` for every curve $E$ (`conductorLevel_eq_two`), reducing Ribet's level-lowering theorem (`S_FreyPackage_level_lowering_to_two.lean:129-134`) to a zero-step identity substitution $2 = 2$ while asserting a nonempty `Newform 2` in direct conflict with the classical theorem $\dim_{\mathbb{C}} S_2(\Gamma_0(2)) = 0$.
-2. **Decoupled `FreyPackage` Carrier & Counterfactual Premise Explosion in `Mazur_Frey` (`Defs_FreyPackage.lean`, `S_FreyPackage_Mazur_Frey.lean`)**:
-   - The carrier structure `FreyPackage` (`Defs_FreyPackage.lean:12-44`) bundles a Fermat counterexample tuple `(a, b, c, p)` satisfying `hFlt : a^p + b^p = c^p` alongside a curve field `E : WeierstrassCurve` and a proxy representation `galoisRep : Nat → Int`, **without any field connecting `E` to $Y^2 = X(X-a^p)(X+b^p)$ or connecting `galoisRep` to $E[p]$**.
-   - In `FreyPackage.Mazur_Frey` (`S_FreyPackage_Mazur_Frey.lean:68-91`), the theorem states that `cofixed P.p P.galoisRep` implies $P.p \in \{2,3,5,7,11,13,17,19\}$. Yet the proof body **never reads `P.galoisRep` (`_h`)**! Instead, for each prime exponent (e.g., $p = 3, 5, 7, 11$), it dispatches directly to pre-imported small-exponent Fermat theorems (`flt_three`, `flt_five`, `flt_seven`, `flt_eleven`) applied to `P.hFlt : a^p + b^p = c^p`, deriving `False` by *ex falso quodlibet*!
-   - Our standalone Lean 4 probe (`lean4_flt_real_kernel_verification.lean`) mechanically proves that if $(a,b,c) = (2,-1,1)$ or $(1,0,1)$ at $p = 23$ with constant representation $\mathrm{galoisRep}(n) = 1$, `Mazur_Frey` is **strictly false** (`mazur_frey_false_on_non_diophantine_witness`).
-3. **Why Surface Statement Comparators Miss Intermediate Semantic Collapse**:
-   - The repository's `verification/comparator/Challenge.lean` checks only the final top-level type signature of `fermats_last_theorem`, leaving the intermediate algebraic-geometric definitions (`Newform`, `IsModular`, `ConductorLevel`, `FreyPackage`, `galoisRep`) completely uninspected.
+#### 1.3 Independent Kernel Checkers `con-leche` and `con-ron` Reject with Exit Code 2 and Are Removed
+
+- The in-cone mutual inductive blocks `PrincipalizationCertificate` (`11` in-cone declarations) and `OrderCertificate` (`12` in-cone declarations) contain reflexive constructor parameters that cause standalone checkers `con-leche` and `con-ron` to fail with `exit code 2 (reflexive member)`.
+- Both failing checkers were subsequently removed from `comparator.json`.
+
+#### 1.4 Additive Hurwitz Carrier Collapse (`ZMod.LFunction`) & Community Edition In-Cone Proof Rewrites
+
+- In the critical strip, `DirichletCharacter.LFunction` reduces to `ZMod.LFunction`, a pure additive Hurwitz linear combination accepting arbitrary periodic functions without multiplicative guards. Any zero-exclusion rule factoring through this additive quotient and functional-equation symmetry is refuted in Lean 4 (`weak_rule_refuted : ¬WeakRule`) by the **Davenport–Heilbronn countermodel** and the algebraic Trojan polynomial $P(s) = (s - 1/2)^2 - 1/16$ vanishing at $s = 3/4$.
+- The community pruned edition (`f1f6d654`) deletes `10,724` modules (`785,224` lines) and rewrites the internal proof bodies and typeclass parameters of `10` in-cone `CapelliIdentities/` modules (e.g., compressing `FixPiIff.lean` from `8,029` lines to `45` lines).
 
 ---
 
-### Part 03: The Co-Author 79-Page Navier–Stokes Finite-Time Blow-Up Paper Proof (`03_NS_79p_Paper`)
+### 2. Part 02 (`02_FLT`): Four Verified Faults in the 13.00M-Line FLT Lean 4 Repository
 
-1. **Equatorial Interface Singular Measure Kernel Leak in Proposition B.1 / Inequality (B.20) (Pages 47–57)**:
-   - In the 79-page paper *Finite-time blow-up for the Navier–Stokes equations* (Levent Alpöge & Tristan Buckmaster, 2026-11-20), the coercive energy-multiplier inequality **(B.20)** of Proposition B.1 uses multiplier weights $D, Z$ represented in half-space charts $y_3 > 0$ and $y_3 < 0$ via compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y_3}{|y|}$ (with $|\eta| = \frac{|y_3|}{|y|}$ on page 47).
-   - If a continuous, $y_3$-even weight $W \in \{D, Z\}$ is $C^2$ on each open half-space $\mathbb{R}_+^3$ and $\mathbb{R}_-^3$ without enforcing first-order normal-derivative vanishing across the equatorial seam $\Sigma = \{y_3 = 0\}$, its true distributional Hessian on $\mathbb{R}^3$ is a Radon measure with a non-vanishing **Dirac surface-measure tensor** on $\Sigma$:
-     $$D^2 W = H_{W,\mathrm{bulk}}\,dy + [\partial_z W]_\Sigma\,(e_3 \otimes e_3)\,dS_{z=0}, \qquad [\partial_z W]_\Sigma(r) = \frac{2}{r}\partial_{|\eta|}W(\sigma, 0^+).$$
-   - Reading only the open-set bulk Hessian $H_{W,\mathrm{bulk}}$ (`q_bulk`) drops the strictly non-negative equatorial surface integral (`\Sigma_W \in \ker q_{\mathrm{bulk}} \setminus \ker f_v`).
-2. **Two Independent Closed-Form Counterexample Families Shattering Weak (B.20)**:
-   - **Closed-Form Counterexample Family A ($D$-weight seam, compactly supported $C_c^2$ axisymmetric divergence-free perturbation $v_\varepsilon$)**:
-     With $D_\pm(y) = \frac{1}{2} \pm \frac{1}{4}\chi(\sigma)|\eta|$, polynomial profile $a(t) = (1-t^2)_+^4$ ($A = \int_{-1}^1 a'(s)^2\,ds = \frac{131072}{45045}$, $K = \frac{43936}{81}$), and $\varepsilon = 2^{-16} = \frac{1}{65536}$, inequality (B.20) (which requires $E_D(v) := \mathrm{RHS}_{\mathrm{B.20}} - \mathrm{LHS}_{\mathrm{B.20}} \le 0$) is strictly violated with the **exact rational margin**:
-     $$E_{D_+}(v_\varepsilon) \ge \frac{\pi}{65536}\cdot\frac{633509743}{432432000} > 0,$$
-     while under the reduced Hessian-norm readout $q_{\mathrm{red}}$, $q_{\mathrm{red}}(D_+) = q_{\mathrm{red}}(D_-)$ yet $E_{D_+}(v_\varepsilon) - E_{D_-}(v_\varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0$. (Replacing $a(t)$ by $C_c^\infty$ bump $a_\infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1}_{|t|<1}$ at $\varepsilon = 10^{-15}$ likewise gives $E_{D_+}(v_\varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} > 0$.)
-   - **Closed-Form Counterexample Family B ($Z$-weight seam, Schwartz Gaussian divergence-free mode-$\pm(2,1)$ perturbation)**:
-     With $C_6 + i S_6 = (x+iy)^6$, $g = \exp(-(x^2+y^2)/2 - 6z^2)$, $v = g(-2zyC_6, 2zxC_6, -S_6) \in \mathcal{S}(\mathbb{R}^3) \cap \mathcal{D}_S^\Gamma$ ($\operatorname{div} v \equiv 0$, $\|\nabla v\|_{L^2}^2 = 14880\frac{\pi^{3/2}}{2\sqrt{3}}$, $\|\Delta v\|_{L^2}^2 = 431280\frac{\pi^{3/2}}{2\sqrt{3}}$, $\mathrm{LHS}_{\mathrm{B.20}} = \frac{51053352}{125}\frac{\pi^{3/2}}{2\sqrt{3}}$), and $Z = c P(\sigma)|\eta|$ ($c > 0$), the surface integral $A_0 = \frac{10395}{64}\pi^{3/2}c$ strictly dominates the exterior bulk loss $80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$, yielding the purely analytical violation bound:
-     $$\frac{\mathrm{RHS}_{\mathrm{B.20}} - \mathrm{LHS}_{\mathrm{B.20}}}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > \frac{26311}{64} > 400 > 0.$$
-3. **The $O(\delta^{-1})$ Collar Curvature-Tax Conservation Law, Unreleased Certificate Hash, and True-Body vs. Artifact Separation**:
-   - Smoothing $|\eta|$ across an equatorial collar $|\eta| \le \delta$ via the unique even $C^2$ quartic spline $s_\delta(\eta) = \frac{3\delta}{8} + \frac{3\eta^2}{4\delta} - \frac{\eta^4}{8\delta^3}$ (matching the global `ContDiff R 2` / `(-1)^o` parity join in the authors' Lean files `CellLayerChallenge.lean:2372-2378, 2505, 2509` and `ExtendedCoerciveChallenge.lean:322-323`) removes the surface jump $[\partial_z W]_\Sigma = 0$, **but** converts the singular mass into an invariant bulk normal-curvature tax $\int_{-\delta}^{\delta} s_\delta''(\eta)\,d\eta = 2$ with peak $\max_{|\eta|\le\delta} s_\delta''(\eta) = \frac{3}{2\delta} = O(\delta^{-1})$.
-   - Because the paper's computer-assisted certificate witness on pages 38–39 is **not published** in the repository (represented only by SHA-256 hash `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`) and the paper omits the derivations/coefficients of (B.16), Proposition B.1, Proposition B.4, and the page-70 bootstrap bounds, the $O(\delta^{-1})$ collar curvature tax cannot be verified from the 79-page text.
-   - Finally, for the true 3D Navier–Stokes dynamics on $\mathbb{T}^3$, the explicit 4-mode divergence-free twin initial data $u_0^\pm = \pm 17 U$ prove that any static Euclidean spectral readout $q_{\mathrm{full}}$ is sign-blind to cubic vortex stretching ($q_{\mathrm{full}}(u_0^+) = q_{\mathrm{full}}(u_0^-)$ while $Y_+'(0) - Y_-'(0) = \frac{289}{2} - (-\frac{9537}{2}) = 4913 \neq 0$), whereas a comoving covariant inverse metric $g = C^{-1}$ ($z = C^{-1}\omega$) converts the indefinite static Hessian cross-term into pure-square viscous dissipation $-2\nu\sum_{i=1}^3 (\partial_i z)^T C (\partial_i z) \le 0$.
+#### 2.1 Zero Elliptic-Curve Geometry in Small-Prime Mazur Isogeny Exclusion via `False.elim` Short-Circuit
 
----
+- `Defs_FreyPackage.lean` welds the counterfactual equation `hFLT : a^p + b^p = c^p` directly into the base carrier structure `FreyPackage`.
+- In `S_FreyPackage_frey_no_cofixed_small.lean` (for $p = 5, 7, 13$ ) and `S_FreyPackage_frey_no_cofixed_eleven.lean` (for $p = 11$ ), the proof of "no cofixed isogeny line on the Frey curve" performs **zero elliptic-curve or Galois-representation reasoning**; instead, it invokes pre-imported fixed-exponent Fermat theorems (`fermatLastTheoremFive / Seven / Eleven / Thirteen`) against `P.hFLT` to derive `False` and conclude by `False.elim` (which identically proves `∀ P : FreyPackage, P.p = 11 → (0 = 1)` in Lean 4.33.1).
 
-## Repository Structure
+#### 2.2 Top-Level Modularity Premise `hmod : IsModular P.freyCurve` Completely Ignored
 
-```text
-.
-├── README.md                                                     # Combined Bilingual Top-Level README (English + Chinese)
-├── README_EN.md                                                  # Standalone English Top-Level README
-├── README_ZH.md                                                  # Standalone Chinese Top-Level README
-├── CITATION.cff                                                  # GitHub / Zenodo Citation File Format metadata
-├── .zenodo.json                                                  # Zenodo Permanent Academic DOI metadata
-├── en/                                                           # Complete English Monographs (3 Parts)
-│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md                 # Part 01: 17.37M-Line GRH Lean 4 Paradox & Autopsy (English)
-│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md                 # Part 02: 13.00M-Line FLT Lean 4 Paradox & Autopsy (English)
-│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md     # Part 03: 79-Page NS Paper Kernel Leak & Counterexamples (English)
-├── zh/                                                           # Complete Chinese Monographs (3 Parts)
-│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md                 # Part 01: 17.37M-Line GRH Lean 4 Paradox & Autopsy (Chinese)
-│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md                 # Part 02: 13.00M-Line FLT Lean 4 Paradox & Autopsy (Chinese)
-│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md     # Part 03: 79-Page NS Paper Kernel Leak & Counterexamples (Chinese)
-└── reproduction/                                                 # Self-Contained Reproducible Verification Bundles
-    ├── 01_grh_17m_lean/                                          # Lean 4 Scheme 1..6 probes, 2.70M-node min-cut verifier & JSONs
-    ├── 02_flt_13m_lean/                                          # Self-contained Lean 4 FLT kernel counterexample probe & report
-    └── 03_ns_79p_paper/                                          # Zero-dependency exact rational NS counterexample verifier & autopsy
-```
+- In `Defs_ModularityPrep.lean`, `IsModular(E)` existentially quantifies out the level $N$ without binding it to the conductor radical $\mathrm{Supp}(abc)$ (conflating newform level $N_1 = 15$ with oldform multiple level $N_2 = 105$).
+- Consequently, `S_FreyPackage_level_lowering_to_two.lean` (line 129) sets `set_option linter.unusedVariables false` and **never references its explicit modularity argument `hmod` (`0` occurrences in the proof term)**.
+
+#### 2.3 Premature Import of Terminal Zero-Space Theorems Inside Level-Lowering to Fabricate a Level-2 Cusp Form
+
+- In `S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` (lines 113–170), odd-prime elimination yields only $M \mid 2$ (so $M \in \{1, 2\}$ , losing the lower guard $2 \mid M$ ).
+- Unable to construct a level-2 form directly, lines 156–170 prematurely import $S_2(\Gamma_0(1)) = 0$ and $S_2(\Gamma_0(2)) = 0$ *inside* the level-lowering lemma to trigger `False.elim` and fabricate a fake witness $\exists f \in S_2(\Gamma_0(2)), f \neq 0$.
+
+#### 2.4 Raw Integer `IsSemistableModel` Collapses on Conductor-11 Curve Under Isomorphic Scaling
+
+- Defined on raw integer Weierstrass tuples without minimal-model quotienting, `IsSemistableModel` flips from `True (1)` to `False (0)` on the genuine semistable curve $E_{11} : y^2 + y = x^3 - x^2 - 10x - 20$ (with $c_4 = 496, \Delta = -11^5$ ) under the rational isomorphism $(x, y) \mapsto (4x, 8y)$ ($u = 2$).
 
 ---
 
-## 1-Minute Reproducible Verification Guide
+### 3. Part 03 (`03_NS`): Three Fatal Kernel Leaks in the 79-Page Navier–Stokes Blow-Up Paper
 
-### 1. Reproduce Part 01 (17.37M-Line GRH Lean 4 Minimum Vertex Cut Certificate & Probes)
+#### 3.1 Equatorial Seam Dirac Surface-Measure Leak in Proposition B.1 / Inequality (B.20) (Pages 47–57)
 
-Verify the `8`-vertex minimum directed cut certificate across the `2,701,132`-node / `170,706,224`-edge declaration dependency graph (requires only Python 3 standard library):
+- Multiplier weights $D, Z$ are defined as piecewise splines on half-spaces $y_3 > 0$ and $y_3 < 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y_3}{|y|}$.
+- Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms drops the singular Dirac surface measure across the zero-volume plane $\Sigma = \{y_3 = 0\}$:
+
+$$
+D^2 W = H_{W,\mathrm{bulk}}\,dy + [\partial_z W]_\Sigma\,(e_3 \otimes e_3)\,dS_{z=0}
+$$
+
+#### 3.2 Two Explicit Closed-Form Divergence-Free Counterexample Families Violating (B.20)
+
+- **Counterexample Family A (compactly supported axisymmetric field on second-order weight seam)**: With $a(t) = (1 - t^2)_+^4$ (exact rational moment $A = \frac{131072}{45045}$ , gradient bound $K = \frac{43936}{81}$ ) and $\varepsilon = 2^{-16} = \frac{1}{65536}$ , Inequality (B.20) (which requires $E_D(v) \le 0$ ) fails with exact rational margin:
+
+$$
+E_{D_+}(v_\varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} > 0
+$$
+
+- **Counterexample Family B (Schwartz Gaussian divergence-free field on first-order weight seam)**: The equatorial surface integral $\frac{10395}{64}\pi^{3/2}c$ strictly dominates the exterior bulk Hessian loss $80\pi^{3/2}c$ , yielding:
+
+$$
+\frac{\mathrm{RHS}_{\mathrm{B.20}} - \mathrm{LHS}_{\mathrm{B.20}}}{c} > \frac{26311}{64} > 400 > 0
+$$
+
+#### 3.3 Collar Curvature-Tax Conservation Law & Undisclosed SHA-256 Witness
+
+- Smoothing the seam across $|\eta| \le \delta$ via an even $C^2$ quartic spline $s_\delta(\eta)$ spikes the normal second derivative to $\frac{3}{2\delta}$ with strictly conserved total curvature mass:
+
+$$
+\int_{-\delta}^{\delta} s_\delta''(\eta)\,d\eta = 2, \qquad \max_{|\eta| \le \delta} s_\delta''(\eta) = \frac{3}{2\delta}
+$$
+
+- Meanwhile, the paper's upstream existence witness $d \in \mathcal{D}_B$ (pp. 1, 4, 38–39, 70) is unpublished, given only as the 64-character SHA-256 hash `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`.
+
+---
+
+<a id="quick-reproduction"></a>
+
+## III. 一分钟极速复现指南 / 1-Minute Quick Reproduction Guide
+
+### 1. 第一部分 / Part 01 (17.37M-Line GRH 8-Vertex Min-Cut Certificate & Lean 4 Probes)
 
 ```bash
+# 零外部依赖校验 270 万节点声明图的 8 顶点最小有向割证书 (Python 3 stdlib only):
 python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
-```
 
-If Lean 4 (`v4.33.1`) with Mathlib is installed, compile the six self-contained mathematical & Trojan countermodel probes (`AutopsyProbe_Scheme1.lean` through `AutopsyProbe_Scheme6.lean`):
-
-```bash
-# Inside a Lean 4 + Mathlib v4.33.1 environment:
+# 若本地装有 Lean 4 + Mathlib v4.33.1，可直接编译反模型探针:
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme1.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme5.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean
 ```
 
-### 2. Reproduce Part 02 (13.00M-Line FLT Lean 4 Kernel Paradox & Counterexample Probe)
-
-Compile the zero-dependency standalone Lean 4 kernel verification file (`0 sorry`, `0 axiom`, requires only core Lean 4 without Mathlib):
+### 2. 第二部分 / Part 02 (13.00M-Line FLT Zero-Dependency Lean 4 Kernel Probe)
 
 ```bash
+# 零外部依赖（无需下载 Mathlib，0 sorry / 0 axiom）直接用 Lean 4 内核复现 FLT 核心断层:
 lean reproduction/02_flt_13m_lean/lean4_flt_real_kernel_verification.lean
 ```
 
-### 3. Reproduce Part 03 (79-Page Navier–Stokes Paper Closed-Form Counterexamples & Exact Rational Moments)
-
-Run the zero-dependency Python 3 exact rational verification script (`fractions.Fraction` only, finishes in `< 0.1` seconds with exit code `0`):
+### 3. 第三部分 / Part 03 (79-Page Navier–Stokes Paper Exact Rational Counterexamples)
 
 ```bash
+# 零外部依赖（仅用 fractions.Fraction，< 0.1 秒）精确复算 NS 论文五大反例与曲率税恒等式:
 python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
 ```
 
 ---
 
-## Academic Citation & Permanent Archiving
+<a id="repo-structure"></a>
 
-This repository is linked with **Zenodo** for permanent academic DOI and timestamp preservation. Please see [`CITATION.cff`](CITATION.cff) and [`.zenodo.json`](.zenodo.json) for structured citation metadata.
+## IV. 仓库目录结构 / Repository Structure
+
+```text
+.
+├── README.md                                                     # 中英双语顶层导览 (Bilingual Top-Level Overview)
+├── README_ZH.md                                                  # 独立中文导览 (Standalone Chinese README)
+├── README_EN.md                                                  # 独立英文导览 (Standalone English README)
+├── CITATION.cff                                                  # GitHub / Zenodo 标准引用元数据
+├── .zenodo.json                                                  # Zenodo 永久学术 DOI 归档配置
+├── SHA256SUMS                                                    # 全仓库 50 文件 SHA-256 校验总表
+├── zh/                                                           # 中文完整纯闭式专著（共三卷）
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md                 # 第一部分：1,737 万行 GRH Lean 4 悖论与真机验尸
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md                 # 第二部分：1,300 万行 FLT Lean 4 悖论与真机验尸
+│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md     # 第三部分：79 页 NS 爆破纸面证明核漏与闭式反例
+├── en/                                                           # Complete English Monographs (3 Volumes)
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md                 # Part 01: 17.37M-Line GRH Lean 4 Paradox & Autopsy
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md                 # Part 02: 13.00M-Line FLT Lean 4 Paradox & Autopsy
+│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md     # Part 03: 79-Page NS Paper Kernel Leak & Counterexamples
+└── reproduction/                                                 # 一键真机复现探针与取证档案包
+    ├── 01_grh_17m_lean/                                          # GRH 12 个 Lean 探针、10 个真机 JSON 与 8 节点最小割校验器
+    ├── 02_flt_13m_lean/                                          # FLT 199 行零依赖 Lean 4 内核复现探针与源码断层总账
+    └── 03_ns_79p_paper/                                          # NS 精确有理数 5 套反例一键核验脚本与分面解析推导
+```

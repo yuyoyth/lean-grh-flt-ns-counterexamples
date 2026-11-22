@@ -18,8 +18,8 @@
 - **源码定位**：`Definitions/Def_FLTPrelim_Modularity.lean:82-97`，`Definitions/Def_FLTPrelim_ModularRep.lean:31-88`，`Definitions/Def_WeierstrassCurve_Mlc1RowStatement.lean:9-19`
 - **已核实事实**：`IsGoodPrimeFor` and `IsSemistableModel` are defined directly on an integral equation `W : WeierstrassCurve Z` via `not (p | W.Delta)` and `(p | W.Delta -> not (p | W.c4))` without a global minimal model condition. Under an isomorphic coordinate scaling `(x,y) -> (u^2 x, u^3 y)` (such as u = 2 on E_11), `Delta` scales by `u^12` and `c4` by `u^4`, so `2 | Delta'` and `2 | c4'`, falsifying the raw equation predicate `IsSemistableModel` on the scaled model.
 
-## 二、椭圆曲线试件 $E_{11}$（导子 $N=11$）与勾股三模型试件 $(3,4,5; p=2)$ 精确算术核验
+## 二、椭圆曲线试件 $E_{11}$ （导子 $N=11$ ）与勾股三模型试件 $(3,4,5; p=2)$ 精确算术核验
 
-- **$E_{11}: y^2 + y = x^3 - x^2 - 10x - 20$**：$\Delta = -161051 = -11^5$，$c_4 = 496 = 16 \times 31$，$c_6 = 20008$；有理五阶子群轨迹 $P=(5,5), 2P=(16,-61), 3P=(16,60), 4P=(5,-6), 5P=\mathcal{O}$；$u=2$ 缩放模型 $\Delta' = -659664896 = 2^{12}\Delta$，$c_4' = 7936 = 2^4 c_4$；$\mathrm{Frob}_2$ 模 $7$ 特征多项式 $T^2+2T+2 \bmod 7$ 余数表为 `[2, 5, 3, 3, 5, 2, 1]`（全非零）；对 $p \in \{2,3,5,7,13,17,19,23,29\}$ 全部满足 $a_p(E_{11}) = c_p(f_{11})$ 且 $5 \mid |E_{11}(\mathbb{F}_p)|$。
-- **勾股三元组 $(3,4,5; p=2)$ 三种模型区分**：① 原始模型 $y^2=x(x-9)(x+16)$ 的 $\Delta=207360000, c_4=7696$；② 有理规范缩放因子 $(3\times 4\times 5)^4/2^8 = 50625 = 3^4\times 5^4$（奇数）；③ 整数除法模型 `[1, 1, 0, -9, 0]` 的 $\Delta=48681, c_4=457$（奇数）。
-- **Frey 整模型恒等式抽样（$p=5, a=3, b=4$）**：$\Delta \cdot 2^8 = (a^5 b^5 (a^5+b^5))^2 = 99395263697780736$ 严格成立。
+- $E_{11}: y^2 + y = x^3 - x^2 - 10x - 20$ ： $\Delta = -161051 = -11^5$ ， $c_4 = 496 = 16 \times 31$ ， $c_6 = 20008$ ；有理五阶子群轨迹 $P=(5,5), 2P=(16,-61), 3P=(16,60), 4P=(5,-6), 5P=\mathcal{O}$ ； $u=2$ 缩放模型 $\Delta' = -659664896 = 2^{12}\Delta$ ， $c_4' = 7936 = 2^4 c_4$ ； $\mathrm{Frob}_2$ 模 $7$ 特征多项式 $T^2+2T+2 \bmod 7$ 余数表为 `[2, 5, 3, 3, 5, 2, 1]`（全非零）；对 $p \in \{2,3,5,7,13,17,19,23,29\}$ 全部满足 $a_p(E_{11}) = c_p(f_{11})$ 且 $5 \mid |E_{11}(\mathbb{F}_p)|$ 。
+- **勾股三元组** $(3,4,5; p=2)$ **三种模型区分**：① 原始模型 $y^2=x(x-9)(x+16)$ 的 $\Delta=207360000, c_4=7696$ ；② 有理规范缩放因子 $(3\times 4\times 5)^4/2^8 = 50625 = 3^4\times 5^4$ （奇数）；③ 整数除法模型 `[1, 1, 0, -9, 0]` 的 $\Delta=48681, c_4=457$ （奇数）。
+- **Frey 整模型恒等式抽样（** $p=5, a=3, b=4$ **）**： $\Delta \cdot 2^8 = (a^5 b^5 (a^5+b^5))^2 = 99395263697780736$ 严格成立。

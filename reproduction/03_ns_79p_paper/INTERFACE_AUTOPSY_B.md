@@ -6,17 +6,17 @@
 
 令C+iS=(x+iy)⁶、g=exp(−(x²+y²)/2−6z²)，其中S是多项式虚部，不是时间周期。取
 
-\[
+$$
 v=g(-2zyC,\ 2zxC,\ -S).\tag{B1}
-\]
+$$
 
 时间不变，κ=3，Γ取论文的旋转及R*对称。xCy−yCx=−6S，水平散度为−12zgS，竖向散度为12zgS，故divv=0。柱坐标中vr=0、vφ=2zr⁷g cos6φ、vz=−r⁶g sin6φ；角频率±6对应模态±(2,1)。R*下C不变、S变号，故Γ对称成立。v是Schwartz场，所以v∈DSΓ且F=TSv∈Hdiv。
 
 取Wr=0、n=0、D=0、Pλ=Pμ=空。令ρ=|y|、σ=ρ/(1+ρ)、η=z/ρ，取
 
-\[
+$$
 Z=cP(\sigma)|\eta|,\quad c>0,
-\]
+$$
 
 其中P在[0,1/20]为0，在[1/20,1/10]为h(20σ−1)，在[1/10,1]为1；h(t)=6t⁵−15t⁴+10t³。
 
@@ -26,27 +26,27 @@ Z在每一侧为C²分片多项式，原点附近零、关于z偶对称，分侧
 
 对于跨平面连续、分侧C²的Z，真实Hessian为
 
-\[
+$$
 D^2Z=H_{bulk}\,dy+[\partial_zZ]e_3\otimes e_3\,dS_{z=0},
 \quad [\partial_zZ]=2cP(r/(1+r))/r.\tag{B2}
-\]
+$$
 
 无散积分恒等式给
 
-\[
+$$
 \int Z(|\nabla v|^2-|\operatorname{curl}v|^2)
 =\int H_{bulk}[v,v]+\int_{z=0}\frac{2cP(r/(1+r))}{r}v_3^2dS.\tag{B3}
-\]
+$$
 
 最后一项严格正。它不能通过修改Hessian在平面上的普通函数值来表示。
 
 本例Mv=−Δv。B.20其余自由算子项由Parseval和无散恒等式相消，故
 
-\[
+$$
 \Delta:=\mathrm{RHS}_{B.20}-\mathrm{LHS}_{B.20}
 =\int Z(|\nabla v|^2-|\operatorname{curl}v|^2)
 -\int\|H_{bulk}\|_{op}|v|^2.\tag{B4}
-\]
+$$
 
 这就是实际不等式的缺陷，不是替换成其他能量目标。
 
@@ -54,25 +54,25 @@ D^2Z=H_{bulk}\,dy+[\partial_zZ]e_3\otimes e_3\,dS_{z=0},
 
 写p(ρ)=P(ρ/(1+ρ))，则p=0于ρ≤1/19，p=1于ρ≥1/9。不做核心截止时的界面积分为
 
-\[
+$$
 A_0=2\pi c\int_0^\infty r^{12}e^{-r^2}dr
 =\frac{10395}{64}\pi^{3/2}c.
-\]
+$$
 
 截止损失满足A0−A≤2πc/(13·9¹³)。对ρ≥1/9，Z/c=|z|/ρ，其分侧Hessian特征值为
 
-\[
+$$
 \frac{-t\pm\sqrt{4-3t^2}}{2\rho^2},\quad -\frac t{\rho^2},\quad t=|z|/\rho,
-\]
+$$
 
 因而‖Hess_bulk(|z|/ρ)‖op≤2/(√3ρ²)。又有
 
-\[
+$$
 J:=\int\frac{|v|^2}{\rho^2}
 \le\pi\int_\mathbb R\int_0^\infty e^{-r^2-12z^2}
 (4z^2r^{13}+r^{11})\,dr\,dz
 =\frac{60}{\sqrt3}\pi^{3/2}.
-\]
+$$
 
 故外部最坏体积损失≤80π^(3/2)c。
 
@@ -80,26 +80,26 @@ J:=\int\frac{|v|^2}{\rho^2}
 
 合并即得
 
-\[
+$$
 \boxed{\frac\Delta c\ge\frac{5275}{64}\pi^{3/2}
 -\frac{2\pi}{13\,9^{13}}-\frac{9600\pi}{9^{15}}>400.}\tag{B5}
-\]
+$$
 
 最后一步只需π^(3/2)>5及两个小误差和<1；可用3<π<4和有理数比较验证。458.952034…是该保守下界的诊断小数，**不是**issue声称的实际差值674.176…的复算。
 
 另以精确多项式及高斯矩得到
 
-\[
+$$
 \|\nabla v\|_2^2=14880\frac{\pi^{3/2}}{2\sqrt3},\quad
 \|\Delta v\|_2^2=431280\frac{\pi^{3/2}}{2\sqrt3}.
-\]
+$$
 
 由于w*=39/50，B.20左端为
 
-\[
+$$
 \frac{47}{50}\|\Delta v\|_2^2+\frac{127}{625}\|\nabla v\|_2^2
 =\frac{8508892}{125}\sqrt3\pi^{3/2}.
-\]
+$$
 
 父席也独立复算出这些有理系数及div零多项式，实测在 `../stage1/reopened_seam/EXACT_MOMENTS.json`；没有以回填预期值代替计算。
 

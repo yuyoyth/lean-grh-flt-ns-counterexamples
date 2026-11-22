@@ -14,7 +14,7 @@ GRH 同作者线索由指定旧工作台中的 `community_NOTES.md` 指向 <http
 
 ## 全文与目录
 
-`text/FULL_TEXT.txt` 和逐页 `text/page_NNN.txt` 是 pypdf 的布局提取。`text/secondary/FULL_TEXT.txt` 与同目录逐页文件是 PyMuPDF 独立提取。`text/secondary/BOOKMARKS.json` 保留 PDF 书签。公式的上下标、分式和二维布局可能在文本提取中错序；审查关键公式时以原 PDF 和 `evidence/pages/` 的页面渲染为准。例如 (B.40) 的正确权重是 \(w_i\sum_jw_j^{-1}(\cdots)\)，不能按提取后顺序误读成其倒数。
+`text/FULL_TEXT.txt` 和逐页 `text/page_NNN.txt` 是 pypdf 的布局提取。`text/secondary/FULL_TEXT.txt` 与同目录逐页文件是 PyMuPDF 独立提取。`text/secondary/BOOKMARKS.json` 保留 PDF 书签。公式的上下标、分式和二维布局可能在文本提取中错序；审查关键公式时以原 PDF 和 `evidence/pages/` 的页面渲染为准。例如 (B.40) 的正确权重是 $w_i\sum_jw_j^{-1}(\cdots)$ ，不能按提取后顺序误读成其倒数。
 
 `text/STRUCTURE_EXTRACTED.json` 是自动检出的标题候选，包含正文引用造成的误匹配；`text/NAMED_RESULTS.json` 是清理后的 47 个命名定理/命题/引理/推论定位，不是 47 项通过证明。
 
