@@ -14,15 +14,15 @@ The object of analysis in Part 03 is the 79-page manuscript *Finite-time blow-up
 - **File Size / 字节数**: `1,615,293` bytes
 - **PDF SHA-256 Digest / PDF 原件 SHA-256**: `4a01929b2f8a595637bbbe1dfef9724e5de768d31283d62415ce045e2ed69901`
 - **Author Attribution Cross-Reference / 同作者声明交叉核对**: The four-page Generalized Riemann Hypothesis announcement at `https://alpo.ge/remark.pdf` (SHA-256: `3fc97784b71ddd44ff8aa0a177e99622a1c61b13cfa843a0989ee4a7a0cfeb8d`) and page 1 of `paper/finite-time-blow-up-navier-stokes.pdf` confirm common first-author attribution (Levent Alpöge).
-- **Upstream Companion Formal Specification Files / 上游伴随形式化规范文件**: In commit `ad53419de079eb8f95f60313473374624a348546`, the companion specification files `ExtendedCoerciveChallenge.lean` (lines 322–323) and `CellLayerChallenge.lean` (lines 2372–2378, 2505, 2509) specify global $C^2$ regularity (`ContDiff R 2`) and parity-signed cross-plane joining conditions (`IsJoinedScalar 2`) across $y_3 = 0$ .
+- **Upstream Companion Formal Specification Files / 上游伴随形式化规范文件**: In commit `ad53419de079eb8f95f60313473374624a348546`, the companion specification files `ExtendedCoerciveChallenge.lean` (lines 322–323) and `CellLayerChallenge.lean` (lines 2372–2378, 2505, 2509) specify global $C^2$ regularity (`ContDiff R 2`) and parity-signed cross-plane joining conditions (`IsJoinedScalar 2`) across $y _ 3 = 0$ .
 
 ---
 
 ## 2. Structure of the 79-Page Manuscript / 79 页论文结构索引
 
-All page numbers in our analysis refer to the PDF page numbers (which coincide with the printed page numbers 1–79). Every multi-line equation (such as equation (B.16) on page 54, inequality (B.20) on pages 55–56, and the weighted row bound (B.40) on page 62, where the factor is $w_i \sum_j w_j^{-1}(\cdots)$ ) has been cross-checked directly against the rendered PDF pages.
+All page numbers in our analysis refer to the PDF page numbers (which coincide with the printed page numbers 1–79). Every multi-line equation (such as equation (B.16) on page 54, inequality (B.20) on pages 55–56, and the weighted row bound (B.40) on page 62, where the factor is $w _ i \sum _ j w _ j^{-1}(\cdots)$ ) has been cross-checked directly against the rendered PDF pages.
 
-本部分所有页码均指该 79 页 PDF 原件的页码（与印刷页码 1–79 完全一致）。所有跨行与分式公式（如第 54 页公式 (B.16)、第 55–56 页不等式 (B.20) 以及第 62 页加权行界 (B.40) 中的权重比 $w_i \sum_j w_j^{-1}(\cdots)$ ）均已对照原 PDF 渲染页面逐项核实。
+本部分所有页码均指该 79 页 PDF 原件的页码（与印刷页码 1–79 完全一致）。所有跨行与分式公式（如第 54 页公式 (B.16)、第 55–56 页不等式 (B.20) 以及第 62 页加权行界 (B.40) 中的权重比 $w _ i \sum _ j w _ j^{-1}(\cdots)$ ）均已对照原 PDF 渲染页面逐项核实。
 
 | Section / 章节 | Start Page / 起始页 | Primary Mathematical Content / 主要数学内容 |
 | :--- | :---: | :--- |
@@ -42,9 +42,9 @@ All page numbers in our analysis refer to the PDF page numbers (which coincide w
 
 ## 3. Unreleased Upstream Inputs Documented in the Paper / 论文声明但未公开的外部输入
 
-On pages 1, 4, 38–39, and 70, the manuscript refers to a finite-dimensional certificate witness $d \in \mathcal{D}_B$ identified solely by the 64-character SHA-256 digest:
+On pages 1, 4, 38–39, and 70, the manuscript refers to a finite-dimensional certificate witness $d \in \mathcal{D} _ B$ identified solely by the 64-character SHA-256 digest:
 
-论文第 1、4、38–39 及 70 页提及的最上游有限维存在性证人 $d \in \mathcal{D}_B$ 仅给出如下 64 位十六进制 SHA-256 摘要：
+论文第 1、4、38–39 及 70 页提及的最上游有限维存在性证人 $d \in \mathcal{D} _ B$ 仅给出如下 64 位十六进制 SHA-256 摘要：
 
 $$
 \text{SHA-256}(d) = \text{3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5}.

@@ -22,7 +22,7 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 - Exporting the full checked declaration graph of `Main` (`2,701,132` nodes, `170,706,224` directed edges) shows that the joint dependency cone of the five top-level GRH theorems contains `1,478,243` nodes, while `1,222,889` nodes (`45.27%`) lie outside the dependency cone of all five main theorems.
 - Across all `1,072,980` active nodes connecting the prime-multiplicativity / Euler-product source set to the five main theorems, the **minimum internal directed vertex cut has capacity strictly equal to `8`**:
-  `DirichletCharacter.FactorsThrough`, `Formalism.VW.critLine`, `Formalism.VW.rh_of_every`, `HurwitzZeta.hurwitzZetaEven`, `UpperTheory.FinalTheorems.everyCharacter`, `ZMod.LFunction`, `claimAll`, `starRingEnd._proof_2`.
+ `DirichletCharacter.FactorsThrough`, `Formalism.VW.critLine`, `Formalism.VW.rh_of_every`, `HurwitzZeta.hurwitzZetaEven`, `UpperTheory.FinalTheorems.everyCharacter`, `ZMod.LFunction`, `claimAll`, `starRingEnd._proof_2`.
 
 #### 1.2 62 In-Cone Modules Invoke Custom Metaprogramming Tactic `kexactB` Bypassing Frontend Expected-Type Unification
 
@@ -36,7 +36,7 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 #### 1.4 Additive Hurwitz Carrier Degeneration (`ZMod.LFunction`) & Community Edition In-Cone Proof Rewrites
 
-- In the critical strip, `DirichletCharacter.LFunction` reduces to `ZMod.LFunction`, a pure additive Hurwitz linear combination accepting arbitrary periodic functions without multiplicative constraints. Any zero-exclusion functional factoring through this additive quotient and functional-equation symmetry is refuted in Lean 4 (`weak_rule_refuted : ¬WeakRule`) by the **Davenport–Heilbronn countermodel** and the algebraic polynomial $P(s) = (s - 1/2)^2 - 1/16$ vanishing at $s = 3/4$.
+- In the critical strip, `DirichletCharacter.LFunction` reduces to `ZMod.LFunction`, a pure additive Hurwitz linear combination accepting arbitrary periodic functions without multiplicative constraints. Any zero-exclusion functional factoring through this additive quotient and functional-equation symmetry is refuted in Lean 4 (`weak_rule_refuted : ¬WeakRule`) by the **Davenport–Heilbronn countermodel** and the algebraic polynomial $P(s) = (s - 1/2)^2 - 1/16$ vanishing at $s = 3/4$ .
 - The community pruned edition (`f1f6d654`) deletes `10,724` modules (`785,224` lines) and rewrites the internal proof bodies and typeclass parameters of `10` in-cone `CapelliIdentities/` modules (e.g., rewriting `FixPiIff.lean` from `8,029` lines to `45` lines).
 
 ---
@@ -50,17 +50,17 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 #### 2.2 Top-Level Modularity Premise `hmod : IsModular P.freyCurve` Unreferenced Under `set_option linter.unusedVariables false`
 
-- In `Defs_ModularityPrep.lean`, `IsModular(E)` existentially quantifies out the level $N$ without binding it to the conductor radical $\mathrm{Supp}(abc)$ (rendering newform level $N_1 = 15$ and oldform multiple level $N_2 = 105$ indistinguishable under the predicate).
+- In `Defs_ModularityPrep.lean`, `IsModular(E)` existentially quantifies out the level $N$ without binding it to the conductor radical $\mathrm{Supp}(abc)$ (rendering newform level $N _ 1 = 15$ and oldform multiple level $N _ 2 = 105$ indistinguishable under the predicate).
 - Consequently, `S_FreyPackage_level_lowering_to_two.lean` (line 129) sets `set_option linter.unusedVariables false` and **never references its explicit modularity premise `hmod` (`0` occurrences in the proof term)**.
 
 #### 2.3 Premature Invocation of Terminal Zero-Space Theorems Inside Level-Lowering via `False.elim`
 
 - In `S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` (lines 113–170), odd-prime elimination yields only $M \mid 2$ (so $M \in \{1, 2\}$ , without preserving the lower divisibility guard $2 \mid M$ ).
-- Unable to construct a level-2 cusp form directly, lines 156–170 prematurely invoke $S_2(\Gamma_0(1)) = 0$ and $S_2(\Gamma_0(2)) = 0$ *inside* the level-lowering lemma to trigger `False.elim` and non-constructively produce $\exists f \in S_2(\Gamma_0(2)), f \neq 0$.
+- Unable to construct a level-2 cusp form directly, lines 156–170 prematurely invoke $S _ 2(\Gamma _ 0(1)) = 0$ and $S _ 2(\Gamma _ 0(2)) = 0$ *inside* the level-lowering lemma to trigger `False.elim` and non-constructively produce $\exists f \in S _ 2(\Gamma _ 0(2)), f \neq 0$ .
 
 #### 2.4 Raw Integer `IsSemistableModel` Degenerates on Conductor-11 Curve Under Rational Isomorphic Scaling
 
-- Defined on raw integer Weierstrass tuples without minimal-model quotient normalization, `IsSemistableModel` changes truth value from `True (1)` to `False (0)` on the semistable curve $E_{11} : y^2 + y = x^3 - x^2 - 10x - 20$ (with $c_4 = 496, \Delta = -11^5$ ) under the rational isomorphism $(x, y) \mapsto (4x, 8y)$ ($u = 2$).
+- Defined on raw integer Weierstrass tuples without minimal-model quotient normalization, `IsSemistableModel` changes truth value from `True (1)` to `False (0)` on the semistable curve $E _ {11} : y^2 + y = x^3 - x^2 - 10x - 20$ (with $c _ 4 = 496, \Delta = -11^5$ ) under the rational isomorphism $(x, y) \mapsto (4x, 8y)$ ( $u = 2$ ).
 
 ---
 
@@ -68,50 +68,50 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 #### 3.1 Equatorial Seam Dirac Surface-Measure Omission in Proposition B.1 / Inequality (B.20) (Pages 47–57)
 
-- Multiplier weights $D, Z$ are represented as piecewise splines on half-spaces $y_3 > 0$ and $y_3 < 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y_3}{|y|}$.
-- Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \{y_3 = 0\}$:
+- Multiplier weights $D, Z$ are represented as piecewise splines on half-spaces $y _ 3 > 0$ and $y _ 3 < 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y _ 3}{|y|}$ .
+- Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \{y _ 3 = 0\}$ :
 
 $$
-D^2 W = H_{W,\mathrm{bulk}}\,dy + [\partial_z W]_\Sigma\,(e_3 \otimes e_3)\,dS_{z=0}
+D^2 W = H _ {W,\mathrm{bulk}}\,dy + [\partial _ z W] _ \Sigma\,(e _ 3 \otimes e _ 3)\,dS _ {z=0}
 $$
 
 #### 3.2 Two Explicit Closed-Form Divergence-Free Counterexample Families Violating (B.20)
 
-- **Counterexample Family A (compactly supported axisymmetric field on second-order weight seam)**: With $a(t) = (1 - t^2)_+^4$ (exact rational moment $A = \frac{131072}{45045}$ , gradient bound $K = \frac{43936}{81}$ ) and $\varepsilon = 2^{-16} = \frac{1}{65536}$ , Inequality (B.20) (which requires $E_D(v) \le 0$ ) is violated with exact rational lower bound:
+- **Counterexample Family A** (compactly supported axisymmetric field on second-order weight seam): With $a(t) = (1 - t^2) _ +^4$ (exact rational moment $A = \frac{131072}{45045}$ , gradient bound $K = \frac{43936}{81}$ ) and $\varepsilon = 2^{-16} = \frac{1}{65536}$ , Inequality (B.20) (which requires $E _ D(v) \le 0$ ) is violated with exact rational lower bound:
 
 $$
-E_{D_+}(v_\varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} > 0
+E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} > 0
 $$
 
-- **Counterexample Family B (Schwartz Gaussian divergence-free field on first-order weight seam)**: The equatorial surface integral $\frac{10395}{64}\pi^{3/2}c$ strictly exceeds the exterior bulk Hessian contribution $80\pi^{3/2}c$ , yielding the analytical violation bound:
+- **Counterexample Family B** (Schwartz Gaussian divergence-free field on first-order weight seam): The equatorial surface integral $\frac{10395}{64}\pi^{3/2}c$ strictly exceeds the exterior bulk Hessian contribution $80\pi^{3/2}c$ , yielding the analytical violation bound:
 
 $$
-\frac{\mathrm{RHS}_{\mathrm{B.20}} - \mathrm{LHS}_{\mathrm{B.20}}}{c} > \frac{26311}{64} > 400 > 0
+\frac{\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}}{c} > \frac{26311}{64} > 400 > 0
 $$
 
 #### 3.3 Collar Curvature-Tax Conservation Law & Undisclosed SHA-256 Witness
 
-- Smoothing the seam across $|\eta| \le \delta$ via an even $C^2$ quartic spline $s_\delta(\eta)$ causes the normal second derivative to peak at $\frac{3}{2\delta}$ with strictly conserved total curvature mass:
+- Smoothing the seam across $|\eta| \le \delta$ via an even $C^2$ quartic spline $s _ \delta(\eta)$ causes the normal second derivative to peak at $\frac{3}{2\delta}$ with strictly conserved total curvature mass:
 
 $$
-\int_{-\delta}^{\delta} s_\delta''(\eta)\,d\eta = 2, \qquad \max_{|\eta| \le \delta} s_\delta''(\eta) = \frac{3}{2\delta}
+\int _ {-\delta}^{\delta} s _ \delta''(\eta)\,d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
 $$
 
-- Meanwhile, the paper's upstream existence witness $d \in \mathcal{D}_B$ (pp. 1, 4, 38–39, 70) is not published as a numerical file, appearing only as the 64-character SHA-256 digest `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`.
+- Meanwhile, the paper's upstream existence witness $d \in \mathcal{D} _ B$ (pp. 1, 4, 38–39, 70) is not published as a numerical file, appearing only as the 64-character SHA-256 digest `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`.
 
 #### 3.4 Structural Invariance Under Supplementary Proof Materials & Certificate Unsealing (Theorem 5.4 & `suite_6`)
 
 Section 5.3 (Theorem 5.4) of the monograph and `suite_6` of `verify_ns_counterexamples.py` establish a **three-branch structural trilemma** showing why neither releasing the file behind the SHA-256 hash nor appending supplementary lemmas/smoothing certificates within the paper's static piecewise-multiplier framework can resolve the defect:
 
-1. **Branch I (Unsealing the finite-dimensional table $d \in \mathcal{D}_B$ cannot alter the distributional integration-by-parts identity)**: $d \in \mathcal{D}_B$ is a finite spline-coefficient table whose sole analytical bridge to the infinite-dimensional solenoidal space $\mathcal{D}_S^\Gamma$ is Proposition B.1 / Inequality (B.20). Whenever the one-sided normal slope is non-zero on any open equatorial annulus, Counterexample Families A and B violate (B.20) on that annulus regardless of the remaining grid coefficients.
-2. **Branch II (Appending a $C^2$ equatorial collar smoothing transfers the singular surface integral into an equivalent positive pure-bulk Hessian violation while driving $I_1$ negative)**: Replacing $|z|$ across $|z| \le \delta = \lambda\varepsilon$ (with $\lambda = \frac{1}{8}, \varepsilon = 2^{-16}, \delta = 2^{-19}$ ) by the global $C^2$ quartic spline $s_\delta(z)$ eliminates the surface jump ($[\partial_z D_\delta]_\Sigma = 0$) but transfers the curvature mass into the collar bulk integral with transfer factor $I_{\mathrm{collar}}(1/8) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40} = 0.925 > 0$ . Consequently, the exact same solenoidal field $v_\varepsilon$ violates (B.20) under the **pure-bulk Hessian readout**:
+- **Branch I** (Unsealing the finite-dimensional table $d \in \mathcal{D} _ B$ cannot alter the distributional integration-by-parts identity): $d \in \mathcal{D} _ B$ is a finite spline-coefficient table whose sole analytical bridge to the infinite-dimensional solenoidal space $\mathcal{D} _ S^\Gamma$ is Proposition B.1 / Inequality (B.20). Whenever the one-sided normal slope is non-zero on any open equatorial annulus, Counterexample Families A and B violate (B.20) on that annulus regardless of the remaining grid coefficients.
+- **Branch II** (Appending a $C^2$ equatorial collar smoothing transfers the singular surface integral into an equivalent positive pure-bulk Hessian violation while driving $I _ 1$ negative): Replacing $|z|$ across $|z| \le \delta = \lambda\varepsilon$ (with $\lambda = \frac{1}{8}, \varepsilon = 2^{-16}, \delta = 2^{-19}$ ) by the global $C^2$ quartic spline $s _ \delta(z)$ eliminates the surface jump ( $[\partial _ z D _ \delta] _ \Sigma = 0$ ) but transfers the curvature mass into the collar bulk integral with transfer factor $I _ {\mathrm{collar}}(1/8) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40} = 0.925 > 0$ . Consequently, the exact same solenoidal field $v _ \varepsilon$ violates (B.20) under the **pure-bulk Hessian readout**:
 
 $$
-\frac{E_{D_\delta}^{\mathrm{cert}}(v_\varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
+\frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
 $$
 
-   Simultaneously, accounting for the collar Hessian peak $\|H_{D_\delta}(1,0)\|_{\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I_1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
-3. **Branch III (Appending peripheral lemmas cannot overturn an in-domain universal counterexample, while restricting $\mathcal{D}_S^\Gamma$ breaks the Section 7 nonlinear bootstrap)**: By monotonicity of universal falsification, no added lemma can make (B.20) hold on $\mathcal{D}_S^\Gamma$ while $v_\varepsilon \in \mathcal{D}_S^\Gamma$ remains in the domain; conversely, restricting $\mathcal{D}_S^\Gamma$ at $y_3 = 0$ breaks the nonlinear vortex-stretching bootstrap closure on page 70.
+Simultaneously, accounting for the collar Hessian peak $\|H _ {D _ \delta}(1,0)\| _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
+- **Branch III** (Appending peripheral lemmas cannot overturn an in-domain universal counterexample, while restricting $\mathcal{D} _ S^\Gamma$ breaks the Section 7 nonlinear bootstrap): By monotonicity of universal falsification, no added lemma can make (B.20) hold on $\mathcal{D} _ S^\Gamma$ while $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ remains in the domain; conversely, restricting $\mathcal{D} _ S^\Gamma$ at $y _ 3 = 0$ breaks the nonlinear vortex-stretching bootstrap closure on page 70.
 
 ---
 
@@ -120,7 +120,6 @@ $$
 ## II. 1-Minute Quick Reproduction Guide
 
 ### 1. Part 01 (17.37M-Line GRH 8-Vertex Min-Cut Certificate & Lean 4 Probes)
-
 ```bash
 # Zero-dependency verification of the 8-vertex minimum directed cut across 2.70M declarations (Python 3 stdlib only, < 0.2s):
 python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
@@ -132,14 +131,12 @@ lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean
 ```
 
 ### 2. Part 02 (13.00M-Line FLT Zero-Dependency Lean 4 Kernel Probe)
-
 ```bash
 # Zero-dependency Lean 4 kernel verification (no Mathlib required, 0 sorry / 0 axiom) reproducing the FLT structural gaps:
 lean reproduction/02_flt_13m_lean/lean4_flt_real_kernel_verification.lean
 ```
 
 ### 3. Part 03 (79-Page Navier–Stokes Paper Exact Rational Counterexamples & Collar Transfer)
-
 ```bash
 # Zero-dependency exact rational verification (fractions.Fraction only, < 0.1s) of all 6 NS counterexample & collar-transfer suites:
 python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
@@ -150,7 +147,6 @@ python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
 <a id="repo-structure"></a>
 
 ## III. Repository Structure
-
 ```text
 .
 ├── README.md                                                     # Bilingual Top-Level Overview (Chinese & English)

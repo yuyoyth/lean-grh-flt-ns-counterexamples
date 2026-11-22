@@ -28,7 +28,6 @@ Using only the Python 3 standard library, run `verify_graph_certificate.py` to c
 
 **中文**：
 仅需 Python 3 标准库，直接运行 `verify_graph_certificate.py` 即可交叉核验全环境 `2,701,132` 节点 / `170,706,224` 边声明图分区守恒（锥内 `1,478,243` + 锥外 `1,222,889`）、容量严格为 `8` 的最小内部有向顶点割、20 步字典序对数二分轨迹（阈值 `955,506`）、主定理依赖锥内 `62 / 67` 个 `kexactB` 模块（`1,816` 个入锥声明）与互归纳块（`11 + 12 = 23` 个入锥声明）定位，以及原版与社区版源码行数守恒（`17,374,215 - 785,224 - 17,676 + 27 = 16,571,342`）：
-
 ```bash
 python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
 ```
@@ -44,7 +43,6 @@ In any environment with `Lean 4 v4.33.1` and `Mathlib` commit `0df444a360eaa60ab
 
 **中文**：
 在配置有目标仓库锁定的 `Lean 4 v4.33.1` 与 `Mathlib` 提交 `0df444a360eaa60ab8c11dca51a86af692955474` 的环境中，可直接编译自足数学与反模型核查探针：
-
 ```bash
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme1.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme2.lean
@@ -55,7 +53,6 @@ lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean
 To inspect the target GRH repository's top-level theorem signatures, axiom cones, and full declaration graph (`2,701,132` nodes) inside a built checkout of the target GRH repository:
 
 在已构建的目标 GRH 仓库根目录下，可进一步运行针对 `Main` 环境的签名、公理锥与全环境声明图提取探针：
-
 ```bash
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme3.lean
 lake env lean --run reproduction/01_grh_17m_lean/AutopsyProbe_Scheme4.lean > decl_graph.jsonl
@@ -69,41 +66,41 @@ python3 -B reproduction/01_grh_17m_lean/analyze_graph.py decl_graph.jsonl out_di
 ### 1. Lean 4 Verification Probes / 六大方案与目标库 Lean 4 核查探针
 
 - `AutopsyProbe_Scheme1.lean`:
-  * **EN**: Scheme 1 carrier and boundary-guard verification probe (exit code `0`, `2.399s`). Proves `raw_zero` ($\operatorname{Re}(s) \le 1 \implies \operatorname{LSeries}(1, s) = 0$), `raw_three_quarters` ($\operatorname{LSeries}(1, 3/4) = 0$), `functions_differ` ($(s \mapsto \operatorname{LSeries}(1, s)) \neq \operatorname{riemannZeta}$ via $0 \neq -1/2$ at $s=0$), `axis_principal_zero` (the modulo-$2$ principal character vanishes on the imaginary axis at $s_0 = \frac{2\pi i}{\log 2}$), and `removing_guard_is_false` (omitting the left boundary guard $0 < \operatorname{Re}(s)$ makes the universal critical-line statement provably false in Lean 4).
-  * **ZH**：方案一载体与边界守卫实机核查探针（退出码 `0`，耗时 `2.399` 秒）。机器形式化证明 `raw_zero`、`raw_three_quarters`、`functions_differ`、模 $2$ 主特征虚轴零点 `axis_principal_zero`，以及省略左边界守卫 $0 < \operatorname{Re}(s)$ 后的全称临界线命题在 Lean 4 内直接为假 `removing_guard_is_false`。
+ * **EN**: Scheme 1 carrier and boundary-guard verification probe (exit code `0`, `2.399s`). Proves `raw_zero` ( $\operatorname{Re}(s) \le 1 \implies \operatorname{LSeries}(1, s) = 0$ ), `raw_three_quarters` ( $\operatorname{LSeries}(1, 3/4) = 0$ ), `functions_differ` ( $(s \mapsto \operatorname{LSeries}(1, s)) \neq \operatorname{riemannZeta}$ via $0 \neq -1/2$ at $s=0$ ), `axis_principal_zero` (the modulo- $2$ principal character vanishes on the imaginary axis at $s _ 0 = \frac{2\pi i}{\log 2}$ ), and `removing_guard_is_false` (omitting the left boundary guard $0 < \operatorname{Re}(s)$ makes the universal critical-line statement provably false in Lean 4).
+ * **ZH**：方案一载体与边界守卫实机核查探针（退出码 `0`，耗时 `2.399` 秒）。机器形式化证明 `raw_zero`、`raw_three_quarters`、`functions_differ`、模 $2$ 主特征虚轴零点 `axis_principal_zero`，以及省略左边界守卫 $0 < \operatorname{Re}(s)$ 后的全称临界线命题在 Lean 4 内直接为假 `removing_guard_is_false`。
 - `AutopsyProbe_Scheme2.lean` & `DefinitionProbe.lean`:
-  * **EN**: Scheme 2 carrier definition and continuation-bridge probe (exit code `0`, `1.595s`). Prints the underlying definitions of `DirichletCharacter.LFunction` and `ZMod.LFunction` (additive Hurwitz zeta linear combination) and verifies the convergence-guarded right-half-plane bridge `dirichlet_bridge` ($\operatorname{Re}(s) > 1$).
-  * **ZH**：方案二底层载体定义与延拓桥核查探针（退出码 `0`，耗时 `1.595` 秒）。输出 `DirichletCharacter.LFunction` 与 `ZMod.LFunction` 的纯加法 Hurwitz 线性组合定义，并核验带 $\operatorname{Re}(s) > 1$ 收敛域守卫的级数桥 `dirichlet_bridge`。
+ * **EN**: Scheme 2 carrier definition and continuation-bridge probe (exit code `0`, `1.595s`). Prints the underlying definitions of `DirichletCharacter.LFunction` and `ZMod.LFunction` (additive Hurwitz zeta linear combination) and verifies the convergence-guarded right-half-plane bridge `dirichlet_bridge` ( $\operatorname{Re}(s) > 1$ ).
+ * **ZH**：方案二底层载体定义与延拓桥核查探针（退出码 `0`，耗时 `1.595` 秒）。输出 `DirichletCharacter.LFunction` 与 `ZMod.LFunction` 的纯加法 Hurwitz 线性组合定义，并核验带 $\operatorname{Re}(s) > 1$ 收敛域守卫的级数桥 `dirichlet_bridge`。
 - `AutopsyProbe_Scheme3.lean`:
-  * **EN**: Scheme 3 recursive axiom and signature inspection probe for the five top-level target theorems in `Main`.
-  * **ZH**：方案三针对 `Main` 中五大顶层目标定理的形式化签名与递归公理集合核查探针。
+ * **EN**: Scheme 3 recursive axiom and signature inspection probe for the five top-level target theorems in `Main`.
+ * **ZH**：方案三针对 `Main` 中五大顶层目标定理的形式化签名与递归公理集合核查探针。
 - `AutopsyProbe_Scheme4.lean` & `GraphHarness.lean`:
-  * **EN**: Scheme 4 full-environment declaration dependency graph extractor (`original_scheme4`, exit code `0`, `3,268.004s`). Traverses `env.checked` of `Main` to export all `2,701,132` declarations and `170,706,224` directed dependency edges (`type_deps`, `body_deps`, and `structural_deps`).
-  * **ZH**：方案四全环境声明依赖图提取器（`original_scheme4`，退出码 `0`，耗时 `3,268.004` 秒）。遍历原版 `Main` 已检查环境 `env.checked`，完整导出 `2,701,132` 个声明节点与 `170,706,224` 条有向依赖边。
+ * **EN**: Scheme 4 full-environment declaration dependency graph extractor (`original_scheme4`, exit code `0`, `3,268.004s`). Traverses `env.checked` of `Main` to export all `2,701,132` declarations and `170,706,224` directed dependency edges (`type_deps`, `body_deps`, and `structural_deps`).
+ * **ZH**：方案四全环境声明依赖图提取器（`original_scheme4`，退出码 `0`，耗时 `3,268.004` 秒）。遍历原版 `Main` 已检查环境 `env.checked`，完整导出 `2,701,132` 个声明节点与 `170,706,224` 条有向依赖边。
 - `AutopsyProbe_Scheme5.lean`:
-  * **EN**: Scheme 5 same-fiber Trojan countermodel probe (exit code `0`, `5.856s`). Certifies the symmetric Trojan polynomial $P(s) = (s-1/2)^2 - 1/16$, Davenport–Heilbronn non-multiplicativity at $n=6$ (`dh_not_multiplicative`), even-channel reciprocal root at $s=3/4$ (`even_root`), and completed functional-equation reflection (`even_completed_reflection`), formally refuting `WeakRule` (`weak_rule_refuted : ¬WeakRule`) and deriving `WeakRule → (3/4 : ℝ) = 1/2` and `WeakRule → (0 : ℤ) = 1`.
-  * **ZH**：方案五同商纤维特洛伊反模型验证探针（退出码 `0`，耗时 `5.856` 秒）。在 Lean 4 内证成代数对称特洛伊多项式、Davenport–Heilbronn 复合数 $n=6$ 乘性破缺、偶通道 $s=3/4$ 互反根与完备化对称反射，形式证伪弱排零规则 `WeakRule` 并导出 `WeakRule → (3/4 : ℝ) = 1/2` 与 `WeakRule → (0 : ℤ) = 1`。
+ * **EN**: Scheme 5 same-fiber Trojan countermodel probe (exit code `0`, `5.856s`). Certifies the symmetric Trojan polynomial $P(s) = (s-1/2)^2 - 1/16$ , Davenport–Heilbronn non-multiplicativity at $n=6$ (`dh_not_multiplicative`), even-channel reciprocal root at $s=3/4$ (`even_root`), and completed functional-equation reflection (`even_completed_reflection`), formally refuting `WeakRule` (`weak_rule_refuted : ¬WeakRule`) and deriving `WeakRule → (3/4 : ℝ) = 1/2` and `WeakRule → (0 : ℤ) = 1`.
+ * **ZH**：方案五同商纤维特洛伊反模型验证探针（退出码 `0`，耗时 `5.856` 秒）。在 Lean 4 内证成代数对称特洛伊多项式、Davenport–Heilbronn 复合数 $n=6$ 乘性破缺、偶通道 $s=3/4$ 互反根与完备化对称反射，形式证伪弱排零规则 `WeakRule` 并导出 `WeakRule → (3/4 : ℝ) = 1/2` 与 `WeakRule → (0 : ℤ) = 1`。
 - `AutopsyProbe_Scheme6.lean`:
-  * **EN**: Scheme 6 finite arithmetic, imprimitive Gauss-sum vanishing, and positive-definite Gram matrix probe (exit code `0`, `3.990s`). Certifies modulus-zero exclusion `¬Nonempty (NeZero 0)`, Rouché rational margin $(1/8)^2 - (1/16)^2 = 3/256 > 0$, modulo-$4$ principal Gauss-sum vanishing `principal_mod4_gauss = 0`, prime-basis $\{17, 19, 23\}$ rational Gram $LDL^{\mathsf{T}}$ decomposition `gram_ldlt`, positivity `gram_positive`, and zero-moment positive energy `gram_moment_vector = 39`.
-  * **ZH**：方案六有限模数边界、非本原 Gauss 和退化与有理正定 Gram 矩阵核查探针（退出码 `0`，耗时 `3.990` 秒）。
+ * **EN**: Scheme 6 finite arithmetic, imprimitive Gauss-sum vanishing, and positive-definite Gram matrix probe (exit code `0`, `3.990s`). Certifies modulus-zero exclusion `¬Nonempty (NeZero 0)`, Rouché rational margin $(1/8)^2 - (1/16)^2 = 3/256 > 0$ , modulo- $4$ principal Gauss-sum vanishing `principal_mod4_gauss = 0`, prime-basis $\{17, 19, 23\}$ rational Gram $LDL^{\mathsf{T}}$ decomposition `gram_ldlt`, positivity `gram_positive`, and zero-moment positive energy `gram_moment_vector = 39`.
+ * **ZH**：方案六有限模数边界、非本原 Gauss 和退化与有理正定 Gram 矩阵核查探针（退出码 `0`，耗时 `3.990` 秒）。
 - `TailMirrorOriginal.lean`, `TargetValueProbe.lean`, `KexactNegativeControl.lean`, `FirstZeroProbe.lean`:
-  * **EN**: Target repository tail-substitution control probe, off-axis point $s=3/4$ non-vanishing instantiation probe, first-zero existential lookup probe, and custom metaprogramming assignment tactic control probe (`kexactB`, which elaborates with expected type `none` and calls `g.assign` directly).
-  * **ZH**：原版顶层证明项结论替换对照探针、离轴点 $s=3/4$ 非零性实例化探针、首零点存在性检索探针，以及自定义元编程直接赋值策略 `kexactB` 对照实验探针。
+ * **EN**: Target repository tail-substitution control probe, off-axis point $s=3/4$ non-vanishing instantiation probe, first-zero existential lookup probe, and custom metaprogramming assignment tactic control probe (`kexactB`, which elaborates with expected type `none` and calls `g.assign` directly).
+ * **ZH**：原版顶层证明项结论替换对照探针、离轴点 $s=3/4$ 非零性实例化探针、首零点存在性检索探针，以及自定义元编程直接赋值策略 `kexactB` 对照实验探针。
 
 ### 2. Full-Graph Min-Cut Scripts & Structured JSON Verification Artifacts / 全图最小割核验脚本与结构化 JSON 核查档案
 
 - `mincut.json` & `independent_verification.json`:
-  * **EN**: Complete declaration-graph metrics (`2,701,132` nodes, `170,706,224` edges, `1,478,243`-node joint target cone, `1,072,980` active nodes), the exact **`8`-vertex minimum internal directed cut** (`["DirichletCharacter.FactorsThrough", "Formalism.VW.critLine", "Formalism.VW.rh_of_every", "HurwitzZeta.hurwitzZetaEven", "UpperTheory.FinalTheorems.everyCharacter", "ZMod.LFunction", "claimAll", "starRingEnd._proof_2"]`), the `20`-step logarithmic bisection trajectory converging to `k* = 955,506`, and independent flow-certificate verification receipt (`VERIFIED`).
-  * **ZH**：全环境声明图规模、五大主定理 `1,478,243` 节点联合依赖锥、**容量严格为 `8` 的最小内部有向顶点割**、20 步字典序对数二分轨迹（阈值 `955,506`）及独立最大流证书校验回执（`VERIFIED`）。
+ * **EN**: Complete declaration-graph metrics (`2,701,132` nodes, `170,706,224` edges, `1,478,243`-node joint target cone, `1,072,980` active nodes), the exact **`8`-vertex minimum internal directed cut** (`["DirichletCharacter.FactorsThrough", "Formalism.VW.critLine", "Formalism.VW.rh_of_every", "HurwitzZeta.hurwitzZetaEven", "UpperTheory.FinalTheorems.everyCharacter", "ZMod.LFunction", "claimAll", "starRingEnd._proof_2"]`), the `20`-step logarithmic bisection trajectory converging to `k* = 955,506`, and independent flow-certificate verification receipt (`VERIFIED`).
+ * **ZH**：全环境声明图规模、五大主定理 `1,478,243` 节点联合依赖锥、**容量严格为 `8` 的最小内部有向顶点割**、20 步字典序对数二分轨迹（阈值 `955,506`）及独立最大流证书校验回执（`VERIFIED`）。
 - `cone_annotations.json` & `cone_and_mincut_autopsy.json`:
-  * **EN**: Exact in-cone localization of the `62` in-cone `kexactB` caller modules out of `67` total `kexactB`-related files (`1,816` in-cone declarations) and the reflexive mutual inductive blocks `PrincipalizationCertificate` (`11` in-cone declarations) and `OrderCertificate` (`12` in-cone declarations).
-  * **ZH**：主定理依赖锥内 `62` 个 `kexactB` 调用模块（全库共 `67` 个相关文件，含 `1` 个定义文件与 `66` 个调用文件，入锥声明共 `1,816` 个）以及互归纳块 `PrincipalizationCertificate`（`11` 个入锥声明）与 `OrderCertificate`（`12` 个入锥声明）的精确位置清单。
+ * **EN**: Exact in-cone localization of the `62` in-cone `kexactB` caller modules out of `67` total `kexactB`-related files (`1,816` in-cone declarations) and the reflexive mutual inductive blocks `PrincipalizationCertificate` (`11` in-cone declarations) and `OrderCertificate` (`12` in-cone declarations).
+ * **ZH**：主定理依赖锥内 `62` 个 `kexactB` 调用模块（全库共 `67` 个相关文件，含 `1` 个定义文件与 `66` 个调用文件，入锥声明共 `1,816` 个）以及互归纳块 `PrincipalizationCertificate`（`11` 个入锥声明）与 `OrderCertificate`（`12` 个入锥声明）的精确位置清单。
 - `source_findings.json`, `source_line_accounting.json`, `lc23_repo_baseline.json`, `target_declaration_records.json`, `run_manifest.json`:
-  * **EN**: Complete module-by-module differential between original (`40e56bab`, `17,374,215` lines) and community (`f1f6d654`, `16,571,342` lines) repositories (`10,724` deleted modules / `785,224` lines; `23` modified modules / `17,676` net removed lines including `10` rewritten `CapelliIdentities` modules; `1` added module `Challenge.lean` / `27` lines; `802,873` net lines removed), plus live compilation receipts.
-  * **ZH**：原版与社区精简版全量模块差分对账（删除 `10,724` 个模块共 `785,224` 行、修改 `23` 个模块净减 `17,676` 行含 `10` 个重写证明体的 `CapelliIdentities` 模块、新增 `Challenge.lean` 共 `27` 行、全库净减 `802,873` 行）及全部探针实机编译回执。
+ * **EN**: Complete module-by-module differential between original (`40e56bab`, `17,374,215` lines) and community (`f1f6d654`, `16,571,342` lines) repositories (`10,724` deleted modules / `785,224` lines; `23` modified modules / `17,676` net removed lines including `10` rewritten `CapelliIdentities` modules; `1` added module `Challenge.lean` / `27` lines; `802,873` net lines removed), plus live compilation receipts.
+ * **ZH**：原版与社区精简版全量模块差分对账（删除 `10,724` 个模块共 `785,224` 行、修改 `23` 个模块净减 `17,676` 行含 `10` 个重写证明体的 `CapelliIdentities` 模块、新增 `Challenge.lean` 共 `27` 行、全库净减 `802,873` 行）及全部探针实机编译回执。
 - `analyze_graph.py` & `verify_graph_certificate.py`:
-  * **EN**: Standalone Python 3 split-node maximum-flow / minimum-vertex-cut solver and zero-import independent certificate verifier.
-  * **ZH**：全环境声明依赖图拆点最大流／最小有向顶点割求解器与零导入独立证书核验器。
+ * **EN**: Standalone Python 3 split-node maximum-flow / minimum-vertex-cut solver and zero-import independent certificate verifier.
+ * **ZH**：全环境声明依赖图拆点最大流／最小有向顶点割求解器与零导入独立证书核验器。
 
 ---
 
