@@ -1,0 +1,27 @@
+{
+  "domain": "smooth real mean-zero divergence-free fields on (R/2piZ)^3",
+  "field": "U=(sin(y)+sin(z), sin(x), sin(x)-sin(x+y)); X_plus=17U; X_minus=-17U",
+  "minus": {
+    "E": "1445/2",
+    "H": "0",
+    "T": "-4913/4",
+    "Y": "867",
+    "Y_prime": "-9537/2",
+    "Z": "1156"
+  },
+  "paper_certificate_hypotheses_verified": false,
+  "paper_counterexample": false,
+  "plus": {
+    "E": "1445/2",
+    "H": "0",
+    "T": "4913/4",
+    "Y": "867",
+    "Y_prime": "289/2",
+    "Z": "1156"
+  },
+  "q_equal": true,
+  "readout": "all per-mode Hermitian outer products uhat(k) uhat(k)*",
+  "reason": "Paper uses signed reference profile, linearized forms and quantified tail bounds, not this static readout alone.",
+  "target": "initial enstrophy derivative of exact viscosity-one NS",
+  "target_separation": "4913"
+}

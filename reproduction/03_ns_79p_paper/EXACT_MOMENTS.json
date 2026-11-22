@@ -1,0 +1,13 @@
+{
+  "gaussian_normalization": "pi^(3/2)/(2 sqrt(3))",
+  "divergence_polynomial_zero": true,
+  "Y_coefficient": "14880",
+  "Z_coefficient": "431280",
+  "B20_lhs_coefficient": "51053352/125",
+  "B20_lhs_coefficient_in_sqrt3_pi_3halves": "8508892/125",
+  "polynomial_bump_derivative_square_integral": "131072/45045",
+  "gradient_bound_K": "43936/81",
+  "axisymmetric_margin_over_pi_epsilon": "633509743/432432000",
+  "margin_positive": true,
+  "scope": "exact finite polynomial arithmetic only"
+}

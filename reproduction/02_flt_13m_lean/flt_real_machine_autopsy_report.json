@@ -1,0 +1,460 @@
+{
+  "repository": "https://github.com/anthropics/fermats-last-theorem",
+  "upstream_reported_metrics": {
+    "total_modules_reported": 60475,
+    "total_theorems_reported": 29511,
+    "total_definitions_reported": 1450
+  },
+  "local_audited_files_count": 46,
+  "audited_files": [
+    {
+      "file": "Definitions/Def_FLTPrelim_CofixedLine.lean",
+      "sha256": "2bf74f38156af4a8020e573b24013404eaa21a74db0a951290cefa24284c43ff",
+      "line_count": 20
+    },
+    {
+      "file": "Definitions/Def_FLTPrelim_FreyPackage.lean",
+      "sha256": "db451a2116b5dde045bc9ca63ca3106f1edbfe44c96929c8437436d139ce116f",
+      "line_count": 97
+    },
+    {
+      "file": "Definitions/Def_FLTPrelim_GaloisRep.lean",
+      "sha256": "c6d8d02063a6f3c3543574e285f4b55b162ace12040404a9a27b03b928c2778d",
+      "line_count": 83
+    },
+    {
+      "file": "Definitions/Def_FLTPrelim_ModularRep.lean",
+      "sha256": "f91c0cf11412f294a58a220148d666c6eef4d55ffdb4b3400379d9e72390d977",
+      "line_count": 118
+    },
+    {
+      "file": "Definitions/Def_FLTPrelim_Modularity.lean",
+      "sha256": "5a68b3d1fd8bcb1fcd56c254cb84983ace76ba53a9c437a208350ce3e8cabe02",
+      "line_count": 106
+    },
+    {
+      "file": "Definitions/Def_FLTPrelim_Ramification.lean",
+      "sha256": "2316e21cc68b2b5737dc40bc99aef5bcc03cb7d0a971b1f017235debb28fb1da",
+      "line_count": 52
+    },
+    {
+      "file": "Definitions/Def_FreyPackage_IsConductorLevel.lean",
+      "sha256": "32598f26b1cba0f06c1fac7fdd02e783543e1aea84b999f5a2b22df529336758",
+      "line_count": 42
+    },
+    {
+      "file": "Definitions/Def_WeierstrassCurve_Mlc1RowStatement.lean",
+      "sha256": "8ebe760ae4ef9e6708eea151f35f6b758361469255a00305047c149c3d0324a3",
+      "line_count": 21
+    },
+    {
+      "file": "P2M/Sol/S_FLT_fermatLastTheorem.lean",
+      "sha256": "3758e653dcc2fcac1c2b35b63ef1713ac68a0f0d99d163458dd30b7dce2c47c0",
+      "line_count": 139
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_Mazur_Frey.lean",
+      "sha256": "3e219ebcb87466b6e77f1bf0dcd394e8f47dcb4f17fe25a394d9fcae94d4e2ec",
+      "line_count": 91
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_Mazur_Frey_of_a_mod_eight.lean",
+      "sha256": "d7a75d61b16343a0bf7e01770e9b5732015aa2ced7f73079920d0db00032d0e8",
+      "line_count": 19
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_atPNewLowering.lean",
+      "sha256": "8da9208fa80f3316ab78293860a51d9d17935fe619f99092480d423ac849d85b",
+      "line_count": 75
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_frey_isModular.lean",
+      "sha256": "9f978363ca7bf506ecbadc4b5c8c14cf5535f961ab91330dfea469d647ea2de8",
+      "line_count": 259
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_frey_no_cofixed_eleven.lean",
+      "sha256": "7a6c82f517f95e8adde23d01e9eff99323e3ba831a084e8b5174c4527ea7a450",
+      "line_count": 24
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_frey_no_cofixed_large.lean",
+      "sha256": "16750fcba1f02ba21bcbfa5999103c03be4f85c2359913c51c0b83cef66d2413",
+      "line_count": 1450
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_frey_no_cofixed_of_a_mod_eight.lean",
+      "sha256": "5098ddbdc71ce7a7ad34ef7ceed70e489fae314f74509207386865ea0746cc5f",
+      "line_count": 90
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_frey_no_cofixed_small.lean",
+      "sha256": "abc23bb3722cd46b27e2930eb530dcae40de54374e3cc5b79cef3f1c44f56d23",
+      "line_count": 29
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_frey_reducible_hasCofixedLine.lean",
+      "sha256": "a353db4c658952ab601d9bc293c09854143fd3654b8d4822a119606c99970f68",
+      "line_count": 52
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_level_lowering_at_p_of_conductorLevel.lean",
+      "sha256": "15a8679d9e93bf078289519f9a229d7ba7f2c36f351f919b7afb33401ab463a7",
+      "line_count": 214
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_level_lowering_odd_prime_of_conductorLevel.lean",
+      "sha256": "dd7e27c87c35a1423579658eefc1f732a10764ffac5347c79a12c9987b7574e4",
+      "line_count": 148
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_level_lowering_to_two.lean",
+      "sha256": "ee19ab22e3de6ecdd1ad71fefecfc11efdccf9f79dcaa6fd6061ed9b1f78ea93",
+      "line_count": 134
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean",
+      "sha256": "ed2aa9dffbe7704b42c1b94122a2243677ad6485350454debf56e697c6ce520d",
+      "line_count": 170
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_modularRepOfConductorLevel.lean",
+      "sha256": "d2297c1db252daa06039857afe09c3bae40cd429fc2be8ca4167d5fc5bf21b0a",
+      "line_count": 220
+    },
+    {
+      "file": "P2M/Sol/S_FreyPackage_no_frey_package.lean",
+      "sha256": "9c56cd147e9d68b409622e067ea4d6dcf30383e016f89fef4913f55a564e5c12",
+      "line_count": 147
+    },
+    {
+      "file": "P2M/Sol/S_ModularForm_S2_Gamma0_2_eq_zero.lean",
+      "sha256": "e9c16a42e589727cf2902879750087479c936629236ba07a943047bccd276d63",
+      "line_count": 215
+    },
+    {
+      "file": "P2M/Sol/S_WeierstrassCurve_isResiduallyModularOfLevel_div_of_isUnramifiedAt_sqf.lean",
+      "sha256": "135079e518876d1a12c5c6b4420f25676edea1b66ef277b47c4f28e8112f5be6",
+      "line_count": 194
+    },
+    {
+      "file": "P2M/Sol/S_WeierstrassCurve_modularity_of_semistableModel.lean",
+      "sha256": "e792f23cc5ff2d5611c988c23787b34a3959cd7dd432cf6c4f918550cd38aea6",
+      "line_count": 212
+    },
+    {
+      "file": "P2M/Sol/S_fermat_last_theorem.lean",
+      "sha256": "a922fd533ad7a4a156092587f2eed1b2cb9a63f9d11675ab413a029ed59c5f1b",
+      "line_count": 130
+    },
+    {
+      "file": "Theorems/Thm_FLT_fermatLastTheorem.lean",
+      "sha256": "1f432e8a014543ea5e65454e20ec3234ddd27547e03453ccae4e01755d70d1d6",
+      "line_count": 136
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_Mazur_Frey.lean",
+      "sha256": "54692884a875c61b5a9a9bad236d754eed051919f5475375dac6bba029170112",
+      "line_count": 70
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_atPNewLowering.lean",
+      "sha256": "4287309ec84fe7fca8cf1137f98b16850a4b5cc033c797f6eb62cf29933be466",
+      "line_count": 66
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_frey_isModular.lean",
+      "sha256": "f6dbf9782ffad402a591325168a57518cd99357cc8298ec0608e320621e4cc5a",
+      "line_count": 131
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_frey_no_cofixed_eleven.lean",
+      "sha256": "1f0b155b7c6293764b3d908226d00cff41ce2d5d4db8011225ecdb7cfe70117e",
+      "line_count": 13
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_frey_no_cofixed_large.lean",
+      "sha256": "b06d00b7f767bd4b4aad11a424e725a56443883191ee8992d492eaaf6cf2744b",
+      "line_count": 70
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_frey_no_cofixed_small.lean",
+      "sha256": "01347c732bf0d852366286cf288d119522108d4d37e279f3e78bc94c09e0a5d0",
+      "line_count": 13
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_level_lowering_at_p_of_conductorLevel.lean",
+      "sha256": "1625a5fc9ed53e4a596ffef926156213b7bb0d12c2410bf097886d990bad09a2",
+      "line_count": 70
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_level_lowering_odd_prime_of_conductorLevel.lean",
+      "sha256": "e5c6c82cd79983242b2fafc95e2aa0b0be8424b8e793d1fc160b3e258028eb41",
+      "line_count": 90
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_level_lowering_to_two.lean",
+      "sha256": "3b8bffd855434842a6df5e62806bcd92523db52a573cb4a21df9bcefcf47f389",
+      "line_count": 131
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_level_lowering_to_two_of_conductorLevel.lean",
+      "sha256": "a61f6a92d8cb892c777770e1069b5c662d7f31188a4fc66df80e98c45383d32a",
+      "line_count": 91
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_modularRepOfConductorLevel.lean",
+      "sha256": "98cea961223b39262b15cbca01e61f672ff1fdc4e1f5ee5d2997152680ba3543",
+      "line_count": 131
+    },
+    {
+      "file": "Theorems/Thm_FreyPackage_no_frey_package.lean",
+      "sha256": "9a08c324beccfe2235985249ad6d243fce1164b9251c1d01faa0835e39c72258",
+      "line_count": 129
+    },
+    {
+      "file": "Theorems/Thm_ModularForm_S2_Gamma0_2_eq_zero.lean",
+      "sha256": "c8e833e2e20554fa5a52b11353ef308aa73a223de4ef60afb64ca06313beddc1",
+      "line_count": 13
+    },
+    {
+      "file": "Theorems/Thm_WeierstrassCurve_isResiduallyModularOfLevel_div_of_isUnramifiedAt_sqf.lean",
+      "sha256": "42ec5a5c2e9783a90a5096acc058552b0ca46dac3a7db1086dd6895f30952f73",
+      "line_count": 99
+    },
+    {
+      "file": "Theorems/Thm_WeierstrassCurve_modularity_of_semistableModel.lean",
+      "sha256": "0aab38d28d9e529b7c6da36b64a3a8a3a876681d8319e8ee521ddedb914c8061",
+      "line_count": 131
+    },
+    {
+      "file": "Theorems/Thm_fermat_last_theorem.lean",
+      "sha256": "b678bb152910351b3c968a1ae59829fe7bcde15157856d5740bf799bfd5127db",
+      "line_count": 128
+    },
+    {
+      "file": "verification/comparator/Challenge.lean",
+      "sha256": "e368349f68f3ed4fafcf4e1bc2cd34a308eb76aaab0526ae7fdee9e9ba5908a6",
+      "line_count": 14
+    }
+  ],
+  "lean4_real_kernel_verification": {
+    "file": "evidence/lean4_flt_real_kernel_verification.lean",
+    "sha256": "9c46301cabd3b498e3626b84669f985920dd65ae18b4ab2c315cabe0763a0251",
+    "line_count": 199,
+    "compiler": "/home/yth/Desktop/work/20261121_lc23_原版GRH_Lean副手实测验尸工作台/evidence/round2/toolchain/lean-4.33.1-linux/bin/lean",
+    "exit_code": 0
+  },
+  "structural_phenomena": [
+    {
+      "id": "PHENOMENON_01_UNUSED_HEADLINE_ISMODULAR_AND_INTERNAL_LEVEL_LOWERING_CONTRADICTION",
+      "files": [
+        "P2M/Sol/S_FreyPackage_no_frey_package.lean:139-142",
+        "P2M/Sol/S_FreyPackage_level_lowering_to_two.lean:129-134",
+        "P2M/Sol/S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean:163-170",
+        "Definitions/Def_FLTPrelim_Modularity.lean:98-102"
+      ],
+      "verified_fact": "In S_FreyPackage_level_lowering_to_two.lean (lines 129-134), the explicit hypothesis (hmod : P.freyCurve.IsModular) passed from frey_isModular is silenced by `set_option linter.unusedVariables false in` and not consumed; instead, the proof invokes `P.modularRepOfConductorLevel` (which separately retains `P.IsConductorLevel N`). Furthermore, in S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean (lines 163-170), level lowering lowers N to M | 2 (M in {1, 2}), applies S2_Gamma0_eq_zero_of_dvd_two inside the lemma to derive a contradiction with hf.ne_zero, and uses `absurd` to return `exists f : CuspForm (Gamma0 2) 2, f != 0`."
+    },
+    {
+      "id": "PHENOMENON_02_COUNTERFACTUAL_CARRIER_BUNDLING_AND_SMALL_PRIME_EX_FALSO_DISCHARGE",
+      "files": [
+        "Definitions/Def_FLTPrelim_FreyPackage.lean:12-34",
+        "P2M/Sol/S_FreyPackage_frey_no_cofixed_eleven.lean:14-24",
+        "P2M/Sol/S_FreyPackage_frey_no_cofixed_small.lean:16-29",
+        "P2M/Sol/S_FreyPackage_Mazur_Frey.lean:68-91"
+      ],
+      "verified_fact": "`FreyPackage` bundles the counterfactual equality `hFLT : a^p + b^p = c^p` directly into the carrier type. In `S_FreyPackage_frey_no_cofixed_eleven.lean` (lines 14-24) and `S_FreyPackage_frey_no_cofixed_small.lean` (lines 16-29), the absence of a Galois-stable cofixed line (`not HasGaloisStableCofixedLine`, where the 1-dimensional quotient has trivial G_Q-action) for p in {5, 7, 11, 13} is discharged not by modular curve isogeny analysis, but by importing standalone classical proofs `fermatLastTheoremEleven/Five/Seven/Thirteen`, deducing `P.p != p_0` from `P.hFLT`, and applying `absurd hp`."
+    },
+    {
+      "id": "PHENOMENON_03_MODEL_DEPENDENT_INTEGRAL_WEIERSTRASS_PREDICATE",
+      "files": [
+        "Definitions/Def_FLTPrelim_Modularity.lean:82-97",
+        "Definitions/Def_FLTPrelim_ModularRep.lean:31-88",
+        "Definitions/Def_WeierstrassCurve_Mlc1RowStatement.lean:9-19"
+      ],
+      "verified_fact": "`IsGoodPrimeFor` and `IsSemistableModel` are defined directly on an integral equation `W : WeierstrassCurve Z` via `not (p | W.Delta)` and `(p | W.Delta -> not (p | W.c4))` without a global minimal model condition. Under an isomorphic coordinate scaling `(x,y) -> (u^2 x, u^3 y)` (such as u = 2 on E_11), `Delta` scales by `u^12` and `c4` by `u^4`, so `2 | Delta'` and `2 | c4'`, falsifying the raw equation predicate `IsSemistableModel` on the scaled model."
+    }
+  ],
+  "trojan_curve_verifications": {
+    "E_11": {
+      "equation": "y^2 + y = x^3 - x^2 - 10x - 20",
+      "invariants": {
+        "a_invariants": [
+          0,
+          -1,
+          1,
+          -10,
+          -20
+        ],
+        "b2": -4,
+        "b4": -20,
+        "b6": -79,
+        "b8": -21,
+        "c4": 496,
+        "c6": 20008,
+        "Delta": -161051
+      },
+      "scaled_u2_invariants": {
+        "a_invariants": [
+          0,
+          -4,
+          8,
+          -160,
+          -1280
+        ],
+        "b2": -16,
+        "b4": -320,
+        "b6": -5056,
+        "b8": -5376,
+        "c4": 7936,
+        "c6": 1280512,
+        "Delta": -659664896
+      },
+      "order_5_subgroup_trajectory": [
+        [
+          5,
+          5
+        ],
+        [
+          16,
+          -61
+        ],
+        [
+          16,
+          60
+        ],
+        [
+          5,
+          -6
+        ],
+        "O"
+      ],
+      "mod7_frob2_charpoly_remainders": [
+        2,
+        5,
+        3,
+        3,
+        5,
+        2,
+        1
+      ],
+      "hecke_eigenvalues_ap_eq_cp": [
+        {
+          "p": 2,
+          "N_p": 5,
+          "a_p(E_11)": -2,
+          "c_p(f_11)": -2,
+          "1+p_mod_5": 3,
+          "a_p_mod_5": 3
+        },
+        {
+          "p": 3,
+          "N_p": 5,
+          "a_p(E_11)": -1,
+          "c_p(f_11)": -1,
+          "1+p_mod_5": 4,
+          "a_p_mod_5": 4
+        },
+        {
+          "p": 5,
+          "N_p": 5,
+          "a_p(E_11)": 1,
+          "c_p(f_11)": 1,
+          "1+p_mod_5": 1,
+          "a_p_mod_5": 1
+        },
+        {
+          "p": 7,
+          "N_p": 10,
+          "a_p(E_11)": -2,
+          "c_p(f_11)": -2,
+          "1+p_mod_5": 3,
+          "a_p_mod_5": 3
+        },
+        {
+          "p": 13,
+          "N_p": 10,
+          "a_p(E_11)": 4,
+          "c_p(f_11)": 4,
+          "1+p_mod_5": 4,
+          "a_p_mod_5": 4
+        },
+        {
+          "p": 17,
+          "N_p": 20,
+          "a_p(E_11)": -2,
+          "c_p(f_11)": -2,
+          "1+p_mod_5": 3,
+          "a_p_mod_5": 3
+        },
+        {
+          "p": 19,
+          "N_p": 20,
+          "a_p(E_11)": 0,
+          "c_p(f_11)": 0,
+          "1+p_mod_5": 0,
+          "a_p_mod_5": 0
+        },
+        {
+          "p": 23,
+          "N_p": 25,
+          "a_p(E_11)": -1,
+          "c_p(f_11)": -1,
+          "1+p_mod_5": 4,
+          "a_p_mod_5": 4
+        },
+        {
+          "p": 29,
+          "N_p": 30,
+          "a_p(E_11)": 0,
+          "c_p(f_11)": 0,
+          "1+p_mod_5": 0,
+          "a_p_mod_5": 0
+        }
+      ]
+    },
+    "Pythagorean_3_4_5_p2": {
+      "raw_model_y2_eq_x_xm9_xp16": {
+        "a_invariants": [
+          0,
+          7,
+          0,
+          -144,
+          0
+        ],
+        "b2": 28,
+        "b4": -288,
+        "b6": 0,
+        "b8": -20736,
+        "c4": 7696,
+        "c6": -312256,
+        "Delta": 207360000
+      },
+      "rational_scaled_discriminant_factor": 50625,
+      "integer_division_freyCurveInt_model": {
+        "a_invariants": [
+          1,
+          1,
+          0,
+          -9,
+          0
+        ],
+        "b2": 5,
+        "b4": -18,
+        "b6": 0,
+        "b8": -81,
+        "c4": 457,
+        "c6": -3365,
+        "Delta": 48681
+      }
+    },
+    "Frey_Int_Sample_p5_a3_b4": {
+      "a5": 243,
+      "b5": 1024,
+      "Delta": 388262748819456,
+      "c4": 1356457,
+      "identity_Delta_times_256_eq_abc_sq": true
+    }
+  }
+}

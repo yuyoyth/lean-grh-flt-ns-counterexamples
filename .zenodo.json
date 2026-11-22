@@ -1,0 +1,25 @@
+{
+  "title": "Mathematical Internal Paradoxes, Real-Machine Autopsies, and Closed-Form Counterexamples for the 17.37M-Line GRH Lean 4 Formalization, 13.00M-Line FLT Lean 4 Formalization, and Co-Author 79-Page Navier-Stokes Finite-Time Blow-Up Paper Proof",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "description": "Bilingual (English and Chinese) mathematical audit, real-machine Lean 4 declaration-graph autopsy, and closed-form counterexample suite covering three major targets: (1) the 17,374,215-line Generalized Riemann Hypothesis (GRH) Lean 4 formalization (carrier semantic distortion, Trojan countermodels in the additive Hurwitz quotient fiber, and an exact 8-vertex minimum directed cut across the 2,701,132-node declaration dependency graph); (2) the 13,004,119-line Fermat's Last Theorem (FLT) Lean 4 formalization (degenerate 3-integer Newform encoding, constant ConductorLevel = 2 collapse, decoupled FreyPackage carrier, and counterfactual premise explosion in Mazur_Frey); and (3) the co-author's simultaneously released 79-page paper 'Finite-time blow-up for the Navier-Stokes equations' (singular Dirac surface-measure escape across the equatorial seam y_3 = 0 in Proposition B.1 / inequality (B.20), closed-form Counterexample Family A with exact rational margin (pi/65536)*(633509743/432432000) > 0, closed-form Schwartz Gaussian mode-(2,1) Counterexample Family B with > 400c violation margin, the O(delta^{-1}) equatorial collar curvature-tax conservation law, and static Euclidean spectral readout sign blindness u_0^{+-} = +-17 U vs. comoving covariant inverse-metric dissipation).",
+  "creators": [
+    {
+      "name": "yuyoyth"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "Generalized Riemann Hypothesis",
+    "Fermat's Last Theorem",
+    "Navier-Stokes Equations",
+    "Lean 4",
+    "Formal Verification",
+    "Counterexamples",
+    "Representation Quotient Kernel Leakage",
+    "Distributional Hessian",
+    "Dirac Surface Measure"
+  ],
+  "language": "eng",
+  "notes": "Bilingual edition (English and Chinese) with self-contained Lean 4 and zero-dependency Python 3 exact rational verification scripts."
+}

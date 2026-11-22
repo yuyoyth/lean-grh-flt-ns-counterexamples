@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED",
+  "nodes": 2701132,
+  "edges": 170706224,
+  "capacity": 8,
+  "finite_interior_cut": true,
+  "flow_feasibility": true,
+  "flow_arcs_in_actual_graph": true,
+  "cut_closed_reachability": true,
+  "optimal_by_equal_flow_cut": true,
+  "no_finite_interior_cut_certified": false,
+  "bisection_trace_replayed": true,
+  "active_subgraph_contains_all_source_sink_paths": true,
+  "exact_closures_recomputed": true,
+  "per_sink_sizes_recomputed": true,
+  "axioms_recomputed": true,
+  "raw_source_sha256": "476485163475eed1feee899d0aa088de78ac114b960baefd3c788df6908ce740",
+  "scope": "Exact finite reference graph; not proof validity or arithmetic completeness",
+  "annotations_independently_recomputed": true
+}

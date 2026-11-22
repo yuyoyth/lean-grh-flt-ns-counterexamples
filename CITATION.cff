@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use or reference these mathematical audits, counterexamples, or verification scripts, please cite this repository as below."
+title: "Mathematical Internal Paradoxes, Real-Machine Autopsies, and Closed-Form Counterexamples for the 17.37M-Line GRH Lean 4 Formalization, 13.00M-Line FLT Lean 4 Formalization, and Co-Author 79-Page Navier-Stokes Finite-Time Blow-Up Paper Proof"
+authors:
+  - alias: "yuyoyth"
+    name: "yuyoyth"
+repository-code: "https://github.com/yuyoyth/lean-grh-flt-ns-counterexamples"
+url: "https://github.com/yuyoyth/lean-grh-flt-ns-counterexamples"
+license: "CC-BY-4.0"
+keywords:
+  - "Generalized Riemann Hypothesis"
+  - "Fermat's Last Theorem"
+  - "Navier-Stokes Equations"
+  - "Lean 4"
+  - "Formal Verification"
+  - "Closed-Form Counterexamples"
+  - "Kernel Leakage"
+abstract: >-
+  Bilingual (English and Chinese) mathematical audit, real-machine Lean 4 kernel
+  and declaration-graph autopsy, and closed-form counterexample suite for (1) the
+  17,374,215-line Generalized Riemann Hypothesis (GRH) Lean 4 formalization, (2)
+  the 13,004,119-line Fermat's Last Theorem (FLT) Lean 4 formalization, and (3)
+  the co-author's simultaneously released 79-page Navier-Stokes finite-time
+  blow-up paper proof.

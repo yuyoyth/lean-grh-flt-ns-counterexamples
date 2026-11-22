@@ -1,0 +1,273 @@
+{
+  "scope": "Exact extracted declaration-reference graph; graph cuts do not certify proof errors",
+  "node_count": 2701132,
+  "edge_count": 170706224,
+  "target_cone_size": 1478243,
+  "outside_target_cone": 1222889,
+  "outside_fraction": 0.4527320397522224,
+  "per_sink_cone_sizes": {
+    "riemannZeta_eq_zero_re": 1478221,
+    "LFunction_eq_zero_re": 1478224,
+    "LFunction_ne_zero_of_half_lt_re": 1478211,
+    "LFunction_eq_zero_re_of_isPrimitive": 1478214,
+    "riemannHypothesis": 1478219
+  },
+  "sources": [
+    "MonoidHom.map_mul'",
+    "dirichletSummandHom",
+    "DirichletCharacter.LSeries_eulerProduct",
+    "DirichletCharacter.LSeries_eulerProduct_exp_log",
+    "riemannZeta_eulerProduct"
+  ],
+  "sinks": [
+    "riemannHypothesis",
+    "riemannZeta_eq_zero_re",
+    "LFunction_ne_zero_of_half_lt_re",
+    "LFunction_eq_zero_re",
+    "LFunction_eq_zero_re_of_isPrimitive"
+  ],
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "leaves": [
+    "Additive",
+    "Bundle.Trivial",
+    "CategoryTheory.Free",
+    "CategoryTheory.GradedObject",
+    "CategoryTheory.InducedCategory",
+    "CategoryTheory.Paths",
+    "CategoryTheory.ShrinkHoms",
+    "Colex",
+    "CompanionTheory.RgGu.NR.ConjProd.Cj",
+    "ConjAct",
+    "Contravariant",
+    "Covariant",
+    "DegLex",
+    "Encodable.decidableEqOfEncodable.match_1",
+    "Formalism.FourierDecayAlt.D.Op",
+    "Formalism.FourierDecayAlt.P.Qx6.Pres2",
+    "Function.End",
+    "Function.bicompr",
+    "Function.comp",
+    "Function.const",
+    "Function.eval",
+    "Function.onFun",
+    "Function.swap",
+    "Function.swap₂",
+    "GlobalTheory.CompanionTheory.DictLoc.Cp",
+    "GlobalTheory.CompanionTheory.PerfectSecondCohomology.Pm",
+    "GlobalTheory.ConjDS.Cj",
+    "GlobalTheory.ConjModelTr.Tw",
+    "GlobalTheory.ConjugateType.ConjSp",
+    "GlobalTheory.FieldCopy",
+    "GlobalTheory.Mem.AutConj.ConjAlg",
+    "GlobalTheory.OrbitUnfold.ConjSelf",
+    "GlobalTheory.SelAssemble.Dsc",
+    "GlobalTheory.TwistRamLoc.Disc",
+    "Id",
+    "InvImage",
+    "Lean.Grind.MatchCond",
+    "Lean.Grind.PreMatchCond",
+    "Lean.Grind.alreadyNorm",
+    "Lean.Grind.nestedProof",
+    "Lean.opaqueId",
+    "Lex",
+    "Mathlib.Tactic.GCongr.imp_mono",
+    "Mathlib.Tactic.TermCongr.cHole",
+    "Matrix",
+    "Multiplicative",
+    "Order.Preimage",
+    "OrderDual",
+    "Pi.map",
+    "PositivityTheory.RgGu.NR.ConjProd.Cj",
+    "Quot",
+    "ReciprocityTheory.ChartRestriction.DS.Mult1.ConjugateHilbertSpace.Cj",
+    "Relator.LiftFun",
+    "RestrictScalars",
+    "Set",
+    "Subrelation",
+    "Symmetric",
+    "UniformFun",
+    "WithCStarModule",
+    "_private.Mathlib.Logic.Function.Basic.0.Function.Injective.isPartialInv.match_1_1",
+    "_private.Mathlib.MeasureTheory.Integral.Bochner.VitaliCaratheodory.0.MeasureTheory.exists_lt_lowerSemicontinuous_integral_lt.match_1_1",
+    "binderNameHint",
+    "decidableEqOfDecidableLE.match_1",
+    "default.sizeOf.match_1",
+    "eagerReduce",
+    "flip",
+    "forall_imp",
+    "id",
+    "imp_intro",
+    "inferInstance",
+    "inline",
+    "optParam",
+    "outParam",
+    "semiOutParam",
+    "wfParam"
+  ],
+  "active_nodes": 1072980,
+  "finite_interior_cut": true,
+  "minimum_vertex_cut_capacity": 8,
+  "cut": [
+    "DirichletCharacter.FactorsThrough",
+    "Formalism.VW.critLine",
+    "Formalism.VW.rh_of_every",
+    "HurwitzZeta.hurwitzZetaEven",
+    "UpperTheory.FinalTheorems.everyCharacter",
+    "ZMod.LFunction",
+    "claimAll",
+    "starRingEnd._proof_2"
+  ],
+  "flow_value": 8,
+  "flow_value_kind": "exact maximum",
+  "flow_certificate_verified": true,
+  "cut_disconnection_verified": true,
+  "bisection": {
+    "predicate": "No source-to-sink path after deleting the first k nonterminal active names in lexical order",
+    "proves": "A graph reachability threshold only; not a faulty proof line",
+    "start": false,
+    "end": true,
+    "trace": [
+      {
+        "lo": 0,
+        "hi": 1072972,
+        "mid": 536486,
+        "disconnected": false
+      },
+      {
+        "lo": 536486,
+        "hi": 1072972,
+        "mid": 804729,
+        "disconnected": false
+      },
+      {
+        "lo": 804729,
+        "hi": 1072972,
+        "mid": 938850,
+        "disconnected": false
+      },
+      {
+        "lo": 938850,
+        "hi": 1072972,
+        "mid": 1005911,
+        "disconnected": true
+      },
+      {
+        "lo": 938850,
+        "hi": 1005911,
+        "mid": 972380,
+        "disconnected": true
+      },
+      {
+        "lo": 938850,
+        "hi": 972380,
+        "mid": 955615,
+        "disconnected": true
+      },
+      {
+        "lo": 938850,
+        "hi": 955615,
+        "mid": 947232,
+        "disconnected": false
+      },
+      {
+        "lo": 947232,
+        "hi": 955615,
+        "mid": 951423,
+        "disconnected": false
+      },
+      {
+        "lo": 951423,
+        "hi": 955615,
+        "mid": 953519,
+        "disconnected": false
+      },
+      {
+        "lo": 953519,
+        "hi": 955615,
+        "mid": 954567,
+        "disconnected": false
+      },
+      {
+        "lo": 954567,
+        "hi": 955615,
+        "mid": 955091,
+        "disconnected": false
+      },
+      {
+        "lo": 955091,
+        "hi": 955615,
+        "mid": 955353,
+        "disconnected": false
+      },
+      {
+        "lo": 955353,
+        "hi": 955615,
+        "mid": 955484,
+        "disconnected": false
+      },
+      {
+        "lo": 955484,
+        "hi": 955615,
+        "mid": 955549,
+        "disconnected": true
+      },
+      {
+        "lo": 955484,
+        "hi": 955549,
+        "mid": 955516,
+        "disconnected": true
+      },
+      {
+        "lo": 955484,
+        "hi": 955516,
+        "mid": 955500,
+        "disconnected": false
+      },
+      {
+        "lo": 955500,
+        "hi": 955516,
+        "mid": 955508,
+        "disconnected": true
+      },
+      {
+        "lo": 955500,
+        "hi": 955508,
+        "mid": 955504,
+        "disconnected": false
+      },
+      {
+        "lo": 955504,
+        "hi": 955508,
+        "mid": 955506,
+        "disconnected": true
+      },
+      {
+        "lo": 955504,
+        "hi": 955506,
+        "mid": 955505,
+        "disconnected": false
+      }
+    ],
+    "threshold": 955506
+  },
+  "requested_sources": [
+    "MulChar.map_mul'",
+    "dirichletSummandHom",
+    "DirichletCharacter.LSeries_eulerProduct",
+    "DirichletCharacter.LSeries_eulerProduct_exp_log",
+    "riemannZeta_eulerProduct"
+  ],
+  "source_resolution": {
+    "MulChar.map_mul'": {
+      "status": "ABSENT_AS_ENVIRONMENT_DECLARATION",
+      "resolved_declaration": "MonoidHom.map_mul'",
+      "basis": "MulChar extends MonoidHom; map_mul' is the parent field. Inherited field notation is not an environment name.",
+      "scope_change": "Parent projection is shared by all MonoidHom values, hence graph attribution is broader than a specialized application to MulChar."
+    }
+  },
+  "literal_requested_query_status": "UNDEFINED_ENDPOINT: MulChar.map_mul' is not an environment declaration"
+}
