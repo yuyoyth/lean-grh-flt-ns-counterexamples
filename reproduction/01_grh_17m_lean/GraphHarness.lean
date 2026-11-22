@@ -1,3 +1,11 @@
+/-
+  Standalone Lean Core Environment Graph Extractor Harness (GraphHarness.lean)
+  ----------------------------------------------------------------------------
+  [EN] Standalone calibration harness for the Scheme 4 declaration dependency graph extractor on the
+       core `Lean` module hierarchy.
+  [ZH] 方案四声明依赖图提取器的核心环境（`Lean` 模块）独立校准探针。
+-/
+
 import Lean
 open Lean
 

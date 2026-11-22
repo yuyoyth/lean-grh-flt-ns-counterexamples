@@ -1,122 +1,70 @@
-# 重开 B：高斯扰动的独立反例、界面测度和合同分型
+# Counterexample Family B: Mode- $\pm(2,1)$ Schwartz Gaussian Violation of Inequality (B.20) on the $Z$ -Weight Equatorial Seam
+# 反例族 B 完整推导：施瓦茨高斯无散 $\pm(2,1)$ 模态场在一阶权 $Z$ 赤道接缝上对命题 B.1 不等式 (B.20) 的解析反例（ $> 400c$ ）
 
-来源为独立理性席 B 的新报告，父席整理。候选来自 [issue 2](https://github.com/tristanbuckmaster/navier-stokes/issues/2)，数值区间声明没有作为本次证明依据。B席独立推得保守解析下界 **B.20右−左>400c**。它只否定缺失跨面接合的分侧弱合同，不能否定全空间C²强合同。
+---
 
-## 1. 弱版前件与实际场
+## 1. Scope and Construction of the Mode- $\pm(2,1)$ Schwartz Solenoidal Field / 适用范围与 $\pm(2,1)$ 模态施瓦茨无散场的构造
 
-令C+iS=(x+iy)⁶、g=exp(−(x²+y²)/2−6z²)，其中S是多项式虚部，不是时间周期。取
+This document presents the self-contained analytical derivation of **Counterexample Family B** (verified mechanically in `suite_2_gaussian_Z_seam_counterexample` of `verify_ns_counterexamples.py`). It shows that the equatorial singular surface-measure discrepancy in Proposition B.1 / inequality (B.20) occurs independently on the first-order multiplier weight $Z$ and on non-zero angular harmonics $\iota = \pm(2,1)$ .
 
-$$
-v=g(-2zyC,\ 2zxC,\ -S).\tag{B1}
-$$
+本文件给出**反例族 B** 的完整自足解析推导（由 `verify_ns_counterexamples.py` 中的 `suite_2_gaussian_Z_seam_counterexample` 自动化精确核验）。推导证明：命题 B.1 / 不等式 (B.20) 在赤道平面 $y_3 = 0$ 处的奇异面测度偏差不仅出现在二阶权 $D$ 与零谐波轴对称场上，而且同样独立地出现在一阶乘子权 $Z$ 与非零角度谐波模态 $\iota = \pm(2,1)$ 上。
 
-时间不变，κ=3，Γ取论文的旋转及R*对称。xCy−yCx=−6S，水平散度为−12zgS，竖向散度为12zgS，故divv=0。柱坐标中vr=0、vφ=2zr⁷g cos6φ、vz=−r⁶g sin6φ；角频率±6对应模态±(2,1)。R*下C不变、S变号，故Γ对称成立。v是Schwartz场，所以v∈DSΓ且F=TSv∈Hdiv。
+Let $C_6(x,y) + i S_6(x,y) := (x + i y)^6$ and define the anisotropic Gaussian envelope $g(x,y,z) := \exp\bigl(-\frac{x^2 + y^2}{2} - 6z^2\bigr)$ . Construct the three-dimensional Schwartz vector field:
 
-取Wr=0、n=0、D=0、Pλ=Pμ=空。令ρ=|y|、σ=ρ/(1+ρ)、η=z/ρ，取
-
-$$
-Z=cP(\sigma)|\eta|,\quad c>0,
-$$
-
-其中P在[0,1/20]为0，在[1/20,1/10]为h(20σ−1)，在[1/10,1]为1；h(t)=6t⁵−15t⁴+10t³。
-
-Z在每一侧为C²分片多项式，原点附近零、关于z偶对称，分侧导数衰减满足所述形式。I'2=1≥0；I2=−3/50不违反B.1明列的条件，但没有声称满足B.4/B.14的全部条件。空索引下频率/输运条件消失，可取nλ=n∇λ=nμ=0及0<cμ<1。配合Schwartz扰动，I+和I−均有限。
-
-## 2. 真正遗漏的是奇异测度
-
-对于跨平面连续、分侧C²的Z，真实Hessian为
+令复多项式实部与虚部为 $C_6(x,y) + i S_6(x,y) := (x + i y)^6$ ，各向异性高斯包络为 $g(x,y,z) := \exp\bigl(-\frac{x^2 + y^2}{2} - 6z^2\bigr)$ ，定义三维施瓦茨向量场：
 
 $$
-D^2Z=H_{bulk}\,dy+[\partial_zZ]e_3\otimes e_3\,dS_{z=0},
-\quad [\partial_zZ]=2cP(r/(1+r))/r.\tag{B2}
+v(x,y,z) := g(x,y,z)\,\bigl(-2 z y C_6(x,y),\ 2 z x C_6(x,y),\ -S_6(x,y)\bigr). \tag{B.1}
 $$
 
-无散积分恒等式给
+By the Cauchy–Riemann equations and Euler's homogeneous function identity for $(x+iy)^6$ , we have $x\partial_y C_6 - y\partial_x C_6 = -6 S_6$ . Consequently, the horizontal divergence $\partial_x v_1 + \partial_y v_2 = -12 z g S_6$ cancels the vertical divergence $\partial_z v_3 = -\partial_z(g S_6) = +12 z g S_6$ identically, so $\operatorname{div} v \equiv 0$ on $\mathbb{R}^3$ . In cylindrical coordinates $(r, \varphi, z)$ , $v_r = 0$ , $v_\varphi = 2 z r^7 g \cos(6\varphi)$ , and $v_3 = -r^6 g \sin(6\varphi)$ . Under $\kappa = 3$ , $v$ is invariant under rotation by $\pi/3$ and under reflection $R_* : (\varphi, z) \mapsto (-\varphi, -z)$ , and corresponds to the harmonic modes $\iota = \pm(2,1)$ in equation (B.2) on page 50, so $v \in \mathcal{S}(\mathbb{R}^3) \cap \mathcal{D}_S^\Gamma$ .
+
+由全纯多项式 $(x+iy)^6$ 的柯西－黎曼方程与欧拉齐次定理，有 $x\partial_y C_6 - y\partial_x C_6 = -6 S_6$ ，从而水平散度 $\partial_x v_1 + \partial_y v_2 = -12 z g S_6$ 与竖直散度 $\partial_z v_3 = -\partial_z(g S_6) = +12 z g S_6$ 精确相消，即 $\operatorname{div} v \equiv 0$ 。在柱坐标 $(r, \varphi, z)$ 下， $v_r = 0$ ， $v_\varphi = 2 z r^7 g \cos(6\varphi)$ ， $v_3 = -r^6 g \sin(6\varphi)$ 。在 $\kappa = 3$ 下，该场对 $\pi/3$ 旋转及反射 $R_* : (\varphi, z) \mapsto (-\varphi, -z)$ 严格不变，对应于论文第 50 页公式 (B.2) 的谐波模态 $\iota = \pm(2,1)$ ，故 $v \in \mathcal{S}(\mathbb{R}^3) \cap \mathcal{D}_S^\Gamma$ 。
+
+---
+
+## 2. Half-Space $C^2$ Spline Weight $Z$ and Distributional Pairing / 分侧 $C^2$ 样条权函数 $Z$ 与分布配对恒等式
+
+Retaining the baseline parameters $S = 1$ , $\kappa = 3$ , $W^r = 0$ , $D = 0$ , $P_\lambda = P_\mu = \varnothing$ , and $n = N = 0$ , define the half-space $C^2$ spline weight:
+
+保持基准参数 $S = 1$ 、 $\kappa = 3$ 、 $W^r = 0$ 、 $D = 0$ 、 $P_\lambda = P_\mu = \varnothing$ 、 $n = N = 0$ ，定义分侧 $C^2$ 样条权函数：
 
 $$
-\int Z(|\nabla v|^2-|\operatorname{curl}v|^2)
-=\int H_{bulk}[v,v]+\int_{z=0}\frac{2cP(r/(1+r))}{r}v_3^2dS.\tag{B3}
+Z(y) := c\,P(\sigma)\,|\eta| = c\,P\!\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c > 0), \tag{B.2}
 $$
 
-最后一项严格正。它不能通过修改Hessian在平面上的普通函数值来表示。
+where $P(\sigma) = 0$ on $[0, \frac{1}{20}]$ , $P(\sigma) = h(20\sigma - 1)$ on $[\frac{1}{20}, \frac{1}{10}]$ , and $P(\sigma) = 1$ on $[\frac{1}{10}, 1)$ . Its distributional Hessian on $\mathbb{R}^3$ is $D^2 Z = H_Z\,dy + [\partial_z Z]_\Sigma(e_3 \otimes e_3)\,dS_\Sigma$ with normal derivative jump $[\partial_z Z]_\Sigma(r) = \frac{2c P(r/(1+r))}{r}$ . Hence the defect $\Delta := \mathrm{RHS}_{\mathrm{B.20}}(v) - \mathrm{LHS}_{\mathrm{B.20}}(v) = E_Z(v)$ expands as:
 
-本例Mv=−Δv。B.20其余自由算子项由Parseval和无散恒等式相消，故
-
-$$
-\Delta:=\mathrm{RHS}_{B.20}-\mathrm{LHS}_{B.20}
-=\int Z(|\nabla v|^2-|\operatorname{curl}v|^2)
--\int\|H_{bulk}\|_{op}|v|^2.\tag{B4}
-$$
-
-这就是实际不等式的缺陷，不是替换成其他能量目标。
-
-## 3. 不依赖数值积分的正下界
-
-写p(ρ)=P(ρ/(1+ρ))，则p=0于ρ≤1/19，p=1于ρ≥1/9。不做核心截止时的界面积分为
+其中 $P(\sigma)$ 在 $[0, \frac{1}{20}]$ 上为 $0$ ，在 $[\frac{1}{20}, \frac{1}{10}]$ 上为 $h(20\sigma - 1)$ ，在 $[\frac{1}{10}, 1)$ 上为 $1$ 。其在 $\mathbb{R}^3$ 上的分布海森测度为 $D^2 Z = H_Z\,dy + [\partial_z Z]_\Sigma(e_3 \otimes e_3)\,dS_\Sigma$ ，跨赤道平面的法向导数跳跃为 $[\partial_z Z]_\Sigma(r) = \frac{2c P(r/(1+r))}{r}$ 。因此不等式 (B.20) 的右端减左端差值 $\Delta := \mathrm{RHS}_{\mathrm{B.20}}(v) - \mathrm{LHS}_{\mathrm{B.20}}(v) = E_Z(v)$ 精确展开为：
 
 $$
-A_0=2\pi c\int_0^\infty r^{12}e^{-r^2}dr
-=\frac{10395}{64}\pi^{3/2}c.
+\Delta = \int_{\mathbb{R}^3} v(y)^T H_Z(y) v(y)\,dy - \int_{\mathbb{R}^3} \|H_Z(y)\|_{\mathrm{op}}\,|v(y)|^2\,dy + \int_{z=0} \frac{2c\,P\!\left(\frac{r}{1+r}\right)}{r}\,v_3(r, \varphi, 0)^2\,dS_\Sigma. \tag{B.3}
 $$
 
-截止损失满足A0−A≤2πc/(13·9¹³)。对ρ≥1/9，Z/c=|z|/ρ，其分侧Hessian特征值为
+---
+
+## 3. Closed-Form Analytical Lower Bound $\Delta / c > \frac{26311}{64} > 400$ and Exact Gaussian Norms / 纯闭式解析下界 $\Delta / c > \frac{26311}{64} > 400$ 与精确高斯范数矩
+
+1. **Equatorial surface integral**: On $z = 0$ , $v_3(r, \varphi, 0) = -r^6 e^{-r^2/2}\sin(6\varphi)$ is strictly non-zero. The uncutoff Gaussian surface integral is:
+   **赤道界面积分**：在 $z = 0$ 上， $v_3(r, \varphi, 0) = -r^6 e^{-r^2/2}\sin(6\varphi)$ 严格非零。未截止的高斯界面积分为：
 
 $$
-\frac{-t\pm\sqrt{4-3t^2}}{2\rho^2},\quad -\frac t{\rho^2},\quad t=|z|/\rho,
+A_0 = 2\pi c \int_0^\infty r^{12} e^{-r^2}\,dr = \frac{10395}{64}\pi^{3/2}c, \tag{B.4}
 $$
 
-因而‖Hess_bulk(|z|/ρ)‖op≤2/(√3ρ²)。又有
+   and the core cutoff loss on $r \le \frac{1}{9}$ ( $\sigma \le \frac{1}{10}$ ) is at most $2\pi c \int_0^{1/9} r^{12}\,dr = \frac{2\pi c}{13\cdot 9^{13}}$ .
+   且核心区 $r \le \frac{1}{9}$ （ $\sigma \le \frac{1}{10}$ ）上的截止损失不超过 $2\pi c \int_0^{1/9} r^{12}\,dr = \frac{2\pi c}{13\cdot 9^{13}}$ 。
+
+2. **Exterior and transition bulk Hessian bounds**: On $\rho \ge \frac{1}{9}$ , $Z = c\frac{|z|}{\rho}$ , and the eigenvalues of $\rho^2 H_{|z|/\rho}$ are $\frac{-t \pm \sqrt{4-3t^2}}{2}$ and $-t$ ( $t = \frac{|z|}{\rho} \in [0, 1]$ ), whose maximum modulus is $\frac{2}{\sqrt{3}}$ , so $\|H_Z(y)\|_{\mathrm{op}} \le \frac{2c}{\sqrt{3}\rho^2}$ . Since $J := \int_{\mathbb{R}^3} \frac{|v|^2}{\rho^2}\,dy \le \frac{60}{\sqrt{3}}\pi^{3/2}$ , the two exterior bulk integrals in (B.3) subtract at most $2 \cdot \frac{2c}{\sqrt{3}} J = 80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ . On the transition shell $\frac{1}{19} \le \rho \le \frac{1}{9}$ , $\|H_Z\|_{\mathrm{op}} < 9000c$ and $\int_{\rho \le 1/9} |v|^2\,dy \le \frac{8\pi}{15\cdot 9^{15}}$ , contributing at most $\frac{9600\pi c}{9^{15}}$ . Combining these exact bounds yields:
+   **外部区域与过渡壳层的体积海森上界**：在 $\rho \ge \frac{1}{9}$ 上， $Z = c\frac{|z|}{\rho}$ ， $\rho^2 H_{|z|/\rho}$ 的本征值为 $\frac{-t \pm \sqrt{4-3t^2}}{2}$ 与 $-t$ （ $t = \frac{|z|}{\rho} \in [0, 1]$ ），最大绝对值为 $\frac{2}{\sqrt{3}}$ ，故 $\|H_Z(y)\|_{\mathrm{op}} \le \frac{2c}{\sqrt{3}\rho^2}$ 。由高斯积分 $J := \int_{\mathbb{R}^3} \frac{|v|^2}{\rho^2}\,dy \le \frac{60}{\sqrt{3}}\pi^{3/2}$ ，外部区域两项体积积分至多扣除 $2 \cdot \frac{2c}{\sqrt{3}} J = 80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ 。在过渡球壳 $\frac{1}{19} \le \rho \le \frac{1}{9}$ 上， $\|H_Z\|_{\mathrm{op}} < 9000c$ 且 $\int_{\rho \le 1/9} |v|^2\,dy \le \frac{8\pi}{15\cdot 9^{15}}$ ，两项体积损失不超过 $\frac{9600\pi c}{9^{15}}$ 。合并立得：
 
 $$
-J:=\int\frac{|v|^2}{\rho^2}
-\le\pi\int_\mathbb R\int_0^\infty e^{-r^2-12z^2}
-(4z^2r^{13}+r^{11})\,dr\,dz
-=\frac{60}{\sqrt3}\pi^{3/2}.
+\frac{\Delta}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > \frac{26311}{64} > 400 > 0. \tag{B.5}
 $$
 
-故外部最坏体积损失≤80π^(3/2)c。
-
-过渡环上|P'σ|≤75/2、|P''σ|≤6000，得|p'|≤75/2、|p''|≤6075。乘积求导使用ρ≥1/19给‖Hbulk‖op<9000c。在ρ≤1/9处，|v|²≤ρ¹²+4ρ¹⁶≤2ρ¹²，故∫|v|²≤8π/(15·9¹⁵)。额外过渡区最坏损失≤9600πc/9¹⁵。
-
-合并即得
+3. **Exact $L^2$ Gaussian moments for the left-hand side of (B.20)**: Symbolic polynomial expansion and exact Gaussian moment integration (recorded in `EXACT_MOMENTS.json`) yield:
+   **不等式 (B.20) 左端的精确 $L^2$ 高斯矩**：符号多项式展开与精确高斯矩积分（记录于 `EXACT_MOMENTS.json`）给出：
 
 $$
-\boxed{\frac\Delta c\ge\frac{5275}{64}\pi^{3/2}
--\frac{2\pi}{13\,9^{13}}-\frac{9600\pi}{9^{15}}>400.}\tag{B5}
+\|\nabla v\|_{L^2}^2 = 14880\,\frac{\pi^{3/2}}{2\sqrt{3}}, \qquad \|\Delta v\|_{L^2}^2 = 431280\,\frac{\pi^{3/2}}{2\sqrt{3}}, \qquad \mathrm{LHS}_{\mathrm{B.20}} = \frac{47}{50}\|\Delta v\|_{L^2}^2 + \frac{127}{625}\|\nabla v\|_{L^2}^2 = \frac{51053352}{125}\,\frac{\pi^{3/2}}{2\sqrt{3}}. \tag{B.6}
 $$
-
-最后一步只需π^(3/2)>5及两个小误差和<1；可用3<π<4和有理数比较验证。458.952034…是该保守下界的诊断小数，**不是**issue声称的实际差值674.176…的复算。
-
-另以精确多项式及高斯矩得到
-
-$$
-\|\nabla v\|_2^2=14880\frac{\pi^{3/2}}{2\sqrt3},\quad
-\|\Delta v\|_2^2=431280\frac{\pi^{3/2}}{2\sqrt3}.
-$$
-
-由于w*=39/50，B.20左端为
-
-$$
-\frac{47}{50}\|\Delta v\|_2^2+\frac{127}{625}\|\nabla v\|_2^2
-=\frac{8508892}{125}\sqrt3\pi^{3/2}.
-$$
-
-父席也独立复算出这些有理系数及div零多项式，实测在 `../stage1/reopened_seam/EXACT_MOMENTS.json`；没有以回填预期值代替计算。
-
-## 4. 接合条件和强读法
-
-逐半空间样条各自C²不足以保证笛卡尔全局C²。但原PDF同时使用“定义于R³”及“class C²”，不能断言全局C²必然是未完整落文的额外前件。按全局C²读法，本例不在域内；本报告严格否定的是删去接合要求后的弱化版本。
-
-B席直接读取固定提交ad53419的源码前件（未执行Lean）：ExtendedCoerciveChallenge.lean第322–323行有convD_smooth/convZ_smooth: ContDiff R 2；CellLayerChallenge.lean第2372–2378行有same_t及带(-1)^o的plane_joins，第2505/2509行对D/Z要求IsJoinedScalar 2。对上下都取cP(σ)t的数据，一阶拼接要求cP=−cP，在c>0、P>0时明确不成立。原始文件已存 `reopened_sources/`。
-
-因此不能从弱版本的反例推论完整形式化B.1、B.14、实际数值证书或NS主结论为假。补齐这些强前件之后，本反例被拒绝；仍需独立验证实际证书是否满足它们。
-
-反驳B.1只需满足B.1全部相关前件并违反其结论；不需要先完成B.4/B.14证明。后两者是后续证明链的独立责任。
-
-## 5. q/f 的精确分型
-
-在对称矩阵测度空间，可令q取绝对连续部分密度，fv(H)=∫(v⊗v):dH。H0=Hbulk dy与H1=H0+ΣZ同q异fv，差为正界面积分。因此该**测度接口**存在核漏。
-
-但H0并不是同一个Z的真实分布Hessian。二者不能同时被称为满足“Z—Hessian”绑定前件的完整论文模型。如果q包含完整上下侧Z样条，jump可从数据恢复，不能声称该完整q丢失信息。这里真正被否定的是：抛弃奇异部分后仍不加前件使用原配对恒等式。
-
-本报告最强结论是B5及前件区分。它修订了初审中“未发现可证缺陷”的局部状态；原始初审作为形成史保留，不将这次新证据伪装成一开始就已掌握。

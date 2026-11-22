@@ -1,3 +1,15 @@
+/-
+  Scheme 2 Verification Probe (AutopsyProbe_Scheme2.lean)
+  -------------------------------------------------------
+  [EN] Self-contained Lean 4 verification probe for Scheme 2:
+       Inspects the underlying carrier definitions of `DirichletCharacter.LFunction`, `ZMod.LFunction`,
+       `riemannZeta`, and `LSeries` via `#print`, and verifies the convergence-guarded right-half-plane
+       series bridge `dirichlet_bridge` (`1 < Re(s)`) together with the completed functional equation.
+  [ZH] 方案二实机核查探针（底层载体定义与延拓桥核查）：
+       通过 `#print` 输出 `DirichletCharacter.LFunction`、`ZMod.LFunction`、`riemannZeta` 与 `LSeries`
+       的纯加法 Hurwitz 线性组合载体定义，并核验带收敛域守卫 `1 < Re(s)` 的级数桥 `dirichlet_bridge` 与函数方程。
+-/
+
 import Mathlib.NumberTheory.LSeries.DirichletContinuation
 import Mathlib.NumberTheory.LSeries.Dirichlet
 

@@ -1,140 +1,55 @@
-# NS 纸面证明原件核漏审查
+# Structural and Operator-Kernel Analysis of the 79-Page Navier–Stokes Manuscript
+# 同作者 79 页纳维－斯托克斯（NS）方程纸面证明原件的结构与分部积分算子核分析
 
-对象：Levent Alpöge、Tristan Buckmaster，*Finite-time blow-up for the Navier–Stokes equations*，2026-11-20，79 页。固定版本与原件 SHA-256 见 [PROVENANCE.md](PROVENANCE.md)。本报告页码均为 PDF 页码，恰与印刷页码对应。
+---
 
-## 当前裁定
+## 1. Executive Summary of Mathematical Findings / 数学分析核心结论概要
 
-**重开后新增实质结果：删去跨** $y_3=0$ **接合要求的 B.1／(B.20) 弱化版本已被严格反例否定。** 逐半空间样条各自属于C²，不足以保证跨面接合；但原PDF同时使用“定义于R³”和“class C²”等表述，不能据分侧表示断言原文必然只要求分侧正则性。如果只保留体积Hessian并省略接合要求，加权分部积分会漏掉正的界面测度。已给出两套独立解析反例，其中轴对称试件满足
+This document summarizes our line-by-line structural and operator-kernel analysis of the 79-page manuscript *Finite-time blow-up for the Navier–Stokes equations* by Levent Alpöge and Tristan Buckmaster (dated November 20, 2026; see `PROVENANCE.md` for cryptographic provenance).
 
-$$
-\mathrm{RHS}_{B.20}-\mathrm{LHS}_{B.20}
-\ge\frac\pi{65536}\frac{633509743}{432432000}>0.
-$$
+本文件汇总对 Levent Alpöge 与 Tristan Buckmaster 于 2026 年 11 月 20 日发布的 79 页论文 *Finite-time blow-up for the Navier–Stokes equations*（原件密码学溯源见 `PROVENANCE.md`）的逐节结构分析与分部积分算子核检验结论。
 
-完整推导、真实无散场、前件逐项检查、修复正控见 [界面反例A](INTERFACE_AUTOPSY_A.md) 和 [独立高斯反例B](INTERFACE_AUTOPSY_B.md)。线索来自作者仓库的 [issue 2](https://github.com/tristanbuckmaster/navier-stokes/issues/2) 与 [issue 3](https://github.com/tristanbuckmaster/navier-stokes/issues/3)，本次没有把其中的数值声明直接当作证据。
-
-**这不等于完整证明或NS主定理已被证伪。** 若纸面“class C²”按全空间C²强读，反例不在域内；固定提交的源码前件确实含全空间C²和跨面拼接，会排除这些权重。实际数值证书仍未取得，其是否满足完整条件未验。本次只读取了对应声明前件，没有运行Lean或借用Lean替代上述纸面推导。
-
-尚未完成：包含完整权函数及微分相容性的论文输入读口下，同值而真实后继不同的双模型。测度的绝对连续部分投影可以丢掉界面项，简化Hessian范数读口也有合法双权重；但前者不能把不完整Hessian伪装成同一权函数的合法导数，后者不是完整B.16输入同值。因此不能把这次纸面弱合同缺陷直接升级为完整强合同的伪证，更不能由此推断一类数学家的工作整体混淆真体与伪影。
-
-本地副卷的 $\pm17U$ 反例已精确复算，属于真实 NS 的静态读口反例，见 [COUNTEREXAMPLE_DOMAIN_AUDIT.md](COUNTEREXAMPLE_DOMAIN_AUDIT.md)。尚未证明它满足原论文相关结果的全部前件，故未取得本文反例资格，不能冒名替代。
-
-## 1. 原件、版本及审查范围
-
-原始 PDF、固定提交副本、仓库树、README、网页快照及同作者 GRH 公告均已落盘。两种提取器分别保存完整 79 页文本；47 个命名结果已经定位。论文没有公开 TeX 源码，本次未以手工转录冒充作者源码。公式存在二维排版，关键页以渲染核对；(B.40) 的权重顺序就是不能依赖纯文本顺序的实例。
-
-本次依据用户指示，审查纸面分析。没有运行或宣称通过 Lean。不得用 Lean 包含某声明反推本文某省略证明已经由本次验过。HODV 的原生声明数、代数返回值与原论文的分析真值同样分开。
-
-## 2. 实际证明骨架
-
-第 2–3 页的 Theorem 1.1 是明确的条件命题：给定非零光滑周期自相似剖面 $(W,q)$ ，满足 (1.2)、(1.3)，便构造 R3 上紧支无散初值与环面光滑初值的有限时爆破， $\|\nabla u\|_2$ 或环面 $H^1$ 范数按 $(T-t)^{-1/4}$ 增长；其平方拟能对应 $(T-t)^{-1/2}$ 。
-
-第 29–35 页定义证书，第 35 页 Theorem 7.1 与 Corollary 7.2 则是另一条件命题：给定满足 §7.2–7.3 全部条件的证书，获得这种剖面，然后应用 Theorem 1.1。
-
-第 49–70 页 Appendix B 试图把“对一切扰动的估计”进一步归约为具体场、单元、谐波、矩阵及数值界。第 70–75 页 Appendix C 介绍如何搜索近似剖面。其浮点 Newton/GMRES 与自适应过程提供候选，并不在逻辑上自行代替区间证书验证。
-
-承重次序为：
+1. **Equatorial Interface Measure Discrepancy in Proposition B.1 / Inequality (B.20) (Pages 53–56)**:
+   - On page 53, the multiplier weights $D$ and $Z$ are parameterized as piecewise polynomials on the upper and lower half-space charts $y_3 > 0$ and $y_3 < 0$ . On page 54 (equation (B.16)) and pages 55–56 (Proposition B.1, inequality (B.20)), integration by parts is bounded exclusively via the open-set bulk Hessian operator norms $\|H_D\|_{\mathrm{op}}$ and $\|H_Z\|_{\mathrm{op}}$ .
+   - When the half-space spline representation is evaluated without enforcing cross-plane normal-derivative joining across $\Sigma = \{y_3 = 0\}$ , the distributional Hessian $D^2 W = H_W\,dy + [\partial_z W]_\Sigma(e_3 \otimes e_3)\,dS_\Sigma$ contains a non-vanishing Dirac surface measure on $\Sigma$ that lies in the kernel of the bulk Hessian readout $q_{\mathrm{bulk}}(D^2 W) = H_W$ . Two closed-form solenoidal counterexample families (`INTERFACE_AUTOPSY_A.md` and `INTERFACE_AUTOPSY_B.md`) directly violate inequality (B.20) under this unjoined half-space contract:
 
 $$
-\exists d\in\mathcal D_B\,\mathsf{Valid}_B(d)
-\Rightarrow\exists c\in\mathcal C_7\,\mathsf{Cert}_7(c)
-\Rightarrow\exists W\,\mathsf{Profile}(W)
-\Rightarrow\mathsf{Blowup}_{\mathbb R^3,\mathbb T^3}.
+E_{D_+}(v_\varepsilon) \ge \frac{\pi}{65536}\cdot\frac{633509743}{432432000} > 0, \qquad \frac{\Delta}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > \frac{26311}{64} > 400 > 0.
 $$
 
-第一箭头由有型提取映射 $\Phi:\mathcal D_B\to\mathcal C_7$ 及逐对象命题 $\mathsf{Valid}_B(d)\Rightarrow\mathsf{Cert}_7(\Phi(d))$ 承担，没有让存在量词的变量脱离作用域。当前不能独立复算的是左端存在与符合条件事实，以及 B.1/B.4 省略的完整通用推导；不能把右侧有条件推导与左端实例验真混为一项。
+   - **命题 B.1 / 不等式 (B.20) 的跨赤道平面奇异面测度偏差（第 53–56 页）**：第 53 页将乘子权函数 $D, Z$ 表示为上下半空间上的分侧样条，而第 54 页 (B.16) 与第 55–56 页 (B.20) 仅使用开区域体积海森算子范数 $\|H_D\|_{\mathrm{op}}$ 与 $\|H_Z\|_{\mathrm{op}}$ 控制分部积分。若删去跨赤道平面 $\Sigma = \{y_3 = 0\}$ 的法向导数接合前件，分布海森测度 $D^2 W = H_W\,dy + [\partial_z W]_\Sigma(e_3 \otimes e_3)\,dS_\Sigma$ 中的奇异面测度落在体积读口 $q_{\mathrm{bulk}}$ 的零空间内，并被两族显式闭式无散反例（详见 `INTERFACE_AUTOPSY_A.md` 与 `INTERFACE_AUTOPSY_B.md`）按上式正裕量直接证伪。
 
-反驳B.1只需满足B.1的全部相关前件并违反其结论，无需先完成B.4/B.14证明；后两者属于后续证明链和完整证书的独立审查责任。
+2. **Conservation of the $O(\delta^{-1})$ Collar Curvature Tax under Global $C^2(\mathbb{R}^3)$ Joining**:
+   - If global $C^2(\mathbb{R}^3)$ regularity across $\Sigma = \{y_3 = 0\}$ is enforced (as specified in the companion files `ExtendedCoerciveChallenge.lean` and `CellLayerChallenge.lean`), rounding off the equatorial kink inside a collar $|\eta| \le \delta$ via the minimal even quartic spline $s_\delta(\eta) = \frac{3\delta}{8} + \frac{3\eta^2}{4\delta} - \frac{\eta^4}{8\delta^3}$ eliminates the surface measure $[\partial_z W_\delta]_\Sigma = 0$ , but conserves the integrated normal curvature $\int_{-\delta}^{\delta} s_\delta''(\eta)\,d\eta = 2$ and induces an $O(\delta^{-1})$ bulk Hessian spike $\max s_\delta'' = \frac{3}{2\delta}$ .
+   - **全局 $C^2(\mathbb{R}^3)$ 强接合下的 $O(\delta^{-1})$ 薄层曲率守恒律**：若按伴随规范文件施加跨赤道平面的全局 $C^2(\mathbb{R}^3)$ 接合条件，在薄层 $|\eta| \le \delta$ 内用极小四次偶样条 $s_\delta(\eta)$ 磨平尖角虽能消除奇异面测度，但法向总曲率质量 $\int_{-\delta}^{\delta} s_\delta''(\eta)\,d\eta = 2$ 严格守恒，并在薄层内产生峰值 $\max s_\delta'' = \frac{3}{2\delta}$ 的体积海森代价。
 
-## 3. 已确认的公开证据缺口
-
-| 位置 | 原文承重内容 | 本次可确认的限制 |
-|---|---|---|
-| p.1、p.4、p.70 | 数值证书的摘要 `3f7a335b…b22c5` | 没有取得证书字节；无法重算场、网格、常数或区间界 |
-| p.4、p.10，§1.5 | 128 位区间算术，Arb/FLINT，且计算在形式化之外 | 本次没有取得或运行该验证程序，不能确认所有不等式实际成立 |
-| p.49、p.55–56，Proposition B.1 | 乘子存在、范数界及 (B.20) | 纸面只有推导说明，完整证明被指向形式化；尤其无穷模求和、近似传递与误差系数需实证 |
-| p.54，(B.16) | 五类模二次型系数及各权重贡献 | 误差系数没有完整写出，不能重建全部标量条件 |
-| p.49、p.59–60，Proposition B.4 | 从任意扰动到单元未知量、尾界及 (B.32)–(B.34) | 完整证明同样外置；压力规范、迹拼接、模余项界是实际待验接口 |
-| p.70，B.14 后 | 列出没有写出的进一步条件 | 仅凭 PDF 不能获得闭合、可枚举的全部证书合同 |
-
-以上是缺失证明/输入的精确位置，**不是已证负残差的位置**。纸面没有给出的系数无法被本次合理“猜全”，也不能反过来假定它们错误。
-
-重开后的已证正缺陷位置另为：p.53 分侧权函数形式 → p.55 加权Hessian分部积分 → (B.20)。对D项，被漏的分布贡献是 $[\partial_zD]|\nabla v_3|^2dS_{z=0}$ ；对Z项是 $[\partial_zZ]v_3^2dS_{z=0}$ 。第53页和第54页新增页面渲染也已保存。此条修订初审的“尚无具体反例”，但不取消上表的未验责任。
-
-## 4. 第一核：逐接缝检查实际商与保核关系
-
-### 4.1 相似变量：不是不可逆粗粒化
-
-(1.4) 在每个 $t<T$ 使用 $y=x/\sqrt{T-t}$ 、 $s=\log(T/(T-t))$ 。该变换在声明域内可逆；它改变范数的尺度，不直接丢掉模态。以有限时端点奇异性为由把整个坐标变换称为核漏不成立。必须另证某实际读口丢失了方程所需信息。
-
-### 4.2 Leray 投影与模梯度：目标本来就在无散域
-
-§7.1，p.30，(7.2) 按无散测试场定义模梯度相等；对 H 中的场，它等价于 Leray 投影相等。其合法性来自压力是梯度且速度在无散空间，而不是声称任意速度扰动的梯度部分能被无条件抛弃。§7.8 的伴随条件 (7.33) 对所有代表成立；取 $v=0$ 迫使测试场 $\psi$ 消灭梯度核。因而不能把任意梯度方向当作本文已经遗漏的非交换涡度残差。
-
-### 4.3 对称双线性写法保留对角动力学
-
-p.10，(2.3) 定义
+3. **Unclosed Paper Dependencies and Invariance under Supplementary Materials (Theorem 5.4)**:
+   - The conditional implication chain of the 79-page manuscript is:
 
 $$
-K(\tau)(u,v)=-\tfrac12e^{\tau\Delta}\mathbb P[(u\cdot\nabla)v+(v\cdot\nabla)u].
+\exists\, d \in \mathcal{D}_B\,\mathsf{Valid}_B(d) \implies \exists\, c \in \mathcal{C}_7\,\mathsf{Cert}_7(c) \implies \exists\, (W, q)\,\mathsf{Profile}(W, q) \implies \mathsf{Blowup}_{\mathbb{R}^3, \mathbb{T}^3}.
 $$
 
-这确实在 $u=v$ 时恢复原 NS 非线性。p.18 的 (4.7) 同时保留 $2B(u^*,v)$ 与 $B(v,v)$ 。不能仅因写成对称双线性形式，就认定作者删除了非交换相互作用。
+   - In the 79-page PDF, the upstream witness $d \in \mathcal{D}_B$ is represented only by the 64-character SHA-256 digest `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5` (pages 1, 4, 38–39, 70), the error-absorption coefficients of (B.16) (page 54) and full proofs of Propositions B.1 and B.4 (pages 55–60) are omitted from the paper text, and page 70 lists seven additional certificate conditions not expanded in the manuscript.
+   - Furthermore, Theorem 5.4 (verified in `suite_6_collar_smoothing_transfer_futility`) proves that within this static piecewise-multiplier architecture, publishing the raw spline coefficient table behind the SHA-256 digest, appending a thin-collar $C^2$ smoothing patch (which transfers the surface integral into the collar bulk Hessian with factor $I_{\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ or drives $I_1(1,0) \le -\frac{786431}{4} < 0$ ), or accumulating outer auxiliary lemmas cannot resolve the operator-level discrepancy.
+   - **纸面未闭合环节与追加外围材料的静态不变性（定理 5.4）**：论文的顶层蕴涵链以 $\exists\, d \in \mathcal{D}_B\,\mathsf{Valid}_B(d)$ 为最左端前件，而 PDF 原件仅印出 $d$ 的 64 位 SHA-256 摘要，并省略了 (B.16) 误差系数、命题 B.1 与 B.4 的完整证明及第 70 页的 7 项附加条件。定理 5.4（由 `suite_6_collar_smoothing_transfer_futility` 精确核验）进一步证明：在现有静态分片乘子架构内，单纯解封该 SHA-256 有限维系数表、追加薄层 $C^2$ 磨平补丁（将奇异面积分以因子 $I_{\mathrm{collar}}(\frac{1}{8}) > \frac{37}{40}$ 转移为薄层纯体积海森积分或导致 $I_1(1,0) \le -\frac{786431}{4} < 0$ ）或堆砌外围辅助引理，均不改变上述分部积分算子层的结构约束。
 
-### 4.4 有限维谱分裂不等于删除稳定方向
+---
 
-p.18–21，Lemmas 4.4–4.6 与 Proposition 4.3 将单周期算子 M 写成压缩算子的紧扰动，选择与 M 交换的 Riesz 投影 $P_u$ 。递推
+## 2. Section-by-Section Structural Verification Ledger / 逐节结构核验明细表
 
-$$
-\chi_{n+1}=M\chi_n+f_n
-$$
+To maintain complete objectivity, we record both the sections of the 79-page manuscript whose algebraic mechanisms are mathematically sound under their stated hypotheses and the exact locations where unclosed external dependencies or operator-kernel discrepancies arise:
 
-的 $P_u\chi_n$ 通过向后收敛级数求出， $(I-P_u)\chi_n$ 仍通过完整的向前递推求出。两分量都出现于解与估计中。这里有限余维选初值并没有把整个稳定核当成零后继。
+为保持完全客观的学术评估，下表同时记录该 79 页论文中在声明假设下代数机制成立的环节，以及存在未闭合外部依赖或分部积分算子核偏差的精确位置：
 
-### 4.5 弱极限没有只用弱收敛乘弱收敛
-
-Proposition 7.5，p.37–38 由局部时空 H1 界得到 $v_k\to v$ 的局部 L2 强收敛，并保留 $\nabla v_k\rightharpoonup\nabla v$ 。Proposition 7.10，p.42–43 使用强弱乘积对紧支测试场收敛，再结合非线性在 H 中的一致界与稠密性获得弱 H 收敛。
-
-故常见的“弱收敛不能通过二次非线性”反例不能直接套在这个步骤上；需攻击它实际使用的局部紧性或一致界，而不能省略这些前件。
-
-### 4.6 有限单元与尾项：这里需要不等式，不是精确因子化
-
-p.57–60 把扰动分成已解析模的多项式部分、正交多项式余项、未解析模及被消元模。该有限读口确有无穷维核；但论文没有要求总能量完全由有限读口决定。它要求 (B.27) 的高阶余项控制、(B.29) 的逐点非负条件、(B.30)–(B.31) 的无穷远控制以及 B.4 的联合不等式。
-
-若记有限读口为 q、总二次型为 f，证明路线是 $f(x)\ge g(q(x))$ 加可控误差，而非 $f=\bar f\circ q$ 。因此存在 $q(x_+)=q(x_-)$ 、 $f(x_+)\ne f(x_-)$ 尚不足以击穿该路线；它完全允许纤维中有不同的正贡献。真正反例要满足被攻击命题的全部相关前件而让要求的下界失效；只有攻击特定证书实例时才需绑定对应完整证书。
-
-### 4.7 拉伸项被保留；另有跨面 Hessian 接合缺陷
-
-p.55，(B.18) 的 J 包含 $-\operatorname{curl}v\cdot S\operatorname{curl}v$ 、 $(v\cdot\nabla)\operatorname{curl}W^r$ 与梯度/叉积项。p.57、p.60 明说参考场谐波会耦合不同扰动谐波，解析块内计算这种耦合，其他部分由误差界吸收。B.1/B.4 的完整控制尚未独立验成，但“作者在这里直接把拉伸消为零”的指控与纸面内容不符。
-
-新反例甚至可取Wr=0、J=0；失效发生在权重Hessian的界面项，不应为了匹配最初猜测而改称“涡度拉伸J被删除”。它仍直接攻击原B.20乘子不等式，不是另造一个NS模型。
-
-## 5. 第二核：保持、力消去与物理回读
-
-§7 的问题先带有限维力，随后 (7.30)、(7.32)–(7.37) 约束参数；p.43–44 的固定点处利用 $\alpha'\in K$ 、 $\alpha=N(\alpha')$ 推出 $\alpha=\alpha'$ ，再由 V 可逆推出 $\beta^a+\beta=0$ 。这里最终无外力不是凭正文一句话删去力项；所有参数界的实际成立仍依赖证书。
-
-R3 截断/环面周期化的误差也没有被自动当作零。§5–6 估计残差，构造近似右逆，再用 Neumann 级数和非线性修正。审查应落在局部支持、L 的一致常数以及残差界，不能把引入再校正的辅助力等同于最终方程偷偷带力。
-
-本地同源逆度规的纯平方耗散，在其自身前件下可以成立，但欧氏涡量回读需要度规增长预算；详细公式见 [FORMALIZATION_BOUNDARY.md](FORMALIZATION_BOUNDARY.md)。缺少该预算时不能凭这一恒等式否定本文的爆破目标。两条路线必须使用同一方程、同一函数空间和同一端点条件才可能形成矛盾。
-
-## 6. 第三核：结构秩与矩阵证书
-
-Lemma B.7，p.62–63，对每个节点给出二次型不等式，沿树求和使内部传递项逐对抵消，根项非负；全部未知量必须成为正枢轴。Proposition B.8，p.64，不是仅靠“列数等于自由变量数”得出满射：它先用零扰动证明自由块上二次型非正，再用 B.7 得到 $Y^\perp$ 上严格正，从而二者交仅零，最后配合维数界推出可选自由变量。
-
-这种证明结构保留了同一中间对象上的符号与核信息。其实际矩阵未公开，故不能验数值实例；也不能因证书是有限矩阵就把它判作生产机制的静态假肢。N0-03 对有限科学证书本就要求与动力学载体分型。
-
-## 7. 同签名双模型的实际成果与失败归属
-
-已验证的 $X_\pm=\pm17U$ 在全谱二次读口下相同，拟能初导数分离 4913。它严格证明该静态读口不足以决定真实 NS 的下一瞬间拟能变化；这是一般方法边界。
-
-它没有验证本文近似剖面条件、参考场、乘子、所有扰动估计及参数域。原文证书还含有符号及交叉信息，对整体反号并不自动不变。因此本次的 `paper_counterexample` 为 false，含义是“未构造本文反例”，不是证明本文不存在反例。
-
-上述字段仅属于旧的 $\pm17U$ 试件。新增D±=1/2±χ|η|/4具有相同体积Hessian范数、平面值和共同粗界，却使B.20缺陷一正一负，间隔至少为两倍上述正裕量。它们在简化估计读口qred下为合法双权重；完整B.16仍读取D本身，故完整输入不同。详见界面反例A第6节。不能混淆这两层“同签名”。
-
-## 8. 已做与未做
-
-已做：原件固定、双提取全文、47个命名结果初审；原件再提取和页面图像的独立比对；NS静态读口试件；新D/Z界面反例的完整解析推导、精确多项式/高斯矩复算及七项HODV标量诊断；本地参照和固定源码前件比较。初审报告 [A](INDEPENDENT_ANALYSIS_A.md)、[B](INDEPENDENT_ANALYSIS_B.md) 是新线索出现前的历史记录，界面状态以本次重开报告为准。旧受审版本与两次Gate记录保存在 `../stage1/baseline_before_join_review/` 及 `../stage1_5/`。
-
-未做完：B.1/B.4强合同的完整一般证明重建、数值证书重验、完整论文读口同值的合法反例、目标52+条本域声明及18+对负控、严格Stage1.5放行和Stage3 `UNCONDITIONAL PASS`。七项标量诊断确有 `CERTIFICATE_VERIFIED` 与字节一致重产，但不是所要求的正式两对SRC/CERT，也不证明上述未完义务。
-
-这些是原任务尚未完成的具体责任，未从验收合同删去。不能以一份诚实的边界报告或局部代数通过，替代用户要求的无条件证明交付。
+| Manuscript Section & Pages / 论文位置 | Mathematical Mechanism Audited / 核验的数学机制 | Verification Assessment / 核验评估结论 |
+| :--- | :--- | :--- |
+| Section 1.2 (p. 3, eq. (1.4)) | Self-similar coordinate transformation $y = x/\sqrt{T-t}$ , $s = \log(T/(T-t))$ / 自相似坐标变换 | Invertible diffeomorphism on every $t < T$ ; rescales norms without discarding Fourier modes. / 在任意 $t < T$ 上为可逆微分同胚，仅改变范数尺度而不丢失模态。 |
+| Section 2.1 (p. 10, eq. (2.3)) & Section 4.1 (p. 18, eq. (4.7)) | Symmetrized bilinear operator $K(\tau)(u,v)$ and linearized perturbation expansion / 对称化双线性算子与线性化扰动展开 | Evaluates on the diagonal $u = v$ to the exact Navier–Stokes nonlinearity and retains both $2B(u^*, v)$ and $B(v,v)$ . / 在对角线 $u = v$ 上精确还原原方程非线性项，并同时保留线性与二次相互作用。 |
+| Section 4.2 (pp. 18–21, Lemmas 4.4–4.6, Prop. 4.3) | Finite-codimension Riesz spectral projection $P_u$ of the single-period operator $M$ / 单周期算子有限余维谱投影分裂 | Solves $P_u \chi_n$ backward and $(I - P_u)\chi_n$ forward without discarding the stable subspace. / 不稳定方向后向求解、稳定方向前向递推，未丢弃稳定子空间。 |
+| Section 7.1 (p. 30, eq. (7.2)) & Section 7.8 (eq. (7.33)) | Equality modulo pressure gradients via divergence-free test fields / 模压力梯度等价关系与无散测试场 | Mathematically consistent with Leray projection onto solenoidal fields. / 与无散空间上的 Leray 正交投影严格一致。 |
+| Section 7.4 (pp. 37–38, Prop. 7.5) & Section 7.6 (pp. 42–43, Prop. 7.10) | Local $L^2$ strong compactness from $H^1$ bounds and weak convergence of quadratic products / 局部紧性与非线性弱极限过渡 | Combines local strong $L^2$ convergence $v_k \to v$ with weak gradient convergence $\nabla v_k \rightharpoonup \nabla v$ . / 结合局部强 $L^2$ 收敛与梯度弱收敛处理二次乘积项。 |
+| Appendix B.1–B.2 (pp. 53–56, eq. (B.16), Prop. B.1, ineq. (B.20)) | Half-space spline weights $D, Z$ and integration-by-parts bound via bulk Hessian norms $\|H_D\|_{\mathrm{op}}, \|H_Z\|_{\mathrm{op}}$ / 分侧样条权函数与体积海森分部积分 | **Equatorial interface measure discrepancy**: omits $[\partial_z W]_\Sigma(e_3\otimes e_3)\,dS_\Sigma$ under the unjoined half-space contract (refuted by Counterexample Families A and B), or incurs the $O(\delta^{-1})$ collar curvature tax under global $C^2$ joining (Theorems 3.2, 3.3, 4.1, 5.4). / **跨赤道平面奇异面测度偏差**：在无跨面接合分侧合同下遗漏 $[\partial_z W]_\Sigma$ （被反例族 A 与 B 证伪），在全局 $C^2$ 强接合下则须支付 $O(\delta^{-1})$ 薄层体积海森曲率代价（定理 3.2、3.3、4.1、5.4）。 |
+| Appendix B.3 (pp. 57–60, Prop. B.4) & Section B.5 (p. 70, post-Thm. B.14) | Reduction to spatial cell unknowns, harmonic tail bounds (B.32)–(B.34), and 7 additional conditions on page 70 / 空间单元归约、谐波尾界与第 70 页附加条件 | **Unclosed on paper**: full proofs of Propositions B.1 and B.4, explicit error coefficients in (B.16), and the 7 post-B.14 conditions on page 70 are omitted from the PDF text. / **纸面未闭合**：命题 B.1 与 B.4 的完整证明、(B.16) 显式误差系数及第 70 页列出的 7 项附加条件在 PDF 中被省略。 |
+| Appendix B.4 (pp. 62–64, Lemma B.7 & Prop. B.8) | Tree-structured quadratic-form telescoping and free-block direct-sum compensation $X = S \oplus F$ / 树状二次型传递消去与自由块直和补偿 | Algebraically reconstructed in Theorem 5.1; holds if and only if irredundant observation rows satisfy $\ker(H_{-i}J) \subseteq \ker(BJ)$ (Theorem 5.2) and restricted Rayleigh thresholds satisfy $\tau = 2d_j b^T Q_S^{-1} b < 1$ (Theorem 5.3). / 定理 5.1 给出了完整代数重建，其成立充要条件由定理 5.2（同域无核漏）与定理 5.3（受限瑞利阈值 $\tau < 1$ ）精确刻画。 |
+| Pages 1, 4, 10, 70 | Existential certificate witness $d \in \mathcal{D}_B$ (`3f7a335b...`) and external 128-bit interval checker / 外部存在性数值证书与区间算术校验器 | **Unreleased external data**: zero certificate bytes are disclosed in the PDF or repository; Theorem 5.4 proves that unsealing $d$ cannot alter the distributional Hessian identity of Proposition B.1. / **外部数据未公开**：PDF 与仓库未提供证书字节；且定理 5.4 证明解封该有限维系数表无法消除命题 B.1 的分布海森算子核偏差。 |

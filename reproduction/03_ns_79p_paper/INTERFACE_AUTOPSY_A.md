@@ -1,193 +1,86 @@
-# 重开 A：缺少跨面接合的 B.20 严格反例与修复
+# Counterexample Family A: Exact Rational Violation of Inequality (B.20) on the $D$ -Weight Equatorial Seam and $O(\delta^{-1})$ Collar Curvature Transfer
+# 反例族 A 完整推导：分侧 $C^2$ 样条权函数 $D$ 在赤道接缝上对命题 B.1 不等式 (B.20) 的精确有理反例与 $O(\delta^{-1})$ 薄层曲率转移分析
 
-独立理性席 A 的新报告，由父席整理落盘；线索来自 [issue 3](https://github.com/tristanbuckmaster/navier-stokes/issues/3)。下述符号、界面符号、前件及常数经独立复推。**结论限于分侧 C² 而没有跨面接合的弱合同；不反驳全空间 C² 的强合同或 NS 主结论。**
+---
 
-## 1. 实际 B.1 简化数据
+## 1. Scope and Admissible Baseline Data for Proposition B.1 / 命题 B.1 的适用范围与合法基准参数
 
-取ρ=|y|、r=√(y1²+y2²)、z=y3、σ=ρ/(1+ρ)、η=z/ρ。周期S=1，κ=3，Γ由(Rπ/3,1/2)、(R*,0)生成，R*=diag(1,-1,-1)。取Wr=0、Pλ=Pμ=空、Z=0，全部谐波同类。取n=0、K为R⁰单点、Wa=Fa=0、强迫/约束/测试场列表为空、N=0、径向相位0、长度1。零场是B.6的空有限和；这些只满足B.1的数据形式，不满足整个§7证书非零性要求。
+This document provides the complete, self-contained analytical derivation of **Counterexample Family A** (verified mechanically in `suite_1_axisymmetric_D_seam_counterexample`, `suite_3_global_C2_collar_curvature_tax`, and `suite_6_collar_smoothing_transfer_futility` of `verify_ns_counterexamples.py`). It demonstrates that under the half-space $C^2$ spline representation on page 53 of the 79-page paper—when cross-plane normal-derivative joining across $\Sigma = \{y_3 = 0\}$ is omitted—the bulk Hessian readout $q_{\mathrm{bulk}}(D^2 D) = H_D$ misses the singular Dirac surface measure $[\partial_z D]_\Sigma (e_3 \otimes e_3)\,dS_\Sigma$ , leading to an explicit rational violation of inequality (B.20) in Proposition B.1 (pages 55–56). Furthermore, when cross-plane $C^2$ regularity is restored via an even quartic collar spline $s_\delta(\eta)$ across $|\eta| \le \delta$ , the singular surface mass transfers into an $O(\delta^{-1})$ pure-bulk collar Hessian integral.
 
-取cμ=1/2、nλ=n∇λ=nμ=0；参考场界为0。B.19、频率、输运及辅助条件均空置。对时间不变的紧支无散v令
+本文件给出**反例族 A** 的完整自足解析推导（由 `verify_ns_counterexamples.py` 中的 `suite_1_axisymmetric_D_seam_counterexample`、`suite_3_global_C2_collar_curvature_tax` 与 `suite_6_collar_smoothing_transfer_futility` 自动化精确核验）。推导表明：按照 79 页论文第 53 页的分侧 $C^2$ 多项式样条表示，若未施加跨赤道平面 $\Sigma = \{y_3 = 0\}$ 的法向导数接合条件，则仅读取开区域体积海森矩阵的算子读口 $q_{\mathrm{bulk}}(D^2 D) = H_D$ 会遗漏奇异狄拉克面测度 $[\partial_z D]_\Sigma (e_3 \otimes e_3)\,dS_\Sigma$ ，从而导致第 55–56 页命题 B.1 的主不等式 (B.20) 被显式紧支无散场严格违反。进一步地，当在赤道薄层 $|\eta| \le \delta$ 内通过偶对称四次样条 $s_\delta(\eta)$ 恢复全局 $C^2(\mathbb{R}^3)$ 接合时，该奇异面测度质量将守恒地转化为薄层内部呈 $O(\delta^{-1})$ 标度的纯体积海森积分。
 
-$$
-F=T_1v=\tfrac12v+\tfrac12(y\cdot\nabla)v-\Delta v.
-$$
+Let $\rho = |y|$ , $r = \sqrt{y_1^2 + y_2^2}$ , $z = y_3$ , $\sigma = \frac{\rho}{1+\rho}$ , and $\eta = \frac{z}{\rho}$ . Fix the admissible baseline parameters of Appendix B (pages 50–55): time period $S = 1$ , rotation fold $\kappa = 3$ , symmetry group $\Gamma = \langle (R_{\pi/3}, 1/2), (R_*, 0) \rangle$ with reflection $R_* = \operatorname{diag}(1, -1, -1)$ , reference profile $W^r = 0$ , index sets $P_\lambda = P_\mu = \varnothing$ , first-order weight $Z = 0$ , dimensions $n = N = 0$ , $K = \mathbb{R}^0$ , empty auxiliary lists, $c_\mu = \frac{1}{2}$ , and $n_\lambda = n_{\nabla\lambda} = n_\mu = 0$ . For a time-independent compactly supported divergence-free vector field $v \in \mathcal{D}_S^\Gamma$ , the operators in Proposition B.1 reduce to:
 
-于是Mv=-Δv，J=0，‖v‖μ=0，cM²=50/3；乘子范数结论仅为‖Δv‖H≤‖v‖w。
-
-设HD为平面外经典Hessian。p.54的系数为
+记 $\rho = |y|$ ， $r = \sqrt{y_1^2 + y_2^2}$ ， $z = y_3$ ， $\sigma = \frac{\rho}{1+\rho}$ ， $\eta = \frac{z}{\rho}$ 。取论文附录 B（第 50–55 页）的合法基准参数：时间周期 $S = 1$ ，旋转重数 $\kappa = 3$ ，对称群 $\Gamma = \langle (R_{\pi/3}, 1/2), (R_*, 0) \rangle$ （其中反射算子 $R_* = \operatorname{diag}(1, -1, -1)$ ），参考剖面 $W^r = 0$ ，索引集 $P_\lambda = P_\mu = \varnothing$ ，一阶权 $Z = 0$ ，自由维数 $n = N = 0$ ， $K = \mathbb{R}^0$ ，辅助场列表为空， $c_\mu = \frac{1}{2}$ ， $n_\lambda = n_{\nabla\lambda} = n_\mu = 0$ 。对时间不变的紧支集无散场 $v \in \mathcal{D}_S^\Gamma$ ，命题 B.1 中的算子简化为：
 
 $$
-I_2=D-3/50,\ I'_2=1-D,\ I'_1=1/4,
-\ I_1=-\|H_D\|_{op}-3w/50,\ I_0=0.
+F = T_1 v = \frac{1}{2}v + \frac{1}{2}(y \cdot \nabla)v - \Delta v, \qquad M v = -\Delta v, \qquad J = 0, \qquad \|v\|_\mu = 0, \qquad c_M^2 = \frac{50}{3}, \qquad w_* = \frac{39}{50}.
 $$
 
-记E_D(v)=B.20右侧−左侧。利用无散积分恒等式及
-⟨T1v,-Δv⟩=‖Δv‖²+‖∇v‖²/4，得到
+With $Z = 0$ , the five coefficients in equation (B.16) on page 54 are $I_2 = D - \frac{3}{50}$ , $I_2' = 1 - D$ , $I_1' = \frac{1}{4}$ , $I_1 = -\|H_D\|_{\mathrm{op}} - \frac{3w}{50}$ , and $I_0 = 0$ . Using the solenoidal Parseval identity $\langle T_1 v, -\Delta v\rangle = \|\Delta v\|_{L^2}^2 + \frac{1}{4}\|\nabla v\|_{L^2}^2$ , the auxiliary constant $w$ and the $\frac{3}{50}$ terms cancel identically, and the difference $E_D(v) := \mathrm{RHS}_{\mathrm{B.20}}(v) - \mathrm{LHS}_{\mathrm{B.20}}(v)$ (which Proposition B.1 asserts must be $\le 0$ ) reduces to:
+
+在 $Z = 0$ 下，第 54 页公式 (B.16) 的五项系数为 $I_2 = D - \frac{3}{50}$ 、 $I_2' = 1 - D$ 、 $I_1' = \frac{1}{4}$ 、 $I_1 = -\|H_D\|_{\mathrm{op}} - \frac{3w}{50}$ 、 $I_0 = 0$ 。利用无散场帕塞瓦尔恒等式 $\langle T_1 v, -\Delta v\rangle = \|\Delta v\|_{L^2}^2 + \frac{1}{4}\|\nabla v\|_{L^2}^2$ ，辅助常数 $w$ 与 $\frac{3}{50}$ 完全相消，不等式 (B.20) 的“右端减左端”差值泛函 $E_D(v) := \mathrm{RHS}_{\mathrm{B.20}}(v) - \mathrm{LHS}_{\mathrm{B.20}}(v)$ （命题 B.1 要求 $E_D(v) \le 0$ ）精确化为：
 
 $$
-\boxed{E_D(v)=\int D(|\nabla^2v|^2-|\nabla\operatorname{curl}v|^2)
--\int\|H_D\|_{op}|\nabla v|^2.}\tag{A1}
+E_D(v) = \int_{\mathbb{R}^3} D(y)\bigl(|\nabla^2 v|^2 - |\nabla\operatorname{curl} v|^2\bigr)\,dy - \int_{\mathbb{R}^3} \|H_D(y)\|_{\mathrm{op}}\,|\nabla v|^2\,dy. \tag{A.1}
 $$
 
-w与3/50完全相消。
+---
 
-## 2. 全局分侧权及真实界面项
+## 2. Half-Space $C^2$ Twin Weights $D_\pm$ and the Distributional Hessian Identity / 分侧 $C^2$ 双权函数 $D_\pm$ 与分布海森恒等式
 
-令h(t)=6t⁵−15t⁴+10t³，χ(σ)在σ≤1/4为0，在[1/4,1/3]为h(12σ−3)，在σ≥1/3为1。端点一、二阶导数为0，故χ是C²分片多项式且0≤χ≤1。取
+Let $h(t) = 6t^5 - 15t^4 + 10t^3$ be the quintic Hermite step polynomial on $[0, 1]$ , and define the radial cutoff $\chi(\sigma) = 0$ for $\sigma \le \frac{1}{4}$ , $\chi(\sigma) = h(12\sigma - 3)$ for $\frac{1}{4} < \sigma < \frac{1}{3}$ , and $\chi(\sigma) = 1$ for $\sigma \ge \frac{1}{3}$ . Define the twin half-space $C^2$ spline weights:
 
-$$
-D_+=\tfrac12+\tfrac14\chi(\sigma)|\eta|,\qquad D_+(0)=1/2.\tag{A2}
-$$
-
-它在每个半空间图中为C²分片多项式，原点附近常数，轴对称、关于z偶对称，1/2≤D+≤3/4，故I'2≥1/4。体积导数有界且有相应远场衰减。但D+不跨平面C¹。
-
-在ρ≥1/2处，χ=1，D+=1/2+|z|/(4ρ)，上侧减下侧的法向导数跳跃为
+令五次埃尔米特阶跃多项式为 $h(t) = 6t^5 - 15t^4 + 10t^3$ ，定义径向截断函数 $\chi(\sigma)$ 在 $\sigma \le \frac{1}{4}$ 时为 $0$ ，在 $\frac{1}{4} < \sigma < \frac{1}{3}$ 时为 $h(12\sigma - 3)$ ，在 $\sigma \ge \frac{1}{3}$ 时为 $1$ 。定义分侧 $C^2$ 双权函数：
 
 $$
-[\partial_zD_+]=1/(2r).\tag{A3}
+D_\pm(y) := \frac{1}{2} \pm \frac{1}{4}\chi(\sigma)\,|\eta| = \frac{1}{2} \pm \frac{1}{4}\chi\!\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho}, \qquad D_\pm(0) = \frac{1}{2}. \tag{A.2}
 $$
 
-对紧支无散u，两次分部积分给
+On the region $\rho \ge \frac{1}{2}$ ( $\sigma \ge \frac{1}{3}$ ), $\chi(\sigma) = 1$ , and the normal derivative jump of $D_\pm$ across the equatorial plane $\Sigma = \{z = 0\}$ is $[\partial_z D_\pm](r) = \pm \frac{1}{2r}$ . Integrating by parts twice on $\mathbb{R}_+^3$ and $\mathbb{R}_-^3$ for each partial derivative $u = \partial_k v$ ( $k = 1, 2, 3$ ) yields the exact distributional identity:
+
+在 $\rho \ge \frac{1}{2}$ （即 $\sigma \ge \frac{1}{3}$ ）区域内， $\chi(\sigma) = 1$ ， $D_\pm$ 跨赤道平面 $\Sigma = \{z = 0\}$ 的法向一阶导数跳跃为 $[\partial_z D_\pm](r) = \pm \frac{1}{2r}$ 。在上下半空间 $\mathbb{R}_+^3$ 与 $\mathbb{R}_-^3$ 上对每个偏导数无散场 $u = \partial_k v$ （ $k = 1, 2, 3$ ）执行两次分部积分，得到精确分布恒等式：
 
 $$
-\int D(|\nabla u|^2-|\operatorname{curl}u|^2)
-=\langle D^2D,u\otimes u\rangle.
+E_D(v) = \sum_{k=1}^3 \int_{\mathbb{R}^3} (\partial_k v)^T H_D (\partial_k v)\,dy - \int_{\mathbb{R}^3} \|H_D\|_{\mathrm{op}}\,|\nabla v|^2\,dy + \int_{z=0} [\partial_z D]\,|\nabla v_3|^2\,dS_\Sigma. \tag{A.3}
 $$
 
-这里D²D表示分布Hessian；若D连续、分侧C²，则
+---
+
+## 3. Compactly Supported Axisymmetric Solenoidal Perturbation $v_\varepsilon$ and Exact Rational Margin / 紧支集轴对称无散扰动场 $v_\varepsilon$ 与精确有理破坏裕量
+
+Let $a(t) := (1 - t^2)_+^4 \in C_c^3(\mathbb{R})$ (supported on $[-1, 1]$ with $a(0) = 1$ ). For $0 < \varepsilon \le \frac{1}{4}$ , define the axisymmetric stream function and cylindrical velocity components $(v_r, v_\varphi, v_3)$ :
+
+取偶多项式母函数 $a(t) := (1 - t^2)_+^4 \in C_c^3(\mathbb{R})$ （支集为 $[-1, 1]$ ， $a(0) = 1$ ）。对 $0 < \varepsilon \le \frac{1}{4}$ ，定义轴对称流函数与柱坐标速度分量 $(v_r, v_\varphi, v_3)$ ：
 
 $$
-D^2D=H_D\,dy+[\partial_zD]e_3\otimes e_3\,dS_{z=0}.
+\psi_\varepsilon(r, z) := \varepsilon z\,a\!\left(\frac{r-1}{\varepsilon}\right) a\!\left(\frac{z}{\varepsilon}\right), \qquad v_r = -\frac{1}{r}\partial_z \psi_\varepsilon, \qquad v_\varphi = 0, \qquad v_3 = \frac{1}{r}\partial_r \psi_\varepsilon. \tag{A.4}
 $$
 
-对每个Cartesian导数u=∂kv应用此式，得到
+In local coordinates $s = \frac{r-1}{\varepsilon} \in [-1, 1]$ and $t = \frac{z}{\varepsilon} \in [-1, 1]$ , we have $v_r = -\frac{\varepsilon}{r}a(s)(a(t) + t a'(t))$ and $v_3 = \frac{\varepsilon}{r}t a'(s)a(t)$ . Because $v_3$ is odd in $z$ , $v_\varepsilon$ is invariant under $R_*$ and belongs to $\mathcal{D}_S^\Gamma$ ; yet on the equatorial plane $z = 0$ ( $t = 0$ ), its normal derivative is $\partial_z v_3(r, 0) = \frac{a'(s)}{r} \neq 0$ . Consequently, the equatorial surface integral satisfies:
+
+在局部标度坐标 $s = \frac{r-1}{\varepsilon} \in [-1, 1]$ 与 $t = \frac{z}{\varepsilon} \in [-1, 1]$ 下， $v_r = -\frac{\varepsilon}{r}a(s)(a(t) + t a'(t))$ ， $v_3 = \frac{\varepsilon}{r}t a'(s)a(t)$ 。因 $v_3$ 关于 $z$ 为奇函数， $v_\varepsilon$ 严格满足 $R_*$ 反射对称性且属于 $\mathcal{D}_S^\Gamma$ ；但在赤道平面 $z = 0$ （ $t = 0$ ）上，其法向导数 $\partial_z v_3(r, 0) = \frac{a'(s)}{r} \neq 0$ 。因此赤道界面积分为：
 
 $$
-\boxed{E_D(v)=\sum_k\int(\partial_kv)^TH_D(\partial_kv)
--\int\|H_D\|_{op}|\nabla v|^2
-+\int_{z=0}[\partial_zD]|\nabla v_3|^2dS.}\tag{A4}
+T_\varepsilon = \int_{z=0} \frac{|\nabla v_3|^2}{2r}\,dS_\Sigma = \pi\varepsilon \int_{-1}^1 \frac{a'(s)^2}{1 + \varepsilon s}\,ds \ge \frac{16\pi}{25}\varepsilon A, \qquad A = \int_{-1}^1 a'(s)^2\,ds = \frac{131072}{45045}. \tag{A.5}
 $$
 
-最后一项为奇异测度贡献，不能以平面体积测度为零为由去掉。
+On the toroidal support $\{|r-1| \le \varepsilon,\, |z| \le \varepsilon\}$ (where $\rho \ge r \ge \frac{3}{4}$ and volume is $8\pi\varepsilon^2$ ), the open-set bulk Hessian norm satisfies $\|H_{D_+}\|_{\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{8}{3} < 3 =: M$ , and the five cylindrical gradient components satisfy $|\nabla v_\varepsilon|^2 \le K := \left(\frac{28}{3}\right)^2 + 16^2 + \left(\frac{4}{3}\right)^2 + \left(\frac{104}{9}\right)^2 + 8^2 = \frac{43936}{81}$ . Choosing $\varepsilon = 2^{-16} = \frac{1}{65536}$ yields the exact rational lower bound:
 
-## 3. 明确的真实无散扰动
-
-取偶函数a，支撑[-1,1]，a(0)=1；令
+在环形支集 $\{|r-1| \le \varepsilon,\, |z| \le \varepsilon\}$ （此处 $\rho \ge r \ge \frac{3}{4}$ ，体积为 $8\pi\varepsilon^2$ ）上，开区域体积海森算子范数满足 $\|H_{D_+}\|_{\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{8}{3} < 3 =: M$ ，五项柱坐标梯度平方和满足 $|\nabla v_\varepsilon|^2 \le K := \left(\frac{28}{3}\right)^2 + 16^2 + \left(\frac{4}{3}\right)^2 + \left(\frac{104}{9}\right)^2 + 8^2 = \frac{43936}{81}$ 。取 $\varepsilon = 2^{-16} = \frac{1}{65536}$ ，得到精确闭式有理下界：
 
 $$
-\psi_\varepsilon=\varepsilon z\,a((r-1)/\varepsilon)a(z/\varepsilon),
-\quad v_r=-r^{-1}\partial_z\psi_\varepsilon,
-\quad v_\varphi=0,\quad v_3=r^{-1}\partial_r\psi_\varepsilon.\tag{A5}
+E_{D_+}(v_\varepsilon) \ge \pi\varepsilon\left(\frac{16}{25}A - 16 M K \varepsilon\right) = \frac{\pi}{65536}\cdot\frac{633509743}{432432000} > 0, \tag{A.6}
 $$
 
-写s=(r−1)/ε、t=z/ε，则
+while $E_{D_-}(v_\varepsilon) \le -\frac{\pi}{65536}\cdot\frac{633509743}{432432000} < 0$ , giving a dual-weight separation $E_{D_+}(v_\varepsilon) - E_{D_-}(v_\varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0$ under identical reduced readout $q_{\mathrm{red}}(D_+) = q_{\mathrm{red}}(D_-)$ . (Replacing $a(t)$ by the $C_c^\infty$ bump $a_\infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1}_{|t|<1}$ at $\varepsilon = 10^{-15}$ likewise gives $E_{D_+}(v_\varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} > 0$ .)
 
-$$
-v_r=-\varepsilon r^{-1}a(s)(a(t)+ta'(t)),\quad
-v_3=\varepsilon r^{-1}t a'(s)a(t).
-$$
+同时对负权函数有 $E_{D_-}(v_\varepsilon) \le -\frac{\pi}{65536}\cdot\frac{633509743}{432432000} < 0$ ，从而在相同简化读口 $q_{\mathrm{red}}(D_+) = q_{\mathrm{red}}(D_-)$ 下给出双权分离 $E_{D_+}(v_\varepsilon) - E_{D_-}(v_\varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0$ 。（若将 $a(t)$ 替换为 $C_c^\infty$ 光滑隆起函数 $a_\infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1}_{|t|<1}$ 并取 $\varepsilon = 10^{-15}$ ，同样有 $E_{D_+}(v_\varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} > 0$ 。）
 
-ε≤1/4时支撑远离轴及原点；r⁻¹∂r(rvr)+∂zv3=0。vr为z偶函数，v3为奇函数，故轴对称和R*对称成立，时间不变使Γ不变，只有零谐波。在平面v3=∂rv3=0，但∂zv3=a'(s)/r。因此
+---
 
-$$
-T_\varepsilon=\int_{z=0}\frac{|\nabla v_3|^2}{2r}dS
-=\pi\varepsilon\int_{-1}^1\frac{a'(s)^2}{(1+\varepsilon s)^2}ds
-\ge\frac{16\pi}{25}\varepsilon A,
-\quad A=\int_{-1}^1a'^2.\tag{A6}
-$$
+## 4. Quartic Collar Spline $s_\delta$ and 100% Curvature-Tax Transfer into the Bulk Hessian / 四次薄层磨平样条 $s_\delta$ 与奇异曲率质量向体积海森的守恒转移
 
-对称性仅令v3在平面为零，不令其法向导数为零。
+If one restores global $C^2(\mathbb{R}^3)$ regularity by replacing $|\eta|$ (or $|z|$ ) inside a thin equatorial collar $|z| \le \delta = \lambda\varepsilon$ ( $0 < \lambda \le \frac{1}{4}$ ) with the even quartic spline $s_\delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ , then $[\partial_z D_\delta]_\Sigma = 0$ , but $\int_{-\delta}^{\delta} s_\delta''(z)\,dz = 2$ and $\max_{|z|\le\delta} s_\delta''(z) = \frac{3}{2\delta}$ . On the same solenoidal field $v_\varepsilon$ , since $\partial_z v_3(r,z) = \frac{a'(s)}{r} b(t)$ with $b(t) = \frac{d}{dt}[t(1-t^2)^4] = 1 - 12t^2 + t^4\bigl(9(t^2 - \frac{14}{9})^2 + \frac{74}{9}\bigr) \ge 1 - 12t^2$ , the collar vertical integral transfers the surface term into the pure-bulk collar Hessian integral with factor $I_{\mathrm{collar}}(\lambda) = \int_{-1}^1 \frac{3}{4}(1-\tau^2)b(\lambda\tau)^2\,d\tau \ge 1 - \frac{24}{5}\lambda^2$ . At $\lambda = \frac{1}{8}$ ( $\delta = 2^{-19} = \frac{1}{524288}$ ), $I_{\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ , yielding a pure-bulk violation margin $\frac{E_{D_\delta}^{\mathrm{cert}}(v_\varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0$ against the unsmoothed bulk bound $M = 3$ , while absorbing $\|H_{D_\delta}(1,0)\|_{\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ into $I_1 = Z - \|H_{D_\delta}\|_{\mathrm{op}} - \frac{3w}{50}$ drives $I_1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
 
-支撑上ρ≥3/4，直接求导
-
-$$
-\nabla^2(z/\rho)=-(e_3\otimes y+y\otimes e_3+zI)/\rho^3
-+3z\,y\otimes y/\rho^5
-$$
-
-给‖HD‖op≤3/(2ρ²)≤8/3<3，可取M=3。若|∇v|²≤K，支撑体积为8πε²，由A4
-
-$$
-E_{D_+}(v)\ge\pi\varepsilon[(16/25)A-16MK\varepsilon].\tag{A7}
-$$
-
-## 4. 全显式有理裕量
-
-取a(t)=(1−t²)⁴_+，则a∈C³、v∈C²_c，足够进入DS：v∈X、Δv∈H、T1v∈H。各积分有限。
-
-|a|≤1、|a'|≤2、|a''|≤8。第一导数界可化为16·6⁶≤7⁷；第二导数为−8(1−t²)²(1−7t²)，其最大绝对值不超过8。轴对称梯度五项
-
-$$
-|\nabla v|^2=|\partial_rv_r|^2+|\partial_zv_r|^2+|v_r/r|^2+
-|\partial_rv_3|^2+|\partial_zv_3|^2
-$$
-
-的绝对值界依次为28/3、16、4/3、104/9、8，故
-
-$$
-K=43936/81,\qquad
-A=128\sum_{j=0}^6\frac{(-1)^j\binom6j}{2j+3}=131072/45045.
-$$
-
-取ε=1/65536，精确得
-
-$$
-(16/25)A-16MK\varepsilon=633509743/432432000>0,
-$$
-
-$$
-\boxed{E_{D_+}(v)\ge\frac\pi{65536}\frac{633509743}{432432000}>0.}\tag{A8}
-$$
-
-这严格违反B.20要求的右−左≤0。即使用a(0)=1、a(±1)=0及Cauchy–Schwarz给A≥2，也得到正裕量76267/86400。
-
-父席另以精确多项式运算重算了A、K、裕量，见 `../stage1/reopened_seam/EXACT_MOMENTS.json`。原生HODV的七项算术诊断见同目录；不把这些有限算术返回值冒充整个解析证明。
-
-## 5. 全 C∞ 版本与强合同正控
-
-可取a∞(t)=exp(1−1/(1−t²))于|t|<1，外为0。它为偶C∞ bump且a∞(0)=1。令q=(1−t²)^−1≥1，有|a'|≤2q²e^(1−q)≤4，|a''|≤(4q⁴+8q³+2q²)e^(1−q)≤186，可统一取𝓜=200。
-
-ε≤1/2时可取|∇v|²≤148𝓜⁴、‖HD‖≤6；A∞≥2。因此
-
-$$
-E_{D_+}(v)\ge\pi\varepsilon[8/9-14208\mathcal M^4\varepsilon].
-$$
-
-ε=10^-15时31968·200⁴<10¹⁵，故E≥(4π/9)10^-15>0。反例并非扰动正则性不足造成。
-
-强合同正控：对0<δ≤1，以偶C²样条
-
-$$
-s_\delta(\eta)=
-\begin{cases}3\delta/8+3\eta^2/(4\delta)-\eta^4/(8\delta^3),&|\eta|\le\delta,\\
-|\eta|,&|\eta|\ge\delta
-\end{cases}
-$$
-
-替代|η|，令Dδ=1/2+χsδ/4。接合一、二阶导数均匹配，1/2≤Dδ≤3/4，完整Hessian没有平面测度。A4的体积估计即给E_Dδ(v)≤0。δ趋零时薄层Hessian为O(δ^-1)，其积分成本不能凭层宽趋零删除。
-
-## 6. 双权重与归属限制
-
-取D±=1/2±χ|η|/4。二者均满足分侧弱合同，共同满足1/4≤D≤3/4、D|plane=1/2，且‖HD+‖op=‖HD−‖op。固定v及其余数据，简化读口qred=(体积Hessian范数场、平面D值、共同粗界、固定结构数据)对两者相同。
-
-令Jv=∫χ|η|/4 (|∇²v|²−|∇curlv|²)、Cv=∫‖HD+‖op|∇v|²，则
-
-$$
-E_{D_+}=J_v-C_v\ge\gamma_\varepsilon>0,
-\quad E_{D_-}=-J_v-C_v\le-\gamma_\varepsilon,
-\quad E_{D_+}-E_{D_-}\ge2\gamma_\varepsilon,
-$$
-
-其中γε为A8右端。**这是真双权重，但qred弱于完整B.16输入；完整输入还包含D本身，而D+≠D−。不能宣称已满足用户要求的完整论文读口同值。**
-
-若只投影Hessian测度的绝对连续部分，Hbulk dy与Hbulk dy+Σ确有同投影异配对；但只有后者是同一D的真实分布Hessian，不能把前者冒充也满足导数相容性。
-
-## 7. 纸面与强前件的分型
-
-逐半空间样条各自C²不蕴含跨平面接合，删除接合要求的弱化版本因此失败。但原PDF同时写函数定义于R³、分侧表示及“class C²”，不能据分侧表示断言它必然只要求分侧正则性，也不能断言全局C²必然是未落文的额外前件。按全局D∈C²(R³)理解时，本反例被排除。体积Hessian计算与全分布Hessian配对必须使用同一套正则性前件。
-
-固定提交的CellLayerChallenge.lean第2372–2378行要求按(-1)^o拼接；第2505/2509行对D/Z为二阶接合。ExtendedCoerciveChallenge.lean第322–323行明确全空间ContDiff R 2。本例上下半图都是1/2+χt/4，o=1要求χ/4=−χ/4，在支撑处χ=1时失败。
-
-所以已证的是纸面弱合同失效及接合前件承重。未证的是完整形式化命题、B.14全部条件、实际数值证书或NS主结论失效。52+声明、18+对负控与完整同域双模型的原目标不能由此自动勾销。
-
-反驳B.1只需其全部相关前件，不必先完成B.4/B.14证明；这些后续命题不能被用来额外抬高B.1反例的资格。
+若在赤道薄层 $|z| \le \delta = \lambda\varepsilon$ （ $0 < \lambda \le \frac{1}{4}$ ）内用偶对称四次样条 $s_\delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ 替换 $|z|$ （或 $|\eta|$ ）以恢复全局 $C^2(\mathbb{R}^3)$ 正则性，虽有 $[\partial_z D_\delta]_\Sigma = 0$ ，但总曲率质量 $\int_{-\delta}^{\delta} s_\delta''(z)\,dz = 2$ 严格守恒且峰值达到 $\max_{|z|\le\delta} s_\delta''(z) = \frac{3}{2\delta}$ 。对同一无散场 $v_\varepsilon$ ，由 $\partial_z v_3(r,z) = \frac{a'(s)}{r} b(t)$ 及平方和分解 $b(t) = 1 - 12t^2 + t^4\bigl(9(t^2 - \frac{14}{9})^2 + \frac{74}{9}\bigr) \ge 1 - 12t^2$ ，薄层竖直积分将原面积分转移为薄层内的纯体积海森积分，转移因子为 $I_{\mathrm{collar}}(\lambda) = \int_{-1}^1 \frac{3}{4}(1-\tau^2)b(\lambda\tau)^2\,d\tau \ge 1 - \frac{24}{5}\lambda^2$ 。在 $\lambda = \frac{1}{8}$ （ $\delta = 2^{-19} = \frac{1}{524288}$ ）下， $I_{\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ ，在原开域海森界 $M = 3$ 下仍给出纯体积正偏差 $\frac{E_{D_\delta}^{\mathrm{cert}}(v_\varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0$ ；而若将薄层曲率峰值 $\|H_{D_\delta}(1,0)\|_{\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ 计入 $I_1 = Z - \|H_{D_\delta}\|_{\mathrm{op}} - \frac{3w}{50}$ ，则使 $I_1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ 。

@@ -1,3 +1,21 @@
+#!/usr/bin/env python3
+"""
+Split-Node Maximum-Flow / Minimum-Directed-Vertex-Cut Solver for Part 01 (17.37M-Line GRH Lean 4 Formalization)
+第一部分（1,737 万行 GRH Lean 4 形式化）全环境声明依赖图拆点最大流与最小有向顶点割求解器
+
+[EN] Consumes the `DECL_GRAPH`-prefixed JSONL output of `AutopsyProbe_Scheme4.lean` (`2,701,132` declarations,
+     `170,706,224` directed dependency edges), computes the joint dependency cone (`1,478,243` nodes) of the
+     five top-level GRH theorems and the active source-to-sink subgraph (`1,072,980` nodes), solves the split-node
+     integral maximum-flow / minimum-vertex-cut problem via Edmonds-Karp augmentation, performs the 20-step
+     lexicographical bisection (`k* = 955,506`), and exports `mincut.json`, `cone_annotations.json`, and
+     `flow_certificate.json.gz`.
+
+[ZH] 读取 `AutopsyProbe_Scheme4.lean` 导出的全环境声明依赖图 JSONL 流（`2,701,132` 个声明节点、`170,706,224` 条有向依赖边），
+     计算五大顶层 GRH 定理的联合依赖锥（`1,478,243` 个节点）与源汇活跃子图（`1,072,980` 个节点），通过拆点网络流算法求解最小
+     内部有向顶点割（容量为 `8`）及 20 步字典序对数二分阈值（`k* = 955,506`），并生成 `mincut.json`、`cone_annotations.json`
+     与独立可核验的流证书 `flow_certificate.json.gz`。
+"""
+
 import sys
 sys.dont_write_bytecode=True
 import pathlib,json,gzip,collections,array,time,hashlib,contextlib

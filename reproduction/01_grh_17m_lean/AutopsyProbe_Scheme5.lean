@@ -1,3 +1,19 @@
+/-
+  Scheme 5 Verification Probe (AutopsyProbe_Scheme5.lean)
+  -------------------------------------------------------
+  [EN] Same-fiber Trojan countermodel verification probe for Scheme 5:
+       Constructs in Lean 4 the symmetric algebraic Trojan polynomial `P(s) = (s - 1/2)^2 - 1/16`,
+       certifies the Davenport-Heilbronn composite-modulus multiplicativity breakdown at `n = 6`
+       (`dh_not_multiplicative`), verifies the even-channel reciprocal root at `s = 3/4` (`even_root`)
+       and completed reflection symmetry (`even_completed_reflection`), and formally refutes the weak
+       additive continuation zero-exclusion rule (`weak_rule_refuted : ¬WeakRule`).
+  [ZH] 方案五实机核查探针（同商纤维特洛伊反模型验证）：
+       在 Lean 4 内构造反射对称特洛伊多项式 `P(s) = (s - 1/2)^2 - 1/16`，证明 Davenport-Heilbronn
+       系数在复合数 `n = 6` 处违反乘性（`dh_not_multiplicative`）、偶通道变形函数在 `s = 3/4` 处取零
+       （`even_root`）且满足完备化反射对称（`even_completed_reflection`），并形式证伪仅依赖弱解析延拓商的
+       排零规则 `WeakRule`（`weak_rule_refuted : ¬WeakRule`）。
+-/
+
 import Mathlib
 
 namespace Autopsy5

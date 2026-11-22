@@ -1,3 +1,22 @@
+/-
+  Scheme 1 Verification Probe (AutopsyProbe_Scheme1.lean)
+  -------------------------------------------------------
+  [EN] Self-contained Lean 4 (v4.33.1 + Mathlib 0df444a360ea) verification probe for Scheme 1:
+       (1) `raw_zero` & `raw_three_quarters`: proves that Mathlib `LSeries 1 s` evaluates identically
+           to `0` on the non-summable half-plane `Re(s) <= 1` (in particular at `s = 3/4`);
+       (2) `functions_differ`: proves `(fun s => LSeries 1 s) != riemannZeta` via `0 != -1/2` at `s = 0`;
+       (3) `axis_principal_zero`: proves that the modulo-2 principal Dirichlet L-function vanishes on the
+           imaginary axis at `s_0 = (2 * pi / log 2) * I` (`Re(s_0) = 0`);
+       (4) `removing_guard_is_false`: proves that omitting the open critical-strip left boundary guard
+           `0 < Re(s)` renders the universal critical-line statement provably false in Lean 4.
+  [ZH] 方案一实机核查探针（Lean 4 v4.33.1 + Mathlib 0df444a360ea）：
+       (1) `raw_zero` 与 `raw_three_quarters`：证明原始级数载体 `LSeries 1 s` 在不可和半平面 `Re(s) <= 1`
+           （含 `s = 3/4`）上因默认总化规则恒等于 `0`；
+       (2) `functions_differ`：由 `s = 0` 处 `0 != -1/2` 证明 `(fun s => LSeries 1 s) != riemannZeta`；
+       (3) `axis_principal_zero`：证明模 2 主特征 L 函数在虚轴点 `s_0 = (2 * pi / log 2) * I` 处为零；
+       (4) `removing_guard_is_false`：证明一旦省略左边界守卫 `0 < Re(s)`，全称临界线命题在 Lean 4 内即可证伪。
+-/
+
 import Mathlib.NumberTheory.LSeries.DirichletContinuation
 import Mathlib.NumberTheory.LSeries.Dirichlet
 import Mathlib.Tactic

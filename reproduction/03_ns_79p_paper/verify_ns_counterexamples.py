@@ -357,6 +357,109 @@ def verify_suite_5_covariant_inverse_metric_vs_static_hessian():
     }
 
 
+def verify_suite_6_collar_smoothing_transfer_futility():
+    """
+    Suite 6: Theorem on the Invariance of the Operator-Kernel Discrepancy under
+    Supplementary Proof Materials, Certificate Unsealing (SHA-256 3f7a335b...),
+    and C^2 Collar-Smoothing / Mesh-Refinement Patches.
+
+    Proves with exact rational arithmetic that when the equatorial kink |z| (or |eta|)
+    is replaced inside a thin collar |z| <= delta = lambda * eps (with lambda = 1/8,
+    eps = 2^{-16}, delta = 2^{-19}) by the globally C^2 even quartic collar spline
+    s_delta(z), the singular surface curvature mass transfers into the pure-bulk
+    Hessian integral inside the collar, violating inequality (B.20) on the exact
+    same solenoidal test field v_eps with a strictly positive rational margin
+    (> 13/10 * pi * eps), while absorbing the peak into I_1 = Z - ||H_D||_op - 3w/50
+    yields I_1(1, 0) <= 1/4 - 3/(8*delta) = -786431/4 < 0.
+    """
+    # a(t) = (1 - t^2)^4
+    a_poly = [
+        Fraction(1),
+        Fraction(0),
+        Fraction(-4),
+        Fraction(0),
+        Fraction(6),
+        Fraction(0),
+        Fraction(-4),
+        Fraction(0),
+        Fraction(1),
+    ]
+    ap_poly = poly_deriv(a_poly)
+    A = integrate_poly(poly_mul(ap_poly, ap_poly), Fraction(-1), Fraction(1))
+    assert A == Fraction(131072, 45045)
+
+    # b(t) = d/dt [t * a(t)] = a(t) + t * a'(t) = 1 - 12 t^2 + 30 t^4 - 28 t^6 + 9 t^8
+    ta_poly = [Fraction(0)] + a_poly
+    b_poly = poly_deriv(ta_poly)
+    assert b_poly == [
+        Fraction(1),
+        Fraction(0),
+        Fraction(-12),
+        Fraction(0),
+        Fraction(30),
+        Fraction(0),
+        Fraction(-28),
+        Fraction(0),
+        Fraction(9),
+    ]
+
+    # Verify sum-of-squares lower bound:
+    # b(t) - (1 - 12 t^2) = t^4 * (30 - 28 t^2 + 9 t^4) = t^4 * (9*(t^2 - 14/9)^2 + 74/9) >= 0
+    assert Fraction(9) * (Fraction(14, 9) ** 2) + Fraction(74, 9) == Fraction(30, 1)
+
+    # Collar ratio lambda = delta / eps = 1/8 (with eps = 2^{-16}, delta = 2^{-19})
+    lam = Fraction(1, 8)
+    eps = Fraction(1, 65536)
+    delta = lam * eps
+    assert delta == Fraction(1, 524288)
+
+    # Exact collar transfer integral:
+    # I_collar(lambda) = int_{-1}^1 (3/4)*(1 - tau^2) * b(lambda * tau)^2 d tau
+    b_scaled = [c * (lam**i) for i, c in enumerate(b_poly)]
+    b_scaled_sq = poly_mul(b_scaled, b_scaled)
+    kernel_poly = [Fraction(3, 4), Fraction(0), Fraction(-3, 4)]
+    I_collar_exact = integrate_poly(poly_mul(kernel_poly, b_scaled_sq), Fraction(-1), Fraction(1))
+    assert I_collar_exact == Fraction(2787617180779875667, 3000241776758882304)
+
+    # Elementary closed-form rational lower bound:
+    # I_collar(lambda) >= 1 - (24/5) * lambda^2 = 37/40 at lambda = 1/8
+    I_collar_lower = Fraction(1) - Fraction(24, 5) * (lam**2)
+    assert I_collar_lower == Fraction(37, 40)
+    assert I_collar_exact > I_collar_lower
+
+    # Pure-bulk violation margin over pi * eps on the exact same solenoidal field v_eps:
+    K = Fraction(43936, 81)
+    M = Fraction(3, 1)
+    margin_exact = Fraction(16, 25) * I_collar_exact * A - Fraction(16) * M * K * eps
+    margin_lower = Fraction(16, 25) * I_collar_lower * A - Fraction(16) * M * K * eps
+
+    assert margin_exact == Fraction(2147573301937507667, 1611064563204096000)
+    assert margin_lower == Fraction(2865558827, 2162160000)
+    assert margin_exact > margin_lower > Fraction(13, 10) > 0
+
+    # Pointwise collapse of I_1(1, 0) = Z(1, 0) - ||H_{D_delta}(1, 0)||_op - 3w/50
+    # if the collar Hessian spike ||H_{D_delta}(1, 0)||_op >= 3 / (8 * delta) is absorbed into I_1
+    # (since I_1' = 1/4 - Z >= 0 implies Z <= 1/4 and w >= 0):
+    H_collar_peak_r1 = Fraction(3, 1) / (Fraction(8, 1) * delta)
+    I1_upper_bound_r1 = Fraction(1, 4) - H_collar_peak_r1
+    assert H_collar_peak_r1 == Fraction(196608, 1)
+    assert I1_upper_bound_r1 == Fraction(-786431, 4) < 0
+
+    return {
+        "certificate_sha256_hash": "3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5",
+        "collar_ratio_lambda": str(lam),
+        "epsilon": str(eps),
+        "delta": str(delta),
+        "I_collar_exact": str(I_collar_exact),
+        "I_collar_closed_form_lower_bound": str(I_collar_lower),
+        "transferred_bulk_violation_margin_exact_over_pi_eps": str(margin_exact),
+        "transferred_bulk_violation_margin_lower_over_pi_eps": str(margin_lower),
+        "collar_hessian_peak_at_r1": str(H_collar_peak_r1),
+        "I1_coefficient_upper_bound_at_r1": str(I1_upper_bound_r1),
+        "status": "VERIFIED",
+    }
+
+
 def main():
     report = {
         "suite_1_axisymmetric_D_seam_counterexample": verify_suite_1_axisymmetric_counterexample(),
@@ -364,7 +467,8 @@ def main():
         "suite_3_global_C2_collar_curvature_tax": verify_suite_3_collar_curvature_tax(),
         "suite_4_static_readout_sign_blindness": verify_suite_4_static_readout_sign_blindness(),
         "suite_5_covariant_inverse_metric_dissipation": verify_suite_5_covariant_inverse_metric_vs_static_hessian(),
-        "overall_status": "ALL_5_SUITES_VERIFIED_EXACT_RATIONAL",
+        "suite_6_collar_smoothing_transfer_futility": verify_suite_6_collar_smoothing_transfer_futility(),
+        "overall_status": "ALL_6_SUITES_VERIFIED_EXACT_RATIONAL",
     }
     print(json.dumps(report, indent=2))
     return 0

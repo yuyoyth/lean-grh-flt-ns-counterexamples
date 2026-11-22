@@ -1,3 +1,15 @@
+/-
+  Scheme 4 Verification Probe (AutopsyProbe_Scheme4.lean)
+  -------------------------------------------------------
+  [EN] Full-environment declaration dependency graph extractor for Scheme 4:
+       Imports `Main` (`env.checked`) and exports all 2,701,132 declarations together with all
+       170,706,224 directed dependency edges (`type_deps`, `body_deps`, and `structural_deps`)
+       as `DECL_GRAPH`-prefixed JSON lines for minimum directed vertex cut analysis.
+  [ZH] 方案四实机核查探针（全环境声明依赖图提取器）：
+       加载目标仓库 `Main` 的已检查环境 `env.checked`，遍历并导出全部 2,701,132 个声明节点与
+       170,706,224 条有向依赖边（含类型依赖、证明体依赖与归纳结构依赖），供最小有向顶点割算法分析。
+-/
+
 import Lean
 open Lean
 

@@ -1,4 +1,4 @@
-# Principled Logical Self-Collision Theorems, Static Quotient Cross-Section Distortions, and Live Dependency-Graph Autopsy of a Seventeen-Million-Line Dependent-Type Formalization of the Generalized Riemann Hypothesis
+# Principled Logical Self-Collision Theorems, Static Quotient Cross-Section Distortions, and Source-Code and Dependency-Graph Verification of a Seventeen-Million-Line Dependent-Type Formalization of the Generalized Riemann Hypothesis
 
 Author: yth
 Date: 2026-11-22
@@ -61,9 +61,9 @@ $$
 
 Outside a discrete sampling set of measure $0$ , in the absence of a pointwise derivative-control and remainder-coupling contract holding across the entire interval, the continuous trajectory between consecutive sample points can undergo arbitrarily wild deflections and topological windings without triggering the slightest warning in the static sample table. By the exact same mechanism, in a large-scale formalization of the Generalized Riemann Hypothesis (note that syntactic finiteness of a proof term does not by itself imply semantic finiteness of its arithmetic horizon, because natural-number induction and universal quantification can legitimately bind infinite domains; what determines the blind kernel is the **static observation quotient map** $q : X \to Q$ through which the proof actually factorizes), the moment the proof chain crosses $\operatorname{Re}(s) = 1$ into the critical strip $0 < \operatorname{Re}(s) < 1$ by factoring a target proposition valid only for genuine arithmetic objects through a weak static quotient map $q$ that discards prime multiplicative coupling, non-arithmetic shadow countermodels that share the exact same static quotient readout under $q$ as genuine $L$ -functions infiltrate the proof unhindered along the blind kernel $\ker q$ .
 
-### 1.3　The Trajectory Divergence Amplification Law of Entry-Level Quotient Collapse: Why a Single Step-One Quotient Leak Renders Seventeen Million Subsequent Lines of Static Deduction an Exercise on the Wrong Object
+### 1.3　The Trajectory Divergence Amplification Law of Entry-Level Quotient Degeneration: How an Initial Quotient-Kernel Leak Propagates Across Multi-Million-Line Static Deductions
 
-We can now state with algebraic precision why a single quotient-kernel leak at the entry interface or cross-domain bridge causes tens of millions of subsequent lines of formal code to degenerate into an elaborate calculation on a collapsed equivalence class that no longer speaks about the original arithmetic problem.
+We can now state with algebraic precision why a single quotient-kernel leak at the entry interface or cross-domain bridge causes subsequent multi-million-line formal deductions to operate on a coarsened equivalence class rather than the intended arithmetic object.
 
 Let $\{A_a\}_{a \in \mathcal{A}}$ be a family of legitimate arithmetic-analytic evolution operators acting on the full state space $V$ (for instance: forming finite Dirichlet partial sums, applying Abel summation by parts, performing meromorphic continuation via Hurwitz zeta functions, integrating logarithmic derivatives around rational rectangular contours in the critical strip, and applying the symmetric functional-equation reflection $s \leftrightarrow 1-s$ ). Under what necessary and sufficient condition do these true evolution operators $A_a : V \to V$ descend to well-defined cross-section evolution operators $\overline{A}_a : \mathcal{S}_0 \to \mathcal{S}_0$ on the static quotient $\mathcal{S}_0 = V / \ker\pi_{\mathrm{TT}}$ such that the commutation relation $\pi_{\mathrm{TT}} A_a = \overline{A}_a \pi_{\mathrm{TT}}$ holds for all composite operator words? The fundamental theorem of linear quotient spaces provides the unique necessary and sufficient condition—the **quotient-kernel invariance closure law**:
 
@@ -97,9 +97,9 @@ $$
 \forall n \in \{1, 2, \dots, N\},\qquad (F_n \circ \cdots \circ F_1)\bigl(q(x_0)\bigr) \equiv (F_n \circ \cdots \circ F_1)\bigl(q(x_1)\bigr). \tag{1.12}
 $$
 
-In other words, once the remainder coupling fiber that enforces arithmetic rigidity is lost at the entry or cross-domain bridge, the object being manipulated across the subsequent seventeen million lines of code is no longer the authentic arithmetic $L$ -function governed by unique prime factorization; it is a collapsed equivalence class on the quotient space $Q$ . And if a formal system forcibly proclaims on this collapsed quotient space that all non-trivial zeros lie on $\operatorname{Re}(s) = 1/2$ , then because the shadow object $x_1$ legitimately inhabits the very same quotient fiber $q(x_1) = q(x_0)$ , the resulting theorem inside the static type-theoretic cross-section $\Sigma_{\mathrm{TT}}$ is automatically transported to $x_1$ , colliding head-on with the off-critical-line zero of $x_1$ that is locally certifiable by finite rational arithmetic, and exploding into the logical contradiction $(0 : \mathbb{Z}) = 1$ within $\Sigma_{\mathrm{TT}}$ itself.
+In other words, once the remainder coupling fiber that enforces arithmetic rigidity is lost at the entry or cross-domain bridge, the object being manipulated across the subsequent seventeen million lines of code is no longer the authentic arithmetic $L$ -function governed by unique prime factorization; it is a coarsened equivalence class on the quotient space $Q$ . If a formal theorem asserts on this coarsened quotient space that all non-trivial zeros lie on $\operatorname{Re}(s) = 1/2$ , then because the shadow object $x_1$ legitimately inhabits the very same quotient fiber $q(x_1) = q(x_0)$ , the resulting theorem inside the static type-theoretic cross-section $\Sigma_{\mathrm{TT}}$ is automatically transported to $x_1$ , conflicting directly with the off-critical-line zero of $x_1$ certified by finite rational arithmetic, and deriving the logical contradiction $(0 : \mathbb{Z}) = 1$ within $\Sigma_{\mathrm{TT}}$ itself.
 
-In this monograph, Chapters 2 and 3 establish the complete closed-form proofs of the **Three Principled Self-Collision Theorems (Theorem A₀, Theorems B₀–B₃, and Theorems C₀–C₃)** together with the **Directed Proof-Graph Semantic Defect Conservation and Extraction Trilemma Theorem (Theorem 1.4)**. Chapter 4 analyzes the **Five Static Formalization Translation Distortion Mechanisms** and their full-process kernel-preserving reconstruction equations. Chapter 5 presents the **Six Zero-Full-Read Verification Schemes** requiring zero manual reading of millions of lines of code, together with our **complete live empirical autopsy on the compute host** $\mathtt{lc23}$ of both the original $17\,374\,215$ -line repository ( $\mathtt{40e56bab026552e089d7afcfeff08d2defb9c005}$ , $175\,187$ source files, $2\,701\,132$ environment declaration nodes, $170\,706\,224$ directed dependency edges) and the community pruned edition ( $\mathtt{f1f6d65420dbbf36d6cfdac1af8d79511a855a5b}$ , $16\,571\,342$ lines, $164\,464$ source files). Finally, Chapter 6 provides the complete ledger of **182 closed-form algebraic, observation-recovery, positive-definite matrix decomposition, and single-premise negative-control propositions (Propositions A.1–A.120 and Propositions B.1–B.62)**.
+In this monograph, Chapters 2 and 3 establish the complete closed-form proofs of the **Three Principled Self-Collision Theorems (Theorem A₀, Theorems B₀–B₃, and Theorems C₀–C₃)** together with the **Directed Proof-Graph Semantic Defect Conservation and Extraction Trilemma Theorem (Theorem 1.4)**. Chapter 4 analyzes the **Five Static Formalization Translation Distortion Mechanisms** and their full-process kernel-preserving reconstruction equations. Chapter 5 presents the **Six Zero-Full-Read Verification Schemes** requiring zero manual reading of millions of lines of code, together with our **complete source-code and dependency-graph verification on the compute host** $\mathtt{lc23}$ of both the original $17\,374\,215$ -line repository ( $\mathtt{40e56bab026552e089d7afcfeff08d2defb9c005}$ , $175\,187$ source files, $2\,701\,132$ environment declaration nodes, $170\,706\,224$ directed dependency edges) and the community pruned edition ( $\mathtt{f1f6d65420dbbf36d6cfdac1af8d79511a855a5b}$ , $16\,571\,342$ lines, $164\,464$ source files). Finally, Chapter 6 provides the complete ledger of **182 closed-form algebraic, observation-recovery, positive-definite matrix decomposition, and single-premise negative-control propositions (Propositions A.1–A.120 and Propositions B.1–B.62)**.
 
 ---
 
@@ -237,7 +237,7 @@ $$
 
 Because $J_+ \cap J_- = \varnothing$ and the primes $p_1, \dots, p_k$ are pairwise distinct, unique prime factorization in $\mathbb{Z}_{>0}$ forces every exponent $m_j = 0$ , whence $r_j = m_j / M = 0$ for all $j \in \{1, \dots, k\}$ . Q.E.D.
 
-Theorem B₁ shows that in genuine integer arithmetic, the infinite family of primes forms an infinite-dimensional rigid orthogonal frame through unique factorization. The moment a formal proof crosses $\operatorname{Re}(s) = 1$ without propagating this **infinite-prime multiplicative coupling** into the critical strip—degenerating instead into an observation map that reads only the finite Euler product over primes $p \le P_*$ together with a classical zero-free region and prime-number-theorem remainder bound—the discrete Beurling generalized prime system constructed by Diamond, Montgomery, and Vorhauer (2006) immediately supplies a lethal off-critical-line countermodel inside the exact same quotient fiber.
+Theorem B₁ shows that in genuine integer arithmetic, the infinite family of primes forms an infinite-dimensional rigid orthogonal frame through unique factorization. The moment a formal proof crosses $\operatorname{Re}(s) = 1$ without propagating this **infinite-prime multiplicative coupling** into the critical strip—degenerating instead into an observation map that reads only the finite Euler product over primes $p \le P_*$ together with a classical zero-free region and prime-number-theorem remainder bound—the discrete Beurling generalized prime system constructed by Diamond, Montgomery, and Vorhauer (2006) immediately admits an off-critical-line countermodel inside the exact same quotient fiber.
 
 **Theorem B₂ (Generalized Prime Finite-Horizon Tail-Replacement and Complete Off-Critical-Line Zero Preservation Theorem for Arbitrary**  $P_*$  **)**. By the Diamond–Montgomery–Vorhauer theorem (References [1, 2]), there exist a discrete sequence of Beurling generalized primes $B = (b_j)_{j\ge 1}$ ( $1 < b_1 \le b_2 \le \cdots \to \infty$ ), its generated generalized integer counting function $N_B(x)$ , generalized prime counting function $\pi_B(x)$ , Chebyshev function $\psi_B(x)$ , and generalized zeta function $\zeta_B(s) = \prod_{j=1}^\infty (1 - b_j^{-s})^{-1}$ ( $\operatorname{Re}(s) > 1$ ), together with constants $\frac{1}{2} < \theta < 1$ and $\kappa_B, a, c_1, C_1, C_2 > 0$ (with $a > \frac{4}{e}(1-\theta)$ ), satisfying:
 (i) $|N_B(x) - \kappa_B x| \le C_1 x^\theta$ for all $x \ge x_0$ , so that $\zeta_B(s)$ continues meromorphically to the half-plane $\operatorname{Re}(s) > \theta$ and is holomorphic there except for a simple pole at $s = 1$ with residue $\kappa_B$ ;
@@ -262,9 +262,9 @@ $$
 
 **Corollary B₃ (Self-Collision of Any Zero-Exclusion Rule Factoring Through a Finite Prime Horizon and Classical Asymptotic Error Quotient)**. On a generalized prime model domain $X_{\mathrm{Beurling}}$ , if a static observation quotient $q_{P_*}(x)$ records only the prime generators in the finite window $(1, P_*]$ together with the classical zero-free region and the prime-number-theorem remainder bound $(2.18)$ , then the surgically modified countermodel $\widetilde{B}$ satisfies the exact same quotient premise $C(q_{P_*}(\widetilde{B}))$ as the ordinary primes while retaining infinitely many off-critical-line zeros $\rho_n \in \{1/2 < \operatorname{Re}(s) < 1\}$ . Consequently, instantiating any uniform zero-exclusion proof term factored through $C(q_{P_*}(x))$ at $\widetilde{B}$ inside $\Sigma_{\mathrm{TT}}$ directly derives $\vdash_T (0 : \mathbb{Z}) = 1$ .
 
-### 2.3　The Third Principled Collision (Theorems C₀–C₃): Right-Half-Plane Coefficient Uniqueness Versus Critical-Strip Odd and Even Channel Off-Axis Root Collapse on the Weak Analytic Continuation Quotient
+### 2.3　The Third Principled Collision (Theorems C₀–C₃): Right-Half-Plane Coefficient Uniqueness Versus Critical-Strip Odd and Even Channel Off-Axis Root Degeneration on the Weak Analytic Continuation Quotient
 
-The third—and in the $\operatorname{Lean\ 4} / \operatorname{Mathlib}$ ecosystem, the most practically acute—quotient collapse occurs at the carrier switch **from right-half-plane Dirichlet series to global Hurwitz meromorphic continuation**.
+The third—and in the $\operatorname{Lean\ 4} / \operatorname{Mathlib}$ ecosystem, the most structurally consequential—quotient degeneration occurs at the carrier switch **from right-half-plane Dirichlet series to global Hurwitz meromorphic continuation**.
 
 As confirmed directly on $\mathtt{lc23}$ by executing $\mathtt{\#print\ DirichletCharacter.LFunction}$ and $\mathtt{\#print\ ZMod.LFunction}$ in Chapter 5, $\operatorname{Mathlib}$ defines the Dirichlet $L$ -function modulo $N$ as
 
@@ -419,7 +419,7 @@ $$
 
 **Exact Boundary of Applicability of Theorem 1.4**:
 Theorem 1.4 simultaneously delineates when code deletion and proof rewriting are mathematically benign versus when they merely relocate a defect:
-- First, if a set of deleted modules $E_{\mathrm{del}}$ already lay entirely outside the target dependency cone in the original graph ( $E_{\mathrm{del}} \cap \operatorname{Cone}_{\mathcal{G}_{\mathrm{orig}}}(v_{\mathrm{goal}}) = \varnothing$ , representing unreferenced dead code), removing $E_{\mathrm{del}}$ leaves the dependency cone unchanged—neither introducing new defects nor curing any defect situated inside the cone;
+- First, if a set of deleted modules $E_{\mathrm{del}}$ already lay entirely outside the target dependency cone in the original graph ( $E_{\mathrm{del}} \cap \operatorname{Cone}_{\mathcal{G}_{\mathrm{orig}}}(v_{\mathrm{goal}}) = \varnothing$ , representing unreferenced out-of-cone declarations), removing $E_{\mathrm{del}}$ leaves the dependency cone unchanged—neither introducing new defects nor curing any defect situated inside the cone;
 - Second, if a revised formalization genuinely abandons the weak quotient premise $C(q(x))$ by introducing and independently proving a full-order arithmetic separation invariant that distinguishes $x_0$ from $x_1$ (or if the target proposition is a self-contained elementary identity such as $(0 : \mathbb{N}) = 0$ re-proved directly by reflexivity $\operatorname{rfl}$ after discarding an unused inconsistent branch), then it exits the frozen weak-quotient hypothesis $(3.3)$ . Conversely, so long as the critical-strip deduction remains confined to a weak static quotient satisfying $(3.3)$ , no amount of file pruning or local proof-term compression can ever escape the trilemma of Theorem 1.4.
 
 ---
@@ -488,7 +488,7 @@ $$
 
 ### 4.3　Distortion Mechanism III: Dependent Type Barriers Across $\operatorname{ZMod}(N)$ , Non-Primitive Imaginary-Axis Euler Zeros, and the Four-Character Positive Cone
 
-In dependent type theory, the residue-class ring $\operatorname{ZMod}(N)$ is a **dependent type family** indexed by a natural number $N : \mathbb{N}$ . Whenever $N_1 \neq N_2$ , $\operatorname{ZMod}(N_1)$ and $\operatorname{ZMod}(N_2)$ are disjoint types that cannot even be compared by homogeneous equality $x = y$ without heterogeneous equality $\operatorname{HEq}$ or a pullback to $\mathbb{Z}$ / $\operatorname{ZMod}(\operatorname{lcm}(N_1, N_2))$ . This structural barrier routinely triggers two acute formalization pitfalls:
+In dependent type theory, the residue-class ring $\operatorname{ZMod}(N)$ is a **dependent type family** indexed by a natural number $N : \mathbb{N}$ . Whenever $N_1 \neq N_2$ , $\operatorname{ZMod}(N_1)$ and $\operatorname{ZMod}(N_2)$ are disjoint types that cannot even be compared by homogeneous equality $x = y$ without heterogeneous equality $\operatorname{HEq}$ or a pullback to $\mathbb{Z}$ / $\operatorname{ZMod}(\operatorname{lcm}(N_1, N_2))$ . This structural barrier routinely triggers two recurring formalization pitfalls:
 
 **Theorem III-A (Imaginary-Axis Euler-Factor Zeros of Imprimitive Characters and Gauss-Sum Degeneration)**. Let $\chi^* \in \operatorname{DirichletCharacter}(\mathbb{C}, N^*)$ be a primitive character of conductor $N^* \mid N$ . The imprimitive character $\chi = \operatorname{changeLevel}(N^* \mid N, \chi^*)$ induced to modulus $N$ has an analytic $L$ -function satisfying for all $s \neq 1$ the exact cross-modulus factorization
 
@@ -503,13 +503,13 @@ s_k = \frac{2\pi i k}{\log p} \qquad \bigl(k \in \mathbb{Z} \setminus \{0\},\ \o
 $$
 
 (Choosing $k \neq 0$ , such as $s_1 = \frac{2\pi i}{\log 2}$ , avoids the real point $s = 0$ where $\zeta(0) = -1/2$ and any pole discussion; at $s_1 = \frac{2\pi i}{\log 2}$ we have $2^{-s_1} = \exp(-\log 2 \cdot \frac{2\pi i}{\log 2}) = \exp(-2\pi i) = 1$ , so $1 - 2^{-s_1} = 0$ and $L(s_1, \chi_{0,2}) = 0$ .)
-This rigorously proves that if a theorem about general modulo- $N$ Dirichlet $L$ -functions omits either the **open critical-strip left boundary guard** $0 < \operatorname{Re}(s)$ or the **primitivity guard** $\operatorname{IsPrimitive}(\chi)$ , instantiating that theorem at $N = 2, \chi = \chi_{0,2}, s_1 = \frac{2\pi i}{\log 2}$ immediately derives $(0 : \mathbb{R}) = 1/2$ inside $\Sigma_{\mathrm{TT}}$ . Similarly, for the imprimitive principal character $\chi_{0,4}$ modulo $N = 4$ , because $\chi_{0,4}(a) = 0$ on even residues $a \in \{0, 2\}$ and $\chi_{0,4}(1) = \chi_{0,4}(3) = 1$ on odd residues, its Gauss sum against the standard additive character $\psi_4(a) = e^{2\pi i a / 4} = i^a$ collapses identically to zero:
+This rigorously proves that if a theorem about general modulo- $N$ Dirichlet $L$ -functions omits either the **open critical-strip left boundary guard** $0 < \operatorname{Re}(s)$ or the **primitivity guard** $\operatorname{IsPrimitive}(\chi)$ , instantiating that theorem at $N = 2, \chi = \chi_{0,2}, s_1 = \frac{2\pi i}{\log 2}$ immediately derives $(0 : \mathbb{R}) = 1/2$ inside $\Sigma_{\mathrm{TT}}$ . Similarly, for the imprimitive principal character $\chi_{0,4}$ modulo $N = 4$ , because $\chi_{0,4}(a) = 0$ on even residues $a \in \{0, 2\}$ and $\chi_{0,4}(1) = \chi_{0,4}(3) = 1$ on odd residues, its Gauss sum against the standard additive character $\psi_4(a) = e^{2\pi i a / 4} = i^a$ evaluates identically to zero:
 
 $$
 \tau(\chi_{0,4}) = \sum_{a \in \operatorname{ZMod}(4)} \chi_{0,4}(a)\psi_4(a) = 0\cdot 1 + 1\cdot i + 0\cdot(-1) + 1\cdot(-i) = 0 \neq \sqrt{4} = 2, \tag{4.11}
 $$
 
-so any functional-equation reduction that divides by $\tau(\chi)$ or assumes $|\tau(\chi)| = \sqrt{N}$ without enforcing $\operatorname{IsPrimitive}(\chi)$ suffers a division-by-zero collapse at $N = 4$ .
+so any functional-equation reduction that divides by $\tau(\chi)$ or assumes $|\tau(\chi)| = \sqrt{N}$ without enforcing $\operatorname{IsPrimitive}(\chi)$ encounters a division-by-zero degeneracy at $N = 4$ .
 
 **Theorem III-B (Cross-Modulus Unified Pullback Carrier and the Four-Character Real Positive Cone)**. To establish cross-modulus zero repulsion (such as coupling a putative exceptional real character $\chi_1$ modulo $N_1$ with a test character $\chi_2$ modulo $N_2$ ), one cannot leave $\chi_1$ and $\chi_2$ isolated in separate $\operatorname{ZMod}(N_1)$ and $\operatorname{ZMod}(N_2)$ containers; they must be pulled back to the common modulus $N = \operatorname{lcm}(N_1, N_2)$ (or to $\mathbb{Z}$ ). For any two real-valued quadratic characters $\chi_1, \chi_2 : \mathbb{Z} \to \{-1, 0, 1\}$ , on $\sigma = \operatorname{Re}(s) > 1$ the four-character combined logarithmic series
 
@@ -529,7 +529,7 @@ $$
 \mathcal{K}_{4,\le P}(\sigma;\,\chi_1, \chi_2) = \sum_{p \le P} \sum_{m=1}^{\infty} \frac{\bigl(1 + \chi_1(p)^m\bigr)\bigl(1 + \chi_2(p)^m\bigr)}{m\,p^{m\sigma}} \ge 0. \tag{4.14}
 $$
 
-If a formalization splits the four channels into independent meromorphic approximations without enforcing the synchronized prime-power product binding $(4.13)$ at the common modulus, the termwise non-negativity $(1+\chi_1(p)^m)(1+\chi_2(p)^m) \ge 0$ is immediately destroyed.
+If a formalization splits the four channels into independent meromorphic approximations without enforcing the synchronized prime-power product binding $(4.13)$ at the common modulus, the termwise non-negativity $(1+\chi_1(p)^m)(1+\chi_2(p)^m) \ge 0$ no longer holds.
 
 ### 4.4　Distortion Mechanism IV: Commutative Flattening of Non-Commuting Additive Hurwitz Shifts and Multiplicative Euler Sieving
 
@@ -543,7 +543,7 @@ $$
 
 On every monomial basis element $f_d(x) = x^d$ ( $d \ge 0$ ), $[A_{\mathrm{add}}, A_{\mathrm{mul}}](x^d) = (x+1)^d \neq 0$ . Any static representation that forces additive continuation and multiplicative Euler sieving into a commutative quotient erases $[A_{\mathrm{add}}, A_{\mathrm{mul}}] \neq 0$ and introduces an uncompensated algebraic shear residual.
 
-### 4.5　Distortion Mechanism V: Mistaking a Finite-Dimensional Positive-Definite Gram Subblock for Full-Space Weil–Li Spectral Positivity
+### 4.5　Distortion Mechanism V: Substituting a Finite-Dimensional Positive-Definite Gram Subblock for Full-Space Weil–Li Spectral Positivity
 
 In the explicit-formula and spectral framework (Weil's explicit functional and Li's criterion), the Generalized Riemann Hypothesis is equivalent to the positivity of the symmetric convolution functional $W_{\chi}(f * \tilde{f}) \ge 0$ across **all** admissible test functions $f \in \mathcal{A}_{\mathrm{Weil}}$ (or $\lambda_n(\chi) = \sum_{\rho}\bigl(1 - (1 - 1/\rho)^n\bigr) \ge 0$ for **all** $n \ge 1$ ).
 
@@ -584,9 +584,9 @@ $$
 
 ---
 
-## Chapter 5　The Six Zero-Full-Read Verification Schemes and the Live Empirical Autopsy of the Seventeen-Million-Line GRH Lean 4 Repository on $\mathtt{lc23}$ 
+## Chapter 5　Six Structural Verification Schemes and Source-Code & Dependency-Graph Verification of the Seventeen-Million-Line GRH Lean 4 Repository on $\mathtt{lc23}$ 
 
-Confronted with a formal codebase spanning $17\,374\,215$ lines across $175\,187$ $\mathtt{.lean}$ files, attempting to locate logical flaws by human line-by-line reading is physically impossible. In this chapter we unite our **Six Zero-Full-Read Verification Schemes** with the complete live empirical autopsy executed on the remote compute host $\mathtt{lc23}$ (hostname $\mathtt{DESKTOP\text{-}YUYO2}$ , 64-bit Linux, running the exact pinned $\operatorname{Lean\ 4}$ toolchain $\mathtt{v4.33.1}$ and $\operatorname{Mathlib}$ commit $\mathtt{0df444a360eaa60ab8c11dca51a86af692955474}$ ).
+Confronted with a formal codebase spanning $17\,374\,215$ lines across $175\,187$ $\mathtt{.lean}$ files, locating structural defects through manual line-by-line reading is impractical. In this chapter we present **Six Structural Verification Schemes** alongside the complete source-code and dependency-graph verification executed on the remote compute host $\mathtt{lc23}$ (hostname $\mathtt{DESKTOP\text{-}YUYO2}$ , 64-bit Linux, running the exact pinned $\operatorname{Lean\ 4}$ toolchain $\mathtt{v4.33.1}$ and $\operatorname{Mathlib}$ commit $\mathtt{0df444a360eaa60ab8c11dca51a86af692955474}$ ).
 
 ### 5.1　Byte-Level Archive Verification, Full-Repository Line Accounting, and Anatomy of the 10,724 Deleted and 23 Modified Modules
 
@@ -665,7 +665,7 @@ In $\mathtt{src/Main.lean}$ , all five theorems are derived from a single master
 
 All six verification schemes and target probes were compiled live on $\mathtt{lc23}$ under $\operatorname{Lean\ 4}\ \mathtt{v4.33.1}$ inside a read-only network-isolated $\mathtt{bwrap}$ sandbox:
 
-| Scheme & Live Probe Name | Imported Environment & Target | Exit Code | Wall Time (s) | Live $\mathtt{lc23}$ Compilation Outcome & Captured Forensic Evidence |
+| Scheme & Live Probe Name | Imported Environment & Target | Exit Code | Wall Time (s) | Live $\mathtt{lc23}$ Compilation Outcome & Captured Verification Evidence |
 | :--- | :--- | :---: | :---: | :--- |
 | **Scheme 1 (Probe 1A)**: $\mathtt{TailMirrorOriginal}$ | Original $\mathtt{Statements}$ + $\mathtt{Supplements.Kernels.MainTheoremsAll}$ | $1$ | $1\,446.612$ | Replacing the conclusion $\operatorname{Re}(s) = 1/2$ by $\operatorname{MirrorRH}$ ( $\operatorname{Re}(s) = 3/4$ ) and assigning $\mathtt{rhOfAll}$ is rejected with $\mathtt{Type\ mismatch:\ rhOfAll\ has\ type\ RiemannHypothesis\ but\ is\ expected\ to\ have\ type\ MirrorRH}$ , confirming the top-level term is not a polymorphic proof of $\mathrm{False}$ |
 | **Scheme 1 (Probe 1A cont.)**: $\mathtt{FirstZeroProbe}$ | Original $\mathtt{Main}$ + $\mathtt{Mathlib.Tactic}$ | $124$ (timeout) | $7\,677.660$ | Searching across all $175\,187$ modules for an existential witness of the first non-trivial zero $\exists s,\ \operatorname{riemannZeta}(s)=0 \land 0<\operatorname{Re}(s)<1 \land 14<\operatorname{Im}(s)<15$ did not return after $7\,677.66$ seconds, confirming no indexed existential witness theorem for the first zero is exposed |
@@ -674,10 +674,10 @@ All six verification schemes and target probes were compiled live on $\mathtt{lc
 | **Scheme 2 (Definitions & Bridge)**: $\mathtt{AutopsyProbe\underline{\hspace{0.35em}}Scheme2}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $0$ | $1.595$ | Extracted via $\mathtt{\#print}$ the exact additive Hurwitz linear combination definition $(2.19)$ of $\operatorname{DirichletCharacter.LFunction}$ and $\operatorname{ZMod.LFunction}$ , and verified the guarded bridge $\mathtt{dirichlet\underline{\hspace{0.35em}}bridge}$ ( $\operatorname{Re}(s) > 1$ ) and primitive functional equation |
 | **Schemes 3 & 4 (Full Graph, Cone & Min-Cut)**: $\mathtt{original\underline{\hspace{0.35em}}scheme4}$ | Original $\mathtt{Main}$ full environment ( $\mathtt{env.checked}$ traversal) | $0$ | $3\,268.004$ | Exported the complete $6\,507\,343\,368$ -byte ( $6.1\,\mathrm{GB}$ ) declaration dependency stream across $2\,701\,132$ **nodes** and $170\,706\,224$ **directed edges**, computing the joint target cone of $1\,478\,243$ **declarations**, axiom set $\{\mathtt{Classical.choice}, \mathtt{Quot.sound}, \mathtt{propext}\}$ , and the **exact minimum internal directed vertex cut of capacity** $8$ ( $\mathtt{VERIFIED}$ ) |
 | **Scheme 5 (Trojan Countermodel Injection)**: $\mathtt{AutopsyProbe\underline{\hspace{0.35em}}Scheme5}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $0$ | $5.856$ | Machine-certified the symmetric Trojan polynomial $P(s) = (s-1/2)^2 - 1/16$ , Davenport–Heilbronn non-multiplicativity $\mathtt{dh\underline{\hspace{0.35em}}not\underline{\hspace{0.35em}}multiplicative}$ , even-channel reciprocal root $\mathtt{even\underline{\hspace{0.35em}}root} : F_{\mathrm{even}}(3/4)=0$ , and completed reflection symmetry, refuting $\mathtt{WeakRule}$ ( $\mathtt{weak\underline{\hspace{0.35em}}rule\underline{\hspace{0.35em}}refuted} : \neg\mathtt{WeakRule}$ ) and deriving $\mathtt{WeakRule} \to (3/4 : \mathbb{R}) = 1/2$ and $\mathtt{WeakRule} \to (0 : \mathbb{Z}) = 1$ |
-| **Scheme 6 (Finite Arithmetic & Gram Collision)**: $\mathtt{AutopsyProbe\underline{\hspace{0.35em}}Scheme6}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $0$ | $3.990$ | Machine-certified modulus-zero exclusion $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ , Rouché rational margin $(1/8)^2-(1/16)^2=3/256>0$ , modulo- $4$ principal Gauss sum collapse $\mathtt{principal\underline{\hspace{0.35em}}mod4\underline{\hspace{0.35em}}gauss} = 0$ , prime-basis $\{17,19,23\}$ rational Gram $LDL^{\mathsf{T}}$ identity $\mathtt{gram\underline{\hspace{0.35em}}ldlt}$ , positivity $\mathtt{gram\underline{\hspace{0.35em}}positive}$ , and zero-moment positive energy $\operatorname{gram}(34,-57,23)=39$ |
+| **Scheme 6 (Finite Arithmetic & Gram Collision)**: $\mathtt{AutopsyProbe\underline{\hspace{0.35em}}Scheme6}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $0$ | $3.990$ | Machine-certified modulus-zero exclusion $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ , Rouché rational margin $(1/8)^2-(1/16)^2=3/256>0$ , modulo- $4$ principal Gauss sum vanishing $\mathtt{principal\underline{\hspace{0.35em}}mod4\underline{\hspace{0.35em}}gauss} = 0$ , prime-basis $\{17,19,23\}$ rational Gram $LDL^{\mathsf{T}}$ identity $\mathtt{gram\underline{\hspace{0.35em}}ldlt}$ , positivity $\mathtt{gram\underline{\hspace{0.35em}}positive}$ , and zero-moment positive energy $\operatorname{gram}(34,-57,23)=39$ |
 | **Metaprogramming Bypass Control**: $\mathtt{KexactNegativeControl}$ | $\operatorname{Lean}\ \mathtt{v4.33.1} + \operatorname{Mathlib}\ \mathtt{0df444a360ea}$ | $1$ | $2.921$ | Tested the repository's $\mathtt{kexactB}$ tactic (elaborating with expected type $\mathtt{none}$ followed by direct $\mathtt{g.assign}$ ) on assigning a proof of $\mathrm{True}$ to a goal of type $\mathrm{False}$ : bypassed frontend target checking and failed only at $\mathtt{(kernel)\ declaration\ type\ mismatch}$ |
 
-### 5.4　Scheme 4 Landmark Result: The Eight-Vertex Minimum Directed Cut Across 2,701,132 Declarations and 170,706,224 Edges, and 20-Step Logarithmic Bisection
+### 5.4　Scheme 4 Full-Graph Analysis: The Eight-Vertex Minimum Directed Cut Across 2,701,132 Declarations and 170,706,224 Edges, and 20-Step Logarithmic Bisection
 
 In Scheme 4, our complete environment extractor traversed every constant's type references ( $\mathtt{type\underline{\hspace{0.35em}}deps}$ ), value/proof references ( $\mathtt{body\underline{\hspace{0.35em}}deps}$ ), and inductive/constructor/recursor structural references ( $\mathtt{structural\underline{\hspace{0.35em}}deps}$ ) across $\mathtt{env.checked}$ of the original $\mathtt{Main}$ module on $\mathtt{lc23}$ , producing the $6\,507\,343\,368$ -byte stream (SHA-256 $\mathtt{476485163475eed1feee899d0aa088de78ac114b960baefd3c788df6908ce740}$ ) analyzed by our node-splitting maximum-flow solver and zero-import independent certificate verifier $\mathtt{verify\underline{\hspace{0.35em}}graph\underline{\hspace{0.35em}}certificate.py}$ :
 
@@ -747,7 +747,7 @@ $$
 
 ### 5.5　In-Cone Localization of Frontend-Bypassing Metaprogramming Tactics ( $\mathtt{kexactB}$ , $\mathtt{kcopy}$ , $\mathtt{addDecl}$ ) and Reflexive Mutual Inductives
 
-Cross-referencing our full-repository syntax audit with the $1\,478\,243$ -node dependency cone $\operatorname{Cone}_{\mathcal{G}}(T)$ on $\mathtt{lc23}$ established two further forensic facts:
+Cross-referencing our full-repository syntax audit with the $1\,478\,243$ -node dependency cone $\operatorname{Cone}_{\mathcal{G}}(T)$ on $\mathtt{lc23}$ established two further structural findings:
 
 1. **Sixty-seven files involve the custom metaprogramming tactic** $\mathtt{kexactB}$ **that bypasses frontend expected-type checking, and** $62$ **of the** $66$ **caller modules (** $1\,816$ **declarations) reside directly inside the main theorems' dependency cone**:
    In $\mathtt{src/Formalism/LocalToGlobal/IndefiniteReal/HeckeNonvanishing/Imports.lean}$ (SHA-256 $\mathtt{8be7d65dc54c7786712817d5709559796783044f7c147729368d2105c0283364}$ , lines $1$ – $8$ ), the repository defines:
@@ -793,7 +793,7 @@ $$
    - **Scheme 2 (Carrier Definition Printing & Convergence-Guard Audit)**: Expand $\operatorname{DirichletCharacter.LFunction}$ and $\operatorname{ZMod.LFunction}$ via $\mathtt{\#print}$ and verify that every bridge from $\operatorname{LSeries}$ or Euler products carries the explicit guard $\operatorname{Re}(s) > 1$ .
    - **Scheme 3 (Full Recursive Cone Axiom & Metaprogramming Audit)**: Traverse $\mathtt{type\underline{\hspace{0.35em}}deps} \cup \mathtt{body\underline{\hspace{0.35em}}deps} \cup \mathtt{structural\underline{\hspace{0.35em}}deps}$ to audit the axiom set of $\operatorname{Cone}_{\mathcal{G}}(T)$ and detect all in-cone occurrences of frontend-bypassing tactics ( $\mathtt{kexactB}$ , $\mathtt{kcopy}$ , $\mathtt{addDecl}$ ) and reflexive mutual inductives.
    - **Scheme 4 (Source-to-Sink Directed Minimum Vertex Cut & 20-Step Logarithmic Bisection)**: Compute the unit-capacity node-splitting maximum flow and minimum internal directed vertex cut $\lambda(S \to T)$ between the multiplicative source set $S$ and the target theorems $T$ , and execute $\lceil \log_2 |V_{\mathrm{active}}| \rceil \le 25$ steps of lexicographic bisection to isolate the bottleneck declarations.
-   - **Scheme 5 (Same-Fiber Trojan Countermodel Injection)**: Inject the symmetric polynomial $P_{\mathrm{Trojan}}(s) = (s-3/4)(s-1/4)$ , the even-channel reciprocal deformation $F_{\mathrm{even}}(s) = P_r(2^{1/2-s})\zeta(s)$ ( $F_{\mathrm{even}}(3/4) = 0$ ), and the odd-channel Davenport–Heilbronn combination $\mathcal{D}(s)$ ( $a_6 - a_2 a_3 = 1 + \kappa^2 > 0$ ) into any candidate critical-strip zero-exclusion lemma to test whether it collapses into $(3/4 : \mathbb{R}) = 1/2$ .
+   - **Scheme 5 (Same-Fiber Trojan Countermodel Injection)**: Inject the symmetric polynomial $P_{\mathrm{Trojan}}(s) = (s-3/4)(s-1/4)$ , the even-channel reciprocal deformation $F_{\mathrm{even}}(s) = P_r(2^{1/2-s})\zeta(s)$ ( $F_{\mathrm{even}}(3/4) = 0$ ), and the odd-channel Davenport–Heilbronn combination $\mathcal{D}(s)$ ( $a_6 - a_2 a_3 = 1 + \kappa^2 > 0$ ) into any candidate critical-strip zero-exclusion lemma to test whether it derives $(3/4 : \mathbb{R}) = 1/2$ .
    - **Scheme 6 (Finite Moduli, Gauss-Sum Degeneration & Rational Gram** $LDL^{\mathsf{T}}$ **Collision)**: Test local arithmetic lemmas against modulus-zero exclusion $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ , modulo- $4$ principal Gauss sum vanishing $\tau(\chi_{0,4}) = 0 \neq 2$ , and exact $3\times 3$ rational Gram $LDL^{\mathsf{T}}$ positivity with zero-moment vector $c = (34, -57, 23)^{\mathsf{T}}$ ( $c^{\mathsf{T}} G_{\mathrm{wave}} c = 39 > 0$ ).
 
 ---
@@ -1140,9 +1140,9 @@ $$
 
 ### 6.2　Complete Ledger of Single-Premise Stripping Negative-Control Counterexample Propositions (Propositions B.1–B.62)
 
-To prove that every premise guard in Section 6.1 and in the main theorems is **individually necessary and irreducible**, each of the sixty-two counterexample propositions below strips exactly one premise while holding all other conditions fixed, exhibiting the resulting non-zero algebraic leak residual, rank collapse, or negative pivot.
+To prove that every premise guard in Section 6.1 and in the main theorems is **individually necessary and irreducible**, each of the sixty-two counterexample propositions below strips exactly one premise while holding all other conditions fixed, exhibiting the resulting non-zero algebraic leak residual, rank reduction, or negative pivot.
 
-#### 6.2.1　Family NC-A01: Quotient-Kernel Leaks and Conservation Collapse When the Unresolved Remainder Fiber Is Stripped (Propositions B.1–B.10)
+#### 6.2.1　Family NC-A01: Quotient-Kernel Leaks and Conservation Breakdown When the Unresolved Remainder Fiber Is Stripped (Propositions B.1–B.10)
 
 **Proposition B.1 (Negative-Control Twin of Proposition A.1)**. Stripping synchronized remainder deduction by replacing $A_{\mathrm{keep}}$ with the unhedged accumulator $A_{\mathrm{leak},1} = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$ causes the first nullspace basis vector $k_1 = (1, 0, -1, 0)^{\mathsf{T}} \in \ker E$ to pierce the observation readout: $E A_{\mathrm{leak},1} K = \begin{pmatrix} -1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
 
@@ -1174,7 +1174,7 @@ To prove that every premise guard in Section 6.1 and in the main theorems is **i
 
 **Proposition B.14 (Negative-Control Twin of Proposition A.13)**. Mixing the higher-order regular term $c_1$ into the simple-pole residue slot ( $A_{1,3} = 1$ ) causes $K = (0, 0, 1)^{\mathsf{T}}$ to contaminate the residue readout: $E A_{\mathrm{bad},14} K = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ .
 
-**Proposition B.15 (Negative-Control Twin of Proposition A.18)**. Choosing the third sampling row as the sum of the two punctured rows ( $M_{\mathrm{bad},15} = \begin{pmatrix} 3 & 1 & 0 \\ -3 & 1 & 0 \\ 0 & 2 & 0 \end{pmatrix}$ ) collapses the third column to zero and traps $(0, 0, 1)^{\mathsf{T}}$ in the blind kernel.
+**Proposition B.15 (Negative-Control Twin of Proposition A.18)**. Choosing the third sampling row as the sum of the two punctured rows ( $M_{\mathrm{bad},15} = \begin{pmatrix} 3 & 1 & 0 \\ -3 & 1 & 0 \\ 0 & 2 & 0 \end{pmatrix}$ ) reduces the third column to zero and traps $(0, 0, 1)^{\mathsf{T}}$ in the blind kernel.
 
 **Proposition B.16 (Negative-Control Twin of Proposition A.19)**. Losing the sign distinction in the second block ( $\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$ ) traps $(0, 0, 1, -1)^{\mathsf{T}}$ in the nullspace.
 
@@ -1196,7 +1196,7 @@ To prove that every premise guard in Section 6.1 and in the main theorems is **i
 
 **Proposition B.24 (Negative-Control Twin of Proposition A.31)**. Altering the locked fifth-coordinate primitive conductor flag via $\delta_{\mathrm{bad}} = (0, 0, 0, 0, -1)^{\mathsf{T}}$ without conductor factorization produces $E\delta_{\mathrm{bad}} = (0, 0, -1)^{\mathsf{T}} \neq 0$ .
 
-**Proposition B.25 (Negative-Control Twin of Proposition A.33 and Modulo-** $4$ **Gauss Sum Collapse)**. Mixing even zero-value residues into odd primitive residues modulo $4$ ( $A_{2,3} = 1$ ) leaks $(0, 0, 1)^{\mathsf{T}}$ into the odd character readout: $E A_{\mathrm{bad},25} K = (0, 1) \neq (0, 0)$ .
+**Proposition B.25 (Negative-Control Twin of Proposition A.33 and Modulo-** $4$ **Gauss Sum Degeneracy)**. Mixing even zero-value residues into odd primitive residues modulo $4$ ( $A_{2,3} = 1$ ) leaks $(0, 0, 1)^{\mathsf{T}}$ into the odd character readout: $E A_{\mathrm{bad},25} K = (0, 1) \neq (0, 0)$ .
 
 **Proposition B.26 (Negative-Control Twin of Proposition A.26)**. Injecting the unfactored imaginary-axis bad-prime slot back into the second readout channel ( $A_{2,5} = 1$ ) yields $E A_{\mathrm{bad},26} K = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix} \neq 0$ .
 
@@ -1212,7 +1212,7 @@ To prove that every premise guard in Section 6.1 and in the main theorems is **i
 
 **Proposition B.31 (Negative-Control Twin of Theorem IV and Proposition A.37)**. Allowing the additive shift companion coordinate to spill directly into the first visible principal coordinate ( $A_{1,3} = 1$ ) causes $(0, 0, 1, 0)^{\mathsf{T}} \in \ker E$ to pierce the principal readout: $E A_{\mathrm{bad},31} K = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
 
-**Proposition B.32 (Commutative Flattening Collapse Twin of Proposition A.37)**. Flattening the multiplicative scaling operator to the identity ( $A_1 = A_2 = I_4$ ) collapses the commutator to the zero matrix $[A_1, A_2] = 0$ , annihilating the non-commutative algebraic structure of Theorem IV, Equation $(4.15)$ .
+**Proposition B.32 (Commutative Simplification Degeneracy Twin of Proposition A.37)**. Flattening the multiplicative scaling operator to the identity ( $A_1 = A_2 = I_4$ ) reduces the commutator to the zero matrix $[A_1, A_2] = 0$ , annihilating the non-commutative algebraic structure of Theorem IV, Equation $(4.15)$ .
 
 **Proposition B.33 (Negative-Control Twin of Proposition A.38)**. Leaking the fourth-coordinate shift residual into the second visible channel ( $A_{2,4} = 2$ ) produces $E A_{\mathrm{bad},33} K = \begin{pmatrix} 0 & 0 \\ 0 & 2 \end{pmatrix} \neq 0$ .
 
@@ -1220,7 +1220,7 @@ To prove that every premise guard in Section 6.1 and in the main theorems is **i
 
 **Proposition B.35 (Negative-Control Twin of Proposition A.41)**. Introducing an upper-triangular leak $A_{1,2} = 1$ in the minimal three-dimensional non-commutative model yields $E A_{\mathrm{bad},35} K = (1, 0) \neq (0, 0)$ .
 
-**Proposition B.36 (Negative-Control Twin of Proposition A.43)**. Breaking the $(-1, +1)$ zero-sum shear balance between rows $1$ and $3$ of $A_1$ in Proposition A.43 (setting $(A_1)_{1,4} = 0$ while keeping $(A_1)_{3,4} = 1$ ) destroys quotient absorption of the commutator and leaks $(0, 0, 0, 1)^{\mathsf{T}}$ : $E A_{\mathrm{bad},36} K = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \neq 0$ .
+**Proposition B.36 (Negative-Control Twin of Proposition A.43)**. Breaking the $(-1, +1)$ zero-sum shear balance between rows $1$ and $3$ of $A_1$ in Proposition A.43 (setting $(A_1)_{1,4} = 0$ while keeping $(A_1)_{3,4} = 1$ ) breaks quotient absorption of the commutator and leaks $(0, 0, 0, 1)^{\mathsf{T}}$ : $E A_{\mathrm{bad},36} K = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \neq 0$ .
 
 **Proposition B.37 (Negative-Control Twin of Proposition A.44)**. Breaking column-sum balance in the second-channel coupled scaling operator (changing $(3/2, -1/2)$ to $(3/2, 1/2)$ ) leaks $(0, 1, 0, -1)^{\mathsf{T}}$ : $E A_{\mathrm{bad},37} K = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} \neq 0$ .
 
@@ -1228,7 +1228,7 @@ To prove that every premise guard in Section 6.1 and in the main theorems is **i
 
 **Proposition B.39 (Negative-Control Twin of Proposition A.47)**. Introducing an unhedged cross-channel shift $A_{2,5} = 1$ produces $E A_{\mathrm{bad},39} K = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix} \neq 0$ .
 
-**Proposition B.40 (Negative-Control Twin of Proposition A.48)**. Flattening the six-dimensional Jordan-prime companion block to the identity collapses $[A_1, A_2] = 0$ .
+**Proposition B.40 (Negative-Control Twin of Proposition A.48)**. Flattening the six-dimensional Jordan-prime companion block to the identity reduces $[A_1, A_2]$ to $0$ .
 
 #### 6.2.5　Family NC-A05: Positivity Breakdown and Negative $LDL^{\mathsf{T}}$ Pivots When Off-Axis Zeros Breach Finite Gram Subblocks (Propositions B.41–B.50)
 
@@ -1238,7 +1238,7 @@ To prove that every premise guard in Section 6.1 and in the main theorems is **i
 
 **Proposition B.43 (Negative-Control Twin of Proposition A.51)**. Reversing the sign of the leading diagonal entry ( $G_{\mathrm{bad},43} = \operatorname{diag}(-1, 3, 3)$ ) produces $d_1 = -1 < 0$ .
 
-**Proposition B.44 (Negative-Control Twin of Proposition A.52)**. Collinear degeneration of the first two test modes ( $G_{\mathrm{bad},44} = \begin{pmatrix} 1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ ) collapses the second $LDL^{\mathsf{T}}$ pivot to $d_2 = 0 \ngtr 0$ .
+**Proposition B.44 (Negative-Control Twin of Proposition A.52)**. Collinear degeneration of the first two test modes ( $G_{\mathrm{bad},44} = \begin{pmatrix} 1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$ ) reduces the second $LDL^{\mathsf{T}}$ pivot to $d_2 = 0 \ngtr 0$ .
 
 **Proposition B.45 (Negative-Control Twin of Proposition A.53)**. Keeping the $3\times 3$ leading tridiagonal block of Proposition A.53 strictly positive definite ( $d_1 = 2, d_2 = 3/2, d_3 = 4/3$ ) while setting the $(4,4)$ entry to $0$ yields the strictly negative fourth pivot $d_4 = 0 - \frac{4}{3}\left(\frac{3}{4}\right)^2 = -\frac{3}{4} < 0$ .
 
@@ -1270,13 +1270,13 @@ producing the negative pivot $-3/64 < 0$ in $\operatorname{diag}(1/64, -3/64)$ a
 
 **Proposition B.55 (Theorem B₂ Counterexample When Post-Horizon**  $p > P_*$  **Multiplicative Coupling Is Stripped)**. Allowing the Diamond–Montgomery–Vorhauer post-horizon tail vector $(0, 1, 0, -1)^{\mathsf{T}} \in \ker E$ to enter the critical-strip readout via $A_{2,4} = 1$ produces $E A_{\mathrm{bad},55} K = \begin{pmatrix} 0 & 0 \\ 0 & -1 \end{pmatrix} \neq 0$ .
 
-**Proposition B.56 (Theorem B₂ Counterexample When the Euler Modifier Evaluation Point Leaves** $\operatorname{Re}(s) > 0$ **onto** $\operatorname{Re}(s) = 0$ **)**. Moving the evaluation point of the modifier $H_{P_*}(s)$ from $\operatorname{Re}(s) > 0$ to the imaginary axis $s = \frac{2\pi i}{\log 2}$ ( $\operatorname{Re}(s) = 0$ ) collapses the local factor $1 - 2^{-s} = 1 - 1 = 0$ and drops the leading pivot of $\operatorname{diag}(0, 3/4, 7/8)$ to $0 \ngtr 0$ .
+**Proposition B.56 (Theorem B₂ Counterexample When the Euler Modifier Evaluation Point Leaves** $\operatorname{Re}(s) > 0$ **onto** $\operatorname{Re}(s) = 0$ **)**. Moving the evaluation point of the modifier $H_{P_*}(s)$ from $\operatorname{Re}(s) > 0$ to the imaginary axis $s = \frac{2\pi i}{\log 2}$ ( $\operatorname{Re}(s) = 0$ ) reduces the local factor $1 - 2^{-s} = 1 - 1 = 0$ and drops the leading pivot of $\operatorname{diag}(0, 3/4, 7/8)$ to $0 \ngtr 0$ .
 
 **Proposition B.57 (Theorem C₀ Counterexample When the Unbounded Sequence** $\sigma_k \to +\infty$ **Is Replaced by Two Finite Sample Points)**. Sampling a three-coefficient Dirichlet polynomial at only two finite points ( $M_{\mathrm{bad},57} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}$ ) leaves the non-zero coefficient difference $(1, -2, 1)^{\mathsf{T}}$ in $\ker M_{\mathrm{bad},57}$ .
 
 **Proposition B.58 (Theorem C₁ Counterexample When Composite-Index Multiplicativity** $a_6 = a_2 a_3$ **Is Omitted from the Critical-Strip Quotient)**. Omitting the $n = 6$ multiplicativity readout allows the Davenport–Heilbronn defect ( $\Delta_{\mathrm{mult}}(2,3) = 1 + \kappa^2 > 0$ ) to breach the critical-strip zero-exclusion operator: $E A_{\mathrm{bad},58} K = \begin{pmatrix} -1 & 0 \\ 0 & 0 \end{pmatrix} \neq 0$ .
 
-**Proposition B.59 (Theorem C₂ Counterexample Where the Even-Channel Reciprocal Root** $P_r(y(3/4)) = 0$ **Collapses Non-Vanishing at** $s = 3/4$ **)**. At $s = 3/4$ , $F_{\mathrm{even}}(3/4) = 0$ collapses the leading pivot of the non-vanishing matrix $\operatorname{diag}(|F_{\mathrm{even}}(3/4)|^2, 1, 1) = \operatorname{diag}(0, 1, 1)$ to $0 \ngtr 0$ .
+**Proposition B.59 (Theorem C₂ Counterexample Where the Even-Channel Reciprocal Root** $P_r(y(3/4)) = 0$ **Breaks Non-Vanishing at** $s = 3/4$ **)**. At $s = 3/4$ , $F_{\mathrm{even}}(3/4) = 0$ reduces the leading pivot of the non-vanishing matrix $\operatorname{diag}(|F_{\mathrm{even}}(3/4)|^2, 1, 1) = \operatorname{diag}(0, 1, 1)$ to $0 \ngtr 0$ .
 
 **Proposition B.60 (Theorem 1.4 Counterexample Asserting** $(a, d, k) = (0, 0, 0)$ **Under a Frozen Weak Quotient Signature)**. Forcing $(a, d, k) = (0, 0, 0)$ in the presence of a same-fiber countermodel $x_1$ violates the inclusion-exclusion identity $u(0,0,0) = 0 \neq 1$ and induces the truth-value collision $E A_{\mathrm{bad},60} K = 1 \neq 0$ .
 

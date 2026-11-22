@@ -1,3 +1,17 @@
+/-
+  Scheme 6 Verification Probe (AutopsyProbe_Scheme6.lean)
+  -------------------------------------------------------
+  [EN] Finite arithmetic, imprimitive Gauss-sum degeneracy, and rational Gram matrix probe for Scheme 6:
+       Certifies modulus-zero exclusion `¬Nonempty (NeZero 0)`, the exact rational Rouché margin
+       `(1/8)^2 - (1/16)^2 = 3/256 > 0`, modulo-4 principal character Gauss-sum vanishing
+       (`principal_mod4_gauss = 0`), and the exact rational `LDL^T` positive-definite decomposition
+       of the prime-basis `{17, 19, 23}` Gram matrix (`gram_ldlt`, `gram_positive`).
+  [ZH] 方案六实机核查探针（有限模数边界、非本原 Gauss 和退化与有理正定 Gram 矩阵验证）：
+       在 Lean 4 内机械验证模零排除 `¬Nonempty (NeZero 0)`、有理矩形围道 Rouché 裕量 `3/256 > 0`、
+       模 4 主特征 Gauss 和退化为零（`principal_mod4_gauss = 0`），以及素数基 `{17, 19, 23}` 上有理
+       Gram 矩阵的 `LDL^T` 平方和分解（`gram_ldlt`）与严格正定性（`gram_positive`）。
+-/
+
 import Mathlib
 
 namespace Autopsy6

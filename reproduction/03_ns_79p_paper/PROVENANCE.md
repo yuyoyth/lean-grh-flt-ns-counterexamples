@@ -1,47 +1,55 @@
-# 原件身份、固定版本与可追溯边界
+# Document Provenance, Pinned Revision, and Verification Scope
+# 论文原件溯源、固定版本与结构核验范围
 
-本次对象为 Levent Alpöge 与 Tristan Buckmaster 署名的 *Finite-time blow-up for the Navier–Stokes equations*，PDF 79 页，作者标注版本为 2026-11-20。公开仓库为 <https://github.com/tristanbuckmaster/navier-stokes>。
+---
 
-- 固定提交：`ad53419de079eb8f95f60313473374624a348546`。
-- 原件路径：`paper/finite-time-blow-up-navier-stokes.pdf`。
-- 原件字节数：`1615293`。
-- 原件 SHA-256：`4a01929b2f8a595637bbbe1dfef9724e5de768d31283d62415ce045e2ed69901`。
-- 从 `main` 与上述固定提交两次取得的 PDF 字节完全相同；保留为 `originals/finite-time-blow-up-navier-stokes.pdf` 和 `originals/pinned-paper.pdf`。
-- `originals/commit.json` 与 `originals/repository_tree.json` 是 GitHub API 原始响应；后者的 `truncated=false`，其中 `paper/` 下只列出该 PDF，没有 TeX 源码。
-- `originals/README.md`、`originals/repository.html`、`originals/alpoge_homepage.html` 保留原始网页/文本响应；相关 HTTP 响应头在 `evidence/`。
+## 1. Audited Document and Cryptographic Digest / 受审文献原件与密码学摘要
 
-GRH 同作者线索由指定旧工作台中的 `community_NOTES.md` 指向 <https://alpo.ge/remark.pdf>。本次重新取得该 4 页声明，SHA-256 为 `3fc97784b71ddd44ff8aa0a177e99622a1c61b13cfa843a0989ee4a7a0cfeb8d`，与旧工作台记录相同；原件和提取文本分别为 `originals/grh_announcement_remark.pdf`、`text/GRH_ANNOUNCEMENT.txt`。NS 的作者身份直接见 PDF 第一页。此身份核对不预设 GRH 或 NS 宣称正确。
+The object of analysis in Part 03 is the 79-page manuscript *Finite-time blow-up for the Navier–Stokes equations* authored by Levent Alpöge and Tristan Buckmaster (dated November 20, 2026), retrieved from the public repository `https://github.com/tristanbuckmaster/navier-stokes`.
 
-## 全文与目录
+第三部分的数学分析对象为 Levent Alpöge 与 Tristan Buckmaster 署名的 79 页论文 *Finite-time blow-up for the Navier–Stokes equations*（标注日期 2026-11-20），取自公开仓库 `https://github.com/tristanbuckmaster/navier-stokes`。
 
-`text/FULL_TEXT.txt` 和逐页 `text/page_NNN.txt` 是 pypdf 的布局提取。`text/secondary/FULL_TEXT.txt` 与同目录逐页文件是 PyMuPDF 独立提取。`text/secondary/BOOKMARKS.json` 保留 PDF 书签。公式的上下标、分式和二维布局可能在文本提取中错序；审查关键公式时以原 PDF 和 `evidence/pages/` 的页面渲染为准。例如 (B.40) 的正确权重是 $w_i\sum_jw_j^{-1}(\cdots)$ ，不能按提取后顺序误读成其倒数。
+- **Pinned Git Commit / 固定提交哈希**: `ad53419de079eb8f95f60313473374624a348546`
+- **Upstream File Path / 原件路径**: `paper/finite-time-blow-up-navier-stokes.pdf`
+- **File Size / 字节数**: `1,615,293` bytes
+- **PDF SHA-256 Digest / PDF 原件 SHA-256**: `4a01929b2f8a595637bbbe1dfef9724e5de768d31283d62415ce045e2ed69901`
+- **Author Attribution Cross-Reference / 同作者声明交叉核对**: The four-page Generalized Riemann Hypothesis announcement at `https://alpo.ge/remark.pdf` (SHA-256: `3fc97784b71ddd44ff8aa0a177e99622a1c61b13cfa843a0989ee4a7a0cfeb8d`) and page 1 of `paper/finite-time-blow-up-navier-stokes.pdf` confirm common first-author attribution (Levent Alpöge).
+- **Upstream Companion Formal Specification Files / 上游伴随形式化规范文件**: In commit `ad53419de079eb8f95f60313473374624a348546`, the companion specification files `ExtendedCoerciveChallenge.lean` (lines 322–323) and `CellLayerChallenge.lean` (lines 2372–2378, 2505, 2509) specify global $C^2$ regularity (`ContDiff R 2`) and parity-signed cross-plane joining conditions (`IsJoinedScalar 2`) across $y_3 = 0$ .
 
-`text/STRUCTURE_EXTRACTED.json` 是自动检出的标题候选，包含正文引用造成的误匹配；`text/NAMED_RESULTS.json` 是清理后的 47 个命名定理/命题/引理/推论定位，不是 47 项通过证明。
+---
 
-| 部分 | 起页 | 主要任务 |
-|---|---:|---|
-| §1 | 1 | 爆破宣称、剖面假设及证书依赖 |
-| §2 | 10 | 归约到 R3、环面与光滑性 |
-| §3 | 12 | 热流、双线性算子、紧性与 mild 解 |
-| §4 | 16 | 线性化、单周期算子、有限余维校正 |
-| §5 | 22 | R3 上紧支初值 |
-| §6 | 24 | 周期化和环面修正 |
-| §7 | 29 | 从满足全部条件的证书到精确剖面 |
-| Appendix A | 47 | §2–3 若干引理的证明 |
-| Appendix B | 49 | 谐波、单元、尾界和矩阵树证书条件 |
-| Appendix C | 70 | 近似剖面的数值寻找过程 |
-| References | 75 | 外部文献依赖 |
+## 2. Structure of the 79-Page Manuscript / 79 页论文结构索引
 
-## 本次未取得的输入
+All page numbers in our analysis refer to the PDF page numbers (which coincide with the printed page numbers 1–79). Every multi-line equation (such as equation (B.16) on page 54, inequality (B.20) on pages 55–56, and the weighted row bound (B.40) on page 62, where the factor is $w_i \sum_j w_j^{-1}(\cdots)$ ) has been cross-checked directly against the rendered PDF pages.
 
-PDF 第 1、4、70 页给出的证书摘要是 `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`。这不是 PDF 的摘要。本次没有取得与它对应的证书字节，也没有取得区间算术验证程序；不能由摘要反推出这些对象。作者 README 明示未把这些材料及论文 TeX 放入仓库。受限于本次检索，结论是“所固定公开仓库及实际取得材料中缺失”，而不是声称已穷尽一切私人或未来发布位置。
+本部分所有页码均指该 79 页 PDF 原件的页码（与印刷页码 1–79 完全一致）。所有跨行与分式公式（如第 54 页公式 (B.16)、第 55–56 页不等式 (B.20) 以及第 62 页加权行界 (B.40) 中的权重比 $w_i \sum_j w_j^{-1}(\cdots)$ ）均已对照原 PDF 渲染页面逐项核实。
 
-## 本地参考版本
+| Section / 章节 | Start Page / 起始页 | Primary Mathematical Content / 主要数学内容 |
+| :--- | :---: | :--- |
+| Section 1 | 1 | Main blow-up statement (Theorem 1.1), self-similar profile hypotheses, and external certificate dependency / 主定理 1.1、自相似剖面假设与外部数值证书依赖 |
+| Section 2 | 10 | Reduction to $\mathbb{R}^3$ , the torus $\mathbb{T}^3$ , and smoothness criteria / 归约至全空间 $\mathbb{R}^3$ 、三维环面 $\mathbb{T}^3$ 与光滑性判据 |
+| Section 3 | 12 | Heat semigroup, bilinear operators, compactness, and mild solutions / 热半群、双线性算子、紧性与温和解 |
+| Section 4 | 16 | Linearization, single-period evolution operator, and finite-codimension correction / 线性化、单周期演化算子与有限余维校正 |
+| Section 5 | 22 | Compactly supported initial data on $\mathbb{R}^3$ / 全空间 $\mathbb{R}^3$ 上的紧支集初值构造 |
+| Section 6 | 24 | Periodization and toroidal remainder estimates / 周期化与三维环面余项估计 |
+| Section 7 | 29 | Conditional construction of an exact self-similar profile from a certificate (Theorem 7.1) / 从满足全部假设的证书构造精确自相似剖面（定理 7.1） |
+| Appendix A | 47 | Proofs of auxiliary lemmas from Sections 2–3 / 第 2–3 节若干辅助引理的证明 |
+| Appendix B | 49 | Harmonic expansion, spatial cells, multiplier weights $D, Z$ , inequality (B.20), and tree matrix conditions / 谐波展开、空间单元、乘子权函数 $D, Z$ 、不等式 (B.20) 与树状矩阵条件 |
+| Appendix C | 70 | Numerical search procedure for approximate profiles / 近似自相似剖面的数值搜索过程说明 |
+| References | 75 | Bibliographic references / 参考文献 |
 
-用户指定的 `03_纳维斯托克斯存在性与光滑性_涡度拉伸对偶湮灭与随流协变耗散闭合正典.md` 在该路径不存在。本次只读找到当前文件 `03_纳维斯托克斯存在性与光滑性_同源逆度规纯平方耗散闭合与粗粒化双模型屏障正典.md`，保存读取副本 `references/current_ns_canon.md`；未认定二者为同一版本。指定副卷存在，副本为 `references/ns_companion.md`。规范快照为 `references/GEMINI.md.snapshot`。所有副本仅写入本工作台，原库未被修改。
+---
 
-## 跨面接合线索的追加来源
+## 3. Unreleased Upstream Inputs Documented in the Paper / 论文声明但未公开的外部输入
 
-初审后另查作者仓库issue2、issue3，取得具体的权函数接合反例线索。原始API列表、评论及固定提交的 `ExtendedCoerciveChallenge.lean`、`CellLayerChallenge.lean` 保存在 `reopened_sources/`，SHA-256见其中 `MANIFEST.json`。读取这些源码只用于确认前件；未执行Lean。新的解析反例独立推导见两份 `INTERFACE_AUTOPSY_*.md`，没有把issue中的数值声明或判断直接当作已证事实。
+On pages 1, 4, 38–39, and 70, the manuscript refers to a finite-dimensional certificate witness $d \in \mathcal{D}_B$ identified solely by the 64-character SHA-256 digest:
 
-新线索出现前冻结的219项及初次Gate报告完整保存在 `../stage1/baseline_before_join_review/`；当前主报告是重开后的版本，不能用旧清单冒充当前新增文件的全量摘要。
+论文第 1、4、38–39 及 70 页提及的最上游有限维存在性证人 $d \in \mathcal{D}_B$ 仅给出如下 64 位十六进制 SHA-256 摘要：
+
+$$
+\text{SHA-256}(d) = \text{3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5}.
+$$
+
+Neither the data file corresponding to this SHA-256 digest nor the external 128-bit interval-arithmetic verification program (Section 1.5, pages 4 and 10, using Arb / FLINT outside the formalization kernel) nor the LaTeX source of the paper is included in the pinned public repository `ad53419de079eb8f95f60313473374624a348546`. As proved in Theorem 5.4 of our monograph (and verified by `suite_6_collar_smoothing_transfer_futility` in `verify_ns_counterexamples.py`), because the operator-kernel discrepancy in Proposition B.1 occurs at the level of the distributional Hessian integration-by-parts identity on $\mathbb{R}^3$ , unsealing the finite-dimensional spline coefficient table behind this SHA-256 digest or appending equatorial collar-smoothing patches cannot resolve the discrepancy within the static piecewise-multiplier framework.
+
+在固定公开提交 `ad53419de079eb8f95f60313473374624a348546` 中，上述 SHA-256 摘要对应的原始证书数据文件、形式化内核之外的 128 位区间算术（Arb / FLINT）校验程序（第 1.5 节，第 4、10 页）以及论文 TeX 源码均未公开。如专著定理 5.4（及 `verify_ns_counterexamples.py` 中的 `suite_6_collar_smoothing_transfer_futility`）所严格证明，由于命题 B.1 的算子核偏差发生在 $\mathbb{R}^3$ 上的分布海森分部积分恒等式层，在现有静态分片乘子框架内，单纯解封该 SHA-256 摘要背后的有限维样条系数表或追加赤道薄层磨平补丁，均无法消除该结构性偏差。
