@@ -1,5 +1,5 @@
 # Counterexample Family B: Mode- $\pm(2,1)$ Schwartz Gaussian Violation of Inequality (B.20) on the $Z$ -Weight Equatorial Seam
-# 反例族 B 完整推导：施瓦茨高斯无散 $\pm(2,1)$ 模态场在一阶权 $Z$ 赤道接缝上对命题 B.1 不等式 (B.20) 的解析反例（ $> 400c$ ）
+# 反例族 B 完整推导：施瓦茨高斯无散 $\pm(2,1)$ 模态场在一阶权 $Z$ 赤道接缝上对命题 B.1 不等式 (B.20) 的解析反例（ $\gt 400c$ ）
 
 ---
 
@@ -34,7 +34,7 @@ Retaining the baseline parameters $S = 1$ , $\kappa = 3$ , $W^r = 0$ , $D = 0$ ,
 保持基准参数 $S = 1$ 、 $\kappa = 3$ 、 $W^r = 0$ 、 $D = 0$ 、 $P _ \lambda = P _ \mu = \varnothing$ 、 $n = N = 0$ ，定义分侧 $C^2$ 样条权函数：
 
 $$
-Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c > 0), \tag{B.2}
+Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c \gt 0), \tag{B.2}
 $$
 
 where $P(\sigma) = 0$ on $[0, \frac{1}{20}]$ , $P(\sigma) = h(20\sigma - 1)$ on $[\frac{1}{20}, \frac{1}{10}]$ , and $P(\sigma) = 1$ on $[\frac{1}{10}, 1)$ . Its distributional Hessian on $\mathbb{R}^3$ is $D^2 Z = H _ Z dy + [\partial _ z Z] _ \Sigma(e _ 3 \otimes e _ 3) dS _ \Sigma$ with normal derivative jump $[\partial _ z Z] _ \Sigma(r) = \frac{2c P(r/(1+r))}{r}$ . Hence the defect $\Delta := \mathrm{RHS} _ {\mathrm{B.20}}(v) - \mathrm{LHS} _ {\mathrm{B.20}}(v) = E _ Z(v)$ expands as:
@@ -51,7 +51,7 @@ $$
 
 ---
 
-## 3. Closed-Form Analytical Lower Bound $\Delta / c > \frac{26311}{64} > 400$ and Exact Gaussian Norms / 纯闭式解析下界 $\Delta / c > \frac{26311}{64} > 400$ 与精确高斯范数矩
+## 3. Closed-Form Analytical Lower Bound $\Delta / c \gt \frac{26311}{64} \gt 400$ and Exact Gaussian Norms / 纯闭式解析下界 $\Delta / c \gt \frac{26311}{64} \gt 400$ 与精确高斯范数矩
 
 **(1) Equatorial surface integral**: On $z = 0$ , $v _ 3(r, \varphi, 0) = -r^6 e^{-r^2/2}\sin(6\varphi)$ is strictly non-zero. The uncutoff Gaussian surface integral is:
 
@@ -67,16 +67,16 @@ and the core cutoff loss on $r \le \frac{1}{9}$ ( $\sigma \le \frac{1}{10}$ ) is
 
 **(2) Exterior and transition Hessian bounds**: On $\rho \ge \frac{1}{9}$ , $Z = c\frac{|z|}{\rho}$ , and the eigenvalues of $\rho^2 H _ {|z|/\rho}$ are $\frac{-t \pm \sqrt{4-3t^2}}{2}$ and $-t$ ( $t = \frac{|z|}{\rho} \in [0, 1]$ ), whose maximum modulus is $\frac{2}{\sqrt{3}}$ , so $\Vert H _ Z(y)\Vert _ {\mathrm{op}} \le \frac{2c}{\sqrt{3}\rho^2}$ .
 
-Since $J := \int _ {\mathbb{R}^3} \frac{|v|^2}{\rho^2} dy \le \frac{60}{\sqrt{3}}\pi^{3/2}$ , the two exterior bulk integrals in (B.3) subtract at most $2 \cdot \frac{2c}{\sqrt{3}} J = 80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ . On the transition shell $\frac{1}{19} \le \rho \le \frac{1}{9}$ , $\Vert H _ Z\Vert _ {\mathrm{op}} < 9000c$ and $\int _ {\rho \le 1/9} |v|^2 dy \le \frac{8\pi}{15\cdot 9^{15}}$ , contributing at most $\frac{9600\pi c}{9^{15}}$ . Combining these exact bounds yields:
+Since $J := \int _ {\mathbb{R}^3} \frac{|v|^2}{\rho^2} dy \le \frac{60}{\sqrt{3}}\pi^{3/2}$ , the two exterior bulk integrals in (B.3) subtract at most $2 \cdot \frac{2c}{\sqrt{3}} J = 80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ . On the transition shell $\frac{1}{19} \le \rho \le \frac{1}{9}$ , $\Vert H _ Z\Vert _ {\mathrm{op}} \lt 9000c$ and $\int _ {\rho \le 1/9} |v|^2 dy \le \frac{8\pi}{15\cdot 9^{15}}$ , contributing at most $\frac{9600\pi c}{9^{15}}$ . Combining these exact bounds yields:
 
 **外部区域与过渡壳层的体积海森上界**：在 $\rho \ge \frac{1}{9}$ 上， $Z = c\frac{|z|}{\rho}$ ， $\rho^2 H _ {|z|/\rho}$ 的本征值为 $\frac{-t \pm \sqrt{4-3t^2}}{2}$ 与 $-t$ （ $t = \frac{|z|}{\rho} \in [0, 1]$ ），最大绝对值为 $\frac{2}{\sqrt{3}}$ ，故 $\Vert H _ Z(y)\Vert _ {\mathrm{op}} \le \frac{2c}{\sqrt{3}\rho^2}$ 。由高斯积分 $J := \int _ {\mathbb{R}^3} \frac{|v|^2}{\rho^2} dy \le \frac{60}{\sqrt{3}}\pi^{3/2}$ ，外部区域两项体积积分至多扣除 $2 \cdot \frac{2c}{\sqrt{3}} J = 80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ 。
 
-在过渡球壳 $\frac{1}{19} \le \rho \le \frac{1}{9}$ 上， $\Vert H _ Z\Vert _ {\mathrm{op}} < 9000c$ 且 $\int _ {\rho \le 1/9} |v|^2 dy \le \frac{8\pi}{15\cdot 9^{15}}$ ，两项体积损失不超过 $\frac{9600\pi c}{9^{15}}$ 。合并立得：
+在过渡球壳 $\frac{1}{19} \le \rho \le \frac{1}{9}$ 上， $\Vert H _ Z\Vert _ {\mathrm{op}} \lt 9000c$ 且 $\int _ {\rho \le 1/9} |v|^2 dy \le \frac{8\pi}{15\cdot 9^{15}}$ ，两项体积损失不超过 $\frac{9600\pi c}{9^{15}}$ 。合并立得：
 
 $$
 \begin{aligned}
 & \frac{\Delta}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} \cr
-& > \frac{26311}{64} > 400 > 0.
+& \gt \frac{26311}{64} \gt 400 \gt 0.
 \end{aligned} \tag{B.5}
 $$
 

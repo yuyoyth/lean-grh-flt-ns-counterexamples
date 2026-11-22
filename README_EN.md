@@ -68,7 +68,7 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 #### 3.1 Equatorial Seam Dirac Surface-Measure Omission in Proposition B.1 / Inequality (B.20) (Pages 47–57)
 
-- Multiplier weights $D, Z$ are represented as piecewise splines on half-spaces $y _ 3 > 0$ and $y _ 3 < 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y _ 3}{|y|}$ .
+- Multiplier weights $D, Z$ are represented as piecewise splines on half-spaces $y _ 3 \gt 0$ and $y _ 3 \lt 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y _ 3}{|y|}$ .
 - Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \lbrace y _ 3 = 0\rbrace$ :
 
 $$
@@ -80,13 +80,13 @@ $$
 - **Counterexample Family A** (compactly supported axisymmetric field on second-order weight seam): With $a(t) = (1 - t^2) _ +^4$ (exact rational moment $A = \frac{131072}{45045}$ , gradient bound $K = \frac{43936}{81}$ ) and $\varepsilon = 2^{-16} = \frac{1}{65536}$ , Inequality (B.20) (which requires $E _ D(v) \le 0$ ) is violated with exact rational lower bound:
 
 $$
-E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} > 0
+E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} \gt 0
 $$
 
 - **Counterexample Family B** (Schwartz Gaussian divergence-free field on first-order weight seam): The equatorial surface integral $\frac{10395}{64}\pi^{3/2}c$ strictly exceeds the exterior bulk Hessian contribution $80\pi^{3/2}c$ , yielding the analytical violation bound:
 
 $$
-\frac{\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}}{c} > \frac{26311}{64} > 400 > 0
+\frac{\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}}{c} \gt \frac{26311}{64} \gt 400 \gt 0
 $$
 
 #### 3.3 Collar Curvature-Tax Conservation Law & Undisclosed SHA-256 Witness
@@ -104,13 +104,13 @@ $$
 Section 5.3 (Theorem 5.4) of the monograph and `suite_6` of `verify_ns_counterexamples.py` establish a **three-branch structural trilemma** showing why neither releasing the file behind the SHA-256 hash nor appending supplementary lemmas/smoothing certificates within the paper's static piecewise-multiplier framework can resolve the defect:
 
 - **Branch I** (Unsealing the finite-dimensional table $d \in \mathcal{D} _ B$ cannot alter the distributional integration-by-parts identity): $d \in \mathcal{D} _ B$ is a finite spline-coefficient table whose sole analytical bridge to the infinite-dimensional solenoidal space $\mathcal{D} _ S^\Gamma$ is Proposition B.1 / Inequality (B.20). Whenever the one-sided normal slope is non-zero on any open equatorial annulus, Counterexample Families A and B violate (B.20) on that annulus regardless of the remaining grid coefficients.
-- **Branch II** (Appending a $C^2$ equatorial collar smoothing transfers the singular surface integral into an equivalent positive pure-bulk Hessian violation while driving $I _ 1$ negative): Replacing $|z|$ across $|z| \le \delta = \lambda\varepsilon$ (with $\lambda = \frac{1}{8}, \varepsilon = 2^{-16}, \delta = 2^{-19}$ ) by the global $C^2$ quartic spline $s _ \delta(z)$ eliminates the surface jump ( $[\partial _ z D _ \delta] _ \Sigma = 0$ ) but transfers the curvature mass into the collar bulk integral with transfer factor $I _ {\mathrm{collar}}(1/8) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40} = 0.925 > 0$ . Consequently, the exact same solenoidal field $v _ \varepsilon$ violates (B.20) under the **pure-bulk Hessian readout**:
+- **Branch II** (Appending a $C^2$ equatorial collar smoothing transfers the singular surface integral into an equivalent positive pure-bulk Hessian violation while driving $I _ 1$ negative): Replacing $|z|$ across $|z| \le \delta = \lambda\varepsilon$ (with $\lambda = \frac{1}{8}, \varepsilon = 2^{-16}, \delta = 2^{-19}$ ) by the global $C^2$ quartic spline $s _ \delta(z)$ eliminates the surface jump ( $[\partial _ z D _ \delta] _ \Sigma = 0$ ) but transfers the curvature mass into the collar bulk integral with transfer factor $I _ {\mathrm{collar}}(1/8) = \frac{2787617180779875667}{3000241776758882304} \gt \frac{37}{40} = 0.925 \gt 0$ . Consequently, the exact same solenoidal field $v _ \varepsilon$ violates (B.20) under the **pure-bulk Hessian readout**:
 
 $$
-\frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
+\frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} \gt \frac{13}{10} \gt 0
 $$
 
-Simultaneously, accounting for the collar Hessian peak $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
+Simultaneously, accounting for the collar Hessian peak $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} \lt 0$ .
 - **Branch III** (Appending peripheral lemmas cannot overturn an in-domain universal counterexample, while restricting $\mathcal{D} _ S^\Gamma$ breaks the Section 7 nonlinear bootstrap): By monotonicity of universal falsification, no added lemma can make (B.20) hold on $\mathcal{D} _ S^\Gamma$ while $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ remains in the domain; conversely, restricting $\mathcal{D} _ S^\Gamma$ at $y _ 3 = 0$ breaks the nonlinear vortex-stretching bootstrap closure on page 70.
 
 ---

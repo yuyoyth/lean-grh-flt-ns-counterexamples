@@ -56,17 +56,17 @@ The reduction predicates `IsGoodPrimeFor` and `IsSemistableModel` are defined di
 
 ## III. Exact Arithmetic Verification of Elliptic Curve Specimen $E _ {11}$ (Conductor $N=11$ ) and Pythagorean Triple Models $(3,4,5; p=2)$ / 椭圆曲线试件 $E _ {11}$ （导子 $N=11$ ）与勾股三模型试件 $(3,4,5; p=2)$ 的精确算术核验
 
-1. Elliptic Curve Specimen $E _ {11} : y^2 + y = x^3 - x^2 - 10x - 20$ (Conductor $N = 11$ ) / 导子 $11$ 椭圆曲线试件 $E _ {11}$ :
+1. **Elliptic Curve Specimen / 导子 11 椭圆曲线试件** ( $E _ {11} : y^2 + y = x^3 - x^2 - 10x - 20$ , Conductor $N = 11$ ):
    - **Minimal Model Invariants / 极小模型不变量**: $\Delta = -161051 = -11^5$ , $c _ 4 = 496 = 16 \times 31$ , $c _ 6 = 20008$ , $v _ {11}(\Delta) = 5$ .
-   - Order- $5$ Rational Torsion Subgroup Trajectory / 5 阶有理挠子群完整群律轨迹: $P = (5,5)$ , $2P = (16,-61)$ , $3P = (16,60)$ , $4P = (5,-6)$ , $5P = \mathcal{O}$ (reducing the mod- $5$ Galois representation $\bar{\rho} _ {E _ {11},5}$ while $5 \mid v _ {11}(\Delta) = 5$ ).
-   - Isomorphic $u=2$ Scaled Model / $u=2$ 同构缩放模型: $\Delta' = -659664896 = 2^{12}\Delta$ , $c _ 4' = 7936 = 2^4 c _ 4$ ( $2 \mid \Delta'$ and $2 \mid c _ 4'$ ).
-   - Mod- $7$ Frobenius Irreducibility Witness / 模 $7$ Frobenius 不可约性见证: At $\ell = 2$ , $|E _ {11}(\mathbb{F} _ 2)| = 5$ , $a _ 2(E _ {11}) = 2 + 1 - 5 = -2$ , and the characteristic polynomial $T^2 + 2T + 2 \pmod 7$ evaluates on $\mathbb{F} _ 7$ to $[2, 5, 3, 3, 5, 2, 1]$ (nowhere zero, while $7 \nmid v _ {11}(\Delta) = 5$ ).
+   - **Order-5 Rational Torsion Subgroup Trajectory / 5 阶有理挠子群完整群律轨迹**: $P = (5,5)$ , $2P = (16,-61)$ , $3P = (16,60)$ , $4P = (5,-6)$ , $5P = \mathcal{O}$ (reducing the mod- $5$ Galois representation $\bar{\rho} _ {E _ {11},5}$ while $5 \mid v _ {11}(\Delta) = 5$ ).
+   - **Isomorphic Two-Fold Scaled Model / 二倍同构缩放模型** ( $u=2$ ): $\Delta' = -659664896 = 2^{12}\Delta$ , $c _ 4' = 7936 = 2^4 c _ 4$ ( $2 \mid \Delta'$ and $2 \mid c _ 4'$ ).
+   - **Mod-7 Frobenius Irreducibility Witness / 模 7 Frobenius 不可约性见证**: At $\ell = 2$ , $|E _ {11}(\mathbb{F} _ 2)| = 5$ , $a _ 2(E _ {11}) = 2 + 1 - 5 = -2$ , and the characteristic polynomial $T^2 + 2T + 2 \pmod 7$ evaluates on $\mathbb{F} _ 7$ to $[2, 5, 3, 3, 5, 2, 1]$ (nowhere zero, while $7 \nmid v _ {11}(\Delta) = 5$ ).
    - **Hecke Eigenvalue Matching / 尖点形式特征值核对**: For all good primes $p \in \lbrace 2,3,5,7,13,17,19,23,29\rbrace$ , $a _ p(E _ {11}) = c _ p(f _ {11})$ and $5 \mid |E _ {11}(\mathbb{F} _ p)|$ .
 
-2. Three Models of the Pythagorean Triple $(3,4,5; p=2)$ / 勾股三元组 $(3,4,5; p=2)$ 的三模型区分:
-   - (i) Raw cubic model / 原始整系数模型 $W _ 0 : y^2 = x(x-9)(x+16)$ : $\Delta(W _ 0) = 207360000 = 2^{12} \times 50625$ , $c _ 4(W _ 0) = 7696 = 2^4 \times 481$ ;
-   - (ii) Rational change-of-variables model / 有理换元模型 $W _ {\mathbb{Q}} = (1, 3/2, 0, -9, 0)$ : fails integrality at $a _ 2 = 3/2 \notin \mathbb{Z}$ because $b^2 - a^2 - 1 = 16 - 9 - 1 = 6 \not\equiv 0 \pmod 4$ , and its rational invariants $(c _ 4, c _ 6, \Delta) = (481, -4879, 50625)$ satisfy $c _ 6 \equiv 1 \not\equiv 3 \pmod 4$ , proving that no $2$ -adic integral Weierstrass model can realize them;
-   - (iii) Integer-division truncated model / 整除截断模型 $W _ {\mathbb{Z}/} = (1, 1, 0, -9, 0)$ : distorts invariants to $\Delta(W _ {\mathbb{Z}/}) = 48681$ and $c _ 4(W _ {\mathbb{Z}/}) = 457$ , altering the rational $j$ -invariant ( $481^3 \times 48681 - 457^3 \times 50625 = 585595462896 \neq 0$ ).
+2. **Three Models of the Pythagorean Triple / 勾股三元组的三模型区分** ( $(3,4,5; p=2)$ ):
+   - **(i) Raw Cubic Model / 原始整系数模型** ( $W _ 0 : y^2 = x(x-9)(x+16)$ ): $\Delta(W _ 0) = 207360000 = 2^{12} \times 50625$ , $c _ 4(W _ 0) = 7696 = 2^4 \times 481$ ;
+   - **(ii) Rational Change-of-Variables Model / 有理换元模型** ( $W _ {\mathbb{Q}} = (1, 3/2, 0, -9, 0)$ ): fails integrality at $a _ 2 = 3/2 \notin \mathbb{Z}$ because $b^2 - a^2 - 1 = 16 - 9 - 1 = 6 \not\equiv 0 \pmod 4$ , and its rational invariants $(c _ 4, c _ 6, \Delta) = (481, -4879, 50625)$ satisfy $c _ 6 \equiv 1 \not\equiv 3 \pmod 4$ , proving that no $2$ -adic integral Weierstrass model can realize them;
+   - **(iii) Integer-Division Truncated Model / 整除截断模型** ( $W _ {\mathbb{Z}/} = (1, 1, 0, -9, 0)$ ): distorts invariants to $\Delta(W _ {\mathbb{Z}/}) = 48681$ and $c _ 4(W _ {\mathbb{Z}/}) = 457$ , altering the rational $j$ -invariant ( $481^3 \times 48681 - 457^3 \times 50625 = 585595462896 \neq 0$ ).
 
-3. Frey Integral Discriminant Identity Sample at $(p=5, a=3, b=4)$ / Frey 整模型判别式恒等式抽样核验:
+3. **Frey Integral Discriminant Identity Sample / Frey 整模型判别式恒等式抽样核验** ( $(p=5, a=3, b=4)$ ):
    - $\Delta \cdot 2^8 = \bigl(a^5 b^5 (a^5 + b^5)\bigr)^2 = 99395263697780736$ holds identically.

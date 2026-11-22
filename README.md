@@ -71,7 +71,7 @@
 
 #### 3.1 附录 B（第 47–57 页）命题 B.1 不等式 (B.20) 遗漏赤道平面上的狄拉克奇异面测度
 
-- 论文将乘子权函数 $D, Z$ 表示为上下半空间 $y _ 3 > 0$ 与 $y _ 3 < 0$ 在紧化坐标 $\sigma = \frac{|y|}{1+|y|}$ 与 $\eta = \frac{y _ 3}{|y|}$ 下的分片样条。
+- 论文将乘子权函数 $D, Z$ 表示为上下半空间 $y _ 3 \gt 0$ 与 $y _ 3 \lt 0$ 在紧化坐标 $\sigma = \frac{|y|}{1+|y|}$ 与 $\eta = \frac{y _ 3}{|y|}$ 下的分片样条。
 - 在对无散场作两次分部积分时，不等式 (B.20) 仅以开集内部的体积海森算子范数控制二次型，遗漏了跨赤道零测度平面 $\Sigma = \lbrace y _ 3 = 0\rbrace$ 的法向一阶导数跳变奇异面测度：
 
 $$
@@ -83,13 +83,13 @@ $$
 - **闭式反例族 A**（紧支轴对称无散场在二阶权接缝上的精确有理违反裕量）：取 $a(t) = (1 - t^2) _ +^4$ （精确有理矩 $A = \frac{131072}{45045}$ 、梯度上界 $K = \frac{43936}{81}$ ）与 $\varepsilon = 2^{-16} = \frac{1}{65536}$ ，原命题要求 $\le 0$ 的泛函给出严格为正的有理下界：
 
 $$
-E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} > 0
+E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} \gt 0
 $$
 
 - **闭式反例族 B**（施瓦茨高斯无散场在一阶权接缝上的解析违反下界）：取 $v = g(-2zyC _ 6, 2zxC _ 6, -S _ 6)$ ，赤道奇异面积分 $\frac{10395}{64}\pi^{3/2}c$ 严格大于外部体积海森损失 $80\pi^{3/2}c$ ，给出纯解析正下界：
 
 $$
-\frac{\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}}{c} > \frac{26311}{64} > 400 > 0
+\frac{\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}}{c} \gt \frac{26311}{64} \gt 400 \gt 0
 $$
 
 #### 3.3 薄层曲率税守恒律与仅给出 SHA-256 哈希摘要的未公开数值证人
@@ -107,13 +107,13 @@ $$
 专著第 5.3 节（定理 5.4）与 `verify_ns_counterexamples.py` 第六套有理数核验套件（`suite_6`）严格证明了以下**补证三难结构定理**：在当前静态分片乘子底座下，无论后续公开 SHA-256 原始文件还是继续追加任何外围证明材料，均面临三条互斥且穷尽的结构性约束：
 
 - **分支一**（公开 SHA-256 有限维系数表 $d \in \mathcal{D} _ B$ 无法改变无穷维分布微积分恒等式）： $d \in \mathcal{D} _ B$ 仅为有限维样条系数表，其通向无穷维无散场全空间 $\mathcal{D} _ S^\Gamma$ 的唯一桥梁正是命题 B.1 / (B.20)。只要赤道任意非空开环域上单侧法向斜率非零，反例族 A 与 B 即在该环域上违反 (B.20)，与系数表内其它网格数值无关。
-- **分支二**（追加“薄层 $C^2$ 磨平修正”将使奇异质量等量转移为薄层纯体积海森正残差，并导致梯度主系数 $I _ 1$ 退化为负）：若在薄层 $|z| \le \delta = \lambda\varepsilon$ （取 $\lambda = \frac{1}{8}, \varepsilon = 2^{-16}, \delta = 2^{-19}$ ）内用全局 $C^2$ 四次样条磨平接缝（使 $[\partial _ z D _ \delta] _ \Sigma = 0$ ），薄层曲率转移因子满足精确有理下界 $I _ {\mathrm{collar}}(1/8) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40} = 0.925 > 0$ ，同一紧支无散场 $v _ \varepsilon$ 在**纯体积海森读口**下依然违反 (B.20)：
+- **分支二**（追加“薄层 $C^2$ 磨平修正”将使奇异质量等量转移为薄层纯体积海森正残差，并导致梯度主系数 $I _ 1$ 退化为负）：若在薄层 $|z| \le \delta = \lambda\varepsilon$ （取 $\lambda = \frac{1}{8}, \varepsilon = 2^{-16}, \delta = 2^{-19}$ ）内用全局 $C^2$ 四次样条磨平接缝（使 $[\partial _ z D _ \delta] _ \Sigma = 0$ ），薄层曲率转移因子满足精确有理下界 $I _ {\mathrm{collar}}(1/8) = \frac{2787617180779875667}{3000241776758882304} \gt \frac{37}{40} = 0.925 \gt 0$ ，同一紧支无散场 $v _ \varepsilon$ 在**纯体积海森读口**下依然违反 (B.20)：
 
 $$
-\frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
+\frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} \gt \frac{13}{10} \gt 0
 $$
 
-同时，若将薄层内激增的二阶导数峰值 $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ 如实计入第 54 页公式 (B.16)，梯度系数将直接退化为 $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ 。
+同时，若将薄层内激增的二阶导数峰值 $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ 如实计入第 54 页公式 (B.16)，梯度系数将直接退化为 $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} \lt 0$ 。
 - **分支三**（追加外围引理无法消除同域反例，缩减无散扰动空间则破坏第 70 页非线性自举闭合）：由全称量词对理论扩充的单调性，在不缩减定义域 $\mathcal{D} _ S^\Gamma$ 时，追加任何外围辅助引理均不能改变同一闭式证人 $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ 对命题 B.1 的证伪；而若人为在 $\mathcal{D} _ S^\Gamma$ 上附加赤道零迹限制以排除 $v _ \varepsilon$ ，第 70 页非线性涡拉伸自举闭合条件将不再成立。
 
 ---
@@ -184,7 +184,7 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 #### 3.1 Equatorial Seam Dirac Surface-Measure Omission in Proposition B.1 / Inequality (B.20) (Pages 47–57)
 
-- Multiplier weights $D, Z$ are represented as piecewise splines on half-spaces $y _ 3 > 0$ and $y _ 3 < 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y _ 3}{|y|}$ .
+- Multiplier weights $D, Z$ are represented as piecewise splines on half-spaces $y _ 3 \gt 0$ and $y _ 3 \lt 0$ in compactified coordinates $\sigma = \frac{|y|}{1+|y|}$ and $\eta = \frac{y _ 3}{|y|}$ .
 - Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \lbrace y _ 3 = 0\rbrace$ :
 
 $$
@@ -196,13 +196,13 @@ $$
 - **Counterexample Family A** (compactly supported axisymmetric field on second-order weight seam): With $a(t) = (1 - t^2) _ +^4$ (exact rational moment $A = \frac{131072}{45045}$ , gradient bound $K = \frac{43936}{81}$ ) and $\varepsilon = 2^{-16} = \frac{1}{65536}$ , Inequality (B.20) (which requires $E _ D(v) \le 0$ ) is violated with exact rational lower bound:
 
 $$
-E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} > 0
+E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536} \cdot \frac{633509743}{432432000} \gt 0
 $$
 
 - **Counterexample Family B** (Schwartz Gaussian divergence-free field on first-order weight seam): The equatorial surface integral $\frac{10395}{64}\pi^{3/2}c$ strictly exceeds the exterior bulk Hessian contribution $80\pi^{3/2}c$ , yielding the analytical violation bound:
 
 $$
-\frac{\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}}{c} > \frac{26311}{64} > 400 > 0
+\frac{\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}}{c} \gt \frac{26311}{64} \gt 400 \gt 0
 $$
 
 #### 3.3 Collar Curvature-Tax Conservation Law & Undisclosed SHA-256 Witness
@@ -220,13 +220,13 @@ $$
 Section 5.3 (Theorem 5.4) of the monograph and `suite_6` of `verify_ns_counterexamples.py` establish a **three-branch structural trilemma** showing why neither releasing the file behind the SHA-256 hash nor appending supplementary lemmas/smoothing certificates within the paper's static piecewise-multiplier framework can resolve the defect:
 
 - **Branch I** (Unsealing the finite-dimensional table $d \in \mathcal{D} _ B$ cannot alter the distributional integration-by-parts identity): $d \in \mathcal{D} _ B$ is a finite spline-coefficient table whose sole analytical bridge to the infinite-dimensional solenoidal space $\mathcal{D} _ S^\Gamma$ is Proposition B.1 / Inequality (B.20). Whenever the one-sided normal slope is non-zero on any open equatorial annulus, Counterexample Families A and B violate (B.20) on that annulus regardless of the remaining grid coefficients.
-- **Branch II** (Appending a $C^2$ equatorial collar smoothing transfers the singular surface integral into an equivalent positive pure-bulk Hessian violation while driving $I _ 1$ negative): Replacing $|z|$ across $|z| \le \delta = \lambda\varepsilon$ (with $\lambda = \frac{1}{8}, \varepsilon = 2^{-16}, \delta = 2^{-19}$ ) by the global $C^2$ quartic spline $s _ \delta(z)$ eliminates the surface jump ( $[\partial _ z D _ \delta] _ \Sigma = 0$ ) but transfers the curvature mass into the collar bulk integral with transfer factor $I _ {\mathrm{collar}}(1/8) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40} = 0.925 > 0$ . Consequently, the exact same solenoidal field $v _ \varepsilon$ violates (B.20) under the **pure-bulk Hessian readout**:
+- **Branch II** (Appending a $C^2$ equatorial collar smoothing transfers the singular surface integral into an equivalent positive pure-bulk Hessian violation while driving $I _ 1$ negative): Replacing $|z|$ across $|z| \le \delta = \lambda\varepsilon$ (with $\lambda = \frac{1}{8}, \varepsilon = 2^{-16}, \delta = 2^{-19}$ ) by the global $C^2$ quartic spline $s _ \delta(z)$ eliminates the surface jump ( $[\partial _ z D _ \delta] _ \Sigma = 0$ ) but transfers the curvature mass into the collar bulk integral with transfer factor $I _ {\mathrm{collar}}(1/8) = \frac{2787617180779875667}{3000241776758882304} \gt \frac{37}{40} = 0.925 \gt 0$ . Consequently, the exact same solenoidal field $v _ \varepsilon$ violates (B.20) under the **pure-bulk Hessian readout**:
 
 $$
-\frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
+\frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \ge \frac{2147573301937507667}{1611064563204096000} \gt \frac{13}{10} \gt 0
 $$
 
-Simultaneously, accounting for the collar Hessian peak $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
+Simultaneously, accounting for the collar Hessian peak $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ in Equation (B.16) (p. 54) drives the leading gradient coefficient to $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} \lt 0$ .
 - **Branch III** (Appending peripheral lemmas cannot overturn an in-domain universal counterexample, while restricting $\mathcal{D} _ S^\Gamma$ breaks the Section 7 nonlinear bootstrap): By monotonicity of universal falsification, no added lemma can make (B.20) hold on $\mathcal{D} _ S^\Gamma$ while $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ remains in the domain; conversely, restricting $\mathcal{D} _ S^\Gamma$ at $y _ 3 = 0$ breaks the nonlinear vortex-stretching bootstrap closure on page 70.
 
 ---

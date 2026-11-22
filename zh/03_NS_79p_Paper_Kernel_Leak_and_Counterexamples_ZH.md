@@ -72,7 +72,7 @@ $$
 y = \frac{x}{\sqrt{T-t}}, \qquad s = \log\frac{T}{T-t}
 $$
 
-之下，假设存在一个非零、光滑、关于自相似时间 $s$ 周期（周期为 $S > 0$ ）、满足 $\kappa$ -重离散旋转对称群 $\Gamma$ 等变性的自相似旋转速度－压力剖面 $(W, q)$ ，满足自相似纳维－斯托克斯方程（第 2 页公式 (1.2)）：
+之下，假设存在一个非零、光滑、关于自相似时间 $s$ 周期（周期为 $S \gt 0$ ）、满足 $\kappa$ -重离散旋转对称群 $\Gamma$ 等变性的自相似旋转速度－压力剖面 $(W, q)$ ，满足自相似纳维－斯托克斯方程（第 2 页公式 (1.2)）：
 
 $$
 \begin{aligned}
@@ -81,7 +81,7 @@ $$
 \end{aligned}
 $$
 
-以及远场衰减与线性化单周期算子（Monodromy operator）谱分离假设（第 2 页公式 (1.3)）；那么，便可在全空间 $\mathbb{R}^3$ 上构造紧支集光滑无散初值 $u _ 0 \in C _ c^\infty(\mathbb{R}^3)$ ，并在三维环面 $\mathbb{T}^3$ 上构造光滑无散初值，使得对应的纳维－斯托克斯解在有限时刻 $T > 0$ 发生爆破，且速度梯度 $L^2$ 范数按精确自相似率发散：
+以及远场衰减与线性化单周期算子（Monodromy operator）谱分离假设（第 2 页公式 (1.3)）；那么，便可在全空间 $\mathbb{R}^3$ 上构造紧支集光滑无散初值 $u _ 0 \in C _ c^\infty(\mathbb{R}^3)$ ，并在三维环面 $\mathbb{T}^3$ 上构造光滑无散初值，使得对应的纳维－斯托克斯解在有限时刻 $T \gt 0$ 发生爆破，且速度梯度 $L^2$ 范数按精确自相似率发散：
 
 $$
 \Vert \nabla u(\cdot, t)\Vert _ {L^2} \sim (T-t)^{-1/4} \qquad (t \uparrow T),
@@ -109,7 +109,7 @@ $$
 
 在进入核心算子接缝分析之前，严谨的数学审查应当首先将论文中逻辑自洽的经典分析步骤与真正存在算子核偏差或待核验缺口的环节区分开来。经逐页核对 79 页原件，以下五个环节在各自声明的局部前件下是成立且规范的：
 
-**自相似坐标变换**（第 2 页公式 (1.4)）：在任意 $t < T$ 的开区间上， $(x,t) \mapsto (y,s)$ 是光滑可逆微分同胚，只改变各阶范数的时空尺度因子，不抹除高频模态。
+**自相似坐标变换**（第 2 页公式 (1.4)）：在任意 $t \lt T$ 的开区间上， $(x,t) \mapsto (y,s)$ 是光滑可逆微分同胚，只改变各阶范数的时空尺度因子，不抹除高频模态。
 
 **无散空间上的模梯度商**（第 30 页第 7.1 节公式 (7.2) 与第 7.8 节公式 (7.33)）：论文在无散测试空间 $H$ 上定义模去梯度场的等价关系，这与勒雷（Leray）无散投影 $\mathbb{P}$ 完全同构；第 7.8 节伴随条件 (7.33) 对一切代表元成立，取 $v = 0$ 即迫使伴随测试场 $\psi$ 正交于梯度核，此处不存在“把有旋速度残差当梯度丢弃”的核漏。
 
@@ -123,7 +123,7 @@ $$
 
 当上述外围分析框架被剥离之后，整篇 79 页论文将“无穷维三维流体扰动在近似自相似剖面 $W^r$ 附近具有严格正定强制性（Coercivity，即单周期谱被严格约束在假定不稳定模态之内）”这一最核心的动力学义务，全部压在了**附录 B（第 49–70 页）的加权乘子分部积分与有限树矩阵归约**上。正是在这一核心承重区，存在三处层层递进的数学结构问题：
 
-**结构问题一（跨面奇异测度核漏）**： 在第 53 页定义权函数 $D, Z$ 的半空间分侧样条表示，并在第 55–56 页推导核心强制性乘子不等式命题 B.1 / 公式 (B.20) 时，如果仅依据各半空间 $y _ 3 > 0$ 与 $y _ 3 < 0$ 上的分侧 $C^2$ 样条正则性并直接用体积海森（Hessian）矩阵 $H _ {\mathrm{bulk}}$ 执行分部积分，而遗漏跨赤道平面 $\Sigma = \lbrace y _ 3 = 0\rbrace$ 的法向一阶导数接合前件 $[\partial _ {y _ 3} D] _ \Sigma = 0$ 与 $[\partial _ {y _ 3} Z] _ \Sigma = 0$ ，则分布海森算子 $D^2 W = H _ {\mathrm{bulk}} dy + [\partial _ {y _ 3} W] e _ 3\otimes e _ 3 dS _ \Sigma$ 中的奇异狄拉克界面测度被体积读口 $q _ {\mathrm{bulk}}$ 直接抹零（ $\Sigma _ W \in \ker q _ {\mathrm{bulk}}$ ），却在无散场分部积分泛函 $f _ v$ 中产生严格为正的界面贡献（ $\Sigma _ W \notin \ker f _ v$ ），从而直接违反命题 B.1 的核心不等式 (B.20)。
+**结构问题一（跨面奇异测度核漏）**： 在第 53 页定义权函数 $D, Z$ 的半空间分侧样条表示，并在第 55–56 页推导核心强制性乘子不等式命题 B.1 / 公式 (B.20) 时，如果仅依据各半空间 $y _ 3 \gt 0$ 与 $y _ 3 \lt 0$ 上的分侧 $C^2$ 样条正则性并直接用体积海森（Hessian）矩阵 $H _ {\mathrm{bulk}}$ 执行分部积分，而遗漏跨赤道平面 $\Sigma = \lbrace y _ 3 = 0\rbrace$ 的法向一阶导数接合前件 $[\partial _ {y _ 3} D] _ \Sigma = 0$ 与 $[\partial _ {y _ 3} Z] _ \Sigma = 0$ ，则分布海森算子 $D^2 W = H _ {\mathrm{bulk}} dy + [\partial _ {y _ 3} W] e _ 3\otimes e _ 3 dS _ \Sigma$ 中的奇异狄拉克界面测度被体积读口 $q _ {\mathrm{bulk}}$ 直接抹零（ $\Sigma _ W \in \ker q _ {\mathrm{bulk}}$ ），却在无散场分部积分泛函 $f _ v$ 中产生严格为正的界面贡献（ $\Sigma _ W \notin \ker f _ v$ ），从而直接违反命题 B.1 的核心不等式 (B.20)。
 
 **结构问题二（强接合薄层曲率守恒）**： 即便通过在赤道平面 $|y _ 3| \le \delta\rho$ 两侧插入光滑过渡样条 $s _ \delta(\eta)$ 恢复全局 $C^2(\mathbb{R}^3)$ 跨面接合，奇异面测度虽转化为体积海森密度，但过渡薄层内的法向二阶导数必以 $\max s _ \delta'' = \frac{3}{2\delta}$ 的量级增长；当薄层宽度 $\delta \downarrow 0$ 时，体积海森算子范数在薄层上的积分**并不趋于零**，而是严格收敛回原来的奇异界面积分。这意味着曲率质量具有严格的测度守恒性，不能仅以“薄层体积为 $O(\delta)$ ”为由在积分估计中略去。
 
@@ -145,7 +145,7 @@ $$
 \sigma = \frac{\rho}{1+\rho} \in [0, 1), \qquad \eta = \frac{z}{\rho} \in [-1, 1].
 $$
 
-在第 53 页中，权函数 $D(y)$ 与 $Z(y)$ 被表示为分居上、下半空间 $z > 0$ 与 $z < 0$ 的 $(\sigma, \eta)$ 分片多项式样条。为了推导第 55–56 页命题 B.1 的主不等式 (B.20)，作者需要将含权函数的二阶与一阶二次型（见第 54 页公式 (B.16) 中的 $I _ 2, I _ 2', I _ 1', I _ 1, I _ 0$ ）与无散场的旋度平方项进行分部积分换位。
+在第 53 页中，权函数 $D(y)$ 与 $Z(y)$ 被表示为分居上、下半空间 $z \gt 0$ 与 $z \lt 0$ 的 $(\sigma, \eta)$ 分片多项式样条。为了推导第 55–56 页命题 B.1 的主不等式 (B.20)，作者需要将含权函数的二阶与一阶二次型（见第 54 页公式 (B.16) 中的 $I _ 2, I _ 2', I _ 1', I _ 1, I _ 0$ ）与无散场的旋度平方项进行分部积分换位。
 
 这一换位的核心数学恒等式如下：对任意光滑无散向量场 $u$ （即 $\nabla \cdot u = \sum _ {i=1}^3 \partial _ i u _ i = 0$ ），由三维列维－奇维塔（Levi-Civita）张量收缩恒等式，点态成立：
 
@@ -162,7 +162,7 @@ $$
 
 #### 定理 3.1（分侧二阶可微权函数的分布海森分解与奇异界面测度定理）
 
-设权函数 $W : \mathbb{R}^3 \to \mathbb{R}$ 在全空间 $\mathbb{R}^3$ 上连续，在开上半空间 $\mathbb{R} _ +^3 = \lbrace z > 0\rbrace$ 与开下半空间 $\mathbb{R} _ -^3 = \lbrace z < 0\rbrace$ 上分别属于 $C^2$ 直至赤道分界面 $\Sigma = \lbrace z = 0\rbrace$ ，其开区域二阶经典导数矩阵 $H _ W(y) = (\partial _ {i}\partial _ {j} W(y)) _ {1\le i,j\le 3}$ 局部可积，且在分界面 $\Sigma$ 上具有有限的上下侧法向一阶导数迹。记跨平面 $\Sigma$ 的法向导数跳跃为
+设权函数 $W : \mathbb{R}^3 \to \mathbb{R}$ 在全空间 $\mathbb{R}^3$ 上连续，在开上半空间 $\mathbb{R} _ +^3 = \lbrace z \gt 0\rbrace$ 与开下半空间 $\mathbb{R} _ -^3 = \lbrace z \lt 0\rbrace$ 上分别属于 $C^2$ 直至赤道分界面 $\Sigma = \lbrace z = 0\rbrace$ ，其开区域二阶经典导数矩阵 $H _ W(y) = (\partial _ {i}\partial _ {j} W(y)) _ {1\le i,j\le 3}$ 局部可积，且在分界面 $\Sigma$ 上具有有限的上下侧法向一阶导数迹。记跨平面 $\Sigma$ 的法向导数跳跃为
 
 $$
 \begin{aligned}
@@ -302,8 +302,8 @@ $$
 $$
 \chi(\sigma) = \begin{cases}
 0, & 0 \le \sigma \le \dfrac{1}{4}, \cr
-h(12\sigma - 3), & \dfrac{1}{4} < \sigma < \dfrac{1}{3}, \cr
-1, & \dfrac{1}{3} \le \sigma < 1,
+h(12\sigma - 3), & \dfrac{1}{4} \lt \sigma \lt \dfrac{1}{3}, \cr
+1, & \dfrac{1}{3} \le \sigma \lt 1,
 \end{cases}
 $$
 
@@ -316,7 +316,7 @@ $$
 \end{aligned} \tag{3.6}
 $$
 
-显然， $D _ +$ 与 $D _ -$ 在原点邻域 $\rho \le 1/3$ 内恒等于常数 $1/2$ ，在上下半空间各自属于 $C^2$ 分片多项式，全域满足 $\frac{1}{4} \le D _ \pm \le \frac{3}{4}$ （故 $I _ 2' = 1 - D _ \pm \ge \frac{1}{4} > 0$ ），轴对称且关于 $z$ 偶对称。在 $\rho \ge \frac{1}{2}$ （即 $\sigma \ge \frac{1}{3}$ ）的区域内， $\chi(\sigma) = 1$ ， $D _ +(y) = \frac{1}{2} + \frac{|z|}{4\rho}$ ，故跨赤道平面 $z=0$ 的法向一阶导数跳跃为：
+显然， $D _ +$ 与 $D _ -$ 在原点邻域 $\rho \le 1/3$ 内恒等于常数 $1/2$ ，在上下半空间各自属于 $C^2$ 分片多项式，全域满足 $\frac{1}{4} \le D _ \pm \le \frac{3}{4}$ （故 $I _ 2' = 1 - D _ \pm \ge \frac{1}{4} \gt 0$ ），轴对称且关于 $z$ 偶对称。在 $\rho \ge \frac{1}{2}$ （即 $\sigma \ge \frac{1}{3}$ ）的区域内， $\chi(\sigma) = 1$ ， $D _ +(y) = \frac{1}{2} + \frac{|z|}{4\rho}$ ，故跨赤道平面 $z=0$ 的法向一阶导数跳跃为：
 
 $$
 \begin{aligned}
@@ -325,7 +325,7 @@ $$
 \end{aligned} \tag{3.7}
 $$
 
-**紧支集二阶可微轴对称无散扰动场的构造**： 取紧支集偶多项式母函数 $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ （支集为 $[-1, 1]$ ， $a(0)=1$ ），对 $0 < \varepsilon \le \frac{1}{4}$ ，定义轴对称流函数 $\psi _ \varepsilon$ 与无散速度场 $v _ \varepsilon$ （柱坐标分量 $(v _ r, v _ \varphi, v _ 3)$ ）：
+**紧支集二阶可微轴对称无散扰动场的构造**： 取紧支集偶多项式母函数 $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ （支集为 $[-1, 1]$ ， $a(0)=1$ ），对 $0 \lt \varepsilon \le \frac{1}{4}$ ，定义轴对称流函数 $\psi _ \varepsilon$ 与无散速度场 $v _ \varepsilon$ （柱坐标分量 $(v _ r, v _ \varphi, v _ 3)$ ）：
 
 $$
 \begin{aligned}
@@ -356,7 +356,7 @@ $$
 \end{aligned}
 $$
 
-支集位于环形管道 $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ ，远离对称轴 $r=0$ 与原点（在支集上 $\rho \ge r \ge 1 - \varepsilon \ge \frac{3}{4} > \frac{1}{2}$ ，故 $\chi(\sigma) \equiv 1$ ）；且 $a \in C _ c^3 \implies v _ \varepsilon \in C _ c^2(\mathbb{R}^3)$ 。
+支集位于环形管道 $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ ，远离对称轴 $r=0$ 与原点（在支集上 $\rho \ge r \ge 1 - \varepsilon \ge \frac{3}{4} \gt \frac{1}{2}$ ，故 $\chi(\sigma) \equiv 1$ ）；且 $a \in C _ c^3 \implies v _ \varepsilon \in C _ c^2(\mathbb{R}^3)$ 。
 
 **（2）严格满足离散旋转与反射对称性**： $v _ \varepsilon$ 轴对称且时间不变， $v _ r$ 关于 $z$ 为偶函数， $v _ 3$ 关于 $z$ 为奇函数，故在 $R _ {\ast} = \operatorname{diag}(1, -1, -1)$ 反射下严格不变，属于合法空间 $\mathcal{D} _ S^\Gamma$ 。
 
@@ -371,16 +371,16 @@ $$
 在上述合法弱合同数据与扰动场 $v _ \varepsilon$ （取 $a(t) = (1-t^2) _ +^4$ ， $\varepsilon = 2^{-16} = \frac{1}{65536}$ ）下，命题 B.1 的核心不等式 (B.20)（原命题要求 $E _ D(v) := \mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}} \le 0$ ）在权函数 $D _ +$ 下被严格违反，其精确闭式有理正下界为：
 
 $$
-E _ {D _ +}(v _ \varepsilon) \ge \gamma _ \varepsilon := \frac{\pi}{65536}\cdot\frac{633509743}{432432000} > 0. \tag{3.10}
+E _ {D _ +}(v _ \varepsilon) \ge \gamma _ \varepsilon := \frac{\pi}{65536}\cdot\frac{633509743}{432432000} \gt 0. \tag{3.10}
 $$
 
 同时，在读取“体积海森算子范数场 $\Vert H _ D\Vert _ {\mathrm{op}}$ 、赤道平面权值 $D| _ {z=0}$ 、共同上下界 $[1/4, 3/4]$ 及全部基准结构参数”的简化读口 $q _ {\mathrm{red}}$ 下，双权函数 $(D _ +, D _ -)$ 完全同值（ $q _ {\mathrm{red}}(D _ +) = q _ {\mathrm{red}}(D _ -)$ ），但它们在 (B.20) 中的泛函输出却呈现一正一负的严格对称分离：
 
 $$
 \begin{aligned}
-& E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon > 0, \cr
-& E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon < 0, \cr
-& E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0.
+& E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon \gt 0, \cr
+& E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon \lt 0, \cr
+& E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} \gt 0.
 \end{aligned} \tag{3.11}
 $$
 
@@ -418,11 +418,11 @@ $$
 $$
 \begin{aligned}
 & \Vert H _ {D _ +}\Vert _ {\mathrm{op}} = \frac{1}{4}\left\Vert \nabla^2\frac{|z|}{\rho}\right\Vert _ {\mathrm{op}} \cr
-& \le \frac{3}{2\rho^2} \le \frac{3}{2(3/4)^2} = \frac{8}{3} < 3 =: M.
+& \le \frac{3}{2\rho^2} \le \frac{3}{2(3/4)^2} = \frac{8}{3} \lt 3 =: M.
 \end{aligned}
 $$
 
-**第三步**：精确控制速度梯度平方 $|\nabla v _ \varepsilon|^2$ 与体积损失。在 $[-1,1]$ 上， $|a(t)| \le 1$ ； $a'(t)^2 = 64 t^2(1-t^2)^6$ 在 $t^2 = 1/7$ 处达到极大值 $\frac{64 \times 6^6}{7^7} = \frac{2985984}{823543} < 4$ ，故 $|a'(t)| \le 2$ ； $a''(t) = -8(1-t^2)^2(1-7t^2)$ 在 $t=0$ 处绝对值为 $8$ 、在 $t^2 = 3/7$ 处绝对值为 $\frac{256}{49} < 8$ ，故 $|a''(t)| \le 8$ 。代入轴对称柱坐标梯度五分量：
+**第三步**：精确控制速度梯度平方 $|\nabla v _ \varepsilon|^2$ 与体积损失。在 $[-1,1]$ 上， $|a(t)| \le 1$ ； $a'(t)^2 = 64 t^2(1-t^2)^6$ 在 $t^2 = 1/7$ 处达到极大值 $\frac{64 \times 6^6}{7^7} = \frac{2985984}{823543} \lt 4$ ，故 $|a'(t)| \le 2$ ； $a''(t) = -8(1-t^2)^2(1-7t^2)$ 在 $t=0$ 处绝对值为 $8$ 、在 $t^2 = 3/7$ 处绝对值为 $\frac{256}{49} \lt 8$ ，故 $|a''(t)| \le 8$ 。代入轴对称柱坐标梯度五分量：
 
 $$
 \begin{aligned}
@@ -472,16 +472,16 @@ $$
 $$
 \begin{aligned}
 & \frac{16}{25}\cdot\frac{131072}{45045} - 16\times 3\times \frac{43936}{81}\times \frac{1}{65536} \cr
-& = \frac{2097152}{1126125} - \frac{1373}{3456} = \frac{633509743}{432432000} > 0,
+& = \frac{2097152}{1126125} - \frac{1373}{3456} = \frac{633509743}{432432000} \gt 0,
 \end{aligned}
 $$
 
 这便立得不等式 (3.10)。
-最后，由于 $H _ {D _ -} = -H _ {D _ +}$ 且 $[\partial _ z D _ -] = -[\partial _ z D _ +]$ ，记权函数非常数部分 $\pm\frac{1}{4}\chi|\eta|$ 的完整分布配对线性项为 $\pm J _ v$ ，共同体积算子范数罚项为 $C _ v = \int \Vert H _ {D _ +}\Vert _ {\mathrm{op}}|\nabla v _ \varepsilon|^2 dy \ge 0$ ，则 $E _ {D _ +}(v _ \varepsilon) = J _ v - C _ v \ge \gamma _ \varepsilon$ 从而给出 $J _ v \ge C _ v + \gamma _ \varepsilon$ ，从而 $E _ {D _ -}(v _ \varepsilon) = -J _ v - C _ v \le -2C _ v - \gamma _ \varepsilon \le -\gamma _ \varepsilon < 0$ ，证得双模型分离 (3.11)。（注：若将 $a(t)$ 替换为 $C _ c^\infty$ 光滑隆起函数 $a _ \infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1} _ {|t|<1}$ 并取 $\varepsilon = 10^{-15}$ ，同样有 $E _ {D _ +}(v _ \varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} > 0$ ，说明反例与紧支扰动是否达到 $C^\infty$ 无关。）证毕。
+最后，由于 $H _ {D _ -} = -H _ {D _ +}$ 且 $[\partial _ z D _ -] = -[\partial _ z D _ +]$ ，记权函数非常数部分 $\pm\frac{1}{4}\chi|\eta|$ 的完整分布配对线性项为 $\pm J _ v$ ，共同体积算子范数罚项为 $C _ v = \int \Vert H _ {D _ +}\Vert _ {\mathrm{op}}|\nabla v _ \varepsilon|^2 dy \ge 0$ ，则 $E _ {D _ +}(v _ \varepsilon) = J _ v - C _ v \ge \gamma _ \varepsilon$ 从而给出 $J _ v \ge C _ v + \gamma _ \varepsilon$ ，从而 $E _ {D _ -}(v _ \varepsilon) = -J _ v - C _ v \le -2C _ v - \gamma _ \varepsilon \le -\gamma _ \varepsilon \lt 0$ ，证得双模型分离 (3.11)。（注：若将 $a(t)$ 替换为 $C _ c^\infty$ 光滑隆起函数 $a _ \infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1} _ {|t|\lt1}$ 并取 $\varepsilon = 10^{-15}$ ，同样有 $E _ {D _ +}(v _ \varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} \gt 0$ ，说明反例与紧支扰动是否达到 $C^\infty$ 无关。）证毕。
 
 ---
 
-### 3.4 全闭式反例族 B：施瓦茨高斯无散 $\pm(2,1)$ 模态扰动在 $Z$ 权接缝上的严格破坏下界（ $> 400c$ ）
+### 3.4 全闭式反例族 B：施瓦茨高斯无散 $\pm(2,1)$ 模态扰动在 $Z$ 权接缝上的严格破坏下界（ $\gt 400c$ ）
 
 为了证明奇异界面测度核漏不仅发生在二阶权 $D$ 与零谐波轴对称场上，而且同样发生在一阶权 $Z$ 与非零角度谐波场上，我们给出第二族完全独立的解析反例。
 
@@ -506,7 +506,7 @@ $$
 同时，取分侧 $C^2$ 样条权函数
 
 $$
-Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c > 0), \tag{3.16}
+Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c \gt 0), \tag{3.16}
 $$
 
 其中径向截断函数 $P(\sigma)$ 在 $[0, \frac{1}{20}]$ 上恒为 $0$ ，在 $[\frac{1}{20}, \frac{1}{10}]$ 上为 $h(20\sigma - 1)$ ，在 $[\frac{1}{10}, 1)$ 上恒为 $1$ 。
@@ -530,12 +530,12 @@ $$
 \end{aligned} \tag{3.18}
 $$
 
-而在分侧 $C^2$ 权函数 $Z = c P(\sigma)|\eta|$ （ $c > 0$ ）下，不等式 (B.20) 的右端减左端差值 $\Delta := \mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}} = E _ Z(v)$ 满足不依赖任何数值积分的纯闭式解析下界：
+而在分侧 $C^2$ 权函数 $Z = c P(\sigma)|\eta|$ （ $c \gt 0$ ）下，不等式 (B.20) 的右端减左端差值 $\Delta := \mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}} = E _ Z(v)$ 满足不依赖任何数值积分的纯闭式解析下界：
 
 $$
 \begin{aligned}
 & \frac{\Delta}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} \cr
-& > \frac{26311}{64} > 400 > 0.
+& \gt \frac{26311}{64} \gt 400 \gt 0.
 \end{aligned} \tag{3.19}
 $$
 
@@ -603,8 +603,8 @@ $$
 $$
 
 故外部区域两项体积损失总和不超过 $2 \cdot \frac{2c}{\sqrt{3}} J = 80\pi^{3/2}c$ 。
-在微小过渡球壳 $\frac{1}{19} \le \rho \le \frac{1}{9}$ 上，由 $|P'(\sigma)| \le \frac{75}{2}$ 、 $|P''(\sigma)| \le 6000$ 及乘积求导链式法则得 $\Vert H _ Z\Vert _ {\mathrm{op}} < 9000c$ ，而球壳上 $|v|^2 \le 2\rho^{12}$ ，积分 $\int _ {\rho \le 1/9} |v|^2 dy \le \frac{8\pi}{15\cdot 9^{15}}$ ，故两项过渡区体积损失总和不超过 $\frac{9600\pi c}{9^{15}}$ 。
-将界面主项 $\frac{10395}{64}\pi^{3/2}c$ 减去外部体积最大损失 $80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ ，恰好余下 $\frac{10395 - 5120}{64}\pi^{3/2}c = \frac{5275}{64}\pi^{3/2}c$ 。再扣除两项极小有理指数尾项，利用 $\pi > 3 \implies \pi^{3/2} > 5$ ，即得 $\frac{\Delta}{c} > \frac{26375 - 64}{64} = \frac{26311}{64} > 400$ 。证毕。
+在微小过渡球壳 $\frac{1}{19} \le \rho \le \frac{1}{9}$ 上，由 $|P'(\sigma)| \le \frac{75}{2}$ 、 $|P''(\sigma)| \le 6000$ 及乘积求导链式法则得 $\Vert H _ Z\Vert _ {\mathrm{op}} \lt 9000c$ ，而球壳上 $|v|^2 \le 2\rho^{12}$ ，积分 $\int _ {\rho \le 1/9} |v|^2 dy \le \frac{8\pi}{15\cdot 9^{15}}$ ，故两项过渡区体积损失总和不超过 $\frac{9600\pi c}{9^{15}}$ 。
+将界面主项 $\frac{10395}{64}\pi^{3/2}c$ 减去外部体积最大损失 $80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ ，恰好余下 $\frac{10395 - 5120}{64}\pi^{3/2}c = \frac{5275}{64}\pi^{3/2}c$ 。再扣除两项极小有理指数尾项，利用 $\pi \gt 3 \implies \pi^{3/2} \gt 5$ ，即得 $\frac{\Delta}{c} \gt \frac{26375 - 64}{64} = \frac{26311}{64} \gt 400$ 。证毕。
 
 ---
 
@@ -612,7 +612,7 @@ $$
 
 ### 4.1 为什么奇异界面测度不能靠“微小圆角磨平”无代价消除？
 
-面对第三章的两族严格反例，一个最自然的修补冲动是：“既然分侧样条在赤道平面 $z = 0$ （即 $\eta = 0$ ）处的尖角 $|\eta|$ 产生了法向导数跳跃 $[\partial _ z W] \neq 0$ ，那么我们只需在赤道平面两侧宽度为 $2\delta$ （ $0 < \delta \le 1$ ）的极薄夹层 $|\eta| \le \delta$ 内，把尖角 $|\eta|$ 磨平为一个二阶连续可微的偶多项式样条 $s _ \delta(\eta)$ ，不就能让跨面跳跃 $[\partial _ z W] _ \Sigma = 0$ 彻底消失，从而恢复 $E _ {D _ \delta}(v) \le 0$ 了吗？”
+面对第三章的两族严格反例，一个最自然的修补冲动是：“既然分侧样条在赤道平面 $z = 0$ （即 $\eta = 0$ ）处的尖角 $|\eta|$ 产生了法向导数跳跃 $[\partial _ z W] \neq 0$ ，那么我们只需在赤道平面两侧宽度为 $2\delta$ （ $0 \lt \delta \le 1$ ）的极薄夹层 $|\eta| \le \delta$ 内，把尖角 $|\eta|$ 磨平为一个二阶连续可微的偶多项式样条 $s _ \delta(\eta)$ ，不就能让跨面跳跃 $[\partial _ z W] _ \Sigma = 0$ 彻底消失，从而恢复 $E _ {D _ \delta}(v) \le 0$ 了吗？”
 
 这一追问触及了连续统偏微分方程中“分布奇异性”与“光滑曲率税”之间最深刻的守恒律。让我们写出唯一满足端点二阶射流（2-jet）匹配条件的极小四次偶多项式过渡样条：
 
@@ -628,7 +628,7 @@ $$
 \tag{4.1}
 $$
 
-在 $|\eta| < \delta$ 内部，求一阶与二阶导数：
+在 $|\eta| \lt \delta$ 内部，求一阶与二阶导数：
 
 $$
 \begin{aligned}
@@ -644,7 +644,7 @@ $$
 
 #### 定理 4.1（强接合薄层过渡的曲率峰值与奇异界面质量守恒极限律）
 
-对于全局 $C^2(\mathbb{R}^3)$ 强接合权函数族 $D _ \delta = \frac{1}{2} + \frac{1}{4}\chi(\sigma)s _ \delta(\eta)$ （ $0 < \delta \le 1$ ）：
+对于全局 $C^2(\mathbb{R}^3)$ 强接合权函数族 $D _ \delta = \frac{1}{2} + \frac{1}{4}\chi(\sigma)s _ \delta(\eta)$ （ $0 \lt \delta \le 1$ ）：
 
 **（1）点态曲率峰值反比发散**： 样条二阶导数在 $\eta = 0$ 处达到峰值 $\max _ {|\eta|\le\delta} s _ \delta''(\eta) = \frac{3}{2\delta}$ （归一化界面核 $\frac{1}{2}s _ \delta''$ 的峰值为 $\frac{3}{4\delta}$ ），其总曲率质量对一切 $\delta \in (0,1]$ 恒为守恒常数：
 
@@ -655,7 +655,7 @@ $$
 \end{aligned} \tag{4.3}
 $$
 
-在赤道平面 $z = 0$ （ $r > 0$ ）上， $D _ \delta$ 的竖直二阶笛卡尔偏导数精确等于：
+在赤道平面 $z = 0$ （ $r \gt 0$ ）上， $D _ \delta$ 的竖直二阶笛卡尔偏导数精确等于：
 
 $$
 \begin{aligned}
@@ -664,12 +664,12 @@ $$
 \end{aligned} \tag{4.4}
 $$
 
-**（2）薄层体积海森罚项的非零极限**： 对任意紧支集连续非负测试场 $f \in C _ c(\mathbb{R}^3)$ （例如 $f = |\nabla v|^2$ ），当薄层厚度 $\delta \downarrow 0$ 时，尽管薄层 $\lbrace |\eta| < \delta\rbrace$ 的三维体积以 $O(\delta)$ 趋于零，但体积海森算子范数 $\Vert H _ {D _ \delta}\Vert _ {\mathrm{op}}$ 在薄层上的体积积分**绝不趋于零**，而是严格收敛到未磨平前奇异界面测度的配对积分：
+**（2）薄层体积海森罚项的非零极限**： 对任意紧支集连续非负测试场 $f \in C _ c(\mathbb{R}^3)$ （例如 $f = |\nabla v|^2$ ），当薄层厚度 $\delta \downarrow 0$ 时，尽管薄层 $\lbrace |\eta| \lt \delta\rbrace$ 的三维体积以 $O(\delta)$ 趋于零，但体积海森算子范数 $\Vert H _ {D _ \delta}\Vert _ {\mathrm{op}}$ 在薄层上的体积积分**绝不趋于零**，而是严格收敛到未磨平前奇异界面测度的配对积分：
 
 $$
 \begin{aligned}
-& \lim _ {\delta \downarrow 0} \int _ {|\eta| < \delta} \Vert H _ {D _ \delta}(y)\Vert _ {\mathrm{op}} f(y) dy \cr
-& = \int _ {z=0} \frac{\chi\left(\frac{r}{1+r}\right)}{2r} f(y _ 1, y _ 2, 0) dS _ \Sigma > 0.
+& \lim _ {\delta \downarrow 0} \int _ {|\eta| \lt \delta} \Vert H _ {D _ \delta}(y)\Vert _ {\mathrm{op}} f(y) dy \cr
+& = \int _ {z=0} \frac{\chi\left(\frac{r}{1+r}\right)}{2r} f(y _ 1, y _ 2, 0) dS _ \Sigma \gt 0.
 \end{aligned} \tag{4.5}
 $$
 
@@ -686,11 +686,11 @@ $$
 A _ \delta(y) = \frac{1}{4}\chi(\sigma)s _ \delta''(\eta) \nabla\eta \otimes \nabla\eta \succeq 0,
 $$
 
-而 $R _ \delta$ 仅含 $s _ \delta(\eta) = O(\delta)$ 、 $s _ \delta'(\eta) = O(1)$ 及光滑坐标导数，故 $\Vert R _ \delta\Vert _ {\mathrm{op}}$ 关于 $\delta \in (0,1]$ 一致有界。因薄层 $|\eta| < \delta$ 在紧集上的体积为 $O(\delta)$ ，余项贡献 $\int _ {|\eta|<\delta} \Vert R _ \delta\Vert _ {\mathrm{op}} f dy = O(\delta) \to 0$ 。对主部 $\Vert A _ \delta\Vert _ {\mathrm{op}} = \frac{1}{4}\chi(\sigma)s _ \delta''(\eta)|\nabla\eta|^2$ ，固定柱坐标 $(r, \varphi)$ ，以 $z = \frac{r\eta}{\sqrt{1-\eta^2}}$ 换元，则 $|\nabla\eta|^2 = \frac{1-\eta^2}{\rho^2} = \frac{(1-\eta^2)^2}{r^2}$ ， $dz = \frac{r}{(1-\eta^2)^{3/2}} d\eta$ ，从而薄层竖直积分为
+而 $R _ \delta$ 仅含 $s _ \delta(\eta) = O(\delta)$ 、 $s _ \delta'(\eta) = O(1)$ 及光滑坐标导数，故 $\Vert R _ \delta\Vert _ {\mathrm{op}}$ 关于 $\delta \in (0,1]$ 一致有界。因薄层 $|\eta| \lt \delta$ 在紧集上的体积为 $O(\delta)$ ，余项贡献 $\int _ {|\eta|\lt\delta} \Vert R _ \delta\Vert _ {\mathrm{op}} f dy = O(\delta) \to 0$ 。对主部 $\Vert A _ \delta\Vert _ {\mathrm{op}} = \frac{1}{4}\chi(\sigma)s _ \delta''(\eta)|\nabla\eta|^2$ ，固定柱坐标 $(r, \varphi)$ ，以 $z = \frac{r\eta}{\sqrt{1-\eta^2}}$ 换元，则 $|\nabla\eta|^2 = \frac{1-\eta^2}{\rho^2} = \frac{(1-\eta^2)^2}{r^2}$ ， $dz = \frac{r}{(1-\eta^2)^{3/2}} d\eta$ ，从而薄层竖直积分为
 
 $$
 \begin{aligned}
-& \int _ {|z| < r\delta/\sqrt{1-\delta^2}} \Vert A _ \delta\Vert _ {\mathrm{op}} f dz \cr
+& \int _ {|z| \lt r\delta/\sqrt{1-\delta^2}} \Vert A _ \delta\Vert _ {\mathrm{op}} f dz \cr
 & = \int _ {-\delta}^{\delta} \frac{\chi(\sigma)}{4r} s _ \delta''(\eta)\sqrt{1-\eta^2} f d\eta \cr
 & = \int _ {-1}^{1} \frac{\chi}{4r}\cdot\frac{3}{2}(1-t^2)\sqrt{1-\delta^2 t^2} \cr
 & \quad f(y _ 1,y _ 2,\tfrac{r\delta t}{\sqrt{1-\delta^2 t^2}}) dt.
@@ -740,7 +740,7 @@ $$
 
 #### 定理 5.1（引理 B.7 有限树加权杨氏消去与命题 B.8 自由补偿直和分解定理）
 
-设 $X = P \oplus F$ 为有限维实向量空间（ $P$ 为主扰动块， $F$ 为自由参数块）， $\mathcal{T}$ 为任意有限有根树。对每个节点 $\xi \in \mathcal{T}$ ，给定正权重向量 $w _ {\xi,i} > 0$ 、枢轴坐标子集 $U _ \xi$ 、枢轴系数 $p _ {\xi,j}$ 、行界 $m _ {\xi,i} > 0$ 、可舍弃列矩阵 $Y _ \xi'$ 、约束列矩阵 $Y _ \xi$ 、对称矩阵 $H _ \xi, K _ \xi, N _ \xi, V _ \xi$ 及逐项非负误差矩阵 $H _ \xi', K _ \xi'$ ，满足论文第 62 页公式 (B.39)–(B.40)：
+设 $X = P \oplus F$ 为有限维实向量空间（ $P$ 为主扰动块， $F$ 为自由参数块）， $\mathcal{T}$ 为任意有限有根树。对每个节点 $\xi \in \mathcal{T}$ ，给定正权重向量 $w _ {\xi,i} \gt 0$ 、枢轴坐标子集 $U _ \xi$ 、枢轴系数 $p _ {\xi,j}$ 、行界 $m _ {\xi,i} \gt 0$ 、可舍弃列矩阵 $Y _ \xi'$ 、约束列矩阵 $Y _ \xi$ 、对称矩阵 $H _ \xi, K _ \xi, N _ \xi, V _ \xi$ 及逐项非负误差矩阵 $H _ \xi', K _ \xi'$ ，满足论文第 62 页公式 (B.39)–(B.40)：
 
 $$
 \begin{aligned}
@@ -768,13 +768,13 @@ $$
 \end{aligned} \tag{5.3}
 $$
 
-**（2）全树求和与受限严格正定**： 对有限树 $\mathcal{T}$ 全部节点求和，每个非根节点 $\xi$ 恰好作为某个父节点的子节点出现一次，故内部传递项 $V _ \xi[x]$ 在左端一正一负精确对消；若根节点传递矩阵半正定 $V _ {\mathrm{root}}[x] \ge 0$ ，且每个坐标 $j$ 在全树上的累积枢轴下界 $D _ {jj} := \sum _ {\xi : j \in U _ \xi} \bar{p} _ {\xi,j} > 0$ ，则总矩阵 $N := \sum _ {\xi \in \mathcal{T}} N _ \xi$ 满足
+**（2）全树求和与受限严格正定**： 对有限树 $\mathcal{T}$ 全部节点求和，每个非根节点 $\xi$ 恰好作为某个父节点的子节点出现一次，故内部传递项 $V _ \xi[x]$ 在左端一正一负精确对消；若根节点传递矩阵半正定 $V _ {\mathrm{root}}[x] \ge 0$ ，且每个坐标 $j$ 在全树上的累积枢轴下界 $D _ {jj} := \sum _ {\xi : j \in U _ \xi} \bar{p} _ {\xi,j} \gt 0$ ，则总矩阵 $N := \sum _ {\xi \in \mathcal{T}} N _ \xi$ 满足
 
 $$
 N \succeq D - Y Y^T \qquad \bigl(Y := [Y _ \xi] _ {\xi \in \mathcal{T}}\bigr), \tag{5.4}
 $$
 
-进而在约束核子空间 $S := \ker Y^T \subseteq X$ 上严格正定： $N[x] \ge (\min _ j D _ {jj})|x|^2 > 0$ （ $\forall x \in S \setminus \lbrace 0\rbrace$ ）。
+进而在约束核子空间 $S := \ker Y^T \subseteq X$ 上严格正定： $N[x] \ge (\min _ j D _ {jj})|x|^2 \gt 0$ （ $\forall x \in S \setminus \lbrace 0\rbrace$ ）。
 
 **（3）自由块直和分解与唯一补偿**： 若在自由子空间 $F = \lbrace 0\rbrace \oplus F$ 上有 $N| _ F \preceq 0$ （由论文第 64 页公式 (B.44) 取零扰动 $v=0$ 时右端为 $-|\zeta|^2/1000 \le 0$ 保证），且约束列总数满足 $\operatorname{ncols}(Y) \le \dim F$ ，则必有 $S \cap F = \lbrace 0\rbrace$ 及维数夹逼：
 
@@ -797,11 +797,11 @@ $$
 H _ {-i} J z = 0, \qquad B J z \neq 0. \tag{5.6}
 $$
 
-（注：若被删去的是线性冗余行，例如 $H = \bigl[(1, 1); (2, 2)\bigr]$ 、 $B = (1, 1)$ 删去第一行，则 $\ker(H _ {-i}J) \subseteq \ker(BJ)$ 依然成立，不会发生核漏；因此绝不能笼统宣称“任删一行必核漏”，而必须按 (5.6) 构造同域非零核漏证人。）
+（注：若被删去的是线性冗余行，例如 $H = \begin{pmatrix} 1 & 1 \cr 2 & 2 \end{pmatrix}$ 、 $B = (1, 1)$ 删去第一行，则 $\ker(H _ {-i}J) \subseteq \ker(BJ)$ 依然成立，不会发生核漏；因此绝不能笼统宣称“任删一行必核漏”，而必须按 (5.6) 构造同域非零核漏证人。）
 
 #### 定理 5.3（受限子空间上真实主元翻号的瑞利商阈值判据）
 
-设对称矩阵 $N = L D L^T$ 在受限子空间 $S = \operatorname{im} J$ 上的诱导二次型 $Q _ S := J^T N J \succ 0$ 严格正定。若将 $D$ 的第 $j$ 个正主元 $d _ j > 0$ 翻号为 $-d _ j$ （即 $N' = N - 2d _ j L e _ j e _ j^T L^T$ ），令受限投影向量为 $b := J^T L e _ j$ ，定义无量纲瑞利（Rayleigh）商阈值：
+设对称矩阵 $N = L D L^T$ 在受限子空间 $S = \operatorname{im} J$ 上的诱导二次型 $Q _ S := J^T N J \succ 0$ 严格正定。若将 $D$ 的第 $j$ 个正主元 $d _ j \gt 0$ 翻号为 $-d _ j$ （即 $N' = N - 2d _ j L e _ j e _ j^T L^T$ ），令受限投影向量为 $b := J^T L e _ j$ ，定义无量纲瑞利（Rayleigh）商阈值：
 
 $$
 \tau := 2 d _ j b^T Q _ S^{-1} b \ge 0. \tag{5.7}
@@ -809,17 +809,17 @@ $$
 
 则翻号后的受限二次型 $Q _ S' = J^T N' J = Q _ S - 2d _ j b b^T$ 满足三分律：
 
-**情形一（亚阈值受扰）**： 当 $\tau < 1$ 时（例如被翻号的主元方向与受限子空间 $S$ 正交或耦合极弱）， $Q _ S' \succ 0$ 在 $S$ 上依然严格正定
+**情形一（亚阈值受扰）**： 当 $\tau \lt 1$ 时（例如被翻号的主元方向与受限子空间 $S$ 正交或耦合极弱）， $Q _ S' \succ 0$ 在 $S$ 上依然严格正定
 
 **情形二（临界退化）**： 当 $\tau = 1$ 时， $Q _ S' \succeq 0$ 退化为半正定且产生非零零空间方向 $z _ 0 = Q _ S^{-1} b$
 
-**情形三（超阈值翻号）**： 当且仅当 $\tau > 1$ 时， $Q _ S'$ 在受限子空间 $S$ 上真正出现严格负方向，且显式负证人向量 $z _ - := Q _ S^{-1} b$ 给出严格负值
+**情形三（超阈值翻号）**： 当且仅当 $\tau \gt 1$ 时， $Q _ S'$ 在受限子空间 $S$ 上真正出现严格负方向，且显式负证人向量 $z _ - := Q _ S^{-1} b$ 给出严格负值
 
 $$
-z _ -^T Q _ S' z _ - = \bigl(b^T Q _ S^{-1} b\bigr)(1 - \tau) < 0. \tag{5.8}
+z _ -^T Q _ S' z _ - = \bigl(b^T Q _ S^{-1} b\bigr)(1 - \tau) \lt 0. \tag{5.8}
 $$
 
-定理 5.2 与定理 5.3 告诉我们：对于论文未公开的外部证书（SHA-256 前缀 3f7a335b）以及被省略的 (B.16)/B.1/B.4 耦合系数，任何有效的科学审计都必须落实到 (5.6) 的同域核漏证人与 (5.7)–(5.8) 的受限瑞利阈值 $\tau > 1$ 上。
+定理 5.2 与定理 5.3 告诉我们：对于论文未公开的外部证书（SHA-256 前缀 3f7a335b）以及被省略的 (B.16)/B.1/B.4 耦合系数，任何有效的科学审计都必须落实到 (5.6) 的同域核漏证人与 (5.7)–(5.8) 的受限瑞利阈值 $\tau \gt 1$ 上。
 
 ### 5.3 静态分片乘子框架下的补充材料不变性定理：为何解封 SHA-256 证书或追加外围证明材料无法消除算子层偏差
 
@@ -835,9 +835,9 @@ $$
 
 核漏 $\ker q _ {\mathrm{bulk}} \not\subseteq \ker f _ v$ 发生在**连接有限维样条与无穷维无散流体的分布微分算子恒等式层**（定理 3.1： $D^2 W = H _ W dy + [\partial _ z W] _ \Sigma(e _ 3 \otimes e _ 3) dS _ \Sigma$ ），而绝非“证书文件里少了几个数值没印出来”。
 
-无论哈希原文件 $d \in \mathcal{D} _ B$ 内部装的是什么样条系数值：只要其分侧样条权函数 $W \in \lbrace D, Z\rbrace$ 在赤道平面 $\Sigma = \lbrace y _ 3 = 0\rbrace$ 的任意非空开环域上具有非零单侧法向恢复斜率（即 $[\partial _ z W] _ \Sigma > 0$ ），将该开环域代入定理 3.2 的紧支轴对称无散场 $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ （或定理 3.3 的施瓦茨无散场），不等式 (B.20) 即被严格为正的界面积分项所违反（反例族 A 给出 $E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\frac{633509743}{432432000} > 0$ ，反例族 B 给出 $\Delta/c > \frac{26311}{64} > 400 > 0$ ）。公开有理数系数表本身并不能改变 $\mathbb{R}^3$ 上的分布海森分部积分恒等式。
+无论哈希原文件 $d \in \mathcal{D} _ B$ 内部装的是什么样条系数值：只要其分侧样条权函数 $W \in \lbrace D, Z\rbrace$ 在赤道平面 $\Sigma = \lbrace y _ 3 = 0\rbrace$ 的任意非空开环域上具有非零单侧法向恢复斜率（即 $[\partial _ z W] _ \Sigma \gt 0$ ），将该开环域代入定理 3.2 的紧支轴对称无散场 $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ （或定理 3.3 的施瓦茨无散场），不等式 (B.20) 即被严格为正的界面积分项所违反（反例族 A 给出 $E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\frac{633509743}{432432000} \gt 0$ ，反例族 B 给出 $\Delta/c \gt \frac{26311}{64} \gt 400 \gt 0$ ）。公开有理数系数表本身并不能改变 $\mathbb{R}^3$ 上的分布海森分部积分恒等式。
 
-**分支二（附加赤道薄层二阶可微磨平修正或网格加密说明）**： 若作者追加一份补充修正说明，声称在赤道薄层 $|z| \le \delta$ （或 $|\eta| \le \delta$ ，其中 $\delta = \lambda\varepsilon$ ， $0 < \lambda \le \frac{1}{4}$ ）内将分侧尖角 $|z|$ 替换为满足二阶射流匹配的偶对称 $C^2$ 四次磨平样条 $s _ \delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ （使得跨面跳跃 $[\partial _ z D _ \delta] _ \Sigma = 0$ ，奇异面测度彻底归零）：
+**分支二（附加赤道薄层二阶可微磨平修正或网格加密说明）**： 若作者追加一份补充修正说明，声称在赤道薄层 $|z| \le \delta$ （或 $|\eta| \le \delta$ ，其中 $\delta = \lambda\varepsilon$ ， $0 \lt \lambda \le \frac{1}{4}$ ）内将分侧尖角 $|z|$ 替换为满足二阶射流匹配的偶对称 $C^2$ 四次磨平样条 $s _ \delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ （使得跨面跳跃 $[\partial _ z D _ \delta] _ \Sigma = 0$ ，奇异面测度彻底归零）：
 
 **（2a）原体积海森上界下的纯体积积分等量重现**： 考察定理 3.2 中**完全相同**的紧支无散反例场 $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ （ $\varepsilon = 2^{-16} = \frac{1}{65536}$ ）。由 (3.9)，在薄层 $|z| \le \delta$ 内，竖直速度的法向导数为 $\partial _ z v _ 3(r,z) = \frac{a'(s)}{r} b(t)$ （其中 $t = \frac{z}{\varepsilon}$ ， $b(t) := \frac{d}{dt}[t(1-t^2)^4] = (1-t^2)^3(1-9t^2) = 1 - 12t^2 + 30t^4 - 28t^6 + 9t^8$ ）。利用完全平方分解恒等式：
 
@@ -848,7 +848,7 @@ $$
 \end{aligned} \tag{5.9}
 $$
 
-可知对一切 $|t| \le \lambda \le \frac{1}{4}$ ，恒有 $b(t) \ge 1 - 12t^2 > 0$ 及 $b(t)^2 \ge (1-12t^2)^2 \ge 1 - 24t^2$ 。将磨平权函数 $D _ \delta$ 代入**纯体积海森积分**
+可知对一切 $|t| \le \lambda \le \frac{1}{4}$ ，恒有 $b(t) \ge 1 - 12t^2 \gt 0$ 及 $b(t)^2 \ge (1-12t^2)^2 \ge 1 - 24t^2$ 。将磨平权函数 $D _ \delta$ 代入**纯体积海森积分**
 
 $$
 \sum _ {k=1}^3 \int _ {\mathbb{R}^3} (\partial _ k v _ \varepsilon)^T H _ {D _ \delta}(\partial _ k v _ \varepsilon) dy,
@@ -868,7 +868,7 @@ $$
 $$
 \begin{aligned}
 & I _ {\mathrm{collar}}\left(\frac{1}{8}\right) = \frac{2787617180779875667}{3000241776758882304} \cr
-& > 1 - \frac{24}{5}\left(\frac{1}{8}\right)^2 = \frac{37}{40} = 0.925 > 0.
+& \gt 1 - \frac{24}{5}\left(\frac{1}{8}\right)^2 = \frac{37}{40} = 0.925 \gt 0.
 \end{aligned} \tag{5.11}
 $$
 
@@ -878,8 +878,8 @@ $$
 \begin{aligned}
 & \frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \cr
 & \ge \frac{16}{25} I _ {\mathrm{collar}}\left(\frac{1}{8}\right)A - 16 M K \varepsilon \cr
-& = \frac{2147573301937507667}{1611064563204096000} > \frac{16}{25}\cdot\frac{37}{40}A - 16 M K \varepsilon \cr
-& = \frac{2865558827}{2162160000} > \frac{13}{10} > 0.
+& = \frac{2147573301937507667}{1611064563204096000} \gt \frac{16}{25}\cdot\frac{37}{40}A - 16 M K \varepsilon \cr
+& = \frac{2865558827}{2162160000} \gt \frac{13}{10} \gt 0.
 \end{aligned} \tag{5.12}
 $$
 
@@ -890,7 +890,7 @@ $$
 $$
 \begin{aligned}
 & I _ 1(1,0) = Z(1,0) - \Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} - \frac{3w}{50} \cr
-& \le \frac{1}{4} - \frac{3}{8\delta} = \frac{1}{4} - 196608 = -\frac{786431}{4} < 0.
+& \le \frac{1}{4} - \frac{3}{8\delta} = \frac{1}{4} - 196608 = -\frac{786431}{4} \lt 0.
 \end{aligned} \tag{5.13}
 $$
 
@@ -936,7 +936,7 @@ $$
 U(x,y,z) := \bigl(\sin y + \sin z, \sin x, \sin x - \sin(x+y)\bigr). \tag{6.2}
 $$
 
-对任意实振幅 $a > 0$ ，考察一对正负孪生光滑无散初值 $u _ 0^\pm := \pm a U$ ，并设 $u^\pm(t,x)$ 为由其出发的真实局部光滑纳维－斯托克斯解（在 $s > 5/2$ 的索伯列夫球 $C([0,T], H^s(\mathbb{T}^3))$ 上由热半群杜哈梅尔压缩映射与高阶自举保证共同局部光滑寿命 $T > 0$ 及 $t=0$ 处的时间可微性）。则：
+对任意实振幅 $a \gt 0$ ，考察一对正负孪生光滑无散初值 $u _ 0^\pm := \pm a U$ ，并设 $u^\pm(t,x)$ 为由其出发的真实局部光滑纳维－斯托克斯解（在 $s \gt 5/2$ 的索伯列夫球 $C([0,T], H^s(\mathbb{T}^3))$ 上由热半群杜哈梅尔压缩映射与高阶自举保证共同局部光滑寿命 $T \gt 0$ 及 $t=0$ 处的时间可微性）。则：
 
 **（1）全谱静态二次读口下的恒同性**： 在初始时刻 $t = 0$ ， $u _ 0^+$ 与 $u _ 0^-$ 的每一个傅里叶单模厄米矩阵 $\hat{u} _ 0^\pm(k)\hat{u} _ 0^\pm(k)^{\ast}$ 逐模相等，且动能 $E$ 、平方涡量（拟能） $Y = \langle |\omega|^2\rangle$ 、涡度梯度平方 $Z = \langle |\nabla\omega|^2\rangle$ 及螺旋度（Helicity） $H = \langle u, \omega\rangle$ 完全相同：
 
@@ -1009,7 +1009,7 @@ $$
 
 #### 定理 6.2（任意维随流协变逆度规演化的全残差恒等式与纯平方耗散闭合定律）
 
-设空间维数 $d \ge 2$ 、向量通道维数 $m \ge 1$ 任意有限，记抛物对流－扩散算子为 $P _ \nu = D _ t - \nu \Delta$ （其中 $D _ t = \partial _ t + u \cdot \nabla$ ， $\nu > 0$ ）。设 $C(t,x) \in \mathbb{R}^{m\times m}$ 为共同光滑区间上的对称正定矩阵场（ $C = C^T \succ 0$ ）， $g := C^{-1}$ 为其逆度规，定义协变拉回涡度向量 $z := g\omega = C^{-1}\omega$ 及随流协变拟能密度：
+设空间维数 $d \ge 2$ 、向量通道维数 $m \ge 1$ 任意有限，记抛物对流－扩散算子为 $P _ \nu = D _ t - \nu \Delta$ （其中 $D _ t = \partial _ t + u \cdot \nabla$ ， $\nu \gt 0$ ）。设 $C(t,x) \in \mathbb{R}^{m\times m}$ 为共同光滑区间上的对称正定矩阵场（ $C = C^T \succ 0$ ）， $g := C^{-1}$ 为其逆度规，定义协变拉回涡度向量 $z := g\omega = C^{-1}\omega$ 及随流协变拟能密度：
 
 $$
 \mathcal{E}(t,x) := \omega^T C^{-1} \omega = \omega^T g \omega = z^T C z. \tag{6.8}
@@ -1101,7 +1101,7 @@ $$
 s _ {\mathrm{reset}} := \frac{1}{2}\bigl\langle \omega, (I - C^{-1})\omega\rangle \tag{6.17}
 $$
 
-（当 $C = 2I$ 时 $s _ {\mathrm{reset}} > 0$ ，当 $C = \frac{1}{2}I$ 时 $s _ {\mathrm{reset}} < 0$ ）。记累计真实黏性耗散为 $d$ ，累计重置跳变和为 $S$ ，则在由“连续黏性耗散步 $(h, d, S) \mapsto (h-\delta, d+\delta, S)$ ”与“离散度规重置步 $(h, d, S) \mapsto (h+s _ {\mathrm{reset}}, d, S+s _ {\mathrm{reset}})$ ”组成的任意有限混合演化词的**每一个中间前缀**上，恒有严格守恒律：
+（当 $C = 2I$ 时 $s _ {\mathrm{reset}} \gt 0$ ，当 $C = \frac{1}{2}I$ 时 $s _ {\mathrm{reset}} \lt 0$ ）。记累计真实黏性耗散为 $d$ ，累计重置跳变和为 $S$ ，则在由“连续黏性耗散步 $(h, d, S) \mapsto (h-\delta, d+\delta, S)$ ”与“离散度规重置步 $(h, d, S) \mapsto (h+s _ {\mathrm{reset}}, d, S+s _ {\mathrm{reset}})$ ”组成的任意有限混合演化词的**每一个中间前缀**上，恒有严格守恒律：
 
 $$
 h + d - S = h _ 0. \tag{6.18}
@@ -1157,19 +1157,19 @@ $$
 | 三：未闭合归约 | 附录 B 与外部证书 | 解封、磨平与扩充引理的三难 | 定理 5.4，式 (5.11)–(5.13) | 现有静态分片乘子架构仍受约束 |
 | 四：流体演化读口 | 静态能谱与协变逆度规 | 反号盲区与纯平方耗散 | 定理 6.1–6.2 | 须保留欧氏回读与重置代价 |
 
-**（一）第一层（跨赤道平面奇异界面测度遗漏）**：在附录 B 第 53 页分侧样条权函数 $D, Z$ 到第 54 页 (B.16) 及第 55–56 页命题 B.1 不等式 (B.20) 的分部积分推导中，体积读口 $q _ {\mathrm{bulk}}(D^2 W) = H _ {\mathrm{bulk}}$ 抹去了集中在零体积平面 $y _ 3=0$ 上的奇异狄拉克面测度 $\Sigma _ W = [\partial _ z W]e _ 3\otimes e _ 3 dS _ {z=0} \in \ker q _ {\mathrm{bulk}}$ ，但无散场两次分部积分泛函 $f _ v$ 对该奇异测度给出严格正配对（ $\Sigma _ W \notin \ker f _ v$ ）。反例族 A（轴对称紧支无散场， $D _ + = \frac12 + \frac14\chi \lvert \eta \rvert$ ）给出精确有理破坏裕量 $E _ {D _ +}(v) \ge \frac{\pi}{65536}\frac{633509743}{432432000} > 0$ 与双权分离 $\ge 2\gamma _ \varepsilon$ ；反例族 B（施瓦茨高斯 $\pm(2,1)$ 模态， $Z = cP \lvert \eta \rvert$ ）给出解析下界 $\Delta/c \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > 400 > 0$ ，从而严格证伪了未施加跨平面法向导数接合前件的分侧 $C^2$ 版本命题 B.1 / (B.20)。
+**（一）第一层（跨赤道平面奇异界面测度遗漏）**：在附录 B 第 53 页分侧样条权函数 $D, Z$ 到第 54 页 (B.16) 及第 55–56 页命题 B.1 不等式 (B.20) 的分部积分推导中，体积读口 $q _ {\mathrm{bulk}}(D^2 W) = H _ {\mathrm{bulk}}$ 抹去了集中在零体积平面 $y _ 3=0$ 上的奇异狄拉克面测度 $\Sigma _ W = [\partial _ z W]e _ 3\otimes e _ 3 dS _ {z=0} \in \ker q _ {\mathrm{bulk}}$ ，但无散场两次分部积分泛函 $f _ v$ 对该奇异测度给出严格正配对（ $\Sigma _ W \notin \ker f _ v$ ）。反例族 A（轴对称紧支无散场， $D _ + = \frac12 + \frac14\chi \lvert \eta \rvert$ ）给出精确有理破坏裕量 $E _ {D _ +}(v) \ge \frac{\pi}{65536}\frac{633509743}{432432000} \gt 0$ 与双权分离 $\ge 2\gamma _ \varepsilon$ ；反例族 B（施瓦茨高斯 $\pm(2,1)$ 模态， $Z = cP \lvert \eta \rvert$ ）给出解析下界 $\Delta/c \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} \gt 400 \gt 0$ ，从而严格证伪了未施加跨平面法向导数接合前件的分侧 $C^2$ 版本命题 B.1 / (B.20)。
 
 **（二）第二层（强接合修复下的薄层曲率守恒律）**：跨赤道平面 $\lvert \eta \rvert \le \delta$ 的全局 $C^2(\mathbb{R}^3)$ 四次过渡样条 $s _ \delta(\eta)$ 虽消除了奇异面测度，但法向总曲率质量 $\int _ {-\delta}^{\delta} s _ \delta''(\eta) d\eta = 2$ 严格守恒，薄层内法向二阶导数以 $O(\delta^{-1})$ 峰值 $\max s _ \delta'' = \frac{3}{2\delta}$ 及 $\partial _ {zz}D _ \delta(r,0) = \frac{3\chi}{8\delta r^2} + \frac{3\delta\chi'}{32r(1+r)^2}$ 高度集中，并在 $\delta\downarrow 0$ 时满足：
 
 $$
 \begin{aligned}
-& \lim _ {\delta\downarrow 0} \int _ { \lvert \eta \rvert <\delta} \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}}f dy \cr
-& = \int _ {z=0} \frac{\chi}{2r}f dS > 0.
+& \lim _ {\delta\downarrow 0} \int _ { \lvert \eta \rvert \lt\delta} \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}}f dy \cr
+& = \int _ {z=0} \frac{\chi}{2r}f dS \gt 0.
 \end{aligned}
 $$
 
 这表明强接合前件不可无代价附加：任何满足全局 $C^2$ 正则性的权函数都必须在体积海森范数项中显式承担该赤道跨面曲率代价。
 
-**（三）第三层（纸面未闭合归约缺口、未公开外部证书与补充材料静态不变性定理）**：论文第 1、4、10、38–39、54–60、62–64、69–70 页的顶层蕴涵链（定理 1.1 $\Leftarrow$ 定理 7.1 $\Leftarrow$ 定理 B.14 $\Leftarrow$ 外部证书 $d \in \mathcal{D} _ B$ ，SHA-256 前缀 3f7a335b...）在纸面省略了 (B.16) 误差系数、命题 B.1 与 B.4 的完整证明及第 70 页的 7 项附加条件。定理 5.4（补证三难定理）进一步证明：该偏差发生在分布算子恒等式层，解封 SHA-256 系数表不能改写 $D^2 W$ ；在薄层比例 $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ （ $\delta = 2^{-19}$ ）下附加薄层 $C^2$ 磨平会以转移因子 $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ 在同一无散场 $v _ \varepsilon$ 上维持纯体积正残差 $\ge \frac{\pi}{65536}\frac{2147573301937507667}{1611064563204096000} > 0$ ，或将一阶梯度系数推至 $I _ 1(1,0) \le -\frac{786431}{4} < 0$ ；而在已存同域反例底座上扩充外围引理亦无法消除该算子层偏差。
+**（三）第三层（纸面未闭合归约缺口、未公开外部证书与补充材料静态不变性定理）**：论文第 1、4、10、38–39、54–60、62–64、69–70 页的顶层蕴涵链（定理 1.1 $\Leftarrow$ 定理 7.1 $\Leftarrow$ 定理 B.14 $\Leftarrow$ 外部证书 $d \in \mathcal{D} _ B$ ，SHA-256 前缀 3f7a335b...）在纸面省略了 (B.16) 误差系数、命题 B.1 与 B.4 的完整证明及第 70 页的 7 项附加条件。定理 5.4（补证三难定理）进一步证明：该偏差发生在分布算子恒等式层，解封 SHA-256 系数表不能改写 $D^2 W$ ；在薄层比例 $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ （ $\delta = 2^{-19}$ ）下附加薄层 $C^2$ 磨平会以转移因子 $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} \gt \frac{37}{40}$ 在同一无散场 $v _ \varepsilon$ 上维持纯体积正残差 $\ge \frac{\pi}{65536}\frac{2147573301937507667}{1611064563204096000} \gt 0$ ，或将一阶梯度系数推至 $I _ 1(1,0) \le -\frac{786431}{4} \lt 0$ ；而在已存同域反例底座上扩充外围引理亦无法消除该算子层偏差。
 
 **（四）第四层（三维流体动力学的演化真体与静态投影伪影分界）**：对比三维不可压纳维－斯托克斯涡度演化与固定欧氏能谱读口 $q _ {\mathrm{static}}$ 及随流协变逆度规 $g = C^{-1}$ ，静态欧氏二次能谱读口对整体反号盲视（ $q _ {\mathrm{static}}(+17U) = q _ {\mathrm{static}}(-17U)$ ），丢失了三次涡度拉伸的奇次符号，且论文公式 (B.18) 关于扰动 $v$ 同样为二次偶泛函 $J _ {W^r}(-v) = J _ {W^r}(v)$ 。静态同谱双初值 $\pm 17U$ 的真实拟能初导数分歧达 $Y _ +'(0) - Y _ -'(0) = 4913$ ，而随流协变逆度规 $g = C^{-1}$ 将非交换涡度拉伸精确抵消为纯平方耗散 $P _ \nu(\omega^T C^{-1}\omega) = -2\nu\sum _ i (\partial _ i z)^T C (\partial _ i z) \le 0$ ，划定了欧氏回读谱条件数桥与前缀重置成本守恒的严格边界。

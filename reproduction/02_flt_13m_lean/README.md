@@ -34,7 +34,9 @@ This directory contains the standalone, reproducible Lean 4 kernel verification 
 - Lean 4 toolchain (`v4.33.1` or any standard Lean 4 release; uses only the built-in core library with zero external package dependencies).
 - Lean 4 工具链（`v4.33.1` 或任意标准 Lean 4 版本；仅使用内置标准核心库，零外部包依赖）。
 
-### Command / 执行命令```bash
+### Command / 执行命令
+
+```bash
 lean lean4_flt_real_kernel_verification.lean
 ```
 
@@ -45,15 +47,15 @@ lean lean4_flt_real_kernel_verification.lean
 
 ### What `lean4_flt_real_kernel_verification.lean` Mechanically Certifies / 内核探针机械核验的三大定理模块
 
-1. Section 1 — Counterfactual Carrier Embedding (`P : FreyPackage`) & Ex-Falso Discharge on Small-Prime Branches / 第一节——基础载体反事实等式内置与小素数分支的爆炸原理消去:
+1. **Section 1 — Counterfactual Carrier Embedding and Ex-Falso Discharge on Small-Prime Branches / 第一节——基础载体反事实等式内置与小素数分支的爆炸原理消去** (`P : FreyPackage`):
    - **EN**: Reproduces the structural skeleton of `Definitions/Def_FLTPrelim_FreyPackage.lean` (lines 12–34) and `P2M/Sol/S_FreyPackage_frey_no_cofixed_eleven.lean` (lines 14–24), where `hFLT : a^p + b^p = c^p` is embedded directly inside `FreyPackage`. Mechanically proves `frey_no_cofixed_eleven_repro`, `frey_yes_cofixed_eleven_collapse`, and `frey_arbitrary_prop_at_eleven_collapse`: because `P.p_ne_of_fermatLastTheoremFor` deduces `P.p ≠ 11` from `P.hFLT` and the external theorem `fermatLastTheoremEleven`, the exact same one-line proof `exact absurd hp (P.p_ne_of_fermatLastTheoremFor fermatLastTheoremEleven)` simultaneously proves `¬ HasGaloisStableCofixedLine P`, its direct negation `HasGaloisStableCofixedLine P`, and any arbitrary proposition `Q : Prop` on the `P.p = 11` branch.
    - **ZH**：复现 `Definitions/Def_FLTPrelim_FreyPackage.lean`（第 12–34 行）与 `P2M/Sol/S_FreyPackage_frey_no_cofixed_eleven.lean`（第 14–24 行）的依赖骨架。机械证成 `frey_no_cofixed_eleven_repro`、`frey_yes_cofixed_eleven_collapse` 与 `frey_arbitrary_prop_at_eleven_collapse`：由于 `P.hFLT` 与外部导入的十一指数费马定理直接推出 `P.p ≠ 11`，完全相同的单行证明 `exact absurd hp (P.p_ne_of_fermatLastTheoremFor fermatLastTheoremEleven)` 在 `P.p = 11` 分支上既能证出“无共不动线” `¬ HasGaloisStableCofixedLine P`，也能一字不改地证出其反命题“存在共不动线” `HasGaloisStableCofixedLine P` 以及任意命题 `Q : Prop`。
 
-2. Section 2 — Unreferenced Explicit `IsModular` Hypothesis (`set_option linter.unusedVariables false`) & Internal Contradiction Elimination in Level Lowering / 第二节——未消费的显式 `IsModular` 形参与降水平引理内部的提前矛盾消去:
+2. **Section 2 — Unreferenced Explicit Modularity Hypothesis and Internal Contradiction Elimination in Level Lowering / 第二节——未消费的显式模性形参与降水平引理内部的提前矛盾消去** (`IsModular`, `set_option linter.unusedVariables false`):
    - **EN**: Reproduces the dependency skeletons of `P2M/Sol/S_FreyPackage_level_lowering_to_two.lean` (lines 129–134) and `P2M/Sol/S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean` (lines 163–170). Demonstrates that `(hmod : IsModular P)` is left unreferenced under `set_option linter.unusedVariables false in`, while inside `level_lowering_to_two_of_conductorLevel_repro`, descending only to $M \in \lbrace 1, 2\rbrace$ ( $M \mid 2$ ) is resolved by importing `S2_Gamma0_eq_zero_of_dvd_two` inside the lemma and applying `absurd` to non-constructively populate `∃ f : CuspFormGamma0 2, f ≠ CuspFormZero 2`.
    - **ZH**：复现 `P2M/Sol/S_FreyPackage_level_lowering_to_two.lean`（第 129–134 行）与 `P2M/Sol/S_FreyPackage_level_lowering_to_two_of_conductorLevel.lean`（第 163–170 行）的调用结构。核验显式参数 `(hmod : IsModular P)` 在关闭未使用变量检查下未被证明项引用，且 `level_lowering_to_two_of_conductorLevel_repro` 在仅归纳下降至 $M \in \lbrace 1, 2\rbrace$ （ $M \mid 2$ ）时，通过在引理内部导入 `S2_Gamma0_eq_zero_of_dvd_two` 并调用 `absurd`（爆炸原理）非构造性地生成返回值 `∃ f : CuspFormGamma0 2, f ≠ CuspFormZero 2`。
 
-3. Section 3 — Coordinate Scaling of Raw Integral Weierstrass Equations, Elliptic Curve Specimen $E _ {11}$ , and Three Models of the Pythagorean Triple $(3,4,5; p=2)$ / 第三节——裸整系数 Weierstrass 方程的同构缩放依赖性、椭圆曲线试件 $E _ {11}$ 与勾股三元组 $(3,4,5; p=2)$ 的三种模型:
+3. **Section 3 — Coordinate Scaling of Raw Integral Weierstrass Equations, Elliptic Curve Specimen, and Three Models of the Pythagorean Triple / 第三节——裸整系数 Weierstrass 方程的同构缩放依赖性、椭圆曲线试件与勾股三元组的三种模型** ( $E _ {11}$ , $(3,4,5; p=2)$ ):
    - **EN**: Mechanically verifies the exact invariants of $E _ {11} : y^2 + y = x^3 - x^2 - 10x - 20$ ( $\Delta = -161051 = -11^5$ , $c _ 4 = 496$ , $c _ 6 = 20008$ ), its $u = 2$ scaled model $E _ {11}^{(2)}$ ( $\Delta' = 2^{12}\Delta$ , $c _ 4' = 2^4 c _ 4$ , where $2 \mid \Delta'$ and $2 \mid c _ 4'$ falsify the unnormalized semistability predicate), the complete order- $5$ rational torsion trajectory $P=(5,5), 2P=(16,-61), 3P=(16,60), 4P=(5,-6), 5P=\mathcal{O}$ , the irreducibility of the mod- $7$ Frobenius characteristic polynomial $T^2 + 2T + 2 \pmod 7$ at $\ell = 2$ , and the exact invariant separation across the three models of $(3,4,5; p=2)$ .
    - **ZH**：在 Lean 4 内核中机械核验导子 $11$ 椭圆曲线试件 $E _ {11}$ 的精确不变量（ $\Delta = -161051 = -11^5, c _ 4 = 496, c _ 6 = 20008$ ）、 $u = 2$ 同构缩放模型下未规范化半稳定谓词的真值退化（ $2 \mid \Delta'$ 且 $2 \mid c _ 4'$ ）、 $5$ 阶有理挠子群完整群律恒等式、模 $7$ Frobenius 特征多项式 $T^2 + 2T + 2 \bmod 7$ 在 $\mathbb{F} _ 7$ 上的无根不可约性，以及勾股三元组 $(3,4,5; p=2)$ 三种模型的不变量分离。
 

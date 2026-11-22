@@ -49,9 +49,9 @@ $$
 
 ## 2. Half-Space $C^2$ Twin Weights $D _ \pm$ and the Distributional Hessian Identity / 分侧 $C^2$ 双权函数 $D _ \pm$ 与分布海森恒等式
 
-Let $h(t) = 6t^5 - 15t^4 + 10t^3$ be the quintic Hermite step polynomial on $[0, 1]$ , and define the radial cutoff $\chi(\sigma) = 0$ for $\sigma \le \frac{1}{4}$ , $\chi(\sigma) = h(12\sigma - 3)$ for $\frac{1}{4} < \sigma < \frac{1}{3}$ , and $\chi(\sigma) = 1$ for $\sigma \ge \frac{1}{3}$ . Define the twin half-space $C^2$ spline weights:
+Let $h(t) = 6t^5 - 15t^4 + 10t^3$ be the quintic Hermite step polynomial on $[0, 1]$ , and define the radial cutoff $\chi(\sigma) = 0$ for $\sigma \le \frac{1}{4}$ , $\chi(\sigma) = h(12\sigma - 3)$ for $\frac{1}{4} \lt \sigma \lt \frac{1}{3}$ , and $\chi(\sigma) = 1$ for $\sigma \ge \frac{1}{3}$ . Define the twin half-space $C^2$ spline weights:
 
-令五次埃尔米特阶跃多项式为 $h(t) = 6t^5 - 15t^4 + 10t^3$ ，定义径向截断函数 $\chi(\sigma)$ 在 $\sigma \le \frac{1}{4}$ 时为 $0$ ，在 $\frac{1}{4} < \sigma < \frac{1}{3}$ 时为 $h(12\sigma - 3)$ ，在 $\sigma \ge \frac{1}{3}$ 时为 $1$ 。定义分侧 $C^2$ 双权函数：
+令五次埃尔米特阶跃多项式为 $h(t) = 6t^5 - 15t^4 + 10t^3$ ，定义径向截断函数 $\chi(\sigma)$ 在 $\sigma \le \frac{1}{4}$ 时为 $0$ ，在 $\frac{1}{4} \lt \sigma \lt \frac{1}{3}$ 时为 $h(12\sigma - 3)$ ，在 $\sigma \ge \frac{1}{3}$ 时为 $1$ 。定义分侧 $C^2$ 双权函数：
 
 $$
 \begin{aligned}
@@ -76,9 +76,9 @@ $$
 
 ## 3. Compactly Supported Axisymmetric Solenoidal Perturbation $v _ \varepsilon$ and Exact Rational Margin / 紧支集轴对称无散扰动场 $v _ \varepsilon$ 与精确有理破坏裕量
 
-Let $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ (supported on $[-1, 1]$ with $a(0) = 1$ ). For $0 < \varepsilon \le \frac{1}{4}$ , define the axisymmetric stream function and cylindrical velocity components $(v _ r, v _ \varphi, v _ 3)$ :
+Let $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ (supported on $[-1, 1]$ with $a(0) = 1$ ). For $0 \lt \varepsilon \le \frac{1}{4}$ , define the axisymmetric stream function and cylindrical velocity components $(v _ r, v _ \varphi, v _ 3)$ :
 
-取偶多项式母函数 $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ （支集为 $[-1, 1]$ ， $a(0) = 1$ ）。对 $0 < \varepsilon \le \frac{1}{4}$ ，定义轴对称流函数与柱坐标速度分量 $(v _ r, v _ \varphi, v _ 3)$ ：
+取偶多项式母函数 $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ （支集为 $[-1, 1]$ ， $a(0) = 1$ ）。对 $0 \lt \varepsilon \le \frac{1}{4}$ ，定义轴对称流函数与柱坐标速度分量 $(v _ r, v _ \varphi, v _ 3)$ ：
 
 $$
 \begin{aligned}
@@ -100,7 +100,7 @@ $$
 \end{aligned} \tag{A.5}
 $$
 
-On the toroidal support $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ (where $\rho \ge r \ge \frac{3}{4}$ and volume is $8\pi\varepsilon^2$ ), the open-set bulk Hessian norm satisfies $\Vert H _ {D _ +}\Vert _ {\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{8}{3} < 3 =: M$ , and the five cylindrical gradient components satisfy
+On the toroidal support $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ (where $\rho \ge r \ge \frac{3}{4}$ and volume is $8\pi\varepsilon^2$ ), the open-set bulk Hessian norm satisfies $\Vert H _ {D _ +}\Vert _ {\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{8}{3} \lt 3 =: M$ , and the five cylindrical gradient components satisfy
 
 $$
 \begin{aligned}
@@ -111,7 +111,7 @@ $$
 
 Choosing $\varepsilon = 2^{-16} = \frac{1}{65536}$ yields the exact rational lower bound:
 
-在环形支集 $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ （此处 $\rho \ge r \ge \frac{3}{4}$ ，体积为 $8\pi\varepsilon^2$ ）上，开区域体积海森算子范数满足 $\Vert H _ {D _ +}\Vert _ {\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{8}{3} < 3 =: M$ ，五项柱坐标梯度平方和满足
+在环形支集 $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ （此处 $\rho \ge r \ge \frac{3}{4}$ ，体积为 $8\pi\varepsilon^2$ ）上，开区域体积海森算子范数满足 $\Vert H _ {D _ +}\Vert _ {\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{8}{3} \lt 3 =: M$ ，五项柱坐标梯度平方和满足
 
 $$
 \begin{aligned}
@@ -125,31 +125,31 @@ $$
 $$
 \begin{aligned}
 & E _ {D _ +}(v _ \varepsilon) \ge \pi\varepsilon\left(\frac{16}{25}A - 16 M K \varepsilon\right) \cr
-& = \frac{\pi}{65536}\cdot\frac{633509743}{432432000} > 0,
+& = \frac{\pi}{65536}\cdot\frac{633509743}{432432000} \gt 0,
 \end{aligned} \tag{A.6}
 $$
 
-while $E _ {D _ -}(v _ \varepsilon) \le -\frac{\pi}{65536}\cdot\frac{633509743}{432432000} < 0$ , giving a dual-weight separation
+while $E _ {D _ -}(v _ \varepsilon) \le -\frac{\pi}{65536}\cdot\frac{633509743}{432432000} \lt 0$ , giving a dual-weight separation
 
 $$
-E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0
+E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} \gt 0
 $$
 
-under identical reduced readout $q _ {\mathrm{red}}(D _ +) = q _ {\mathrm{red}}(D _ -)$ . (Replacing $a(t)$ by the $C _ c^\infty$ bump $a _ \infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1} _ {|t|<1}$ at $\varepsilon = 10^{-15}$ likewise gives $E _ {D _ +}(v _ \varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} > 0$ .)
+under identical reduced readout $q _ {\mathrm{red}}(D _ +) = q _ {\mathrm{red}}(D _ -)$ . (Replacing $a(t)$ by the $C _ c^\infty$ bump $a _ \infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1} _ {|t|\lt1}$ at $\varepsilon = 10^{-15}$ likewise gives $E _ {D _ +}(v _ \varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} \gt 0$ .)
 
-同时对负权函数有 $E _ {D _ -}(v _ \varepsilon) \le -\frac{\pi}{65536}\cdot\frac{633509743}{432432000} < 0$ ，从而在相同简化读口 $q _ {\mathrm{red}}(D _ +) = q _ {\mathrm{red}}(D _ -)$ 下给出双权分离
+同时对负权函数有 $E _ {D _ -}(v _ \varepsilon) \le -\frac{\pi}{65536}\cdot\frac{633509743}{432432000} \lt 0$ ，从而在相同简化读口 $q _ {\mathrm{red}}(D _ +) = q _ {\mathrm{red}}(D _ -)$ 下给出双权分离
 
 $$
-E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0.
+E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} \gt 0.
 $$
 
-（若将 $a(t)$ 替换为 $C _ c^\infty$ 光滑隆起函数 $a _ \infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1} _ {|t|<1}$ 并取 $\varepsilon = 10^{-15}$ ，同样有 $E _ {D _ +}(v _ \varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} > 0$ 。）
+（若将 $a(t)$ 替换为 $C _ c^\infty$ 光滑隆起函数 $a _ \infty(t) = \exp(1 - (1-t^2)^{-1})\mathbf{1} _ {|t|\lt1}$ 并取 $\varepsilon = 10^{-15}$ ，同样有 $E _ {D _ +}(v _ \varepsilon) \ge \frac{4\pi}{9}\times 10^{-15} \gt 0$ 。）
 
 ---
 
 ## 4. Quartic Collar Spline $s _ \delta$ and 100% Curvature-Tax Transfer into the Bulk Hessian / 四次薄层磨平样条 $s _ \delta$ 与奇异曲率质量向体积海森的守恒转移
 
-If one restores global $C^2(\mathbb{R}^3)$ regularity by replacing $|\eta|$ (or $|z|$ ) inside a thin equatorial collar $|z| \le \delta = \lambda\varepsilon$ ( $0 < \lambda \le \frac{1}{4}$ ) with the even quartic spline $s _ \delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ , then $[\partial _ z D _ \delta] _ \Sigma = 0$ , but $\int _ {-\delta}^{\delta} s _ \delta''(z) dz = 2$ and $\max _ {|z|\le\delta} s _ \delta''(z) = \frac{3}{2\delta}$ .
+If one restores global $C^2(\mathbb{R}^3)$ regularity by replacing $|\eta|$ (or $|z|$ ) inside a thin equatorial collar $|z| \le \delta = \lambda\varepsilon$ ( $0 \lt \lambda \le \frac{1}{4}$ ) with the even quartic spline $s _ \delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ , then $[\partial _ z D _ \delta] _ \Sigma = 0$ , but $\int _ {-\delta}^{\delta} s _ \delta''(z) dz = 2$ and $\max _ {|z|\le\delta} s _ \delta''(z) = \frac{3}{2\delta}$ .
 
 On the same solenoidal field $v _ \varepsilon$ , since $\partial _ z v _ 3(r,z) = \frac{a'(s)}{r} b(t)$ with
 
@@ -166,18 +166,18 @@ $$
 \end{aligned}
 $$
 
-At $\lambda = \frac{1}{8}$ ( $\delta = 2^{-19} = \frac{1}{524288}$ ), $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ , yielding a pure-bulk violation margin
+At $\lambda = \frac{1}{8}$ ( $\delta = 2^{-19} = \frac{1}{524288}$ ), $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} \gt \frac{37}{40}$ , yielding a pure-bulk violation margin
 
 $$
 \begin{aligned}
 & \frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \cr
-& \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0
+& \ge \frac{2147573301937507667}{1611064563204096000} \gt \frac{13}{10} \gt 0
 \end{aligned}
 $$
 
-against the unsmoothed bulk bound $M = 3$ , while absorbing $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ into $I _ 1 = Z - \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}} - \frac{3w}{50}$ drives $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ .
+against the unsmoothed bulk bound $M = 3$ , while absorbing $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ into $I _ 1 = Z - \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}} - \frac{3w}{50}$ drives $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} \lt 0$ .
 
-若在赤道薄层 $|z| \le \delta = \lambda\varepsilon$ （ $0 < \lambda \le \frac{1}{4}$ ）内用偶对称四次样条 $s _ \delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ 替换 $|z|$ （或 $|\eta|$ ）以恢复全局 $C^2(\mathbb{R}^3)$ 正则性，虽有 $[\partial _ z D _ \delta] _ \Sigma = 0$ ，但总曲率质量 $\int _ {-\delta}^{\delta} s _ \delta''(z) dz = 2$ 严格守恒且峰值达到 $\max _ {|z|\le\delta} s _ \delta''(z) = \frac{3}{2\delta}$ 。
+若在赤道薄层 $|z| \le \delta = \lambda\varepsilon$ （ $0 \lt \lambda \le \frac{1}{4}$ ）内用偶对称四次样条 $s _ \delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ 替换 $|z|$ （或 $|\eta|$ ）以恢复全局 $C^2(\mathbb{R}^3)$ 正则性，虽有 $[\partial _ z D _ \delta] _ \Sigma = 0$ ，但总曲率质量 $\int _ {-\delta}^{\delta} s _ \delta''(z) dz = 2$ 严格守恒且峰值达到 $\max _ {|z|\le\delta} s _ \delta''(z) = \frac{3}{2\delta}$ 。
 
 对同一无散场 $v _ \varepsilon$ ，由 $\partial _ z v _ 3(r,z) = \frac{a'(s)}{r} b(t)$ 及平方和分解 $b(t) = 1 - 12t^2 + t^4\bigl(9(t^2 - \frac{14}{9})^2 + \frac{74}{9}\bigr) \ge 1 - 12t^2$ ，薄层竖直积分将原面积分转移为薄层内的纯体积海森积分，转移因子为
 
@@ -188,13 +188,13 @@ $$
 \end{aligned}
 $$
 
-在 $\lambda = \frac{1}{8}$ （ $\delta = 2^{-19} = \frac{1}{524288}$ ）下， $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ ，在原开域海森界 $M = 3$ 下仍给出纯体积正偏差
+在 $\lambda = \frac{1}{8}$ （ $\delta = 2^{-19} = \frac{1}{524288}$ ）下， $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} \gt \frac{37}{40}$ ，在原开域海森界 $M = 3$ 下仍给出纯体积正偏差
 
 $$
 \begin{aligned}
 & \frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \cr
-& \ge \frac{2147573301937507667}{1611064563204096000} > \frac{13}{10} > 0;
+& \ge \frac{2147573301937507667}{1611064563204096000} \gt \frac{13}{10} \gt 0;
 \end{aligned}
 $$
 
-而若将薄层曲率峰值 $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ 计入 $I _ 1 = Z - \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}} - \frac{3w}{50}$ ，则使 $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} < 0$ 。
+而若将薄层曲率峰值 $\Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} \ge \frac{3}{8\delta} = 196608$ 计入 $I _ 1 = Z - \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}} - \frac{3w}{50}$ ，则使 $I _ 1(1,0) \le \frac{1}{4} - 196608 = -\frac{786431}{4} \lt 0$ 。

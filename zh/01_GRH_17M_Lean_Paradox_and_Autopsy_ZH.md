@@ -11,7 +11,7 @@
 
 在经典解析数论与现代形式化验证的交汇处，一个常见且具有深远影响的方法论误区，是将黎曼 $\zeta$ 函数或 Dirichlet $L$ 函数 $L(s,\chi)$ 仅仅看作复平面上的一个静态点值映射 $s \mapsto L(s,\chi)$ ，或者看作由“亚纯延拓、对称函数方程、垂直带多项式增长界”这几条孤立公理拼装而成的静态代数结构。一旦落入这种静态视角，形式化工作者就会自然而然地以为：只要在依赖类型论（如 Lean 4 与 Mathlib ）中定义出一个类型签名为 $\mathbb{C} \to \mathbb{C}$ 的函数对象，并分模块证明它满足若干局部解析不等式，将成百上千万行引理在语法上拼接闭合，就等于在形式系统内部真正锁定了算术 $L$ 函数的非平凡零点分布。
 
-然而，从数学的第一性原理审视，算术 $L$ 函数之所以能够将临界带 $0 < \operatorname{Re}(s) < 1$ 内的无穷非平凡零点死死约束在临界线 $\operatorname{Re}(s) = 1/2$ 上，其根本驱动力绝不来自某一个静态截面上的孤立点值，而是来自从绝对收敛右半平面 $\operatorname{Re}(s) > 1$ 向临界带全过程逐点传导的素数乘性筛因果流。在 $\operatorname{Re}(s) > 1$ 上，完全乘性 Dirichlet 特征 $\chi$ 所生成的无穷级数与无穷 Euler 乘积满足刚性恒等式：
+然而，从数学的第一性原理审视，算术 $L$ 函数之所以能够将临界带 $0 \lt \operatorname{Re}(s) \lt 1$ 内的无穷非平凡零点死死约束在临界线 $\operatorname{Re}(s) = 1/2$ 上，其根本驱动力绝不来自某一个静态截面上的孤立点值，而是来自从绝对收敛右半平面 $\operatorname{Re}(s) \gt 1$ 向临界带全过程逐点传导的素数乘性筛因果流。在 $\operatorname{Re}(s) \gt 1$ 上，完全乘性 Dirichlet 特征 $\chi$ 所生成的无穷级数与无穷 Euler 乘积满足刚性恒等式：
 
 $$
 L(s,\chi) = \sum _ {n=1}^{\infty} \chi(n)n^{-s} = \prod _ {p \in \mathcal{P}} \left(1 - \chi(p)p^{-s}\right)^{-1}. \tag{1.1}
@@ -68,7 +68,7 @@ $$
 \lambda(\lbrace t _ 1, \dots, t _ m\rbrace) = \sum _ {j=1}^{m} \lambda(\lbrace t _ j\rbrace) = 0. \tag{1.7}
 $$
 
-在测度为 $0$ 的有限离散抽样点之外，如果没有全过程逐点生效的导数控制与余项耦合合同，轨迹在两个抽样点之间的连续演化可以发生任意剧烈的偏折与缠绕，而静态抽样表上的数值却丝毫不会报警。同样地，在广义黎曼猜想的形式化工程中（注意：形式证明项在语法上的有限性并不自动意味着语义视界有限，因为自然数归纳法与全称量词可以在语法上覆盖无穷集合；真正决定盲核大小的是证明所实际经由因子化的**静态观察商映射** $q : X \to Q$ ），一旦证明链条在跨越 $\operatorname{Re}(s) = 1$ 进入临界带 $0 < \operatorname{Re}(s) < 1$ 时，把只对完整算术对象成立的目标命题建立在某个丢弃了素数乘性耦合的弱静态商映射 $q$ 之上，那些在 $q$ 下与真实算术 $L$ 函数具有完全相同静态投影读数的非算术伪模型，就会沿着盲核 $\ker q$ 长驱直入。
+在测度为 $0$ 的有限离散抽样点之外，如果没有全过程逐点生效的导数控制与余项耦合合同，轨迹在两个抽样点之间的连续演化可以发生任意剧烈的偏折与缠绕，而静态抽样表上的数值却丝毫不会报警。同样地，在广义黎曼猜想的形式化工程中（注意：形式证明项在语法上的有限性并不自动意味着语义视界有限，因为自然数归纳法与全称量词可以在语法上覆盖无穷集合；真正决定盲核大小的是证明所实际经由因子化的**静态观察商映射** $q : X \to Q$ ），一旦证明链条在跨越 $\operatorname{Re}(s) = 1$ 进入临界带 $0 \lt \operatorname{Re}(s) \lt 1$ 时，把只对完整算术对象成立的目标命题建立在某个丢弃了素数乘性耦合的弱静态商映射 $q$ 之上，那些在 $q$ 下与真实算术 $L$ 函数具有完全相同静态投影读数的非算术伪模型，就会沿着盲核 $\ker q$ 长驱直入。
 
 ### 1.3　入口商空间退化的偏航放大效应：初始商核泄漏在千万行级静态推演中的传播机制
 
@@ -124,20 +124,20 @@ $$
 
 | 主定理编号 | 盲核机制与同商纤维影子反模型 | 静态截面内发生正面相撞的两端 | 精确成立边界与反向保护控制 |
 | :--- | :--- | :--- | :--- |
-| **定理 A₀**：同商投影传递与局部有理围道绕数相撞定理 | 商纤维 $q(x _ 0) = q(x _ 1)$ 未分离真算术模型 $x _ 0$ 与在有理矩形 $B \subset \lbrace 1/2 < \operatorname{Re}(s) < 1\rbrace$ 内带单零点的影子模型 $x _ 1$ | 沿 $h _ q : q(x _ 0)=q(x _ 1)$ 作相等替换 $\operatorname{Eq.subst}$ 导出绕数 $W(x _ 1, B) = 0$ ，与局部有理 Rouché 算术导出 $W(x _ 1, B) = 1$ 相撞 | 目标谓词 $Z$ 可经 $q$ 下降当且仅当 $\operatorname{Eq}(q) \subseteq \operatorname{Eq}(Z)$ （定理 0） |
-| **定理 B₀–B₃**：有限素数视界与 Beurling 广义素数换尾相撞定理 | 任意有限素数视界 $(1, P _ {\ast}]$ 加经典零点自由区与素数定理余项阶 $O(x\exp(-c\sqrt{\log x}))$ 下的 Diamond–Montgomery–Vorhauer 换尾模型 $\widetilde{\zeta} _ B$ | 弱视界排零规则断言 $\widetilde{\zeta} _ B$ 在 $1/2 < \operatorname{Re}(s) < 1$ 无零点，与修饰因子 $H(s)$ 在 $\operatorname{Re}(s)>0$ 全纯无零从而完整保留 $\zeta _ B$ 离轴零点相撞 | 定理 B₀ 严格区分有限语法与有限语义视界；定理 B₁ 证明真素数对数在 $\mathbb{Q}$ 上线性独立 |
-| **定理 C₀–C₃**：临界带弱解析延拓商与奇偶通道离轴根相撞定理 | 仅保留 Hurwitz 亚纯延拓、对称函数方程 $s \leftrightarrow 1-s$ 与多项式增长界，未在临界带锁死全阶素数幂乘性的奇通道 $\mathcal{D}(s)$ 与偶通道 $F _ {\mathrm{even}}(s)$ | 弱解析签名排零规则断言一切满足函数方程与增长界的对象在 $s = 3/4$ 非零，与偶通道互反根 $F _ {\mathrm{even}}(3/4)=0$ 及奇通道开带离轴零点相撞 | 定理 C₀ 证明若完整保留右半平面 $\operatorname{Re}(s)>1$ 函数值读口，则 $\sigma \to +\infty$ 唯一决定全部 Dirichlet 系数 |
+| **定理 A₀**：同商投影传递与局部有理围道绕数相撞定理 | 商纤维 $q(x _ 0) = q(x _ 1)$ 未分离真算术模型 $x _ 0$ 与在有理矩形 $B \subset \lbrace 1/2 \lt \operatorname{Re}(s) \lt 1\rbrace$ 内带单零点的影子模型 $x _ 1$ | 沿 $h _ q : q(x _ 0)=q(x _ 1)$ 作相等替换 $\operatorname{Eq.subst}$ 导出绕数 $W(x _ 1, B) = 0$ ，与局部有理 Rouché 算术导出 $W(x _ 1, B) = 1$ 相撞 | 目标谓词 $Z$ 可经 $q$ 下降当且仅当 $\operatorname{Eq}(q) \subseteq \operatorname{Eq}(Z)$ （定理 0） |
+| **定理 B₀–B₃**：有限素数视界与 Beurling 广义素数换尾相撞定理 | 任意有限素数视界 $(1, P _ {\ast}]$ 加经典零点自由区与素数定理余项阶 $O(x\exp(-c\sqrt{\log x}))$ 下的 Diamond–Montgomery–Vorhauer 换尾模型 $\widetilde{\zeta} _ B$ | 弱视界排零规则断言 $\widetilde{\zeta} _ B$ 在 $1/2 \lt \operatorname{Re}(s) \lt 1$ 无零点，与修饰因子 $H(s)$ 在 $\operatorname{Re}(s)\gt0$ 全纯无零从而完整保留 $\zeta _ B$ 离轴零点相撞 | 定理 B₀ 严格区分有限语法与有限语义视界；定理 B₁ 证明真素数对数在 $\mathbb{Q}$ 上线性独立 |
+| **定理 C₀–C₃**：临界带弱解析延拓商与奇偶通道离轴根相撞定理 | 仅保留 Hurwitz 亚纯延拓、对称函数方程 $s \leftrightarrow 1-s$ 与多项式增长界，未在临界带锁死全阶素数幂乘性的奇通道 $\mathcal{D}(s)$ 与偶通道 $F _ {\mathrm{even}}(s)$ | 弱解析签名排零规则断言一切满足函数方程与增长界的对象在 $s = 3/4$ 非零，与偶通道互反根 $F _ {\mathrm{even}}(3/4)=0$ 及奇通道开带离轴零点相撞 | 定理 C₀ 证明若完整保留右半平面 $\operatorname{Re}(s)\gt1$ 函数值读口，则 $\sigma \to +\infty$ 唯一决定全部 Dirichlet 系数 |
 
 ### 2.1　第一原理性相撞（定理 A₀）：同商纤维相等替换传递与局部有理矩形围道绕数 $W=0$ 对撞 $W=1$ 
 
 为什么一个把全局算术尾项挡在截面盲核 $\ker q$ 之外的形式化证明，不能在静态截面 $\Sigma _ {\mathrm{TT}}$ 内安然无恙地“自洽存活”？
 
-关键在于**全局算术护栏对静态商的不可见性**与**局部离轴零点对有限有理算术的完全可见性**之间存在根本的不对称性。在复分析中，给定临界带右半侧 $1/2 < \operatorname{Re}(s) < 1$ 内的任意有理闭矩形
+关键在于**全局算术护栏对静态商的不可见性**与**局部离轴零点对有限有理算术的完全可见性**之间存在根本的不对称性。在复分析中，给定临界带右半侧 $1/2 \lt \operatorname{Re}(s) \lt 1$ 内的任意有理闭矩形
 
 $$
 \begin{aligned}
 B &= [\sigma _ 1, \sigma _ 2] \times [t _ 1, t _ 2] \cr
-&\subset \lbrace s \in \mathbb{C} : 1/2 < \operatorname{Re}(s) < 1\rbrace \cr
+&\subset \lbrace s \in \mathbb{C} : 1/2 \lt \operatorname{Re}(s) \lt 1\rbrace \cr
 &\qquad (\sigma _ 1, \sigma _ 2, t _ 1, t _ 2 \in \mathbb{Q}),
 \end{aligned} \tag{2.1}
 $$
@@ -151,14 +151,14 @@ $$
 由于 $W(f, B)$ 是一个取值为整数的拓扑不变量，只要在矩形边界 $\partial B$ 上给出一个在框内有唯一简单零点 $c \in B^{\circ}$ 的有理参考函数 $f _ 1(s) = s - c$ ，并验证严格有理 Rouché 不等式
 
 $$
-\inf _ {s \in \partial B} |f _ 1(s)|^2 - \sup _ {s \in \partial B} |f(s) - f _ 1(s)|^2 > 0, \tag{2.3}
+\inf _ {s \in \partial B} |f _ 1(s)|^2 - \sup _ {s \in \partial B} |f(s) - f _ 1(s)|^2 \gt 0, \tag{2.3}
 $$
 
 那么在类型论截面 $\Sigma _ {\mathrm{TT}}$ 内部，仅凭有限有理区间算术就能无可辩驳地证出 $W(f, B) = W(f _ 1, B) = 1$ 。
 
 #### 定理 A₀（静态类型截面内五前件同商传递自撞定理）
 
-设在类型论系统 $T$ 中，模型域为 $X$ ，静态商观察为 $q : X \to Q$ ， $C : Q \to \mathrm{Prop}$ 为静态商上的受审前件谓词， $Z : X \to \mathrm{Prop}$ 表示对象在固定有理矩形 $B \subset \lbrace 1/2 < \operatorname{Re}(s) < 1\rbrace$ 内无零点， $W : X \to \mathbb{Z}$ 为绑定同一函数族、同一有理矩形 $B$ 与同一正向围道归一化的绕数映射。若在 $T$ 内同时存在以下五项闭合证明项：
+设在类型论系统 $T$ 中，模型域为 $X$ ，静态商观察为 $q : X \to Q$ ， $C : Q \to \mathrm{Prop}$ 为静态商上的受审前件谓词， $Z : X \to \mathrm{Prop}$ 表示对象在固定有理矩形 $B \subset \lbrace 1/2 \lt \operatorname{Re}(s) \lt 1\rbrace$ 内无零点， $W : X \to \mathbb{Z}$ 为绑定同一函数族、同一有理矩形 $B$ 与同一正向围道归一化的绕数映射。若在 $T$ 内同时存在以下五项闭合证明项：
 
 **(1) 弱商因子化排零证明项**：
 
@@ -224,19 +224,19 @@ $$
 
 由于在整数类型 $\mathbb{Z}$ 中 $0$ 与 $1$ 属于不同构造子（或由可判定算术给出 $h _ {0\neq 1} : (0 : \mathbb{Z}) \neq 1$ ），将 $h _ {\mathrm{coll}}$ 送入 $h _ {0\neq 1}$ 即得 $\vdash _ T \mathrm{False}$ 。证毕。
 
-**局部有理 Rouché 裕量的显式有理认证实例**。取离轴中心点 $c = \frac{3}{4} + i \in \bigl\lbrace \frac{1}{2} < \operatorname{Re}(s) < 1\bigr\rbrace$ ，并取半宽为 $r = \frac{1}{8}$ 的有理闭矩形：
+**局部有理 Rouché 裕量的显式有理认证实例**。取离轴中心点 $c = \frac{3}{4} + i \in \bigl\lbrace \frac{1}{2} \lt \operatorname{Re}(s) \lt 1\bigr\rbrace$ ，并取半宽为 $r = \frac{1}{8}$ 的有理闭矩形：
 
 $$
 \begin{aligned}
 B &= [5/8, 7/8] \times [7/8, 9/8] \cr
-&\subset \lbrace s \in \mathbb{C} : 1/2 < \operatorname{Re}(s) < 1\rbrace.
+&\subset \lbrace s \in \mathbb{C} : 1/2 \lt \operatorname{Re}(s) \lt 1\rbrace.
 \end{aligned} \tag{2.13}
 $$
 
 对无零点常函数 $f _ 0(s) = 1$ 与具有框内唯一简单零点 $c$ 的线性主部 $f _ 1(s) = s - c$ ，在矩形边界 $\partial B$ 的四条有理线段上， $\max\bigl(|\operatorname{Re}(s) - 3/4|, |\operatorname{Im}(s) - 1|\bigr) = \frac{1}{8}$ ，故主部模长平方在整条边界 $\partial B$ 上满足严格下界 $|f _ 1(s)|^2 \ge \left(\frac{1}{8}\right)^2 = \frac{1}{64}$ 。对任意在 $B$ 邻域全纯且在整条边界 $\partial B$ 上满足一致扰动上界 $|f(s) - f _ 1(s)| \le \frac{1}{16}$ 的函数 $f$ ，其平方 Rouché 裕量为精确正有理数：
 
 $$
-\Delta _ {\mathrm{Rouche}} = (1/8)^2 - (1/16)^2 = \frac{1}{64} - \frac{1}{256} = \frac{3}{256} > 0. \tag{2.14}
+\Delta _ {\mathrm{Rouche}} = (1/8)^2 - (1/16)^2 = \frac{1}{64} - \frac{1}{256} = \frac{3}{256} \gt 0. \tag{2.14}
 $$
 
 由 Rouché 定理及正向围道积分 $\frac{1}{2\pi i}\oint _ {\partial B}\frac{ds}{s-c} = 1$ ，立即给出 $W(f, B) = W(f _ 1, B) = 1 \neq 0 = W(f _ 0, B)$ 。
@@ -245,7 +245,7 @@ $$
 
 ### 2.2　第二原理性相撞（定理 B₀–B₃）：素数对数 $\mathbb{Q}$ -线性独立刚性与 Diamond–Montgomery–Vorhauer 广义素数有限视界换尾定理
 
-在排查千万行级形式化证明时，经常遇到第二种深层疑问：如果一个形式化证明只显式展开了有限个小素数 $p \le P _ {\ast}$ （例如 $p \in \lbrace 2, 3, 5, \dots, 23\rbrace$ ）的局部性质，然后再拼接上经典的零点自由区 $\sigma > 1 - a/\log t$ 与素数定理渐近余项 $O(x\exp(-c\sqrt{\log x}))$ ，它能否在临界带内排除离轴零点？
+在排查千万行级形式化证明时，经常遇到第二种深层疑问：如果一个形式化证明只显式展开了有限个小素数 $p \le P _ {\ast}$ （例如 $p \in \lbrace 2, 3, 5, \dots, 23\rbrace$ ）的局部性质，然后再拼接上经典的零点自由区 $\sigma \gt 1 - a/\log t$ 与素数定理渐近余项 $O(x\exp(-c\sqrt{\log x}))$ ，它能否在临界带内排除离轴零点？
 
 为了使论证达到零漏洞的数学严密性，我们首先用**定理 B₀**划清“语法有限性”与“语义有限视界”的严格界限，再用**定理 B₁**证明普通素数对数的代数刚性，最后用**定理 B₂–B₃**证明：在任意大的有限素数视界 $P _ {\ast}$ 下，仅凭有限素数前缀加上经典零点自由区与素数定理渐近余项阶，在数学上**绝对无法排除临界带离轴零点**。
 
@@ -256,14 +256,14 @@ $$
 
 #### 定理 B₁（普通素数对数族的有理线性独立刚性定理）
 
-设 $p _ 1 < p _ 2 < \cdots < p _ k$ 为任意有限个互不相同的普通素数。若存在有理系数 $r _ 1, r _ 2, \dots, r _ k \in \mathbb{Q}$ 使得
+设 $p _ 1 \lt p _ 2 \lt \cdots \lt p _ k$ 为任意有限个互不相同的普通素数。若存在有理系数 $r _ 1, r _ 2, \dots, r _ k \in \mathbb{Q}$ 使得
 
 $$
 \sum _ {j=1}^{k} r _ j \log p _ j = 0, \tag{2.15}
 $$
 
 则必有 $r _ 1 = r _ 2 = \cdots = r _ k = 0$ 。
-**一步不跳证明**：设 $r _ j = u _ j / v _ j$ （ $u _ j \in \mathbb{Z}, v _ j \in \mathbb{Z} _ {>0}$ ），取公分母 $M = \prod _ {j=1}^k v _ j \in \mathbb{Z} _ {>0}$ ，令 $m _ j = M r _ j \in \mathbb{Z}$ ，则式 $(2.15)$ 化为 $\sum _ {j=1}^k m _ j \log p _ j = 0$ 。将正负指数分离，记 $J _ + = \lbrace j : m _ j > 0\rbrace$ 、 $J _ - = \lbrace j : m _ j < 0\rbrace$ ，两边取实指数函数 $\exp(\cdot)$ 并移项，得正整数等式：
+**一步不跳证明**：设 $r _ j = u _ j / v _ j$ （ $u _ j \in \mathbb{Z}, v _ j \in \mathbb{Z} _ {\gt0}$ ），取公分母 $M = \prod _ {j=1}^k v _ j \in \mathbb{Z} _ {\gt0}$ ，令 $m _ j = M r _ j \in \mathbb{Z}$ ，则式 $(2.15)$ 化为 $\sum _ {j=1}^k m _ j \log p _ j = 0$ 。将正负指数分离，记 $J _ + = \lbrace j : m _ j \gt 0\rbrace$ 、 $J _ - = \lbrace j : m _ j \lt 0\rbrace$ ，两边取实指数函数 $\exp(\cdot)$ 并移项，得正整数等式：
 
 $$
 \prod _ {j \in J _ +} p _ j^{m _ j} = \prod _ {j \in J _ -} p _ j^{-m _ j}. \tag{2.16}
@@ -275,15 +275,15 @@ $$
 
 #### 定理 B₂（任意有限素数视界 $P _ {\ast}$ 下的广义素数换尾匹配与离轴零点全保持定理）
 
-根据 Diamond–Montgomery–Vorhauer 存在性定理（文献 [1, 2]），存在离散广义素数序列 $B = (b _ j) _ {j\ge 1}$ （ $1 < b _ 1 \le b _ 2 \le \cdots \to \infty$ ）及其生成的广义整数计数函数 $N _ B(x)$ 、广义素数计数函数 $\pi _ B(x)$ 、Chebyshev 函数 $\psi _ B(x)$ 与广义 zeta 函数 $\zeta _ B(s) = \prod _ {j=1}^\infty (1 - b _ j^{-s})^{-1}$ （ $\operatorname{Re}(s) > 1$ ），以及常数 $\frac{1}{2} < \theta < 1$ 、 $\kappa _ B, a, c _ 1, C _ 1, C _ 2 > 0$ （其中 $a > \frac{4}{e}(1-\theta)$ ），使得：
-(i) $|N _ B(x) - \kappa _ B x| \le C _ 1 x^\theta$ （ $\forall x \ge x _ 0$ ），故 $\zeta _ B(s)$ 亚纯延拓至半平面 $\operatorname{Re}(s) > \theta$ ，除 $s = 1$ 处留数为 $\kappa _ B$ 的简单极点外处处全纯；
+根据 Diamond–Montgomery–Vorhauer 存在性定理（文献 [1, 2]），存在离散广义素数序列 $B = (b _ j) _ {j\ge 1}$ （ $1 \lt b _ 1 \le b _ 2 \le \cdots \to \infty$ ）及其生成的广义整数计数函数 $N _ B(x)$ 、广义素数计数函数 $\pi _ B(x)$ 、Chebyshev 函数 $\psi _ B(x)$ 与广义 zeta 函数 $\zeta _ B(s) = \prod _ {j=1}^\infty (1 - b _ j^{-s})^{-1}$ （ $\operatorname{Re}(s) \gt 1$ ），以及常数 $\frac{1}{2} \lt \theta \lt 1$ 、 $\kappa _ B, a, c _ 1, C _ 1, C _ 2 \gt 0$ （其中 $a \gt \frac{4}{e}(1-\theta)$ ），使得：
+(i) $|N _ B(x) - \kappa _ B x| \le C _ 1 x^\theta$ （ $\forall x \ge x _ 0$ ），故 $\zeta _ B(s)$ 亚纯延拓至半平面 $\operatorname{Re}(s) \gt \theta$ ，除 $s = 1$ 处留数为 $\kappa _ B$ 的简单极点外处处全纯；
 (ii) $|\pi _ B(x) - \operatorname{li}(x)| + |\psi _ B(x) - x| \le C _ 2 x \exp(-c _ 1 \sqrt{\log x})$ （ $\forall x \ge x _ 0$ ）；
-(iii) $\zeta _ B(s)$ 在经典区域 $\sigma > 1 - a/\log t$ （ $t \ge t _ 0$ ）内无零点，但在临界带开区间 $\theta < \operatorname{Re}(s) < 1$ 内拥有无穷多个离轴零点 $\rho _ n = 1 - \frac{a}{\log t _ n} + i t _ n \in \bigl\lbrace \frac{1}{2} < \operatorname{Re}(s) < 1\bigr\rbrace$ （ $t _ n \to \infty$ ）。
+(iii) $\zeta _ B(s)$ 在经典区域 $\sigma \gt 1 - a/\log t$ （ $t \ge t _ 0$ ）内无零点，但在临界带开区间 $\theta \lt \operatorname{Re}(s) \lt 1$ 内拥有无穷多个离轴零点 $\rho _ n = 1 - \frac{a}{\log t _ n} + i t _ n \in \bigl\lbrace \frac{1}{2} \lt \operatorname{Re}(s) \lt 1\bigr\rbrace$ （ $t _ n \to \infty$ ）。
 
 现在，给定**任意大**的有限素数视界阈值 $P _ {\ast} \ge 2$ ，我们对该广义素数系统 $B$ 施行**有限窗口算术换尾手术**：删去 $B$ 中所有满足 $b _ j \le P _ {\ast}$ 的有限个广义素数多重集 $D = \lbrace b _ j \in B : b _ j \le P _ {\ast}\rbrace$ ，并替换为区间 $(1, P _ {\ast}]$ 内的全部普通素数集合 $A = \lbrace p \in \mathcal{P} : p \le P _ {\ast}\rbrace$ ，记所得新广义素数系统为 $\widetilde{B}$ 。则新系统的 zeta 函数 $\widetilde{\zeta} _ B(s)$ 满足：
 
 **(1)** 有限视界 $(1, P _ {\ast}]$ 上的绝对全同性： $\widetilde{B} \cap (1, P _ {\ast}] = \mathcal{P} \cap (1, P _ {\ast}]$ ，即在观察窗口 $(1, P _ {\ast}]$ 内，新系统的素数生成元与普通真素数逐项完全一致；
-**(2)** 开右半平面 $\operatorname{Re}(s) > 0$ 上修饰因子的全纯无零性与离轴零点全保持性：在 $\operatorname{Re}(s) > 1$ 上，
+**(2)** 开右半平面 $\operatorname{Re}(s) \gt 0$ 上修饰因子的全纯无零性与离轴零点全保持性：在 $\operatorname{Re}(s) \gt 1$ 上，
 
 $$
 \begin{aligned}
@@ -292,7 +292,7 @@ H _ {P _ {\ast}}(s) &:= \frac{\prod _ {b \in D}(1 - b^{-s})}{\prod _ {p \in A}(1
 \end{aligned} \tag{2.17}
 $$
 
-由于 $D$ 与 $A$ 均为有限集，且对一切 $b \in D$ 与 $p \in A$ 均有 $b > 1, p \ge 2$ ，故在开右半平面 $\operatorname{Re}(s) > 0$ 上严格有 $|b^{-s}| = b^{-\operatorname{Re}(s)} < 1$ 及 $|p^{-s}| = p^{-\operatorname{Re}(s)} < 1$ 。因此分子与分母的每一个有限因子在 $\operatorname{Re}(s) > 0$ 上均全纯且处处非零，从而有理Euler修饰因子 $H _ {P _ {\ast}}(s)$ 在整个开右半平面 $\operatorname{Re}(s) > 0$ 上**全纯且处处无零点**。由解析延拓唯一性，式 $(2.17)$ 在延拓域 $\lbrace \operatorname{Re}(s) > \theta\rbrace \subset \lbrace \operatorname{Re}(s) > 0\rbrace$ 上恒成立，且 $\widetilde{\zeta} _ B(s)$ 在 $\lbrace \theta < \operatorname{Re}(s) < 1\rbrace$ 内的零点除子（含全部离轴零点 $\rho _ n = 1 - \frac{a}{\log t _ n} + it _ n \in \lbrace 1/2 < \operatorname{Re}(s) < 1\rbrace$ 及其重数）与 $\zeta _ B(s)$ **完全相同**。
+由于 $D$ 与 $A$ 均为有限集，且对一切 $b \in D$ 与 $p \in A$ 均有 $b \gt 1, p \ge 2$ ，故在开右半平面 $\operatorname{Re}(s) \gt 0$ 上严格有 $|b^{-s}| = b^{-\operatorname{Re}(s)} \lt 1$ 及 $|p^{-s}| = p^{-\operatorname{Re}(s)} \lt 1$ 。因此分子与分母的每一个有限因子在 $\operatorname{Re}(s) \gt 0$ 上均全纯且处处非零，从而有理Euler修饰因子 $H _ {P _ {\ast}}(s)$ 在整个开右半平面 $\operatorname{Re}(s) \gt 0$ 上**全纯且处处无零点**。由解析延拓唯一性，式 $(2.17)$ 在延拓域 $\lbrace \operatorname{Re}(s) \gt \theta\rbrace \subset \lbrace \operatorname{Re}(s) \gt 0\rbrace$ 上恒成立，且 $\widetilde{\zeta} _ B(s)$ 在 $\lbrace \theta \lt \operatorname{Re}(s) \lt 1\rbrace$ 内的零点除子（含全部离轴零点 $\rho _ n = 1 - \frac{a}{\log t _ n} + it _ n \in \lbrace 1/2 \lt \operatorname{Re}(s) \lt 1\rbrace$ 及其重数）与 $\zeta _ B(s)$ **完全相同**。
 **(3)** **素数定理渐近余项阶的严格保持性**：有限增删对素数计数函数的改变量满足 $|\pi _ {\widetilde{B}}(x) - \pi _ B(x)| \le |A| + |D| = O(1)$ ；每个被增删的生成元 $u \in A \cup D$ 对 Chebyshev 函数的贡献至多为 $\log u \cdot \lfloor \log x / \log u \rfloor = O(\log x)$ ，故有限项总改变量满足
 
 $$
@@ -305,7 +305,7 @@ $$
 
 #### 推论 B₃（有限素数视界与经典渐近余项商上的排零规则自撞定理）
 
-在广义素数模型域 $X _ {\mathrm{Beurling}}$ 上，若静态观察商 $q _ {P _ {\ast}}(x)$ 仅记录有限窗口 $(1, P _ {\ast}]$ 内的素数生成元以及经典零点自由区与式 $(2.18)$ 的素数定理余项阶，则经过换尾手术的反模型 $\widetilde{B}$ 在 $q _ {P _ {\ast}}$ 下与真素数系统满足完全相同的商前件 $C(q _ {P _ {\ast}}(\widetilde{B}))$ ，却在 $1/2 < \operatorname{Re}(s) < 1$ 内完整保留了无穷多个离轴零点 $\rho _ n$ 。因此，任何仅通过 $C(q _ {P _ {\ast}}(x))$ 因子化的统一排零定理在 $\Sigma _ {\mathrm{TT}}$ 内代入 $\widetilde{B}$ 后，必直接导出 $\vdash _ T (0 : \mathbb{Z}) = 1$ 。
+在广义素数模型域 $X _ {\mathrm{Beurling}}$ 上，若静态观察商 $q _ {P _ {\ast}}(x)$ 仅记录有限窗口 $(1, P _ {\ast}]$ 内的素数生成元以及经典零点自由区与式 $(2.18)$ 的素数定理余项阶，则经过换尾手术的反模型 $\widetilde{B}$ 在 $q _ {P _ {\ast}}$ 下与真素数系统满足完全相同的商前件 $C(q _ {P _ {\ast}}(\widetilde{B}))$ ，却在 $1/2 \lt \operatorname{Re}(s) \lt 1$ 内完整保留了无穷多个离轴零点 $\rho _ n$ 。因此，任何仅通过 $C(q _ {P _ {\ast}}(x))$ 因子化的统一排零定理在 $\Sigma _ {\mathrm{TT}}$ 内代入 $\widetilde{B}$ 后，必直接导出 $\vdash _ T (0 : \mathbb{Z}) = 1$ 。
 
 ### 2.3　第三原理性相撞（定理 C₀–C₃）：右半平面系数唯一恢复定理与临界带弱解析延拓商上的奇偶通道离轴根退化定理
 
@@ -322,12 +322,12 @@ $$
 
 请仔细审视式 $(2.19)$ 的底层载体 $\operatorname{ZMod.LFunction}(\Phi, s)$ ：它的输入类型是任意模 $N$ 周期函数 $\Phi : \operatorname{ZMod}(N) \to \mathbb{C}$ ，其解析定义是 $N$ 个位移 Hurwitz $\zeta$ 函数的**纯加法线性组合**。
 
-为了保持百分之百的数学严密性，我们首先证明**定理 C₀**：如果一个下游定理真正完整地使用了右半平面 $\operatorname{Re}(s) > 1$ 上的精确函数值读口以及外层 $\chi \in \operatorname{DirichletCharacter}(\mathbb{C}, N)$ 的乘法同态属性，那么式 $(2.19)$ 本身并不会丢失乘性信息。但紧接着，我们用**定理 C₁–C₃**证明：一旦临界带内的排零子图只依赖由式 $(2.19)$ 提供的**弱解析延拓商签名**（即：整函数或仅在 $s=1$ 有简单极点的亚纯延拓、带 Gamma 因子的对称函数方程 $s \leftrightarrow 1-s$ 、垂直带多项式增长界以及模 $N$ 周期系数），而没有把全阶素数幂乘性 $a _ {mn} = a _ m a _ n$ 作为必要算术前件传入临界带，那么这个弱解析延拓商在 $\Sigma _ {\mathrm{TT}}$ 内就会同时容纳**奇通道 Davenport–Heilbronn 离轴反模型**与**偶通道显式互反多项式离轴反模型**，直接导出 $3/4 = 1/2$ 与 $(0 : \mathbb{Z}) = 1$ 。
+为了保持百分之百的数学严密性，我们首先证明**定理 C₀**：如果一个下游定理真正完整地使用了右半平面 $\operatorname{Re}(s) \gt 1$ 上的精确函数值读口以及外层 $\chi \in \operatorname{DirichletCharacter}(\mathbb{C}, N)$ 的乘法同态属性，那么式 $(2.19)$ 本身并不会丢失乘性信息。但紧接着，我们用**定理 C₁–C₃**证明：一旦临界带内的排零子图只依赖由式 $(2.19)$ 提供的**弱解析延拓商签名**（即：整函数或仅在 $s=1$ 有简单极点的亚纯延拓、带 Gamma 因子的对称函数方程 $s \leftrightarrow 1-s$ 、垂直带多项式增长界以及模 $N$ 周期系数），而没有把全阶素数幂乘性 $a _ {mn} = a _ m a _ n$ 作为必要算术前件传入临界带，那么这个弱解析延拓商在 $\Sigma _ {\mathrm{TT}}$ 内就会同时容纳**奇通道 Davenport–Heilbronn 离轴反模型**与**偶通道显式互反多项式离轴反模型**，直接导出 $3/4 = 1/2$ 与 $(0 : \mathbb{Z}) = 1$ 。
 
 #### 定理 C₀（右半平面完整函数值读口下的 Dirichlet 系数唯一恢复定理）
 
-设两列复系数 $(a _ n) _ {n\ge 1}$ 与 $(b _ n) _ {n\ge 1}$ 的普通 Dirichlet 级数 $f(s) = \sum _ {n=1}^\infty a _ n n^{-s}$ 与 $g(s) = \sum _ {n=1}^\infty b _ n n^{-s}$ 在某个共同半平面 $\operatorname{Re}(s) > \sigma _ a$ 上绝对收敛。若存在实数序列 $\sigma _ k \to +\infty$ 使得 $f(\sigma _ k) = g(\sigma _ k)$ （ $\forall k$ ），则必有 $a _ n = b _ n$ （ $\forall n \ge 1$ ）。
-**一步不跳证明**：令 $c _ n = a _ n - b _ n$ 。反设存在 $n \ge 1$ 使 $c _ n \neq 0$ ，取最小正整数 $n _ 0 = \min\lbrace n \ge 1 : c _ n \neq 0\rbrace$ 。取固定实数 $\sigma _ 0 > \sigma _ a$ ，则 $\sum _ {n=1}^\infty |c _ n| n^{-\sigma _ 0} < \infty$ 。对任意 $\sigma > \sigma _ 0$ ，由于 $c _ 1 = \cdots = c _ {n _ 0-1} = 0$ ，将恒等式 $\sum _ {n=n _ 0}^\infty c _ n n^{-\sigma} = 0$ 两边同乘 $n _ 0^{\sigma}$ 并移项，得：
+设两列复系数 $(a _ n) _ {n\ge 1}$ 与 $(b _ n) _ {n\ge 1}$ 的普通 Dirichlet 级数 $f(s) = \sum _ {n=1}^\infty a _ n n^{-s}$ 与 $g(s) = \sum _ {n=1}^\infty b _ n n^{-s}$ 在某个共同半平面 $\operatorname{Re}(s) \gt \sigma _ a$ 上绝对收敛。若存在实数序列 $\sigma _ k \to +\infty$ 使得 $f(\sigma _ k) = g(\sigma _ k)$ （ $\forall k$ ），则必有 $a _ n = b _ n$ （ $\forall n \ge 1$ ）。
+**一步不跳证明**：令 $c _ n = a _ n - b _ n$ 。反设存在 $n \ge 1$ 使 $c _ n \neq 0$ ，取最小正整数 $n _ 0 = \min\lbrace n \ge 1 : c _ n \neq 0\rbrace$ 。取固定实数 $\sigma _ 0 \gt \sigma _ a$ ，则 $\sum _ {n=1}^\infty |c _ n| n^{-\sigma _ 0} \lt \infty$ 。对任意 $\sigma \gt \sigma _ 0$ ，由于 $c _ 1 = \cdots = c _ {n _ 0-1} = 0$ ，将恒等式 $\sum _ {n=n _ 0}^\infty c _ n n^{-\sigma} = 0$ 两边同乘 $n _ 0^{\sigma}$ 并移项，得：
 
 $$
 \begin{aligned}
@@ -337,7 +337,7 @@ $$
 \end{aligned} \tag{2.20}
 $$
 
-由于 $0 < \frac{n _ 0}{n _ 0+1} < 1$ ，沿着 $\sigma = \sigma _ k \to +\infty$ 取极限，式 $(2.20)$ 右端趋于 $0$ ，迫使 $|c _ {n _ 0}| = 0$ ，与 $c _ {n _ 0} \neq 0$ 矛盾。故 $a _ n = b _ n$ （ $\forall n \ge 1$ ）。证毕。
+由于 $0 \lt \frac{n _ 0}{n _ 0+1} \lt 1$ ，沿着 $\sigma = \sigma _ k \to +\infty$ 取极限，式 $(2.20)$ 右端趋于 $0$ ，迫使 $|c _ {n _ 0}| = 0$ ，与 $c _ {n _ 0} \neq 0$ 矛盾。故 $a _ n = b _ n$ （ $\forall n \ge 1$ ）。证毕。
 
 #### 定理 C₁（奇通道 Davenport–Heilbronn 周期 Hurwitz 组合的乘性破缺与开临界带离轴零点定理）
 
@@ -345,7 +345,7 @@ $$
 
 $$
 \begin{aligned}
-\kappa &:= \frac{\sqrt{10 - 2\sqrt{5}} - 2}{\sqrt{5} - 1} > 0, \cr
+\kappa &:= \frac{\sqrt{10 - 2\sqrt{5}} - 2}{\sqrt{5} - 1} \gt 0, \cr
 \frac{\tau(\chi _ 5)}{i\sqrt{5}} &= \frac{1 + i\kappa}{1 - i\kappa}.
 \end{aligned} \tag{2.21}
 $$
@@ -381,22 +381,22 @@ $$
 **(2)** 首个复合数指标 $n = 6 = 2 \times 3$ 处的严格乘性破缺：在互素素数对 $(2, 3)$ 上， $a _ 2(\kappa) = \kappa$ 、 $a _ 3(\kappa) = -\kappa$ ，而 $6 \equiv 1 \pmod 5$ 故 $a _ 6(\kappa) = 1$ 。其乘性破缺残差严格大于零：
 
 $$
-\Delta _ {\mathrm{mult}}(2, 3) := a _ 6(\kappa) - a _ 2(\kappa) a _ 3(\kappa) = 1 + \kappa^2 > 0; \tag{2.25}
+\Delta _ {\mathrm{mult}}(2, 3) := a _ 6(\kappa) - a _ 2(\kappa) a _ 3(\kappa) = 1 + \kappa^2 \gt 0; \tag{2.25}
 $$
 
-**(3)** 开临界带 $\frac{1}{2} < \operatorname{Re}(s) < 1$ 内的无穷离轴零点（Voronin 定理，文献 [3, 4]）：对任意 $\frac{1}{2} < \sigma _ 1 < \sigma _ 2 < 1$ ，存在常数 $c _ {\sigma _ 1, \sigma _ 2} > 0$ 与 $T _ {\sigma _ 1, \sigma _ 2} > 0$ ，使得当 $T \ge T _ {\sigma _ 1, \sigma _ 2}$ 时，
+**(3)** 开临界带 $\frac{1}{2} \lt \operatorname{Re}(s) \lt 1$ 内的无穷离轴零点（Voronin 定理，文献 [3, 4]）：对任意 $\frac{1}{2} \lt \sigma _ 1 \lt \sigma _ 2 \lt 1$ ，存在常数 $c _ {\sigma _ 1, \sigma _ 2} \gt 0$ 与 $T _ {\sigma _ 1, \sigma _ 2} \gt 0$ ，使得当 $T \ge T _ {\sigma _ 1, \sigma _ 2}$ 时，
 
 $$
 \begin{aligned}
-&\sum _ {\substack{\mathcal{D}(\rho) = 0 \cr \sigma _ 1 < \operatorname{Re}(\rho) < \sigma _ 2}}
+&\sum _ {\substack{\mathcal{D}(\rho) = 0 \cr \sigma _ 1 \lt \operatorname{Re}(\rho) \lt \sigma _ 2}}
 \operatorname{ord} _ {\rho}(\mathcal{D}) \cr
-&\qquad \ge c _ {\sigma _ 1, \sigma _ 2} T > 0 \qquad (0 < \operatorname{Im}(\rho) \le T).
+&\qquad \ge c _ {\sigma _ 1, \sigma _ 2} T \gt 0 \qquad (0 \lt \operatorname{Im}(\rho) \le T).
 \end{aligned} \tag{2.26}
 $$
 
 #### 定理 C₂（偶通道显式互反多项式因子与 $s = 3/4$ 精确离轴根定理）
 
-在偶 Gamma 通道中，令 $y(s) := 2^{1/2 - s} = \exp\bigl((1/2 - s)\log 2\bigr)$ ，则在对称反射 $s \leftrightarrow 1 - s$ 下严格有 $y(1 - s) = y(s)^{-1}$ 。对任意正实参数 $r > 0$ （特取 $r = 2^{1/4} = \exp\bigl(\frac{1}{4}\log 2\bigr) > 1$ ），定义互反二次因子与偶通道变形函数：
+在偶 Gamma 通道中，令 $y(s) := 2^{1/2 - s} = \exp\bigl((1/2 - s)\log 2\bigr)$ ，则在对称反射 $s \leftrightarrow 1 - s$ 下严格有 $y(1 - s) = y(s)^{-1}$ 。对任意正实参数 $r \gt 0$ （特取 $r = 2^{1/4} = \exp\bigl(\frac{1}{4}\log 2\bigr) \gt 1$ ），定义互反二次因子与偶通道变形函数：
 
 $$
 P _ r(y) := 1 - \left(r + \frac{1}{r}\right)y + y^2 = (1 - ry)\left(1 - \frac{y}{r}\right), \tag{2.27}
@@ -425,7 +425,7 @@ $$
 
 #### 推论 C₃（弱解析延拓商上的排零规则自撞定理）
 
-若任何临界带排零引理的形式化签名仅要求对象具有整函数（或 $s=1$ 简单极点）延拓、满足对称函数方程 $\Lambda(1-s) = \epsilon\Lambda(s)$ 及垂直带多项式增长界（例如我们在第五章实机编译的 WeakRule ： $\forall F : \mathbb{C} \to \mathbb{C},\ \operatorname{Differentiable}(\mathbb{C}, F) \to (\forall s,\ F(1-s)=F(s)) \to (\forall s,\ \Vert F(s)\Vert \le (\Vert s\Vert +1)^2) \to (\forall s,\ 0 < \operatorname{Re}(s) < 1 \to F(s)=0 \to \operatorname{Re}(s)=1/2)$ ），则将代数对称特洛伊多项式
+若任何临界带排零引理的形式化签名仅要求对象具有整函数（或 $s=1$ 简单极点）延拓、满足对称函数方程 $\Lambda(1-s) = \epsilon\Lambda(s)$ 及垂直带多项式增长界（例如我们在第五章实机编译的 WeakRule ： $\forall F : \mathbb{C} \to \mathbb{C},\ \operatorname{Differentiable}(\mathbb{C}, F) \to (\forall s,\ F(1-s)=F(s)) \to (\forall s,\ \Vert F(s)\Vert \le (\Vert s\Vert +1)^2) \to (\forall s,\ 0 \lt \operatorname{Re}(s) \lt 1 \to F(s)=0 \to \operatorname{Re}(s)=1/2)$ ），则将代数对称特洛伊多项式
 
 $$
 P _ {\mathrm{Trojan}}(s) := (s - 3/4)(s - 1/4) = (s - 1/2)^2 - 1/16 \tag{2.31}
@@ -495,10 +495,10 @@ $$
 #### 一步不跳拓扑归纳证明
 **(1)** 首先，由 $C(q(x _ 0)) = \mathrm{True}$ 与同商纤维条件 $q(x _ 0) = _ Q q(x _ 1)$ ，在影子反模型 $x _ 1$ 下必有 $\lbrack\kern-0.15em\lbrack C(q(x _ 1)) \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ 。
 **(2)** 反证法：假设提取图 $\mathcal{G} _ {\mathrm{ext}}$ 同时避开了上述三难，即 $a = 0$ （无断桥悬空与假叶前件）、 $d = 0$ （终点语义未降格）且 $k = 0$ （锥内每一步局部推理在 $\lbrack\kern-0.15em\lbrack \cdot \rbrack\kern-0.15em\rbrack _ {x _ 1}$ 下均保真）。
-**(3)** 由于提取图的依赖锥 $\operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ 是有限有向无环图，将其顶点按有向边方向排列为拓扑序 $v _ 1, v _ 2, \dots, v _ M = v _ {\mathrm{goal}}^{\mathrm{ext}}$ （使得对一切有向边 $v _ i \to v _ j$ 均有 $i < j$ ）。
+**(3)** 由于提取图的依赖锥 $\operatorname{Cone} _ {\mathcal{G} _ {\mathrm{ext}}}(v _ {\mathrm{goal}}^{\mathrm{ext}})$ 是有限有向无环图，将其顶点按有向边方向排列为拓扑序 $v _ 1, v _ 2, \dots, v _ M = v _ {\mathrm{goal}}^{\mathrm{ext}}$ （使得对一切有向边 $v _ i \to v _ j$ 均有 $i \lt j$ ）。
 **(4)** 对拓扑序号 $j = 1, 2, \dots, M$ 作强数学归纳，证明 $\lbrack\kern-0.15em\lbrack v _ j \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ ：
 - **归纳基与叶节点**：若 $v _ j$ 在依赖锥内无前驱（即叶节点），由 $a = 0$ 及基础背景公理在 $x _ 1$ 下保真，立即有 $\lbrack\kern-0.15em\lbrack v _ j \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ ；
-- **归纳步**：若 $v _ j$ 为非叶节点，则其全部直接前驱 $\lbrace v _ i : (v _ i \to v _ j) \in E _ {\mathrm{ext}}\rbrace$ 均满足 $i < j$ 。由归纳假设，所有直接前驱均满足 $\lbrack\kern-0.15em\lbrack v _ i \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ 。再由 $k = 0$ （锥内无局部保真失效节点），立即推出当前节点 $\lbrack\kern-0.15em\lbrack v _ j \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ 。
+- **归纳步**：若 $v _ j$ 为非叶节点，则其全部直接前驱 $\lbrace v _ i : (v _ i \to v _ j) \in E _ {\mathrm{ext}}\rbrace$ 均满足 $i \lt j$ 。由归纳假设，所有直接前驱均满足 $\lbrack\kern-0.15em\lbrack v _ i \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ 。再由 $k = 0$ （锥内无局部保真失效节点），立即推出当前节点 $\lbrack\kern-0.15em\lbrack v _ j \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ 。
 **(5)** 取拓扑终点 $j = M$ ，即得 $\lbrack\kern-0.15em\lbrack v _ {\mathrm{goal}}^{\mathrm{ext}} \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ 。由 $d = 0$ （终点未发生定义降格）， $\lbrack\kern-0.15em\lbrack v _ {\mathrm{goal}}^{\mathrm{ext}} \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{True}$ 蕴含 $C(q(x _ 1)) \implies Z(x _ 1)$ 在 $x _ 1$ 下成立。结合第 1 步已证的 $C(q(x _ 1)) = \mathrm{True}$ ，推出 $Z(x _ 1) = \mathrm{True}$ ，这与式 $(3.3)$ 中影子反模型的固有性质 $Z(x _ 1) = \mathrm{False}$ 正面矛盾。
 **(6)** 因此反设不成立，必有 $A \lor D \lor K$ 为真，即 $(1-a)(1-d)(1-k) = 0$ ，式 $(3.4)$ 恒成立。进一步，当 $a = 0$ 且 $d = 0$ 时，沿着拓扑序取最小序号满足 $\lbrack\kern-0.15em\lbrack v _ j \rbrack\kern-0.15em\rbrack _ {x _ 1} = \mathrm{False}$ 的顶点 $v _ {j _ 0}$ ，其全部前驱必为真而自身输出为假，从而在有限步内唯一锁定提取锥内的首个语义漏口节点 $v^{\ast} = v _ {j _ 0}$ 。证毕。
 
@@ -526,7 +526,7 @@ $$
 
 #### 定理 I（ $\operatorname{LSeries}$ 在闭左半平面 $\operatorname{Re}(s) \le 1$ 恒等于零及其与解析延拓函数的不可混同定理）
 
-对恒取 $1$ 的算术常函数 $a \equiv 1$ （或任意模 $N \ge 1$ 的 Dirichlet 特征 $\chi$ ，其在自然数上的无序可和性要求绝对收敛），当且仅当 $\operatorname{Re}(s) > 1$ 时 $\operatorname{LSeriesSummable}(1, s)$ 成立；而在整个半平面 $\operatorname{Re}(s) \le 1$ （包含整个临界带 $0 < \operatorname{Re}(s) < 1$ 及原点 $s = 0$ ）上，恒有：
+对恒取 $1$ 的算术常函数 $a \equiv 1$ （或任意模 $N \ge 1$ 的 Dirichlet 特征 $\chi$ ，其在自然数上的无序可和性要求绝对收敛），当且仅当 $\operatorname{Re}(s) \gt 1$ 时 $\operatorname{LSeriesSummable}(1, s)$ 成立；而在整个半平面 $\operatorname{Re}(s) \le 1$ （包含整个临界带 $0 \lt \operatorname{Re}(s) \lt 1$ 及原点 $s = 0$ ）上，恒有：
 
 $$
 \forall s \in \mathbb{C},\qquad \operatorname{Re}(s) \le 1 \implies \operatorname{LSeries}(1, s) = 0. \tag{4.2}
@@ -536,21 +536,21 @@ $$
 
 $$
 \begin{aligned}
-\operatorname{LSeries}(1, 3/4) &= 0 \neq \zeta(3/4) < -3, \cr
+\operatorname{LSeries}(1, 3/4) &= 0 \neq \zeta(3/4) \lt -3, \cr
 \operatorname{LSeries}(1, 0) &= 0 \neq -1/2 = \zeta(0).
 \end{aligned} \tag{4.3}
 $$
 
-**证明**：当 $\sigma = \operatorname{Re}(s) \le 1$ 时，对正项级数 $\sum _ {n=1}^\infty n^{-\sigma} \ge \sum _ {n=1}^\infty n^{-1} = +\infty$ ，故复级数 $\sum _ {n=1}^\infty |n^{-s}| = \sum _ {n=1}^\infty n^{-\sigma}$ 发散。由于在有限维赋范空间 $\mathbb{C}$ 中，无序可和 $\operatorname{Summable}$ 等价于绝对可和 $\operatorname{Summable}(\Vert \cdot\Vert )$ ，故 $\neg\operatorname{LSeriesSummable}(1, s)$ ，由定义 $(4.1)$ 立即得 $\operatorname{LSeries}(1, s) = 0$ 。另一方面，对真正的解析延拓函数 $\zeta(s)$ ，在 $0 < \sigma < 1$ 上由第一阶 Euler–Maclaurin 积分表示：
+**证明**：当 $\sigma = \operatorname{Re}(s) \le 1$ 时，对正项级数 $\sum _ {n=1}^\infty n^{-\sigma} \ge \sum _ {n=1}^\infty n^{-1} = +\infty$ ，故复级数 $\sum _ {n=1}^\infty |n^{-s}| = \sum _ {n=1}^\infty n^{-\sigma}$ 发散。由于在有限维赋范空间 $\mathbb{C}$ 中，无序可和 $\operatorname{Summable}$ 等价于绝对可和 $\operatorname{Summable}(\Vert \cdot\Vert )$ ，故 $\neg\operatorname{LSeriesSummable}(1, s)$ ，由定义 $(4.1)$ 立即得 $\operatorname{LSeries}(1, s) = 0$ 。另一方面，对真正的解析延拓函数 $\zeta(s)$ ，在 $0 \lt \sigma \lt 1$ 上由第一阶 Euler–Maclaurin 积分表示：
 
 $$
 \begin{aligned}
 \zeta(\sigma) &= \frac{1}{\sigma - 1} + 1 - \sigma \int _ {1}^{\infty} \lbrace u\rbrace u^{-\sigma - 1}\thinspace du \cr
-&< \frac{1}{\sigma - 1} + 1.
+&\lt \frac{1}{\sigma - 1} + 1.
 \end{aligned} \tag{4.4}
 $$
 
-代入 $\sigma = 3/4$ ，由于 $\lbrace u\rbrace \ge 0$ ，立即得 $\zeta(3/4) < \frac{1}{3/4 - 1} + 1 = -4 + 1 = -3 < 0$ ；在 $s = 0$ 处则有 $\zeta(0) = -1/2 \neq 0$ 。这就从根本上证明：任何在 $\operatorname{Re}(s) \le 1$ 内将 $\operatorname{LSeries}$ 的等式未经 $\operatorname{Re}(s) > 1$ 收敛域守卫直接代入临界带的操作，都是在把“发散级数被类型论静默赋值的默认垃圾值 $0$ ”伪装成“解析延拓函数的真实零点”。证毕。
+代入 $\sigma = 3/4$ ，由于 $\lbrace u\rbrace \ge 0$ ，立即得 $\zeta(3/4) \lt \frac{1}{3/4 - 1} + 1 = -4 + 1 = -3 \lt 0$ ；在 $s = 0$ 处则有 $\zeta(0) = -1/2 \neq 0$ 。这就从根本上证明：任何在 $\operatorname{Re}(s) \le 1$ 内将 $\operatorname{LSeries}$ 的等式未经 $\operatorname{Re}(s) \gt 1$ 收敛域守卫直接代入临界带的操作，都是在把“发散级数被类型论静默赋值的默认垃圾值 $0$ ”伪装成“解析延拓函数的真实零点”。证毕。
 
 ### 4.2　失实机制二：极点 $s=1$ 填洞赋默认值在点值读口下丢失留数与双穿孔恢复对偶
 
@@ -611,7 +611,7 @@ s _ k &= \frac{2\pi i k}{\log p} \cr
 $$
 
 （注：取 $k \neq 0$ 可严格避开 $s = 0$ 处 $\zeta(0) = -1/2$ 的实点情形，以及若有人误将极点 $s=1$ 混入时的抵消争议；在 $s _ 1 = \frac{2\pi i}{\log 2}$ 处， $2^{-s _ 1} = \exp(-\log 2 \cdot \frac{2\pi i}{\log 2}) = \exp(-2\pi i) = 1$ ，故 $1 - 2^{-s _ 1} = 0$ ，从而 $L(s _ 1, \chi _ {0,2}) = 0$ 。）
-这就严格证明：如果一个关于一般模 $N$ Dirichlet $L$ 函数的零点定理漏掉了**开临界带左边界守卫** $0 < \operatorname{Re}(s)$ 或漏掉了**本原特征守卫** $\operatorname{IsPrimitive}(\chi)$ ，那么在 $N = 2, \chi = \chi _ {0,2}, s _ 1 = \frac{2\pi i}{\log 2}$ 处实例化该定理，就会在形式系统中直接导出 $(0 : \mathbb{R}) = 1/2$ 。同理，对于模 $N = 4$ 的非本原主特征 $\chi _ {0,4}$ ，其对标准加法特征 $\psi _ 4(a) = e^{2\pi i a / 4} = i^a$ 的 Gauss 和由于在偶余类 $a \in \lbrace 0, 2\rbrace$ 上 $\chi _ {0,4}(a) = 0$ 、在奇余类 $a \in \lbrace 1, 3\rbrace$ 上 $\chi _ {0,4}(1) = \chi _ {0,4}(3) = 1$ ，直接退化为零：
+这就严格证明：如果一个关于一般模 $N$ Dirichlet $L$ 函数的零点定理漏掉了**开临界带左边界守卫** $0 \lt \operatorname{Re}(s)$ 或漏掉了**本原特征守卫** $\operatorname{IsPrimitive}(\chi)$ ，那么在 $N = 2, \chi = \chi _ {0,2}, s _ 1 = \frac{2\pi i}{\log 2}$ 处实例化该定理，就会在形式系统中直接导出 $(0 : \mathbb{R}) = 1/2$ 。同理，对于模 $N = 4$ 的非本原主特征 $\chi _ {0,4}$ ，其对标准加法特征 $\psi _ 4(a) = e^{2\pi i a / 4} = i^a$ 的 Gauss 和由于在偶余类 $a \in \lbrace 0, 2\rbrace$ 上 $\chi _ {0,4}(a) = 0$ 、在奇余类 $a \in \lbrace 1, 3\rbrace$ 上 $\chi _ {0,4}(1) = \chi _ {0,4}(3) = 1$ ，直接退化为零：
 
 $$
 \begin{aligned}
@@ -624,7 +624,7 @@ $$
 
 #### 定理 III-B（跨模统一拉回载体与四特征实正定锥定理）
 
-在证明零点排斥或跨模联合估计（如例外实特征与测试特征的耦合）时，不能把不同模数 $N _ 1, N _ 2$ 的特征孤立在各自的 $\operatorname{ZMod}(N _ 1)$ 与 $\operatorname{ZMod}(N _ 2)$ 槽位中，而必须通过公共倍数模 $N = \operatorname{lcm}(N _ 1, N _ 2)$ （或统一拉回至整数环 $\mathbb{Z}$ 上的完全乘性支撑序列）建立联合算术读口。对任意两个实取值（二次）特征 $\chi _ 1, \chi _ 2 : \mathbb{Z} \to \lbrace -1, 0, 1\rbrace$ ，在 $\sigma = \operatorname{Re}(s) > 1$ 上，四特征联合对数级数
+在证明零点排斥或跨模联合估计（如例外实特征与测试特征的耦合）时，不能把不同模数 $N _ 1, N _ 2$ 的特征孤立在各自的 $\operatorname{ZMod}(N _ 1)$ 与 $\operatorname{ZMod}(N _ 2)$ 槽位中，而必须通过公共倍数模 $N = \operatorname{lcm}(N _ 1, N _ 2)$ （或统一拉回至整数环 $\mathbb{Z}$ 上的完全乘性支撑序列）建立联合算术读口。对任意两个实取值（二次）特征 $\chi _ 1, \chi _ 2 : \mathbb{Z} \to \lbrace -1, 0, 1\rbrace$ ，在 $\sigma = \operatorname{Re}(s) \gt 1$ 上，四特征联合对数级数
 
 $$
 \begin{aligned}
@@ -642,7 +642,7 @@ c _ {p,m}(\chi _ 1, \chi _ 2) &= 1 + \chi _ 1(p)^m + \chi _ 2(p)^m + \bigl(\chi 
 \end{aligned} \tag{4.13}
 $$
 
-从而在整个 $\sigma > 1$ 上每个有限素数前缀都保持严格非负性：
+从而在整个 $\sigma \gt 1$ 上每个有限素数前缀都保持严格非负性：
 
 $$
 \begin{aligned}
@@ -710,7 +710,7 @@ $$
 \left(d _ 1, d _ 2, d _ 3\right) = \left(\frac{3}{68}, \frac{613}{36822}, \frac{6669}{324277}\right) \tag{4.19}
 $$
 
-全部严格为正，且在向量 $c = (34, -57, 23)^{\mathsf{T}}$ 上给出精确正整数能量 $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 > 0$ 。
+全部严格为正，且在向量 $c = (34, -57, 23)^{\mathsf{T}}$ 上给出精确正整数能量 $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 \gt 0$ 。
 **(2)** 实字符素数锥的三维精确有理 $LDL^{\mathsf{T}}$ 证书：同样地，在素数基 $\lbrace 17, 19, 23\rbrace$ 上生成的第二组实字符素数锥有理 Gram 矩阵，其精确 $LDL^{\mathsf{T}}$ 对角枢轴为
 
 $$
@@ -780,19 +780,19 @@ $$
 
 $$
 \begin{aligned}
-&\forall s \in \mathbb{C},\quad \operatorname{riemannZeta}(s) = 0 \ \land\ 0 < \operatorname{Re}(s) < 1 \cr
+&\forall s \in \mathbb{C},\quad \operatorname{riemannZeta}(s) = 0 \ \land\ 0 \lt \operatorname{Re}(s) \lt 1 \cr
 &\qquad \land\ \bigl(\neg\exists n \in \mathbb{N},\ s = -2((n : \mathbb{C}) + 1)\bigr) \ \land\ s \neq 1 \cr
 &\qquad \implies \operatorname{Re}(s) = \frac{1}{2}.
 \end{aligned} \tag{5.2}
 $$
 
-**(3)** 一般 Dirichlet $L$ 函数在半平面 $\operatorname{Re}(s) > 1/2$ 非消失定理 LFunction\_ne\_zero\_of\_half\_lt\_re（类型为 $\operatorname{DirichletLNonvanishingRightOfHalf}$） ：
+**(3)** 一般 Dirichlet $L$ 函数在半平面 $\operatorname{Re}(s) \gt 1/2$ 非消失定理 LFunction\_ne\_zero\_of\_half\_lt\_re（类型为 $\operatorname{DirichletLNonvanishingRightOfHalf}$） ：
 
 $$
 \begin{aligned}
 &\forall N \in \mathbb{N}\ [\operatorname{NeZero}(N)]\ \forall \chi \in \operatorname{DirichletCharacter}(\mathbb{C}, N), \cr
 &\qquad \forall s \in \mathbb{C}, \cr
-&\qquad 1/2 < \operatorname{Re}(s) \ \land\ (\chi \neq 1 \lor s \neq 1) \cr
+&\qquad 1/2 \lt \operatorname{Re}(s) \ \land\ (\chi \neq 1 \lor s \neq 1) \cr
 &\qquad \implies \operatorname{DirichletCharacter.LFunction}(\chi, s) \neq 0.
 \end{aligned} \tag{5.3}
 $$
@@ -803,7 +803,7 @@ $$
 \begin{aligned}
 &\forall N \in \mathbb{N}\ [\operatorname{NeZero}(N)]\ \forall \chi \in \operatorname{DirichletCharacter}(\mathbb{C}, N), \cr
 &\qquad \forall s \in \mathbb{C}, \cr
-&\qquad 0 < \operatorname{Re}(s) < 1 \ \land\ \operatorname{DirichletCharacter.LFunction}(\chi, s) = 0 \cr
+&\qquad 0 \lt \operatorname{Re}(s) \lt 1 \ \land\ \operatorname{DirichletCharacter.LFunction}(\chi, s) = 0 \cr
 &\qquad \implies \operatorname{Re}(s) = 1/2.
 \end{aligned} \tag{5.4}
 $$
@@ -813,7 +813,7 @@ $$
 $$
 \begin{aligned}
 &\forall N \in \mathbb{N}\ [\operatorname{NeZero}(N)]\ \forall \chi \in \operatorname{DirichletCharacter}(\mathbb{C}, N), \cr
-&\qquad \operatorname{IsPrimitive}(\chi) \implies \forall s \in \mathbb{C},\ 0 < \operatorname{Re}(s) < 1 \cr
+&\qquad \operatorname{IsPrimitive}(\chi) \implies \forall s \in \mathbb{C},\ 0 \lt \operatorname{Re}(s) \lt 1 \cr
 &\qquad \land\ \operatorname{DirichletCharacter.LFunction}(\chi, s) = 0 \cr
 &\qquad \implies \operatorname{Re}(s) = 1/2.
 \end{aligned} \tag{5.5}
@@ -828,13 +828,13 @@ $$
 | 方案与实机探针名称 | 导入环境与测试靶标 | 实机退出码 | 实机耗时（秒） | lc23 实机编译实测结论与捕获的精确证据 |
 | :--- | :--- | :---: | :---: | :--- |
 | **方案一**（探针 1A）： TailMirrorOriginal | 导入原版 Statements 与 Supplements.Kernels.MainTheoremsAll | $1$ | $1,446.612$ | 将结论 $\operatorname{Re}(s) = 1/2$ 替换为 $\operatorname{MirrorRH}$ （ $\operatorname{Re}(s) = 3/4$ ）并赋原证明项 rhOfAll ，编译器报类型不匹配 Type mismatch: rhOfAll has type RiemannHypothesis but is expected to have type MirrorRH ，证实顶层证明项并非对任意结论皆可赋值的多态空壳 |
-| **方案一**（探针 1A 续）： FirstZeroProbe | 导入原版 Main 与 Mathlib.Tactic | $124$ （超时终止） | $7,677.660$ | 在全库 $175,187$ 个模块环境下搜索首零点存在性见证 $\exists s,\ \operatorname{riemannZeta}(s)=0 \land 0<\operatorname{Re}(s)<1 \land 14<\operatorname{Im}(s)<15$ ，经过 $7,677.66$ 秒仍未返回，证实全库并未显式提供首零点存在性的可直接检索定理 |
-| **方案一**（探针 1B/1C）： AutopsyProbe\_Scheme1 | Lean v4.33.1 + Mathlib 0df444a360ea | $0$ | $2.399$ | 实机证成四项核心定理：① raw\_zero 与 raw\_three\_quarters ： $\operatorname{Re}(s)\le 1 \implies \operatorname{LSeries}(1,s)=0$ 及 $\operatorname{LSeries}(1, 3/4)=0$ ；② functions\_differ ：由 $\operatorname{LSeries}(1,0)=0 \neq -1/2 = \operatorname{riemannZeta}(0)$ 证出 $(s \mapsto \operatorname{LSeries}(1,s)) \neq \operatorname{riemannZeta}$ ；③ axis\_principal\_zero ：模 $2$ 主特征在虚轴点 $s _ 0 = \frac{2\pi i}{\log 2}$ （ $\operatorname{Re}(s _ 0)=0$ ）处 $\operatorname{DirichletCharacter.LFunction}(1, s _ 0) = 0$ ；④ removing\_guard\_is\_false ：删去 $0 < \operatorname{Re}(s)$ 守卫后的全称临界线命题在 Lean 4 内被直接证伪 |
+| **方案一**（探针 1A 续）： FirstZeroProbe | 导入原版 Main 与 Mathlib.Tactic | $124$ （超时终止） | $7,677.660$ | 在全库 $175,187$ 个模块环境下搜索首零点存在性见证 $\exists s,\ \operatorname{riemannZeta}(s)=0 \land 0\lt\operatorname{Re}(s)\lt1 \land 14\lt\operatorname{Im}(s)\lt15$ ，经过 $7,677.66$ 秒仍未返回，证实全库并未显式提供首零点存在性的可直接检索定理 |
+| **方案一**（探针 1B/1C）： AutopsyProbe\_Scheme1 | Lean v4.33.1 + Mathlib 0df444a360ea | $0$ | $2.399$ | 实机证成四项核心定理：① raw\_zero 与 raw\_three\_quarters ： $\operatorname{Re}(s)\le 1 \implies \operatorname{LSeries}(1,s)=0$ 及 $\operatorname{LSeries}(1, 3/4)=0$ ；② functions\_differ ：由 $\operatorname{LSeries}(1,0)=0 \neq -1/2 = \operatorname{riemannZeta}(0)$ 证出 $(s \mapsto \operatorname{LSeries}(1,s)) \neq \operatorname{riemannZeta}$ ；③ axis\_principal\_zero ：模 $2$ 主特征在虚轴点 $s _ 0 = \frac{2\pi i}{\log 2}$ （ $\operatorname{Re}(s _ 0)=0$ ）处 $\operatorname{DirichletCharacter.LFunction}(1, s _ 0) = 0$ ；④ removing\_guard\_is\_false ：删去 $0 \lt \operatorname{Re}(s)$ 守卫后的全称临界线命题在 Lean 4 内被直接证伪 |
 | **方案一**（目标实例化）： TargetValueProbe | 导入原版 Main | $0$ | $1,799.910$ | 由原版 LFunction\_ne\_zero\_of\_half\_lt\_re 在 $N=1, \chi=1, s=3/4$ 处实例化证出 $\operatorname{riemannZeta}(3/4) \neq 0$ ，打印公理为 propext, Classical.choice, Quot.sound |
-| **方案二**（定义与延拓桥）： AutopsyProbe\_Scheme2 | Lean v4.33.1 + Mathlib 0df444a360ea | $0$ | $1.595$ | 实机 #print 剥离出 $\operatorname{DirichletCharacter.LFunction}$ 与 $\operatorname{ZMod.LFunction}$ 的精确 Hurwitz 线性组合定义式 $(2.19)$ ，并验证带 $\operatorname{Re}(s) > 1$ 守卫的级数桥 dirichlet\_bridge 与本原函数方程 completedLFunction\_one\_sub |
+| **方案二**（定义与延拓桥）： AutopsyProbe\_Scheme2 | Lean v4.33.1 + Mathlib 0df444a360ea | $0$ | $1.595$ | 实机 #print 剥离出 $\operatorname{DirichletCharacter.LFunction}$ 与 $\operatorname{ZMod.LFunction}$ 的精确 Hurwitz 线性组合定义式 $(2.19)$ ，并验证带 $\operatorname{Re}(s) \gt 1$ 守卫的级数桥 dirichlet\_bridge 与本原函数方程 completedLFunction\_one\_sub |
 | **方案三 & 方案四**（全库声明图、依赖锥与最小有向割）： original\_scheme4 | 导入原版 Main 全环境（ env.checked 遍历） | $0$ | $3,268.004$ | 导出完整的 $6,507,343,368$ 字节（ $6.1 \mathrm{GB}$ ）全环境声明引用图流，精确测得全环境 $2,701,132$ 个声明节点、 $170,706,224$ 条有向依赖边、五大主定理联合依赖锥 $1,478,243$ **个声明**、锥内公理集合为 {Classical.choice, Quot.sound, propext} ，并算出从乘性源集到五大主定理汇集的**最小内部有向顶点割容量严格等于** $8$ （独立验证器核验 VERIFIED ） |
 | **方案五**（特洛伊反模型注入）： AutopsyProbe\_Scheme5 | Lean v4.33.1 + Mathlib 0df444a360ea | $0$ | $5.856$ | 实机编译通过代数对称特洛伊多项式 $P(s) = (s-1/2)^2 - 1/16$ 、Davenport–Heilbronn 系数非乘性 dh\_not\_multiplicative 、偶通道互反根 even\_root ($F _ {\mathrm{even}}(3/4)=0$) 及完备化反射对称 even\_completed\_reflection ，在 Lean 4 内形式证伪弱排零规则 weak\_rule\_refuted ($\neg\operatorname{WeakRule}$) 并给出条件碰撞 $\operatorname{WeakRule} \to (3/4 : \mathbb{R}) = 1/2$ 与 $\operatorname{WeakRule} \to (0 : \mathbb{Z}) = 1$ |
-| **方案六**（有限算术与正定矩阵对撞）： AutopsyProbe\_Scheme6 | Lean v4.33.1 + Mathlib 0df444a360ea | $0$ | $3.990$ | 实机编译通过模零排除 $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ 、Rouché 严格有理裕量 $(1/8)^2-(1/16)^2=3/256>0$ 、互反根 $1-(5/2)(1/2)+(1/2)^2=0$ 、模 $4$ 主特征 Gauss 和退化 principal\_mod4\_gauss = 0 、素基 $\lbrace 17,19,23\rbrace$ 有理 Gram 矩阵 $LDL^{\mathsf{T}}$ 平方分解 gram\_ldlt 、正定性 gram\_positive 及零矩向量正能量 $\operatorname{gram}(34,-57,23)=39$ |
+| **方案六**（有限算术与正定矩阵对撞）： AutopsyProbe\_Scheme6 | Lean v4.33.1 + Mathlib 0df444a360ea | $0$ | $3.990$ | 实机编译通过模零排除 $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ 、Rouché 严格有理裕量 $(1/8)^2-(1/16)^2=3/256\gt0$ 、互反根 $1-(5/2)(1/2)+(1/2)^2=0$ 、模 $4$ 主特征 Gauss 和退化 principal\_mod4\_gauss = 0 、素基 $\lbrace 17,19,23\rbrace$ 有理 Gram 矩阵 $LDL^{\mathsf{T}}$ 平方分解 gram\_ldlt 、正定性 gram\_positive 及零矩向量正能量 $\operatorname{gram}(34,-57,23)=39$ |
 | **元编程绕过前端负控实验**： KexactNegativeControl | Lean v4.33.1 + Mathlib 0df444a360ea | $1$ | $2.921$ | 提取原版 kexactB 策略体（以期望类型 none 阐述项并直接对目标元变量执行 g.assign ），测试将 $\mathrm{True}$ 的证明项强赋给 $\mathrm{False}$ 目标，实测前端阐述器未拦截而由底层内核报 (kernel) declaration type mismatch 拒绝 |
 
 ### 5.4　方案四全图网络流核查：二百七十万声明、一亿七千万条边上的“八顶点最小有向割”与二十步对数二分定位
@@ -985,18 +985,18 @@ $$
 其中：
 - $N^{\ast} \mid N$ 为本原导子， $\chi^{\ast}$ 为诱导 $\chi$ 的唯一本原特征，显式分离坏素数局部 Euler 因子 $\prod _ {p\mid N, p\nmid N^{\ast}}(1 - \chi^{\ast}(p)p^{-s})$ 在虚轴 $\operatorname{Re}(s) = 0$ 上的周期零点；
 - $\mathcal{Z} _ {P,X}(s; \chi)$ 为当前有限素数窗口 $p \le P$ （或求和窗口 $n \le X$ ）的显式算术主部， $\delta _ {P,X}(s; \chi)$ 为满足步进守恒律 $(1.2)$ – $(1.3)$ 的未决余项耦合纤维；
-- $\mathcal{C} _ {\mathrm{hol}}(B)$ 为目标有理矩形 $B \subset \lbrace 1/2 < \operatorname{Re}(s) < 1\rbrace$ 上的无极点、边界无零点及显式有理 Rouché 裕量证书 $\Delta _ {\mathrm{Rouche}} > 0$ 。
+- $\mathcal{C} _ {\mathrm{hol}}(B)$ 为目标有理矩形 $B \subset \lbrace 1/2 \lt \operatorname{Re}(s) \lt 1\rbrace$ 上的无极点、边界无零点及显式有理 Rouché 裕量证书 $\Delta _ {\mathrm{Rouche}} \gt 0$ 。
 
 #### 2. 六大最简零通读秒级核查方案的闭式判定准则
 - **方案一**（证明尾部插入与边界守卫剥离检验）：在证明树末端新建独立测试模块，固定主定理证明项 $p$ ，分别测试：
 - **(1A)** 镜像结论替换 $\operatorname{Re}(s) = 3/4$ 是否被内核拒绝；
 - **(1B)** 原始级数 $\operatorname{LSeries}(1, 3/4) = 0$ 与解析延拓值 $\operatorname{riemannZeta}(3/4) \neq 0$ 的严格分离；
-- **(1C)** 剥离左边界守卫 $0 < \operatorname{Re}(s)$ 后，用模 $2$ 主特征在虚轴零点 $s _ 0 = \frac{2\pi i}{\log 2}$ 处的等式 $\operatorname{DirichletCharacter.LFunction}(1, s _ 0) = 0$ 直接在数秒内证伪无守卫命题。
-- **方案二**（底层定义打印与右半平面收敛桥守卫审计）：对顶层定理链条中的 $\operatorname{LFunction}$ 与 $\operatorname{ZMod.LFunction}$ 执行定义展开，核查从右半平面 Euler 乘积向临界带延拓的每一步桥接引理是否携带显式收敛域前件 $\operatorname{Re}(s) > 1$ 。
+- **(1C)** 剥离左边界守卫 $0 \lt \operatorname{Re}(s)$ 后，用模 $2$ 主特征在虚轴零点 $s _ 0 = \frac{2\pi i}{\log 2}$ 处的等式 $\operatorname{DirichletCharacter.LFunction}(1, s _ 0) = 0$ 直接在数秒内证伪无守卫命题。
+- **方案二**（底层定义打印与右半平面收敛桥守卫审计）：对顶层定理链条中的 $\operatorname{LFunction}$ 与 $\operatorname{ZMod.LFunction}$ 执行定义展开，核查从右半平面 Euler 乘积向临界带延拓的每一步桥接引理是否携带显式收敛域前件 $\operatorname{Re}(s) \gt 1$ 。
 - **方案三**（全递归依赖锥公理审查与绕过前端策略排查）：在完整导入环境上递归遍历类型引用、证明体引用与归纳结构引用，核对五大主定理依赖锥 $\operatorname{Cone} _ {\mathcal{G}}(T)$ 内的公理集，并检索锥内是否存在将阐述期望类型设为 none 并直接执行底层元变量赋值的自定义策略（如 kexactB 、 kcopy 、 addDecl ）及触发独立检查器退出码 $2$ 的互归纳自反成员。
 - **方案四**（源汇有向依赖网络最小顶点割与二十步对数二分）：在全环境有向声明图 $\mathcal{G} = (V, E)$ 上，以乘性同态及 Euler 乘积定理集为源集 $S$ 、以顶层主定理集为汇集 $T$ ，求解拆点单位容量最大流与最小内部有向顶点割 $\lambda(S \to T)$ ，并用 $\lceil \log _ 2 |V _ {\mathrm{active}}| \rceil \le 25$ 步对数二分锁定咽喉瓶颈节点。
-- **方案五**（同商纤维特洛伊反模型注入）：构造满足对称函数方程与多项式增长界、但在 $1/2 < \operatorname{Re}(s) < 1$ 内带显式离轴零点的测试对象——代数对称多项式 $P _ {\mathrm{Trojan}}(s) = (s-3/4)(s-1/4)$ 、偶通道互反变形函数 $F _ {\mathrm{even}}(s) = P _ r(2^{1/2-s})\zeta(s)$ （在 $s = 3/4$ 处恒为零）与奇通道 Davenport–Heilbronn 周期 Hurwitz 组合 $\mathcal{D}(s)$ （在 $n = 6$ 处乘性残差为 $1 + \kappa^2 > 0$ ），直接注入任何未绑定全阶素数幂乘性的临界带排零引理以触发 $(3/4 : \mathbb{R}) = 1/2$ 。
-- **方案六**（有限模数、Gauss 和退化与有理正定 Gram 矩阵对撞）：用模零排除 $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ 、模 $4$ 非本原主特征 Gauss 和 $\tau(\chi _ {0,4}) = 0 \neq 2$ 及三维有理 Gram 矩阵 $LDL^{\mathsf{T}}$ 精确平方和分解与零矩非零向量 $c = (34, -57, 23)^{\mathsf{T}}$ （能量 $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 > 0$ ）检验局部有限算术引理的前件完整性。
+- **方案五**（同商纤维特洛伊反模型注入）：构造满足对称函数方程与多项式增长界、但在 $1/2 \lt \operatorname{Re}(s) \lt 1$ 内带显式离轴零点的测试对象——代数对称多项式 $P _ {\mathrm{Trojan}}(s) = (s-3/4)(s-1/4)$ 、偶通道互反变形函数 $F _ {\mathrm{even}}(s) = P _ r(2^{1/2-s})\zeta(s)$ （在 $s = 3/4$ 处恒为零）与奇通道 Davenport–Heilbronn 周期 Hurwitz 组合 $\mathcal{D}(s)$ （在 $n = 6$ 处乘性残差为 $1 + \kappa^2 \gt 0$ ），直接注入任何未绑定全阶素数幂乘性的临界带排零引理以触发 $(3/4 : \mathbb{R}) = 1/2$ 。
+- **方案六**（有限模数、Gauss 和退化与有理正定 Gram 矩阵对撞）：用模零排除 $\neg\operatorname{Nonempty}(\operatorname{NeZero}(0))$ 、模 $4$ 非本原主特征 Gauss 和 $\tau(\chi _ {0,4}) = 0 \neq 2$ 及三维有理 Gram 矩阵 $LDL^{\mathsf{T}}$ 精确平方和分解与零矩非零向量 $c = (34, -57, 23)^{\mathsf{T}}$ （能量 $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 \gt 0$ ）检验局部有限算术引理的前件完整性。
 
 ---
 
@@ -1788,7 +1788,7 @@ $$
 \end{aligned}
 $$
 
-且若观察矩阵仅取对称前两阶矩 $M _ {\mathrm{sym}}$ 在对应核向量 $c' = (23, -34, 11)^{\mathsf{T}}$ 上同样满足 $M _ {\mathrm{sym}} c' = 0$ ，而在命题 A.55 的波包正定矩阵 $G _ {\mathrm{wave}}$ 下则严格有 $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 > 0$ 。
+且若观察矩阵仅取对称前两阶矩 $M _ {\mathrm{sym}}$ 在对应核向量 $c' = (23, -34, 11)^{\mathsf{T}}$ 上同样满足 $M _ {\mathrm{sym}} c' = 0$ ，而在命题 A.55 的波包正定矩阵 $G _ {\mathrm{wave}}$ 下则严格有 $c^{\mathsf{T}} G _ {\mathrm{wave}} c = 39 \gt 0$ 。
 
 $$
 M _ {\mathrm{sym}} = \begin{pmatrix} 1 & 1 & 1 \cr 23 & 34 & 57 \end{pmatrix}.
@@ -1828,7 +1828,7 @@ $$
 $$
 \begin{aligned}
 & D _ {\mathrm{Rouche}} = \operatorname{diag}\left(\frac{1}{64}, \frac{3}{256}\right) \succ 0, \cr
-& \Delta _ {\mathrm{Rouche}} = \left(\frac{1}{8}\right)^2 - \left(\frac{1}{16}\right)^2 = \frac{3}{256} > 0.
+& \Delta _ {\mathrm{Rouche}} = \left(\frac{1}{8}\right)^2 - \left(\frac{1}{16}\right)^2 = \frac{3}{256} \gt 0.
 \end{aligned}
 $$
 
@@ -1837,7 +1837,7 @@ $$
 $$
 \begin{aligned}
 \Delta _ {\mathrm{Rouche},1/6} &= \left(\frac{1}{6}\right)^2 - \left(\frac{1}{12}\right)^2 \cr
-&= \frac{1}{36} - \frac{1}{144} = \frac{1}{48} > 0.
+&= \frac{1}{36} - \frac{1}{144} = \frac{1}{48} \gt 0.
 \end{aligned}
 $$
 
@@ -1964,13 +1964,13 @@ $$
 
 **命题 A.83**。在四维前四个素数 $\lbrace 2, 3, 5, 7\rbrace$ 的累积乘积（素数阶乘 $2, 6, 30, 210$ ）对数基底中，下三角全 $1$ 观测矩阵 $M _ 4$ 与精确一阶差分左逆矩阵 $L _ 4 = M _ 4^{-1}$ 满足 $L _ 4 M _ 4 = I _ 4$ ，证明任意有限长度的普通素数对数族在 $\mathbb{Q}$ 上满秩线性独立。
 
-**命题 A.84**。在四维（有限视界 $(1, P _ {\ast}]$ 内素数主部、经典零点自由区宽度、素数定理余项阶、视界外 $p > P _ {\ast}$ 的高阶广义素数尾项）状态空间中，若观察矩阵仅读取前两类有限视界商特征 $E$ ，则定理 B₂ 的有限换尾手术（删去 $D = B \cap (1, P _ {\ast}]$ 并补入真素数 $A = \mathcal{P} \cap (1, P _ {\ast}]$ ）恰好对应于 $\ker E$ 内的零漂移换尾向量 $\delta = (-1, 0, 1, 0)^{\mathsf{T}}$ （ $E\delta = 0$ ），从而换尾后的 $\widetilde{\zeta} _ B$ 在静态商 $E$ 下与真算术前缀完全同纤维。
+**命题 A.84**。在四维（有限视界 $(1, P _ {\ast}]$ 内素数主部、经典零点自由区宽度、素数定理余项阶、视界外 $p \gt P _ {\ast}$ 的高阶广义素数尾项）状态空间中，若观察矩阵仅读取前两类有限视界商特征 $E$ ，则定理 B₂ 的有限换尾手术（删去 $D = B \cap (1, P _ {\ast}]$ 并补入真素数 $A = \mathcal{P} \cap (1, P _ {\ast}]$ ）恰好对应于 $\ker E$ 内的零漂移换尾向量 $\delta = (-1, 0, 1, 0)^{\mathsf{T}}$ （ $E\delta = 0$ ），从而换尾后的 $\widetilde{\zeta} _ B$ 在静态商 $E$ 下与真算术前缀完全同纤维。
 
 $$
 E = \begin{pmatrix} 1 & 0 & 1 & 0 \cr 0 & 1 & 0 & 1 \end{pmatrix}.
 $$
 
-**命题 A.85**。在定理 B₂ 的有理 Euler 修饰因子 $H _ {P _ {\ast}}(s) = \prod _ {b \in D}(1 - b^{-s}) / \prod _ {p \in A}(1 - p^{-s})$ 中，对任意 $p \ge 2$ 及实点 $\sigma \in \lbrace 1/2, 3/4, 1\rbrace \subset \lbrace \operatorname{Re}(s) > 0\rbrace$ ，局部因子 $1 - p^{-\sigma}$ 严格大于零。特别地，在有理测试点 $p^{-s} \in \lbrace 1/2, 1/4, 1/8\rbrace$ 处，局部因子构成的 $3\times 3$ 对角正定矩阵
+**命题 A.85**。在定理 B₂ 的有理 Euler 修饰因子 $H _ {P _ {\ast}}(s) = \prod _ {b \in D}(1 - b^{-s}) / \prod _ {p \in A}(1 - p^{-s})$ 中，对任意 $p \ge 2$ 及实点 $\sigma \in \lbrace 1/2, 3/4, 1\rbrace \subset \lbrace \operatorname{Re}(s) \gt 0\rbrace$ ，局部因子 $1 - p^{-\sigma}$ 严格大于零。特别地，在有理测试点 $p^{-s} \in \lbrace 1/2, 1/4, 1/8\rbrace$ 处，局部因子构成的 $3\times 3$ 对角正定矩阵
 
 $$
 D _ {\mathrm{Euler}} = \operatorname{diag}(1 - 1/2,\ 1 - 1/4,\ 1 - 1/8) = \operatorname{diag}(1/2, 3/4, 7/8) \succ 0
@@ -1980,7 +1980,7 @@ $$
 
 **命题 A.86**。在定理 B₂ 的有限换尾手术中，设被删有限集 $|D| = m _ 1$ 、被添有限集 $|A| = m _ 2$ 。在五维计数函数差空间中，有限增删对 $\pi _ B(x)$ 的有界偏移 $O(1)$ 与对 $\psi _ B(x)$ 的对数偏移 $O(\log x)$ 相对于次指数余项 $x\exp(-c _ 1\sqrt{\log x})$ 落在渐近等价核 $\ker E$ 内，剥离算子 $A _ 2 = \operatorname{diag}(1,1,1,1,0)$ 严格满足 $E A _ 2 K = 0$ 。
 
-**命题 A.87**。在四维窗口递推 $P _ {\ast} \to P _ {\ast}'$ （将有限素数视界从 $P _ {\ast}$ 扩大到 $P _ {\ast}'$ ）的换尾模型中，两次连续换尾算子 $A _ 1, A _ 2$ 满足复合闭合 $E A _ 1 K = E A _ 2 K = 0$ ，证实对于**任意大**的有限素数阈值 $P _ {\ast}$ ，换尾反模型 $\widetilde{\zeta} _ B$ 均在 $(1, P _ {\ast}]$ 上与真素数全同且完整保留 $\frac{1}{2} < \theta < \operatorname{Re}(s) < 1$ 内的全部无穷离轴零点。
+**命题 A.87**。在四维窗口递推 $P _ {\ast} \to P _ {\ast}'$ （将有限素数视界从 $P _ {\ast}$ 扩大到 $P _ {\ast}'$ ）的换尾模型中，两次连续换尾算子 $A _ 1, A _ 2$ 满足复合闭合 $E A _ 1 K = E A _ 2 K = 0$ ，证实对于**任意大**的有限素数阈值 $P _ {\ast}$ ，换尾反模型 $\widetilde{\zeta} _ B$ 均在 $(1, P _ {\ast}]$ 上与真素数全同且完整保留 $\frac{1}{2} \lt \theta \lt \operatorname{Re}(s) \lt 1$ 内的全部无穷离轴零点。
 
 **命题 A.88**。在四维（有限素数筛算子 $A _ {\mathrm{sieve}}$ 与渐近余项推进算子 $A _ {\mathrm{asymp}}$ ）耦合模型中，两算子的非交换换位子 $[A _ {\mathrm{sieve}}, A _ {\mathrm{asymp}}] \neq 0$ 严格落在视界外尾项核 $\ker E$ 内（ $E[A _ {\mathrm{sieve}}, A _ {\mathrm{asymp}}] = 0$ ），说明仅靠渐近余项量级无法反推出视界外素数的精确代数相位。
 
@@ -2019,7 +2019,7 @@ $$
 E = \begin{pmatrix} 1 & 1 & 0 & 0 \cr 0 & 0 & 1 & 1 \end{pmatrix}.
 $$
 
-**命题 A.95**。在四维有限 Euler 乘积取对数展开 $-\sum _ {p \le P _ {\ast}} \log(1 - p^{-s}) = \sum _ {p \le P _ {\ast}} \sum _ {m \ge 1} \frac{1}{m} p^{-ms}$ 的一阶素数项与高阶素数幂项（ $m \ge 2$ ）分解中，在 $\operatorname{Re}(s) > 1/2$ 上高阶素数幂级数 $\sum _ p \sum _ {m \ge 2} \frac{1}{m} p^{-ms}$ 绝对收敛且全纯，其与主部的分离算子满足 $E A _ i K = 0$ 。
+**命题 A.95**。在四维有限 Euler 乘积取对数展开 $-\sum _ {p \le P _ {\ast}} \log(1 - p^{-s}) = \sum _ {p \le P _ {\ast}} \sum _ {m \ge 1} \frac{1}{m} p^{-ms}$ 的一阶素数项与高阶素数幂项（ $m \ge 2$ ）分解中，在 $\operatorname{Re}(s) \gt 1/2$ 上高阶素数幂级数 $\sum _ p \sum _ {m \ge 2} \frac{1}{m} p^{-ms}$ 绝对收敛且全纯，其与主部的分离算子满足 $E A _ i K = 0$ 。
 
 **命题 A.96**。在三维 Chebyshev 阶梯函数 $\psi(x) = \sum _ {p^m \le x} \log p$ 的有限跳跃恢复模型中，三点差分观测矩阵 $M$ 与精确有理逆矩阵 $L$ （对非奇异修正 $M'$ 有 $L'$ ）满足 $L' M' = I _ 3$ 。
 
@@ -2032,11 +2032,11 @@ $$
 \end{aligned}
 $$
 
-**命题 A.97**。在五维有限换尾因子分子 $\prod _ {b \in D}(1-b^{-s})$ 与分母 $\prod _ {p \in A}(1-p^{-s})$ 的对数导数差空间中，由于两有限集在 $\operatorname{Re}(s) > 0$ 上均无零点，其对数导数差在临界带 $\theta < \operatorname{Re}(s) < 1$ 内处处全纯，在任何有理矩形围道 $B \subset \lbrace \theta < \operatorname{Re}(s) < 1\rbrace$ 上的绕数贡献恒为 $0$ （落在围道读口核 $\ker E$ 内， $E A _ i K = 0$ ）。
+**命题 A.97**。在五维有限换尾因子分子 $\prod _ {b \in D}(1-b^{-s})$ 与分母 $\prod _ {p \in A}(1-p^{-s})$ 的对数导数差空间中，由于两有限集在 $\operatorname{Re}(s) \gt 0$ 上均无零点，其对数导数差在临界带 $\theta \lt \operatorname{Re}(s) \lt 1$ 内处处全纯，在任何有理矩形围道 $B \subset \lbrace \theta \lt \operatorname{Re}(s) \lt 1\rbrace$ 上的绕数贡献恒为 $0$ （落在围道读口核 $\ker E$ 内， $E A _ i K = 0$ ）。
 
-**命题 A.98**。在三维广义素数密度余项 $|N _ B(x) - \kappa _ B x| \le C _ 1 x^\theta$ （ $1/2 < \theta < 1$ ）的有理指数分层中，取 $\theta = 3/4 \in (1/2, 1)$ ，则延拓半平面边界 $\operatorname{Re}(s) > 3/4$ 与临界线 $\operatorname{Re}(s) = 1/2$ 之间的有理间隙为 $3/4 - 1/2 = 1/4 > 0$ ，对应的正定对角裕量矩阵 $\operatorname{diag}(1/4, 3/4, 1) \succ 0$ 。
+**命题 A.98**。在三维广义素数密度余项 $|N _ B(x) - \kappa _ B x| \le C _ 1 x^\theta$ （ $1/2 \lt \theta \lt 1$ ）的有理指数分层中，取 $\theta = 3/4 \in (1/2, 1)$ ，则延拓半平面边界 $\operatorname{Re}(s) \gt 3/4$ 与临界线 $\operatorname{Re}(s) = 1/2$ 之间的有理间隙为 $3/4 - 1/2 = 1/4 \gt 0$ ，对应的正定对角裕量矩阵 $\operatorname{diag}(1/4, 3/4, 1) \succ 0$ 。
 
-**命题 A.99**。在四维 Beurling 离轴零点序列 $\rho _ n = 1 - \frac{a}{\log t _ n} + i t _ n$ 的渐近轨迹投影中，当仅观察经典零点自由区边界 $\sigma > 1 - a/\log t$ 时，位于边界曲线上的零点序列与无零点模型在自由区内部读口下同纤维（ $E A _ i K = 0$ ）。
+**命题 A.99**。在四维 Beurling 离轴零点序列 $\rho _ n = 1 - \frac{a}{\log t _ n} + i t _ n$ 的渐近轨迹投影中，当仅观察经典零点自由区边界 $\sigma \gt 1 - a/\log t$ 时，位于边界曲线上的零点序列与无零点模型在自由区内部读口下同纤维（ $E A _ i K = 0$ ）。
 
 **命题 A.100**。在六维带全阶素数唯一分解耦合锁的加强空间中，观察矩阵 $E$ 配合完整算术转移算子 $A _ 1, A _ 2$ 满足 $E A _ 1 K = E A _ 2 K = 0$ ，给出了阻断广义素数换尾伪影的最小有型状态维度。
 
@@ -2120,7 +2120,7 @@ $$
 
 **命题 A.110**。在方案四的拆点最大流与最小内部有向顶点割对偶中，从 $5$ 个乘性／Euler 乘积源节点到 $5$ 个主定理汇节点的 $8$ 条顶点不相交有向增广路与 $8$ 个最小割瓶颈顶点（ DirichletCharacter.FactorsThrough 、 Formalism.VW.critLine 、 Formalism.VW.rh\_of\_every 、 HurwitzZeta.hurwitzZetaEven 、 UpperTheory.FinalTheorems.everyCharacter 、 ZMod.LFunction 、 claimAll 、 starRingEnd.\_proof\_2 ）满足强最大流最小割对偶等式 $|f _ {\max}| = 8 = |C _ {\min}|$ 。在八通道单位容量流守恒模型中，入流与出流观测矩阵满足 $E A _ {\mathrm{flow}} K = 0$ 。
 
-**命题 A.111**。在方案一（探针 1C）与定理 III-A 的非本原特征虚轴零点模型中，模 $N = 2$ 主特征在 $s _ 1 = \frac{2\pi i}{\log 2}$ 处的局部 Euler 因子满足 $1 - 2^{-s _ 1} = 1 - e^{-2\pi i} = 1 - 1 = 0$ ，且 $\operatorname{Re}(s _ 1) = 0 \neq 1/2$ 。在三维（左边界守卫 $0 < \operatorname{Re}(s)$ 、本原守卫 $\operatorname{IsPrimitive}(\chi)$ 、虚轴 Euler 因子值）状态空间中，保持左边界守卫的观察矩阵 $E$ 将虚轴零点合法隔离在开临界带定义域之外（ $E A _ i K = 0$ ）。
+**命题 A.111**。在方案一（探针 1C）与定理 III-A 的非本原特征虚轴零点模型中，模 $N = 2$ 主特征在 $s _ 1 = \frac{2\pi i}{\log 2}$ 处的局部 Euler 因子满足 $1 - 2^{-s _ 1} = 1 - e^{-2\pi i} = 1 - 1 = 0$ ，且 $\operatorname{Re}(s _ 1) = 0 \neq 1/2$ 。在三维（左边界守卫 $0 \lt \operatorname{Re}(s)$ 、本原守卫 $\operatorname{IsPrimitive}(\chi)$ 、虚轴 Euler 因子值）状态空间中，保持左边界守卫的观察矩阵 $E$ 将虚轴零点合法隔离在开临界带定义域之外（ $E A _ i K = 0$ ）。
 
 $$
 E = \begin{pmatrix} 1 & 0 & 0 \cr 0 & 1 & 0 \end{pmatrix}.
@@ -2148,7 +2148,7 @@ $$
 E = \begin{pmatrix} 1 & 0 & 1 & 0 \cr 0 & 1 & 0 & 1 \end{pmatrix}.
 $$
 
-**命题 A.117**。在方案四的 $20$ 步字典序二分断路过程中，区间长度从 $L _ 0 = 1,072,972$ 经 $20$ 次折半 $L _ {k} = \lfloor L _ {k-1}/2 \rfloor$ 收敛至 $L _ {20} = 1$ （锁定 $k^{\ast} = 955,506$ ），步数严格满足 $20 = \lceil \log _ 2(1,072,972) \rceil < 25$ 。在三阶对数缩放正定核验中，裕量矩阵 $\operatorname{diag}(25 - 20, 8, 1) = \operatorname{diag}(5, 8, 1) \succ 0$ 。
+**命题 A.117**。在方案四的 $20$ 步字典序二分断路过程中，区间长度从 $L _ 0 = 1,072,972$ 经 $20$ 次折半 $L _ {k} = \lfloor L _ {k-1}/2 \rfloor$ 收敛至 $L _ {20} = 1$ （锁定 $k^{\ast} = 955,506$ ），步数严格满足 $20 = \lceil \log _ 2(1,072,972) \rceil \lt 25$ 。在三阶对数缩放正定核验中，裕量矩阵 $\operatorname{diag}(25 - 20, 8, 1) = \operatorname{diag}(5, 8, 1) \succ 0$ 。
 
 **命题 A.118**。在式 $(5.17)$ 的建设性保真状态对 $(\mathcal{Z} _ {P,X}, \delta _ {P,X})$ 中，当素数窗口与求和窗口同时作非交换两步推进 $(P, X) \to (P', X) \to (P', X')$ 与 $(P, X) \to (P, X') \to (P', X')$ 时，虽然中间主部与余项轨迹存在非交换换位子 $[A _ P, A _ X] \neq 0$ ，但全阶乘积守恒量读口 $E$ 满足 $E[A _ P, A _ X] = 0$ 与 $E A _ P K = E A _ X K = 0$ ，确保两条路径在终点合流于同一全阶算术对象。
 
@@ -2328,11 +2328,11 @@ $$
 $$
 \begin{aligned}
 E A _ {\mathrm{bad},22} k _ 3 &= (1, 1, 1, 1)(0, 0, 1, 0)^{\mathsf{T}} = 1 \neq 0, \cr
-1 - 1 - 1 + 0 &= -1 < 0.
+1 - 1 - 1 + 0 &= -1 \lt 0.
 \end{aligned}
 $$
 
-这直接证明：一旦拆散四特征的同源乘积绑定，式 $(4.13)$ 的实正定锥非负性就会即告破缺为负数 $-1 < 0$ 。
+这直接证明：一旦拆散四特征的同源乘积绑定，式 $(4.13)$ 的实正定锥非负性就会即告破缺为负数 $-1 \lt 0$ 。
 
 **命题 B.23**（命题 A.28 的单前件破缺孪生）。在六维三模统一拉回空间中，若将第三个模数的拉回通道切断（ $A _ {\mathrm{bad},23} = \operatorname{diag}(1, 1, 1, 1, 1, 0)$ ），则第三通道核向量 $(0, 0, 1, 0, 0, -1)^{\mathsf{T}}$ 发生泄漏： $E A _ {\mathrm{bad},23} K$ 在 $(3,3)$ 处等于 $1 \neq 0$ 。
 
@@ -2444,21 +2444,21 @@ $$
 \end{aligned}
 $$
 
-第二枢轴直接跌落为严格负有理数 $d _ 2 = -3 < 0$ （对测试向量 $x = (2, 1, 0)^{\mathsf{T}}$ 有 $x^{\mathsf{T}} G _ {\mathrm{bad},41} x = 4 - 8 + 1 = -3 < 0$ ），正定性即告失效。
+第二枢轴直接跌落为严格负有理数 $d _ 2 = -3 \lt 0$ （对测试向量 $x = (2, 1, 0)^{\mathsf{T}}$ 有 $x^{\mathsf{T}} G _ {\mathrm{bad},41} x = 4 - 8 + 1 = -3 \lt 0$ ），正定性即告失效。
 
-**命题 B.42**（命题 A.50 的单前件破缺孪生）。在命题 A.50 的矩阵中，若第三测试模式的自能量因离轴零点贡献从 $6$ 跌落为 $1$ （即 $G _ {\mathrm{bad},42}$ ），则前两个枢轴 $(d _ 1, d _ 2) = (4, 4) > 0$ 虽然仍为正（对应 $2\times 2$ 有限左上子块严格正定），但第三个 $LDL^{\mathsf{T}}$ 枢轴精确跌落为负数：
+**命题 B.42**（命题 A.50 的单前件破缺孪生）。在命题 A.50 的矩阵中，若第三测试模式的自能量因离轴零点贡献从 $6$ 跌落为 $1$ （即 $G _ {\mathrm{bad},42}$ ），则前两个枢轴 $(d _ 1, d _ 2) = (4, 4) \gt 0$ 虽然仍为正（对应 $2\times 2$ 有限左上子块严格正定），但第三个 $LDL^{\mathsf{T}}$ 枢轴精确跌落为负数：
 
 $$
 G _ {\mathrm{bad},42} = \begin{pmatrix} 4 & 2 & 1 \cr 2 & 5 & 2 \cr 1 & 2 & 1 \end{pmatrix}.
 $$
 
 $$
-d _ 3 = 1/2 - 4(1/4)^2 - 4(3/8)^2 = 1/2 - 13/16 = -5/16 < 0.
+d _ 3 = 1/2 - 4(1/4)^2 - 4(3/8)^2 = 1/2 - 13/16 = -5/16 \lt 0.
 $$
 
-这用一个精确的 $3\times 3$ 有理矩阵给出了定理 V 的直观代数见证：前 $2\times 2$ 有限维子块严格正定（ $d _ 1 = 4 > 0, d _ 2 = 4 > 0$ ），但一旦扩充到第 $3$ 个测试方向，第三个枢轴 $d _ 3 = -\frac{5}{16} < 0$ 立即暴露为负。
+这用一个精确的 $3\times 3$ 有理矩阵给出了定理 V 的直观代数见证：前 $2\times 2$ 有限维子块严格正定（ $d _ 1 = 4 \gt 0, d _ 2 = 4 \gt 0$ ），但一旦扩充到第 $3$ 个测试方向，第三个枢轴 $d _ 3 = -\frac{5}{16} \lt 0$ 立即暴露为负。
 
-**命题 B.43**（命题 A.51 的单前件破缺孪生）。当第一测试模式自身违反 Weil 正性（首对角元取 $-1$ ： $G _ {\mathrm{bad},43} = \operatorname{diag}(-1, 3, 3)$ ）时，首枢轴 $d _ 1 = -1 < 0$ 。
+**命题 B.43**（命题 A.51 的单前件破缺孪生）。当第一测试模式自身违反 Weil 正性（首对角元取 $-1$ ： $G _ {\mathrm{bad},43} = \operatorname{diag}(-1, 3, 3)$ ）时，首枢轴 $d _ 1 = -1 \lt 0$ 。
 
 **命题 B.44**（命题 A.52 的单前件破缺孪生）。当第二模式与第一模式发生退化共线（ $G _ {\mathrm{bad},44}$ ）时， $LDL^{\mathsf{T}}$ 分解的第二枢轴退化为零 $d _ 2 = 1 - 1 = 0 \ngtr 0$ ，严格正定性破缺为半正定奇异核 $(1, -1, 0)^{\mathsf{T}}$ 。
 
@@ -2469,22 +2469,22 @@ $$
 **命题 B.45**（命题 A.53 的单前件破缺孪生）。在四维三对角矩阵中，若前三阶子块完全保持命题 A.53 的严格正定块（ $d _ 1 = 2, d _ 2 = 3/2, d _ 3 = 4/3$ ），但第四阶高阶测试模式的对角元从 $2$ 跌落为 $0$ （ $G _ {\mathrm{bad},45}$ 的 $(4,4)$ 元为 $0$ ），则第四个 $LDL^{\mathsf{T}}$ 枢轴精确等于
 
 $$
-d _ 4 = 0 - \frac{4}{3}\times\left(\frac{3}{4}\right)^2 = -\frac{3}{4} < 0!
+d _ 4 = 0 - \frac{4}{3}\times\left(\frac{3}{4}\right)^2 = -\frac{3}{4} \lt 0!
 $$
 
-前三阶子块百分之百正定，而在第四阶测试向量 $x = (-1, 2, -3, 4)^{\mathsf{T}}$ 上二次型直接取负值 $x^{\mathsf{T}} G _ {\mathrm{bad},45} x = -12 < 0$ 。
+前三阶子块百分之百正定，而在第四阶测试向量 $x = (-1, 2, -3, 4)^{\mathsf{T}}$ 上二次型直接取负值 $x^{\mathsf{T}} G _ {\mathrm{bad},45} x = -12 \lt 0$ 。
 
-**命题 B.46**（命题 A.54 的单前件破缺孪生）。在四维循环耦合矩阵中，当非对角负耦合从 $-1$ 强化为 $-3$ （ $G _ {\mathrm{bad},46}$ ）时， $LDL^{\mathsf{T}}$ 枢轴为 $D = \operatorname{diag}(2, -5/2, 2, 2)$ ，其中 $d _ 2 = -5/2 < 0$ 。
+**命题 B.46**（命题 A.54 的单前件破缺孪生）。在四维循环耦合矩阵中，当非对角负耦合从 $-1$ 强化为 $-3$ （ $G _ {\mathrm{bad},46}$ ）时， $LDL^{\mathsf{T}}$ 枢轴为 $D = \operatorname{diag}(2, -5/2, 2, 2)$ ，其中 $d _ 2 = -5/2 \lt 0$ 。
 
 $$
 G _ {\mathrm{bad},46} = \begin{pmatrix} 2 & -3 & 0 & 0 \cr -3 & 2 & 0 & 0 \cr 0 & 0 & 2 & 0 \cr 0 & 0 & 0 & 2 \end{pmatrix}.
 $$
 
-**命题 B.47**（命题 A.55 的单前件破缺孪生）。在素数波包 Gram 矩阵 $G _ {\mathrm{wave}}$ 中，若保留前两阶矩但在第三素数通道上注入离轴零点负偏移（将 $(3,3)$ 元从 $\frac{3}{92}$ 减去 $\frac{1}{10}$ 变为 $-\frac{31}{460}$ ），则前两个枢轴 $(d _ 1, d _ 2) = (\frac{3}{68}, \frac{613}{36822}) > 0$ 完全不变，而第三枢轴跌落为 $d _ 3 = \frac{6669}{324277} - \frac{1}{10} = -\frac{257587}{3242770} < 0$ 。
+**命题 B.47**（命题 A.55 的单前件破缺孪生）。在素数波包 Gram 矩阵 $G _ {\mathrm{wave}}$ 中，若保留前两阶矩但在第三素数通道上注入离轴零点负偏移（将 $(3,3)$ 元从 $\frac{3}{92}$ 减去 $\frac{1}{10}$ 变为 $-\frac{31}{460}$ ），则前两个枢轴 $(d _ 1, d _ 2) = (\frac{3}{68}, \frac{613}{36822}) \gt 0$ 完全不变，而第三枢轴跌落为 $d _ 3 = \frac{6669}{324277} - \frac{1}{10} = -\frac{257587}{3242770} \lt 0$ 。
 
 **命题 B.48**（命题 A.56 的单前件破缺孪生）。在实字符素数锥 Gram 矩阵 $G _ {\mathrm{cone}}$ 中，若剥离式 $(4.13)$ 的平方非负耦合，将第二对角元反号，则第二枢轴 $d _ 2$ 直接由正转负。
 
-**命题 B.49**（命题 A.57 的单前件破缺孪生）。若企图仅用两行低阶矩矩阵 $M _ {\mathrm{mom}}$ （补第三行零行）去左逆恢复三维测试向量，则对任意 $3\times 3$ 矩阵 $L$ ， $L M _ {\mathrm{mom}}$ 的秩至多为 $2 < 3$ ，在核向量 $(1, -2, 1)^{\mathsf{T}}$ 上恒为零，绝不可能等于 $I _ 3$ 。
+**命题 B.49**（命题 A.57 的单前件破缺孪生）。若企图仅用两行低阶矩矩阵 $M _ {\mathrm{mom}}$ （补第三行零行）去左逆恢复三维测试向量，则对任意 $3\times 3$ 矩阵 $L$ ， $L M _ {\mathrm{mom}}$ 的秩至多为 $2 \lt 3$ ，在核向量 $(1, -2, 1)^{\mathsf{T}}$ 上恒为零，绝不可能等于 $I _ 3$ 。
 
 $$
 M _ {\mathrm{mom}} = \begin{pmatrix} 1 & 1 & 1 \cr 19 & 20 & 21 \end{pmatrix}.
@@ -2510,13 +2510,13 @@ $$
 \end{aligned}
 $$
 
-**命题 B.52**（定理 A₀ 剥离 Rouché 严格正裕量 $\Delta _ {\mathrm{Rouche}} > 0$ 的破缺反例）。在有理矩形边界 $\partial B$ 上，若边界扰动模上界 $\varepsilon = \frac{1}{4}$ 超过了线性主部模下界 $r = \frac{1}{8}$ ，则平方 Rouché 裕量变为严格负有理数：
+**命题 B.52**（定理 A₀ 剥离 Rouché 严格正裕量 $\Delta _ {\mathrm{Rouche}} \gt 0$ 的破缺反例）。在有理矩形边界 $\partial B$ 上，若边界扰动模上界 $\varepsilon = \frac{1}{4}$ 超过了线性主部模下界 $r = \frac{1}{8}$ ，则平方 Rouché 裕量变为严格负有理数：
 
 $$
-\Delta _ {\mathrm{bad},52} = (1/8)^2 - (1/4)^2 = \frac{1}{64} - \frac{1}{16} = -\frac{3}{64} < 0.
+\Delta _ {\mathrm{bad},52} = (1/8)^2 - (1/4)^2 = \frac{1}{64} - \frac{1}{16} = -\frac{3}{64} \lt 0.
 $$
 
-此时对应的二阶裕量矩阵 $D = \operatorname{diag}(1/64, -3/64)$ 出现负枢轴 $-3/64 < 0$ （例如扰动 $f(s) - (s-c) = -(s-c) + 1$ 直接把框内零点抹掉变为常函数 $1$ ），Rouché 绕数不变性即告失效。
+此时对应的二阶裕量矩阵 $D = \operatorname{diag}(1/64, -3/64)$ 出现负枢轴 $-3/64 \lt 0$ （例如扰动 $f(s) - (s-c) = -(s-c) + 1$ 直接把框内零点抹掉变为常函数 $1$ ），Rouché 绕数不变性即告失效。
 
 **命题 B.53**（定理 A₀ 剥离框内无极点全纯资格 $\mathcal{C} _ {\mathrm{hol}}(B)$ 的破缺反例）。若影子函数 $f$ 在有理框 $B$ 内除了一个简单零点（贡献绕数 $+1$ ）外还含有一个未声明的一阶极点（贡献绕数 $-1$ ），即在五维围道空间中极点资格位被非法改动 $\delta _ {\mathrm{bad}} = (0, 0, 0, 0, -1)^{\mathsf{T}}$ ，则净绕数变为 $1 - 1 = 0$ ，全纯资格读口给出非零报警 $E\delta _ {\mathrm{bad}} = (0, 0, -1)^{\mathsf{T}} \neq 0$ 。
 
@@ -2528,7 +2528,7 @@ $$
 
 非零有理系数向量 $r = (1, 1, -1)^{\mathsf{T}} \in \mathbb{Q}^3$ 满足 $r _ 1 \log 2 + r _ 2 \log 3 + r _ 3 \log 6 = \log 2 + \log 3 - \log 6 = 0$ （ $M _ {\mathrm{comp}} r = (0, 0, 0)^{\mathsf{T}}$ ），线性独立性即告失效。
 
-**命题 B.55**（定理 B₂ 剥离有限视界外全阶素数锁的换尾泄漏反例）。在四维有限素数视界模型中，若排零算子只检查前 $P _ {\ast}$ 个素数而对视界外 $p > P _ {\ast}$ 的广义素数换尾不设防（取 $A _ {\mathrm{bad},55}$ ），则 Diamond–Montgomery–Vorhauer 换尾分量 $(0, 1, 0, -1)^{\mathsf{T}} \in \ker E$ 直接刺穿临界带排零结论： $E A _ {\mathrm{bad},55} K \neq 0$ 。
+**命题 B.55**（定理 B₂ 剥离有限视界外全阶素数锁的换尾泄漏反例）。在四维有限素数视界模型中，若排零算子只检查前 $P _ {\ast}$ 个素数而对视界外 $p \gt P _ {\ast}$ 的广义素数换尾不设防（取 $A _ {\mathrm{bad},55}$ ），则 Diamond–Montgomery–Vorhauer 换尾分量 $(0, 1, 0, -1)^{\mathsf{T}} \in \ker E$ 直接刺穿临界带排零结论： $E A _ {\mathrm{bad},55} K \neq 0$ 。
 
 $$
 \begin{aligned}
@@ -2540,7 +2540,7 @@ $$
 \end{aligned}
 $$
 
-**命题 B.56**（定理 B₂ 将修饰因子评估点移出开右半平面 $\operatorname{Re}(s) > 0$ 至虚轴 $\operatorname{Re}(s) = 0$ 的破缺反例）。在定理 B₂ 式 $(2.17)$ 中，有理 Euler 修饰因子 $H _ {P _ {\ast}}(s)$ 无零无极点的充要前件是 $\operatorname{Re}(s) > 0$ 。若剥离 $\operatorname{Re}(s) > 0$ ，将评估点放到虚轴 $s = \frac{2\pi i}{\log 2}$ （ $\operatorname{Re}(s) = 0$ ）处，则局部因子 $1 - 2^{-s} = 1 - 1 = 0$ ，对角矩阵 $\operatorname{diag}(0, 3/4, 7/8)$ 的首枢轴退化为 $0 \ngtr 0$ ，修饰因子在虚轴上产生零点与极点。
+**命题 B.56**（定理 B₂ 将修饰因子评估点移出开右半平面 $\operatorname{Re}(s) \gt 0$ 至虚轴 $\operatorname{Re}(s) = 0$ 的破缺反例）。在定理 B₂ 式 $(2.17)$ 中，有理 Euler 修饰因子 $H _ {P _ {\ast}}(s)$ 无零无极点的充要前件是 $\operatorname{Re}(s) \gt 0$ 。若剥离 $\operatorname{Re}(s) \gt 0$ ，将评估点放到虚轴 $s = \frac{2\pi i}{\log 2}$ （ $\operatorname{Re}(s) = 0$ ）处，则局部因子 $1 - 2^{-s} = 1 - 1 = 0$ ，对角矩阵 $\operatorname{diag}(0, 3/4, 7/8)$ 的首枢轴退化为 $0 \ngtr 0$ ，修饰因子在虚轴上产生零点与极点。
 
 **命题 B.57**（定理 C₀ 剥离右半平面无穷远序列 $\sigma _ k \to +\infty$ 退化为有限两个采样点的破缺反例）。在定理 C₀ 的 Dirichlet 系数唯一恢复中，若剥离“采样序列覆盖右半平面无穷远”前件，仅在两个点处采样具有三个未知系数 $(a _ 1, a _ 2, a _ 3)$ 的截断级数（观测矩阵第三行退化为零 $M _ {\mathrm{bad},57}$ ），则非零系数差 $(1, -2, 1)^{\mathsf{T}}$ 满足 $M _ {\mathrm{bad},57}(1, -2, 1)^{\mathsf{T}} = (0, 0, 0)^{\mathsf{T}}$ ，无法唯一恢复 Dirichlet 系数。
 
@@ -2548,19 +2548,19 @@ $$
 M _ {\mathrm{bad},57} = \begin{pmatrix} 1 & 1 & 1 \cr 0 & 1 & 2 \cr 0 & 0 & 0 \end{pmatrix}.
 $$
 
-**命题 B.58**（定理 C₁ 在弱解析延拓商下漏检 Davenport–Heilbronn 复合数 $n=6$ 乘性破缺的反例）。若临界带排零算子只读取 Hurwitz 周期线性组合的函数方程与整函数性质，而丢弃了在 $n = 6 = 2 \times 3$ 处的乘性核验读口（在四维空间中令算子对乘性残差核失守 $A _ {1,3} = 1$ ），则 Davenport–Heilbronn 反模型（ $\Delta _ {\mathrm{mult}}(2,3) = 1 + \kappa^2 > 0$ ）沿盲核长驱直入： $E A _ {\mathrm{bad},58} K \neq 0$ 。
+**命题 B.58**（定理 C₁ 在弱解析延拓商下漏检 Davenport–Heilbronn 复合数 $n=6$ 乘性破缺的反例）。若临界带排零算子只读取 Hurwitz 周期线性组合的函数方程与整函数性质，而丢弃了在 $n = 6 = 2 \times 3$ 处的乘性核验读口（在四维空间中令算子对乘性残差核失守 $A _ {1,3} = 1$ ），则 Davenport–Heilbronn 反模型（ $\Delta _ {\mathrm{mult}}(2,3) = 1 + \kappa^2 \gt 0$ ）沿盲核长驱直入： $E A _ {\mathrm{bad},58} K \neq 0$ 。
 
 $$
 E A _ {\mathrm{bad},58} K = \begin{pmatrix} -1 & 0 \cr 0 & 0 \end{pmatrix} \neq 0.
 $$
 
-**命题 B.59**（定理 C₂ 偶通道在 $s = 3/4$ 处因互反因子 $P _ r(y(3/4)) = 0$ 引发非零性失效的反例）。在偶通道中，由于 $P _ r(y(3/4)) = 0$ ，变形函数 $F _ {\mathrm{even}}(s) = P _ r(2^{1/2-s})\zeta(s)$ 在 $s = 3/4$ 处的模平方掉为零。在三维离轴点非零性正定核验矩阵 $\operatorname{diag}(|F _ {\mathrm{even}}(3/4)|^2, 1, 1) = \operatorname{diag}(0, 1, 1)$ 中，首枢轴退化为 $0 \ngtr 0$ ，直接证伪任何只依赖偶对称函数方程的 $\operatorname{Re}(s) > 1/2$ 非零性引理。
+**命题 B.59**（定理 C₂ 偶通道在 $s = 3/4$ 处因互反因子 $P _ r(y(3/4)) = 0$ 引发非零性失效的反例）。在偶通道中，由于 $P _ r(y(3/4)) = 0$ ，变形函数 $F _ {\mathrm{even}}(s) = P _ r(2^{1/2-s})\zeta(s)$ 在 $s = 3/4$ 处的模平方掉为零。在三维离轴点非零性正定核验矩阵 $\operatorname{diag}(|F _ {\mathrm{even}}(3/4)|^2, 1, 1) = \operatorname{diag}(0, 1, 1)$ 中，首枢轴退化为 $0 \ngtr 0$ ，直接证伪任何只依赖偶对称函数方程的 $\operatorname{Re}(s) \gt 1/2$ 非零性引理。
 
 **命题 B.60**（定理 1.4 在同弱商签名下宣称“既无假叶 $a=0$ 、又无目标降格 $d=0$ 、又无锥内漏口 $k=0$ ”的逻辑不可能反例）。在定理 1.4 的有向图拓扑归纳中，若在保持同弱商签名与反模型 $x _ 1$ 的前提下假设 $(a, d, k) = (0, 0, 0)$ ，则容斥守恒量 $u(0,0,0) = 0 \neq 1$ ，拓扑归纳直接导出 $Z(x _ 1) = \mathrm{True}$ 与 $Z(x _ 1) = \mathrm{False}$ 的正面冲突（在二维真值对冲矩阵中表现为 $E A _ {\mathrm{bad},60} K = 1 \neq 0$ ）。
 
 **命题 B.61**（方案四宣称用少于 $8$ 个内部顶点割断 lc23 原版图 $S \to T$ 的流守恒反例）。在 lc23 原版全环境声明图中，由于在源集 $S$ 与汇集 $T$ 之间已由独立证书验证存在 $8$ 条内部顶点互不相交的有向路径（最大流 $|f _ {\max}| = 8$ ），任何仅删去 $7$ 个或更少内部顶点的候选割集 $C'$ ，由鸽巢原理必至少留下一条完整无损的源汇有向路径 $p _ {\mathrm{survive}} : S \leadsto T$ （在八通道流矩阵中表现为被保留的第 $8$ 通道直接穿透读口 $E A _ {\mathrm{cut},7} K \neq 0$ ）。
 
-**命题 B.62**（方案一剥离左边界守卫 $0 < \operatorname{Re}(s)$ 后被模 $2$ 主特征虚轴零点直接证伪的反例）。在第五章式 $(5.4)$ 的一般 Dirichlet $L$ 函数零点定理中，若剥离左边界守卫 $0 < \operatorname{Re}(s)$ （仅保留 $\operatorname{Re}(s) < 1 \land L(s,\chi) = 0 \implies \operatorname{Re}(s) = 1/2$ ），则在模 $N = 2$ 主特征 $\chi _ {0,2} = 1$ 与虚轴零点 $s _ 1 = \frac{2\pi i}{\log 2}$ 处，前件 $\operatorname{Re}(s _ 1) = 0 < 1$ 与 $\operatorname{DirichletCharacter.LFunction}(1, s _ 1) = 0$ 全部成立（已在 lc23 实机上由 Autopsy1.axis\_principal\_zero 编译证成），代入无守卫命题立即导出 $(0 : \mathbb{R}) = 1/2$ （在守卫状态空间中表现为边界漂移 $E\delta _ {\mathrm{unguarded}} = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ ）。
+**命题 B.62**（方案一剥离左边界守卫 $0 \lt \operatorname{Re}(s)$ 后被模 $2$ 主特征虚轴零点直接证伪的反例）。在第五章式 $(5.4)$ 的一般 Dirichlet $L$ 函数零点定理中，若剥离左边界守卫 $0 \lt \operatorname{Re}(s)$ （仅保留 $\operatorname{Re}(s) \lt 1 \land L(s,\chi) = 0 \implies \operatorname{Re}(s) = 1/2$ ），则在模 $N = 2$ 主特征 $\chi _ {0,2} = 1$ 与虚轴零点 $s _ 1 = \frac{2\pi i}{\log 2}$ 处，前件 $\operatorname{Re}(s _ 1) = 0 \lt 1$ 与 $\operatorname{DirichletCharacter.LFunction}(1, s _ 1) = 0$ 全部成立（已在 lc23 实机上由 Autopsy1.axis\_principal\_zero 编译证成），代入无守卫命题立即导出 $(0 : \mathbb{R}) = 1/2$ （在守卫状态空间中表现为边界漂移 $E\delta _ {\mathrm{unguarded}} = (1, 0)^{\mathsf{T}} \neq (0, 0)^{\mathsf{T}}$ ）。
 
 ---
 

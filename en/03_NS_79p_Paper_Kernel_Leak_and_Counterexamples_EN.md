@@ -80,7 +80,7 @@ Setting aside all external proof-assistant packaging and sociological commentary
 
 **Singular interface kernel leakage**: The exact singular surface-measure kernel leakage ( $\ker q _ {\mathrm{bulk}} \not\subseteq \ker f _ v$ ) across the equatorial plane $y _ 3 = 0$ between the half-space spline weight representation on page 53, the quadratic coefficients (B.16) on page 54, and the main coercive multiplier inequality (B.20) of Proposition B.1 on pages 55–56;
 
-**Two counterexample families**: Two completely explicit, closed-form analytical counterexample families (Counterexample Family A for the $D$ -weight seam with exact rational margin $\frac{\pi}{65536}\frac{633509743}{432432000} > 0$ and reduced-readout twin separation, and Counterexample Family B for the $Z$ -weight seam in the $\pm(2,1)$ harmonic mode with exact Gaussian-moment defect $> 400c > 0$ ) that strictly refute the no-join half-space spline contract of Proposition B.1 / (B.20);
+**Two counterexample families**: Two completely explicit, closed-form analytical counterexample families (Counterexample Family A for the $D$ -weight seam with exact rational margin $\frac{\pi}{65536}\frac{633509743}{432432000} \gt 0$ and reduced-readout twin separation, and Counterexample Family B for the $Z$ -weight seam in the $\pm(2,1)$ harmonic mode with exact Gaussian-moment defect $\gt 400c \gt 0$ ) that strictly refute the no-join half-space spline contract of Proposition B.1 / (B.20);
 
 **Collar curvature conservation**: The $O(\delta^{-1})$ equatorial collar curvature-tax conservation law under strong global- $C^2$ spline smoothing $s _ \delta(\eta)$ , proving that the singular surface measure cannot be smoothed away at zero cost;
 
@@ -103,7 +103,7 @@ $$
 y = \frac{x}{\sqrt{T-t}}, \qquad s = \log\frac{T}{T-t},
 $$
 
-suppose there exists a non-zero, smooth, time-periodic (with period $S > 0$ in self-similar time $s$ ) velocity–pressure profile $(W, q)$ invariant under a $\kappa$ -fold discrete rotational-reflection symmetry group $\Gamma$ , satisfying the self-similar Navier–Stokes system (equation (1.2) on page 2):
+suppose there exists a non-zero, smooth, time-periodic (with period $S \gt 0$ in self-similar time $s$ ) velocity–pressure profile $(W, q)$ invariant under a $\kappa$ -fold discrete rotational-reflection symmetry group $\Gamma$ , satisfying the self-similar Navier–Stokes system (equation (1.2) on page 2):
 
 $$
 \begin{aligned}
@@ -112,7 +112,7 @@ $$
 \end{aligned}
 $$
 
-together with far-field decay and a spectral gap / finite unstable-codimension condition on the linearized monodromy operator (equation (1.3) on page 2). Then there exist smooth, compactly supported divergence-free initial data $u _ 0 \in C _ c^\infty(\mathbb{R}^3)$ (and smooth periodic divergence-free initial data on $\mathbb{T}^3$ ) whose corresponding Navier–Stokes solutions lose smoothness at the finite time $T > 0$ , with the $L^2$ gradient norm blowing up at the self-similar rate:
+together with far-field decay and a spectral gap / finite unstable-codimension condition on the linearized monodromy operator (equation (1.3) on page 2). Then there exist smooth, compactly supported divergence-free initial data $u _ 0 \in C _ c^\infty(\mathbb{R}^3)$ (and smooth periodic divergence-free initial data on $\mathbb{T}^3$ ) whose corresponding Navier–Stokes solutions lose smoothness at the finite time $T \gt 0$ , with the $L^2$ gradient norm blowing up at the self-similar rate:
 
 $$
 \Vert \nabla u(\cdot, t)\Vert _ {L^2} \sim (T-t)^{-1/4} \qquad (t \uparrow T),
@@ -140,7 +140,7 @@ $$
 
 A rigorous mathematical audit must distinguish steps that are locally valid under their stated hypotheses from seams where kernel leakage or missing proof obligations occur. Our page-by-page inspection confirms that the following five outer reductions in Sections 1–7 are mathematically sound conditional steps and should **not** be misclassified as kernel leaks:
 
-**Self-similar coordinate diffeomorphism** (page 2, equation (1.4)): On any pre-blowup time interval $t < T$ , the transformation $(x,t) \mapsto (y,s)$ is a smooth invertible diffeomorphism; it rescales norms without discarding high-frequency modes.
+**Self-similar coordinate diffeomorphism** (page 2, equation (1.4)): On any pre-blowup time interval $t \lt T$ , the transformation $(x,t) \mapsto (y,s)$ is a smooth invertible diffeomorphism; it rescales norms without discarding high-frequency modes.
 
 **Quotienting by gradient fields on the divergence-free space** (page 30, Section 7.1 equation (7.2) and page 34, Section 7.8 equation (7.33)): Equivalence modulo gradients on the divergence-free space $H$ is canonically isomorphic to equality under the Leray projection $\mathbb{P}$ ; moreover, the adjoint condition (7.33) holds for all representatives, and setting $v = 0$ forces the test field $\psi$ to annihilate the gradient kernel.
 
@@ -156,7 +156,7 @@ in Section 4, for the monodromy recursion $\chi _ {n+1} = M\chi _ n + f _ n$ , t
 
 Once the outer conditional scaffolding of Sections 1–7 is stripped away, the entire burden of proving that the infinite-dimensional three-dimensional fluid perturbation $v$ around an approximate profile $W^r$ obeys a strictly coercive energy estimate (confining the unstable spectrum of the monodromy operator) rests on **Appendix B** (pages 49–70). Within this load-bearing core, three structural issues arise:
 
-**Structural seam I: Singular interface measures**: On page 53, the multiplier weights $D$ and $Z$ are defined via piecewise polynomial spline formulas on the upper and lower half-spaces $y _ 3 > 0$ and $y _ 3 < 0$ .
+**Structural seam I: Singular interface measures**: On page 53, the multiplier weights $D$ and $Z$ are defined via piecewise polynomial spline formulas on the upper and lower half-spaces $y _ 3 \gt 0$ and $y _ 3 \lt 0$ .
 
 On pages 54–56, the coefficients (B.16) and the coercive multiplier inequality (B.20) of Proposition B.1 depend on the interface contract. Consider the interpretation that checks only piecewise $C^2$ regularity on each half-space and reads the open-half-space pointwise Hessian $H _ {\mathrm{bulk}}$ .
 
@@ -166,7 +166,7 @@ The bulk readout $q _ {\mathrm{bulk}}$ annihilates this measure ( $\Sigma _ W \i
 
 **Structural seam II: Collar curvature conservation**: Even if one enforces global $C^2(\mathbb{R}^3)$ cross-plane joining by inserting a smooth transition spline $s _ \delta(\eta)$ across a thin equatorial collar $|\eta| \le \delta$ , the singular surface measure does not vanish for free.
 
-It converts into an $O(\delta^{-1})$ bulk Hessian curvature spike $\max s _ \delta'' = \frac{3}{2\delta}$ inside the collar whose volume integral $\int _ {|\eta|<\delta} \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}} f dy$ converges strictly to the positive surface jump integral as $\delta \downarrow 0$ .
+It converts into an $O(\delta^{-1})$ bulk Hessian curvature spike $\max s _ \delta'' = \frac{3}{2\delta}$ inside the collar whose volume integral $\int _ {|\eta|\lt\delta} \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}} f dy$ converges strictly to the positive surface jump integral as $\delta \downarrow 0$ .
 
 **Structural seam III: Unclosed reductions and external certificates**: In the 79-page PDF itself, the explicit error coefficients of (B.16) (page 54), the full proofs of Proposition B.1 (pages 55–56) and Proposition B.4 (pages 59–60), and seven additional certificate conditions listed at the end of the proof of Theorem B.14 (page 70) are omitted from the paper text;
 
@@ -186,7 +186,7 @@ $$
 \sigma = \frac{\rho}{1+\rho} \in [0, 1), \qquad \eta = \frac{z}{\rho} \in [-1, 1].
 $$
 
-On page 53, the scalar multiplier weight functions $D(y)$ and $Z(y)$ are expressed via piecewise polynomial splines in $(\sigma, \eta)$ on the upper and lower half-spaces $z > 0$ and $z < 0$ . To establish inequality (B.20) of Proposition B.1 (pages 55–56) using the quadratic-form coefficients $I _ 2, I _ 2', I _ 1', I _ 1, I _ 0$ defined in equation (B.16) (page 54), one must integrate by parts the weighted difference between the full gradient norm squared and the curl norm squared of a divergence-free vector field.
+On page 53, the scalar multiplier weight functions $D(y)$ and $Z(y)$ are expressed via piecewise polynomial splines in $(\sigma, \eta)$ on the upper and lower half-spaces $z \gt 0$ and $z \lt 0$ . To establish inequality (B.20) of Proposition B.1 (pages 55–56) using the quadratic-form coefficients $I _ 2, I _ 2', I _ 1', I _ 1, I _ 0$ defined in equation (B.16) (page 54), one must integrate by parts the weighted difference between the full gradient norm squared and the curl norm squared of a divergence-free vector field.
 
 For any smooth divergence-free vector field $u$ ( $\nabla \cdot u = \sum _ {i=1}^3 \partial _ i u _ i = 0$ ), the pointwise Levi-Civita contraction identity gives:
 
@@ -203,7 +203,7 @@ Multiplying by a scalar weight $W(y)$ and integrating over $\mathbb{R}^3$ requir
 
 #### Theorem 3.1 (Distributional Hessians and Singular Interface Measures for Piecewise Twice Differentiable Weights)
 
-Let $W : \mathbb{R}^3 \to \mathbb{R}$ be continuous on $\mathbb{R}^3$ and $C^2$ on the open upper half-space $\mathbb{R} _ +^3 = \lbrace z > 0\rbrace$ and open lower half-space $\mathbb{R} _ -^3 = \lbrace z < 0\rbrace$ up to the equatorial dividing plane $\Sigma = \lbrace z = 0\rbrace$ , with locally integrable open-set Hessian matrix $H _ W(y) = (\partial _ i \partial _ j W(y)) _ {1\le i,j\le 3}$ and finite one-sided normal derivative traces on $\Sigma$ . Denote the normal derivative jump across $\Sigma$ by
+Let $W : \mathbb{R}^3 \to \mathbb{R}$ be continuous on $\mathbb{R}^3$ and $C^2$ on the open upper half-space $\mathbb{R} _ +^3 = \lbrace z \gt 0\rbrace$ and open lower half-space $\mathbb{R} _ -^3 = \lbrace z \lt 0\rbrace$ up to the equatorial dividing plane $\Sigma = \lbrace z = 0\rbrace$ , with locally integrable open-set Hessian matrix $H _ W(y) = (\partial _ i \partial _ j W(y)) _ {1\le i,j\le 3}$ and finite one-sided normal derivative traces on $\Sigma$ . Denote the normal derivative jump across $\Sigma$ by
 
 $$
 \begin{aligned}
@@ -346,8 +346,8 @@ the auxiliary constant $w$ and the $3/50$ terms in (B.20) cancel identically, an
 $$
 \chi(\sigma) = \begin{cases}
 0, & 0 \le \sigma \le \dfrac{1}{4}, \cr
-h(12\sigma - 3), & \dfrac{1}{4} < \sigma < \dfrac{1}{3}, \cr
-1, & \dfrac{1}{3} \le \sigma < 1,
+h(12\sigma - 3), & \dfrac{1}{4} \lt \sigma \lt \dfrac{1}{3}, \cr
+1, & \dfrac{1}{3} \le \sigma \lt 1,
 \end{cases}
 $$
 
@@ -360,7 +360,7 @@ $$
 \end{aligned} \tag{3.6}
 $$
 
-Both $D _ +$ and $D _ -$ are identically constant ( $1/2$ ) near the origin ( $\rho \le 1/3$ ), belong to $C^2$ piecewise polynomials on each half-space chart, satisfy $\frac{1}{4} \le D _ \pm \le \frac{3}{4}$ globally (so $I _ 2' = 1 - D _ \pm \ge \frac{1}{4} > 0$ ), and are axisymmetric and even in $z$ . On the region $\rho \ge \frac{1}{2}$ ( $\sigma \ge \frac{1}{3}$ ), $\chi(\sigma) = 1$ and $D _ +(y) = \frac{1}{2} + \frac{|z|}{4\rho}$ , so the normal derivative jumps across $z = 0$ are:
+Both $D _ +$ and $D _ -$ are identically constant ( $1/2$ ) near the origin ( $\rho \le 1/3$ ), belong to $C^2$ piecewise polynomials on each half-space chart, satisfy $\frac{1}{4} \le D _ \pm \le \frac{3}{4}$ globally (so $I _ 2' = 1 - D _ \pm \ge \frac{1}{4} \gt 0$ ), and are axisymmetric and even in $z$ . On the region $\rho \ge \frac{1}{2}$ ( $\sigma \ge \frac{1}{3}$ ), $\chi(\sigma) = 1$ and $D _ +(y) = \frac{1}{2} + \frac{|z|}{4\rho}$ , so the normal derivative jumps across $z = 0$ are:
 
 $$
 \begin{aligned}
@@ -369,7 +369,7 @@ $$
 \end{aligned} \tag{3.7}
 $$
 
-**Construction of the compactly supported solenoidal perturbation**: Let $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ (supported on $[-1, 1]$ with $a(0) = 1$ ). For $0 < \varepsilon \le \frac{1}{4}$ , define the axisymmetric stream function $\psi _ \varepsilon$ and velocity field $v _ \varepsilon$ in cylindrical coordinates $(v _ r, v _ \varphi, v _ 3)$ :
+**Construction of the compactly supported solenoidal perturbation**: Let $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ (supported on $[-1, 1]$ with $a(0) = 1$ ). For $0 \lt \varepsilon \le \frac{1}{4}$ , define the axisymmetric stream function $\psi _ \varepsilon$ and velocity field $v _ \varepsilon$ in cylindrical coordinates $(v _ r, v _ \varphi, v _ 3)$ :
 
 $$
 \begin{aligned}
@@ -390,7 +390,7 @@ $$
 
 Direct inspection confirms:
 
-**(1) Divergence-freeness and compact regularity**: $\operatorname{div} v _ \varepsilon = \frac{1}{r}\partial _ r(r v _ r) + \partial _ z v _ 3 \equiv 0$ ; its support lies in the toroidal tube $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ bounded away from the axis $r=0$ and origin ( $\rho \ge r \ge \frac{3}{4} > \frac{1}{2}$ , where $\chi(\sigma) \equiv 1$ ); and $a \in C _ c^3 \implies v _ \varepsilon \in C _ c^2(\mathbb{R}^3)$ .
+**(1) Divergence-freeness and compact regularity**: $\operatorname{div} v _ \varepsilon = \frac{1}{r}\partial _ r(r v _ r) + \partial _ z v _ 3 \equiv 0$ ; its support lies in the toroidal tube $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ bounded away from the axis $r=0$ and origin ( $\rho \ge r \ge \frac{3}{4} \gt \frac{1}{2}$ , where $\chi(\sigma) \equiv 1$ ); and $a \in C _ c^3 \implies v _ \varepsilon \in C _ c^2(\mathbb{R}^3)$ .
 
 **(2) Discrete rotation and reflection symmetry**: $v _ \varepsilon$ is axisymmetric and time-independent, with $v _ r$ even in $z$ and $v _ 3$ odd in $z$ , hence invariant under $R _ {\ast} = \operatorname{diag}(1, -1, -1)$ , so $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ .
 
@@ -405,16 +405,16 @@ $$
 For the admissible weak-contract data above and the perturbation $v _ \varepsilon$ with $a(t) = (1-t^2) _ +^4$ and $\varepsilon = 2^{-16} = \frac{1}{65536}$ , inequality (B.20) of Proposition B.1 (which requires $E _ D(v) := \mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}} \le 0$ ) is strictly violated by $D _ +$ , with the exact rational lower bound:
 
 $$
-E _ {D _ +}(v _ \varepsilon) \ge \gamma _ \varepsilon := \frac{\pi}{65536}\cdot\frac{633509743}{432432000} > 0. \tag{3.10}
+E _ {D _ +}(v _ \varepsilon) \ge \gamma _ \varepsilon := \frac{\pi}{65536}\cdot\frac{633509743}{432432000} \gt 0. \tag{3.10}
 $$
 
 Furthermore, under the reduced readout $q _ {\mathrm{red}}$ that observes the bulk Hessian operator-norm field $\Vert H _ D\Vert _ {\mathrm{op}}$ , the equatorial plane value $D| _ {z=0}$ , the uniform bounds $[1/4, 3/4]$ , and all fixed structural parameters, the twin weights $(D _ +, D _ -)$ have identical readout values ( $q _ {\mathrm{red}}(D _ +) = q _ {\mathrm{red}}(D _ -)$ ), yet their outputs in (B.20) diverge with opposite signs:
 
 $$
 \begin{aligned}
-& E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon > 0, \cr
-& E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon < 0, \cr
-& E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0.
+& E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon \gt 0, \cr
+& E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon \lt 0, \cr
+& E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} \gt 0.
 \end{aligned} \tag{3.11}
 $$
 
@@ -447,9 +447,9 @@ $$
 \end{aligned}
 $$
 
-so $\Vert H _ {D _ +}\Vert _ {\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{3}{2(3/4)^2} = \frac{8}{3} < 3 =: M$ .
+so $\Vert H _ {D _ +}\Vert _ {\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{3}{2(3/4)^2} = \frac{8}{3} \lt 3 =: M$ .
 
-Third, bound the velocity gradient norm squared $|\nabla v _ \varepsilon|^2$ and the bulk penalty. On $[-1,1]$ , $|a(t)| \le 1$ ; $a'(t)^2 = 64t^2(1-t^2)^6$ achieves its maximum at $t^2 = 1/7$ with value $\frac{64\times 6^6}{7^7} < 4$ , so $|a'(t)| \le 2$ ; and $a''(t) = -8(1-t^2)^2(1-7t^2)$ satisfies $|a''(t)| \le 8$ .
+Third, bound the velocity gradient norm squared $|\nabla v _ \varepsilon|^2$ and the bulk penalty. On $[-1,1]$ , $|a(t)| \le 1$ ; $a'(t)^2 = 64t^2(1-t^2)^6$ achieves its maximum at $t^2 = 1/7$ with value $\frac{64\times 6^6}{7^7} \lt 4$ , so $|a'(t)| \le 2$ ; and $a''(t) = -8(1-t^2)^2(1-7t^2)$ satisfies $|a''(t)| \le 8$ .
 
 Substituting these into the five cylindrical gradient components for $r \ge \frac{3}{4}$ and $\varepsilon \le \frac{1}{4}$ yields the componentwise upper bounds $|\partial _ r v _ r| \le \frac{28}{3}$ , $|\partial _ z v _ r| \le 16$ , $|v _ r/r| \le \frac{4}{3}$ , $|\partial _ r v _ 3| \le \frac{104}{9}$ , and $|\partial _ z v _ 3| \le 8$ , whose squares sum to:
 
@@ -474,15 +474,15 @@ Substituting $A = \frac{131072}{45045}$ , $M = 3$ , $K = \frac{43936}{81}$ , and
 $$
 \begin{aligned}
 & \frac{16}{25}\cdot\frac{131072}{45045} - 16\times 3\times\frac{43936}{81}\times\frac{1}{65536} \cr
-& = \frac{2097152}{1126125} - \frac{1373}{3456} = \frac{633509743}{432432000} > 0,
+& = \frac{2097152}{1126125} - \frac{1373}{3456} = \frac{633509743}{432432000} \gt 0,
 \end{aligned}
 $$
 
-proving (3.10). Finally, since $H _ {D _ -} = -H _ {D _ +}$ and $[\partial _ z D _ -] = -[\partial _ z D _ +]$ , writing $E _ {D _ \pm}(v _ \varepsilon) = \pm J _ v - C _ v$ with $C _ v = \int \Vert H _ {D _ +}\Vert _ {\mathrm{op}}|\nabla v _ \varepsilon|^2 dy \ge 0$ yields $E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon < 0$ and $E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge 2\gamma _ \varepsilon$ , proving (3.11). Q.E.D.
+proving (3.10). Finally, since $H _ {D _ -} = -H _ {D _ +}$ and $[\partial _ z D _ -] = -[\partial _ z D _ +]$ , writing $E _ {D _ \pm}(v _ \varepsilon) = \pm J _ v - C _ v$ with $C _ v = \int \Vert H _ {D _ +}\Vert _ {\mathrm{op}}|\nabla v _ \varepsilon|^2 dy \ge 0$ yields $E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon \lt 0$ and $E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge 2\gamma _ \varepsilon$ , proving (3.11). Q.E.D.
 
 ---
 
-### 3.4 Closed-Form Counterexample Family B: Schwartz Gaussian Divergence-Free Mode- $\pm(2,1)$ Perturbation Refuting the $Z$ -Weight Seam ( $> 400c$ )
+### 3.4 Closed-Form Counterexample Family B: Schwartz Gaussian Divergence-Free Mode- $\pm(2,1)$ Perturbation Refuting the $Z$ -Weight Seam ( $\gt 400c$ )
 
 To demonstrate that the singular surface-measure kernel leak also strikes the first-order multiplier weight $Z$ and non-zero angular harmonics, we construct a second, completely independent closed-form counterexample family.
 
@@ -501,7 +501,7 @@ $$
 Set the half-space $C^2$ spline weight $Z$ to be:
 
 $$
-Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c > 0), \tag{3.16}
+Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c \gt 0), \tag{3.16}
 $$
 
 where $P(\sigma) = 0$ on $[0, \frac{1}{20}]$ , $P(\sigma) = h(20\sigma - 1)$ on $[\frac{1}{20}, \frac{1}{10}]$ , and $P(\sigma) = 1$ on $[\frac{1}{10}, 1)$ .
@@ -525,12 +525,12 @@ $$
 \end{aligned} \tag{3.18}
 $$
 
-Under the half-space $C^2$ weight $Z = c P(\sigma)|\eta|$ ( $c > 0$ ), the defect $\Delta := \mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}} = E _ Z(v)$ satisfies the purely analytical lower bound:
+Under the half-space $C^2$ weight $Z = c P(\sigma)|\eta|$ ( $c \gt 0$ ), the defect $\Delta := \mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}} = E _ Z(v)$ satisfies the purely analytical lower bound:
 
 $$
 \begin{aligned}
 & \frac{\Delta}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} \cr
-& > \frac{26311}{64} > 400 > 0.
+& \gt \frac{26311}{64} \gt 400 \gt 0.
 \end{aligned} \tag{3.19}
 $$
 
@@ -562,7 +562,7 @@ $$
 \end{aligned}
 $$
 
-so the combined magnitude of the two exterior bulk terms in (3.5) is at most $2 \cdot \frac{2c}{\sqrt{3}} J = 80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ . On the transition shell $\frac{1}{19} \le \rho \le \frac{1}{9}$ , $|P'(\sigma)| \le \frac{75}{2}$ and $|P''(\sigma)| \le 6000$ imply $\Vert H _ Z\Vert _ {\mathrm{op}} < 9000c$ , while $\int _ {\rho \le 1/9} |v|^2 dy \le \frac{8\pi}{15\cdot 9^{15}}$ , bounding the two transition bulk terms by $\frac{9600\pi c}{9^{15}}$ .
+so the combined magnitude of the two exterior bulk terms in (3.5) is at most $2 \cdot \frac{2c}{\sqrt{3}} J = 80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ . On the transition shell $\frac{1}{19} \le \rho \le \frac{1}{9}$ , $|P'(\sigma)| \le \frac{75}{2}$ and $|P''(\sigma)| \le 6000$ imply $\Vert H _ Z\Vert _ {\mathrm{op}} \lt 9000c$ , while $\int _ {\rho \le 1/9} |v|^2 dy \le \frac{8\pi}{15\cdot 9^{15}}$ , bounding the two transition bulk terms by $\frac{9600\pi c}{9^{15}}$ .
 
 Subtracting the exterior bulk loss $\frac{5120}{64}\pi^{3/2}c$ from the surface term $\frac{10395}{64}\pi^{3/2}c$ leaves $\frac{5275}{64}\pi^{3/2}c$ , proving (3.19). Q.E.D.
 
@@ -572,7 +572,7 @@ Subtracting the exterior bulk loss $\frac{5120}{64}\pi^{3/2}c$ from the surface 
 
 ### 4.1 Why the Singular Surface Measure Cannot Be Smoothed Away at Zero Cost
 
-Faced with the counterexamples of Chapter 3, an analyst might ask: "If the kink $|\eta|$ across the equatorial plane $z = 0$ ( $\eta = 0$ ) causes a normal-derivative jump $[\partial _ z W] \neq 0$ , can we not simply round off $|\eta|$ inside an arbitrarily thin equatorial collar $|\eta| \le \delta$ ( $0 < \delta \le 1$ ) using a $C^2$ -joined even quartic spline $s _ \delta(\eta)$ , thereby eliminating the surface jump $[\partial _ z W] _ \Sigma = 0$ and restoring inequality (B.20)?"
+Faced with the counterexamples of Chapter 3, an analyst might ask: "If the kink $|\eta|$ across the equatorial plane $z = 0$ ( $\eta = 0$ ) causes a normal-derivative jump $[\partial _ z W] \neq 0$ , can we not simply round off $|\eta|$ inside an arbitrarily thin equatorial collar $|\eta| \le \delta$ ( $0 \lt \delta \le 1$ ) using a $C^2$ -joined even quartic spline $s _ \delta(\eta)$ , thereby eliminating the surface jump $[\partial _ z W] _ \Sigma = 0$ and restoring inequality (B.20)?"
 
 Let us write down the unique minimal quartic even polynomial spline matching the second-order jet ( $s _ \delta(\pm\delta) = \delta$ , $s _ \delta'(\pm\delta) = \pm 1$ , $s _ \delta''(\pm\delta) = 0$ ) at the collar boundaries $\eta = \pm\delta$ :
 
@@ -588,7 +588,7 @@ $$
 \tag{4.1}
 $$
 
-Inside the collar $|\eta| < \delta$ , its first and second derivatives are:
+Inside the collar $|\eta| \lt \delta$ , its first and second derivatives are:
 
 $$
 \begin{aligned}
@@ -604,7 +604,7 @@ By exact curvature-mass conservation, it is converted into an $O(\delta^{-1})$ b
 
 #### Theorem 4.1 (Collar Curvature Peaks and Conservation of Singular Interface Mass)
 
-For the globally $C^2(\mathbb{R}^3)$ joined weight family $D _ \delta = \frac{1}{2} + \frac{1}{4}\chi(\sigma)s _ \delta(\eta)$ ( $0 < \delta \le 1$ ):
+For the globally $C^2(\mathbb{R}^3)$ joined weight family $D _ \delta = \frac{1}{2} + \frac{1}{4}\chi(\sigma)s _ \delta(\eta)$ ( $0 \lt \delta \le 1$ ):
 
 **(1) Reciprocal curvature growth and invariant mass**: The second derivative $s _ \delta''(\eta)$ peaks at $\eta = 0$ with value $\max _ {|\eta|\le\delta} s _ \delta''(\eta) = \frac{3}{2\delta}$ (the normalized interface kernel $\frac{1}{2}s _ \delta''$ peaks at $\frac{3}{4\delta}$ ), and its integrated curvature mass is invariant for all $\delta \in (0,1]$ :
 
@@ -615,7 +615,7 @@ $$
 \end{aligned} \tag{4.3}
 $$
 
-At the equatorial plane $z = 0$ ( $r > 0$ ), the vertical second Cartesian partial derivative of $D _ \delta$ is:
+At the equatorial plane $z = 0$ ( $r \gt 0$ ), the vertical second Cartesian partial derivative of $D _ \delta$ is:
 
 $$
 \begin{aligned}
@@ -624,12 +624,12 @@ $$
 \end{aligned} \tag{4.4}
 $$
 
-**(2) Nonzero collar bulk-Hessian limit**: For every compactly supported continuous non-negative test function $f \in C _ c(\mathbb{R}^3)$ (such as $f = |\nabla v|^2$ ), as the collar thickness $\delta \downarrow 0$ , even though the three-dimensional Lebesgue volume of the collar $\lbrace |\eta| < \delta\rbrace$ shrinks at rate $O(\delta)$ , the bulk Hessian operator-norm integral over the collar **never vanishes**; instead, it converges strictly to the singular surface jump integral:
+**(2) Nonzero collar bulk-Hessian limit**: For every compactly supported continuous non-negative test function $f \in C _ c(\mathbb{R}^3)$ (such as $f = |\nabla v|^2$ ), as the collar thickness $\delta \downarrow 0$ , even though the three-dimensional Lebesgue volume of the collar $\lbrace |\eta| \lt \delta\rbrace$ shrinks at rate $O(\delta)$ , the bulk Hessian operator-norm integral over the collar **never vanishes**; instead, it converges strictly to the singular surface jump integral:
 
 $$
 \begin{aligned}
-& \lim _ {\delta \downarrow 0} \int _ {|\eta| < \delta} \Vert H _ {D _ \delta}(y)\Vert _ {\mathrm{op}} f(y) dy \cr
-& = \int _ {z=0} \frac{\chi\left(\frac{r}{1+r}\right)}{2r} f(y _ 1, y _ 2, 0) dS _ \Sigma > 0.
+& \lim _ {\delta \downarrow 0} \int _ {|\eta| \lt \delta} \Vert H _ {D _ \delta}(y)\Vert _ {\mathrm{op}} f(y) dy \cr
+& = \int _ {z=0} \frac{\chi\left(\frac{r}{1+r}\right)}{2r} f(y _ 1, y _ 2, 0) dS _ \Sigma \gt 0.
 \end{aligned} \tag{4.5}
 $$
 
@@ -639,7 +639,7 @@ For (4.5), decomposing $H _ {D _ \delta} = A _ \delta + R _ \delta$ with leading
 
 $$
 \begin{aligned}
-& \lim _ {\delta \downarrow 0} \int _ {|\eta|<\delta} \Vert A _ \delta\Vert _ {\mathrm{op}} f dy \cr
+& \lim _ {\delta \downarrow 0} \int _ {|\eta|\lt\delta} \Vert A _ \delta\Vert _ {\mathrm{op}} f dy \cr
 & = \int _ {z=0} \frac{\chi(r/(1+r))}{4r} f(y _ 1,y _ 2,0) dS _ \Sigma \int _ {-1}^1 \frac{3}{2}(1-t^2) dt \cr
 & = \int _ {z=0} \frac{\chi(r/(1+r))}{2r} f(y _ 1,y _ 2,0) dS _ \Sigma.
 \end{aligned}
@@ -690,7 +690,7 @@ Despite the absence of the external numerical matrices, **Lemma B.7** (pages 62�
 
 Let $X = P \oplus F$ be a finite-dimensional real vector space ( $P$ the primary perturbation block, $F$ the free parameter block) and $\mathcal{T}$ a finite rooted tree.
 
-Suppose at each node $\xi \in \mathcal{T}$ we are given positive weights $w _ {\xi,i} > 0$ , a pivot index set $U _ \xi$ , pivot coefficients $p _ {\xi,j}$ , row bounds $m _ {\xi,i} > 0$ , discardable columns $Y _ \xi'$ , constraint columns $Y _ \xi$ , symmetric matrices $H _ \xi, K _ \xi, N _ \xi, V _ \xi$ , and entrywise non-negative error matrices $H _ \xi', K _ \xi'$ satisfying equations (B.39)–(B.40) on page 62:
+Suppose at each node $\xi \in \mathcal{T}$ we are given positive weights $w _ {\xi,i} \gt 0$ , a pivot index set $U _ \xi$ , pivot coefficients $p _ {\xi,j}$ , row bounds $m _ {\xi,i} \gt 0$ , discardable columns $Y _ \xi'$ , constraint columns $Y _ \xi$ , symmetric matrices $H _ \xi, K _ \xi, N _ \xi, V _ \xi$ , and entrywise non-negative error matrices $H _ \xi', K _ \xi'$ satisfying equations (B.39)–(B.40) on page 62:
 
 $$
 \begin{aligned}
@@ -720,7 +720,7 @@ $$
 
 **(2) Tree summation and restricted positivity**: Summing (5.3) over all $\xi \in \mathcal{T}$ cancels every non-root transfer form $V _ \xi[x]$ pairwise;
 
-if $V _ {\mathrm{root}} \succeq 0$ and every coordinate $j$ is covered by positive net pivots $D _ {jj} := \sum _ {\xi : j \in U _ \xi} \bar{p} _ {\xi,j} > 0$ , then $N := \sum _ {\xi \in \mathcal{T}} N _ \xi \succeq D - Y Y^T$ ( $Y := [Y _ \xi] _ {\xi \in \mathcal{T}}$ ), so $N$ is strictly positive definite on the constraint kernel $S := \ker Y^T$ : $N[x] \ge (\min _ j D _ {jj})|x|^2 > 0$ for all $x \in S \setminus \lbrace 0\rbrace$ .
+if $V _ {\mathrm{root}} \succeq 0$ and every coordinate $j$ is covered by positive net pivots $D _ {jj} := \sum _ {\xi : j \in U _ \xi} \bar{p} _ {\xi,j} \gt 0$ , then $N := \sum _ {\xi \in \mathcal{T}} N _ \xi \succeq D - Y Y^T$ ( $Y := [Y _ \xi] _ {\xi \in \mathcal{T}}$ ), so $N$ is strictly positive definite on the constraint kernel $S := \ker Y^T$ : $N[x] \ge (\min _ j D _ {jj})|x|^2 \gt 0$ for all $x \in S \setminus \lbrace 0\rbrace$ .
 
 **(3) Direct-sum decomposition and free compensation**: If $N| _ F \preceq 0$ on the free subspace $F = \lbrace 0\rbrace \oplus F$ (guaranteed by setting $v = 0$ in equation (B.44) on page 64, where the right-hand side is $-|\zeta|^2/1000 \le 0$ ) and $\operatorname{ncols}(Y) \le \dim F$ , then $S \cap F = \lbrace 0\rbrace$ and dimension pinching forces:
 
@@ -744,20 +744,20 @@ $$
 
 #### Theorem 5.3 (Rayleigh-Quotient Thresholds for Restricted Pivot Sign Reversal)
 
-Let $N = L D L^T$ induce a strictly positive definite quadratic form $Q _ S := J^T N J \succ 0$ on $S = \operatorname{im} J$ . Flipping the $j$ -th positive pivot $d _ j > 0$ of $D$ to $-d _ j$ produces $Q _ S' = Q _ S - 2 d _ j b b^T$ with $b := J^T L e _ j$ . Define the dimensionless Rayleigh threshold:
+Let $N = L D L^T$ induce a strictly positive definite quadratic form $Q _ S := J^T N J \succ 0$ on $S = \operatorname{im} J$ . Flipping the $j$ -th positive pivot $d _ j \gt 0$ of $D$ to $-d _ j$ produces $Q _ S' = Q _ S - 2 d _ j b b^T$ with $b := J^T L e _ j$ . Define the dimensionless Rayleigh threshold:
 
 $$
 \tau := 2 d _ j b^T Q _ S^{-1} b \ge 0. \tag{5.6}
 $$
 
-**Case 1: Below threshold**: If $\tau < 1$ , then $Q _ S'$ remains strictly positive definite on $S$ .
+**Case 1: Below threshold**: If $\tau \lt 1$ , then $Q _ S'$ remains strictly positive definite on $S$ .
 
 **Case 2: Critical degeneracy**: If $\tau = 1$ , then $Q _ S'$ is positive semidefinite with null vector $z _ 0 = Q _ S^{-1} b$ .
 
-**Case 3: Sign reversal**: A strictly negative direction on $S$ appears if and only if $\tau > 1$ . In this case $z _ - := Q _ S^{-1} b$ satisfies:
+**Case 3: Sign reversal**: A strictly negative direction on $S$ appears if and only if $\tau \gt 1$ . In this case $z _ - := Q _ S^{-1} b$ satisfies:
 
 $$
-z _ -^T Q _ S' z _ - = \bigl(b^T Q _ S^{-1} b\bigr)(1 - \tau) < 0. \tag{5.7}
+z _ -^T Q _ S' z _ - = \bigl(b^T Q _ S^{-1} b\bigr)(1 - \tau) \lt 0. \tag{5.7}
 $$
 
 ### 5.3 Structural Invariance under Supplementary Proof Materials and Certificate Unsealing: Why Publishing the SHA-256 Data File or Appending Outer Lemmas Cannot Resolve the Operator-Level Discrepancy
@@ -778,13 +778,13 @@ The unique analytical bridge from any finite-dimensional tuple $d \in \mathcal{D
 
 The kernel leak $\ker q _ {\mathrm{bulk}} \not\subseteq \ker f _ v$ occurs at the level of the **distributional differential operator identity** connecting half-space splines to divergence-free vector fields on $\mathbb{R}^3$ (Theorem 3.1: $D^2 W = H _ W dy + [\partial _ z W] _ \Sigma(e _ 3 \otimes e _ 3) dS _ \Sigma$ ), not because a few numerical digits were omitted from the PDF.
 
-Regardless of the coefficients stored in $d \in \mathcal{D} _ B$ , consider a half-space weight $W \in \lbrace D, Z\rbrace$ with non-zero one-sided normal restoring slope ( $[\partial _ z W] _ \Sigma > 0$ ) on a non-empty open annulus of the equatorial plane $\Sigma = \lbrace y _ 3 = 0\rbrace$ .
+Regardless of the coefficients stored in $d \in \mathcal{D} _ B$ , consider a half-space weight $W \in \lbrace D, Z\rbrace$ with non-zero one-sided normal restoring slope ( $[\partial _ z W] _ \Sigma \gt 0$ ) on a non-empty open annulus of the equatorial plane $\Sigma = \lbrace y _ 3 = 0\rbrace$ .
 
 Placing the compactly supported axisymmetric solenoidal field $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ of Theorem 3.2, or the Schwartz Gaussian solenoidal field of Theorem 3.3, in that annulus violates inequality (B.20) with a strictly positive residual margin.
 
-Family A gives $E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\frac{633509743}{432432000} > 0$ , and Family B gives $\Delta/c > \frac{26311}{64} > 400 > 0$ . Publishing rational spline tables cannot alter the distributional Hessian integration-by-parts identity on $\mathbb{R}^3$ .
+Family A gives $E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\frac{633509743}{432432000} \gt 0$ , and Family B gives $\Delta/c \gt \frac{26311}{64} \gt 400 \gt 0$ . Publishing rational spline tables cannot alter the distributional Hessian integration-by-parts identity on $\mathbb{R}^3$ .
 
-**Branch II: Collar smoothing and mesh refinement**: Suppose a supplementary note attempts to eliminate the equatorial surface jump $[\partial _ z D _ +] _ \Sigma \neq 0$ by rounding off the kink $|z|$ (or $|\eta|$ ) inside a thin equatorial collar $|z| \le \delta = \lambda\varepsilon$ ( $0 < \lambda \le \frac{1}{4}$ ).
+**Branch II: Collar smoothing and mesh refinement**: Suppose a supplementary note attempts to eliminate the equatorial surface jump $[\partial _ z D _ +] _ \Sigma \neq 0$ by rounding off the kink $|z|$ (or $|\eta|$ ) inside a thin equatorial collar $|z| \le \delta = \lambda\varepsilon$ ( $0 \lt \lambda \le \frac{1}{4}$ ).
 
 The globally $C^2(\mathbb{R}^3)$ even quartic spline is $s _ \delta(z) = \frac{3\delta}{8} + \frac{3z^2}{4\delta} - \frac{z^4}{8\delta^3}$ . This gives $[\partial _ z D _ \delta] _ \Sigma = 0$ , so the singular surface measure vanishes identically:
 
@@ -797,7 +797,7 @@ $$
 \end{aligned} \tag{5.8}
 $$
 
-we have $b(t) \ge 1 - 12t^2 > 0$ and $b(t)^2 \ge (1-12t^2)^2 \ge 1 - 24t^2$ for all $|t| \le \lambda \le \frac{1}{4}$ . Evaluating the **pure-bulk Hessian integral**
+we have $b(t) \ge 1 - 12t^2 \gt 0$ and $b(t)^2 \ge (1-12t^2)^2 \ge 1 - 24t^2$ for all $|t| \le \lambda \le \frac{1}{4}$ . Evaluating the **pure-bulk Hessian integral**
 
 $$
 \sum _ {k=1}^3 \int _ {\mathbb{R}^3} (\partial _ k v _ \varepsilon)^T H _ {D _ \delta}(\partial _ k v _ \varepsilon) dy
@@ -817,7 +817,7 @@ In particular, at collar ratio $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{
 $$
 \begin{aligned}
 & I _ {\mathrm{collar}}\left(\frac{1}{8}\right) = \frac{2787617180779875667}{3000241776758882304} \cr
-& > 1 - \frac{24}{5}\left(\frac{1}{8}\right)^2 = \frac{37}{40} = 0.925 > 0.
+& \gt 1 - \frac{24}{5}\left(\frac{1}{8}\right)^2 = \frac{37}{40} = 0.925 \gt 0.
 \end{aligned} \tag{5.10}
 $$
 
@@ -827,8 +827,8 @@ $$
 \begin{aligned}
 & \frac{E _ {D _ \delta}^{\mathrm{cert}}(v _ \varepsilon)}{\pi\varepsilon} \cr
 & \ge \frac{16}{25} I _ {\mathrm{collar}}\left(\frac{1}{8}\right)A - 16 M K \varepsilon \cr
-& = \frac{2147573301937507667}{1611064563204096000} > \frac{16}{25}\cdot\frac{37}{40}A - 16 M K \varepsilon \cr
-& = \frac{2865558827}{2162160000} > \frac{13}{10} > 0.
+& = \frac{2147573301937507667}{1611064563204096000} \gt \frac{16}{25}\cdot\frac{37}{40}A - 16 M K \varepsilon \cr
+& = \frac{2865558827}{2162160000} \gt \frac{13}{10} \gt 0.
 \end{aligned} \tag{5.11}
 $$
 
@@ -839,7 +839,7 @@ Because $I _ 1'(y) = \frac{1}{4} - Z(y) \ge 0$ forces $Z(y) \le \frac{1}{4}$ eve
 $$
 \begin{aligned}
 & I _ 1(1,0) = Z(1,0) - \Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} - \frac{3w}{50} \cr
-& \le \frac{1}{4} - \frac{3}{8\delta} = \frac{1}{4} - 196608 = -\frac{786431}{4} < 0.
+& \le \frac{1}{4} - \frac{3}{8\delta} = \frac{1}{4} - 196608 = -\frac{786431}{4} \lt 0.
 \end{aligned} \tag{5.12}
 $$
 
@@ -884,7 +884,7 @@ $$
 U(x,y,z) := \bigl(\sin y + \sin z, \sin x, \sin x - \sin(x+y)\bigr). \tag{6.2}
 $$
 
-For any real amplitude $a > 0$ , let $u^\pm(t,x)$ be the unique local smooth Navier–Stokes solutions evolving from the twin initial data $u _ 0^\pm := \pm a U$ . Then:
+For any real amplitude $a \gt 0$ , let $u^\pm(t,x)$ be the unique local smooth Navier–Stokes solutions evolving from the twin initial data $u _ 0^\pm := \pm a U$ . Then:
 
 **(1) Equality of the full-spectrum static readout**: At $t = 0$ , $u _ 0^+$ and $u _ 0^-$ have identical single-mode Fourier Hermitian tensors $\hat{u} _ 0^\pm(k)\hat{u} _ 0^\pm(k)^{\ast}$ for every $k \in \mathbb{Z}^3$ , identical kinetic energy $E(u _ 0^\pm) = \frac{5}{2}a^2$ , identical enstrophy $Y(u _ 0^\pm) = \langle |\omega _ 0^\pm|^2\rangle = 3a^2$ , identical palinstrophy $Z(u _ 0^\pm) = \langle |\nabla\omega _ 0^\pm|^2\rangle = 4a^2$ , and identical helicity $H(u _ 0^\pm) = \langle u _ 0^\pm, \omega _ 0^\pm\rangle = 0$ .
 
@@ -977,19 +977,19 @@ while the internal viscous-cubic balance via the damped Young sum-of-squares ide
 | III: Unclosed reductions | Appendix B and external certificate | Unsealing, smoothing, and auxiliary-lemma trilemma | Theorem 5.4, (5.10)–(5.12) | Constraints persist within the static piecewise-multiplier framework |
 | IV: Flow readouts | Static spectra and covariant inverse metric | Sign blindness versus pure-square dissipation | Theorems 6.1–6.2 | Euclidean recovery and reset costs remain necessary |
 
-**(I) Tier I (Equatorial singular surface-measure discrepancy)**: Across Appendix B from the page 53 half-space spline weights $D, Z$ and page 54 equation (B.16) to pages 55–56 Proposition B.1 inequality (B.20), the bulk Hessian readout $q _ {\mathrm{bulk}}(D^2 W) = H _ {\mathrm{bulk}}$ annihilates the singular Dirac surface measure $\Sigma _ W = [\partial _ z W]e _ 3\otimes e _ 3 dS _ {z=0} \in \ker q _ {\mathrm{bulk}}$ on the zero-volume plane $y _ 3=0$ , whereas the solenoidal double integration-by-parts functional $f _ v$ pairs positively with $\Sigma _ W$ ( $\Sigma _ W \notin \ker f _ v$ ). Under the unjoined half-space $C^2$ spline contract, Counterexample Family A ( $D _ + = \frac12 + \frac14\chi \lvert \eta \rvert$ , axisymmetric $v _ \varepsilon$ ) yields $E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\frac{633509743}{432432000} > 0$ with dual-weight separation $\ge 2\gamma _ \varepsilon$ , and Counterexample Family B ( $Z = cP \lvert \eta \rvert$ , Schwartz Gaussian mode $\pm(2,1)$ ) yields $\Delta/c \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > 400 > 0$ , analytically refuting the unjoined version of Proposition B.1 / (B.20).
+**(I) Tier I (Equatorial singular surface-measure discrepancy)**: Across Appendix B from the page 53 half-space spline weights $D, Z$ and page 54 equation (B.16) to pages 55–56 Proposition B.1 inequality (B.20), the bulk Hessian readout $q _ {\mathrm{bulk}}(D^2 W) = H _ {\mathrm{bulk}}$ annihilates the singular Dirac surface measure $\Sigma _ W = [\partial _ z W]e _ 3\otimes e _ 3 dS _ {z=0} \in \ker q _ {\mathrm{bulk}}$ on the zero-volume plane $y _ 3=0$ , whereas the solenoidal double integration-by-parts functional $f _ v$ pairs positively with $\Sigma _ W$ ( $\Sigma _ W \notin \ker f _ v$ ). Under the unjoined half-space $C^2$ spline contract, Counterexample Family A ( $D _ + = \frac12 + \frac14\chi \lvert \eta \rvert$ , axisymmetric $v _ \varepsilon$ ) yields $E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\frac{633509743}{432432000} \gt 0$ with dual-weight separation $\ge 2\gamma _ \varepsilon$ , and Counterexample Family B ( $Z = cP \lvert \eta \rvert$ , Schwartz Gaussian mode $\pm(2,1)$ ) yields $\Delta/c \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} \gt 400 \gt 0$ , analytically refuting the unjoined version of Proposition B.1 / (B.20).
 
 **(II) Tier II (Collar curvature-tax conservation under strong joining)**: Restoring global $C^2(\mathbb{R}^3)$ cross-plane joining via the quartic transition spline $s _ \delta(\eta)$ across $\lvert \eta \rvert \le \delta$ eliminates the surface Dirac measure but conserves the total curvature mass $\int _ {-\delta}^{\delta} s _ \delta''(\eta) d\eta = 2$ , forcing an $O(\delta^{-1})$ reciprocal curvature peak $\max s _ \delta'' = \frac{3}{2\delta}$ and $\partial _ {zz}D _ \delta(r,0) = \frac{3\chi}{8\delta r^2} + \frac{3\delta\chi'}{32r(1+r)^2}$ inside the collar:
 
 $$
 \begin{aligned}
-& \lim _ {\delta\downarrow 0} \int _ { \lvert \eta \rvert <\delta} \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}}f dy \cr
-& = \int _ {z=0} \frac{\chi}{2r}f dS > 0.
+& \lim _ {\delta\downarrow 0} \int _ { \lvert \eta \rvert \lt\delta} \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}}f dy \cr
+& = \int _ {z=0} \frac{\chi}{2r}f dS \gt 0.
 \end{aligned}
 $$
 
 Thus strong global- $C^2$ joining cannot be added at zero cost: any valid global- $C^2$ weight certificate must pay the full equatorial curvature tax inside the bulk Hessian norm penalty.
 
-**(III) Tier III (Unclosed paper reductions, unreleased certificate, and structural invariance under supplementary materials)**: Along the implication chain of pages 1, 4, 10, 38–39, 54–60, 62–64, and 69–70 (Theorem 1.1 $\Leftarrow$ Theorem 7.1 $\Leftarrow$ Theorem B.14 $\Leftarrow$ external certificate $d \in \mathcal{D} _ B$ , SHA-256 prefix 3f7a335b...), the PDF omits the error coefficients of (B.16), the full proofs of Propositions B.1 and B.4, and seven post-B.14 conditions on page 70. Moreover, Theorem 5.4 (Structural Trilemma) proves that unsealing the SHA-256 spline table cannot alter $D^2 W$ ; at collar ratio $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ ( $\delta = 2^{-19}$ ), thin-collar $C^2$ regularization transfers the surface jump into the collar bulk Hessian with factor $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ to maintain a pure-bulk violation $\ge \frac{\pi}{65536}\frac{2147573301937507667}{1611064563204096000} > 0$ on the same $v _ \varepsilon$ , or drives $I _ 1(1,0) \le -\frac{786431}{4} < 0$ ; and appending outer lemmas cannot eliminate an explicit counterexample in the admissible domain.
+**(III) Tier III (Unclosed paper reductions, unreleased certificate, and structural invariance under supplementary materials)**: Along the implication chain of pages 1, 4, 10, 38–39, 54–60, 62–64, and 69–70 (Theorem 1.1 $\Leftarrow$ Theorem 7.1 $\Leftarrow$ Theorem B.14 $\Leftarrow$ external certificate $d \in \mathcal{D} _ B$ , SHA-256 prefix 3f7a335b...), the PDF omits the error coefficients of (B.16), the full proofs of Propositions B.1 and B.4, and seven post-B.14 conditions on page 70. Moreover, Theorem 5.4 (Structural Trilemma) proves that unsealing the SHA-256 spline table cannot alter $D^2 W$ ; at collar ratio $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ ( $\delta = 2^{-19}$ ), thin-collar $C^2$ regularization transfers the surface jump into the collar bulk Hessian with factor $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} \gt \frac{37}{40}$ to maintain a pure-bulk violation $\ge \frac{\pi}{65536}\frac{2147573301937507667}{1611064563204096000} \gt 0$ on the same $v _ \varepsilon$ , or drives $I _ 1(1,0) \le -\frac{786431}{4} \lt 0$ ; and appending outer lemmas cannot eliminate an explicit counterexample in the admissible domain.
 
 **(IV) Tier IV (Fluid-dynamical continuation body versus static projection readouts)**: Comparing three-dimensional Navier–Stokes vorticity dynamics against the static Euclidean spectral readout $q _ {\mathrm{static}}$ and the comoving covariant inverse metric $g = C^{-1}$ , static Euclidean quadratic readouts are even under sign reversal ( $q _ {\mathrm{static}}(+17U) = q _ {\mathrm{static}}(-17U)$ ) and miss cubic vortex-stretching parity, while equation (B.18) with fixed $W^r$ is likewise quadratic and even in $v$ ( $J _ {W^r}(-v) = J _ {W^r}(v)$ ). Twin initial data $\pm 17U$ diverge in true initial enstrophy derivative by $Y _ +'(0) - Y _ -'(0) = 4913$ , whereas the comoving inverse metric $g = C^{-1}$ annihilates vortex stretching into pure-square dissipation $P _ \nu(\omega^T C^{-1}\omega) = -2\nu\sum _ i (\partial _ i z)^T C (\partial _ i z) \le 0$ , governed by the spectral condition-number bridge and prefix reset conservation laws.
