@@ -79,9 +79,9 @@ By quadratic and cubic homogeneity at amplitude $a = 17$ and viscosity $\nu = 1$
 | Cubic stretching $\mathcal{T} = \langle \omega, (\omega\cdot\nabla)u \rangle$ / 三次涡拉伸 | $+4913/4$ | $-4913/4$ | Opposite sign / 符号相反 |
 | Initial enstrophy derivative $f = Y'(0)$ / 拟能初导数 | $+289/2$ | $-9537/2$ | Difference $4913 \neq 0$ / 差值 $4913 \neq 0$ |
 
-Thus $q _ {\mathrm{static}}(X _ +) = q _ {\mathrm{static}}(X _ -)$ whereas $f(X _ +) - f(X _ -) = 17^3 = 4913 \neq 0$ , proving that the equivalence relation of the full-spectrum static quadratic readout is not contained in the equivalence relation of the instantaneous Navier–Stokes enstrophy evolution: $\operatorname{Eq}(q _ {\mathrm{static}}) \not\subseteq \operatorname{Eq}(f)$ .
+Thus $q _ {\mathrm{static}}(X _ +) = q _ {\mathrm{static}}(X _ -)$ whereas $f(X _ +) - f(X _ -) = 17^3 = 4913 \neq 0$ , proving that the equivalence relation of the full-spectrum static quadratic readout is not contained in the equivalence relation of the instantaneous Navier–Stokes enstrophy evolution: $\mathrm{Eq}(q _ {\mathrm{static}}) \not\subseteq \mathrm{Eq}(f)$ .
 
-由此严格证明 $q _ {\mathrm{static}}(X _ +) = q _ {\mathrm{static}}(X _ -)$ 但 $f(X _ +) - f(X _ -) = 17^3 = 4913 \neq 0$ ，即全谱静态二次能谱读口的同值等价关系不包含于真实纳维－斯托克斯拟能演化算子的同值关系： $\operatorname{Eq}(q _ {\mathrm{static}}) \not\subseteq \operatorname{Eq}(f)$ 。
+由此严格证明 $q _ {\mathrm{static}}(X _ +) = q _ {\mathrm{static}}(X _ -)$ 但 $f(X _ +) - f(X _ -) = 17^3 = 4913 \neq 0$ ，即全谱静态二次能谱读口的同值等价关系不包含于真实纳维－斯托克斯拟能演化算子的同值关系： $\mathrm{Eq}(q _ {\mathrm{static}}) \not\subseteq \mathrm{Eq}(f)$ 。
 
 ---
 

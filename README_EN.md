@@ -10,9 +10,11 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 
 | Part | Verified Target | Upstream Scale & Commit | English Monograph (`en/`) | Chinese Monograph (`zh/`) | Reproduction Suite (`reproduction/`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Generalized Riemann Hypothesis** (GRH) Lean 4 Proof | `17,374,215` lines (`40e56bab`) / community `16,571,342` lines (`f1f6d654`) | [01_GRH Monograph (EN)](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
-| **02** | **Fermat's Last Theorem** (FLT) Lean 4 Proof | `13,004,119` lines (`anthropics/fermats-last-theorem`) | [02_FLT Monograph (EN)](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
-| **03** | **Navier–Stokes (NS) Finite-Time Blow-Up** 79p Paper | `79` pages PDF (`ad53419d`, `tristanbuckmaster/navier-stokes`) | [03_NS Monograph (EN)](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [03_NS 中文专著](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [03_ns_79p_paper](reproduction/03_ns_79p_paper/) |
+| **01** | **Generalized Riemann Hypothesis** (GRH) Lean 4 Proof | `17,374,215` lines (`40e56bab`) / community `16,571,342` lines (`f1f6d654`) | [**PDF Monograph (Recommended)**](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.pdf) / [Markdown](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [**PDF 专著**](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.pdf) / [Markdown](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
+| **02** | **Fermat's Last Theorem** (FLT) Lean 4 Proof | `13,004,119` lines (`anthropics/fermats-last-theorem`) | [**PDF Monograph (Recommended)**](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.pdf) / [Markdown](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [**PDF 专著**](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.pdf) / [Markdown](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
+| **03** | **Navier–Stokes (NS) Finite-Time Blow-Up** 79p Paper | `79` pages PDF (`ad53419d`, `tristanbuckmaster/navier-stokes`) | [**PDF Monograph (Recommended)**](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.pdf) / [Markdown](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [**PDF 专著**](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.pdf) / [Markdown](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [03_ns_79p_paper](reproduction/03_ns_79p_paper/) |
+
+> **Reading Note**: Because `01_GRH` and `02_FLT` each contain over `2,000` mathematical formulas (over `11,300` formulas across the repository), exceeding GitHub's single-file server-side math rendering cutoff (`richTextTruncated` at ~1,000 formulas per page), **we strongly recommend viewing or downloading the pre-rendered vector `PDF Monograph` editions linked above**.
 
 ---
 
@@ -72,7 +74,7 @@ When automated formalization or computer-assisted PDE campaigns scale to **10M+ 
 - Bounding the twice-integrated divergence-free quadratic form solely by open-set bulk Hessian norms omits the singular Dirac surface measure across the equatorial plane $\Sigma = \lbrace y _ 3 = 0\rbrace$ :
 
 $$
-D^2 W = H _ {W,\mathrm{bulk}}\thinspace dy + [\partial _ z W] _ \Sigma (e _ 3 \otimes e _ 3)\thinspace dS _ {z=0}
+D^2 W = H _ {W,\mathrm{bulk}}  dy + [\partial _ z W] _ \Sigma (e _ 3 \otimes e _ 3)  dS _ {z=0}
 $$
 
 #### 3.2 Two Explicit Closed-Form Divergence-Free Counterexample Families Violating (B.20)
@@ -94,7 +96,7 @@ $$
 - Smoothing the seam across $|\eta| \le \delta$ via an even $C^2$ quartic spline $s _ \delta(\eta)$ causes the normal second derivative to peak at $\frac{3}{2\delta}$ with strictly conserved total curvature mass:
 
 $$
-\int _ {-\delta}^{\delta} s _ \delta''(\eta)\thinspace d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
+\int _ {-\delta}^{\delta} s _ \delta''(\eta)  d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
 $$
 
 - Meanwhile, the paper's upstream existence witness $d \in \mathcal{D} _ B$ (pp. 1, 4, 38–39, 70) is not published as a numerical file, appearing only as the 64-character SHA-256 digest `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`.
@@ -161,15 +163,21 @@ python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
 ├── README_EN.md                                                  # Standalone English Overview
 ├── CITATION.cff                                                  # GitHub / Zenodo Academic Citation Metadata
 ├── .zenodo.json                                                  # Zenodo Permanent DOI Archival Metadata
-├── SHA256SUMS                                                    # Full Repository 50-File SHA-256 Manifest
-├── zh/                                                           # Complete Chinese Monographs (3 Volumes)
-│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md                 # Part 01 (ZH): 17.37M-Line GRH Lean 4 Structural & Graph Verification
-│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md                 # Part 02 (ZH): 13.00M-Line FLT Lean 4 Structural & Kernel Verification
-│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md     # Part 03 (ZH): 79-Page NS Paper Kernel Analysis, Counterexamples & Trilemma
-├── en/                                                           # Complete English Monographs (3 Volumes)
-│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md                 # Part 01 (EN): 17.37M-Line GRH Lean 4 Structural & Graph Verification
-│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md                 # Part 02 (EN): 13.00M-Line FLT Lean 4 Structural & Kernel Verification
-│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md     # Part 03 (EN): 79-Page NS Paper Kernel Analysis, Counterexamples & Trilemma
+├── SHA256SUMS                                                    # Full Repository 55-File SHA-256 Manifest
+├── zh/                                                           # Complete Chinese Monographs (Pre-rendered Vector PDF + Markdown Source)
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.pdf                # Part 01 (ZH Vector PDF): 17.37M-Line GRH Lean 4 Structural & Graph Verification
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md                 # Part 01 (ZH Markdown Source)
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.pdf                # Part 02 (ZH Vector PDF): 13.00M-Line FLT Lean 4 Structural & Kernel Verification
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md                 # Part 02 (ZH Markdown Source)
+│   ├── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.pdf    # Part 03 (ZH Vector PDF): 79-Page NS Paper Kernel Analysis, Counterexamples & Trilemma
+│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md     # Part 03 (ZH Markdown Source)
+├── en/                                                           # Complete English Monographs (Pre-rendered Vector PDF + Markdown Source)
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_EN.pdf                # Part 01 (EN Vector PDF): 17.37M-Line GRH Lean 4 Structural & Graph Verification
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md                 # Part 01 (EN Markdown Source)
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_EN.pdf                # Part 02 (EN Vector PDF): 13.00M-Line FLT Lean 4 Structural & Kernel Verification
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md                 # Part 02 (EN Markdown Source)
+│   ├── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.pdf    # Part 03 (EN Vector PDF): 79-Page NS Paper Kernel Analysis, Counterexamples & Trilemma
+│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md     # Part 03 (EN Markdown Source)
 └── reproduction/                                                 # Bilingual One-Command Reproduction Suites
     ├── 01_grh_17m_lean/                                          # GRH: 12 Lean 4 probes, 10 graph JSONs & 8-vertex min-cut verifier (Bilingual)
     ├── 02_flt_13m_lean/                                          # FLT: Zero-dependency Lean 4 kernel probe & source-code verification report (Bilingual)

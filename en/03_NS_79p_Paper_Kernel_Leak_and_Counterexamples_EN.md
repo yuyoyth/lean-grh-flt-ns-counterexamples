@@ -27,7 +27,7 @@ In the actual physical and geometric evolution of the continuum, the fluid state
 
 The velocity gradient tensor $L = \nabla u$ simultaneously advects the vorticity field along the material derivative $D _ t = \partial _ t + u \cdot \nabla$ and stretches or tilts the principal axes of vortex tubes through the non-commutative vortex-stretching term $(\omega \cdot \nabla)u = L\omega$ .
 
-The viscous dissipation operator $\nu \Delta$ and the solenoidal Leray pressure projection $\mathbb{P} = I - \nabla \Delta^{-1} \operatorname{div}$ maintain instantaneous global coupling across all spatial scales and frequency shells.
+The viscous dissipation operator $\nu \Delta$ and the solenoidal Leray pressure projection $\mathbb{P} = I - \nabla \Delta^{-1} \mathrm{div}$ maintain instantaneous global coupling across all spatial scales and frequency shells.
 
 This complete, trajectory-preserving evolution operator—carrying every interface trace, singular distributional boundary layer, and non-commutative triadic phase—is the **true continuation body** of the Navier–Stokes equations.
 
@@ -51,7 +51,7 @@ $$
 (which reduces in the linear same-domain setting to the standard null space $\ker q = \lbrace X \in \mathcal{X} : q(X) = 0\rbrace$ ). If an analytical deduction attempts to bound, control, or uniquely determine a downstream physical functional or next-instant evolution operator $f : \mathcal{X} \to \mathcal{Z}$ solely from the projected readout $q(X)$ , the necessary and sufficient condition for mathematical validity is the **equivalence-kernel inclusion condition (nullspace inclusion condition)**:
 
 $$
-q(X _ +) = q(X _ -) \implies f(X _ +) = f(X _ -), \qquad \ker q \subseteq \ker f. \tag{1.3}
+q(X _ +) = q(X _ -) \implies f(X _ +) = f(X _ -), \qquad \ker q \subseteq \ker f. \qquad (1.3)
 $$
 
 In the linear same-domain setting, this is precisely nullspace inclusion.
@@ -126,8 +126,8 @@ $$
 \begin{aligned}
 & \exists d \in \mathcal{D} _ B, \mathsf{Valid} _ B(d) \Longrightarrow \exists c \in \mathcal{C} _ 7, \cr
 & \mathsf{Cert} _ 7(c) \Longrightarrow \exists (W, q) \in \mathcal{P} _ {\mathrm{rot}} \cr
-& \Longrightarrow \text{Blow-up on }\mathbb{R}^3, \mathbb{T}^3.
-\end{aligned} \tag{2.1}
+& \Longrightarrow \mathrm{BlowUp}(\mathbb{R}^3, \mathbb{T}^3).
+\end{aligned} \qquad (2.1)
 $$
 
 **Step 1: Appendix B to Section 7**: Theorem B.14 (page 69) converts valid matrix and cell data into the a priori certificate required by Section 7.
@@ -178,7 +178,7 @@ meanwhile, the witness certificate $d \in \mathcal{D} _ B$ at the far left of th
 
 ### 3.1 The Double Integration-by-Parts Seam in Proposition B.1 and Inequality (B.20)
 
-In Appendix B (pages 49–56), the authors seek a weighted coercive lower bound for divergence-free perturbation fields $v \in \mathcal{D} _ S^\Gamma$ invariant under the discrete symmetry group $\Gamma = \langle (R _ {\pi/\kappa}, 1/2), (R _ {\ast}, 0) \rangle$ , where $R _ {\pi/\kappa}$ is rotation by $\pi/\kappa$ around the $y _ 3$ -axis and $R _ {\ast} = \operatorname{diag}(1, -1, -1)$ .
+In Appendix B (pages 49–56), the authors seek a weighted coercive lower bound for divergence-free perturbation fields $v \in \mathcal{D} _ S^\Gamma$ invariant under the discrete symmetry group $\Gamma = \langle (R _ {\pi/\kappa}, 1/2), (R _ {\ast}, 0) \rangle$ , where $R _ {\pi/\kappa}$ is rotation by $\pi/\kappa$ around the $y _ 3$ -axis and $R _ {\ast} = \mathrm{diag}(1, -1, -1)$ .
 
 Denote the self-similar spatial coordinates by $y = (y _ 1, y _ 2, y _ 3) \in \mathbb{R}^3$ , spherical radius $\rho = |y| = \sqrt{y _ 1^2 + y _ 2^2 + y _ 3^2}$ , cylindrical radius $r = \sqrt{y _ 1^2 + y _ 2^2}$ , vertical coordinate $z = y _ 3$ , and the compactified radial and colatitude coordinates introduced on page 53:
 
@@ -192,7 +192,7 @@ For any smooth divergence-free vector field $u$ ( $\nabla \cdot u = \sum _ {i=1}
 
 $$
 \begin{aligned}
-& |\nabla u|^2 - |\operatorname{curl} u|^2 \cr
+& |\nabla u|^2 - |\mathrm{curl} u|^2 \cr
 & = \sum _ {i,j=1}^3 (\partial _ i u _ j)^2 \cr
 & - \sum _ {i,j=1}^3 \bigl((\partial _ i u _ j)^2 - \partial _ i u _ j \partial _ j u _ i\bigr) \cr
 & = \sum _ {i,j=1}^3 \partial _ i u _ j \partial _ j u _ i.
@@ -215,17 +215,17 @@ $$
 Then the second-order distributional derivative (distributional Hessian Radon measure $D^2 W$ ) of $W$ on $\mathbb{R}^3$ admits the exact Lebesgue–Radon–Nikodym decomposition:
 
 $$
-D^2 W = H _ W(y) dy + [\partial _ z W] (y _ 1, y _ 2) e _ 3 \otimes e _ 3 dS _ \Sigma, \tag{3.1}
+D^2 W = H _ W(y) dy + [\partial _ z W] (y _ 1, y _ 2) e _ 3 \otimes e _ 3 dS _ \Sigma, \qquad (3.1)
 $$
 
 where $dS _ \Sigma = dy _ 1 dy _ 2$ is the two-dimensional area measure on $\Sigma = \lbrace z=0\rbrace$ . Consequently, for every compactly supported $C^2$ divergence-free vector field (or rapidly decreasing Schwartz divergence-free vector field) $u$ , we have the exact identity:
 
 $$
 \begin{aligned}
-& \int _ {\mathbb{R}^3} W(y)\bigl(|\nabla u|^2 - |\operatorname{curl} u|^2\bigr) dy = \langle D^2 W, u \otimes u \rangle \cr
+& \int _ {\mathbb{R}^3} W(y)\bigl(|\nabla u|^2 - |\mathrm{curl} u|^2\bigr) dy = \langle D^2 W, u \otimes u \rangle \cr
 & = \int _ {\mathbb{R}^3} u(y)^T H _ W(y) u(y) dy \cr
 & + \int _ {z=0} [\partial _ z W] (y _ 1, y _ 2) u _ 3(y _ 1, y _ 2, 0)^2 dS _ \Sigma.
-\end{aligned} \tag{3.2}
+\end{aligned} \qquad (3.2)
 $$
 
 **Proof**: Split the integral over $\mathbb{R}^3$ into the sum of the integrals over $\mathbb{R} _ +^3$ and $\mathbb{R} _ -^3$ . On each half-space, since $W$ is $C^2$ up to the boundary $\Sigma$ and $\nabla \cdot u = 0$ , the first integration by parts with respect to $y _ i$ uses
@@ -278,7 +278,7 @@ $$
 \begin{aligned}
 & I _ 2 = D - \frac{3}{50}, \qquad I _ 2' = 1 - D, \qquad I _ 1' = \frac{1}{4} - Z, \cr
 & I _ 1 = Z - \Vert H _ D\Vert _ {\mathrm{op}} - \frac{3w}{50}, \qquad I _ 0 = -\Vert H _ Z\Vert _ {\mathrm{op}},
-\end{aligned} \tag{3.3}
+\end{aligned} \qquad (3.3)
 $$
 
 where $\Vert H _ D\Vert _ {\mathrm{op}}$ and $\Vert H _ Z\Vert _ {\mathrm{op}}$ evaluate the pointwise operator norm of the classical bulk Hessian matrix on the open domain $z \neq 0$ .
@@ -298,19 +298,19 @@ $$
 & E _ D(v) = \sum _ {k=1}^3 \int _ {\mathbb{R}^3} (\partial _ k v)^T H _ D (\partial _ k v) dy \cr
 & - \int _ {\mathbb{R}^3} \Vert H _ D\Vert _ {\mathrm{op}} |\nabla v|^2 dy \cr
 & + \int _ {z=0} [\partial _ z D] |\nabla v _ 3|^2 dS _ \Sigma,
-\end{aligned} \tag{3.4}
+\end{aligned} \qquad (3.4)
 $$
 
 $$
 \begin{aligned}
 & E _ Z(v) = \int _ {\mathbb{R}^3} v^T H _ Z v dy - \int _ {\mathbb{R}^3} \Vert H _ Z\Vert _ {\mathrm{op}} |v|^2 dy \cr
 & + \int _ {z=0} [\partial _ z Z] v _ 3^2 dS _ \Sigma.
-\end{aligned} \tag{3.5}
+\end{aligned} \qquad (3.5)
 $$
 
 In both (3.4) and (3.5), the sum of the first two bulk integrals is always $\le 0$ by definition of the operator norm $\Vert H _ W\Vert _ {\mathrm{op}}$ . However, the third term—the singular surface integral $\int _ {z=0} [\partial _ z D]|\nabla v _ 3|^2 dS _ \Sigma$ or $\int _ {z=0} [\partial _ z Z]v _ 3^2 dS _ \Sigma$ coming from $\ker q _ {\mathrm{bulk}}$ —is not controlled by the bulk Hessian norm terms $-\Vert H _ D\Vert _ {\mathrm{op}}$ or $-\Vert H _ Z\Vert _ {\mathrm{op}}$ .
 
-Even more strikingly, one might ask whether the reflection symmetry $R _ {\ast} = \operatorname{diag}(1, -1, -1) \in \Gamma$ automatically kills the surface term on $z = 0$ :
+Even more strikingly, one might ask whether the reflection symmetry $R _ {\ast} = \mathrm{diag}(1, -1, -1) \in \Gamma$ automatically kills the surface term on $z = 0$ :
 
 For the $D$ -weight seam (3.4), for an axisymmetric zero-harmonic perturbation $v$ , $R _ {\ast}$ -symmetry forces the vertical velocity $v _ 3$ to be an odd function of $z$ , so $v _ 3(y _ 1, y _ 2, 0) = 0$ and its tangential derivatives $\partial _ 1 v _ 3(y _ 1, y _ 2, 0) = \partial _ 2 v _ 3(y _ 1, y _ 2, 0) = 0$ on $z = 0$ . Yet the integrand in (3.4) is $|\nabla v _ 3|^2 = |\partial _ 1 v _ 3|^2 + |\partial _ 2 v _ 3|^2 + |\partial _ z v _ 3|^2$ .
 
@@ -336,7 +336,7 @@ $$
 By the solenoidal Parseval identities $\langle T _ 1 v, -\Delta v\rangle = \Vert \Delta v\Vert _ {L^2}^2 + \frac{1}{4}\Vert \nabla v\Vert _ {L^2}^2$ and
 
 $$
-\Vert \nabla\operatorname{curl} v\Vert _ {L^2}^2 = \Vert \nabla^2 v\Vert _ {L^2}^2 = \Vert \Delta v\Vert _ {L^2}^2,
+\Vert \nabla\mathrm{curl} v\Vert _ {L^2}^2 = \Vert \nabla^2 v\Vert _ {L^2}^2 = \Vert \Delta v\Vert _ {L^2}^2,
 $$
 
 the auxiliary constant $w$ and the $3/50$ terms in (B.20) cancel identically, and $\mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}}$ equals $E _ D(v)$ in (3.4).
@@ -357,7 +357,7 @@ $$
 \begin{aligned}
 & D _ \pm(y) := \frac{1}{2} \pm \frac{1}{4}\chi(\sigma) |\eta| \cr
 & = \frac{1}{2} \pm \frac{1}{4}\chi\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho}, \qquad D _ \pm(0) = \frac{1}{2}.
-\end{aligned} \tag{3.6}
+\end{aligned} \qquad (3.6)
 $$
 
 Both $D _ +$ and $D _ -$ are identically constant ( $1/2$ ) near the origin ( $\rho \le 1/3$ ), belong to $C^2$ piecewise polynomials on each half-space chart, satisfy $\frac{1}{4} \le D _ \pm \le \frac{3}{4}$ globally (so $I _ 2' = 1 - D _ \pm \ge \frac{1}{4} \gt 0$ ), and are axisymmetric and even in $z$ . On the region $\rho \ge \frac{1}{2}$ ( $\sigma \ge \frac{1}{3}$ ), $\chi(\sigma) = 1$ and $D _ +(y) = \frac{1}{2} + \frac{|z|}{4\rho}$ , so the normal derivative jumps across $z = 0$ are:
@@ -366,7 +366,7 @@ $$
 \begin{aligned}
 & [\partial _ z D _ +] (r) = \frac{1}{2r}, \qquad [\partial _ z D _ -] (r) = -\frac{1}{2r} \cr
 & \left(r \ge \frac{1}{2}\right).
-\end{aligned} \tag{3.7}
+\end{aligned} \qquad (3.7)
 $$
 
 **Construction of the compactly supported solenoidal perturbation**: Let $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ (supported on $[-1, 1]$ with $a(0) = 1$ ). For $0 \lt \varepsilon \le \frac{1}{4}$ , define the axisymmetric stream function $\psi _ \varepsilon$ and velocity field $v _ \varepsilon$ in cylindrical coordinates $(v _ r, v _ \varphi, v _ 3)$ :
@@ -376,7 +376,7 @@ $$
 & \psi _ \varepsilon(r, z) := \varepsilon z a\left(\frac{r-1}{\varepsilon}\right) a\left(\frac{z}{\varepsilon}\right), \cr
 & v _ r = -\frac{1}{r}\partial _ z \psi _ \varepsilon, \qquad v _ \varphi = 0, \cr
 & v _ 3 = \frac{1}{r}\partial _ r \psi _ \varepsilon.
-\end{aligned} \tag{3.8}
+\end{aligned} \qquad (3.8)
 $$
 
 In the rescaled local coordinates $s = \frac{r-1}{\varepsilon} \in [-1,1]$ and $t = \frac{z}{\varepsilon} \in [-1,1]$ , we have:
@@ -385,14 +385,14 @@ $$
 \begin{aligned}
 & v _ r(r,z) = -\frac{\varepsilon}{r}a(s)\bigl(a(t) + t a'(t)\bigr), \cr
 & v _ 3(r,z) = \frac{\varepsilon}{r}t a'(s)a(t).
-\end{aligned} \tag{3.9}
+\end{aligned} \qquad (3.9)
 $$
 
 Direct inspection confirms:
 
-**(1) Divergence-freeness and compact regularity**: $\operatorname{div} v _ \varepsilon = \frac{1}{r}\partial _ r(r v _ r) + \partial _ z v _ 3 \equiv 0$ ; its support lies in the toroidal tube $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ bounded away from the axis $r=0$ and origin ( $\rho \ge r \ge \frac{3}{4} \gt \frac{1}{2}$ , where $\chi(\sigma) \equiv 1$ ); and $a \in C _ c^3 \implies v _ \varepsilon \in C _ c^2(\mathbb{R}^3)$ .
+**(1) Divergence-freeness and compact regularity**: $\mathrm{div} v _ \varepsilon = \frac{1}{r}\partial _ r(r v _ r) + \partial _ z v _ 3 \equiv 0$ ; its support lies in the toroidal tube $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ bounded away from the axis $r=0$ and origin ( $\rho \ge r \ge \frac{3}{4} \gt \frac{1}{2}$ , where $\chi(\sigma) \equiv 1$ ); and $a \in C _ c^3 \implies v _ \varepsilon \in C _ c^2(\mathbb{R}^3)$ .
 
-**(2) Discrete rotation and reflection symmetry**: $v _ \varepsilon$ is axisymmetric and time-independent, with $v _ r$ even in $z$ and $v _ 3$ odd in $z$ , hence invariant under $R _ {\ast} = \operatorname{diag}(1, -1, -1)$ , so $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ .
+**(2) Discrete rotation and reflection symmetry**: $v _ \varepsilon$ is axisymmetric and time-independent, with $v _ r$ even in $z$ and $v _ 3$ odd in $z$ , hence invariant under $R _ {\ast} = \mathrm{diag}(1, -1, -1)$ , so $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ .
 
 **(3) Nonzero normal derivative on the equatorial plane**: On $z = 0$ ( $t = 0$ ), $v _ 3(r,0) = 0$ and $\partial _ r v _ 3(r,0) = 0$ , but since $a(0) = 1$ ,
 
@@ -405,7 +405,7 @@ $$
 For the admissible weak-contract data above and the perturbation $v _ \varepsilon$ with $a(t) = (1-t^2) _ +^4$ and $\varepsilon = 2^{-16} = \frac{1}{65536}$ , inequality (B.20) of Proposition B.1 (which requires $E _ D(v) := \mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}} \le 0$ ) is strictly violated by $D _ +$ , with the exact rational lower bound:
 
 $$
-E _ {D _ +}(v _ \varepsilon) \ge \gamma _ \varepsilon := \frac{\pi}{65536}\cdot\frac{633509743}{432432000} \gt 0. \tag{3.10}
+E _ {D _ +}(v _ \varepsilon) \ge \gamma _ \varepsilon := \frac{\pi}{65536}\cdot\frac{633509743}{432432000} \gt 0. \qquad (3.10)
 $$
 
 Furthermore, under the reduced readout $q _ {\mathrm{red}}$ that observes the bulk Hessian operator-norm field $\Vert H _ D\Vert _ {\mathrm{op}}$ , the equatorial plane value $D| _ {z=0}$ , the uniform bounds $[1/4, 3/4]$ , and all fixed structural parameters, the twin weights $(D _ +, D _ -)$ have identical readout values ( $q _ {\mathrm{red}}(D _ +) = q _ {\mathrm{red}}(D _ -)$ ), yet their outputs in (B.20) diverge with opposite signs:
@@ -415,7 +415,7 @@ $$
 & E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon \gt 0, \cr
 & E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon \lt 0, \cr
 & E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} \gt 0.
-\end{aligned} \tag{3.11}
+\end{aligned} \qquad (3.11)
 $$
 
 **Proof**:
@@ -435,7 +435,7 @@ $$
 \begin{aligned}
 & A = \int _ {-1}^1 a'(s)^2 ds = 64 \int _ {-1}^1 s^2(1-s^2)^6 ds \cr
 & = 128 \sum _ {j=0}^6 \frac{(-1)^j \binom{6}{j}}{2j+3} = \frac{131072}{45045}.
-\end{aligned} \tag{3.12}
+\end{aligned} \qquad (3.12)
 $$
 
 Second, bound the open-set bulk Hessian operator norm $\Vert H _ {D _ +}\Vert _ {\mathrm{op}}$ . On the support $\rho \ge \frac{3}{4}$ , $D _ + = \frac{1}{2} + \frac{|z|}{4\rho}$ . Differentiating $\frac{z}{\rho}$ twice in Cartesian coordinates gives:
@@ -457,16 +457,16 @@ $$
 \begin{aligned}
 & |\nabla v _ \varepsilon|^2 \le K := \left(\frac{28}{3}\right)^2 + 16^2 + \left(\frac{4}{3}\right)^2 \cr
 & + \left(\frac{104}{9}\right)^2 + 8^2 = \frac{43936}{81}.
-\end{aligned} \tag{3.13}
+\end{aligned} \qquad (3.13)
 $$
 
-Since the support volume is $\operatorname{Vol}(\operatorname{supp} v _ \varepsilon) = 8\pi\varepsilon^2$ , the two bulk integrals in (3.4) contribute at most $2 M K \cdot 8\pi\varepsilon^2 = 16\pi M K \varepsilon^2$ in magnitude. Hence:
+Since the support volume is $\mathrm{Vol}(\mathrm{supp} v _ \varepsilon) = 8\pi\varepsilon^2$ , the two bulk integrals in (3.4) contribute at most $2 M K \cdot 8\pi\varepsilon^2 = 16\pi M K \varepsilon^2$ in magnitude. Hence:
 
 $$
 \begin{aligned}
 & E _ {D _ +}(v _ \varepsilon) \ge T _ \varepsilon - 16\pi M K \varepsilon^2 \cr
 & \ge \pi\varepsilon\left(\frac{16}{25}A - 16 M K \varepsilon\right).
-\end{aligned} \tag{3.14}
+\end{aligned} \qquad (3.14)
 $$
 
 Substituting $A = \frac{131072}{45045}$ , $M = 3$ , $K = \frac{43936}{81}$ , and $\varepsilon = \frac{1}{65536}$ gives:
@@ -495,13 +495,13 @@ $$
 and define the three-dimensional Schwartz vector field $v = (v _ 1, v _ 2, v _ 3)$ :
 
 $$
-v(x,y,z) := g(x,y,z) \bigl(-2 z y C _ 6(x,y), 2 z x C _ 6(x,y), -S _ 6(x,y)\bigr). \tag{3.15}
+v(x,y,z) := g(x,y,z) \bigl(-2 z y C _ 6(x,y), 2 z x C _ 6(x,y), -S _ 6(x,y)\bigr). \qquad (3.15)
 $$
 
 Set the half-space $C^2$ spline weight $Z$ to be:
 
 $$
-Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c \gt 0), \tag{3.16}
+Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c \gt 0), \qquad (3.16)
 $$
 
 where $P(\sigma) = 0$ on $[0, \frac{1}{20}]$ , $P(\sigma) = h(20\sigma - 1)$ on $[\frac{1}{20}, \frac{1}{10}]$ , and $P(\sigma) = 1$ on $[\frac{1}{10}, 1)$ .
@@ -514,7 +514,7 @@ $$
 \begin{aligned}
 & \Vert \nabla v\Vert _ {L^2(\mathbb{R}^3)}^2 = 14880 \frac{\pi^{3/2}}{2\sqrt{3}}, \cr
 & \Vert \Delta v\Vert _ {L^2(\mathbb{R}^3)}^2 = 431280 \frac{\pi^{3/2}}{2\sqrt{3}},
-\end{aligned} \tag{3.17}
+\end{aligned} \qquad (3.17)
 $$
 
 $$
@@ -522,7 +522,7 @@ $$
 & \mathrm{LHS} _ {\mathrm{B.20}} = \frac{47}{50}\Vert \Delta v\Vert _ {L^2}^2 \cr
 & + \frac{127}{625}\Vert \nabla v\Vert _ {L^2}^2 = \frac{51053352}{125} \frac{\pi^{3/2}}{2\sqrt{3}} \cr
 & = \frac{8508892}{125}\sqrt{3}\pi^{3/2}.
-\end{aligned} \tag{3.18}
+\end{aligned} \qquad (3.18)
 $$
 
 Under the half-space $C^2$ weight $Z = c P(\sigma)|\eta|$ ( $c \gt 0$ ), the defect $\Delta := \mathrm{RHS} _ {\mathrm{B.20}} - \mathrm{LHS} _ {\mathrm{B.20}} = E _ Z(v)$ satisfies the purely analytical lower bound:
@@ -531,11 +531,11 @@ $$
 \begin{aligned}
 & \frac{\Delta}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} \cr
 & \gt \frac{26311}{64} \gt 400 \gt 0.
-\end{aligned} \tag{3.19}
+\end{aligned} \qquad (3.19)
 $$
 
 **Proof**:
-First, since $C _ 6 + i S _ 6 = (x+iy)^6$ is holomorphic, $x\partial _ y C _ 6 - y\partial _ x C _ 6 = -6 S _ 6$ , so the horizontal divergence is $\partial _ x v _ 1 + \partial _ y v _ 2 = -12 z g S _ 6$ , which cancels the vertical divergence $\partial _ z v _ 3 = -\partial _ z(g S _ 6) = +12 z g S _ 6$ identically ( $\operatorname{div} v \equiv 0$ ).
+First, since $C _ 6 + i S _ 6 = (x+iy)^6$ is holomorphic, $x\partial _ y C _ 6 - y\partial _ x C _ 6 = -6 S _ 6$ , so the horizontal divergence is $\partial _ x v _ 1 + \partial _ y v _ 2 = -12 z g S _ 6$ , which cancels the vertical divergence $\partial _ z v _ 3 = -\partial _ z(g S _ 6) = +12 z g S _ 6$ identically ( $\mathrm{div} v \equiv 0$ ).
 
 In cylindrical coordinates $(r, \varphi, z)$ , $v _ r = 0$ , $v _ \varphi = 2 z r^7 g \cos(6\varphi)$ , and $v _ 3 = -r^6 g \sin(6\varphi)$ , which is invariant under rotation by $\pi/3$ and under $R _ {\ast} : (\varphi, z) \mapsto (-\varphi, -z)$ , so $v \in \mathcal{D} _ S^\Gamma$ .
 
@@ -545,7 +545,7 @@ $$
 \begin{aligned}
 & A _ 0 = \int _ {z=0} \frac{2c}{r} v _ 3^2 dS = 2\pi c \int _ 0^\infty r^{12} e^{-r^2} dr \cr
 & = \frac{10395}{64}\pi^{3/2}c,
-\end{aligned} \tag{3.20}
+\end{aligned} \qquad (3.20)
 $$
 
 and since $p(\rho) = P(\rho/(1+\rho)) = 1$ for $\rho \ge \frac{1}{9}$ , the core cutoff loss on $r \le \frac{1}{9}$ is at most $2\pi c \int _ 0^{1/9} r^{12} dr = \frac{2\pi c}{13\cdot 9^{13}}$ .
@@ -585,7 +585,7 @@ $$
 \cr
 & D _ \delta(y) := \frac{1}{2} + \frac{1}{4}\chi(\sigma) s _ \delta(\eta).
 \end{aligned}
-\tag{4.1}
+\qquad (4.1)
 $$
 
 Inside the collar $|\eta| \lt \delta$ , its first and second derivatives are:
@@ -594,7 +594,7 @@ $$
 \begin{aligned}
 & s _ \delta'(\eta) = \frac{3\eta}{2\delta} - \frac{\eta^3}{2\delta^3}, \cr
 & s _ \delta''(\eta) = \frac{3}{2\delta}\left(1 - \frac{\eta^2}{\delta^2}\right).
-\end{aligned} \tag{4.2}
+\end{aligned} \qquad (4.2)
 $$
 
 Because all derivatives up to order two match at $\eta = \pm\delta$ , $D _ \delta \in C^2(\mathbb{R}^3)$ is globally $C^2$ across the equatorial plane $z = 0$ . Its singular surface measure vanishes ( $[\partial _ z D _ \delta] _ \Sigma = 0$ ), and $E _ {D _ \delta}(v) \le 0$ holds.
@@ -612,7 +612,7 @@ $$
 \begin{aligned}
 & \int _ {-\delta}^{\delta} s _ \delta''(\eta) d\eta = 2, \cr
 & \int _ {-\delta}^{\delta} \frac{1}{2}s _ \delta''(\eta) d\eta = 1.
-\end{aligned} \tag{4.3}
+\end{aligned} \qquad (4.3)
 $$
 
 At the equatorial plane $z = 0$ ( $r \gt 0$ ), the vertical second Cartesian partial derivative of $D _ \delta$ is:
@@ -621,7 +621,7 @@ $$
 \begin{aligned}
 & \partial _ {zz} D _ \delta(r, 0) = \frac{3 \chi\left(\frac{r}{1+r}\right)}{8 \delta r^2} \cr
 & + \frac{3 \delta \chi'\left(\frac{r}{1+r}\right)}{32 r(1+r)^2}.
-\end{aligned} \tag{4.4}
+\end{aligned} \qquad (4.4)
 $$
 
 **(2) Nonzero collar bulk-Hessian limit**: For every compactly supported continuous non-negative test function $f \in C _ c(\mathbb{R}^3)$ (such as $f = |\nabla v|^2$ ), as the collar thickness $\delta \downarrow 0$ , even though the three-dimensional Lebesgue volume of the collar $\lbrace |\eta| \lt \delta\rbrace$ shrinks at rate $O(\delta)$ , the bulk Hessian operator-norm integral over the collar **never vanishes**; instead, it converges strictly to the singular surface jump integral:
@@ -630,7 +630,7 @@ $$
 \begin{aligned}
 & \lim _ {\delta \downarrow 0} \int _ {|\eta| \lt \delta} \Vert H _ {D _ \delta}(y)\Vert _ {\mathrm{op}} f(y) dy \cr
 & = \int _ {z=0} \frac{\chi\left(\frac{r}{1+r}\right)}{2r} f(y _ 1, y _ 2, 0) dS _ \Sigma \gt 0.
-\end{aligned} \tag{4.5}
+\end{aligned} \qquad (4.5)
 $$
 
 **Proof**: Equations (4.3) and (4.4) follow by direct integration of (4.2) and the Cartesian chain rule at $z = 0$ ( $\partial _ z\eta = 1/r$ , $\partial _ {zz}\eta = 0$ , $\partial _ z\sigma = 0$ , $\partial _ {zz}\sigma = \frac{1}{r(1+r)^2}$ ).
@@ -694,17 +694,17 @@ Suppose at each node $\xi \in \mathcal{T}$ we are given positive weights $w _ {\
 
 $$
 \begin{aligned}
-& H _ \xi[x] \le N _ \xi[x] + \sum _ {\xi' \in \operatorname{child}(\xi)} V _ {\xi'}[x] + H _ \xi'[|x|], \cr
+& H _ \xi[x] \le N _ \xi[x] + \sum _ {\xi' \in \mathrm{child}(\xi)} V _ {\xi'}[x] + H _ \xi'[|x|], \cr
 & V _ \xi[x] \le K _ \xi[x] - \sum _ {j \notin U _ \xi} m _ {\xi,j} x _ j^2 + K _ \xi'[|x|],
-\end{aligned} \tag{5.1}
+\end{aligned} \qquad (5.1)
 $$
 
 $$
 \begin{aligned}
-& R _ \xi := H _ \xi - \operatorname{diag} _ {U _ \xi}(p _ \xi) - Y _ \xi' (Y _ \xi')^T + Y _ \xi Y _ \xi^T - K _ \xi, \cr
+& R _ \xi := H _ \xi - \mathrm{diag} _ {U _ \xi}(p _ \xi) - Y _ \xi' (Y _ \xi')^T + Y _ \xi Y _ \xi^T - K _ \xi, \cr
 & \sum _ j \bigl(|R _ {\xi,ij}| + H _ {\xi,ij}' + K _ {\xi,ij}'\bigr)\frac{w _ {\xi,i}}{w _ {\xi,j}} \le m _ {\xi,i}, \cr
 & \bar{p} _ {\xi,j} \le p _ {\xi,j} - m _ {\xi,j}.
-\end{aligned} \tag{5.2}
+\end{aligned} \qquad (5.2)
 $$
 
 Then:
@@ -713,19 +713,19 @@ Then:
 
 $$
 \begin{aligned}
-& N _ \xi[x] + \sum _ {\xi' \in \operatorname{child}(\xi)} V _ {\xi'}[x] - V _ \xi[x] \cr
+& N _ \xi[x] + \sum _ {\xi' \in \mathrm{child}(\xi)} V _ {\xi'}[x] - V _ \xi[x] \cr
 & \ge \sum _ {j \in U _ \xi} \bar{p} _ {\xi,j} x _ j^2 - |Y _ \xi^T x|^2.
-\end{aligned} \tag{5.3}
+\end{aligned} \qquad (5.3)
 $$
 
 **(2) Tree summation and restricted positivity**: Summing (5.3) over all $\xi \in \mathcal{T}$ cancels every non-root transfer form $V _ \xi[x]$ pairwise;
 
 if $V _ {\mathrm{root}} \succeq 0$ and every coordinate $j$ is covered by positive net pivots $D _ {jj} := \sum _ {\xi : j \in U _ \xi} \bar{p} _ {\xi,j} \gt 0$ , then $N := \sum _ {\xi \in \mathcal{T}} N _ \xi \succeq D - Y Y^T$ ( $Y := [Y _ \xi] _ {\xi \in \mathcal{T}}$ ), so $N$ is strictly positive definite on the constraint kernel $S := \ker Y^T$ : $N[x] \ge (\min _ j D _ {jj})|x|^2 \gt 0$ for all $x \in S \setminus \lbrace 0\rbrace$ .
 
-**(3) Direct-sum decomposition and free compensation**: If $N| _ F \preceq 0$ on the free subspace $F = \lbrace 0\rbrace \oplus F$ (guaranteed by setting $v = 0$ in equation (B.44) on page 64, where the right-hand side is $-|\zeta|^2/1000 \le 0$ ) and $\operatorname{ncols}(Y) \le \dim F$ , then $S \cap F = \lbrace 0\rbrace$ and dimension pinching forces:
+**(3) Direct-sum decomposition and free compensation**: If $N| _ F \preceq 0$ on the free subspace $F = \lbrace 0\rbrace \oplus F$ (guaranteed by setting $v = 0$ in equation (B.44) on page 64, where the right-hand side is $-|\zeta|^2/1000 \le 0$ ) and $\mathrm{ncols}(Y) \le \dim F$ , then $S \cap F = \lbrace 0\rbrace$ and dimension pinching forces:
 
 $$
-X = S \oplus F, \qquad \operatorname{rank}(Y) = \operatorname{ncols}(Y) = \dim F. \tag{5.4}
+X = S \oplus F, \qquad \mathrm{rank}(Y) = \mathrm{ncols}(Y) = \dim F. \qquad (5.4)
 $$
 
 Writing $Y^T = (Y _ p^T, Y _ f^T)$ along $P \oplus F$ , the square block $Y _ f$ is invertible, and every primary state $x _ p \in P$ admits the unique compensating free vector $x _ f = -(Y _ f^T)^{-1} Y _ p^T x _ p \in F$ such that $(x _ p, x _ f) \in S = \ker Y^T$ (without uniqueness, existence of a compensating $x _ f$ is equivalent to the quotient-kernel inclusion $\ker Y _ f \subseteq \ker Y _ p$ ).
@@ -734,20 +734,20 @@ Furthermore, we establish the two exact same-domain criteria governing observati
 
 #### Theorem 5.2 (Same-Domain Kernel-Leak Witnesses for Irredundant Observation Rows)
 
-On a restricted subspace $\operatorname{im} J$ ( $J$ a full-column-rank basis matrix for $S = \ker Y^T$ ), deleting the $i$ -th row of an observation matrix $H$ to form $H _ {-i}$ causes kernel leakage of a target linear readout $B$ **if and only if there exists a same-domain witness vector** $z$ such that:
+On a restricted subspace $\mathrm{im} J$ ( $J$ a full-column-rank basis matrix for $S = \ker Y^T$ ), deleting the $i$ -th row of an observation matrix $H$ to form $H _ {-i}$ causes kernel leakage of a target linear readout $B$ **if and only if there exists a same-domain witness vector** $z$ such that:
 
 $$
-H _ {-i} J z = 0 \qquad \text{and} \qquad B J z \neq 0. \tag{5.5}
+H _ {-i} J z = 0 \qquad \mathrm{and} \qquad B J z \neq 0. \qquad (5.5)
 $$
 
 (Deleting a linearly redundant row preserves $\ker(H _ {-i}J) \subseteq \ker(BJ)$ and does not cause kernel leakage; thus row-deletion necessity must always be certified by an explicit witness $z$ satisfying (5.5).)
 
 #### Theorem 5.3 (Rayleigh-Quotient Thresholds for Restricted Pivot Sign Reversal)
 
-Let $N = L D L^T$ induce a strictly positive definite quadratic form $Q _ S := J^T N J \succ 0$ on $S = \operatorname{im} J$ . Flipping the $j$ -th positive pivot $d _ j \gt 0$ of $D$ to $-d _ j$ produces $Q _ S' = Q _ S - 2 d _ j b b^T$ with $b := J^T L e _ j$ . Define the dimensionless Rayleigh threshold:
+Let $N = L D L^T$ induce a strictly positive definite quadratic form $Q _ S := J^T N J \succ 0$ on $S = \mathrm{im} J$ . Flipping the $j$ -th positive pivot $d _ j \gt 0$ of $D$ to $-d _ j$ produces $Q _ S' = Q _ S - 2 d _ j b b^T$ with $b := J^T L e _ j$ . Define the dimensionless Rayleigh threshold:
 
 $$
-\tau := 2 d _ j b^T Q _ S^{-1} b \ge 0. \tag{5.6}
+\tau := 2 d _ j b^T Q _ S^{-1} b \ge 0. \qquad (5.6)
 $$
 
 **Case 1: Below threshold**: If $\tau \lt 1$ , then $Q _ S'$ remains strictly positive definite on $S$ .
@@ -757,7 +757,7 @@ $$
 **Case 3: Sign reversal**: A strictly negative direction on $S$ appears if and only if $\tau \gt 1$ . In this case $z _ - := Q _ S^{-1} b$ satisfies:
 
 $$
-z _ -^T Q _ S' z _ - = \bigl(b^T Q _ S^{-1} b\bigr)(1 - \tau) \lt 0. \tag{5.7}
+z _ -^T Q _ S' z _ - = \bigl(b^T Q _ S^{-1} b\bigr)(1 - \tau) \lt 0. \qquad (5.7)
 $$
 
 ### 5.3 Structural Invariance under Supplementary Proof Materials and Certificate Unsealing: Why Publishing the SHA-256 Data File or Appending Outer Lemmas Cannot Resolve the Operator-Level Discrepancy
@@ -794,7 +794,7 @@ $$
 \begin{aligned}
 & b(t) - (1 - 12t^2) = t^4\bigl(30 - 28t^2 + 9t^4\bigr) \cr
 & = t^4\left[9\left(t^2 - \frac{14}{9}\right)^2 + \frac{74}{9}\right] \ge 0 \qquad (\forall t \in \mathbb{R}),
-\end{aligned} \tag{5.8}
+\end{aligned} \qquad (5.8)
 $$
 
 we have $b(t) \ge 1 - 12t^2 \gt 0$ and $b(t)^2 \ge (1-12t^2)^2 \ge 1 - 24t^2$ for all $|t| \le \lambda \le \frac{1}{4}$ . Evaluating the **pure-bulk Hessian integral**
@@ -809,7 +809,7 @@ $$
 \begin{aligned}
 & I _ {\mathrm{collar}}(\lambda) := \int _ {-1}^{1} \frac{3}{4}(1 - \tau^2) b(\lambda\tau)^2 d\tau \cr
 & \ge \int _ {-1}^{1} \frac{3}{4}(1 - \tau^2)(1 - 24\lambda^2\tau^2) d\tau = 1 - \frac{24}{5}\lambda^2.
-\end{aligned} \tag{5.9}
+\end{aligned} \qquad (5.9)
 $$
 
 In particular, at collar ratio $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ ( $\delta = 2^{-19} = \frac{1}{524288}$ ), exact rational polynomial integration and the closed-form lower bound (5.9) give:
@@ -818,7 +818,7 @@ $$
 \begin{aligned}
 & I _ {\mathrm{collar}}\left(\frac{1}{8}\right) = \frac{2787617180779875667}{3000241776758882304} \cr
 & \gt 1 - \frac{24}{5}\left(\frac{1}{8}\right)^2 = \frac{37}{40} = 0.925 \gt 0.
-\end{aligned} \tag{5.10}
+\end{aligned} \qquad (5.10)
 $$
 
 Consequently, even under the globally $C^2$ smoothed **pure-bulk Hessian readout**, the exact same solenoidal field $v _ \varepsilon \in \mathcal{D} _ S^\Gamma$ still violates inequality (B.20) with the strictly positive rational margin:
@@ -829,7 +829,7 @@ $$
 & \ge \frac{16}{25} I _ {\mathrm{collar}}\left(\frac{1}{8}\right)A - 16 M K \varepsilon \cr
 & = \frac{2147573301937507667}{1611064563204096000} \gt \frac{16}{25}\cdot\frac{37}{40}A - 16 M K \varepsilon \cr
 & = \frac{2865558827}{2162160000} \gt \frac{13}{10} \gt 0.
-\end{aligned} \tag{5.11}
+\end{aligned} \qquad (5.11)
 $$
 
 **(2b) Negative gradient coefficient from the curvature peak**: If one attempts to absorb the $O(\delta^{-1})$ collar curvature spike into the pointwise coefficient $I _ 1(y) = Z(y) - \Vert H _ {D _ \delta}(y)\Vert _ {\mathrm{op}} - \frac{3w}{50}$ of equation (B.16), the following bound results.
@@ -840,7 +840,7 @@ $$
 \begin{aligned}
 & I _ 1(1,0) = Z(1,0) - \Vert H _ {D _ \delta}(1,0)\Vert _ {\mathrm{op}} - \frac{3w}{50} \cr
 & \le \frac{1}{4} - \frac{3}{8\delta} = \frac{1}{4} - 196608 = -\frac{786431}{4} \lt 0.
-\end{aligned} \tag{5.12}
+\end{aligned} \qquad (5.12)
 $$
 
 **(2c) Loss of control under broad collars or vanishing slope**: If one takes a wide macroscopic collar $\delta = O(1)$ or sends the equatorial normal slope $c = \partial _ \eta W(\sigma, 0^+) \to 0$ to avoid the $-\frac{3}{8\delta}$ bulk penalty, the following loss occurs.
@@ -871,7 +871,7 @@ $$
 \begin{aligned}
 & q _ {\mathrm{static}}(u) := \Bigl(\bigl\lbrace \hat{u}(k)\hat{u}(k)^{\ast}\bigr\rbrace _ {k \in \mathbb{Z}^3}, \cr
 & \quad \Vert u\Vert _ {L^2}^2, \Vert \omega\Vert _ {L^2}^2, \Vert \nabla\omega\Vert _ {L^2}^2, \langle u, \omega\rangle\Bigr).
-\end{aligned} \tag{6.1}
+\end{aligned} \qquad (6.1)
 $$
 
 Because every component of $q _ {\mathrm{static}}(u)$ is homogeneous of degree two, it is completely blind to global velocity sign reversal: $q _ {\mathrm{static}}(+u) = q _ {\mathrm{static}}(-u)$ . Yet the Navier–Stokes vorticity equation contains the cubic vortex-stretching pairing $2\langle \omega, (\omega \cdot \nabla)u\rangle$ .
@@ -881,7 +881,7 @@ Because every component of $q _ {\mathrm{static}}(u)$ is homogeneous of degree t
 On the normalized three-dimensional torus $\mathbb{T}^3 = (\mathbb{R}/2\pi\mathbb{Z})^3$ , consider the smooth divergence-free zero-mean velocity field supported on the eight Fourier modes $\pm e _ 1, \pm e _ 2, \pm e _ 3, \pm(e _ 1+e _ 2)$ :
 
 $$
-U(x,y,z) := \bigl(\sin y + \sin z, \sin x, \sin x - \sin(x+y)\bigr). \tag{6.2}
+U(x,y,z) := \bigl(\sin y + \sin z, \sin x, \sin x - \sin(x+y)\bigr). \qquad (6.2)
 $$
 
 For any real amplitude $a \gt 0$ , let $u^\pm(t,x)$ be the unique local smooth Navier–Stokes solutions evolving from the twin initial data $u _ 0^\pm := \pm a U$ . Then:
@@ -894,28 +894,28 @@ $$
 \begin{aligned}
 & Y _ \pm'(0) = 2\langle \omega _ 0^\pm, (\omega _ 0^\pm \cdot \nabla)u _ 0^\pm\rangle \cr
 & - 2\nu\langle |\nabla\omega _ 0^\pm|^2\rangle = \pm\frac{1}{2}a^3 - 8\nu a^2.
-\end{aligned} \tag{6.3}
+\end{aligned} \qquad (6.3)
 $$
 
 At viscosity $\nu = 1$ and amplitude $a = 17$ , the twin solutions diverge with opposite signs (instantaneous vortex-stretching growth versus instantaneous viscous decay):
 
 $$
-Y _ +'(0) = +\frac{289}{2}, \qquad Y _ -'(0) = -\frac{9537}{2}, \qquad Y _ +'(0) - Y _ -'(0) = 17^3 = 4913 \neq 0. \tag{6.4}
+Y _ +'(0) = +\frac{289}{2}, \qquad Y _ -'(0) = -\frac{9537}{2}, \qquad Y _ +'(0) - Y _ -'(0) = 17^3 = 4913 \neq 0. \qquad (6.4)
 $$
 
-In Alpöge and Buckmaster's paper (page 55, equation (B.18)), the linearized perturbation functional around a fixed reference profile $W^r$ ( $\omega _ r = \operatorname{curl} W^r$ , $S _ r = \operatorname{sym}(\nabla W^r)$ ),
+In Alpöge and Buckmaster's paper (page 55, equation (B.18)), the linearized perturbation functional around a fixed reference profile $W^r$ ( $\omega _ r = \mathrm{curl} W^r$ , $S _ r = \mathrm{sym}(\nabla W^r)$ ),
 
 $$
 \begin{aligned}
 & J _ {W^r}(v) := -\omega _ v \cdot S _ r \omega _ v + \bigl((v \cdot \nabla)\omega _ r\bigr) \cdot \omega _ v \cr
 & + \frac{1}{2}\sum _ {k=1}^3 \nabla(\omega _ r) _ k \cdot (v \times \partial _ k v),
-\end{aligned} \tag{6.5}
+\end{aligned} \qquad (6.5)
 $$
 
 couples distinct harmonics of the perturbation $v$ through $\omega _ r$ , but because $W^r$ is held fixed, every term in $J _ {W^r}(v)$ is still quadratic in $v$ , hence strictly even under global perturbation sign reversal:
 
 $$
-J _ {W^r}(-v) = J _ {W^r}(v). \tag{6.6}
+J _ {W^r}(-v) = J _ {W^r}(v). \qquad (6.6)
 $$
 
 ### 6.2 The Comoving Covariant Inverse-Metric $g = C^{-1}$ Pure-Square Dissipation Law and Prefix Reset Conservation
@@ -927,7 +927,7 @@ When we replace the static Euclidean identity metric $I$ by a comoving symmetric
 Let $C(t,x) \in \mathbb{R}^{m\times m}$ be a smooth symmetric positive-definite matrix field on a common smooth interval, $g := C^{-1}$ , $z := C^{-1}\omega$ , and define the comoving covariant enstrophy density $\mathcal{E}(t,x) := \omega^T C^{-1}\omega = z^T C z$ . For general evolution equations
 
 $$
-P _ \nu \omega = L\omega + r _ \omega, \qquad (D _ t - \kappa \Delta)C = G C + C G^T + R _ C, \tag{6.7}
+P _ \nu \omega = L\omega + r _ \omega, \qquad (D _ t - \kappa \Delta)C = G C + C G^T + R _ C, \qquad (6.7)
 $$
 
 preserving exact non-commutative matrix order yields the **universal full-residual identity**:
@@ -937,7 +937,7 @@ $$
 & P _ \nu\bigl(\omega^T C^{-1} \omega\bigr) \cr
 & = -2\nu \sum _ {i=1}^d (\partial _ i z)^T C (\partial _ i z) + 2 z^T r _ \omega - z^T R _ C z \cr
 & + z^T\bigl[(L - G)C + C(L - G)^T\bigr]z + (\nu - \kappa)z^T (\Delta C) z.
-\end{aligned} \tag{6.8}
+\end{aligned} \qquad (6.8)
 $$
 
 In particular, under matched generator $G = L$ , matched diffusivity $\kappa = \nu$ , and zero forcing $r _ \omega = 0, R _ C = 0$ (or whenever $L - G = K C^{-1}$ with skew-symmetric $K^T = -K$ ), all first-order stretching terms cancel identically, yielding the **pure-square dissipation law**:
@@ -946,12 +946,12 @@ $$
 \begin{aligned}
 & P _ \nu\bigl(\omega^T C^{-1} \omega\bigr) \cr
 & = -2\nu \sum _ {i=1}^d \bigl(\partial _ i(C^{-1}\omega)\bigr)^T C \bigl(\partial _ i(C^{-1}\omega)\bigr) \le 0.
-\end{aligned} \tag{6.9}
+\end{aligned} \qquad (6.9)
 $$
 
 On a periodic divergence-free domain, integrating (6.9) shows that total covariant enstrophy $h(t) := \frac{1}{2}\langle \omega^T C^{-1}\omega\rangle$ is monotonically non-increasing: $h'(t) = -\nu\sum _ i \langle (\partial _ i z)^T C (\partial _ i z)\rangle \le 0$ . Meanwhile, every transition between this comoving true body and low-order static readouts is governed by three exact conservation laws:
 
-**(1) Spectral condition-number bridge to Euclidean readouts**: By the parabolic maximum/minimum principle on $P _ \nu C = L C + C L^T$ with $C(0)=I$ and $s(t) = \sup _ x \Vert \operatorname{sym} L(t,x)\Vert _ {\mathrm{op}}$ , $C(t,x)$ obeys the two-sided spectral barrier $\exp(-2\int _ 0^t s) I \preceq C(t,x) \preceq \exp(2\int _ 0^t s) I$ , and recovering Euclidean enstrophy requires paying the spectral factor $|\omega|^2 = |Cz|^2 \le \lambda _ {\max}(C) z^T C z$ .
+**(1) Spectral condition-number bridge to Euclidean readouts**: By the parabolic maximum/minimum principle on $P _ \nu C = L C + C L^T$ with $C(0)=I$ and $s(t) = \sup _ x \Vert \mathrm{sym} L(t,x)\Vert _ {\mathrm{op}}$ , $C(t,x)$ obeys the two-sided spectral barrier $\exp(-2\int _ 0^t s) I \preceq C(t,x) \preceq \exp(2\int _ 0^t s) I$ , and recovering Euclidean enstrophy requires paying the spectral factor $|\omega|^2 = |Cz|^2 \le \lambda _ {\max}(C) z^T C z$ .
 
 **(2) Prefix conservation of the metric reset cost**: Resetting $C \leftarrow I$ at fixed vorticity $\omega$ induces the exact jump tax $s _ {\mathrm{reset}} = \frac{1}{2}\langle \omega, (I - C^{-1})\omega\rangle$ , and across every prefix of any finite word of viscous dissipation steps $(h, d, S) \mapsto (h-\delta, d+\delta, S)$ and reset steps $(h, d, S) \mapsto (h+s _ {\mathrm{reset}}, d, S+s _ {\mathrm{reset}})$ , the invariant $h + d - S = h _ 0$ holds identically.
 
@@ -961,7 +961,7 @@ $$
 \begin{aligned}
 & \mathcal{B} _ M = 64 z _ M^2 z _ {M+1} + \frac{17}{6}z _ {M+1}^3 + \frac{4}{3}z _ {M+2}^3 \cr
 & + \frac{5\nu}{64}4^{-(M+1)}z _ {M+1}^2,
-\end{aligned} \tag{6.10}
+\end{aligned} \qquad (6.10)
 $$
 
 while the internal viscous-cubic balance via the damped Young sum-of-squares identity $\frac{64 A^3}{243} - A z^2 + \frac{3}{4}z^3 = (z - \frac{8A}{9})^2(\frac{3}{4}z + \frac{A}{3}) \ge 0$ at $A = \frac{37}{32}\nu 4^{-n}$ yields the exact rational remainder coefficient $\frac{64}{243}(\frac{37}{32})^3 = \frac{50653}{122472}$ .

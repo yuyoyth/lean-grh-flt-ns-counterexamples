@@ -1341,7 +1341,7 @@ $$
 在修复后的有型算术证明架构中，每一步合法降水平动作均返回携带显式表示同构的五元组
 
 $$
-\bigl(M,\ g,\ \lambda,\ \phi : \rho \xrightarrow{\sim} \bar{\rho} _ {g,\lambda},\ \mathcal{E} _ {\mathrm{loc}}\bigr).
+\bigl(M, g, \lambda, \phi : \rho \xrightarrow{\sim} \bar{\rho} _ {g,\lambda}, \mathcal{E} _ {\mathrm{loc}}\bigr).
 $$
 
 当下一步降水平进一步返回同构 $\psi : \bar{\rho} _ {g,\lambda} \xrightarrow{\sim} \bar{\rho} _ {h,\mu}$ 时，固定同一源表示 $\rho$ 上的多步组合严格由同构映射的复合 $\psi \circ \phi : \rho \xrightarrow{\sim} \bar{\rho} _ {h,\mu}$ 给出（例如在二维线性同构的剪切群实现 $S _ s(x, y) = (x + s y, y)$ 中，两步复合满足 $S _ t(S _ s(x, y)) = (x + (s+t)y, y) = S _ {s+t}(x, y)$ 且逆元满足 $S _ {-s}(S _ s(x, y)) = (x, y)$ ）；两边伽罗瓦作用的交织等式依结合律逐元素成立，故迹与行列式在复合下严格守恒。对该同构元组施加“遗忘表示同构、仅取好素数迹同余”的投影后，交换图恰好落回源码的 $\mathrm{IsResiduallyModularOfLevel}$ 谓词（而反方向从迹同余提升回表示同构则必须重新满足定理三十四的全部五步有型桥条件，绝不能仅凭谓词名称逆推）。

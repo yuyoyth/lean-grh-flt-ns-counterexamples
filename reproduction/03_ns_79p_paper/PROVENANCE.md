@@ -52,7 +52,7 @@ On pages 1, 4, 38–39, and 70, the manuscript refers to a finite-dimensional ce
 论文第 1、4、38–39 及 70 页提及的最上游有限维存在性证人 $d \in \mathcal{D} _ B$ 仅给出如下 64 位十六进制 SHA-256 摘要：
 
 $$
-\text{SHA-256}(d) = \text{3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5}.
+\mathrm{SHA-256}(d) = \mathrm{3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5}.
 $$
 
 Neither the data file corresponding to this SHA-256 digest nor the external 128-bit interval-arithmetic verification program (Section 1.5, pages 4 and 10, using Arb / FLINT outside the formalization kernel) nor the LaTeX source of the paper is included in the pinned public repository `ad53419de079eb8f95f60313473374624a348546`.

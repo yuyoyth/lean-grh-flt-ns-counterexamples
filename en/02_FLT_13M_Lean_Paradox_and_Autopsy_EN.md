@@ -233,7 +233,7 @@ When we inspect lines 113 to 170 of the actual proof, however, its true logical 
 1. **Upper-Divisibility Residual After Eliminating Odd Prime Factors**: In the core strong-induction lemma (lines 113 to 149), the proof eliminates odd prime divisors ( $q \neq 2, p$ and $q = p$ ) one by one from the level $N$ . Once no odd prime divisors remain, because $N$ is a positive squarefree integer all of whose prime divisors equal $2$ , the auxiliary arithmetic lemma on lines 98 to 112 can deduce only the upper divisibility relation
 
 $$
-M \mid 2 \qquad (\text{that is, } M = 1 \text{ or } M = 2).
+M \mid 2 \qquad (M = 1 \lor M = 2).
 $$
 
 Why does it deduce only $M \mid 2$ rather than $M = 2$ ? Because throughout the level-lowering strong induction, the inductive hypothesis transmits only the upper-bound support condition "every prime divisor of $M$ divides $abc$ ", while omitting the lower-bound bad-reduction invariant $2 \mid M$ (it never proves in the inductive post-state that the level cannot degenerate further at $q = 2$ to $M = 1$ )!
@@ -426,7 +426,7 @@ This bare definition immediately triggers an isomorphism-breaking theorem:
 Let $W \in \mathrm{WeierstrassCurve}(\mathbb{Z})$ be any global minimal semistable elliptic curve model satisfying $\mathrm{IsSemistableModel}(W)$ . For any integer $u \ge 2$ , let $W _ u$ be the integral Weierstrass model obtained via the rational isomorphism $(x, y) \mapsto (u^2 x, u^3 y)$ . Then for every prime divisor $\ell \mid u$ , one has
 
 $$
-\ell^{12} \mid \Delta(W _ u) \qquad \text{and} \qquad \ell^4 \mid c _ 4(W _ u),
+\ell^{12} \mid \Delta(W _ u) \qquad \mathrm{and} \qquad \ell^4 \mid c _ 4(W _ u),
 $$
 
 so that $\ell \mid \Delta(W _ u)$ and $\ell \mid c _ 4(W _ u)$ hold simultaneously at $\ell$ . Consequently, the isomorphic integral model $W _ u$ necessarily violates $\mathrm{IsSemistableModel}(W _ u)$ , and every prime $\ell \mid u$ that was a prime of good reduction for $W$ ( $\ell \nmid \Delta(W)$ ) is misclassified under $W _ u$ as a bad prime!
@@ -1333,7 +1333,7 @@ Within the level-lowering contract of Theorem 34, we test single-premise necessi
 In the repaired typed arithmetic proof architecture, each valid level-lowering step returns a five-tuple carrying an explicit representation isomorphism:
 
 $$
-\big(M,  g,  \lambda,  \phi : \rho \xrightarrow{\sim} \bar{\rho} _ {g,\lambda},  \text{remaining local evidence}\big).
+\big(M,  g,  \lambda,  \phi : \rho \xrightarrow{\sim} \bar{\rho} _ {g,\lambda},  \mathcal{E} _ {\mathrm{loc}}\big).
 $$
 
 When a subsequent descent step produces $\psi : \bar{\rho} _ {g,\lambda} \xrightarrow{\sim} \bar{\rho} _ {h,\mu}$ , multi-step composition anchored on the fixed source representation $\rho$ is given by the composite isomorphism $\psi \circ \phi : \rho \xrightarrow{\sim} \bar{\rho} _ {h,\mu}$ (for example, in the two-dimensional linear shear group realization $S _ s(x, y) = (x + s y, y)$ , two-step composition satisfies $S _ t(S _ s(x, y)) = (x + (s+t)y, y) = S _ {s+t}(x, y)$ with two-sided inverse $S _ {-s}(S _ s(x, y)) = (x, y)$ ); the Galois intertwining equations compose elementwise by associativity, conserving traces and determinants across every step. Applying the forgetful projection that drops the explicit isomorphism $\phi$ and retains only good-prime trace congruences makes the diagram commute down to the repository's $\mathrm{IsResiduallyModularOfLevel}$ predicate (whereas lifting backward from trace congruence to representation isomorphism requires re-establishing all five steps of Theorem 34).

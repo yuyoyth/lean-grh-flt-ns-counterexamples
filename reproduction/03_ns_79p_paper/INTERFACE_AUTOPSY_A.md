@@ -17,11 +17,11 @@ Furthermore, when cross-plane $C^2$ regularity is restored via an even quartic c
 
 Let $\rho = |y|$ , $r = \sqrt{y _ 1^2 + y _ 2^2}$ , $z = y _ 3$ , $\sigma = \frac{\rho}{1+\rho}$ , and $\eta = \frac{z}{\rho}$ .
 
-Fix the admissible baseline parameters of Appendix B (pages 50–55): time period $S = 1$ , rotation fold $\kappa = 3$ , symmetry group $\Gamma = \langle (R _ {\pi/3}, 1/2), (R _ {\ast}, 0) \rangle$ with reflection $R _ {\ast} = \operatorname{diag}(1, -1, -1)$ , reference profile $W^r = 0$ , index sets $P _ \lambda = P _ \mu = \varnothing$ , first-order weight $Z = 0$ , dimensions $n = N = 0$ , $K = \mathbb{R}^0$ , empty auxiliary lists, $c _ \mu = \frac{1}{2}$ , and $n _ \lambda = n _ {\nabla\lambda} = n _ \mu = 0$ .
+Fix the admissible baseline parameters of Appendix B (pages 50–55): time period $S = 1$ , rotation fold $\kappa = 3$ , symmetry group $\Gamma = \langle (R _ {\pi/3}, 1/2), (R _ {\ast}, 0) \rangle$ with reflection $R _ {\ast} = \mathrm{diag}(1, -1, -1)$ , reference profile $W^r = 0$ , index sets $P _ \lambda = P _ \mu = \varnothing$ , first-order weight $Z = 0$ , dimensions $n = N = 0$ , $K = \mathbb{R}^0$ , empty auxiliary lists, $c _ \mu = \frac{1}{2}$ , and $n _ \lambda = n _ {\nabla\lambda} = n _ \mu = 0$ .
 
 For a time-independent compactly supported divergence-free vector field $v \in \mathcal{D} _ S^\Gamma$ , the operators in Proposition B.1 reduce to:
 
-记 $\rho = |y|$ ， $r = \sqrt{y _ 1^2 + y _ 2^2}$ ， $z = y _ 3$ ， $\sigma = \frac{\rho}{1+\rho}$ ， $\eta = \frac{z}{\rho}$ 。取论文附录 B（第 50–55 页）的合法基准参数：时间周期 $S = 1$ ，旋转重数 $\kappa = 3$ ，对称群 $\Gamma = \langle (R _ {\pi/3}, 1/2), (R _ {\ast}, 0) \rangle$ （其中反射算子 $R _ {\ast} = \operatorname{diag}(1, -1, -1)$ ），参考剖面 $W^r = 0$ ，索引集 $P _ \lambda = P _ \mu = \varnothing$ ，一阶权 $Z = 0$ ，自由维数 $n = N = 0$ ， $K = \mathbb{R}^0$ ，辅助场列表为空， $c _ \mu = \frac{1}{2}$ ， $n _ \lambda = n _ {\nabla\lambda} = n _ \mu = 0$ 。
+记 $\rho = |y|$ ， $r = \sqrt{y _ 1^2 + y _ 2^2}$ ， $z = y _ 3$ ， $\sigma = \frac{\rho}{1+\rho}$ ， $\eta = \frac{z}{\rho}$ 。取论文附录 B（第 50–55 页）的合法基准参数：时间周期 $S = 1$ ，旋转重数 $\kappa = 3$ ，对称群 $\Gamma = \langle (R _ {\pi/3}, 1/2), (R _ {\ast}, 0) \rangle$ （其中反射算子 $R _ {\ast} = \mathrm{diag}(1, -1, -1)$ ），参考剖面 $W^r = 0$ ，索引集 $P _ \lambda = P _ \mu = \varnothing$ ，一阶权 $Z = 0$ ，自由维数 $n = N = 0$ ， $K = \mathbb{R}^0$ ，辅助场列表为空， $c _ \mu = \frac{1}{2}$ ， $n _ \lambda = n _ {\nabla\lambda} = n _ \mu = 0$ 。
 
 对时间不变的紧支集无散场 $v \in \mathcal{D} _ S^\Gamma$ ，命题 B.1 中的算子简化为：
 
@@ -40,9 +40,9 @@ Using the solenoidal Parseval identity $\langle T _ 1 v, -\Delta v\rangle = \Ver
 
 $$
 \begin{aligned}
-& E _ D(v) = \int _ {\mathbb{R}^3} D(y)\bigl(|\nabla^2 v|^2 - |\nabla\operatorname{curl} v|^2\bigr) dy \cr
+& E _ D(v) = \int _ {\mathbb{R}^3} D(y)\bigl(|\nabla^2 v|^2 - |\nabla\mathrm{curl} v|^2\bigr) dy \cr
 & - \int _ {\mathbb{R}^3} \Vert H _ D(y)\Vert _ {\mathrm{op}} |\nabla v|^2 dy.
-\end{aligned} \tag{A.1}
+\end{aligned} \qquad (\mathrm{A.1})
 $$
 
 ---
@@ -57,7 +57,7 @@ $$
 \begin{aligned}
 & D _ \pm(y) := \frac{1}{2} \pm \frac{1}{4}\chi(\sigma) |\eta| \cr
 & = \frac{1}{2} \pm \frac{1}{4}\chi\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho}, \qquad D _ \pm(0) = \frac{1}{2}.
-\end{aligned} \tag{A.2}
+\end{aligned} \qquad (\mathrm{A.2})
 $$
 
 On the region $\rho \ge \frac{1}{2}$ ( $\sigma \ge \frac{1}{3}$ ), $\chi(\sigma) = 1$ , and the normal derivative jump of $D _ \pm$ across the equatorial plane $\Sigma = \lbrace z = 0\rbrace$ is $[\partial _ z D _ \pm] (r) = \pm \frac{1}{2r}$ . Integrating by parts twice on $\mathbb{R} _ +^3$ and $\mathbb{R} _ -^3$ for each partial derivative $u = \partial _ k v$ ( $k = 1, 2, 3$ ) yields the exact distributional identity:
@@ -69,7 +69,7 @@ $$
 & E _ D(v) = \sum _ {k=1}^3 \int _ {\mathbb{R}^3} (\partial _ k v)^T H _ D (\partial _ k v) dy \cr
 & - \int _ {\mathbb{R}^3} \Vert H _ D\Vert _ {\mathrm{op}} |\nabla v|^2 dy \cr
 & + \int _ {z=0} [\partial _ z D] |\nabla v _ 3|^2 dS _ \Sigma.
-\end{aligned} \tag{A.3}
+\end{aligned} \qquad (\mathrm{A.3})
 $$
 
 ---
@@ -85,7 +85,7 @@ $$
 & \psi _ \varepsilon(r, z) := \varepsilon z a\left(\frac{r-1}{\varepsilon}\right) a\left(\frac{z}{\varepsilon}\right), \cr
 & v _ r = -\frac{1}{r}\partial _ z \psi _ \varepsilon, \qquad v _ \varphi = 0, \cr
 & v _ 3 = \frac{1}{r}\partial _ r \psi _ \varepsilon.
-\end{aligned} \tag{A.4}
+\end{aligned} \qquad (\mathrm{A.4})
 $$
 
 In local coordinates $s = \frac{r-1}{\varepsilon} \in [-1, 1]$ and $t = \frac{z}{\varepsilon} \in [-1, 1]$ , we have $v _ r = -\frac{\varepsilon}{r}a(s)(a(t) + t a'(t))$ and $v _ 3 = \frac{\varepsilon}{r}t a'(s)a(t)$ . Because $v _ 3$ is odd in $z$ , $v _ \varepsilon$ is invariant under $R _ {\ast}$ and belongs to $\mathcal{D} _ S^\Gamma$ ; yet on the equatorial plane $z = 0$ ( $t = 0$ ), its normal derivative is $\partial _ z v _ 3(r, 0) = \frac{a'(s)}{r} \neq 0$ . Consequently, the equatorial surface integral satisfies:
@@ -97,7 +97,7 @@ $$
 & T _ \varepsilon = \int _ {z=0} \frac{|\nabla v _ 3|^2}{2r} dS _ \Sigma \cr
 & = \pi\varepsilon \int _ {-1}^1 \frac{a'(s)^2}{1 + \varepsilon s} ds \ge \frac{16\pi}{25}\varepsilon A, \cr
 & A = \int _ {-1}^1 a'(s)^2 ds = \frac{131072}{45045}.
-\end{aligned} \tag{A.5}
+\end{aligned} \qquad (\mathrm{A.5})
 $$
 
 On the toroidal support $\lbrace |r-1| \le \varepsilon, |z| \le \varepsilon\rbrace$ (where $\rho \ge r \ge \frac{3}{4}$ and volume is $8\pi\varepsilon^2$ ), the open-set bulk Hessian norm satisfies $\Vert H _ {D _ +}\Vert _ {\mathrm{op}} \le \frac{3}{2\rho^2} \le \frac{8}{3} \lt 3 =: M$ , and the five cylindrical gradient components satisfy
@@ -126,7 +126,7 @@ $$
 \begin{aligned}
 & E _ {D _ +}(v _ \varepsilon) \ge \pi\varepsilon\left(\frac{16}{25}A - 16 M K \varepsilon\right) \cr
 & = \frac{\pi}{65536}\cdot\frac{633509743}{432432000} \gt 0,
-\end{aligned} \tag{A.6}
+\end{aligned} \qquad (\mathrm{A.6})
 $$
 
 while $E _ {D _ -}(v _ \varepsilon) \le -\frac{\pi}{65536}\cdot\frac{633509743}{432432000} \lt 0$ , giving a dual-weight separation

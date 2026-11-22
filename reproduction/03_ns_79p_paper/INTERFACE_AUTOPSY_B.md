@@ -14,14 +14,14 @@ Let $C _ 6(x,y) + i S _ 6(x,y) := (x + i y)^6$ and define the anisotropic Gaussi
 令复多项式实部与虚部为 $C _ 6(x,y) + i S _ 6(x,y) := (x + i y)^6$ ，各向异性高斯包络为 $g(x,y,z) := \exp\bigl(-\frac{x^2 + y^2}{2} - 6z^2\bigr)$ ，定义三维施瓦茨向量场：
 
 $$
-v(x,y,z) := g(x,y,z) \bigl(-2 z y C _ 6(x,y), 2 z x C _ 6(x,y), -S _ 6(x,y)\bigr). \tag{B.1}
+v(x,y,z) := g(x,y,z) \bigl(-2 z y C _ 6(x,y), 2 z x C _ 6(x,y), -S _ 6(x,y)\bigr). \qquad (\mathrm{B.1})
 $$
 
-By the Cauchy–Riemann equations and Euler's homogeneous function identity for $(x+iy)^6$ , we have $x\partial _ y C _ 6 - y\partial _ x C _ 6 = -6 S _ 6$ . Consequently, the horizontal divergence $\partial _ x v _ 1 + \partial _ y v _ 2 = -12 z g S _ 6$ cancels the vertical divergence $\partial _ z v _ 3 = -\partial _ z(g S _ 6) = +12 z g S _ 6$ identically, so $\operatorname{div} v \equiv 0$ on $\mathbb{R}^3$ .
+By the Cauchy–Riemann equations and Euler's homogeneous function identity for $(x+iy)^6$ , we have $x\partial _ y C _ 6 - y\partial _ x C _ 6 = -6 S _ 6$ . Consequently, the horizontal divergence $\partial _ x v _ 1 + \partial _ y v _ 2 = -12 z g S _ 6$ cancels the vertical divergence $\partial _ z v _ 3 = -\partial _ z(g S _ 6) = +12 z g S _ 6$ identically, so $\mathrm{div} v \equiv 0$ on $\mathbb{R}^3$ .
 
 In cylindrical coordinates $(r, \varphi, z)$ , $v _ r = 0$ , $v _ \varphi = 2 z r^7 g \cos(6\varphi)$ , and $v _ 3 = -r^6 g \sin(6\varphi)$ . Under $\kappa = 3$ , $v$ is invariant under rotation by $\pi/3$ and under reflection $R _ {\ast} : (\varphi, z) \mapsto (-\varphi, -z)$ , and corresponds to the harmonic modes $\iota = \pm(2,1)$ in equation (B.2) on page 50, so $v \in \mathcal{S}(\mathbb{R}^3) \cap \mathcal{D} _ S^\Gamma$ .
 
-由全纯多项式 $(x+iy)^6$ 的柯西－黎曼方程与欧拉齐次定理，有 $x\partial _ y C _ 6 - y\partial _ x C _ 6 = -6 S _ 6$ ，从而水平散度 $\partial _ x v _ 1 + \partial _ y v _ 2 = -12 z g S _ 6$ 与竖直散度 $\partial _ z v _ 3 = -\partial _ z(g S _ 6) = +12 z g S _ 6$ 精确相消，即 $\operatorname{div} v \equiv 0$ 。在柱坐标 $(r, \varphi, z)$ 下， $v _ r = 0$ ， $v _ \varphi = 2 z r^7 g \cos(6\varphi)$ ， $v _ 3 = -r^6 g \sin(6\varphi)$ 。
+由全纯多项式 $(x+iy)^6$ 的柯西－黎曼方程与欧拉齐次定理，有 $x\partial _ y C _ 6 - y\partial _ x C _ 6 = -6 S _ 6$ ，从而水平散度 $\partial _ x v _ 1 + \partial _ y v _ 2 = -12 z g S _ 6$ 与竖直散度 $\partial _ z v _ 3 = -\partial _ z(g S _ 6) = +12 z g S _ 6$ 精确相消，即 $\mathrm{div} v \equiv 0$ 。在柱坐标 $(r, \varphi, z)$ 下， $v _ r = 0$ ， $v _ \varphi = 2 z r^7 g \cos(6\varphi)$ ， $v _ 3 = -r^6 g \sin(6\varphi)$ 。
 
 在 $\kappa = 3$ 下，该场对 $\pi/3$ 旋转及反射 $R _ {\ast} : (\varphi, z) \mapsto (-\varphi, -z)$ 严格不变，对应于论文第 50 页公式 (B.2) 的谐波模态 $\iota = \pm(2,1)$ ，故 $v \in \mathcal{S}(\mathbb{R}^3) \cap \mathcal{D} _ S^\Gamma$ 。
 
@@ -34,7 +34,7 @@ Retaining the baseline parameters $S = 1$ , $\kappa = 3$ , $W^r = 0$ , $D = 0$ ,
 保持基准参数 $S = 1$ 、 $\kappa = 3$ 、 $W^r = 0$ 、 $D = 0$ 、 $P _ \lambda = P _ \mu = \varnothing$ 、 $n = N = 0$ ，定义分侧 $C^2$ 样条权函数：
 
 $$
-Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c \gt 0), \tag{B.2}
+Z(y) := c P(\sigma) |\eta| = c P\left(\frac{\rho}{1+\rho}\right)\frac{|z|}{\rho} \qquad (c \gt 0), \qquad (\mathrm{B.2})
 $$
 
 where $P(\sigma) = 0$ on $[0, \frac{1}{20}]$ , $P(\sigma) = h(20\sigma - 1)$ on $[\frac{1}{20}, \frac{1}{10}]$ , and $P(\sigma) = 1$ on $[\frac{1}{10}, 1)$ . Its distributional Hessian on $\mathbb{R}^3$ is $D^2 Z = H _ Z dy + [\partial _ z Z] _ \Sigma(e _ 3 \otimes e _ 3) dS _ \Sigma$ with normal derivative jump $[\partial _ z Z] _ \Sigma(r) = \frac{2c P(r/(1+r))}{r}$ . Hence the defect $\Delta := \mathrm{RHS} _ {\mathrm{B.20}}(v) - \mathrm{LHS} _ {\mathrm{B.20}}(v) = E _ Z(v)$ expands as:
@@ -46,7 +46,7 @@ $$
 & \Delta = \int _ {\mathbb{R}^3} v(y)^T H _ Z(y) v(y) dy \cr
 & - \int _ {\mathbb{R}^3} \Vert H _ Z(y)\Vert _ {\mathrm{op}} |v(y)|^2 dy \cr
 & + \int _ {z=0} \frac{2c P\left(\frac{r}{1+r}\right)}{r} v _ 3(r, \varphi, 0)^2 dS _ \Sigma.
-\end{aligned} \tag{B.3}
+\end{aligned} \qquad (\mathrm{B.3})
 $$
 
 ---
@@ -58,7 +58,7 @@ $$
 **赤道界面积分**：在 $z = 0$ 上， $v _ 3(r, \varphi, 0) = -r^6 e^{-r^2/2}\sin(6\varphi)$ 严格非零。未截止的高斯界面积分为：
 
 $$
-A _ 0 = 2\pi c \int _ 0^\infty r^{12} e^{-r^2} dr = \frac{10395}{64}\pi^{3/2}c, \tag{B.4}
+A _ 0 = 2\pi c \int _ 0^\infty r^{12} e^{-r^2} dr = \frac{10395}{64}\pi^{3/2}c, \qquad (\mathrm{B.4})
 $$
 
 and the core cutoff loss on $r \le \frac{1}{9}$ ( $\sigma \le \frac{1}{10}$ ) is at most $2\pi c \int _ 0^{1/9} r^{12} dr = \frac{2\pi c}{13\cdot 9^{13}}$ .
@@ -77,7 +77,7 @@ $$
 \begin{aligned}
 & \frac{\Delta}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} \cr
 & \gt \frac{26311}{64} \gt 400 \gt 0.
-\end{aligned} \tag{B.5}
+\end{aligned} \qquad (\mathrm{B.5})
 $$
 
 **(3) Exact Gaussian squared norms**: Symbolic polynomial expansion and exact Gaussian moment integration (recorded in `EXACT_MOMENTS.json`) yield:
@@ -90,5 +90,5 @@ $$
 & \Vert \Delta v\Vert _ {L^2}^2 = 431280 \frac{\pi^{3/2}}{2\sqrt{3}}, \cr
 & \mathrm{LHS} _ {\mathrm{B.20}} = \frac{47}{50}\Vert \Delta v\Vert _ {L^2}^2 + \frac{127}{625}\Vert \nabla v\Vert _ {L^2}^2 \cr
 & = \frac{51053352}{125} \frac{\pi^{3/2}}{2\sqrt{3}}.
-\end{aligned} \tag{B.6}
+\end{aligned} \qquad (\mathrm{B.6})
 $$

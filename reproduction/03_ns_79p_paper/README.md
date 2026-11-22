@@ -63,7 +63,7 @@ Verifies Counterexample Family B (Schwartz divergence-free mode- $\pm(2,1)$ Gaus
 **Polynomial identity**: Exact polynomial identity
 
 $$
-x\partial _ y C _ 6 - y\partial _ x C _ 6 = -6 S _ 6 \implies \operatorname{div} v = -12zgS _ 6 + 12zgS _ 6 \equiv 0;
+x\partial _ y C _ 6 - y\partial _ x C _ 6 = -6 S _ 6 \implies \mathrm{div} v = -12zgS _ 6 + 12zgS _ 6 \equiv 0;
 $$
 
 **Gaussian surface integral**: Exact Gaussian surface integral $A _ 0 = \frac{10395}{64}\pi^{3/2}c$ , exterior bulk loss bound $80\pi^{3/2}c = \frac{5120}{64}\pi^{3/2}c$ , and net violation lower bound:

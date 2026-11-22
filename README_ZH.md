@@ -13,9 +13,11 @@
 
 | 编号 | 核查对象 | 上游规模与固定版本 | 中文版完整专著 (`zh/`) | 英文版完整专著 (`en/`) | 可复现验证套件 (`reproduction/`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **广义黎曼猜想** (GRH) Lean 4 形式化 | 原版 `17,374,215` 行 (`40e56bab`) / 社区版 `16,571,342` 行 (`f1f6d654`) | [01_GRH 中文专著](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [01_GRH English](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
-| **02** | **费马大定理** (FLT) Lean 4 形式化 | `13,004,119` 行 (`anthropics/fermats-last-theorem`) | [02_FLT 中文专著](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [02_FLT English](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
-| **03** | **纳维-斯托克斯 (NS) 有限时爆破** 79 页论文 | `79` 页 PDF (`ad53419d`, `tristanbuckmaster/navier-stokes`) | [03_NS 中文专著](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [03_NS English](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [03_ns_79p_paper](reproduction/03_ns_79p_paper/) |
+| **01** | **广义黎曼猜想** (GRH) Lean 4 形式化 | 原版 `17,374,215` 行 (`40e56bab`) / 社区版 `16,571,342` 行 (`f1f6d654`) | [**PDF 专著（推荐）**](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.pdf) / [Markdown](zh/01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md) | [**PDF Monograph**](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.pdf) / [Markdown](en/01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md) | [01_grh_17m_lean](reproduction/01_grh_17m_lean/) |
+| **02** | **费马大定理** (FLT) Lean 4 形式化 | `13,004,119` 行 (`anthropics/fermats-last-theorem`) | [**PDF 专著（推荐）**](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.pdf) / [Markdown](zh/02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md) | [**PDF Monograph**](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.pdf) / [Markdown](en/02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md) | [02_flt_13m_lean](reproduction/02_flt_13m_lean/) |
+| **03** | **纳维-斯托克斯 (NS) 有限时爆破** 79 页论文 | `79` 页 PDF (`ad53419d`, `tristanbuckmaster/navier-stokes`) | [**PDF 专著（推荐）**](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.pdf) / [Markdown](zh/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md) | [**PDF Monograph**](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.pdf) / [Markdown](en/03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md) | [03_ns_79p_paper](reproduction/03_ns_79p_paper/) |
+
+> **阅读提示**：由于 `01_GRH` 与 `02_FLT` 单卷专著均包含逾 `2,000` 个数学公式（全仓逾 `11,300` 个公式），超出 GitHub 网页端单文件约 `1,000` 个公式的服务端 `richTextTruncated` 渲染截断上限，**强烈推荐直接点击上表中的预渲染矢量 `PDF 专著` 版本阅读或下载**。
 
 ---
 
@@ -75,7 +77,7 @@
 - 在对无散场作两次分部积分时，不等式 (B.20) 仅以开集内部的体积海森算子范数控制二次型，遗漏了跨赤道零测度平面 $\Sigma = \lbrace y _ 3 = 0\rbrace$ 的法向一阶导数跳变奇异面测度：
 
 $$
-D^2 W = H _ {W,\mathrm{bulk}}\thinspace dy + [\partial _ z W] _ \Sigma (e _ 3 \otimes e _ 3)\thinspace dS _ {z=0}
+D^2 W = H _ {W,\mathrm{bulk}}  dy + [\partial _ z W] _ \Sigma (e _ 3 \otimes e _ 3)  dS _ {z=0}
 $$
 
 #### 3.2 两族显式闭式无散反例场直接违反命题 B.1 不等式 (B.20)
@@ -97,7 +99,7 @@ $$
 - 若在赤道薄层 $|\eta| \le \delta$ 内用四次偶样条 $s _ \delta(\eta)$ 磨平法向一阶导数跳变，薄层内法向二阶导数峰值必以 $\frac{3}{2\delta}$ 增长，且总曲率质量严格守恒：
 
 $$
-\int _ {-\delta}^{\delta} s _ \delta''(\eta)\thinspace d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
+\int _ {-\delta}^{\delta} s _ \delta''(\eta)  d\eta = 2, \qquad \max _ {|\eta| \le \delta} s _ \delta''(\eta) = \frac{3}{2\delta}
 $$
 
 - 同时，79 页论文最上游的存在性证人 $d \in \mathcal{D} _ B$ （第 1、4、38–39、70 页）**未公开具体数值或数据文件，仅给出 64 位 SHA-256 哈希摘要** `3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5`。
@@ -164,15 +166,21 @@ python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
 ├── README_EN.md                                                  # 独立英文总览
 ├── CITATION.cff                                                  # GitHub / Zenodo 学术引用元数据
 ├── .zenodo.json                                                  # Zenodo 永久 DOI 归档配置
-├── SHA256SUMS                                                    # 全仓库 50 文件 SHA-256 校验总表
-├── zh/                                                           # 中文完整纯闭式专著（共三卷）
-│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md                 # 第一部分：1,737 万行 GRH Lean 4 结构分析与实机核查专著
-│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md                 # 第二部分：1,300 万行 FLT Lean 4 结构分析与内核核查专著
-│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md     # 第三部分：79 页 NS 论文算子核分析、闭式反例与补证三难定理专著
-├── en/                                                           # 英文完整纯闭式专著（共三卷）
-│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md                 # 第一部分英文专著
-│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md                 # 第二部分英文专著
-│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md     # 第三部分英文专著
+├── SHA256SUMS                                                    # 全仓库 55 文件 SHA-256 校验总表
+├── zh/                                                           # 中文完整纯闭式专著（PDF 矢量版 + Markdown 源码）
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.pdf                # 第一部分（PDF 矢量专著）：1,737 万行 GRH Lean 4 结构分析与实机核查专著
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_ZH.md                 # 第一部分（Markdown 源码）
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.pdf                # 第二部分（PDF 矢量专著）：1,300 万行 FLT Lean 4 结构分析与内核核查专著
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_ZH.md                 # 第二部分（Markdown 源码）
+│   ├── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.pdf    # 第三部分（PDF 矢量专著）：79 页 NS 论文算子核分析、闭式反例与补证三难定理专著
+│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_ZH.md     # 第三部分（Markdown 源码）
+├── en/                                                           # 英文完整纯闭式专著（PDF 矢量版 + Markdown 源码）
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_EN.pdf                # 第一部分英文 PDF 矢量专著
+│   ├── 01_GRH_17M_Lean_Paradox_and_Autopsy_EN.md                 # 第一部分英文 Markdown 源码
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_EN.pdf                # 第二部分英文 PDF 矢量专著
+│   ├── 02_FLT_13M_Lean_Paradox_and_Autopsy_EN.md                 # 第二部分英文 Markdown 源码
+│   ├── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.pdf    # 第三部分英文 PDF 矢量专著
+│   └── 03_NS_79p_Paper_Kernel_Leak_and_Counterexamples_EN.md     # 第三部分英文 Markdown 源码
 └── reproduction/                                                 # 中英双语一键复现套件
     ├── 01_grh_17m_lean/                                          # GRH：12 个 Lean 4 探针、10 个声明图 JSON 与 8 节点最小割校验器
     ├── 02_flt_13m_lean/                                          # FLT：零依赖 Lean 4 内核复现探针与源码结构核查报告
