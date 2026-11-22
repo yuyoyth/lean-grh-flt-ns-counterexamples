@@ -17,8 +17,9 @@ Two closed-form solenoidal counterexample families (`INTERFACE_AUTOPSY_A.md` and
 
 $$
 \begin{aligned}
-& E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\cdot\frac{633509743}{432432000} > 0, \qquad \frac{\Delta}{c} \cr
-& \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > \frac{26311}{64} > 400 > 0.
+& E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\cdot\frac{633509743}{432432000} > 0, \cr
+& \frac{\Delta}{c} \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} \cr
+& > \frac{26311}{64} > 400 > 0.
 \end{aligned}
 $$
 

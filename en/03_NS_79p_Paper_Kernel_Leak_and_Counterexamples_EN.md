@@ -1,4 +1,4 @@
-# Kernel-Leakage Audit of the Co-Author's 79-Page Navier–Stokes Finite-Time Blow-Up Paper Proof: Separation of the Fluid-Dynamical True Continuation Body from High-Order Semantic-Drift Artifacts and Closed-Form Counterexamples to the Cross-Plane Singular Measure Seam (Pure Closed-Form Edition)
+# Kernel-Leakage Audit of the Co-Author's 79-Page Navier–Stokes Finite-Time Blow-Up Paper Proof: Separation of the Fluid-Dynamical True Continuation Body from High-Order Semantic-Drift Artifacts and Closed-Form Counterexamples to the Cross-Plane Singular Measure Seam
 
 Author: yth
 Date: 2026-11-22
@@ -48,7 +48,7 @@ $$
 \end{aligned}
 $$
 
-(which reduces in the linear same-domain setting to the standard null space $\ker q = \lbrace X \in \mathcal{X} : q(X) = 0\rbrace$ ). If an analytical deduction attempts to bound, control, or uniquely determine a downstream physical functional or next-instant evolution operator $f : \mathcal{X} \to \mathcal{Z}$ solely from the projected readout $q(X)$ , the necessary and sufficient condition for mathematical validity is the **quotient-kernel closure law**:
+(which reduces in the linear same-domain setting to the standard null space $\ker q = \lbrace X \in \mathcal{X} : q(X) = 0\rbrace$ ). If an analytical deduction attempts to bound, control, or uniquely determine a downstream physical functional or next-instant evolution operator $f : \mathcal{X} \to \mathcal{Z}$ solely from the projected readout $q(X)$ , the necessary and sufficient condition for mathematical validity is the **equivalence-kernel inclusion condition (nullspace inclusion condition)**:
 
 $$
 q(X _ +) = q(X _ -) \implies f(X _ +) = f(X _ -), \qquad \ker q \subseteq \ker f. \tag{1.3}
@@ -222,8 +222,8 @@ where $dS _ \Sigma = dy _ 1 dy _ 2$ is the two-dimensional area measure on $\Sig
 
 $$
 \begin{aligned}
-& \int _ {\mathbb{R}^3} W(y)\bigl(|\nabla u|^2 - |\operatorname{curl} u|^2\bigr) dy = \langle D^2 W, \cr
-& u \otimes u \rangle = \int _ {\mathbb{R}^3} u(y)^T H _ W(y) u(y) dy \cr
+& \int _ {\mathbb{R}^3} W(y)\bigl(|\nabla u|^2 - |\operatorname{curl} u|^2\bigr) dy = \langle D^2 W, u \otimes u \rangle \cr
+& = \int _ {\mathbb{R}^3} u(y)^T H _ W(y) u(y) dy \cr
 & + \int _ {z=0} [\partial _ z W] (y _ 1, y _ 2) u _ 3(y _ 1, y _ 2, 0)^2 dS _ \Sigma.
 \end{aligned} \tag{3.2}
 $$
@@ -276,8 +276,8 @@ In equation (B.16), the five quadratic coefficients are specified as:
 
 $$
 \begin{aligned}
-& I _ 2 = D - \frac{3}{50}, \qquad I _ 2' = 1 - D, \qquad I _ 1' = \frac{1}{4} - Z, \qquad I _ 1 \cr
-& = Z - \Vert H _ D\Vert _ {\mathrm{op}} - \frac{3w}{50}, \qquad I _ 0 = -\Vert H _ Z\Vert _ {\mathrm{op}},
+& I _ 2 = D - \frac{3}{50}, \qquad I _ 2' = 1 - D, \qquad I _ 1' = \frac{1}{4} - Z, \cr
+& I _ 1 = Z - \Vert H _ D\Vert _ {\mathrm{op}} - \frac{3w}{50}, \qquad I _ 0 = -\Vert H _ Z\Vert _ {\mathrm{op}},
 \end{aligned} \tag{3.3}
 $$
 
@@ -374,8 +374,8 @@ $$
 $$
 \begin{aligned}
 & \psi _ \varepsilon(r, z) := \varepsilon z a\left(\frac{r-1}{\varepsilon}\right) a\left(\frac{z}{\varepsilon}\right), \cr
-& v _ r = -\frac{1}{r}\partial _ z \psi _ \varepsilon, \qquad v _ \varphi = 0, \qquad v _ 3 \cr
-& = \frac{1}{r}\partial _ r \psi _ \varepsilon.
+& v _ r = -\frac{1}{r}\partial _ z \psi _ \varepsilon, \qquad v _ \varphi = 0, \cr
+& v _ 3 = \frac{1}{r}\partial _ r \psi _ \varepsilon.
 \end{aligned} \tag{3.8}
 $$
 
@@ -383,8 +383,8 @@ In the rescaled local coordinates $s = \frac{r-1}{\varepsilon} \in [-1,1]$ and $
 
 $$
 \begin{aligned}
-& v _ r(r,z) = -\frac{\varepsilon}{r}a(s)\bigl(a(t) + t a'(t)\bigr), \qquad v _ 3(r,z) \cr
-& = \frac{\varepsilon}{r}t a'(s)a(t).
+& v _ r(r,z) = -\frac{\varepsilon}{r}a(s)\bigl(a(t) + t a'(t)\bigr), \cr
+& v _ 3(r,z) = \frac{\varepsilon}{r}t a'(s)a(t).
 \end{aligned} \tag{3.9}
 $$
 
@@ -412,9 +412,9 @@ Furthermore, under the reduced readout $q _ {\mathrm{red}}$ that observes the bu
 
 $$
 \begin{aligned}
-& E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon > 0, \qquad E _ {D _ -}(v _ \varepsilon) \cr
-& \le -\gamma _ \varepsilon < 0, \qquad E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \cr
-& \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0.
+& E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon > 0, \cr
+& E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon < 0, \cr
+& E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0.
 \end{aligned} \tag{3.11}
 $$
 
@@ -592,8 +592,8 @@ Inside the collar $|\eta| < \delta$ , its first and second derivatives are:
 
 $$
 \begin{aligned}
-& s _ \delta'(\eta) = \frac{3\eta}{2\delta} - \frac{\eta^3}{2\delta^3}, \qquad s _ \delta''(\eta) \cr
-& = \frac{3}{2\delta}\left(1 - \frac{\eta^2}{\delta^2}\right).
+& s _ \delta'(\eta) = \frac{3\eta}{2\delta} - \frac{\eta^3}{2\delta^3}, \cr
+& s _ \delta''(\eta) = \frac{3}{2\delta}\left(1 - \frac{\eta^2}{\delta^2}\right).
 \end{aligned} \tag{4.2}
 $$
 
@@ -672,15 +672,15 @@ Even under the strong global- $C^2$ interpretation, the 79-page PDF fails to con
 | Pages 54–56 | (B.16) and Proposition B.1 | Error coefficients and full proof omitted | Scalar inequalities cannot be reconstructed from the PDF |
 | Pages 59–60, 70 | Proposition B.4 and additional conditions | Proof and seven conditions unexpanded | Certificate reduction contract remains incomplete |
 
-**Evidence 1**: Pages 1, 4, 70. The finite-dimensional numerical certificate witness $d \in \mathcal{D} _ B$ . **Zero data bytes provided**; only the 64-character SHA-256 hash 3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5 is printed. The existential premise $\exists d \in \mathcal{D} _ B \mathsf{Valid} _ B(d)$ cannot be independently verified from the paper or repository.
+**(1) Unreleased upstream certificate witness (Pages 1, 4, 70)**: Throughout the manuscript, the finite-dimensional numerical certificate witness $d \in \mathcal{D} _ B$ is represented without any disclosed data bytes; only the 64-character SHA-256 hash 3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5 is printed. Consequently, the upstream existential premise $\exists d \in \mathcal{D} _ B \mathsf{Valid} _ B(d)$ cannot be independently verified from the paper or companion repository.
 
-**Evidence 2**: Pages 4, 10 (Section 1.5). 128-bit interval-arithmetic (Arb / FLINT) verification of the certificate inequalities. Explicitly stated to lie outside the formalization kernel, and the verification code/certificate are unreleased. External numerical verification data and outputs remain unreleased.
+**(2) Unreleased 128-bit interval-arithmetic verifier and output (Pages 4, 10, Section 1.5)**: The 128-bit interval-arithmetic (Arb / FLINT) verification of the certificate inequalities is explicitly stated to lie outside the formalization kernel, and both the verification program and the certificate data remain unreleased.
 
-**Evidence 3**: Pages 54–56 (Equation (B.16) and Proposition B.1). Explicit high-order error-absorption coefficients in (B.16) and the full proof of (B.20). Error coefficients are omitted in (B.16); Proposition B.1 gives only an integration-by-parts sketch and defers the full proof to external code. A paper reader cannot reconstruct the exact scalar inequalities from the PDF.
+**(3) Omitted error-absorption coefficients in (B.16) and full proof of Proposition B.1 (Pages 54–56)**: Equation (B.16) omits explicit high-order error-absorption coefficients, while Proposition B.1 provides only an integration-by-parts sketch and defers the full proof of inequality (B.20) to external code, preventing a paper reader from reconstructing the exact scalar inequalities from the PDF.
 
-**Evidence 4**: Pages 59–60 (Proposition B.4) and Page 70 (post-Theorem B.14). Reduction from arbitrary perturbations to cell unknowns, pressure gauge, trace joins, tail bounds (B.32)–(B.34), and 7 additional unprinted conditions on page 70. Proof of Proposition B.4 is omitted on paper; page 70 lists seven further unexpanded certificate conditions (cell pressure normalization, local-to-global unknown mapping, omitted harmonics of $W^r$ , rectangles near $y _ 3=0$ , $\iota \mapsto -\iota$ symmetry).
+**(4) Omitted proof of Proposition B.4 and seven unexpanded conditions (Pages 59–60, 70)**: The reduction from general solenoidal perturbations to spatial cell unknowns, pressure gauge normalization, trace joins, and harmonic tail bounds (B.32)–(B.34) omits the proof of Proposition B.4 on paper, and page 70 lists seven additional certificate conditions after Theorem B.14 (cell pressure normalization, local-to-global unknown mapping, omitted harmonics of $W^r$ , rectangles near $y _ 3=0$ , and $\iota \mapsto -\iota$ symmetry) without algebraic expansion.
 
-The reduction bridge $\mathsf{Valid} _ B(d) \implies \mathsf{Cert} _ 7(\Phi(d))$ is not a closed, enumerable contract on paper.
+Consequently, the reduction bridge $\mathsf{Valid} _ B(d) \implies \mathsf{Cert} _ 7(\Phi(d))$ is not a closed, enumerable contract on paper.
 
 ### 5.2 Complete Mathematical Reconstruction of Lemma B.7 and Proposition B.8 and Exact Same-Domain Breakdown Criteria
 
@@ -977,17 +977,9 @@ while the internal viscous-cubic balance via the damped Young sum-of-squares ide
 | III: Unclosed reductions | Appendix B and external certificate | Unsealing, smoothing, and auxiliary-lemma trilemma | Theorem 5.4, (5.10)–(5.12) | Constraints persist within the static piecewise-multiplier framework |
 | IV: Flow readouts | Static spectra and covariant inverse metric | Sign blindness versus pure-square dissipation | Theorems 6.1–6.2 | Euclidean recovery and reset costs remain necessary |
 
-**Evidence 1**: Tier I: Equatorial Plane $y _ 3=0$ Singular Surface-Measure Kernel Leak. Appendix B, p. 53 half-space spline weights $D, Z$  $\to$ p. 54 (B.16) $\to$ pp. 55–56 Proposition B.1 inequality (B.20).
+**(I) Tier I (Equatorial singular surface-measure discrepancy)**: Across Appendix B from the page 53 half-space spline weights $D, Z$ and page 54 equation (B.16) to pages 55–56 Proposition B.1 inequality (B.20), the bulk Hessian readout $q _ {\mathrm{bulk}}(D^2 W) = H _ {\mathrm{bulk}}$ annihilates the singular Dirac surface measure $\Sigma _ W = [\partial _ z W]e _ 3\otimes e _ 3 dS _ {z=0} \in \ker q _ {\mathrm{bulk}}$ on the zero-volume plane $y _ 3=0$ , whereas the solenoidal double integration-by-parts functional $f _ v$ pairs positively with $\Sigma _ W$ ( $\Sigma _ W \notin \ker f _ v$ ). Under the unjoined half-space $C^2$ spline contract, Counterexample Family A ( $D _ + = \frac12 + \frac14\chi \lvert \eta \rvert$ , axisymmetric $v _ \varepsilon$ ) yields $E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\frac{633509743}{432432000} > 0$ with dual-weight separation $\ge 2\gamma _ \varepsilon$ , and Counterexample Family B ( $Z = cP \lvert \eta \rvert$ , Schwartz Gaussian mode $\pm(2,1)$ ) yields $\Delta/c \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > 400 > 0$ , analytically refuting the unjoined version of Proposition B.1 / (B.20).
 
-The bulk Hessian readout $q _ {\mathrm{bulk}}(D^2 W) = H _ {\mathrm{bulk}}$ annihilates the singular Dirac surface measure $\Sigma _ W = [\partial _ z W]e _ 3\otimes e _ 3 dS _ {z=0} \in \ker q _ {\mathrm{bulk}}$ on the zero-volume plane $y _ 3=0$ , whereas the solenoidal double integration-by-parts functional $f _ v$ pairs positively with $\Sigma _ W$ ( $\Sigma _ W \notin \ker f _ v$ ).
-
-Counterexample Family A ( $D _ + = \frac12 + \frac14\chi \lvert \eta \rvert$ , axisymmetric $v _ \varepsilon$ ): $E _ {D _ +}(v _ \varepsilon) \ge \frac{\pi}{65536}\frac{633509743}{432432000} > 0$ , twin separation $\ge 2\gamma _ \varepsilon$ ; Counterexample Family B ( $Z = cP \lvert \eta \rvert$ , Schwartz Gaussian mode $\pm(2,1)$ ): $\Delta/c \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > 400 > 0$ .
-
-The no-join half-space $C^2$ spline version of Proposition B.1 / (B.20) exhibits operator-kernel leakage and is strictly refuted by two closed-form analytical counterexample families.
-
-**Evidence 2**: Tier II: $O(\delta^{-1})$ Collar Curvature-Tax Conservation under Strong Joining. Globally $C^2(\mathbb{R}^3)$ quartic transition spline $s _ \delta(\eta)$ across $\lvert \eta \rvert \le \delta$ and bulk Hessian penalty $\int \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}} \lvert \nabla v \rvert ^2 dy$ .
-
-Restoring global $C^2$ cross-plane joining eliminates the surface Dirac measure but conserves total curvature mass $\int _ {-\delta}^{\delta} s _ \delta''(\eta) d\eta = 2$ , forcing a reciprocal spike $\max s _ \delta'' = \frac{3}{2\delta}$ inside the collar that cannot be discarded as $\delta \downarrow 0$ . $\partial _ {zz}D _ \delta(r,0) = \frac{3\chi}{8\delta r^2} + \frac{3\delta\chi'}{32r(1+r)^2}$ ; and
+**(II) Tier II (Collar curvature-tax conservation under strong joining)**: Restoring global $C^2(\mathbb{R}^3)$ cross-plane joining via the quartic transition spline $s _ \delta(\eta)$ across $\lvert \eta \rvert \le \delta$ eliminates the surface Dirac measure but conserves the total curvature mass $\int _ {-\delta}^{\delta} s _ \delta''(\eta) d\eta = 2$ , forcing an $O(\delta^{-1})$ reciprocal curvature peak $\max s _ \delta'' = \frac{3}{2\delta}$ and $\partial _ {zz}D _ \delta(r,0) = \frac{3\chi}{8\delta r^2} + \frac{3\delta\chi'}{32r(1+r)^2}$ inside the collar:
 
 $$
 \begin{aligned}
@@ -996,16 +988,8 @@ $$
 \end{aligned}
 $$
 
-Strong global- $C^2$ joining cannot be added at zero cost: any valid global- $C^2$ weight certificate must pay the full equatorial curvature tax inside the bulk Hessian norm penalty.
+Thus strong global- $C^2$ joining cannot be added at zero cost: any valid global- $C^2$ weight certificate must pay the full equatorial curvature tax inside the bulk Hessian norm penalty.
 
-**Evidence 3**: Tier III: Unclosed Paper Reductions, Unreleased Certificate & Structural Invariance under Supplementary Materials. Pages 1, 4, 10, 38–39, 54–60, 62–64, 69–70: Theorem 1.1 $\Leftarrow$ Theorem 7.1 $\Leftarrow$ Theorem B.14 $\Leftarrow$ external certificate $d \in \mathcal{D} _ B$ (SHA-256: 3f7a335b...). The PDF omits the error coefficients of (B.16), the full proofs of B.1 and B.4, and 7 post-B.14 conditions on p. 70;
+**(III) Tier III (Unclosed paper reductions, unreleased certificate, and structural invariance under supplementary materials)**: Along the implication chain of pages 1, 4, 10, 38–39, 54–60, 62–64, and 69–70 (Theorem 1.1 $\Leftarrow$ Theorem 7.1 $\Leftarrow$ Theorem B.14 $\Leftarrow$ external certificate $d \in \mathcal{D} _ B$ , SHA-256 prefix 3f7a335b...), the PDF omits the error coefficients of (B.16), the full proofs of Propositions B.1 and B.4, and seven post-B.14 conditions on page 70. Moreover, Theorem 5.4 (Structural Trilemma) proves that unsealing the SHA-256 spline table cannot alter $D^2 W$ ; at collar ratio $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ ( $\delta = 2^{-19}$ ), thin-collar $C^2$ regularization transfers the surface jump into the collar bulk Hessian with factor $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ to maintain a pure-bulk violation $\ge \frac{\pi}{65536}\frac{2147573301937507667}{1611064563204096000} > 0$ on the same $v _ \varepsilon$ , or drives $I _ 1(1,0) \le -\frac{786431}{4} < 0$ ; and appending outer lemmas cannot eliminate an explicit counterexample in the admissible domain.
 
-moreover, Theorem 5.4 (Structural Trilemma) proves that unsealing the SHA-256 spline table cannot alter $D^2 W$ , thin-collar $C^2$ regularization transfers the surface jump into the collar bulk Hessian or drives $I _ 1$ strongly negative, and appending outer lemmas cannot eliminate a same-domain counterexample.
-
-At collar ratio $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ ( $\delta = 2^{-19}$ ), transfer factor $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ gives pure-bulk violation $\ge \frac{\pi}{65536}\frac{2147573301937507667}{1611064563204096000} > 0$ on the same $v _ \varepsilon$ , while absorbing the curvature peak yields $I _ 1(1,0) \le -\frac{786431}{4} < 0$ .
-
-The 79-page PDF is not self-contained as a paper proof, and within its static piecewise-multiplier framework, unsealing the SHA-256 certificate file or appending supplementary proof materials cannot resolve the operator-level discrepancy.
-
-**Evidence 4**: Tier IV: True Fluid Continuation Body vs Static Projection Artifact. 3D Navier–Stokes vorticity dynamics vs static Euclidean spectral readout $q _ {\mathrm{static}}$ and comoving covariant inverse metric $g = C^{-1}$ . Static Euclidean quadratic readouts are even under sign reversal ( $q _ {\mathrm{static}}(+17U) = q _ {\mathrm{static}}(-17U)$ ) and miss cubic vortex-stretching parity; equation (B.18) with fixed $W^r$ is also quadratic and even in $v$ ( $J _ {W^r}(-v) = J _ {W^r}(v)$ ).
-
-Twin initial data $\pm 17U$ diverge in true NS initial enstrophy derivative by $Y _ +'(0) - Y _ -'(0) = 4913$ ; comoving inverse metric $g = C^{-1}$ annihilates vortex stretching into pure-square dissipation $P _ \nu(\omega^T C^{-1}\omega) = -2\nu\sum _ i (\partial _ i z)^T C (\partial _ i z) \le 0$ . Exposes the exact mathematical root of why static projection readouts lose the non-commutative fluid continuation body, and establishes the exact spectral bridge and prefix reset conservation laws.
+**(IV) Tier IV (Fluid-dynamical continuation body versus static projection readouts)**: Comparing three-dimensional Navier–Stokes vorticity dynamics against the static Euclidean spectral readout $q _ {\mathrm{static}}$ and the comoving covariant inverse metric $g = C^{-1}$ , static Euclidean quadratic readouts are even under sign reversal ( $q _ {\mathrm{static}}(+17U) = q _ {\mathrm{static}}(-17U)$ ) and miss cubic vortex-stretching parity, while equation (B.18) with fixed $W^r$ is likewise quadratic and even in $v$ ( $J _ {W^r}(-v) = J _ {W^r}(v)$ ). Twin initial data $\pm 17U$ diverge in true initial enstrophy derivative by $Y _ +'(0) - Y _ -'(0) = 4913$ , whereas the comoving inverse metric $g = C^{-1}$ annihilates vortex stretching into pure-square dissipation $P _ \nu(\omega^T C^{-1}\omega) = -2\nu\sum _ i (\partial _ i z)^T C (\partial _ i z) \le 0$ , governed by the spectral condition-number bridge and prefix reset conservation laws.

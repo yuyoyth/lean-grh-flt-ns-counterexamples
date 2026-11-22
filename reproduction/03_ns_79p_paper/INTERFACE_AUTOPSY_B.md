@@ -86,9 +86,9 @@ $$
 
 $$
 \begin{aligned}
-& \Vert \nabla v\Vert _ {L^2}^2 = 14880 \frac{\pi^{3/2}}{2\sqrt{3}}, \qquad \Vert \Delta v\Vert _ {L^2}^2 \cr
-& = 431280 \frac{\pi^{3/2}}{2\sqrt{3}}, \qquad \mathrm{LHS} _ {\mathrm{B.20}} \cr
-& = \frac{47}{50}\Vert \Delta v\Vert _ {L^2}^2 + \frac{127}{625}\Vert \nabla v\Vert _ {L^2}^2 \cr
+& \Vert \nabla v\Vert _ {L^2}^2 = 14880 \frac{\pi^{3/2}}{2\sqrt{3}}, \cr
+& \Vert \Delta v\Vert _ {L^2}^2 = 431280 \frac{\pi^{3/2}}{2\sqrt{3}}, \cr
+& \mathrm{LHS} _ {\mathrm{B.20}} = \frac{47}{50}\Vert \Delta v\Vert _ {L^2}^2 + \frac{127}{625}\Vert \nabla v\Vert _ {L^2}^2 \cr
 & = \frac{51053352}{125} \frac{\pi^{3/2}}{2\sqrt{3}}.
 \end{aligned} \tag{B.6}
 $$

@@ -83,8 +83,8 @@ Let $a(t) := (1 - t^2) _ +^4 \in C _ c^3(\mathbb{R})$ (supported on $[-1, 1]$ wi
 $$
 \begin{aligned}
 & \psi _ \varepsilon(r, z) := \varepsilon z a\left(\frac{r-1}{\varepsilon}\right) a\left(\frac{z}{\varepsilon}\right), \cr
-& v _ r = -\frac{1}{r}\partial _ z \psi _ \varepsilon, \qquad v _ \varphi = 0, \qquad v _ 3 \cr
-& = \frac{1}{r}\partial _ r \psi _ \varepsilon.
+& v _ r = -\frac{1}{r}\partial _ z \psi _ \varepsilon, \qquad v _ \varphi = 0, \cr
+& v _ 3 = \frac{1}{r}\partial _ r \psi _ \varepsilon.
 \end{aligned} \tag{A.4}
 $$
 
@@ -95,8 +95,8 @@ In local coordinates $s = \frac{r-1}{\varepsilon} \in [-1, 1]$ and $t = \frac{z}
 $$
 \begin{aligned}
 & T _ \varepsilon = \int _ {z=0} \frac{|\nabla v _ 3|^2}{2r} dS _ \Sigma \cr
-& = \pi\varepsilon \int _ {-1}^1 \frac{a'(s)^2}{1 + \varepsilon s} ds \ge \frac{16\pi}{25}\varepsilon A, \qquad A \cr
-& = \int _ {-1}^1 a'(s)^2 ds = \frac{131072}{45045}.
+& = \pi\varepsilon \int _ {-1}^1 \frac{a'(s)^2}{1 + \varepsilon s} ds \ge \frac{16\pi}{25}\varepsilon A, \cr
+& A = \int _ {-1}^1 a'(s)^2 ds = \frac{131072}{45045}.
 \end{aligned} \tag{A.5}
 $$
 

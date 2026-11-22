@@ -55,7 +55,7 @@ $$
 
 核漏一旦发生，纸面推导中所观察到的“强制性闭合”或“误差受控”，就不再是流体方程本身的物理性质，而是读口投影 $q$ 截断真实演化自由度后产生的高阶语义漂移伪影。无论是借助纯静态欧氏索伯列夫（Sobolev）范数探讨全局正则性的尝试，还是借助分片数值样条与有限维矩阵证书论证自相似奇异性的尝试，若在某个算子接缝处将“投影后的局部闭合”等同于“原方程完整算子的闭合”，则该推导在发生核泄漏的接缝处便不再具备无条件数学证明的完备性。
 
-本专论以与广义黎曼猜想（GRH）宣称同作者（Levent Alpöge）于 2026 年 11 月 20 日同时公开的 79 页纳维－斯托克斯方程有限时爆破纸面证明原件（Levent Alpöge 与 Tristan Buckmaster 合著，标题为 *Finite-time blow-up for the Navier–Stokes equations*，全文共 79 页，公开归档于作者代码仓库 `paper` 目录下的 finite-time-blow-up-navier-stokes.pdf，文件字节数 1,615,293，SHA-256 摘要为 4a01929b2f8a595637bbbe1dfef9724e5de768d31283d62415ce045e2ed69901）为唯一审查对象。我们完全撇开外部证明助手的形式化工程包装不谈，纯粹站在偏微分方程、分布理论、泛函分析与流体动力学内部，对该 79 页纸面证明进行逐节、逐公式的解剖，精确揭示其证明骨架、跨面奇异测度核漏接缝、两族全闭式解析反例、薄层修复的 $O(\delta^{-1})$ 曲率税守恒律，以及流体动力学中真体与伪影的根本分界。
+本专论以与广义黎曼猜想（GRH）宣称同作者（Levent Alpöge）于 2026 年 11 月 20 日同时公开的 79 页纳维－斯托克斯方程有限时爆破纸面证明原件（Levent Alpöge 与 Tristan Buckmaster 合著，标题为 *Finite-time blow-up for the Navier–Stokes equations*，全文共 79 页，公开归档于作者代码仓库 paper 目录下的 finite-time-blow-up-navier-stokes.pdf，文件字节数 1,615,293，SHA-256 摘要为 4a01929b2f8a595637bbbe1dfef9724e5de768d31283d62415ce045e2ed69901）为唯一审查对象。我们完全撇开外部证明助手的形式化工程包装不谈，纯粹站在偏微分方程、分布理论、泛函分析与流体动力学内部，对该 79 页纸面证明进行逐节、逐公式的解剖，精确揭示其证明骨架、跨面奇异测度核漏接缝、两族全闭式解析反例、薄层修复的 $O(\delta^{-1})$ 曲率税守恒律，以及流体动力学中真体与伪影的根本分界。
 
 ---
 
@@ -181,8 +181,8 @@ $$
 
 $$
 \begin{aligned}
-& \int _ {\mathbb{R}^3} W(y)\bigl(|\nabla u|^2 - |\operatorname{curl} u|^2\bigr) dy = \langle D^2 W, \cr
-& u \otimes u \rangle = \int _ {\mathbb{R}^3} u(y)^T H _ W(y) u(y) dy \cr
+& \int _ {\mathbb{R}^3} W(y)\bigl(|\nabla u|^2 - |\operatorname{curl} u|^2\bigr) dy = \langle D^2 W, u \otimes u \rangle \cr
+& = \int _ {\mathbb{R}^3} u(y)^T H _ W(y) u(y) dy \cr
 & + \int _ {z=0} [\partial _ z W] (y _ 1, y _ 2) u _ 3(y _ 1, y _ 2, 0)^2 dS _ \Sigma.
 \end{aligned} \tag{3.2}
 $$
@@ -235,8 +235,8 @@ $$
 
 $$
 \begin{aligned}
-& I _ 2 = D - \frac{3}{50}, \qquad I _ 2' = 1 - D, \qquad I _ 1' = \frac{1}{4} - Z, \qquad I _ 1 \cr
-& = Z - \Vert H _ D\Vert _ {\mathrm{op}} - \frac{3w}{50}, \qquad I _ 0 = -\Vert H _ Z\Vert _ {\mathrm{op}},
+& I _ 2 = D - \frac{3}{50}, \qquad I _ 2' = 1 - D, \qquad I _ 1' = \frac{1}{4} - Z, \cr
+& I _ 1 = Z - \Vert H _ D\Vert _ {\mathrm{op}} - \frac{3w}{50}, \qquad I _ 0 = -\Vert H _ Z\Vert _ {\mathrm{op}},
 \end{aligned} \tag{3.3}
 $$
 
@@ -330,8 +330,8 @@ $$
 $$
 \begin{aligned}
 & \psi _ \varepsilon(r, z) := \varepsilon z a\left(\frac{r-1}{\varepsilon}\right) a\left(\frac{z}{\varepsilon}\right), \cr
-& v _ r = -\frac{1}{r}\partial _ z \psi _ \varepsilon, \qquad v _ \varphi = 0, \qquad v _ 3 \cr
-& = \frac{1}{r}\partial _ r \psi _ \varepsilon.
+& v _ r = -\frac{1}{r}\partial _ z \psi _ \varepsilon, \qquad v _ \varphi = 0, \cr
+& v _ 3 = \frac{1}{r}\partial _ r \psi _ \varepsilon.
 \end{aligned} \tag{3.8}
 $$
 
@@ -339,8 +339,8 @@ $$
 
 $$
 \begin{aligned}
-& v _ r(r,z) = -\frac{\varepsilon}{r}a(s)\bigl(a(t) + t a'(t)\bigr), \qquad v _ 3(r,z) \cr
-& = \frac{\varepsilon}{r}t a'(s)a(t).
+& v _ r(r,z) = -\frac{\varepsilon}{r}a(s)\bigl(a(t) + t a'(t)\bigr), \cr
+& v _ 3(r,z) = \frac{\varepsilon}{r}t a'(s)a(t).
 \end{aligned} \tag{3.9}
 $$
 
@@ -378,9 +378,9 @@ $$
 
 $$
 \begin{aligned}
-& E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon > 0, \qquad E _ {D _ -}(v _ \varepsilon) \cr
-& \le -\gamma _ \varepsilon < 0, \qquad E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \cr
-& \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0.
+& E _ {D _ +}(v _ \varepsilon) \ge +\gamma _ \varepsilon > 0, \cr
+& E _ {D _ -}(v _ \varepsilon) \le -\gamma _ \varepsilon < 0, \cr
+& E _ {D _ +}(v _ \varepsilon) - E _ {D _ -}(v _ \varepsilon) \ge \frac{\pi}{32768}\cdot\frac{633509743}{432432000} > 0.
 \end{aligned} \tag{3.11}
 $$
 
@@ -588,8 +588,7 @@ $$
 $$
 \begin{aligned}
 & J \le \pi \int _ {-\infty}^\infty dz \int _ 0^\infty e^{-r^2 - 12z^2}\bigl(4z^2 r^{13} + r^{11}\bigr) dr \cr
-& = \pi \Bigl[4\cdot\frac{\sqrt{\pi}}{24\sqrt{12}}\cdot\frac{6!}{2} \cr
-& + \frac{\sqrt{\pi}}{\sqrt{12}}\cdot\frac{5!}{2}\Bigr] \cr
+& = \pi \left(4\cdot\frac{\sqrt{\pi}}{24\sqrt{12}}\cdot\frac{6!}{2} + \frac{\sqrt{\pi}}{\sqrt{12}}\cdot\frac{5!}{2}\right) \cr
 & = \frac{60}{\sqrt{3}}\pi^{3/2}.
 \end{aligned}
 $$
@@ -633,8 +632,8 @@ $$
 
 $$
 \begin{aligned}
-& s _ \delta'(\eta) = \frac{3\eta}{2\delta} - \frac{\eta^3}{2\delta^3}, \qquad s _ \delta''(\eta) \cr
-& = \frac{3}{2\delta}\left(1 - \frac{\eta^2}{\delta^2}\right).
+& s _ \delta'(\eta) = \frac{3\eta}{2\delta} - \frac{\eta^3}{2\delta^3}, \cr
+& s _ \delta''(\eta) = \frac{3}{2\delta}\left(1 - \frac{\eta^2}{\delta^2}\right).
 \end{aligned} \tag{4.2}
 $$
 
@@ -725,13 +724,13 @@ $$
 | 第 54–56 页 | (B.16) 与命题 B.1 | 误差系数及完整证明省略 | 标量不等式无法由 PDF 重建 |
 | 第 59–60、70 页 | 命题 B.4 与附加条件 | 证明及七项条件未展开 | 证书归约合同未闭合 |
 
-**证据1**：第 1、4、70 页。满足附录 B 全部不等式与接合条件的有限维数值证书实例 $d \in \mathcal{D} _ B$ 。**零数据字节**；全文仅印出一串 64 位十六进制 SHA-256 哈希值 3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5。蕴涵链最左端的存在性前件 $\exists d \in \mathcal{D} _ B \mathsf{Valid} _ B(d)$ 在纸面上完全无法独立核验。
+**（1）最上游存在性证人未公开（第 1、4、70 页）**：满足附录 B 全部不等式与接合条件的有限维数值证书实例 $d \in \mathcal{D} _ B$ 在论文与公开仓库中均未提供任何数据字节，全文仅印出一串 64 位十六进制 SHA-256 哈希值 3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5，致使蕴涵链最左端的存在性前件 $\exists d \in \mathcal{D} _ B \mathsf{Valid} _ B(d)$ 在纸面上无法独立核验。
 
-**证据2**：第 4、10 页（第 1.5 节）。对数值证书的 128 位区间算术（Arb / FLINT）矩阵与样条不等式验证。作者明言该区间算术计算位于形式化内核之外，且公开仓库中未提供该证书数据与验证输出。外部数值验证数据与输出处于未公开状态。
+**（2）128 位区间算术校验器与输出未公开（第 4、10 页第 1.5 节）**：对于数值证书的 128 位区间算术（Arb / FLINT）矩阵与样条不等式验证，作者明确指出该区间算术计算位于形式化内核之外，且公开仓库中未提供该证书数据与验证输出，外部数值验证环节保持悬空。
 
-**证据3**：第 54–56 页（公式 (B.16) 与命题 B.1）。五类二次型系数中的高阶误差吸收系数，以及从分侧样条到全局乘子下界 (B.20) 的完整证明。第 54 页 (B.16) 省略了显式误差系数；第 55–56 页仅给出分部积分概要，声明完整证明移交外部代码。纸面读者无法仅凭 PDF 重建完整的标量系数不等式。
+**（3）公式 (B.16) 误差系数与命题 B.1 完整证明省略（第 54–56 页）**：第 54 页公式 (B.16) 省略了五类二次型系数中显式的高阶误差吸收系数，而第 55–56 页命题 B.1 仅给出从分侧样条到全局乘子下界 (B.20) 的分部积分概要并声明完整证明移交外部代码，使纸面读者无法仅凭 PDF 原件重建完整的标量系数不等式。
 
-**证据4**：第 59–60 页（命题 B.4）与第 70 页（定理 B.14 之后）。从任意无散扰动到有限空间单元未知量、压力规范、跨单元迹拼接、无穷谐波尾界 (B.32)–(B.34) 及第 70 页列出的 7 项未展开条件。命题 B.4 证明在纸面被省略；第 70 页在定理 B.14 证明末尾直接罗列了“单元压力归一化、局部到全局未知量映射、 $W^r$ 遗漏谐波耦合、 $y _ 3=0$ 附近矩形单元、 $\iota\mapsto -\iota$ 对称”等未在纸面写出的附加条件。蕴涵箭头 $\mathsf{Valid} _ B(d) \implies \mathsf{Cert} _ 7(\Phi(d))$ 在纸面上不是一个闭合、可枚举的公理合同。
+**（4）命题 B.4 证明与第 70 页七项附加条件未展开（第 59–60、70 页）**：从任意无散扰动到有限空间单元未知量的归约、压力规范、跨单元迹拼接、无穷谐波尾界 (B.32)–(B.34) 在第 59–60 页省略了命题 B.4 的纸面证明，且第 70 页在定理 B.14 证明末尾直接罗列了单元压力归一化、局部到全局未知量映射、 $W^r$ 遗漏谐波耦合、 $y _ 3=0$ 附近矩形单元与 $\iota\mapsto -\iota$ 对称等 7 项未在纸面写出的附加条件，故蕴涵箭头 $\mathsf{Valid} _ B(d) \implies \mathsf{Cert} _ 7(\Phi(d))$ 在纸面上尚未构成闭合、可枚举的公理合同。
 
 在严格的数学规范下，**一份哈希摘要不是一个数学对象，一段“详见外部代码”的声明也不是一段纸面证明**。因此，该 79 页 PDF 实质上是一份“关于定理 1.1、定理 7.1 及附录 B 树状矩阵归约框架的条件纲领与扩展摘要”，而非自足完备的纳维－斯托克斯有限时爆破纸面证明。
 
@@ -781,8 +780,8 @@ $$
 
 $$
 \begin{aligned}
-& \dim F \ge \operatorname{ncols}(Y) \ge \operatorname{rank}(Y) = \operatorname{codim}(S) \ge \dim F \implies X \cr
-& = S \oplus F, \qquad \operatorname{rank}(Y) = \operatorname{ncols}(Y) = \dim F.
+& \dim F \ge \operatorname{ncols}(Y) \ge \operatorname{rank}(Y) = \operatorname{codim}(S) \ge \dim F \cr
+& \implies X = S \oplus F, \qquad \operatorname{rank}(Y) = \operatorname{ncols}(Y) = \dim F.
 \end{aligned} \tag{5.5}
 $$
 
@@ -949,8 +948,8 @@ $$
 
 $$
 \begin{aligned}
-& Y _ \pm'(0) = \left.\frac{d}{dt}\right| _ {t=0} \langle |\omega^\pm(t)|^2\rangle = 2\langle \omega _ 0^\pm, \cr
-& (\omega _ 0^\pm \cdot \nabla)u _ 0^\pm\rangle - 2\nu\langle |\nabla\omega _ 0^\pm|^2\rangle \cr
+& Y _ \pm'(0) = \left.\frac{d}{dt}\right| _ {t=0} \langle |\omega^\pm(t)|^2\rangle \cr
+& = 2\langle \omega _ 0^\pm, (\omega _ 0^\pm \cdot \nabla)u _ 0^\pm\rangle - 2\nu\langle |\nabla\omega _ 0^\pm|^2\rangle \cr
 & = \pm\frac{1}{2}a^3 - 8\nu a^2.
 \end{aligned} \tag{6.4}
 $$
@@ -964,15 +963,11 @@ $$
 **证明**：直接求导得 $\operatorname{div} U = 0$ ，旋度 $\omega = \nabla \times U = (-\cos(x+y), \cos z - \cos x + \cos(x+y), \cos x - \cos y)$ ，速度梯度矩阵为
 
 $$
-\begin{aligned}
-& L = \nabla U = \begin{pmatrix}
+L = \nabla U = \begin{pmatrix}
 0 & \cos y & \cos z \cr
 \cos x & 0 & 0 \cr
 \cos x - \cos(x+y) & -\cos(x+y) & 0
-\end{pmatrix}
-\cr
-& .
-\end{aligned}
+\end{pmatrix}.
 $$
 
 由三角函数正交归一化均值 $\langle \cos^2 x\rangle = \frac{1}{2}$ 立得 (6.3)。对于三次涡度拉伸项 $\langle \omega^T L \omega\rangle$ ，展开后凡含独立因子 $\cos z$ 一次幂或非共振频率之和的项均值皆为零，唯一非零共振三波项来自 $\cos x \cos y \cos(x+y)$ ：
@@ -1162,9 +1157,9 @@ $$
 | 三：未闭合归约 | 附录 B 与外部证书 | 解封、磨平与扩充引理的三难 | 定理 5.4，式 (5.11)–(5.13) | 现有静态分片乘子架构仍受约束 |
 | 四：流体演化读口 | 静态能谱与协变逆度规 | 反号盲区与纯平方耗散 | 定理 6.1–6.2 | 须保留欧氏回读与重置代价 |
 
-**证据1**：第一层：赤道平面 $y _ 3=0$ 奇异界面测度核漏。附录 B 第 53 页分侧样条权函数 $D, Z$  $\to$ 第 54 页 (B.16) $\to$ 第 55–56 页命题 B.1 不等式 (B.20)。体积读口 $q _ {\mathrm{bulk}}(D^2 W) = H _ {\mathrm{bulk}}$ 抹去了集中在零体积平面 $y _ 3=0$ 上的奇异狄拉克面测度 $\Sigma _ W = [\partial _ z W]e _ 3\otimes e _ 3 dS _ {z=0} \in \ker q _ {\mathrm{bulk}}$ ，但无散场两次分部积分泛函 $f _ v$ 对该奇异测度给出严格正配对（ $\Sigma _ W \notin \ker f _ v$ ）。反例族 A（轴对称紧支无散场， $D _ + = \frac12 + \frac14\chi \lvert \eta \rvert$ ）： $E _ {D _ +}(v) \ge \frac{\pi}{65536}\frac{633509743}{432432000} > 0$ ，双权分离 $\ge 2\gamma _ \varepsilon$ ；反例族 B（施瓦茨高斯 $\pm(2,1)$ 模态， $Z = cP \lvert \eta \rvert$ ）： $\Delta/c \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > 400 > 0$ 。未施加跨平面法向导数接合前件的分侧 $C^2$ 版本命题 B.1 / (B.20) 存在算子核泄漏，并由两族全闭式解析反例严格证伪。
+**（一）第一层（跨赤道平面奇异界面测度遗漏）**：在附录 B 第 53 页分侧样条权函数 $D, Z$ 到第 54 页 (B.16) 及第 55–56 页命题 B.1 不等式 (B.20) 的分部积分推导中，体积读口 $q _ {\mathrm{bulk}}(D^2 W) = H _ {\mathrm{bulk}}$ 抹去了集中在零体积平面 $y _ 3=0$ 上的奇异狄拉克面测度 $\Sigma _ W = [\partial _ z W]e _ 3\otimes e _ 3 dS _ {z=0} \in \ker q _ {\mathrm{bulk}}$ ，但无散场两次分部积分泛函 $f _ v$ 对该奇异测度给出严格正配对（ $\Sigma _ W \notin \ker f _ v$ ）。反例族 A（轴对称紧支无散场， $D _ + = \frac12 + \frac14\chi \lvert \eta \rvert$ ）给出精确有理破坏裕量 $E _ {D _ +}(v) \ge \frac{\pi}{65536}\frac{633509743}{432432000} > 0$ 与双权分离 $\ge 2\gamma _ \varepsilon$ ；反例族 B（施瓦茨高斯 $\pm(2,1)$ 模态， $Z = cP \lvert \eta \rvert$ ）给出解析下界 $\Delta/c \ge \frac{5275}{64}\pi^{3/2} - \frac{2\pi}{13\cdot 9^{13}} - \frac{9600\pi}{9^{15}} > 400 > 0$ ，从而严格证伪了未施加跨平面法向导数接合前件的分侧 $C^2$ 版本命题 B.1 / (B.20)。
 
-**证据2**：第二层：强接合修复的 $O(\delta^{-1})$ 薄层曲率税守恒律。跨赤道平面 $\lvert \eta \rvert \le \delta$ 的全局 $C^2(\mathbb{R}^3)$ 四次过渡样条 $s _ \delta(\eta)$ 与体积海森罚项 $\int \Vert H _ {D _ \delta}\Vert _ {\mathrm{op}} \lvert \nabla v \rvert ^2 dy$ 。恢复全局 $C^2$ 跨面接合虽消除了奇异面测度，但曲率质量 $\int _ {-\delta}^{\delta} s _ \delta''(\eta) d\eta = 2$ 严格守恒，薄层内法向二阶导数以 $\max s _ \delta'' = \frac{3}{2\delta}$ 尖峰化，绝不能以“薄层体积为 $O(\delta)$ ”为由在 $\delta\downarrow 0$ 时抹除。 $\partial _ {zz}D _ \delta(r,0) = \frac{3\chi}{8\delta r^2} + \frac{3\delta\chi'}{32r(1+r)^2}$ ；且
+**（二）第二层（强接合修复下的薄层曲率守恒律）**：跨赤道平面 $\lvert \eta \rvert \le \delta$ 的全局 $C^2(\mathbb{R}^3)$ 四次过渡样条 $s _ \delta(\eta)$ 虽消除了奇异面测度，但法向总曲率质量 $\int _ {-\delta}^{\delta} s _ \delta''(\eta) d\eta = 2$ 严格守恒，薄层内法向二阶导数以 $O(\delta^{-1})$ 峰值 $\max s _ \delta'' = \frac{3}{2\delta}$ 及 $\partial _ {zz}D _ \delta(r,0) = \frac{3\chi}{8\delta r^2} + \frac{3\delta\chi'}{32r(1+r)^2}$ 高度集中，并在 $\delta\downarrow 0$ 时满足：
 
 $$
 \begin{aligned}
@@ -1173,10 +1168,8 @@ $$
 \end{aligned}
 $$
 
-强接合前件不可无代价附加：任何满足全局 $C^2$ 正则性的权函数都必须在体积海森范数项中显式承担该赤道跨面曲率代价。
+这表明强接合前件不可无代价附加：任何满足全局 $C^2$ 正则性的权函数都必须在体积海森范数项中显式承担该赤道跨面曲率代价。
 
-**证据3**：第三层：纸面证明的未闭合归约缺口、未公开外部证书与补充材料静态不变性定理。第 1、4、10、38–39、54–60、62–64、69–70 页：定理 1.1 $\Leftarrow$ 定理 7.1 $\Leftarrow$ 定理 B.14 $\Leftarrow$ 外部证书 $d \in \mathcal{D} _ B$ （SHA-256：3f7a335b...）。纸面省略了 (B.16) 误差系数、B.1 与 B.4 证明及第 70 页 7 项附加条件；且定理 5.4（补证三难定理）证明：核漏发生在分布算子恒等式层，解封 SHA-256 系数表不能改写 $D^2 W$ ；附加薄层 $C^2$ 磨平则将奇异质量等量转移为薄层体积海森积分或使 $I _ 1$ 退化为大幅负值；在已存同域反例底座上扩充外围引理不能消除该反例。
+**（三）第三层（纸面未闭合归约缺口、未公开外部证书与补充材料静态不变性定理）**：论文第 1、4、10、38–39、54–60、62–64、69–70 页的顶层蕴涵链（定理 1.1 $\Leftarrow$ 定理 7.1 $\Leftarrow$ 定理 B.14 $\Leftarrow$ 外部证书 $d \in \mathcal{D} _ B$ ，SHA-256 前缀 3f7a335b...）在纸面省略了 (B.16) 误差系数、命题 B.1 与 B.4 的完整证明及第 70 页的 7 项附加条件。定理 5.4（补证三难定理）进一步证明：该偏差发生在分布算子恒等式层，解封 SHA-256 系数表不能改写 $D^2 W$ ；在薄层比例 $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ （ $\delta = 2^{-19}$ ）下附加薄层 $C^2$ 磨平会以转移因子 $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ 在同一无散场 $v _ \varepsilon$ 上维持纯体积正残差 $\ge \frac{\pi}{65536}\frac{2147573301937507667}{1611064563204096000} > 0$ ，或将一阶梯度系数推至 $I _ 1(1,0) \le -\frac{786431}{4} < 0$ ；而在已存同域反例底座上扩充外围引理亦无法消除该算子层偏差。
 
-薄层比例 $\lambda = \frac{\delta}{\varepsilon} = \frac{1}{8}$ （ $\delta = 2^{-19}$ ）下转移因子 $I _ {\mathrm{collar}}(\frac{1}{8}) = \frac{2787617180779875667}{3000241776758882304} > \frac{37}{40}$ ，同一无散场 $v _ \varepsilon$ 纯体积正残差 $\ge \frac{\pi}{65536}\frac{2147573301937507667}{1611064563204096000} > 0$ ，而吸收曲率峰值使 $I _ 1(1,0) \le -\frac{786431}{4} < 0$ 。该 79 页 PDF 作为纸面证明尚未闭合；且在保持现有静态分片乘子架构不变的前提下，解封 SHA-256 证书原文件或继续追加外围证明材料均无法消除该算子层偏差。
-
-**证据4**：第四层：三维流体动力学的真体与伪影分界。一般三维不可压 NS 涡度方程 与 固定欧氏能谱读口 $q _ {\mathrm{static}}$ 及随流协变逆度规 $g = C^{-1}$ 。静态欧氏二次能谱读口对整体反号盲视（ $q _ {\mathrm{static}}(+17U) = q _ {\mathrm{static}}(-17U)$ ），漏掉三次涡度拉伸奇次符号；论文 (B.18) 虽引入固定参考剖面 $W^r$ ，但关于扰动 $v$ 仍为二次偶泛函 $J _ {W^r}(-v) = J _ {W^r}(v)$ 。静态同谱双初值 $\pm 17U$ 的真实 NS 拟能初导数分歧 $Y _ +'(0) - Y _ -'(0) = 4913$ ；随流协变逆度规下涡度拉伸精确对偶湮灭为纯平方耗散 $P _ \nu(\omega^T C^{-1}\omega) = -2\nu\sum _ i (\partial _ i z)^T C (\partial _ i z) \le 0$ 。揭示了传统分析长期混淆“静态投影伪影”与“随流演化真体”的数学根源，并划定了欧氏回读谱桥税与前缀重置守恒的严格边界。
+**（四）第四层（三维流体动力学的演化真体与静态投影伪影分界）**：对比三维不可压纳维－斯托克斯涡度演化与固定欧氏能谱读口 $q _ {\mathrm{static}}$ 及随流协变逆度规 $g = C^{-1}$ ，静态欧氏二次能谱读口对整体反号盲视（ $q _ {\mathrm{static}}(+17U) = q _ {\mathrm{static}}(-17U)$ ），丢失了三次涡度拉伸的奇次符号，且论文公式 (B.18) 关于扰动 $v$ 同样为二次偶泛函 $J _ {W^r}(-v) = J _ {W^r}(v)$ 。静态同谱双初值 $\pm 17U$ 的真实拟能初导数分歧达 $Y _ +'(0) - Y _ -'(0) = 4913$ ，而随流协变逆度规 $g = C^{-1}$ 将非交换涡度拉伸精确抵消为纯平方耗散 $P _ \nu(\omega^T C^{-1}\omega) = -2\nu\sum _ i (\partial _ i z)^T C (\partial _ i z) \le 0$ ，划定了欧氏回读谱条件数桥与前缀重置成本守恒的严格边界。

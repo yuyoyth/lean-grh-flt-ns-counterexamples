@@ -42,8 +42,8 @@ $$
 
 $$
 \begin{aligned}
-& f(u) := \left.\frac{d}{dt}\Vert \nabla u(t)\Vert _ {L^2}^2\right| _ {t=0} = 2\langle \omega, \cr
-& (\omega \cdot \nabla)u\rangle - 2\nu\Vert \nabla\omega\Vert _ {L^2}^2.
+& f(u) := \left.\frac{d}{dt}\Vert \nabla u(t)\Vert _ {L^2}^2\right| _ {t=0} \cr
+& = 2\langle \omega, (\omega \cdot \nabla)u\rangle - 2\nu\Vert \nabla\omega\Vert _ {L^2}^2.
 \end{aligned}
 $$
 
@@ -61,8 +61,8 @@ By trigonometric orthogonality on $\mathbb{T}^3$ , the unique non-vanishing tria
 
 $$
 \begin{aligned}
-& E(U) = \frac{5}{2}, \qquad Y(U) = 3, \qquad Z(U) = 4, \qquad H(U) = 0, \qquad \mathcal{T}(U) := \langle \omega _ U, \cr
-& (\omega _ U \cdot \nabla)U\rangle = \frac{1}{4}.
+& E(U) = \frac{5}{2}, \qquad Y(U) = 3, \qquad Z(U) = 4, \qquad H(U) = 0, \cr
+& \mathcal{T}(U) := \langle \omega _ U, (\omega _ U \cdot \nabla)U\rangle = \frac{1}{4}.
 \end{aligned}
 $$
 
