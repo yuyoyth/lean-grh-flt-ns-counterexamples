@@ -122,29 +122,42 @@ $$
 
 ## 二、 一分钟极速复现指南
 
-### 1. 第一部分（1,737 万行 GRH 声明图 8 顶点最小有向割证书与 Lean 4 核查探针）```bash
+### 1. 第一部分（1,737 万行 GRH 声明图 8 顶点最小有向割证书与 Lean 4 核查探针）
+
+```bash
 # 零外部依赖校验 270 万节点声明图的 8 顶点最小有向割证书（仅需 Python 3 标准库，< 0.2 秒）：
 python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
 
 # 若本地装有 Lean 4 + Mathlib v4.33.1，可直接编译反模型与核查探针：
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme1.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme5.lean
-lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean```
+lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean
 
-### 2. 第二部分（1,300 万行 FLT 零外部依赖 Lean 4 内核复现探针）```bash
-# 零外部依赖（无需下载 Mathlib，0 sorry / 0 axiom）直接用 Lean 4 内核复现 FLT 核心结构断层：
-lean reproduction/02_flt_13m_lean/lean4_flt_real_kernel_verification.lean
 ```
 
-### 3. 第三部分（79 页 NS 论文全部 6 套精确有理数反例与薄层曲率转移核验）```bash
+### 2. 第二部分（1,300 万行 FLT 零外部依赖 Lean 4 内核复现探针）
+
+```bash
+# 零外部依赖（无需下载 Mathlib，0 sorry / 0 axiom）直接用 Lean 4 内核复现 FLT 核心结构断层：
+lean reproduction/02_flt_13m_lean/lean4_flt_real_kernel_verification.lean
+
+```
+
+### 3. 第三部分（79 页 NS 论文全部 6 套精确有理数反例与薄层曲率转移核验）
+
+```bash
 # 零外部依赖（仅用 fractions.Fraction，< 0.1 秒）精确复算 NS 论文全部 6 套有理数反例与薄层曲率转移定理：
-python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py```
+python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
+
+```
 
 ---
 
 <a id="repo-structure"></a>
 
-## 三、 仓库目录结构```text
+## 三、 仓库目录结构
+
+```text
 .
 ├── README.md                                                     # 中英双语顶层总览
 ├── README_ZH.md                                                  # 独立中文总览
@@ -164,4 +177,5 @@ python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py```
     ├── 01_grh_17m_lean/                                          # GRH：12 个 Lean 4 探针、10 个声明图 JSON 与 8 节点最小割校验器
     ├── 02_flt_13m_lean/                                          # FLT：零依赖 Lean 4 内核复现探针与源码结构核查报告
     └── 03_ns_79p_paper/                                          # NS：6 套精确有理数核验套件与 6 份中英双语解析报告
+
 ```

@@ -119,29 +119,42 @@ Simultaneously, accounting for the collar Hessian peak $\Vert H _ {D _ \delta}(1
 
 ## II. 1-Minute Quick Reproduction Guide
 
-### 1. Part 01 (17.37M-Line GRH 8-Vertex Min-Cut Certificate & Lean 4 Probes)```bash
+### 1. Part 01 (17.37M-Line GRH 8-Vertex Min-Cut Certificate & Lean 4 Probes)
+
+```bash
 # Zero-dependency verification of the 8-vertex minimum directed cut across 2.70M declarations (Python 3 stdlib only, < 0.2s):
 python3 -B reproduction/01_grh_17m_lean/verify_graph_certificate.py
 
 # If Lean 4 + Mathlib v4.33.1 is installed locally, compile the countermodel verification probes directly:
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme1.lean
 lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme5.lean
-lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean```
+lake env lean reproduction/01_grh_17m_lean/AutopsyProbe_Scheme6.lean
 
-### 2. Part 02 (13.00M-Line FLT Zero-Dependency Lean 4 Kernel Probe)```bash
-# Zero-dependency Lean 4 kernel verification (no Mathlib required, 0 sorry / 0 axiom) reproducing the FLT structural gaps:
-lean reproduction/02_flt_13m_lean/lean4_flt_real_kernel_verification.lean
 ```
 
-### 3. Part 03 (79-Page Navier–Stokes Paper Exact Rational Counterexamples & Collar Transfer)```bash
+### 2. Part 02 (13.00M-Line FLT Zero-Dependency Lean 4 Kernel Probe)
+
+```bash
+# Zero-dependency Lean 4 kernel verification (no Mathlib required, 0 sorry / 0 axiom) reproducing the FLT structural gaps:
+lean reproduction/02_flt_13m_lean/lean4_flt_real_kernel_verification.lean
+
+```
+
+### 3. Part 03 (79-Page Navier–Stokes Paper Exact Rational Counterexamples & Collar Transfer)
+
+```bash
 # Zero-dependency exact rational verification (fractions.Fraction only, < 0.1s) of all 6 NS counterexample & collar-transfer suites:
-python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py```
+python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
+
+```
 
 ---
 
 <a id="repo-structure"></a>
 
-## III. Repository Structure```text
+## III. Repository Structure
+
+```text
 .
 ├── README.md                                                     # Bilingual Top-Level Overview (Chinese & English)
 ├── README_ZH.md                                                  # Standalone Chinese Overview
@@ -161,4 +174,5 @@ python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py```
     ├── 01_grh_17m_lean/                                          # GRH: 12 Lean 4 probes, 10 graph JSONs & 8-vertex min-cut verifier (Bilingual)
     ├── 02_flt_13m_lean/                                          # FLT: Zero-dependency Lean 4 kernel probe & source-code verification report (Bilingual)
     └── 03_ns_79p_paper/                                          # NS: 6 exact rational verification suites & 6 bilingual analytical reports (Bilingual)
+
 ```

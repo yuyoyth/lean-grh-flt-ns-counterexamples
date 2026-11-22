@@ -11,6 +11,7 @@ Run the zero-dependency Python 3 exact rational and symbolic polynomial verifica
 
 ```bash
 python3 -B reproduction/03_ns_79p_paper/verify_ns_counterexamples.py
+
 ```
 
 ### Verified Suites / 自动化精确核验套件

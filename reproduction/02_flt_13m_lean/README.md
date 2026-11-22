@@ -38,6 +38,7 @@ This directory contains the standalone, reproducible Lean 4 kernel verification 
 
 ```bash
 lean lean4_flt_real_kernel_verification.lean
+
 ```
 
 **Expected Output / 预期输出**:
